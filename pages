@@ -13,19 +13,26 @@
             "pageFilename": "venue.md",
             "pageSortIndex": 2
         },
+		{
+            "id": "tickets",
+            "pageName": "Tickets",
+            "pageTitle": "Tickets",
+            "pageFilename": "tickets.md",
+            "pageSortIndex": 3
+        },
 	    {
 	        "id": "schedule",
 	         "pageName": "Schedule",
 	         "pageTitle": "Schedule",
 	         "pageFilename": "schedule.md",
-	         "pageSortIndex": 3
+	         "pageSortIndex": 4
 	     },
 		 {
 		     "id": "sponsors",
 		     "pageName": "Sponsors",
 		     "pageTitle": "Sponsors",
 		     "pageFilename": "sponsors.md",
-		     "pageSortIndex": 4
+		     "pageSortIndex": 5
 		 }
     ]
 }

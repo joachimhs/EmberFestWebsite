@@ -1,13 +1,14 @@
 body {
     color: #e8e8e8;
     background:url("/img/side_graphic.png") fixed no-repeat bottom left #000;
-    font-family: Rockwell, Verdana, sans-serif;
+    font-family: "Century Gothic", sans-serif;
     letter-spacing: 0em;
     font-size: 1.2em;
+    line-height: 1.26em;
     padding: 20px;
 }
 
-p { margin-top: 0.8em; }
+p { margin-top: 0.95em; }
 
 #mainArea {
     text-align: center;
