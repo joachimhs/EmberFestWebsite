@@ -11,6 +11,7 @@ Sponsors will receive:
 
 - Logo clearly visible on the website front page
 - Mention in opening and closing talks
+- Personal Tweet thanking you for your sponsorship
 - Displayed logo during breaks
 - Logo displayed in online videos
 - 5 tickets to the mini-conference during day 3
