@@ -1,0 +1,36 @@
+body {
+    color: #e8e8e8;
+    background:url("/img/side_graphic.png") fixed no-repeat bottom left #000;
+    font-family: Rockwell, Verdana, sans-serif;
+    letter-spacing: 0em;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+p { margin-top: 0.8em; }
+
+#mainArea {
+    text-align: center;
+}
+
+#headerLogo {
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+#headerLinks {
+    text-align: right;
+    margin-right: 50px;
+}
+
+#contentArea {
+    margin-top: 25px;
+    padding-left: 300px;
+    text-align: left;
+}
+
+.markdownArea h1 {
+    text-align: center;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 15px;
+}

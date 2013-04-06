@@ -1,0 +1,31 @@
+{ "pages": [
+        {
+            "id": "home",
+            "pageName": "Home",
+            "pageTitle": "Home",
+            "pageFilename": "index.md",
+            "pageSortIndex": 1
+        },
+        {
+            "id": "venue",
+            "pageName": "Venue",
+            "pageTitle": "Venue",
+            "pageFilename": "venue.md",
+            "pageSortIndex": 2
+        },
+	    {
+	        "id": "schedule",
+	         "pageName": "Schedule",
+	         "pageTitle": "Schedule",
+	         "pageFilename": "schedule.md",
+	         "pageSortIndex": 3
+	     },
+		 {
+		     "id": "sponsors",
+		     "pageName": "Sponsors",
+		     "pageTitle": "Sponsors",
+		     "pageFilename": "sponsors.md",
+		     "pageSortIndex": 4
+		 }
+    ]
+}
