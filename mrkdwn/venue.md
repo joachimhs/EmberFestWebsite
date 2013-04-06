@@ -8,3 +8,10 @@ Be sure that the organizers will do everything in their power to choose an aweso
 Be sure to watch this website to get updates on the venue. 
 
 Updates will also be tweeted from the <a href="https://twitter.com/EmberCampEurope">@EmberCampEurope</a> twitter account.
+
+Visitor Distribution So Far
+---------------------------
+
+The websites visitor distribution will help form the decision regarding where to place Ember Camp Europe. The photograph below shows the distribution for the first two days after the website launched. 
+
+<img src="/img/visitor_distribution_first_two_days_1.png">

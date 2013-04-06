@@ -9,7 +9,7 @@ Sounds interesting? Contact <a href="mailto:joachim@haagen-software.no">Joachim 
 
 Sponsors will receive: 
 
-- Logo clearly visible on the website front page
+- Logo clearly visible on the website on all pages
 - Mention in opening and closing talks
 - Personal Tweet thanking you for your sponsorship
 - Displayed logo during breaks
