@@ -33,6 +33,7 @@
 		     "pageTitle": "Sponsors",
 		     "pageFilename": "sponsors.md",
 		     "pageSortIndex": 5
-		 }
+		 },
+         {"id": "organizers", "pageName": "Organizers","pageTitle": "Organizers","pageFilename": "organizers.md","pageSortIndex": 6}
     ]
 }
