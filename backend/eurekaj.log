@@ -1,0 +1,232 @@
+19:06:40,123 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
+19:06:40,130 INFO  [Main] Starting server
+19:06:40,239 INFO  [Main] Started server on port: 8081 hosting directory: /Users/joahaa/Projects/EmberCampEurope
+19:06:45,094 INFO  [CacheableFileServerHandler] contentType: text/html for path: /index.html
+19:06:45,236 INFO  [CacheableFileServerHandler] contentType: text/css for path: /stylesheets/master.css
+19:06:45,246 INFO  [CacheableFileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+19:06:45,264 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /lib/handlebars-1.0.0.rc.3.js
+19:06:45,265 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /lib/bootstrap.js
+19:06:45,266 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /lib/jquery-1.8.2.min.js
+19:06:45,268 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /lib/ember-1.0.0-rc.2.js
+19:06:45,269 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /lib/showdown.js
+19:06:45,415 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /app/app.js
+19:06:45,429 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /app/pages.js
+19:06:45,432 INFO  [CacheableFileServerHandler] contentType: application/javascript for path: /app/models.js
+19:06:45,719 INFO  [CacheableFileServerHandler] contentType: image/png for path: /img/ece_logo.png
+19:06:45,720 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+19:06:45,721 INFO  [CacheableFileServerHandler] contentType: image/png for path: /img/side_graphic.png
+19:06:45,804 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+19:06:49,360 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /mrkdwn/venue.md
+19:06:49,384 INFO  [CacheableFileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+19:11:18,314 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
+19:11:18,356 INFO  [Main] Starting server
+19:11:18,448 INFO  [Main] Started server on port: 8081 hosting directory: /Users/joahaa/Projects/EmberCampEurope
+19:11:20,632 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/index.html
+19:11:20,632 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/
+19:11:20,632 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/pages/
+19:11:20,632 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/stylesheets
+19:11:20,632 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/img
+19:11:20,633 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/mrkdwn
+19:11:20,633 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/cachedScript
+19:11:20,671 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+19:11:21,080 INFO  [CachedIndexHandler] Finished extracting script contents took: 409 ms.
+19:11:21,123 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+19:11:21,123 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+19:11:21,123 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+19:11:21,123 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+19:11:21,539 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+19:11:21,539 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+19:11:21,539 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+19:11:21,651 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/venue.md
+19:11:21,680 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+19:11:51,397 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+19:11:51,537 INFO  [CachedIndexHandler] Finished extracting script contents took: 140 ms.
+19:11:51,797 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+19:11:51,798 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+19:11:51,800 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+19:11:51,809 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+19:11:52,161 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+19:11:52,185 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+19:11:52,188 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+19:11:52,287 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/venue.md
+19:11:52,321 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+19:12:18,836 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+19:12:19,466 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/venue.md
+19:12:19,466 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+19:12:19,510 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+19:12:20,025 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+19:12:21,481 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+19:12:21,538 INFO  [CachedIndexHandler] Finished extracting script contents took: 56 ms.
+19:12:21,589 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+19:12:21,589 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+19:12:21,590 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+19:12:21,590 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+19:12:22,119 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+19:12:22,120 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+19:12:22,122 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+19:12:22,248 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+21:29:59,582 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+21:29:59,641 INFO  [CachedIndexHandler] Finished extracting script contents took: 59 ms.
+21:29:59,652 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+21:29:59,661 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+21:29:59,661 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+21:29:59,662 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+21:30:00,093 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+21:30:00,093 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+21:30:00,093 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+21:30:00,190 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+21:34:11,065 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+21:34:11,141 INFO  [CachedIndexHandler] Finished extracting script contents took: 76 ms.
+21:34:11,153 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+21:34:11,164 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+21:34:11,164 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+21:34:11,170 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+21:34:11,415 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+21:34:11,415 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+21:34:11,416 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+21:34:11,490 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+21:35:04,711 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+21:35:04,757 INFO  [CachedIndexHandler] Finished extracting script contents took: 46 ms.
+21:35:04,919 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+21:35:04,921 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+21:35:04,921 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+21:35:04,923 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+21:35:05,191 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+21:35:05,191 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+21:35:05,191 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+21:35:05,274 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+21:38:00,190 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+21:38:00,244 INFO  [CachedIndexHandler] Finished extracting script contents took: 54 ms.
+21:38:00,258 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+21:38:00,269 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+21:38:00,270 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+21:38:00,270 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+21:38:00,532 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+21:38:00,532 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+21:38:00,532 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+21:38:00,608 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:03:32,026 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:03:32,066 INFO  [CachedIndexHandler] Finished extracting script contents took: 40 ms.
+22:03:32,077 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:03:32,081 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:03:32,086 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:03:32,086 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:03:32,346 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:03:32,346 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:03:32,346 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:03:32,430 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:03:37,840 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:03:37,901 INFO  [CachedIndexHandler] Finished extracting script contents took: 61 ms.
+22:03:37,913 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:03:37,914 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:03:37,914 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:03:37,915 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:03:38,177 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:03:38,178 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:03:38,178 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:03:38,231 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:04:22,014 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:04:22,096 INFO  [CachedIndexHandler] Finished extracting script contents took: 82 ms.
+22:04:22,107 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:04:22,107 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:04:22,107 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:04:22,107 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:04:22,369 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:04:22,369 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:04:22,369 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:04:22,491 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:04:48,504 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:04:48,547 INFO  [CachedIndexHandler] Finished extracting script contents took: 43 ms.
+22:04:48,561 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:04:48,565 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:04:48,569 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:04:48,569 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:04:48,829 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:04:48,830 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:04:48,829 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:04:48,911 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:04:53,475 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:04:53,524 INFO  [CachedIndexHandler] Finished extracting script contents took: 49 ms.
+22:04:53,536 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:04:53,537 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:04:53,537 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:04:53,547 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:04:53,805 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:04:53,805 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:04:53,806 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:04:53,886 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:21:55,437 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:21:55,482 INFO  [CachedIndexHandler] Finished extracting script contents took: 45 ms.
+22:21:55,491 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:21:55,494 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:21:55,494 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:21:55,495 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:21:55,917 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:21:55,918 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:21:55,920 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:21:56,000 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:22:45,847 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:22:45,908 INFO  [CachedIndexHandler] Finished extracting script contents took: 61 ms.
+22:22:45,972 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:22:45,991 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:22:45,992 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:22:45,992 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:22:46,508 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:22:46,508 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:22:46,509 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:22:46,682 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:23:25,595 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:23:31,688 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:23:54,617 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:25:00,911 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:26:51,019 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:34:24,751 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
+22:34:24,793 INFO  [Main] Starting server
+22:34:24,885 INFO  [Main] Started server on port: 8081 hosting directory: /Users/joahaa/Projects/EmberCampEurope
+22:34:29,810 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/index.html
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/pages/
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/stylesheets
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/img
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/mrkdwn
+22:34:29,811 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/cachedScript
+22:34:29,854 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:34:30,237 INFO  [CachedIndexHandler] Finished extracting script contents took: 383 ms.
+22:34:30,322 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:34:30,324 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:34:30,324 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:34:30,333 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:34:32,827 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:34:32,834 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:34:32,841 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:34:33,049 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:35:14,560 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:35:14,627 INFO  [CachedIndexHandler] Finished extracting script contents took: 67 ms.
+22:35:14,779 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:35:14,780 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:35:14,803 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:35:14,810 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:35:16,444 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:35:16,445 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:35:16,448 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:35:16,669 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+22:36:46,476 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+22:36:46,550 INFO  [CachedIndexHandler] Finished extracting script contents took: 74 ms.
+22:36:46,607 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+22:36:46,619 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+22:36:46,626 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+22:36:46,627 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+22:36:47,922 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+22:36:47,924 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+22:36:47,925 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+22:36:48,213 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+23:41:32,718 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+23:41:32,781 INFO  [CachedIndexHandler] Finished extracting script contents took: 62 ms.
+23:41:32,799 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+23:41:32,922 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+23:41:32,922 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+23:41:32,924 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+23:41:34,084 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+23:41:34,090 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+23:41:34,094 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+23:41:34,178 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md

@@ -1,3 +1,34 @@
+// Mozilla Persona
+navigator.id.watch({
+    loggedInUser: null,
+    onlogin: function(assertion) {
+        $.ajax({
+            type: 'POST',
+            url: '/auth/login',
+            data: {assertion: assertion},
+            success: function(res, status, xhr) {
+                if (res.authFailed) {
+                    alert('Authentication Failed');
+                } else if (res.uuidToken) {
+                    ECE.set('uuidToken', res.uuidToken);
+                    document.cookie="uuidToken=" + res.uuidToken;
+                    ECE.router.send("loginSuccessful");
+                }
+            },
+            error: function(xhr, status, err) { ECE.router.send("doLogOut"); }
+        });
+    },
+
+    onlogout: function() {
+        $.ajax({
+            type: 'POST',
+            url: '/auth/logout',
+            success: function(res, status, xhr) { console.log('onlogout: '); console.log(res); },
+            error: function(xhr, status, err) { ECE.router.send("doLogOut"); }
+        });
+    }
+});
+
 var ECE = Ember.Application.create({
 });
 
@@ -19,6 +50,13 @@ ECE.IndexRoute = Ember.Route.extend({
 
 ECE.HeaderController = Ember.ArrayController.extend({
     needs: ['pages']
+});
+
+ECE.ApplicationController = Ember.Controller.extend({
+    doLogIn: function() {
+        console.log('doLogIn Action');
+        navigator.id.request();
+    }
 });
 
 ECE.PagesIndexRoute = Ember.Route.extend({
@@ -50,6 +88,9 @@ ECE.PagesIndexController = Ember.ArrayController.extend({
 });
 
 Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
+    '<div id="toolbarArea">' +
+        '<button class="btn btn-primary" {{action "doLogIn"}}>Log In</button>' +
+    '</div>' +
     '<div id="mainArea">' +
         '<div id="header">' +
             '<div id="headerLogo">{{#linkTo "pages"}}<img src="/img/ece_logo.png">{{/linkTo}}</div> ' +

@@ -16,7 +16,7 @@ Twitter: <a href="http://www.twitter.com/joachimhs">@joachimhs</a>
 Adam Hawkins
 ------------
 
-Information about Adam will be coming up shortly!
+Adam is an active member in the Ruby and Ember communities. Just over a year ago, he made the decision to switch over his company's product to Ember.js. Since then he's been very active in Javascript community. He's primarily known for his work on Iridium (a Javascript application build tool) and around testing Javascript application. He's been travelling around Europe for the past year trying to get people interested in Ember, leveling up their Javascript, and contributing back to the local community where ever he is. He blogs at http://broadcastingadam.com.
 
 Location: Germany<br />
 twitter: <a href="http://www.twitter.com/twinturbo">@twinturbo</a>
