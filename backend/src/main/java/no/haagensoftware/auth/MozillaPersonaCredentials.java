@@ -6,6 +6,7 @@ public class MozillaPersonaCredentials {
 	public String audience;
 	public Long expires;
 	public String issuer;
+	public String reason;
 
 	public MozillaPersonaCredentials() {
 	}
@@ -50,5 +51,11 @@ public class MozillaPersonaCredentials {
 		this.issuer = issuer;
 	}
 	
+	public String getReason() {
+		return reason;
+	}
 	
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
 }

@@ -1,8 +1,25 @@
 ECE.TalksRoute = Ember.Route.extend({
     model: function() {
         return ECE.Talk.findAll();
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        _gaq.push(['_trackPageview', "/talks" + model.get('id')]);
     }
 });
+
+ECE.TalksTalkRoute = Ember.Route.extend({
+    model: function(id) {
+        return ECE.Talk.find(id.talk_id)
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        _gaq.push(['_trackPageview', "/talks/" + model.get('id')]);
+    }
+});
+
 
 ECE.TalksController = Ember.ArrayController.extend({
 

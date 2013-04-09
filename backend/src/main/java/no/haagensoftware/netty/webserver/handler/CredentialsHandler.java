@@ -81,7 +81,7 @@ public class CredentialsHandler extends FileServerHandler {
 		} else if (isPost(e) && uri != null && uri.endsWith("logout") && cookieUuidToken != null) {
 			authenticationContext.logUserOut(cookieUuidToken);
 			responseContent = "{\"loggedOut\": true}";
-		} else if (isPost(e) && uri != null && uri.endsWith("registerNewUser") && cookieUuidToken != null) {
+		} else if (isPost(e) && uri != null && uri.endsWith("registerNewUser")) {
 			String messageContent = getHttpMessageContent(e);
 			logger.info(messageContent);
 			NewUser newUser = new Gson().fromJson(messageContent, NewUser.class);
@@ -112,7 +112,7 @@ public class CredentialsHandler extends FileServerHandler {
 			messageContent = messageContent.substring(10, messageContent.length());
 		}
 		assertionJson.addProperty("assertion", messageContent);
-		assertionJson.addProperty("audience", "http://localhost:8081");
+		assertionJson.addProperty("audience", "http://emberfest.eu:80");
 		
 		int statusCode = -1;
 		DefaultHttpClient httpclient = new DefaultHttpClient();

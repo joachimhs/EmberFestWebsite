@@ -45,6 +45,9 @@ public class AuthenticationContext {
 	
 	public AuthenticationResult verifyAndGetUser(MozillaPersonaCredentials credentials) {
 		AuthenticationResult authResult = new AuthenticationResult();
+		if (credentials != null) {
+			logger.info("Persona Status: " + credentials.getStatus() + " :: " + credentials.getReason());
+		}
 		if (credentials != null && credentials.getStatus().equalsIgnoreCase("okay")) {
 			PerstUser user = getUser(credentials.getEmail());
 			String uuid = UUID.randomUUID().toString();

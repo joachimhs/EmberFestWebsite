@@ -12,6 +12,11 @@ ECE.PagesCallForSpeakersRoute = Ember.Route.extend({
             });
 
         return model;
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        _gaq.push(['_trackPageview', "/call_for_speakers/"]);
     }
 });
 

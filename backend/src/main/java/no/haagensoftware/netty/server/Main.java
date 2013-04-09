@@ -95,7 +95,7 @@ public class Main {
 		logger.info("Starting server: " + System.getProperty(PropertyConstants.NETTY_PORT));
 				
 		Integer port = IntegerParser.parseIntegerFromString(System.getProperty(PropertyConstants.NETTY_PORT), 8080);
-		logger.info("port: " + port);
+		
         ServerBootstrap bootstrap = new ServerBootstrap(
                 new NioServerSocketChannelFactory(
                         Executors.newCachedThreadPool(),

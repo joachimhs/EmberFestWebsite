@@ -4034,3 +4034,200 @@ uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
 14:11:45,923 INFO  [CredentialsHandler] { "uuidToken": "8d6e7191-9b99-42f2-a419-495c49af5720"}
 14:11:45,924 INFO  [CredentialsHandler] responseContent: { "uuidToken": "8d6e7191-9b99-42f2-a419-495c49af5720"}
 14:11:45,924 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+14:15:15,481 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/schedule.md
+14:15:22,117 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/tickets.md
+14:15:23,903 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+14:15:23,907 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/venue.md
+14:15:23,955 INFO  [FileServerHandler] contentType: image/png for path: /img/visitor_distribution_first_two_days_1.png
+14:15:30,242 INFO  [FileServerHandler] cookie header: 
+uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
+14:15:30,243 INFO  [CredentialsHandler] Submitted abstracts: 
+14:15:30,243 INFO  [CredentialsHandler] Awesome title
+14:15:30,243 INFO  [PerstUserDao] Persisted users:
+14:15:30,243 INFO  [PerstUserDao] user:joachim@haagen.name
+14:15:30,243 INFO  [CredentialsHandler] TalkTalk2s
+14:15:30,244 INFO  [PerstUserDao] Persisted users:
+14:15:30,244 INFO  [PerstUserDao] user:joachim@haagen.name
+14:15:30,244 INFO  [CredentialsHandler] responseContent: {"abstracts":[{"id":"90D143D2EB9B99BB","talkTitle":"Awesome title","talkText":"Awesome content","talkTopics":"Awesome topics","talkType":"Awesome type","talkSuggestedBy":"joachim skeie"},{"id":"TalkTalk2s","talkTitle":"TalkTalk2s","talkText":"Proposal Test","talkTopics":"Proposal Topics","talkType":"Proposal Type","talkSuggestedBy":"joachim skeie"}]}
+14:15:30,244 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+14:15:50,736 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+14:15:50,807 INFO  [CachedIndexHandler] Finished extracting script contents took: 70 ms.
+14:15:50,823 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+14:15:50,927 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+14:15:50,927 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+14:15:50,930 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+14:15:52,441 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+14:15:52,443 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+14:15:52,447 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+14:15:52,540 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+14:19:34,456 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+14:19:34,517 INFO  [CachedIndexHandler] Finished extracting script contents took: 61 ms.
+14:19:34,547 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+14:19:34,556 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+14:19:34,558 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+14:19:34,558 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+14:19:36,383 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+14:19:36,384 INFO  [FileServerHandler] cookie header: 
+uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
+14:19:36,385 INFO  [CredentialsHandler] Submitted abstracts: 
+14:19:36,385 INFO  [CredentialsHandler] Awesome title
+14:19:36,385 INFO  [PerstUserDao] Persisted users:
+14:19:36,385 INFO  [PerstUserDao] user:joachim@haagen.name
+14:19:36,385 INFO  [CredentialsHandler] TalkTalk2s
+14:19:36,386 INFO  [PerstUserDao] Persisted users:
+14:19:36,386 INFO  [PerstUserDao] user:joachim@haagen.name
+14:19:36,386 INFO  [CredentialsHandler] responseContent: {"abstracts":[{"id":"90D143D2EB9B99BB","talkTitle":"Awesome title","talkText":"Awesome content","talkTopics":"Awesome topics","talkType":"Awesome type","talkSuggestedBy":"joachim skeie"},{"id":"TalkTalk2s","talkTitle":"TalkTalk2s","talkText":"Proposal Test","talkTopics":"Proposal Topics","talkType":"Proposal Type","talkSuggestedBy":"joachim skeie"}]}
+14:19:36,386 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+14:19:36,389 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+14:19:36,393 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+14:19:41,273 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/schedule.md
+14:19:41,894 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/cfs.md
+15:44:34,747 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
+15:44:35,016 INFO  [Main] Starting server: 8081
+15:44:35,178 INFO  [Main] Started server on port: 8081 hosting directory: /Users/joahaa/Projects/EmberCampEurope/site
+15:44:43,125 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/index.html
+15:44:43,125 INFO  [NettyWebserverPipelineFactory] Adding router for route: equals:/
+15:44:43,125 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/pages/
+15:44:43,125 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/register
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/call_for_speakers
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/talks
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/auth/login
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/auth/logout
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/auth/registerNewUser
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/abstracts
+15:44:43,126 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/stylesheets
+15:44:43,127 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/img
+15:44:43,127 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/mrkdwn
+15:44:43,127 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/cachedScript
+15:44:43,171 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+15:44:43,637 INFO  [CachedIndexHandler] Finished extracting script contents took: 465 ms.
+15:44:43,691 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+15:44:43,706 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+15:44:43,707 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+15:44:43,707 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+15:44:45,120 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+15:44:45,124 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+15:44:45,199 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/schedule.md
+15:45:00,738 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+15:45:00,882 INFO  [CachedIndexHandler] Finished extracting script contents took: 144 ms.
+15:45:00,906 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+15:45:00,917 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+15:45:00,920 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+15:45:00,920 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+15:45:02,122 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+15:45:02,151 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+15:45:02,275 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+15:45:02,282 INFO  [FileServerHandler] cookie header: 
+mp_0fd140334fe274d1f4227fd29a9c91a9_mixpanel=%7B%22distinct_id%22%3A%20%2213dd499be72249-0c299b052-6b1b2071-13c680-13dd499be73303%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D
+15:45:02,291 INFO  [CredentialsHandler] Submitted abstracts: 
+15:45:02,300 INFO  [CachedIndexHandler] Finished extracting script contents took: 148 ms.
+15:45:02,391 INFO  [CredentialsHandler] responseContent: {"abstracts":[]}
+15:45:02,393 INFO  [CredentialsHandler] coookieUuidToken null
+15:45:02,452 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+15:45:02,457 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+15:45:02,457 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+15:45:02,462 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+15:45:02,568 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+15:45:03,777 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+15:45:03,777 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+15:45:03,790 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+15:45:03,968 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/schedule.md
+15:45:09,932 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/tickets.md
+15:45:12,492 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/cfs.md
+15:45:15,667 INFO  [FileServerHandler] cookie header: 
+__utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281.4.10.1365515103; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
+15:45:15,668 INFO  [CredentialsHandler] Submitted abstracts: 
+15:45:15,669 INFO  [CredentialsHandler] responseContent: {"abstracts":[]}
+15:45:15,669 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+15:47:58,818 INFO  [FileServerHandler] cookie header: 
+__utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281.5.10.1365515103; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
+15:47:58,819 INFO  [CredentialsHandler] {"email":"joachim@haagen-software.no","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
+15:47:58,852 INFO  [PerstUserDao] Persisted users:
+15:47:58,868 INFO  [CredentialsHandler] Registering new user: joachim@haagen-software.no Joachim Haagen Skeie Norway
+15:47:58,868 INFO  [CredentialsHandler] responseContent: { "userRegistered": true}
+15:47:58,868 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+15:58:11,347 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+15:58:11,437 INFO  [CachedIndexHandler] Finished extracting script contents took: 89 ms.
+15:58:11,486 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+15:58:11,486 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+15:58:11,486 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+15:58:11,491 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+15:58:12,187 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+15:58:46,496 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+15:58:46,590 INFO  [CachedIndexHandler] Finished extracting script contents took: 94 ms.
+15:58:46,610 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+15:58:46,626 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+15:58:46,627 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+15:58:46,628 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+15:58:47,575 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+15:58:47,706 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+15:58:47,852 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+15:58:47,959 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+16:04:44,828 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+16:04:44,926 INFO  [CachedIndexHandler] Finished extracting script contents took: 98 ms.
+16:04:44,957 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+16:04:44,957 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+16:04:44,959 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+16:04:44,960 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+16:04:45,844 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+16:04:45,942 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+16:04:46,064 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+16:04:46,139 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+16:04:47,022 INFO  [FileServerHandler] cookie header: 
+mp_0fd140334fe274d1f4227fd29a9c91a9_mixpanel=%7B%22distinct_id%22%3A%20%2213dd499be72249-0c299b052-6b1b2071-13c680-13dd499be73303%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D
+16:04:47,022 INFO  [CredentialsHandler] Logging in via Persona.
+16:04:51,284 INFO  [PerstUserDao] Persisted users:
+16:04:51,284 INFO  [PerstUserDao] user:joachim@haagen-software.no
+16:04:51,285 INFO  [CredentialsHandler] { "uuidToken": "4a0650b2-5a67-41b0-a998-b0de2c58d1f6"}
+16:04:51,286 INFO  [CredentialsHandler] responseContent: { "uuidToken": "4a0650b2-5a67-41b0-a998-b0de2c58d1f6"}
+16:04:51,288 INFO  [CredentialsHandler] coookieUuidToken null
+16:05:48,232 INFO  [FileServerHandler] cookie header: 
+mp_0fd140334fe274d1f4227fd29a9c91a9_mixpanel=%7B%22distinct_id%22%3A%20%2213dd499be72249-0c299b052-6b1b2071-13c680-13dd499be73303%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D; uuidToken=4a0650b2-5a67-41b0-a998-b0de2c58d1f6
+16:05:48,232 INFO  [CredentialsHandler] User Cached. Logging in automatically without Persona.
+16:05:48,233 INFO  [CredentialsHandler] { "uuidToken": "4a0650b2-5a67-41b0-a998-b0de2c58d1f6"}
+16:05:48,233 INFO  [CredentialsHandler] responseContent: { "uuidToken": "4a0650b2-5a67-41b0-a998-b0de2c58d1f6"}
+16:05:48,234 INFO  [CredentialsHandler] coookieUuidToken 4a0650b2-5a67-41b0-a998-b0de2c58d1f6
+16:05:53,617 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+16:05:54,228 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+16:05:54,399 INFO  [CachedIndexHandler] Finished extracting script contents took: 170 ms.
+16:05:54,424 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+16:05:54,428 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+16:05:54,436 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+16:05:54,436 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+16:05:55,844 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+16:05:55,844 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+16:05:55,845 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+16:05:56,038 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+16:06:15,256 INFO  [FileServerHandler] cookie header: 
+__utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281.7.10.1365515103; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
+16:06:15,257 INFO  [CredentialsHandler] Logging in via Persona.
+16:06:21,555 INFO  [PerstUserDao] Persisted users:
+16:06:21,556 INFO  [PerstUserDao] user:joachim@haagen-software.no
+16:06:21,556 INFO  [CredentialsHandler] { "uuidToken": "18cbe79d-e90a-4958-acbe-ec62665646d5"}
+16:06:21,557 INFO  [CredentialsHandler] responseContent: { "uuidToken": "18cbe79d-e90a-4958-acbe-ec62665646d5"}
+16:06:21,557 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
+16:07:11,977 INFO  [FileServerHandler] cookie header: 
+__utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281.8.10.1365515103; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); uuidToken=18cbe79d-e90a-4958-acbe-ec62665646d5
+16:07:11,978 INFO  [CredentialsHandler] Submitted abstracts: 
+16:07:11,978 INFO  [CredentialsHandler] responseContent: {"abstracts":[]}
+16:07:11,978 INFO  [CredentialsHandler] coookieUuidToken 18cbe79d-e90a-4958-acbe-ec62665646d5
+19:52:48,983 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+19:52:49,048 INFO  [CachedIndexHandler] Finished extracting script contents took: 65 ms.
+19:52:49,064 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+19:52:49,152 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+19:52:49,153 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+19:52:49,153 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+19:52:50,356 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+19:52:50,374 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+19:52:50,375 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+19:52:50,477 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md
+20:59:17,490 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
+20:59:17,620 INFO  [CachedIndexHandler] Finished extracting script contents took: 130 ms.
+20:59:17,631 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
+20:59:17,640 INFO  [CachedScriptHandler] CachedScriptHandler uri: /index.html.js
+20:59:17,640 INFO  [CachedScriptHandler] CachedScriptHandler path: /index.html
+20:59:17,649 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/master.css
+20:59:18,508 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
+20:59:18,509 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
+20:59:18,510 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
+20:59:18,614 INFO  [FileServerHandler] contentType: text/plain for path: /mrkdwn/index.md

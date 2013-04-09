@@ -1,6 +1,11 @@
 ECE.PagesRegisterRoute = Ember.Route.extend({
     model: function() {
         return Ember.Object.create();
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        _gaq.push(['_trackPageview', "/register"]);
     }
 });
 
