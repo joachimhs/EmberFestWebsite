@@ -13,11 +13,11 @@ ECE.TalksIndexController = Ember.ArrayController.extend({
 });
 
 Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
-    '<h1>TALKS</h1>' +
+    '<h1>Proposed Talks</h1>' +
     '{{#each controllers.talks}}' +
         '<div class="well well-small talkTitle">' +
             '{{#linkTo "talks.talk" this}}<button class="btn btn-primary pull-right">View Proposal</button>{{/linkTo}}' +
-            '{{id}} - {{talkTitle}}<br>' +
+            '{{talkTitle}}<br>' +
             'Suggested by {{talkSuggestedBy}}' +
 
         '</div>' +

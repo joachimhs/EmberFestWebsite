@@ -80,7 +80,7 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
     '<h1>Submit your Proposal!</h1>' +
     '{{markdown}}' +
     '{{#if controllers.application.showLogin}}' +
-        '<p>You need to log in in order to submit an abstract.</p>' +
+        '<p>You need to log in, in order to submit an abstract.</p>' +
     '{{else}}' +
         '<form class="form-horizontal">' +
             '<div class="control-group">' +
