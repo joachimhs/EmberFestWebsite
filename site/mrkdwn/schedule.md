@@ -1,7 +1,7 @@
 Schedule
 ========
 
-Ember Camp Europe will be a three day event in either late august or late september. While the details of the schedule is not yet finished, the two first days will contain Ember.js Training, while the third day will be arranged as a mini conference with talks and tutorials arranged as a single-track, with some hardcore tutorials possibly being held in parallel.
+Ember Fest will be a three day event in either late august or late september. While the details of the schedule is not yet finished, the two first days will contain Ember.js Training, while the third day will be arranged as a mini conference with talks and tutorials arranged as a single-track, with some hardcore tutorials possibly being held in parallel.
 
 Be sure to watch this website to get updates on the venue. 
 

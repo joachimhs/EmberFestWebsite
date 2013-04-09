@@ -6,7 +6,11 @@ public class IntegerParser {
 		Integer retInt = null;
 		
 		try {
-			retInt = Integer.parseInt(input);
+			if (input != null) {
+				retInt = Integer.parseInt(input.trim());
+			} else {
+				retInt = fallbackValue;
+			}
 		} catch (NumberFormatException nfe) {
 			retInt = fallbackValue;
 		}

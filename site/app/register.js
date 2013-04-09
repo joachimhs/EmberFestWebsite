@@ -69,7 +69,7 @@ ECE.PagesRegisterController = Ember.ObjectController.extend({
 });
 
 Ember.TEMPLATES['pages/register'] = Ember.Handlebars.compile('' +
-    '{{controller}}<h1>Register a new Account!</h1>' +
+    '<h1>Register a new Account!</h1>' +
     '<p>With your account, you will be able to answer the upcoming call for speakers, as well as comment on the call for speakers submissions. We use Mozilla Persona, which we think is a great online authentication system. Its great for us, because we do not need to know and keep your password. Mozilla Persona is safe and secure, and we are hoping it will become the identity system for the web!</p>' +
     '<p style="margin-bottom: 20px;">We still need to know who you are, in order to link your email address to your account details.</p>' +
     '<form class="form-horizontal">' +

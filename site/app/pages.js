@@ -40,7 +40,7 @@ ECE.PagesPageController = Ember.Controller.extend({
                     //TODO: Navigate to 404 state
                 });
 
-            document.title = page.get('pageName') + ' - Ember Camp Europe';
+            document.title = page.get('pageName') + ' - Ember Fest';
         }
     }.observes('content.isLoaded')
 });

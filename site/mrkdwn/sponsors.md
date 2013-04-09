@@ -1,9 +1,9 @@
-Help out by Sponsoring Ember Camp Europe!
+Help out by Sponsoring Ember Fest!
 ==========================================
 
-In order to make Ember Camp Europe a truly awesome event, and in order to keep ticket prices as low as possible, we want you to help contribute by sponsoring the event. 
+In order to make Ember Fest a truly awesome event, and in order to keep ticket prices as low as possible, we want you to help contribute by sponsoring the event. 
 
-Ember Camp Europe want to work with our sponsors in order to help promote your brand, launch your product or whatever you have in mind.
+Ember Fest want to work with our sponsors in order to help promote your brand, launch your product or whatever you have in mind.
 
 Sounds interesting? Contact <a href="mailto:joachim@haagen-software.no">Joachim Haagen Skeie</a> today!
 

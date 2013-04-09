@@ -92,10 +92,10 @@ public class Main {
 		
 		List<NettyWebserverRouterPlugin> routerPlugins = new ArrayList<NettyWebserverRouterPlugin>();
 		routerPlugins.add(new EmberCampRouterPlugin(new ApplicationServerInfo(), dbEnv));
-		logger.info("Starting server");
+		logger.info("Starting server: " + System.getProperty(PropertyConstants.NETTY_PORT));
 				
 		Integer port = IntegerParser.parseIntegerFromString(System.getProperty(PropertyConstants.NETTY_PORT), 8080);
-		
+		logger.info("port: " + port);
         ServerBootstrap bootstrap = new ServerBootstrap(
                 new NioServerSocketChannelFactory(
                         Executors.newCachedThreadPool(),
