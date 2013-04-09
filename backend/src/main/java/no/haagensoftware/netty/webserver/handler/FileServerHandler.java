@@ -12,8 +12,11 @@ import org.jboss.netty.buffer.ChannelBuffers;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.*;
 import org.jboss.netty.handler.codec.frame.TooLongFrameException;
+import org.jboss.netty.handler.codec.http.Cookie;
+import org.jboss.netty.handler.codec.http.CookieDecoder;
 import org.jboss.netty.handler.codec.http.DefaultHttpResponse;
 import org.jboss.netty.handler.codec.http.HttpHeaders;
+import org.jboss.netty.handler.codec.http.HttpMethod;
 import org.jboss.netty.handler.codec.http.HttpRequest;
 import org.jboss.netty.handler.codec.http.HttpResponse;
 import org.jboss.netty.handler.codec.http.HttpResponseStatus;
@@ -23,6 +26,7 @@ import org.jboss.netty.util.CharsetUtil;
 import javax.activation.MimetypesFileTypeMap;
 import java.io.*;
 import java.net.*;
+import java.util.Set;
 
 /**
  * A file server that can serve files from file system and class path.
@@ -79,6 +83,64 @@ public class FileServerHandler extends SimpleChannelUpstreamHandler {
 		return rootPath;
 	}
     
+    public String getUri(MessageEvent e) {
+    	HttpRequest request = (HttpRequest) e.getMessage();
+        return request.getUri();
+    }
+    
+    public boolean isPut(MessageEvent e) {
+    	HttpRequest request = (HttpRequest) e.getMessage();
+		HttpMethod method = request.getMethod();
+		return method == HttpMethod.PUT;
+    }
+    
+    public boolean isPost(MessageEvent e) {
+    	HttpRequest request = (HttpRequest) e.getMessage();
+		HttpMethod method = request.getMethod();
+		return method == HttpMethod.POST;
+    }
+    
+    public boolean isGet(MessageEvent e) {
+    	HttpRequest request = (HttpRequest) e.getMessage();
+		HttpMethod method = request.getMethod();
+		return method == HttpMethod.GET;
+    }
+    
+    public boolean isDelete(MessageEvent e) {
+    	HttpRequest request = (HttpRequest) e.getMessage();
+		HttpMethod method = request.getMethod();
+		return method == HttpMethod.DELETE;
+    }
+    
+    public String getCookieValue(MessageEvent e, String cookieName) {
+    	String cookieValue = null;
+    	
+    	HttpRequest request = (HttpRequest) e.getMessage();
+		String value = request.getHeader("Cookie");
+		logger.info("cookie header: \n" + value);
+		if (value != null) {
+			Set<Cookie> cookies = new CookieDecoder().decode(value);
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals(cookieName)) {
+					cookieValue = cookie.getValue();
+					break;
+				}
+			}
+		}
+    	
+    	return cookieValue;
+    }
+    
+    public String getHttpMessageContent(MessageEvent e) {
+		String requestContent = null;
+		HttpRequest request = (HttpRequest) e.getMessage();
+		ChannelBuffer content = request.getContent();
+        if (content.readable()) {
+        	requestContent = content.toString(CharsetUtil.UTF_8);
+        }
+		return requestContent;
+	}
+        
     @Override
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
 		HttpRequest request = (HttpRequest) e.getMessage();

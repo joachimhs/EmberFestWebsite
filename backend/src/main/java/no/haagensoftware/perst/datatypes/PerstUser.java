@@ -8,6 +8,8 @@ public class PerstUser extends Persistent {
 	private String firstName;
 	private String lastName;
 	private String homeCountry;
+	private String userLevel;
+	public Long loginExpires;
 	
 	public PerstUser() {
 	
@@ -53,5 +55,19 @@ public class PerstUser extends Persistent {
 		this.homeCountry = homeCountry;
 	}
 	
+	public String getUserLevel() {
+		return userLevel;
+	}
 	
+	public void setUserLevel(String userLevel) {
+		this.userLevel = userLevel;
+	}
+	
+	public Long getLoginExpires() {
+		return loginExpires;
+	}
+	
+	public void setLoginExpires(Long loginExpires) {
+		this.loginExpires = loginExpires;
+	}
 }

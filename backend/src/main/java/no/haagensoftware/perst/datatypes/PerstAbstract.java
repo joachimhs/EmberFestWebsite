@@ -7,6 +7,8 @@ public class PerstAbstract extends Persistent {
 	private String userId;
 	private String abstractTitle;
 	private String abstractContent;
+	private String abstractType;
+	private String abstractTopics;
 	
 	public PerstAbstract() {
 		
@@ -42,5 +44,21 @@ public class PerstAbstract extends Persistent {
 	
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+	
+	public String getAbstractTopics() {
+		return abstractTopics;
+	}
+	
+	public void setAbstractTopics(String abstractTopics) {
+		this.abstractTopics = abstractTopics;
+	}
+	
+	public String getAbstractType() {
+		return abstractType;
+	}
+	
+	public void setAbstractType(String abstractType) {
+		this.abstractType = abstractType;
 	}
 }

@@ -7,7 +7,7 @@ Be sure that the organizers will do everything in their power to choose an aweso
 
 Be sure to watch this website to get updates on the venue. 
 
-Updates will also be tweeted from the <a href="https://twitter.com/EmberCampEurope">@EmberCampEurope</a> twitter account.
+Updates will also be tweeted from the <a href="https://twitter.com/EmberFest">@EmberFest</a> twitter account.
 
 Visitor Distribution So Far
 ---------------------------

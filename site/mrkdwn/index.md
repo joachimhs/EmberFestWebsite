@@ -17,4 +17,4 @@ Pricing for the event will be split into three parts:
 
 - Package price for both events
 
-Updates will be tweeted from the <a href="https://twitter.com/EmberCampEurope">@EmberCampEurope</a> twitter account.
+Updates will be tweeted from the <a href="https://twitter.com/EmberFest">@EmberFest</a> twitter account.

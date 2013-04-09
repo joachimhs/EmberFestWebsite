@@ -5,7 +5,7 @@ Ember Camp Europe will be a three day event in either late august or late septem
 
 Be sure to watch this website to get updates on the venue. 
 
-Updates will also be tweeted from the <a href="https://twitter.com/EmberCampEurope">@EmberCampEurope</a> twitter account.
+Updates will also be tweeted from the <a href="https://twitter.com/EmberFest">@EmberFest</a> twitter account.
 
 <b>Note:</b> This schedule is tentative, and might change moving forward.
 

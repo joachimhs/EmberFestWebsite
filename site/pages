@@ -26,14 +26,35 @@
 	         "pageTitle": "Schedule",
 	         "pageFilename": "schedule.md",
 	         "pageSortIndex": 4
-	     },
-		 {
-		     "id": "sponsors",
-		     "pageName": "Sponsors",
-		     "pageTitle": "Sponsors",
-		     "pageFilename": "sponsors.md",
-		     "pageSortIndex": 5
-		 },
-         {"id": "organizers", "pageName": "Organizers","pageTitle": "Organizers","pageFilename": "organizers.md","pageSortIndex": 6}
+        },
+        {
+           "id": "call_for_speakers",
+            "pageName": "Call For Speakers",
+            "pageTitle": "Call For Speakers",
+            "pageRoute": "callForSpeakers",
+            "pageSortIndex": 5
+        },
+        {
+            "id": "talks",
+             "pageName": "Proposed Talks",
+             "pageTitle": "Proposed Talks",
+             "pageRoute": "talks",
+             "pageSortIndex": 6
+        },
+        {
+            "id": "sponsors",
+            "pageName": "Sponsors",
+            "pageTitle": "Sponsors",
+            "pageFilename": "sponsors.md",
+            "pageSortIndex": 10
+        },
+        {
+           "id": "organizers",
+           "pageName": "Organizers",
+           "pageTitle": "Organizers",
+           "pageFilename":
+           "organizers.md",
+           "pageSortIndex": 15
+        }
     ]
 }

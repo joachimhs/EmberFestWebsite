@@ -11,6 +11,7 @@ import java.util.concurrent.Executors;
 
 import no.haagensoftware.netty.webserver.pipeline.NettyWebserverPipelineFactory;
 import no.haagensoftware.netty.webserver.plugin.EmberCampRouterPlugin;
+import no.haagensoftware.perst.PerstDBEnv;
 import no.haagensoftware.pluginService.ApplicationServerInfo;
 
 import org.apache.log4j.Logger;
@@ -61,6 +62,11 @@ public class Main {
 			System.setProperty(property, properties.getProperty(property));
 		}
 		
+		if (System.getProperty(PropertyConstants.DB_PATH) == null) {
+			logger.error(" * Property '" + PropertyConstants.DB_PATH + "' is not specified. Configure in file config.properties. Halting Application");
+			System.exit(-1);
+		}
+		
 		if (System.getProperty(PropertyConstants.NETTY_PORT) == null) {
 			System.setProperty(PropertyConstants.NETTY_PORT, "8080");
 			logger.info(" * Property " + PropertyConstants.NETTY_PORT + " is not specified. Using default: 8080. Configure in file config.properties.");
@@ -80,9 +86,12 @@ public class Main {
 	public void run() throws Exception {
 		String webappDir = System.getProperty(PropertyConstants.WEBAPP_DIR);
 		System.setProperty("basedir", webappDir);
-				
+		
+		PerstDBEnv dbEnv = new PerstDBEnv(System.getProperty(PropertyConstants.DB_PATH));
+		dbEnv.initializeDbAtPath();
+		
 		List<NettyWebserverRouterPlugin> routerPlugins = new ArrayList<NettyWebserverRouterPlugin>();
-		routerPlugins.add(new EmberCampRouterPlugin(new ApplicationServerInfo()));
+		routerPlugins.add(new EmberCampRouterPlugin(new ApplicationServerInfo(), dbEnv));
 		logger.info("Starting server");
 				
 		Integer port = IntegerParser.parseIntegerFromString(System.getProperty(PropertyConstants.NETTY_PORT), 8080);
@@ -92,6 +101,8 @@ public class Main {
                         Executors.newCachedThreadPool(),
                         Executors.newCachedThreadPool()));
 
+        
+        
         NettyWebserverPipelineFactory nwpf = new NettyWebserverPipelineFactory(routerPlugins);
         // Set up the event pipeline factory          .
         bootstrap.setPipelineFactory(nwpf);

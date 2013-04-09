@@ -1,5 +1,7 @@
 package no.haagensoftware.perst;
 
+import java.io.File;
+
 import org.garret.perst.Storage;
 import org.garret.perst.StorageFactory;
 
@@ -14,7 +16,7 @@ public class PerstDBEnv {
 	public void initializeDbAtPath() {
 		storage = StorageFactory.getInstance().createStorage();
 		storage.setProperty("perst.multiclient.support", Boolean.FALSE);
-		storage.open(dbPath);
+		storage.open(dbPath + File.separatorChar + "emberfest.db");
 		
 		storage.beginThreadTransaction(Storage.READ_WRITE_TRANSACTION);
 		PerstStorageRoot storageRoot = (PerstStorageRoot)storage.getRoot();
