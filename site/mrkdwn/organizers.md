@@ -36,5 +36,5 @@ Jakub Arnold
 
 Jakub is an active member in the Ember.js community. He started out just by helping people on IRC in the early days when Ember wasn't yet so popular. He's known among the community mostly for his blog <a href="http://darthdeus.github.io/">http://darthdeus.github.io/</a> where he explains different parts of the framework. He works as a consultant at <a href="http://sensible.io">http://sensible.io</a>.
 
-Location: Denmark<br />
+Location: Czech Republic<br />
 Twitter: <a href="http://www.twitter.com/tchak13">@darthdeus</a>
