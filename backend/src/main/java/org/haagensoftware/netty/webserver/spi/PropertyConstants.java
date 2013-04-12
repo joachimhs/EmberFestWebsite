@@ -13,4 +13,5 @@ public class PropertyConstants {
     public static final String SCRIPTS_CACHE_SECONDS = "com.embercampeurope.netty.scriptsCacheSeconds";
     public static final String ADMIN_TOKEN = "com.embercampeurope.netty.adminToken";
     public static final String DB_PATH = "com.embercampeurope.db.path";
+    public static final String ROOT_USER = "com.embercampeurope.rootuser";
 }

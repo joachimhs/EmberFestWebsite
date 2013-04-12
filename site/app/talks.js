@@ -26,25 +26,39 @@ ECE.TalksController = Ember.ArrayController.extend({
 });
 
 ECE.TalksIndexController = Ember.ArrayController.extend({
-    needs: ['talks']
+    needs: ['talks'],
+
+    isAdmin: function() {
+        return ECE.get('authLevel') === 'admin' || ECE.get('authLevel') === 'root'
+    }.property('ECE.authLevel'),
+
+    deleteTalk: function(a) {
+        console.log('delete task: ' + a.get('id'));
+        ECE.Talk.delete(a.get('id'));
+    }
 });
 
 Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
-    '<h1>Proposed Talks</h1>' +
+    '<div class="markdownArea"><h1>Proposed Talks</h1>' +
     '{{#each controllers.talks}}' +
         '<div class="well well-small talkTitle">' +
             '{{#linkTo "talks.talk" this}}<button class="btn btn-primary pull-right">View Proposal</button>{{/linkTo}}' +
             '{{talkTitle}}<br>' +
             'Suggested by {{talkSuggestedBy}}' +
 
+            '{{#if controller.isAdmin}}' +
+                '<br /><button class="btn btn-primary" {{action "deleteTalk" this}}>Delete Proposal</button>' +
+            '{{/if}}' +
         '</div>' +
-    '{{/each}}'
+    '{{/each}}</div>'
 );
 
 Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
-    '<h1>{{id}} - {{talkTitle}}</h1>' +
-    '<div>{{talkText}}</div>' +
-    '<div>{{talkType}}</div>' +
-    '<div>{{talkTopics}}</div>' +
-    '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>'
+    '<div class="markdownArea">' +
+        '<h1>{{talkTitle}}</h1>' +
+        '<div><h2>Abstract</h2>{{talkText}}</div>' +
+        '<div><h2>Talk Type</h2>{{talkType}}</div>' +
+        '<div><h2>Talk Topics</h2>{{talkTopics}}</div>' +
+        '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>' +
+    '</div>'
 );

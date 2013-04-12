@@ -54,4 +54,14 @@ public class PerstAbstractDao {
 		
 		return storedAbstracts;
 	}
+	
+	public void deleteAbstract(PerstDBEnv dbEnv, String abstractId) {
+		Storage storage = dbEnv.getStorage();
+		storage.beginThreadTransaction(Storage.READ_WRITE_TRANSACTION);
+		PerstStorageRoot storageRoot = (PerstStorageRoot) storage.getRoot();
+		
+		storageRoot.getAbstractIndex().removeKey(abstractId);
+		
+		storage.endThreadTransaction();
+	}
 }

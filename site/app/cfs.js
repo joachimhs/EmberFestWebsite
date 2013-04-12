@@ -59,20 +59,15 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
         }
 
         if (validated) {
-            $.ajax({
-                type: 'POST',
-                url: '/abstracts',
-                dataType: "json",
-                data: JSON.stringify({talkId: Math.uuid(16, 16), talkTitle: this.get('content.proposalTitle'), talkText: this.get('content.proposalText'), talkType: this.get('content.proposalType'), talkTopics: this.get('content.proposalTopics')}),
-                success: function(res, status, xhr) {
-                    if (res.submitted) {
-                        alert('Congratulations! Your proposed talk is registered!');
-                    } else {
-                        alert('Unable to register your talk. Error message: ' + res.error);
-                    }
-                },
-                error: function(xhr, status, err) { alert('Unable to register your proposal: ' + err); console.log(xhr); console.log(xhr.error()); console.log(status); }
+            var talk = ECE.Talk.create({
+                talkId: Math.uuid(16, 16),
+                talkTitle: this.get('content.proposalTitle'),
+                talkText: this.get('content.proposalText'),
+                talkType: this.get('content.proposalType'),
+                talkTopics: this.get('content.proposalTopics')
             });
+
+            ECE.Talk.createRecord(talk);
         }
     },
 

@@ -1,28 +1,48 @@
 body {
     color: #e8e8e8;
-    background:url("/img/side_graphic.png") fixed no-repeat bottom left #000;
-    font-family: "Century Gothic", sans-serif;
+
+    font-family: 'Gabriela', serif;
     letter-spacing: 0em;
     font-size: 1.2em;
     line-height: 1.26em;
-    padding: 20px;
 }
 
 p { margin-top: 0.95em; }
 
+a {
+    color: rgb(200, 12, 8);
+    margin-right: 15px;
+}
+
+a:hover {
+    color: rgb(100,12,8);
+    text-decoration: underline;
+}
+
+.appArea {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 55px;
+    color: #000;
+}
+
 #mainArea {
     text-align: center;
-    margin-top: 45px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 65px;
+    color: #000;
 }
 
 #toolbarArea {
-    text-align: right;
+    text-align: left;
+    color: rgb(200, 12, 8);
     font-size: 1.3em;
-    background: #030039;
+    background-color: rgba(255, 211, 88, 0.496094);
     border-bottom: 2px solid #8f0003;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 10px;
+    padding-top: 15px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
     position: absolute;
     left: 0px;
@@ -33,38 +53,68 @@ p { margin-top: 0.95em; }
     z-index: 10;
 }
 
-#toolbarArea a {
-    color: #fff;
-}
-
-#toolbarArea a:hover {
-    color: #d8d8d8;
-}
-
 #headerLogo {
     margin-bottom: 25px;
     margin-top: 15px;
 }
 
 #headerLinks {
-    text-align: right;
-    margin-right: 50px;
+    white-space: nowrap;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 100px;
+    font-size: 0.7em;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+#loginButtonArea {
+    position: absolute;
+    width: 75px;
+    right: 0px;
+    top: 0px;
+    margin-top: 15px;;
+    height: 45px;
+}
+
+
+#eventDescription h1 {
+    font-family: 'Patrick Hand SC', cursive;
 }
 
 #contentArea {
+    margin: 0px;
+    padding: 0px;
     margin-top: 25px;
-    padding-left: 300px;
     text-align: left;
+}
+
+#hotelArea {
+    background: rgba(197, 155, 60, 0.496094);
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-top: 10px;
+}
+
+.markdownArea {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .markdownArea h1 {
     text-align: center;
-    border-bottom: 1px dashed #ccc;
+    font-family: 'Patrick Hand SC', cursive;
+    margin-bottom: 15px;
+}
+
+.markdownArea h2 {
+    text-align: left;
+    font-family: 'Patrick Hand SC', cursive;
     margin-bottom: 15px;
 }
 
 .talkTitle {
-    background-color: #030039;
+    background-color: rgba(197, 155, 60, 0.496094);
     border: 1px solid #453f66;
     border: 1px solid rgba(69, 63, 102, 0.4);
     -webkit-border-radius: 4px;

@@ -1,20 +1,28 @@
-Welcome to Ember Camp Europe!
-=============================
+Extra Early Bird Tickets Available!
+===================================
 
-Ember Fest will be a three day event in late August or late September, in or near a major European city. The date and venue will be decided upon soon, based on your participation. If you want to see Ember Fest happen in your home country, be sure to register your interest by <a href="http://signup.embercampeurope.com">signing up</a>.
+In order to test the ticketing system, we are releasing a small batch of "Extra Early Bird" tickets, both to the two first days of Training, as well as for the main Conference event! 
 
-The goal of Ember Fest is split into two parts, across three days. The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials. 
+Get them while they're hot!
 
-Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js' awesomeness!
+<a href="https://www.eventora.com/en/Events/ember-fest">https://www.eventora.com/en/Events/ember-fest</a>!
 
-The location for the event will be based on your interest and your residing country!
+Training, Day One and Two
+-------------------------
+Training includes two full days of first class Ember.js training by the author of Ember.js in Action, and will allow you to get up to speed quickly with Ember.js. The price includes breakfast and lunch both days, as well as a copy of the e-book. Attendees will receive the printed book via mail when the book is released for print. At the end of day two, you are all invited to a proper dinner at a local restaurant. 
 
-Pricing for the event will be split into three parts:
+Attendees for the training, get a free pass to the conference on the 30th of August. 
 
-- Seperate pricing for the training
+ - Early Bird Training Special: EUR 800
+ - Standard Training Price: EUR 1000
 
-- Seperate pricing for the mini-conference
+Conference, Day three
+----------------------
+The conference will be the Ember.js happening of the year in Europe with awesome presentations and tutorials throughout the day. We will serve a buffet-style lunch, as well as plenty of sweets and snacks throughout the day during the breaks. In the evening, there will be a conference dinner as well as an after party. 
 
-- Package price for both events
+ - Early Bird Conference Price: EUR 120
+ - Standard Conference Price: EUR 150
+ - FREE for Speakers!
+
 
 Updates will be tweeted from the <a href="https://twitter.com/EmberFest">@EmberFest</a> twitter account.

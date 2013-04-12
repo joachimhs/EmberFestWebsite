@@ -13,8 +13,8 @@ Sponsors will receive:
 - Mention in opening and closing talks
 - Personal Tweet thanking you for your sponsorship
 - Displayed logo during breaks
+- There will be rollups strategically placed throughout the venue, where all sponsors will be showcased
 - Logo displayed in online videos
-- 5 tickets to the mini-conference during day 3
-- Discounted tickets for training during day 1 and 2
+- 3 tickets to the mini-conference during day 3
 
 Sponsoring is offered at EUR 2300.

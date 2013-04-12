@@ -11,6 +11,7 @@ navigator.id.watch({
                     alert('Authentication Failed: ' + res.error);
                 } else if (res.uuidToken) {
                     ECE.set('uuidToken', res.uuidToken);
+                    ECE.set('authLevel', res.authLevel);
                     console.log('setting cookie to: ' + res.uuidToken);
                     //document.cookie="uuidToken=" + res.uuidToken;
                     ECE.createCookie("uuidToken", res.uuidToken, 1);
@@ -128,12 +129,9 @@ ECE.PagesIndexController = Ember.ArrayController.extend({
     parseMarkdown: function() {
         var controller = this;
         if (!this.markdown && this.get('controllers.pages.content.length') > 0) {
-            var page = this.get('controllers.pages.arrangedContent.firstObject.pageFilename');
-            if (page) {
-                $.get('/mrkdwn/' + page, function(data) {
-                    controller.set('markdown', new Handlebars.SafeString(new Showdown.converter().makeHtml(data)));
-                });
-            }
+            $.get('/mrkdwn/index.md', function(data) {
+                controller.set('markdown', new Handlebars.SafeString(new Showdown.converter().makeHtml(data)));
+            });
         }
     },
 
@@ -142,39 +140,59 @@ ECE.PagesIndexController = Ember.ArrayController.extend({
     }.observes('controllers.pages.content.length')
 });
 
+ECE.ApplicationView = Ember.View.extend({
+    classNames: ['appArea']
+});
+
 Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
     '<div id="toolbarArea">' +
-        '{{#if showLogin}}' +
-            '<button class="btn btn-primary" {{action "doLogIn"}}>Log In</button>' +
-            '{{#linkTo pages.register}}<button class="btn btn-primary">Register new account</button>{{/linkTo}}' +
-        '{{/if}}' +
-        '{{#if showLogout}}' +
-            '<button class="btn btn-primary" {{action "doLogOut"}}>Log Out</button>' +
-        '{{/if}}' +
-
+        '<span style="font-weight: bold; font-size: 1.5em;">Ember</span><span style="color: rgb(100,12,8); font-size: 1.5em; font-style: italic;">Fest</span>' +
+        '<span id="headerLinks">' +
+            '{{render header}}' +
+            '<span id="loginButtonArea">' +
+                '{{#if showLogin}}' +
+                    '<button class="btn btn-primary" {{action "doLogIn"}}>Log In</button>' +
+                '{{/if}}' +
+                '{{#if showLogout}}' +
+                    '<button class="btn btn-primary" {{action "doLogOut"}}>Log Out</button>' +
+                '{{/if}}' +
+            '</span>' +
+        '</span>' +
     '</div>' +
     '<div id="mainArea">' +
-        '<div id="header">' +
-            '<div id="headerLogo">{{#linkTo "pages"}}<img src="/img/ece_logo.png">{{/linkTo}}</div> ' +
-            '<div id="headerLinks">{{render header}}</div>' +
-        '</div>' +
         '<div id="contentArea">{{outlet}}</div>' +
     '</div>'
 );
 
+
+ECE.HeaderView = Ember.View.extend({
+    tagName: 'span'
+
+});
+
 Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
-    '| ' +
     '{{#each controllers.pages.arrangedContent}}' +
         '{{#if pageFilename}}' +
             '{{#linkTo "pages.page" this}}{{pageName}}{{/linkTo}}' +
         '{{else}}' +
             '{{#if isLinkToTalks}}{{#linkTo "talks"}}{{pageName}}{{/linkTo}}{{/if}}' +
             '{{#if isLinkToCfp}}{{#linkTo "pages.callForSpeakers"}}{{pageName}}{{/linkTo}}{{/if}}' +
+            '{{#if isLinkToHome}}{{#linkTo "pages"}}{{pageName}}{{/linkTo}}{{/if}}' +
         '{{/if}}' +
-    ' | ' +
+    ' ' +
     '{{/each}}'
 );
 
 Ember.TEMPLATES['pages/index'] = Ember.Handlebars.compile('' +
+    '<div id="hotelArea" class="container-fluid">' +
+        '<div class="row-fluid">' +
+            '<div id="eventDescription" class="span6">' +
+                '<h1>The Biggest Ember.js Event in Europe!</h1>' +
+                '<p>Ember Fest takes place in Munich, Germany and will be a three day event from August 28th until August 30th. This will by far be the European Ember.js event this year!</p>' +
+                '<p>The goal of Ember Fest is split into two parts. The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials.</p>' +
+                '<p>Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js awesomeness!</p>' +
+            '</div>' +
+        '<div id="eventPhoto" class="span5"><img src="/img/venue.jpg"</div>' +
+    '</div></div></div>' +
     '<div class="markdownArea">{{markdown}}</div>'
 );

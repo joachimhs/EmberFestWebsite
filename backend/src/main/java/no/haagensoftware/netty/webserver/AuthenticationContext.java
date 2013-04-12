@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
+import org.haagensoftware.netty.webserver.spi.PropertyConstants;
 
 import no.haagensoftware.auth.MozillaPersonaCredentials;
 import no.haagensoftware.auth.NewUser;
@@ -17,11 +18,13 @@ public class AuthenticationContext {
 	private PerstDBEnv dbEnv;
 	private Hashtable<String, MozillaPersonaCredentials> authenticatedUsers;
 	private PerstUserDao userDao;
+	private String rootUser = "";
 	
 	public AuthenticationContext(PerstDBEnv dbEnv) {
 		this.dbEnv = dbEnv;
 		authenticatedUsers = new Hashtable<>();
 		this.userDao = new PerstUserDao();
+		rootUser = System.getProperty(PropertyConstants.ROOT_USER, "");
 	}
 	
 	public AuthenticationResult verifyUUidToken(String uuidToken) {
@@ -97,6 +100,31 @@ public class AuthenticationContext {
 		this.userDao.persistUser(dbEnv, newUser);
 		
 		return true;
+	}
+	
+	public String getUserAuthLevel(String uuid) {
+		String authLevel = "user";
+		
+		logger.info("root user. " + rootUser);
+		if (uuid != null) {
+			MozillaPersonaCredentials cred = authenticatedUsers.get(uuid);
+			//If user has system-level privileges, apply them
+			if (cred != null && cred.getEmail().equals(rootUser)) {
+				authLevel = "root";
+				logger.info("Setting authLevel to ROOT for : " + cred.getEmail());
+			} else if (cred != null) {
+				PerstUser user = getUser(cred.getEmail());
+				
+				logger.info("Setting authLevel to " + user.getUserLevel() + " for : " + cred.getEmail());
+				
+				//If user have user-level privileges, apply them
+				if (user != null && user.getUserLevel() != null) {
+					authLevel = user.getUserLevel();
+				}
+			}
+		}
+		
+		return authLevel;
 	}
 	
 	public PerstUser getUser(String email) {

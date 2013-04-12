@@ -46,9 +46,11 @@ ECE.PagesPageController = Ember.Controller.extend({
 });
 
 Ember.TEMPLATES['pages'] = Ember.Handlebars.compile('' +
-    '<div class="markdownArea">{{outlet}}</div>'
+    '{{outlet}}'
 );
 
 Ember.TEMPLATES['pages/page'] = Ember.Handlebars.compile('' +
-    '{{#if content.isLoaded}}{{content.markdown}}{{/if}}'
+    '{{#if content.isLoaded}}' +
+        '<div class="markdownArea">{{content.markdown}}</div>' +
+    '{{/if}}'
 );

@@ -55,10 +55,9 @@ public class CredentialsHandler extends FileServerHandler {
 		if (isPost(e) && uri != null && uri.endsWith("login")) {
 			String messageContent = getHttpMessageContent(e);
 			
-			
 			if (cachedUserResult != null && cachedUserResult.getUuidToken() != null && cachedUserResult.isUuidValidated()) {
 				logger.info("User Cached. Logging in automatically without Persona.");
-				responseContent = "{ \"uuidToken\": \"" + cachedUserResult.getUuidToken() + "\"}";
+				responseContent = "{ \"uuidToken\": \"" + cachedUserResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(cachedUserResult.getUuidToken()) + "\"}";
 			} else {
 				logger.info("Logging in via Persona.");
 				
@@ -67,7 +66,7 @@ public class CredentialsHandler extends FileServerHandler {
 		        MozillaPersonaCredentials credentials = new Gson().fromJson(responseContent, MozillaPersonaCredentials.class);
 		        AuthenticationResult authResult = authenticationContext.verifyAndGetUser(credentials);
 		        if (authResult.getUuidToken() != null && authResult.isUuidValidated()) {
-		        	responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\"}";
+		        	responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken()) + "\"}";
 		        } else if (authResult.getUuidToken() != null && !authResult.isUuidValidated()) {
 		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\" }";
 		        } else {
@@ -112,7 +111,7 @@ public class CredentialsHandler extends FileServerHandler {
 			messageContent = messageContent.substring(10, messageContent.length());
 		}
 		assertionJson.addProperty("assertion", messageContent);
-		assertionJson.addProperty("audience", "http://emberfest.eu:80");
+		assertionJson.addProperty("audience", "http://localhost:8081");
 		
 		int statusCode = -1;
 		DefaultHttpClient httpclient = new DefaultHttpClient();

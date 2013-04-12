@@ -3,7 +3,7 @@
             "id": "home",
             "pageName": "Home",
             "pageTitle": "Home",
-            "pageFilename": "index.md",
+            "pageRoute": "index",
             "pageSortIndex": 1
         },
         {

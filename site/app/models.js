@@ -1,6 +1,4 @@
-ECE.Model = Ember.Object.extend({
-
-});
+ECE.Model = Ember.Object.extend();
 
 ECE.Model.reopenClass({
     find: function(id, type) {
@@ -35,40 +33,70 @@ ECE.Model.reopenClass({
         $.getJSON(url, function(data) {
             $.each(data[key], function(i, row) {
                 console.log(row.id);
-                var page = collection.contentArrayContains(row.id, type);
-                if (!page) {
-                    page =  type.create();
-                    Ember.get(type, 'collection').pushObject(page);
+                var item = collection.contentArrayContains(row.id, type);
+                if (!item) {
+                    item =  type.create();
+                    Ember.get(type, 'collection').pushObject(item);
                 }
-                page.setProperties(row);
-                page.set('isLoaded', true);
-                result.pushObject(page);
+                item.setProperties(row);
+                item.set('isLoaded', true);
+                item.set('isError', false);
+                result.pushObject(item);
             });
         });
 
         return Ember.get(type, 'collection');
+    },
+
+    delete: function(url, type, id) {
+        console.log('delete: ' + type + " " + id);
+        var collection = this;
+        $.ajax({
+            type: 'DELETE',
+            url: url + "/" + id,
+            success: function(res, status, xhr) {
+                if(res.deleted) {
+                    var item = collection.contentArrayContains(id, type);
+                    if (item) {
+                        Ember.get(type, 'collection').removeObject(item);
+                    }
+                }
+            },
+            error: function(xhr, status, err) { alert('Unable to delete: ' + status + " :: " + err); }
+        });
+    },
+
+    createRecord: function(url, type, model) {
+        console.log('save: ' + type + " " + model.get('id'));
+        var collection = this;
+        model.set('isSaving', true);
+        $.ajax({
+            type: "PUT",
+            url: url,
+            data: JSON.stringify(model),
+            success: function(res, status, xhr) {
+                if (res.submitted) {
+                    model.set('isSaving', false);
+                } else {
+                    model.set('isError', true);
+                }
+            },
+            error: function(xhr, status, err) { model.set('isError', false);  }
+        })
     }
 });
 
 ECE.Page = ECE.Model.extend({
-    childrenPages: function() {
-        var children = [];
-        if (this.get('childrenPageIds')) {
-            console.log('childrenPages: ' + this.get('childrenPageIds'));
-
-            this.get('childrenPageIds').forEach(function(childPage) {
-                children.pushObject(ECE.Page.find(childPage));
-            });
-        }
-        return children;
-    }.property('childrenPageIds'),
-
     isLinkToTalks: function() {
         return this.get('pageRoute') === 'talks'
     }.property('pageRoute'),
 
     isLinkToCfp: function() {
         return this.get('pageRoute') === 'callForSpeakers'
+    }.property('pageRoute'),
+
+    isLinkToHome: function() {
+        return this.get('pageRoute') === 'index'
     }.property('pageRoute')
 });
 
@@ -96,5 +124,13 @@ ECE.Talk.reopenClass({
 
     findAll: function() {
         return ECE.Model.findAll('/abstracts', ECE.Talk, 'abstracts');
+    },
+
+    createRecord: function(model) {
+        ECE.Model.createRecord('/abstracts', ECE.Talk, model);
+    },
+
+    delete: function(id) {
+        ECE.Model.delete('/abstracts', ECE.Talk, id);
     }
 });

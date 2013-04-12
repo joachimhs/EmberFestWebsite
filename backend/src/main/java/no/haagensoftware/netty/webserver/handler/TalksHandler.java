@@ -10,6 +10,7 @@ import no.haagensoftware.perst.PerstDBEnv;
 import no.haagensoftware.perst.dao.PerstAbstractDao;
 import no.haagensoftware.perst.datatypes.PerstAbstract;
 import no.haagensoftware.perst.datatypes.PerstUser;
+import no.haagensoftware.util.UriUtil;
 
 import org.apache.log4j.Logger;
 import org.jboss.netty.channel.ChannelHandlerContext;
@@ -37,6 +38,15 @@ public class TalksHandler extends FileServerHandler {
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
 	
 		String uri = getUri(e);
+		
+		String id = UriUtil.getIdFromUri(uri, "abstracts");
+
+        if (id != null) {
+            id = id.replaceAll("\\%20", " ");
+        }
+        
+        logger.info("ID: " + id);
+		
 		String cookieUuidToken = getCookieValue(e, "uuidToken");
 		AuthenticationResult cachedUserResult = null;
 		if (cookieUuidToken != null) {
@@ -69,7 +79,7 @@ public class TalksHandler extends FileServerHandler {
 			topObject.add("abstracts", abstarctsArray);
 			
 			responseContent = topObject.toString();
-		} else if (isPost(e)) {
+		} else if (isPost(e) || isPut(e)) {
 			String messageContent = getHttpMessageContent(e);
 			
 			if (cachedUserResult != null && cachedUserResult.isUuidValidated() && cachedUserResult.getUuidToken() != null) {
@@ -91,6 +101,13 @@ public class TalksHandler extends FileServerHandler {
 				}
 			} else {
 				responseContent = "{\"submitted\": false, \"error\": \"User not authenticated\"}";
+			}
+		} else if (isDelete(e) && id != null) {
+			logger.info("deleting talk with id: " + id);
+			String authLevel = authenticationContext.getUserAuthLevel(cookieUuidToken);
+			if (authLevel.equals("root") || authLevel.equals("admin")) {
+				abstractDao.deleteAbstract(dbEnv, id);
+				responseContent = "{\"deleted\": true}";
 			}
 		}
 		
