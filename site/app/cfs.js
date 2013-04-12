@@ -77,6 +77,7 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
 });
 
 Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
+    '<div class="markdownArea">' +
     '<h1>Submit your Proposal!</h1>' +
     '{{markdown}}' +
     '{{#if controllers.application.showLogin}}' +
@@ -131,4 +132,5 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
             '<button type="submit" class="btn btn-primary" {{action "submitAbstract"}}>Submit Proposal!</button>' +
         '</div>' +
     '</form>' +
-    '{{/if}}');
+    '{{/if}}' +
+    '</div>');

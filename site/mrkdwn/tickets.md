@@ -1,7 +1,7 @@
 Tickets
 =======
 
-In order to test the ticketing system, we are releasing a small batch of "Extra Early Bird" tickets, both to the two first days of Training, as well as for the main Conference event! 
+<img src="/img/ticket.png" style="float: left" />In order to test the ticketing system, we are releasing a small batch of "Extra Early Bird" tickets, both to the two first days of Training, as well as for the main Conference event!
 
 Get them while they're hot!
 

@@ -5,6 +5,7 @@ body {
     letter-spacing: 0em;
     font-size: 1.2em;
     line-height: 1.26em;
+    background: url("/img/white_wall_hash.png")  scroll 0 0 #CFCFCF;
 }
 
 p { margin-top: 0.95em; }
