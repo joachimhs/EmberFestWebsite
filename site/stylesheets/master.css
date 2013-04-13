@@ -1,7 +1,7 @@
 body {
     color: #e8e8e8;
 
-    font-family: 'Gabriela', serif;
+    font-family: 'Ovo', serif;
     letter-spacing: 0em;
     font-size: 1.2em;
     line-height: 1.26em;
@@ -70,7 +70,7 @@ a:hover {
 
 #loginButtonArea {
     position: absolute;
-    width: 75px;
+    width: 135px;
     right: 0px;
     top: 0px;
     margin-top: 15px;;

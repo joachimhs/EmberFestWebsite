@@ -68,7 +68,7 @@ public class CredentialsHandler extends FileServerHandler {
 		        if (authResult.getUuidToken() != null && authResult.isUuidValidated()) {
 		        	responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken()) + "\"}";
 		        } else if (authResult.getUuidToken() != null && !authResult.isUuidValidated()) {
-		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\" }";
+		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\", \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"user\"}";
 		        } else {
 		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\" }";
 		        }
@@ -85,7 +85,9 @@ public class CredentialsHandler extends FileServerHandler {
 			logger.info(messageContent);
 			NewUser newUser = new Gson().fromJson(messageContent, NewUser.class);
 			if (newUser != null) {
-				if (authenticationContext.userIsNew(newUser.getEmail())) {
+				MozillaPersonaCredentials cred = authenticationContext.getAuthenticatedUser(newUser.getUuidToken());
+				newUser.setEmail(cred.getEmail());
+				if (authenticationContext.userIsNew(cred.getEmail())) {
 					authenticationContext.registerNewUser(newUser);
 					responseContent = "{ \"userRegistered\": true}";
 				} else {

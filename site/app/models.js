@@ -32,7 +32,6 @@ ECE.Model.reopenClass({
         var collection = this;
         $.getJSON(url, function(data) {
             $.each(data[key], function(i, row) {
-                console.log(row.id);
                 var item = collection.contentArrayContains(row.id, type);
                 if (!item) {
                     item =  type.create();

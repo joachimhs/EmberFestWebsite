@@ -59,6 +59,7 @@ public class AuthenticationContext {
 	    		authResult.setUuidToken(uuid);
 	    		authResult.setUuidValidated(true);
 			} else {
+				authenticatedUsers.put(uuid, credentials);
 				authResult.setUuidToken(uuid);
 	    		authResult.setUuidValidated(false);
 	    		authResult.setStatusMessage("User not registered");

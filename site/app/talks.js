@@ -5,7 +5,9 @@ ECE.TalksRoute = Ember.Route.extend({
 
     setupController: function(controller, model) {
         this._super(controller, model);
-        _gaq.push(['_trackPageview', "/talks" + model.get('id')]);
+        _gaq.push(['_trackPageview', "/talks"]);
+
+        document.title = 'Talks - Ember Fest';
     }
 });
 
@@ -17,6 +19,8 @@ ECE.TalksTalkRoute = Ember.Route.extend({
     setupController: function(controller, model) {
         this._super(controller, model);
         _gaq.push(['_trackPageview', "/talks/" + model.get('id')]);
+
+        document.title = model.get('talkTitle') + ' - Ember Fest';
     }
 });
 

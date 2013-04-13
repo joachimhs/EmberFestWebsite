@@ -17,6 +17,8 @@ ECE.PagesCallForSpeakersRoute = Ember.Route.extend({
     setupController: function(controller, model) {
         this._super(controller, model);
         _gaq.push(['_trackPageview', "/call_for_speakers/"]);
+
+        document.title = 'Call For Speakers - Ember Fest';
     }
 });
 
@@ -59,8 +61,9 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
         }
 
         if (validated) {
+            var talkId = Math.uuid(16, 16);
             var talk = ECE.Talk.create({
-                talkId: Math.uuid(16, 16),
+                talkId: talkId,
                 talkTitle: this.get('content.proposalTitle'),
                 talkText: this.get('content.proposalText'),
                 talkType: this.get('content.proposalType'),
@@ -68,6 +71,8 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
             });
 
             ECE.Talk.createRecord(talk);
+
+            this.transitionTo('talks');
         }
     },
 
