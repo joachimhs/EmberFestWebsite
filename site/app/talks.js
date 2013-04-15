@@ -42,6 +42,8 @@ ECE.TalksIndexController = Ember.ArrayController.extend({
     }
 });
 
+Ember.TEMPLATES['talks'] = Ember.Handlebars.compile('{{outlet}}');
+
 Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
     '<div class="markdownArea"><h1>Proposed Talks</h1>' +
     '{{#each controllers.talks}}' +

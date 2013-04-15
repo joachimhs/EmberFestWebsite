@@ -168,7 +168,8 @@ Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
     '</div>' +
     '<div id="mainArea">' +
         '<div id="contentArea">{{outlet}}</div>' +
-    '</div>'
+    '</div>' +
+    '{{render sponsors}}'
 );
 
 
@@ -190,16 +191,28 @@ Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
     '{{/each}}'
 );
 
+Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
+    '<div id="sponsorArea" style="float:right;">' +
+        '<table style="width: 250px;">' +
+            '<tr><td><h1 style="text-align: center; text-decoration: underline;">Sponsors:</h1></td></tr>' +
+            '<tr><td><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
+            '<tr><td><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
+        '</table>' +
+    '</div>'
+);
+
 Ember.TEMPLATES['pages/index'] = Ember.Handlebars.compile('' +
     '<div id="hotelArea" class="container-fluid">' +
         '<div class="row-fluid">' +
-            '<div id="eventDescription" class="span6">' +
+            '<div id="eventDescription" class="span12">' +
                 '<h1>The Biggest Ember.js Event in Europe!</h1>' +
+                '<img src="/img/venue.jpg" style="float:right; width: 350px; height: 300px;">' +
                 '<p>Ember Fest takes place in Munich, Germany and will be a three day event from August 28th until August 30th. This will by far be the European Ember.js event this year!</p>' +
                 '<p>The goal of Ember Fest is split into two parts. The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials.</p>' +
                 '<p>Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js awesomeness!</p>' +
             '</div>' +
-        '<div id="eventPhoto" class="span5"><img src="/img/venue.jpg"</div>' +
-    '</div></div></div>' +
+        '</div>' +
+    '</div>' +
     '<div class="markdownArea">{{markdown}}</div>'
+
 );

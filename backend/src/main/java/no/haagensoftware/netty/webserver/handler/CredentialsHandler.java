@@ -113,7 +113,7 @@ public class CredentialsHandler extends FileServerHandler {
 			messageContent = messageContent.substring(10, messageContent.length());
 		}
 		assertionJson.addProperty("assertion", messageContent);
-		assertionJson.addProperty("audience", "http://localhost:8081");
+		assertionJson.addProperty("audience", "http://locaelhost:8081");
 		
 		int statusCode = -1;
 		DefaultHttpClient httpclient = new DefaultHttpClient();

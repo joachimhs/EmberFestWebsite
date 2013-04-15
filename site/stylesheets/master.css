@@ -1,7 +1,7 @@
 body {
     color: #e8e8e8;
 
-    font-family: 'Ovo', serif;
+    font-weight: 300;
     letter-spacing: 0em;
     font-size: 1.2em;
     line-height: 1.26em;
@@ -25,6 +25,7 @@ a:hover {
     padding: 0px;
     margin-top: 55px;
     color: #000;
+    background-color: #fff;
 }
 
 #mainArea {
@@ -32,7 +33,18 @@ a:hover {
     margin: 0px;
     padding: 0px;
     margin-top: 65px;
+    margin-right: 250px;
     color: #000;
+    border-right: 2px solid #8f0003;
+
+}
+
+#sponsorArea {
+    position: absolute;
+    width: 250px;
+    right: 0px;
+    top: 60px;
+    background-color: #fff;
 }
 
 #toolbarArea {
@@ -65,7 +77,7 @@ a:hover {
     margin-left: 50px;
     margin-right: 100px;
     font-size: 0.7em;
-    font-family: 'Patrick Hand SC', cursive;
+    letter-spacing: -1px;
 }
 
 #loginButtonArea {
@@ -79,7 +91,7 @@ a:hover {
 
 
 #eventDescription h1 {
-    font-family: 'Patrick Hand SC', cursive;
+
 }
 
 #contentArea {
@@ -94,23 +106,26 @@ a:hover {
     border-bottom-color: rgb(255, 255, 255);
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    padding: 0px;
+    margin: 0px;
     padding-top: 10px;
 }
 
 .markdownArea {
+    background: url("/img/white_wall_hash.png")  scroll 0 0 #CFCFCF;
     padding-left: 10px;
     padding-right: 10px;
+    min-height: 100%;
 }
 
 .markdownArea h1 {
     text-align: center;
-    font-family: 'Patrick Hand SC', cursive;
+
     margin-bottom: 15px;
 }
 
 .markdownArea h2 {
     text-align: left;
-    font-family: 'Patrick Hand SC', cursive;
     margin-bottom: 15px;
 }
 

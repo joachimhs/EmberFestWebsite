@@ -1,9 +1,8 @@
-Extra Early Bird Tickets Available!
+Early Bird Tickets On Sale!
 ===================================
 
-<img src="/img/ticket.png" style="float: left" />In order to test the ticketing system, we are releasing a small batch of "Extra Early Bird" tickets, both to the two first days of Training, as well as for the main Conference event!
+<img src="/img/ticket.png" style="float: left" />Early Bird tickets are now on sale! Get them while they're hot!
 
-Get them while they're hot!
 
 <a href="https://www.eventora.com/en/Events/ember-fest">https://www.eventora.com/en/Events/ember-fest</a>!
 
@@ -13,8 +12,8 @@ Training includes two full days of first class Ember.js training by the author o
 
 Attendees for the training, get a free pass to the conference on the 30th of August. 
 
- - Early Bird Training Special: EUR 800
- - Standard Training Price: EUR 1000
+ - Early Bird Training Special: EUR 500
+ - Standard Training Price: EUR 650
 
 Conference, Day three
 ----------------------

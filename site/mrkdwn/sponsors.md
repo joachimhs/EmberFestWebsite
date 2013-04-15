@@ -12,9 +12,10 @@ Sponsors will receive:
 - Logo clearly visible on the website on all pages
 - Mention in opening and closing talks
 - Personal Tweet thanking you for your sponsorship
-- Displayed logo during breaks
+- Displayed logo during breaks on projector
 - There will be rollups strategically placed throughout the venue, where all sponsors will be showcased
-- Logo displayed in online videos
 - 3 tickets to the mini-conference during day 3
 
-Sponsoring is offered at EUR 2300.
+We will also attempt to display your logo in the online videos of the talks. 
+
+Sponsoring starts at EUR 1800.
