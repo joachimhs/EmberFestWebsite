@@ -26,7 +26,7 @@ ECE.TalksTalkRoute = Ember.Route.extend({
 
 
 ECE.TalksController = Ember.ArrayController.extend({
-
+    needs: ['application']
 });
 
 ECE.TalksIndexController = Ember.ArrayController.extend({
@@ -37,8 +37,76 @@ ECE.TalksIndexController = Ember.ArrayController.extend({
     }.property('ECE.authLevel'),
 
     deleteTalk: function(a) {
-        console.log('delete task: ' + a.get('id'));
+        console.log('delete talk: ' + a.get('id'));
         ECE.Talk.delete(a.get('id'));
+    },
+
+    editTalk: function(a) {
+        console.log('edit talk: ' + a.get('id'));
+    }
+});
+
+ECE.TalksTalkController = Ember.ObjectController.extend({
+    needs: ['user'],
+
+    titleValidationError: null,
+    proposalValidationError: null,
+    proposalTypeValidationError: null,
+    topicsValidationError: null,
+
+    editTalk: function(a) {
+        console.log('TalksTalkController: editTalk: ' + a.get('id'));
+        a.set('isEditing', true);
+    },
+
+    canEditTalk: function() {
+        return this.get('controllers.user.isLoggedIn') && this.get('talkByLoggedInUser');
+    }.property('controllers.user.isLoggedIn', 'talkByLoggedInUser'),
+
+    currentlyEditing: function() {
+        return this.get('controllers.user.isLoggedIn') && this.get('talkByLoggedInUser') && this.get('isEditing');
+    }.property('controllers.user.isLoggedIn', 'talkByLoggedInUser', 'isEditing'),
+
+    submitTalk: function() {
+        var validated = true;
+        if (!this.validateFieldContent(this.get('content.talkTitle'), 10)) {
+            this.set('titleValidationError', 'Talk Title must contain at least 10 characters!');
+            validated = false;
+        } else {
+            this.set('titleValidationError', null);
+        }
+
+        if (!this.validateFieldContent(this.get('content.talkText'), 10)) {
+            this.set('proposalValidationError', 'Talk Content must contain at least 100 characters!');
+            validated = false;
+        } else {
+            this.set('proposalValidationError', null);
+        }
+
+        if (!this.validateFieldContent(this.get('content.talkType'), 2)) {
+            this.set('proposalTypeValidationError', 'Talk Type must contain at least 2 characters!');
+            validated = false;
+        } else {
+            this.set('proposalTypeValidationError', null);
+        }
+
+        if (!this.validateFieldContent(this.get('content.talkTopics'), 5)) {
+            this.set('topicsValidationError', 'Talk Topics must contain at least 5 characters!');
+            validated = false;
+        } else {
+            this.set('topicsValidationError', null);
+        }
+
+        if (validated) {
+            var talk = this.get('content');
+            ECE.Talk.updateRecord(talk);
+
+            this.transitionToRoute('talks');
+        }
+    },
+
+    validateFieldContent: function(fieldContent, length) {
+        return (fieldContent != null && fieldContent.length >= length);
     }
 });
 
@@ -60,11 +128,68 @@ Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
 );
 
 Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
-    '<div class="markdownArea">' +
-        '<h1>{{talkTitle}}</h1>' +
-        '<div><h2>Abstract</h2>{{talkText}}</div>' +
-        '<div><h2>Talk Type</h2>{{talkType}}</div>' +
-        '<div><h2>Talk Topics</h2>{{talkTopics}}</div>' +
-        '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>' +
-    '</div>'
+    '{{#if currentlyEditing}}' +
+        '<div class="markdownArea">' +
+            '<form class="form-horizontal">' +
+                '<div class="control-group">' +
+                    '<label class="control-label" for="proposalTitle">Title</label>' +
+                    '<div class="controls">' +
+                        '{{view Ember.TextField valueBinding="talkTitle" classNames="span5"}}' +
+                        '{{#if titleValidationError}}' +
+                            '<span class="help-inline">{{titleValidationError}}</span>' +
+                        '{{else}}' +
+                            '<span class="help-inline">This is your Abstract Title</span>' +
+                        '{{/if}}' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label" for="proposalText">Proposal</label>' +
+                    '<div class="controls">' +
+                        '{{view Ember.TextArea valueBinding="talkText" rows="20" classNames="span5"}}' +
+                        '{{#if proposalValidationError}}' +
+                            '<span class="help-inline">{{proposalValidationError}}</span>' +
+                        '{{else}}' +
+                            '<span class="help-inline">This is your Proposals content</span>' +
+                        '{{/if}}' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label" for="proposalType">Proposal Type</label>' +
+                    '<div class="controls">' +
+                        '{{view Ember.TextField valueBinding="talkType" rows="20" classNames="span5"}}' +
+                        '{{#if proposalTypeValidationError}}' +
+                            '<span class="help-inline">{{proposalTypeValidationError}}</span>' +
+                        '{{else}}' +
+                            '<span class="help-inline">20 or 35 minute talk, or tutorial</span>' +
+                        '{{/if}}' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label" for="topics">Topics</label>' +
+                    '<div class="controls">' +
+                        '{{view Ember.TextField valueBinding="talkTopics" rows="20" classNames="span5"}}' +
+                        '{{#if topicsValidationError}}' +
+                            '<span class="help-inline">{{topicsValidationError}}</span>' +
+                        '{{else}}' +
+                            '<span class="help-inline">A comma separated keyword-list</span>' +
+                        '{{/if}}' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-actions" style="background: none;">' +
+                    '<button type="submit" class="btn btn-primary" {{action "submitTalk"}}>Submit Talk!</button>' +
+                '</div>' +
+            '</form>' +
+        '</div>' +
+    '{{else}}' +
+        '<div class="markdownArea">' +
+            '<h1>{{talkTitle}}</h1>' +
+            '<div><h2>Abstract</h2>{{talkText}}</div>' +
+            '<div><h2>Talk Type</h2>{{talkType}}</div>' +
+            '<div><h2>Talk Topics</h2>{{talkTopics}}</div>' +
+            '{{#if canEditTalk}}' +
+                '<div><h2>Edit Talk</h2><button class="btn btn-primary" {{action "editTalk" this}}>Edit Proposal</button></div>' +
+            '{{/if}}' +
+            '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>' +
+        '</div>' +
+    '{{/if}}'
 );

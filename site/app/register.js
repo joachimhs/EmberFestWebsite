@@ -10,6 +10,9 @@ ECE.PagesRegisterRoute = Ember.Route.extend({
 });
 
 ECE.PagesRegisterController = Ember.ObjectController.extend({
+    needs: ['user'],
+
+    waitingForUserToBeRegisterd: false,
     emailValidationError: null,
     firstNameValidationError: null,
     lastNameValidationError: null,
@@ -40,23 +43,24 @@ ECE.PagesRegisterController = Ember.ObjectController.extend({
 
         if (validated) {
             var controller = this;
-            $.ajax({
-                type: 'POST',
-                url: '/auth/registerNewUser',
-                dataType: "json",
-                data: JSON.stringify({uuidToken: ECE.get('uuidToken'), firstName: this.get('firstName'), lastName: this.get('lastName'), homeCountry: this.get('homeCountry')}),
-                success: function(res, status, xhr) {
-                    if (res.userRegistered) {
-                        alert('Congratulations! Your user account is registered!');
-                        controller.transitionToRoute('pages');
-                    } else {
-                        alert('Unable to register your user. Error message: ' + res.error);
-                    }
-                },
-                error: function(xhr, status, err) { alert('Unable to register new account: ' + err); console.log(xhr); console.log(xhr.error()); console.log(status); }
-            });
+            var user = this.get('controllers.user.content');
+            user.set('firstName', this.get('firstName'));
+            user.set('lastName', this.get('lastName'));
+            user.set('homeCountry', this.get('homeCountry'));
+            this.set('waitingForUserToBeRegisterd', true);
+            ECE.User.updateRecord(user);
         }
     },
+
+    authLevelObserver: function() {
+        var authLevel = this.get('controllers.user.content.authLevel');
+        console.log('authLevelObserver:' + this.get('waitingForUserToBeRegisterd') + " " + authLevel);
+        if (this.get('waitingForUserToBeRegisterd') && (authLevel === 'user' || authLevel === 'admin' || authLevel === 'root')) {
+            this.set('waitingForUserToBeRegisterd', false);
+            alert('Congratulations, your user details were updated successfully!');
+            this.transitionToRoute('pages');
+        }
+    }.observes('controllers.user.content.authLevel'),
 
     validateEmail: function() {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -8,6 +8,8 @@ import org.haagensoftware.netty.webserver.spi.PropertyConstants;
 
 import no.haagensoftware.auth.MozillaPersonaCredentials;
 import no.haagensoftware.auth.NewUser;
+import no.haagensoftware.leveldb.LevelDbEnv;
+import no.haagensoftware.leveldb.dao.LevelDbUserDao;
 import no.haagensoftware.perst.PerstDBEnv;
 import no.haagensoftware.perst.dao.PerstUserDao;
 import no.haagensoftware.perst.datatypes.PerstUser;
@@ -15,15 +17,15 @@ import no.haagensoftware.perst.datatypes.PerstUser;
 public class AuthenticationContext {
 	private Logger logger = Logger.getLogger(AuthenticationContext.class.getName());
 	
-	private PerstDBEnv dbEnv;
+	private LevelDbEnv dbEnv;
 	private Hashtable<String, MozillaPersonaCredentials> authenticatedUsers;
-	private PerstUserDao userDao;
+	private LevelDbUserDao userDao;
 	private String rootUser = "";
 	
-	public AuthenticationContext(PerstDBEnv dbEnv) {
+	public AuthenticationContext(LevelDbEnv dbEnv) {
 		this.dbEnv = dbEnv;
 		authenticatedUsers = new Hashtable<>();
-		this.userDao = new PerstUserDao();
+		this.userDao = new LevelDbUserDao();
 		rootUser = System.getProperty(PropertyConstants.ROOT_USER, "");
 	}
 	
@@ -63,6 +65,10 @@ public class AuthenticationContext {
 				authResult.setUuidToken(uuid);
 	    		authResult.setUuidValidated(false);
 	    		authResult.setStatusMessage("User not registered");
+	    		NewUser newUser = new NewUser();
+	    		newUser.setEmail(credentials.getEmail());
+	    		newUser.setId(uuid);
+	    		registerNewUser(newUser, "not_registered");
 			}
 		} else {
 			authResult.setUuidValidated(false);
@@ -90,17 +96,21 @@ public class AuthenticationContext {
 		return getUser(email) == null;
 	}
 	
-	public boolean registerNewUser(NewUser user) {
+	public boolean registerNewUser(NewUser user, String userLevel) {
 		PerstUser newUser = new PerstUser();
 		newUser.setUserId(user.getEmail());
 		newUser.setFirstName(user.getFirstName());
 		newUser.setLastName(user.getLastName());
-		newUser.setUserLevel("user");
+		newUser.setUserLevel(userLevel);
 		newUser.setHomeCountry(user.getHomeCountry());
 		
-		this.userDao.persistUser(dbEnv, newUser);
+		this.userDao.persistUser(dbEnv.getDb(), newUser);
 		
 		return true;
+	}
+	
+	public void persistUser(PerstUser user) {
+		this.userDao.persistUser(dbEnv.getDb(), user);
 	}
 	
 	public String getUserAuthLevel(String uuid) {
@@ -129,6 +139,6 @@ public class AuthenticationContext {
 	}
 	
 	public PerstUser getUser(String email) {
-		return this.userDao.getUser(dbEnv, email);
+		return this.userDao.getUser(dbEnv.getDb(), email);
 	}
 }

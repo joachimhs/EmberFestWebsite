@@ -9,6 +9,7 @@ import java.util.UUID;
 
 import no.haagensoftware.auth.MozillaPersonaCredentials;
 import no.haagensoftware.auth.NewUser;
+import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.AuthenticationResult;
 import no.haagensoftware.perst.PerstDBEnv;
@@ -31,10 +32,10 @@ public class CredentialsHandler extends FileServerHandler {
 	private static Logger logger = Logger.getLogger(CredentialsHandler.class.getName());
 	
 	private AuthenticationContext authenticationContext;
-	private PerstDBEnv dbEnv;
+	private LevelDbEnv dbEnv;
 	
 	
-	public CredentialsHandler(String path, AuthenticationContext authenticationContext, PerstDBEnv dbEnv) {
+	public CredentialsHandler(String path, AuthenticationContext authenticationContext, LevelDbEnv dbEnv) {
 		super(path);
 		this.authenticationContext = authenticationContext;
 		this.dbEnv = dbEnv;
@@ -68,7 +69,7 @@ public class CredentialsHandler extends FileServerHandler {
 		        if (authResult.getUuidToken() != null && authResult.isUuidValidated()) {
 		        	responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken()) + "\"}";
 		        } else if (authResult.getUuidToken() != null && !authResult.isUuidValidated()) {
-		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\", \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"user\"}";
+		        	responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken()) + "\"}";
 		        } else {
 		        	responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\" }";
 		        }
@@ -80,23 +81,6 @@ public class CredentialsHandler extends FileServerHandler {
 		} else if (isPost(e) && uri != null && uri.endsWith("logout") && cookieUuidToken != null) {
 			authenticationContext.logUserOut(cookieUuidToken);
 			responseContent = "{\"loggedOut\": true}";
-		} else if (isPost(e) && uri != null && uri.endsWith("registerNewUser")) {
-			String messageContent = getHttpMessageContent(e);
-			logger.info(messageContent);
-			NewUser newUser = new Gson().fromJson(messageContent, NewUser.class);
-			if (newUser != null) {
-				MozillaPersonaCredentials cred = authenticationContext.getAuthenticatedUser(newUser.getUuidToken());
-				newUser.setEmail(cred.getEmail());
-				if (authenticationContext.userIsNew(cred.getEmail())) {
-					authenticationContext.registerNewUser(newUser);
-					responseContent = "{ \"userRegistered\": true}";
-				} else {
-					responseContent = "{ \"userRegistered\": false, \"error\": \"User Already Registered\"}";
-				}
-				logger.info("Registering new user: " + newUser.getEmail() + " " + newUser.getFirstName() + " " + newUser.getLastName() + " " + newUser.getHomeCountry());
-			} else {
-				responseContent = "{ \"userRegistered\": false, \"error\": \"Unable to register user!\"}";
-			}
 		}
 		
 		logger.info("responseContent: " + responseContent);
@@ -113,7 +97,7 @@ public class CredentialsHandler extends FileServerHandler {
 			messageContent = messageContent.substring(10, messageContent.length());
 		}
 		assertionJson.addProperty("assertion", messageContent);
-		assertionJson.addProperty("audience", "http://locaelhost:8081");
+		assertionJson.addProperty("audience", "http://emberfest.eu:80");
 		
 		int statusCode = -1;
 		DefaultHttpClient httpclient = new DefaultHttpClient();

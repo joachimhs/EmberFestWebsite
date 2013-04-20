@@ -27,7 +27,6 @@ ECE.Model.reopenClass({
 
     findAll: function(url, type, key) {
         console.log('findAll: ' + type + " " + url + " " + key);
-        var result = [];
 
         var collection = this;
         $.getJSON(url, function(data) {
@@ -40,7 +39,6 @@ ECE.Model.reopenClass({
                 item.setProperties(row);
                 item.set('isLoaded', true);
                 item.set('isError', false);
-                result.pushObject(item);
             });
         });
 
@@ -75,7 +73,29 @@ ECE.Model.reopenClass({
             data: JSON.stringify(model),
             success: function(res, status, xhr) {
                 if (res.submitted) {
+                    Ember.get(type, 'collection').pushObject(model);
                     model.set('isSaving', false);
+                } else {
+                    model.set('isError', true);
+                }
+            },
+            error: function(xhr, status, err) { model.set('isError', false);  }
+        });
+    },
+
+    updateRecord: function(url, type, model) {
+        console.log('update: ' + type + " " + model.get('id'));
+        var collection = this;
+        model.set('isSaving', true);
+        console.log(JSON.stringify(model));
+        $.ajax({
+            type: "PUT",
+            url: url,
+            data: JSON.stringify(model),
+            success: function(res, status, xhr) {
+                if (res.id) {
+                    model.set('isSaving', false);
+                    model.setProperties(res);
                 } else {
                     model.set('isError', true);
                 }
@@ -129,7 +149,49 @@ ECE.Talk.reopenClass({
         ECE.Model.createRecord('/abstracts', ECE.Talk, model);
     },
 
+    updateRecord: function(model) {
+        ECE.Model.updateRecord("/abstracts", ECE.Talk, model);
+    },
+
     delete: function(id) {
         ECE.Model.delete('/abstracts', ECE.Talk, id);
+    }
+});
+
+ECE.User = ECE.Model.extend({
+    ownsTalk: function(talkId) {
+        var hasTalk = false;
+        var userTalks = this.get('talks');
+        userTalks.forEach(function(talk) {
+            if (talk === talkdId) {
+                hasTalk = true;
+            }
+        });
+
+        return hasTalk;
+    }
+});
+
+ECE.User.reopenClass({
+   collection: Ember.A(),
+
+    find: function(id) {
+        return ECE.Model.find(id, ECE.User);
+    },
+
+    findAll: function() {
+        return ECE.Model.findAll('/user', ECE.User, "users");
+    },
+
+    createRecord: function(model) {
+        ECE.Model.createRecord('/user', ECE.User, model);
+    },
+
+    updateRecord: function(model) {
+        ECE.Model.updateRecord("/user", ECE.User, model);
+    },
+
+    delete: function(id) {
+        ECE.Model.delete('/user', ECE.User, id);
     }
 });

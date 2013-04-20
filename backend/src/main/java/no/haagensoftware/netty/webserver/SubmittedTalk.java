@@ -1,7 +1,7 @@
 package no.haagensoftware.netty.webserver;
 
 public class SubmittedTalk {
-	private String talkId;
+	private String id;
 	private String talkTitle;
 	private String talkText;
 	private String talkType;
@@ -11,12 +11,12 @@ public class SubmittedTalk {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String getTalkId() {
-		return talkId;
+	public String getId() {
+		return id;
 	}
 	
-	public void setTalkId(String talkId) {
-		this.talkId = talkId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getTalkTitle() {

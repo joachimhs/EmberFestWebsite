@@ -19,7 +19,10 @@ public class PerstAbstractDao {
 		storage.beginThreadTransaction(Storage.READ_WRITE_TRANSACTION);
 		
 		PerstStorageRoot storageRoot = (PerstStorageRoot) storage.getRoot();
-		storageRoot.getAbstractIndex().put(newAbstract);
+		PerstAbstract oldAbstract = storageRoot.getAbstractIndex().get(newAbstract.getAbstractId());
+		if (oldAbstract == null) {
+			storageRoot.getAbstractIndex().put(newAbstract);
+		}
 		
 		newAbstract.modify();
 		storage.store(newAbstract);

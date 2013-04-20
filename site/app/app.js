@@ -1,32 +1,4 @@
-var ECE = Ember.Application.create({
-    attemptedLogin:false,
-    uuidToken:null,
-
-    createCookie:function (name, value, days) {
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime()+(days*24*60*60*1000));
-            var expires = "; expires="+date.toGMTString();
-        }
-        else var expires = "";
-        document.cookie = name+"="+value+expires+"; path=/";
-    },
-
-    readCookie:function (name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    },
-
-    eraseCookie:function (name) {
-        this.createCookie(name, "", -1);
-    }
-});
+var ECE = Ember.Application.create();
 
 ECE.Router = Ember.Router.extend({
     location: 'history'
@@ -54,72 +26,7 @@ ECE.HeaderController = Ember.ArrayController.extend({
 });
 
 ECE.ApplicationController = Ember.Controller.extend({
-    init: function() {
-        this._super();
 
-        var controller = this;
-        // Mozilla Persona
-        navigator.id.watch({
-            loggedInUser: null,
-            onlogin: function(assertion) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/auth/login',
-                    data: {assertion: assertion},
-                    success: function(res, status, xhr) {
-                        if (res.uuidToken) {
-                            console.log('setting uuidToken: ' + res.uuidToken);
-                            ECE.set('uuidToken', res.uuidToken);
-                            ECE.set('authLevel', res.authLevel);
-                            ECE.createCookie("uuidToken", res.uuidToken, 1);
-                        }
-
-                        if (res.authFailed && res.error === 'User not registered') {
-                            console.log('redirecting to register page');
-                            controller.transitionToRoute('pages.register');
-                        }
-
-                        ECE.set('attemptedLogin', true);
-                    },
-                    error: function(xhr, status, err) {  }
-                });
-            },
-
-            onlogout: function() {
-                $.ajax({
-                    type: 'POST',
-                    url: '/auth/logout',
-                    success: function(xhr, status, err) {
-                        console.log('onlogout: ');
-                        console.log(xhr);
-                        ECE.set('attemptedLogin', true);
-                        ECE.set('uuidToken', null);
-                        ECE.eraseCookie("uuidToken");
-                    },
-                    error: function(xhr, status, err) { console.log("error: " + status + " error: " + err); }
-                });
-            }
-        });
-    },
-
-    doLogIn: function() {
-        ECE.set('loginClicked', true);
-        console.log('doLogIn Action');
-        navigator.id.request();
-    },
-
-    doLogOut: function() {
-        console.log('doLogOut Action');
-        navigator.id.logout();
-    },
-
-    showLogin: function() {
-        return ECE.get('uuidToken') == null;
-    }.property('ECE.uuidToken', 'ECE.attemptedLogin'),
-
-    showLogout: function() {
-        return ECE.get('attemptedLogin') === true && ECE.get('uuidToken') != null;
-    }.property('ECE.uuidToken', 'ECE.attemptedLogin')
 });
 
 ECE.PagesIndexRoute = Ember.Route.extend({
@@ -156,14 +63,7 @@ Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
         '<span style="font-weight: bold; font-size: 1.5em;">Ember</span><span style="color: rgb(100,12,8); font-size: 1.5em; font-style: italic;">Fest</span>' +
         '<span id="headerLinks">' +
             '{{render header}}' +
-            '<span id="loginButtonArea">' +
-                '{{#if showLogin}}' +
-                    '<button class="btn btn-primary" {{action "doLogIn"}}>Log In / Register</button> ' +
-                '{{/if}}' +
-                '{{#if showLogout}}' +
-                    '<button class="btn btn-primary" {{action "doLogOut"}}>Log Out</button>' +
-                '{{/if}}' +
-            '</span>' +
+            '{{render loginArea}}' +
         '</span>' +
     '</div>' +
     '<div id="mainArea">' +

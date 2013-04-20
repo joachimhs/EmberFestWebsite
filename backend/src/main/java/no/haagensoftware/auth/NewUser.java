@@ -3,7 +3,7 @@ package no.haagensoftware.auth;
 public class NewUser {
 	//email: this.get('email'), firstName: this.get('firstName'), lastName: this.get('lastName'), homeCountry: this.get('homeCountry')
 	private String email;
-	private String uuidToken;
+	private String id;
 	private String firstName;
 	private String lastName;
 	private String homeCountry;
@@ -18,11 +18,11 @@ public class NewUser {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUuidToken() {
-		return uuidToken;
+	public String getId() {
+		return id;
 	}
-	public void setUuidToken(String uuidToken) {
-		this.uuidToken = uuidToken;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getFirstName() {
 		return firstName;

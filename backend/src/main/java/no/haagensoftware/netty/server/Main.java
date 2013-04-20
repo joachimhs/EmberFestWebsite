@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.Executors;
 
+import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.pipeline.NettyWebserverPipelineFactory;
 import no.haagensoftware.netty.webserver.plugin.EmberCampRouterPlugin;
 import no.haagensoftware.perst.PerstDBEnv;
@@ -87,7 +88,7 @@ public class Main {
 		String webappDir = System.getProperty(PropertyConstants.WEBAPP_DIR);
 		System.setProperty("basedir", webappDir);
 		
-		PerstDBEnv dbEnv = new PerstDBEnv(System.getProperty(PropertyConstants.DB_PATH));
+		LevelDbEnv dbEnv = new LevelDbEnv(System.getProperty(PropertyConstants.DB_PATH));
 		dbEnv.initializeDbAtPath();
 		
 		List<NettyWebserverRouterPlugin> routerPlugins = new ArrayList<NettyWebserverRouterPlugin>();

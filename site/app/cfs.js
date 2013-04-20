@@ -23,7 +23,7 @@ ECE.PagesCallForSpeakersRoute = Ember.Route.extend({
 });
 
 ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
-    needs: ['application'],
+    needs: ['user'],
 
     titleValidationError: null,
     proposalValidationError: null,
@@ -63,7 +63,7 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
         if (validated) {
             var talkId = Math.uuid(16, 16);
             var talk = ECE.Talk.create({
-                talkId: talkId,
+                id: talkId,
                 talkTitle: this.get('content.proposalTitle'),
                 talkText: this.get('content.proposalText'),
                 talkType: this.get('content.proposalType'),
@@ -72,7 +72,7 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
 
             ECE.Talk.createRecord(talk);
 
-            this.transitionTo('talks');
+            this.transitionToRoute('talks');
         }
     },
 
@@ -85,9 +85,7 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
     '<div class="markdownArea">' +
     '<h1>Submit your Proposal!</h1>' +
     '{{markdown}}' +
-    '{{#if controllers.application.showLogin}}' +
-        '<p>You need to log in, in order to submit an abstract.</p>' +
-    '{{else}}' +
+    '{{#if controllers.user.isLoggedIn}}' +
         '<form class="form-horizontal">' +
             '<div class="control-group">' +
                 '<label class="control-label" for="proposalTitle">Title</label>' +
@@ -137,5 +135,7 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
             '<button type="submit" class="btn btn-primary" {{action "submitAbstract"}}>Submit Proposal!</button>' +
         '</div>' +
     '</form>' +
+    '{{else}}' +
+        '<p>You need to log in, in order to submit an abstract.</p>' +
     '{{/if}}' +
     '</div>');

@@ -293,6 +293,10 @@ public class FileServerHandler extends SimpleChannelUpstreamHandler {
     }
 
     public void writeContentsToBuffer(ChannelHandlerContext ctx, String responseText, String contentType) {
+    	if (responseText.length() == 0) {
+    		responseText = "{}";
+    	}
+    	
         HttpResponse response = new DefaultHttpResponse(HTTP_1_1, OK);
         response.setHeader(CONTENT_TYPE, contentType + "; charset=UTF-8");
         response.setContent(ChannelBuffers.copiedBuffer(responseText + "\r\n", CharsetUtil.UTF_8));

@@ -97,7 +97,7 @@ public class CachedIndexHandler extends FileServerHandler {
 		Document htmlDocument = parseHtmlPage(path);
 		
 		//extract out the JavaScript tags with src attribute and replace with a single
-		//call to a cahced minified script file
+		//call to a cached minified script file
 		if (htmlDocument != null) {
 			Elements elements = htmlDocument.select("head");
 			Element headElement = elements.get(0);
@@ -108,8 +108,15 @@ public class CachedIndexHandler extends FileServerHandler {
 				if (scriptSrc == null || scriptSrc.startsWith("http")) {
 					//Keep the script as-is
 				} else if (scriptSrc != null && scriptSrc.endsWith(".js")) {
+					File minifiedScriptFile = new File(getRootPath() + File.separatorChar + scriptSrc.substring(0, scriptSrc.length() - 3) + "-min.js");
+					ChannelBuffer cb = null;
+					if (minifiedScriptFile != null && minifiedScriptFile.isFile()) {
+						cb = getFileContent(scriptSrc.substring(0, scriptSrc.length() - 3) + "-min.js");
+					} else {
+						cb = getFileContent(scriptSrc);
+					}
+					
 					//cache and remove this <script src tag from the DOM 
-					ChannelBuffer cb = getFileContent(scriptSrc);
 					scriptContentsCombined.append(cb.toString(Charset.defaultCharset())).append("\r\n\r\n");
 					scriptPathList.add(scriptSrc);
 					scriptElement.remove();

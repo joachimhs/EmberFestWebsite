@@ -6,11 +6,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import no.haagensoftware.auth.MozillaPersonaCredentials;
+import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.ServerInfo;
 import no.haagensoftware.netty.webserver.handler.CredentialsHandler;
 import no.haagensoftware.netty.webserver.handler.FileServerHandler;
 import no.haagensoftware.netty.webserver.handler.TalksHandler;
+import no.haagensoftware.netty.webserver.handler.UserHandler;
 import no.haagensoftware.perst.PerstDBEnv;
 
 import org.haagensoftware.netty.webserver.spi.NettyWebserverRouterPlugin;
@@ -29,7 +31,7 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
 	private ServerInfo serverInfo;
 	private AuthenticationContext authenticationContext;
 	
-	public EmberCampRouterPlugin(ServerInfo serverInfo, PerstDBEnv dbEnv) {
+	public EmberCampRouterPlugin(ServerInfo serverInfo, LevelDbEnv dbEnv) {
 		authenticationContext = new AuthenticationContext(dbEnv);
 		int scriptCacheSeconds = IntegerParser.parseIntegerFromString(System.getProperty(PropertyConstants.SCRIPTS_CACHE_SECONDS), 0);
 		
@@ -44,6 +46,8 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
         routes.put("startsWith:/auth/login", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/logout", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/registerNewUser", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
+        
+        routes.put("startsWith:/user", new UserHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         
         routes.put("startsWith:/abstracts", new TalksHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         
