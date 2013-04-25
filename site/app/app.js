@@ -22,7 +22,10 @@ ECE.IndexRoute = Ember.Route.extend({
 });
 
 ECE.HeaderController = Ember.ArrayController.extend({
-    needs: ['pages']
+    init: function() {
+        this._super();
+        this.set('content', ECE.TopPage.findAll());
+    }
 });
 
 ECE.ApplicationController = Ember.Controller.extend({
@@ -60,16 +63,14 @@ ECE.ApplicationView = Ember.View.extend({
 
 Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
     '<div id="toolbarArea">' +
-        '<span style="font-weight: bold; font-size: 1.5em;">Ember</span><span style="color: rgb(100,12,8); font-size: 1.5em; font-style: italic;">Fest</span>' +
-        '<span id="headerLinks">' +
-            '{{render header}}' +
+        '<span style="font-weight: bold; font-size: 1.5em;"><img src="/img/ece_logo.png"></span>' +
             '{{render loginArea}}' +
-        '</span>' +
+            '{{render header}}' +
+            '{{render sponsors}}' +
     '</div>' +
     '<div id="mainArea">' +
         '<div id="contentArea">{{outlet}}</div>' +
-    '</div>' +
-    '{{render sponsors}}'
+    '</div>'
 );
 
 
@@ -79,7 +80,7 @@ ECE.HeaderView = Ember.View.extend({
 });
 
 Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
-    '{{#each controllers.pages.arrangedContent}}' +
+    /*'{{#each controllers.pages.arrangedContent}}' +
         '{{#if pageFilename}}' +
             '{{#linkTo "pages.page" this}}{{pageName}}{{/linkTo}}' +
         '{{else}}' +
@@ -88,7 +89,23 @@ Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
             '{{#if isLinkToHome}}{{#linkTo "pages"}}{{pageName}}{{/linkTo}}{{/if}}' +
         '{{/if}}' +
     ' ' +
-    '{{/each}}'
+    '{{/each}}'        */
+    '<ul class="nav nav-list toolbar-nav">' +
+        '{{#each controller}}' +
+            '<li class="nav-header">{{id}}</li>' +
+            '{{#each subPages}}' +
+                '<li>' +
+                    '{{#if pageFilename}}' +
+                        '{{#linkTo "pages.page" this}}{{pageName}}{{/linkTo}}' +
+                    '{{else}}' +
+                        '{{#if isLinkToTalks}}{{#linkTo "talks"}}{{pageName}}{{/linkTo}}{{/if}}' +
+                        '{{#if isLinkToCfp}}{{#linkTo "pages.callForSpeakers"}}{{pageName}}{{/linkTo}}{{/if}}' +
+                        '{{#if isLinkToHome}}{{#linkTo "pages"}}{{pageName}}{{/linkTo}}{{/if}}' +
+                    '{{/if}}' +
+                '</li>' +
+            '{{/each}}' +
+        '{{/each}}' +
+    '</ul>'
 );
 
 Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
@@ -96,6 +113,7 @@ Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
         '<table style="width: 250px;">' +
             '<tr><td><h1 style="text-align: center; text-decoration: underline;">Sponsors:</h1></td></tr>' +
             '<tr><td><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
+            '<tr><td><a href="http://www.infoq.com"><img src="/img/infoq.png" /></a></td></tr>' +
             '<tr><td><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
         '</table>' +
     '</div>'

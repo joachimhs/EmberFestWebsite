@@ -105,6 +105,31 @@ ECE.Model.reopenClass({
     }
 });
 
+ECE.TopPage = ECE.Model.extend({
+    subPages: function() {
+        var subPages = Ember.A();
+        var pages = this.get('pages');
+        if (pages) {
+            pages.forEach(function(page) {
+                subPages.pushObject(ECE.Page.find(page));
+            });
+        }
+
+        return subPages;
+    }.property('pages', 'pages.length')
+});
+
+ECE.TopPage.reopenClass({
+    collection: Ember.A(),
+    find: function(id) {
+        return ECE.Model.find(id, ECE.TopPage);
+    },
+
+    findAll: function() {
+        return ECE.Model.findAll('/topPages', ECE.TopPage, 'topPages');
+    }
+});
+
 ECE.Page = ECE.Model.extend({
     isLinkToTalks: function() {
         return this.get('pageRoute') === 'talks'

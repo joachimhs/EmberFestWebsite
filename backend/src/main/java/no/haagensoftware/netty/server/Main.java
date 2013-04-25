@@ -12,7 +12,6 @@ import java.util.concurrent.Executors;
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.pipeline.NettyWebserverPipelineFactory;
 import no.haagensoftware.netty.webserver.plugin.EmberCampRouterPlugin;
-import no.haagensoftware.perst.PerstDBEnv;
 import no.haagensoftware.pluginService.ApplicationServerInfo;
 
 import org.apache.log4j.Logger;
@@ -101,7 +100,6 @@ public class Main {
                 new NioServerSocketChannelFactory(
                         Executors.newCachedThreadPool(),
                         Executors.newCachedThreadPool()));
-
         
         
         NettyWebserverPipelineFactory nwpf = new NettyWebserverPipelineFactory(routerPlugins);

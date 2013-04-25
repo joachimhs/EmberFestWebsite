@@ -18,4 +18,4 @@ Sponsors will receive:
 
 We will also attempt to display your logo in the online videos of the talks. 
 
-Sponsoring starts at EUR 1800.
+Sponsoring starts at EUR 1000.

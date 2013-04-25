@@ -12,7 +12,6 @@ p { margin-top: 0.95em; }
 
 a {
     color: rgb(200, 12, 8);
-    margin-right: 15px;
 }
 
 a:hover {
@@ -20,31 +19,35 @@ a:hover {
     text-decoration: underline;
 }
 
-.appArea {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 55px;
-    color: #000;
-    background-color: #fff;
-}
-
 #mainArea {
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 65px;
-    margin-right: 250px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    overflow: scroll;
+    margin-left: 293px;
     color: #000;
-    border-right: 2px solid #8f0003;
-
+    overflow: scroll;
 }
 
 #sponsorArea {
-    position: absolute;
-    width: 250px;
-    right: 0px;
-    top: 60px;
-    background-color: #fff;
+    color: #000;
+    margin-top: 15px;
+}
+
+#sponsorArea h1 {
+    display: block;
+    margin-bottom: 15px;
+    padding: 3px 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
 }
 
 #toolbarArea {
@@ -52,18 +55,50 @@ a:hover {
     color: rgb(200, 12, 8);
     font-size: 1.3em;
     background-color: rgba(255, 211, 88, 0.496094);
-    border-bottom: 2px solid #8f0003;
+    border-right: 2px solid #8f0003;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
     position: absolute;
     left: 0px;
-    right: 0px;
+    width: 260px;
     top: 0px;
-    height: 45px;
+    bottom: 0px;
     vertical-align: top;
     z-index: 10;
+}
+
+#toolbarArea .toolbar-nav {
+    background-color: rgba(244, 235, 237, 0.87);
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+       -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    letter-spacing: 2px;
+    padding: 7px;
+    margin-top: 15px;
+}
+
+#toolbarArea .toolbar-nav a {
+    margin-left: -2px;
+    margin-right: -2px;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+#toolbarArea .toolbar-nav a:hover {
+    background: #ccc;
+}
+
+#toolbarArea .nav-header {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 0.6em;
+    margin-bottom: 7px;
+    margin-top: 7px;
 }
 
 #headerLogo {
@@ -81,12 +116,7 @@ a:hover {
 }
 
 #loginButtonArea {
-    position: absolute;
-    width: 135px;
-    right: 0px;
-    top: 0px;
-    margin-top: 15px;;
-    height: 45px;
+    text-align: center;
 }
 
 
@@ -97,7 +127,6 @@ a:hover {
 #contentArea {
     margin: 0px;
     padding: 0px;
-    margin-top: 25px;
     text-align: left;
 }
 

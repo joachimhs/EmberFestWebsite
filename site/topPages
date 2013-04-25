@@ -1,0 +1,15 @@
+{ "topPages": [
+      {
+          "id": "main",
+          "pages": ["home", "tickets", "schedule" ,"venue"]
+      },
+      {
+          "id": "talks",
+           "pages": ["call_for_speakers", "talks"]
+      },
+      {
+          "id": "about",
+           "pages": ["organizers", "sponsors"]
+      }
+  ]
+}

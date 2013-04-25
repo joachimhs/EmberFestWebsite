@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.haagensoftware</groupId>
 	<artifactId>emberfest</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>Ember Fest Backend</name>
 	<packaging>jar</packaging>
 
@@ -56,11 +56,6 @@
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
 			<version>1.6.3</version>
-		</dependency>
-		<dependency>
-			<groupId>perst</groupId>
-			<artifactId>perst</artifactId>
-			<version>4.30</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.iq80.leveldb</groupId>

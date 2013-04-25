@@ -6,8 +6,6 @@ import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.leveldb.dao.LevelDbAbstractDao;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.AuthenticationResult;
-import no.haagensoftware.perst.PerstDBEnv;
-import no.haagensoftware.perst.dao.PerstAbstractDao;
 import no.haagensoftware.perst.datatypes.PerstAbstract;
 import no.haagensoftware.perst.datatypes.PerstUser;
 

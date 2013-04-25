@@ -101,6 +101,7 @@ ECE.TalksTalkController = Ember.ObjectController.extend({
             var talk = this.get('content');
             ECE.Talk.updateRecord(talk);
 
+            this.get('content').set('isEditing', false);
             this.transitionToRoute('talks');
         }
     },

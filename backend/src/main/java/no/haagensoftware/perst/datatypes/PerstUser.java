@@ -1,8 +1,6 @@
 package no.haagensoftware.perst.datatypes;
 
-import org.garret.perst.Persistent;
-
-public class PerstUser extends Persistent {
+public class PerstUser {
 	private String userId;
 	private String authenticationToken;
 	private String firstName;

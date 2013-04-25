@@ -13,7 +13,6 @@ import no.haagensoftware.netty.webserver.handler.CredentialsHandler;
 import no.haagensoftware.netty.webserver.handler.FileServerHandler;
 import no.haagensoftware.netty.webserver.handler.TalksHandler;
 import no.haagensoftware.netty.webserver.handler.UserHandler;
-import no.haagensoftware.perst.PerstDBEnv;
 
 import org.haagensoftware.netty.webserver.spi.NettyWebserverRouterPlugin;
 import org.haagensoftware.netty.webserver.spi.PropertyConstants;

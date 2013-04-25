@@ -21,11 +21,11 @@ ECE.LoginAreaController = Ember.Controller.extend({
 });
 
 Ember.TEMPLATES['loginArea'] = Ember.Handlebars.compile('' +
-    '<span id="loginButtonArea">' +
+    '<div id="loginButtonArea">' +
         '{{#if controllers.user.isLoggedIn}}' +
             '<button class="btn btn-primary" {{action "doLogOut"}}>Log Out</button>' +
        '{{else}}' +
             '<button class="btn btn-primary" {{action "doLogIn"}}>Log In / Register</button> ' +
         '{{/if}}' +
-    '</span>'
+    '</div>'
 );

@@ -1,8 +1,6 @@
 package no.haagensoftware.perst.datatypes;
 
-import org.garret.perst.Persistent;
-
-public class PerstAbstract extends Persistent {
+public class PerstAbstract {
 	private String abstractId;
 	private String userId;
 	private String abstractTitle;

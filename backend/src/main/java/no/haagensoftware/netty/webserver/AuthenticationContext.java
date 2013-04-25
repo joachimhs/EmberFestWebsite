@@ -10,8 +10,6 @@ import no.haagensoftware.auth.MozillaPersonaCredentials;
 import no.haagensoftware.auth.NewUser;
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.leveldb.dao.LevelDbUserDao;
-import no.haagensoftware.perst.PerstDBEnv;
-import no.haagensoftware.perst.dao.PerstUserDao;
 import no.haagensoftware.perst.datatypes.PerstUser;
 
 public class AuthenticationContext {

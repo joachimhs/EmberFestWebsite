@@ -12,8 +12,6 @@ import no.haagensoftware.auth.NewUser;
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.AuthenticationResult;
-import no.haagensoftware.perst.PerstDBEnv;
-import no.haagensoftware.perst.dao.PerstUserDao;
 import no.haagensoftware.perst.datatypes.PerstUser;
 
 import org.apache.http.HttpResponse;
@@ -97,7 +95,7 @@ public class CredentialsHandler extends FileServerHandler {
 			messageContent = messageContent.substring(10, messageContent.length());
 		}
 		assertionJson.addProperty("assertion", messageContent);
-		assertionJson.addProperty("audience", "http://emberfest.eu:80");
+		assertionJson.addProperty("audience", "http://localhost:8081");
 		
 		int statusCode = -1;
 		DefaultHttpClient httpclient = new DefaultHttpClient();
