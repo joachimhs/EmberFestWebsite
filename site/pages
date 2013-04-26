@@ -62,6 +62,13 @@
            "pageTitle": "Ember.js Hackathon?",
            "pageFilename": "hackathon.md",
            "pageSortIndex": 15
+        },
+        {
+           "id": "sourcecode",
+           "pageName": "Source Code",
+           "pageTitle": "Source Code",
+           "pageFilename": "sourcecode.md",
+           "pageSortIndex": 15
         }
 
 

@@ -9,7 +9,7 @@
       },
       {
           "id": "about",
-           "pages": ["organizers", "sponsors"]
+           "pages": ["organizers", "sponsors", "sourcecode"]
       }
   ]
 }

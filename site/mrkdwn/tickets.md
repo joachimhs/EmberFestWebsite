@@ -1,9 +1,12 @@
 Tickets
 =======
 
-<img src="/img/ticket.png" style="float: left" />Early Bird tickets are now on sale! Get them while they're hot!
+<a href="https://www.eventora.com/en/Events/ember-fest"><img src="/img/ticket.png" style="float: left" /></a>Early Bird tickets are now on sale! Get them while they're hot!
 
-<a href="https://www.eventora.com/en/Events/ember-fest">https://www.eventora.com/en/Events/ember-fest</a>!
+<div class="hotelArea" style="margin-left: 150px;">The Early Bird Ticket Sale is available until May 20th. Purchasing an early bird ticket, will make it possible for the organizers to organize an Ember.js Hackathon on August 31st.</div>
+
+<span style="font-weight: 600;">Purchase your ticket from <a href="https://www.eventora.com/en/Events/ember-fest">Eventora!</a>!</span>
+
 
 Training, Day One and Two
 -------------------------
