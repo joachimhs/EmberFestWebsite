@@ -62,14 +62,16 @@ ECE.ApplicationView = Ember.View.extend({
 });
 
 Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
-    '<div id="toolbarArea">' +
-        '<span style="font-weight: bold; font-size: 1.5em;"><img src="/img/ece_logo.png"></span>' +
-            '{{render loginArea}}' +
-            '{{render header}}' +
-            '{{render sponsors}}' +
-    '</div>' +
-    '<div id="mainArea">' +
-        '<div id="contentArea">{{outlet}}</div>' +
+    '<div id="wrap">' +
+        '<div id="toolbarArea">' +
+            '<span style="font-weight: bold; font-size: 1.5em;"><img src="/img/ece_logo.png"></span>' +
+                '{{render loginArea}}' +
+                '{{render header}}' +
+                '{{render sponsors}}' +
+        '</div>' +
+        '<div id="mainArea">' +
+            '<div id="contentArea">{{outlet}}</div>' +
+        '</div>' +
     '</div>'
 );
 
@@ -110,11 +112,11 @@ Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
 
 Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
     '<div id="sponsorArea" style="float:right;">' +
-        '<table style="width: 250px;">' +
-            '<tr><td><h1 style="text-align: center; text-decoration: underline;">Sponsors:</h1></td></tr>' +
-            '<tr><td><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
-            '<tr><td><a href="http://www.infoq.com"><img src="/img/infoq.png" /></a></td></tr>' +
-            '<tr><td><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
+        '<table class="well sponsorwell" style="width: 250px;">' +
+            '<tr><td class="sponsorItem" style="text-align: center; text-transform: uppercase; color: #7a7a7a; font-weight: 600;">Sponsors:</td></tr>' +
+            '<tr><td class="sponsorItem"><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
+            '<tr><td class="sponsorItem"><a href="http://www.infoq.com"><img src="/img/infoq.png" /></a></td></tr>' +
+            '<tr><td class="sponsorItem" style="text-align: center;"><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
         '</table>' +
     '</div>'
 );

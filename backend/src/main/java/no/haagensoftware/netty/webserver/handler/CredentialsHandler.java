@@ -4,15 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.util.Hashtable;
-import java.util.UUID;
 
 import no.haagensoftware.auth.MozillaPersonaCredentials;
-import no.haagensoftware.auth.NewUser;
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.AuthenticationResult;
-import no.haagensoftware.perst.datatypes.PerstUser;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
