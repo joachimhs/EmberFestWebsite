@@ -55,6 +55,15 @@
            "pageFilename":
            "organizers.md",
            "pageSortIndex": 15
+        },
+        {
+           "id": "hackathon",
+           "pageName": "Ember.js Hackathon?",
+           "pageTitle": "Ember.js Hackathon?",
+           "pageFilename": "hackathon.md",
+           "pageSortIndex": 15
         }
+
+
     ]
 }

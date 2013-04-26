@@ -9,9 +9,13 @@ Updates will also be tweeted from the <a href="https://twitter.com/EmberFest">@E
 
 The Call for Speakers is now OPEN. If you have a burning desire and a great topic, register at the top of the page, and navigate to the Call for Speakers page, now!
 
-Ember Fest Coding Dojo, Day four?
----------------------------------
-If we sell a total of 50 tickets before May 20th, we will be in a good position to add a fourth day to the event. This day will be organized as a coding-session with less structure and more hands-on experiences! Be sure to book your ticket right away in order to make this fourth day possible for the organizers to put together!
+<div class="hotelArea">
+<h1>Ember Fest Coding Dojo, Day four?</h1>
+
+If we sell a total of 50 tickets before May 20th, we will be in a good position to add a fourth day to the event. This day will be organized as a coding-session with less structure and more hands-on experiences!
+
+<p>Be sure to book your ticket right away in order to make this fourth day possible for the organizers to put together!</p>
+</div>
 
 Day One
 -------

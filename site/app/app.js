@@ -122,7 +122,7 @@ Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
 );
 
 Ember.TEMPLATES['pages/index'] = Ember.Handlebars.compile('' +
-    '<div id="hotelArea" class="container-fluid">' +
+    '<div class="hotelArea" class="container-fluid">' +
         '<div class="row-fluid">' +
             '<div id="eventDescription" class="span12">' +
                 '<h1>The Biggest Ember.js Event in Europe!</h1>' +

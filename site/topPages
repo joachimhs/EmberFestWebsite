@@ -5,7 +5,7 @@
       },
       {
           "id": "talks",
-           "pages": ["call_for_speakers", "talks"]
+           "pages": ["call_for_speakers", "talks", "hackathon"]
       },
       {
           "id": "about",

@@ -25,5 +25,3 @@ The conference will be the Ember.js happening of the year in Europe with awesome
 Ember Fest Coding Dojo, Day four?
 ---------------------------------
 If we sell a total of 50 tickets before May 20th, we will be in a good position to add a fourth day to the event. This day will be organized as a coding-session with less structure and more hands-on experiences! Be sure to book your ticket right away in order to make this fourth day possible for the organizers to put together!
-
-Watch this page, or follow <a href="https://twitter.com/EmberFest">@EmberFest</a> on Twitter and you'll be the first to know when the ticket sales open! 
