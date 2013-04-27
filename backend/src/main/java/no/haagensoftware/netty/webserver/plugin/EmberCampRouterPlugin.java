@@ -1,11 +1,7 @@
 package no.haagensoftware.netty.webserver.plugin;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.LinkedHashMap;
-import java.util.List;
 
-import no.haagensoftware.auth.MozillaPersonaCredentials;
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.ServerInfo;

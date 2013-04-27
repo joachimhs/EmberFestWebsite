@@ -41,6 +41,20 @@
              "pageRoute": "talks",
              "pageSortIndex": 6
         },
+	    {
+            "id": "training_day_one",
+             "pageName": "Training, Day One",
+             "pageTitle": "Training, Day One",
+             "pageFilename": "training_one.md",
+             "pageSortIndex": 6
+        },
+	    {
+             "id": "training_day_two",
+             "pageName": "Training, Day Two",
+             "pageTitle": "Training, Day Two",
+             "pageFilename": "training_two.md",
+             "pageSortIndex": 6
+        },
         {
             "id": "sponsors",
             "pageName": "Sponsors",
