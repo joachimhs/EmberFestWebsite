@@ -1,47 +1,18 @@
 Schedule
 ========
 
-While the finer details of the schedule is not yet finished, the two first days will contain Ember.js Training, while the third day will be arranged as a mini conference with talks and tutorials arranged as a single-track, with some hardcore tutorials possibly being held in parallel.
-
-Be sure to watch this website to get updates on the venue. 
-
-Updates will also be tweeted from the <a href="https://twitter.com/EmberFest">@EmberFest</a> twitter account.
-
-The Call for Speakers is now OPEN. If you have a burning desire and a great topic, register at the top of the page, and navigate to the Call for Speakers page, now!
+August 30th will be the main event at EmberFest. During this day there will be a number of talks given by Ember.js community members. If you are harboring an inner speaker and a talk related to Ember.js, please do not hesitate to submit a proposal on your own!
 
 <div class="hotelArea">
-<h1>Ember Fest Coding Dojo, Day four?</h1>
+<h1>Ember Fest Hackathon, on August 31st?</h1>
 
 If we sell a total of 50 tickets before May 20th, we will be in a good position to add a fourth day to the event. This day will be organized as a coding-session with less structure and more hands-on experiences!
 
 <p>Be sure to book your ticket right away in order to make this fourth day possible for the organizers to put together!</p>
 </div>
 
-Day One
--------
-
-- 09:00 - 09:30 - Welcome and Registration
-- 09:30 - 10:30 - Ember.js Basics, Binidngs, Computed Properties, Handlebars and Views. Where do Ember.js fit in the development stack
-- 10:30 - 11:00 - Coffee break with snacks
-- 11:00 - 12.30 - Server Side MVC vs. Client Side MVC. Introduction to Ember Router
-- 12.30 - 14:00 - Lunch
-- 14:00 - 15:00 - Interacting with the server side without Ember Data
-- 15:00 - 15:30 - Coffee break with snacks
-- 15:30 - 16:30 - Server Side Communication and Authentication via Mozilla Persona
-
-Day Two
--------
-
-- 09:30 - 10:30 - Introduction to Ember Data
-- 10:30 - 11:00 - Coffee break with snacks
-- 11:00 - 12.30 - Ember Data Advanced Topics
-- 12.30 - 14:00 - Lunch
-- 14:00 - 15:00 - Ember.js and Testing
-- 15:00 - 15:30 - Coffee break with snacks
-- 15:30 - 16:30 - Creating Complex View and Components
-
-Day Three
----------
+Schedule
+--------
 
 - 09:00 - 09:20 - Welcome and Registration
 - 09:20 - 09:35 - Opening Talk By The Organizers

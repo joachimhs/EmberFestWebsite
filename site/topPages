@@ -1,18 +1,18 @@
 { "topPages": [
       {
-          "id": "main",
-          "pages": ["home", "tickets", "schedule" ,"venue"]
+           "id": "main",
+           "pages": ["home", "tickets" ,"venue"]
       },
       {
-          "id": "talks",
-           "pages": ["call_for_speakers", "talks", "hackathon"]
+           "id": "talks",
+           "pages": ["call_for_speakers", "talks"]
       },
 	  {
-	      "id": "training",
-	       "pages": ["training_day_one", "training_day_two"]
+	       "id": "schedule",
+	       "pages": ["training_day_one", "training_day_two", "schedule", "hackathon"]
 	  },
       {
-          "id": "about",
+           "id": "about",
            "pages": ["organizers", "sponsors", "sourcecode"]
       }
   ]

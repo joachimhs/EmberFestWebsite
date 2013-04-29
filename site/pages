@@ -22,8 +22,8 @@
         },
 	    {
 	        "id": "schedule",
-	         "pageName": "Schedule",
-	         "pageTitle": "Schedule",
+	         "pageName": "Aug 30: Schedule",
+	         "pageTitle": "Aug 30: Schedule",
 	         "pageFilename": "schedule.md",
 	         "pageSortIndex": 4
         },
@@ -43,15 +43,15 @@
         },
 	    {
             "id": "training_day_one",
-             "pageName": "Training, Day One",
-             "pageTitle": "Training, Day One",
+             "pageName": "Aug 28: Training, Day One",
+             "pageTitle": "Aug 28: Training, Day One",
              "pageFilename": "training_one.md",
              "pageSortIndex": 6
         },
 	    {
              "id": "training_day_two",
-             "pageName": "Training, Day Two",
-             "pageTitle": "Training, Day Two",
+             "pageName": "Aug 29: Training, Day Two",
+             "pageTitle": "Aug 29: Training, Day Two",
              "pageFilename": "training_two.md",
              "pageSortIndex": 6
         },
@@ -72,8 +72,8 @@
         },
         {
            "id": "hackathon",
-           "pageName": "Ember.js Hackathon?",
-           "pageTitle": "Ember.js Hackathon?",
+           "pageName": "Aug 31: Ember.js Hackathon?",
+           "pageTitle": "Aug 31: Ember.js Hackathon?",
            "pageFilename": "hackathon.md",
            "pageSortIndex": 15
         },

@@ -5,8 +5,7 @@ Tickets
 
 <div class="hotelArea" style="margin-left: 150px;">The Early Bird Ticket Sale is available until May 20th. Purchasing an early bird ticket, will make it possible for the organizers to organize an Ember.js Hackathon on August 31st.</div>
 
-<span style="font-weight: 600;">Purchase your ticket from <a href="https://www.eventora.com/en/Events/ember-fest">Eventora!</a>!</span>
-
+<iframe src = "https://www.eventora.com/en/embed/ember-fest" width="680px" height="300px" style="border:0" allowtransparency="true" scrolling="auto" vspace="0" hspace="0" vspace="0" hspace="0" frameborder="0"></iframe>
 
 Training, Day One and Two
 -------------------------
@@ -25,6 +24,6 @@ The conference will be the Ember.js happening of the year in Europe with awesome
 - Standard Conference Price: EUR 150
 - FREE for Speakers!
 
-Ember Fest Coding Dojo, Day four?
+Ember Fest Hacathon, Day four?
 ---------------------------------
 If we sell a total of 50 tickets before May 20th, we will be in a good position to add a fourth day to the event. This day will be organized as a coding-session with less structure and more hands-on experiences! Be sure to book your ticket right away in order to make this fourth day possible for the organizers to put together!
