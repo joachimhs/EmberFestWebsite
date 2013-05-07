@@ -83,9 +83,7 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
 
 Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
     '<div class="markdownArea">' +
-    '<h1>Submit your Proposal!</h1>' +
     '{{markdown}}' +
-    '{{#if controllers.user.isLoggedIn}}' +
         '<form class="form-horizontal">' +
             '<div class="control-group">' +
                 '<label class="control-label" for="proposalTitle">Title</label>' +
@@ -93,8 +91,6 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
                     '{{view Ember.TextField valueBinding="proposalTitle" classNames="span5"}}' +
                     '{{#if titleValidationError}}' +
                         '<span class="help-inline">{{titleValidationError}}</span>' +
-                    '{{else}}' +
-                        '<span class="help-inline">This is your Abstract Title</span>' +
                     '{{/if}}' +
                 '</div>' +
             '</div>' +
@@ -104,38 +100,31 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
                     '{{view Ember.TextArea valueBinding="proposalText" rows="20" classNames="span5"}}' +
                     '{{#if proposalValidationError}}' +
                         '<span class="help-inline">{{proposalValidationError}}</span>' +
-                    '{{else}}' +
-                        '<span class="help-inline">This is your Proposals content</span>' +
                     '{{/if}}' +
                 '</div>' +
             '</div>' +
             '<div class="control-group">' +
                 '<label class="control-label" for="proposalType">Proposal Type</label>' +
                 '<div class="controls">' +
-                    '{{view Ember.TextField valueBinding="proposalType" rows="20" classNames="span5"}}' +
+                    '{{view Ember.TextField valueBinding="proposalType" rows="20" classNames="span5" placeholder="20 or 35 minute talk, or tutorial"}}' +
                     '{{#if proposalTypeValidationError}}' +
                         '<span class="help-inline">{{proposalTypeValidationError}}</span>' +
-                    '{{else}}' +
-                        '<span class="help-inline">20 or 35 minute talk, or tutorial</span>' +
                     '{{/if}}' +
                 '</div>' +
             '</div>' +
             '<div class="control-group">' +
                 '<label class="control-label" for="topics">Topics</label>' +
                 '<div class="controls">' +
-                    '{{view Ember.TextField valueBinding="proposalTopics" rows="20" classNames="span5"}}' +
+                    '{{view Ember.TextField valueBinding="proposalTopics" rows="20" classNames="span5" placeholder="A comma separated keyword-list"}}' +
                     '{{#if topicsValidationError}}' +
                         '<span class="help-inline">{{topicsValidationError}}</span>' +
-                    '{{else}}' +
-                        '<span class="help-inline">A comma separated keyword-list</span>' +
                     '{{/if}}' +
                 '</div>' +
             '</div>' +
         '<div class="form-actions" style="background: none;">' +
-            '<button type="submit" class="btn btn-primary" {{action "submitAbstract"}}>Submit Proposal!</button>' +
+            '<button type="submit" class="btn btn-primary" {{action "submitAbstract"}}>Submit Proposal</button>' +
         '</div>' +
     '</form>' +
-    '{{else}}' +
-        '<p>You need to log in, in order to submit an abstract.</p>' +
-    '{{/if}}' +
-    '</div>');
+    '</div>' +
+    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
+    );

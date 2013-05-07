@@ -7,10 +7,10 @@
           "id": "talks",
            "pages": ["call_for_speakers", "talks", "hackathon"]
       },
-	  {
-	      "id": "training",
-	       "pages": ["training_day_one", "training_day_two"]
-	  },
+      {
+        "id": "training",
+         "pages": ["training_day_one", "training_day_two"]
+      },
       {
           "id": "about",
            "pages": ["organizers", "sponsors", "sourcecode"]

@@ -1,22 +1,50 @@
 body {
     color: #e8e8e8;
-
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 0em;
-    font-size: 1.2em;
+    font-size: 15px;
     line-height: 1.26em;
     background: url("/img/white_wall_hash.png")  scroll 0 0 #CFCFCF;
 }
 
 p { margin-top: 0.95em; }
 
-a {
-    color: rgb(200, 12, 8);
+a:hover {
+    /*color: rgb(100,12,8);*/
+    text-decoration: none;
 }
 
-a:hover {
-    color: rgb(100,12,8);
-    text-decoration: underline;
+.logo-header h2 {
+    text-align: center;
+    position: absolute;
+    top: 12%;
+    font-size: 37px;
+    font-weight: 200;
+    left: 28%;
+}
+
+.date-location {
+/*    float: left;
+    margin: -30px 0 20px 35px;
+*/}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 650px;
+}
+
+.logo img {
+    margin-top: 25px;
+}
+
+.footer {
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+.github {
+    margin-left: 300px;
 }
 
 #wrap {
@@ -25,13 +53,11 @@ a:hover {
 }
 
 #mainArea {
-    text-align: center;
-
-    margin-bottom: 0px;
-    overflow: scroll;
-    margin-left: 293px;
+    /*text-align: center;*/
+    /*margin-bottom: 0px;*/
+    /*margin-left: 293px;*/
+    margin-top: 30px;
     color: #000;
-    overflow: scroll;
 }
 
 #sponsorArea {
@@ -51,42 +77,31 @@ a:hover {
 }
 
 #toolbarArea {
-    text-align: left;
-    color: rgb(200, 12, 8);
-    font-size: 1.3em;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-
-    width: 260px;
-    vertical-align: top;
-    z-index: 10;
-}
-
-#toolbarArea .toolbar-nav {
-    background-color: rgba(244, 235, 237, 0.87);
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-       -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    letter-spacing: 2px;
-    padding: 7px;
-    margin-top: 15px;
+    padding: 25px 0 15px 0;
+    left: 36%;
+    position: absolute;
 }
 
 #toolbarArea .toolbar-nav a {
     margin-left: -2px;
     margin-right: -2px;
-    font-size: 0.7em;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 200;
 }
 
 #toolbarArea .toolbar-nav a:hover {
-    background: #ccc;
+    /*background: #ccc;*/
+}
+
+.toolbar-nav li {
+    float: left;
+    padding-bottom: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.toolbar-nav li.active-tab {
+    border-bottom: 1px solid;
+    color: #0088cc;
 }
 
 #toolbarArea .nav-header {
@@ -121,33 +136,35 @@ a:hover {
 
 #contentArea {
     margin: 0px;
-    padding: 0px;
+    padding: 40px 0px 0px 0px;
     text-align: left;
 }
 
 .hotelArea {
-    background: rgba(197, 155, 60, 0.496094);
-    border-bottom-color: rgb(255, 255, 255);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    padding: 10px;
-    margin: 15px;
-    padding-top: 10px;
+    margin-top: 15px;
+}
 
-    background-color: rgba(244, 235, 237, 0.87);
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(0, 0, 0, 0.25);
+.city {
+    margin-left: 10px;
+}
+
+.city-location {
+    margin-top: 10px;
+}
+
+.what {
+    margin: 10px 0 30px 0;
+}
+
+.tickets {
+    margin-top: 30px;
 }
 
 .markdownArea {
     background: url("/img/white_wall_hash.png")  scroll 0 0 #CFCFCF;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 30px;
     min-height: 100%;
 }
 
@@ -157,9 +174,14 @@ a:hover {
     margin-bottom: 15px;
 }
 
+.hotelArea h2 {
+    font-weight: 200;
+}
+
 .markdownArea h2 {
     text-align: left;
     margin-bottom: 15px;
+    font-weight: 200;
 }
 
 .talkTitle {

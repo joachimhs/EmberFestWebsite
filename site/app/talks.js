@@ -125,7 +125,8 @@ Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
                 '<br /><button class="btn btn-primary" {{action "deleteTalk" this}}>Delete Proposal</button>' +
             '{{/if}}' +
         '</div>' +
-    '{{/each}}</div>'
+    '{{/each}}</div>' +
+    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
 );
 
 Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
@@ -149,30 +150,24 @@ Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
                         '{{view Ember.TextArea valueBinding="talkText" rows="20" classNames="span5"}}' +
                         '{{#if proposalValidationError}}' +
                             '<span class="help-inline">{{proposalValidationError}}</span>' +
-                        '{{else}}' +
-                            '<span class="help-inline">This is your Proposals content</span>' +
                         '{{/if}}' +
                     '</div>' +
                 '</div>' +
                 '<div class="control-group">' +
                     '<label class="control-label" for="proposalType">Proposal Type</label>' +
                     '<div class="controls">' +
-                        '{{view Ember.TextField valueBinding="talkType" rows="20" classNames="span5"}}' +
+                        '{{view Ember.TextField valueBinding="talkType" rows="20" classNames="span5" placeholder="20 or 35 minute talk, or tutorial"}}' +
                         '{{#if proposalTypeValidationError}}' +
                             '<span class="help-inline">{{proposalTypeValidationError}}</span>' +
-                        '{{else}}' +
-                            '<span class="help-inline">20 or 35 minute talk, or tutorial</span>' +
                         '{{/if}}' +
                     '</div>' +
                 '</div>' +
                 '<div class="control-group">' +
                     '<label class="control-label" for="topics">Topics</label>' +
                     '<div class="controls">' +
-                        '{{view Ember.TextField valueBinding="talkTopics" rows="20" classNames="span5"}}' +
+                        '{{view Ember.TextField valueBinding="talkTopics" rows="20" classNames="span5" placeholder="A comma separated keyword-list"}}' +
                         '{{#if topicsValidationError}}' +
                             '<span class="help-inline">{{topicsValidationError}}</span>' +
-                        '{{else}}' +
-                            '<span class="help-inline">A comma separated keyword-list</span>' +
                         '{{/if}}' +
                     '</div>' +
                 '</div>' +
@@ -192,5 +187,6 @@ Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
             '{{/if}}' +
             '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>' +
         '</div>' +
-    '{{/if}}'
+    '{{/if}}' +
+    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
 );

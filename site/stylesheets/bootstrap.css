@@ -462,6 +462,7 @@ h6 small {
 h1 {
   font-size: 30px;
   line-height: 36px;
+  font-weight: 200;
 }
 
 h1 small {
@@ -723,7 +724,7 @@ pre code {
 }
 
 form {
-  margin: 0 0 18px;
+  margin: 45px 0 18px 0;
 }
 
 fieldset {
@@ -1486,15 +1487,16 @@ legend + .control-group {
 
 .form-horizontal .control-label {
   float: left;
-  width: 140px;
+  /*width: 140px;*/
   padding-top: 5px;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
-  margin-left: 160px;
+  /*margin-left: 160px;*/
+  margin-left: 120px;
   *margin-left: 0;
 }
 
@@ -3212,7 +3214,7 @@ input[type="submit"].btn.btn-mini {
 
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
 }
 
 .nav > .pull-right {

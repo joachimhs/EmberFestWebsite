@@ -21,15 +21,24 @@ ECE.IndexRoute = Ember.Route.extend({
     }
 });
 
+ECE.ApplicationController = Ember.Controller.extend({
+  getCurrentPath: function() {
+    return this.get('currentPath');
+  }.observes('currentPath')
+});
+
 ECE.HeaderController = Ember.ArrayController.extend({
+    needs: ['application'],
     init: function() {
         this._super();
         this.set('content', ECE.TopPage.findAll());
+        var applicationController = this.get('controllers.application');
+        this.set('routeName', applicationController.get('currentPath'));
     }
-});
-
-ECE.ApplicationController = Ember.Controller.extend({
-
+    // isActive: Ember.computed(function () {
+    //     console.log(this.get('routeName'));
+    //     return true;
+    // })
 });
 
 ECE.PagesIndexRoute = Ember.Route.extend({
@@ -63,13 +72,11 @@ ECE.ApplicationView = Ember.View.extend({
 
 Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
     '<div id="wrap">' +
-        '<div id="toolbarArea">' +
-            '<span style="font-weight: bold; font-size: 1.5em;"><img src="/img/ece_logo.png"></span>' +
-                '{{render loginArea}}' +
-                '{{render header}}' +
-                '{{render sponsors}}' +
-        '</div>' +
         '<div id="mainArea">' +
+            '<div class="logo-header"><h2>Ember Fest 2013</h2><span class="logo"><img src="/img/ember-productivity-sm.png"></span></div>' +
+            '<div id="toolbarArea">' +
+                '{{render header}}' +
+            '</div>' +
             '<div id="contentArea">{{outlet}}</div>' +
         '</div>' +
     '</div>'
@@ -77,62 +84,47 @@ Ember.TEMPLATES['application'] = Ember.Handlebars.compile('' +
 
 
 ECE.HeaderView = Ember.View.extend({
-    tagName: 'span'
-
+    tagName: 'div'
 });
 
 Ember.TEMPLATES['header'] = Ember.Handlebars.compile('' +
-    /*'{{#each controllers.pages.arrangedContent}}' +
-        '{{#if pageFilename}}' +
-            '{{#linkTo "pages.page" this}}{{pageName}}{{/linkTo}}' +
-        '{{else}}' +
-            '{{#if isLinkToTalks}}{{#linkTo "talks"}}{{pageName}}{{/linkTo}}{{/if}}' +
-            '{{#if isLinkToCfp}}{{#linkTo "pages.callForSpeakers"}}{{pageName}}{{/linkTo}}{{/if}}' +
-            '{{#if isLinkToHome}}{{#linkTo "pages"}}{{pageName}}{{/linkTo}}{{/if}}' +
-        '{{/if}}' +
-    ' ' +
-    '{{/each}}'        */
     '<ul class="nav nav-list toolbar-nav">' +
-        '{{#each controller}}' +
-            '<li class="nav-header">{{id}}</li>' +
-            '{{#each subPages}}' +
-                '<li>' +
-                    '{{#if pageFilename}}' +
-                        '{{#linkTo "pages.page" this}}{{pageName}}{{/linkTo}}' +
-                    '{{else}}' +
-                        '{{#if isLinkToTalks}}{{#linkTo "talks"}}{{pageName}}{{/linkTo}}{{/if}}' +
-                        '{{#if isLinkToCfp}}{{#linkTo "pages.callForSpeakers"}}{{pageName}}{{/linkTo}}{{/if}}' +
-                        '{{#if isLinkToHome}}{{#linkTo "pages"}}{{pageName}}{{/linkTo}}{{/if}}' +
-                    '{{/if}}' +
-                '</li>' +
-            '{{/each}}' +
-        '{{/each}}' +
+        '<li>{{#linkTo "pages.index"}}About{{/linkTo}}</li>' +
+        '<li>{{#linkTo "talks"}}Talks{{/linkTo}}</li>' +
+        '<li>{{#linkTo "pages.callForSpeakers"}}Submit a proposal{{/linkTo}}</li>' +
     '</ul>'
 );
 
-Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
-    '<div id="sponsorArea" style="float:right;">' +
-        '<table class="well sponsorwell" style="width: 250px;">' +
-            '<tr><td class="sponsorItem" style="text-align: center; text-transform: uppercase; color: #7a7a7a; font-weight: 600;">Sponsors:</td></tr>' +
-            '<tr><td class="sponsorItem"><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
-            '<tr><td class="sponsorItem"><a href="http://www.infoq.com"><img src="/img/infoq.png" /></a></td></tr>' +
-            '<tr><td class="sponsorItem" style="text-align: center;"><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
-        '</table>' +
-    '</div>'
-);
+// Ember.TEMPLATES['sponsors'] = Ember.Handlebars.compile('' +
+//     '<div id="sponsorArea" style="float:right;">' +
+//         '<table class="well sponsorwell" style="width: 250px;">' +
+//             '<tr><td class="sponsorItem" style="text-align: center; text-transform: uppercase; color: #7a7a7a; font-weight: 600;">Sponsors:</td></tr>' +
+//             '<tr><td class="sponsorItem"><a href="http://www.manning.com"><img src="/img/manning.png" /></a></td></tr>' +
+//             '<tr><td class="sponsorItem"><a href="http://www.infoq.com"><img src="/img/infoq.png" /></a></td></tr>' +
+//             '<tr><td class="sponsorItem" style="text-align: center;"><a href="/pages/sponsors">Become a sponsor!</a></td></tr>' +
+//         '</table>' +
+//     '</div>'
+// );
 
 Ember.TEMPLATES['pages/index'] = Ember.Handlebars.compile('' +
-    '<div class="hotelArea" class="container-fluid">' +
+    '<div class="hotelArea container-fluid">' +
         '<div class="row-fluid">' +
-            '<div id="eventDescription" class="span12">' +
-                '<h1>The Biggest Ember.js Event in Europe!</h1>' +
-                '<img src="/img/venue.jpg" style="float:right; width: 350px; height: 300px;">' +
-                '<p>Ember Fest takes place in Munich, Germany and will be a three day event from August 28th until August 30th. This will by far be the European Ember.js event this year!</p>' +
-                '<p>The goal of Ember Fest is split into two parts. The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials.</p>' +
-                '<p>Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js awesomeness!</p>' +
+            '<div class="what span12">' +
+                '<h2>What?</h2><p>The Biggest Ember.js Event in Europe. The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials. ' +
+                'Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js awesomeness!</p>' +
+            '</div>' +
+            '<div class="where">' +
+                '<h2>Where?</h2><div class="city-location"><i class="icon-large icon-map-marker"></i><span class="city">Munich City Centre, München, DE</span></div><p>The first two days will be a hands on 2-day introductory course on Ember.js, while the third day will be organized as a single-track mini-conference with talks and tutorials. ' +
+                'Training, talks and tutorials will be held by people with first hand Ember.js experience, where they will share their knowledge and spread the word on Ember.js awesomeness!</p>' +
+                '<a href="http://www.google.com/maps?f=q&amp;hl=de&amp;geocode=&amp;q=hochstrasse+3,+munich&amp;sll=37.0625,-95.677068&amp;sspn=27.919765,59.238281&amp;ie=UTF8&amp;ll=48.133158,11.589847&amp;spn=0.011457,0.028925&amp;z=15&amp;iwloc=addr&amp;om=1"><img src="/img/venue_location.png"></a>' +
+            '</div>' +
+            '<div class="tickets">' +
+                '<h2>Tickets</h2>' +
+                '<iframe src="https://www.eventora.com/en/embed/ember-fest" width="680px" height="300px" style="border:0" allowtransparency="true" scrolling="auto" vspace="0" hspace="0" frameborder="0"></iframe>' +
             '</div>' +
         '</div>' +
     '</div>' +
-    '<div class="markdownArea">{{markdown}}</div>'
+    '<div class="markdownArea">{{markdown}}</div>' +
+    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
 
 );
