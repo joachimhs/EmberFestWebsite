@@ -117,16 +117,16 @@ Ember.TEMPLATES['talks/index'] = Ember.Handlebars.compile('' +
     '<div class="markdownArea"><h1>Proposed Talks</h1>' +
     '{{#each controllers.talks}}' +
         '<div class="well well-small talkTitle">' +
+            '{{view ECE.LiviconView dataName="quote-left" dataSize="24"}}' +
             '{{#linkTo "talks.talk" this}}<button class="btn btn-primary pull-right">View Proposal</button>{{/linkTo}}' +
             '{{talkTitle}}<br>' +
-            'Suggested by {{talkSuggestedBy}}' +
+            '<span>{{view ECE.LiviconView dataName="user" dataSize="24"}}Suggested by {{talkSuggestedBy}}</span>' +
 
             '{{#if controller.isAdmin}}' +
                 '<br /><button class="btn btn-primary" {{action "deleteTalk" this}}>Delete Proposal</button>' +
             '{{/if}}' +
         '</div>' +
-    '{{/each}}</div>' +
-    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
+    '{{/each}}</div>'
 );
 
 Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
@@ -179,14 +179,13 @@ Ember.TEMPLATES['talks/talk'] = Ember.Handlebars.compile('' +
     '{{else}}' +
         '<div class="markdownArea">' +
             '<h1>{{talkTitle}}</h1>' +
-            '<div><h2>Abstract</h2>{{talkText}}</div>' +
-            '<div><h2>Talk Type</h2>{{talkType}}</div>' +
-            '<div><h2>Talk Topics</h2>{{talkTopics}}</div>' +
+            '<div><h2>{{view ECE.LiviconView dataName="quote-left" dataSize="24"}}Abstract</h2>{{talkText}}</div>' +
+            '<div><h2>{{view ECE.LiviconView dataName="tasks" dataSize="24"}}Talk Type</h2>{{talkType}}</div>' +
+            '<div><h2>{{view ECE.LiviconView dataName="align-justify" dataSize="24"}}Talk Topics</h2>{{talkTopics}}</div>' +
             '{{#if canEditTalk}}' +
                 '<div><h2>Edit Talk</h2><button class="btn btn-primary" {{action "editTalk" this}}>Edit Proposal</button></div>' +
             '{{/if}}' +
             '<div>{{#linkTo "talks"}}<<- Back to Talks{{/linkTo}}</div>' +
         '</div>' +
-    '{{/if}}' +
-    '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
+    '{{/if}}'
 );

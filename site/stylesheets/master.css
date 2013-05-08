@@ -20,6 +20,15 @@ a:hover {
     top: 12%;
     font-size: 37px;
     font-weight: 200;
+    left: 24%;
+}
+
+.logo-header h3 {
+    text-align: center;
+    position: absolute;
+    top: 23%;
+    font-size: 22px;
+    font-weight: 200;
     left: 28%;
 }
 
@@ -35,6 +44,11 @@ a:hover {
 }
 
 .logo img {
+    margin-top: 25px;
+}
+
+.emberfestlogo {
+    margin-left: 50px;
     margin-top: 25px;
 }
 
@@ -185,7 +199,7 @@ a:hover {
 }
 
 .talkTitle {
-    background-color: rgba(197, 155, 60, 0.496094);
+    background-color: rgba(209, 201, 203, 0.32);
     border: 1px solid #453f66;
     border: 1px solid rgba(69, 63, 102, 0.4);
     -webkit-border-radius: 4px;

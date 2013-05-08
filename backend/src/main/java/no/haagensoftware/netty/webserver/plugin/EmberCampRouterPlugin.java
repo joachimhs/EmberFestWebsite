@@ -37,6 +37,7 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
         routes.put("startsWith:/register", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/call_for_speakers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/talks", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/training", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         
         routes.put("startsWith:/auth/login", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/logout", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));

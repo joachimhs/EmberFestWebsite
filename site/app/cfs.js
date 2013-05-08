@@ -84,6 +84,7 @@ ECE.PagesCallForSpeakersController = Ember.ObjectController.extend({
 Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
     '<div class="markdownArea">' +
     '{{markdown}}' +
+    '{{#if controllers.user.isLoggedIn}}' +
         '<form class="form-horizontal">' +
             '<div class="control-group">' +
                 '<label class="control-label" for="proposalTitle">Title</label>' +
@@ -126,5 +127,8 @@ Ember.TEMPLATES['pages/callForSpeakers'] = Ember.Handlebars.compile('' +
         '</div>' +
     '</form>' +
     '</div>' +
+    '{{else}}' +
+        '<p>You need to log in, in order to propose a talk.</p>' +
+    '{{/if}}' +
     '<div class="container-fluid"><div class="span12 footer"><a href="https://twitter.com/EmberFest"><i class="icon-2x icon-twitter"></i></a><a href="https://github.com/joachimhs/EmberFestWebsite" class="github"><i class="icon-2x icon-github"></i></a></div>'
-    );
+);

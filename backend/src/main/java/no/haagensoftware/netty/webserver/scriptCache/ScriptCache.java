@@ -40,7 +40,7 @@ public class ScriptCache {
 			JSMin jsmin = new JSMin(in, out);
 			jsmin.jsmin();
 			
-			minifiedScriptContents = new String(out.toString());
+			minifiedScriptContents = scriptContents; //new String(out.toString());
 			/*minifiedScriptContents = minifiedScriptContents.replaceAll("ÃÂµ", "mu");
 			minifiedScriptContents = minifiedScriptContents.replaceAll("Âµ", "mu");
 			minifiedScriptContents = minifiedScriptContents.replaceAll("ÃÂ", "sigma");
