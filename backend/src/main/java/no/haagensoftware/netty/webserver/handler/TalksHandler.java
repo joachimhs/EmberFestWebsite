@@ -55,6 +55,8 @@ public class TalksHandler extends FileServerHandler {
 		String responseContent = "";
 		
 		if (isGet(e)) {
+			
+			
 			List<PerstAbstract> talks = abstractDao.getAbstracts(dbEnv.getDb());
 			logger.info("Submitted abstracts: ");
 			StringBuffer sb = new StringBuffer();

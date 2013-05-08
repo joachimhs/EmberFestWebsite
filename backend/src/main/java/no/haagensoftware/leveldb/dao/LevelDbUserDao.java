@@ -2,11 +2,16 @@ package no.haagensoftware.leveldb.dao;
 
 import static org.iq80.leveldb.impl.Iq80DBFactory.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.iq80.leveldb.DB;
+import org.iq80.leveldb.DBIterator;
 
 import com.google.gson.Gson;
 
+import no.haagensoftware.perst.datatypes.PerstAbstract;
 import no.haagensoftware.perst.datatypes.PerstUser;
 
 public class LevelDbUserDao {
@@ -31,5 +36,17 @@ public class LevelDbUserDao {
 		}
 		
 		return user;
+	}
+	
+	public void listDB(DB db) {
+		List<PerstAbstract> abstractList = new ArrayList<>();
+		DBIterator iterator = db.iterator();
+		try {
+			for(iterator.seekToFirst(); iterator.hasNext(); iterator.next()) {
+				logger.info(asString(iterator.next().getValue()));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

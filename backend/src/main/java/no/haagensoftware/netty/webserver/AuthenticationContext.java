@@ -28,6 +28,8 @@ public class AuthenticationContext {
 	}
 	
 	public AuthenticationResult verifyUUidToken(String uuidToken) {
+		userDao.listDB(dbEnv.getDb());
+		
 		AuthenticationResult authResult = new AuthenticationResult();
 		MozillaPersonaCredentials credentials = authenticatedUsers.get(uuidToken);
 		if (credentials != null && credentials.getStatus().equalsIgnoreCase("okay")) {
@@ -136,7 +138,7 @@ public class AuthenticationContext {
 		return authLevel;
 	}
 	
-	public PerstUser getUser(String email) {
+	public PerstUser getUser(String email) {		
 		return this.userDao.getUser(dbEnv.getDb(), email);
 	}
 }
