@@ -1,0 +1,27 @@
+<div id="talks" class="container content">
+  <div class="side1">
+    <img src="/images/talks.png" alt="talks">
+    <h1>Proposed Talks</h1>
+    <p>We are currently putting together a set of experts who are using Ember.js. Here's a list of proposed talks.</p>
+    <ul class="talks">
+      {{#each controller}}
+        <li>
+          {{view Emberfest.TalkView contentBinding="this"}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="side2">
+    <img src="/images/speakers.png" alt="talks">
+    <h1>Call for Speakers</h1>
+    <p>We are looking for the best and most worthwhile Ember.js related talks. Your topic can be about anything, as long as it relates to Ember.js development somehow.</p>
+    <h2>Talks: Format and Duration</h2>
+    <p>Talks are either 20 or 35 minutes long. Please note in your abstract how long you estimate your talk to be.</p>
+    <h2>Workshops/Tutorials</h2>
+    <p>We want to be able to offer a few hands-on workshops/tutorials. The details about the arrangement of these are not yet finalized. You can influence the setup by submitting an abstract!</p>
+    <h2>What you get</h2>
+    <p>Speakers with accepted abstracts get free admission to the mini-conference day (day 3) and will get invited to the Speakers Dinner.</p>
+    <h2>Submit yours today!</h2>
+    <p>We have currently filled up all available slots, and have therefore closed the Call for Speakers.</p>
+  </div>
+</div>

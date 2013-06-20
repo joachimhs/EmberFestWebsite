@@ -17,77 +17,79 @@ import org.haagensoftware.netty.webserver.util.JSMin.UnterminatedRegExpLiteralEx
 import org.haagensoftware.netty.webserver.util.JSMin.UnterminatedStringLiteralException;
 
 public class ScriptCache {
-	private List<String> scriptList;
-	private String scriptContents;
-	private String htmlFilePath;
-	private String htmlContents;
-	private String minifiedScriptContents;
+	private String cacheName;
+	private List<ScriptFile> scriptList;
+	private String minifiedScriptContent;
+	private String scriptContent;
 	private Long expires = 0l;
-	
-	public ScriptCache(List<String> scriptList, String scriptContents, String htmlFilePath, String htmlContent, long expires) {
+	private String htmlContents;
+
+	public ScriptCache(String cacheName, List<ScriptFile> scriptList, Long expires, String htmlContents) {
+		super();
+		this.cacheName = cacheName;
 		this.scriptList = scriptList;
-		this.scriptContents = scriptContents;
-		this.htmlFilePath = htmlFilePath;
-		this.htmlContents = htmlContent;
-		this.expires = expires;
-		minifiedScriptContents = "";
-		
-		InputStream in;
-		try {
-			in = new ByteArrayInputStream(scriptContents.getBytes("UTF-8"));
-			OutputStream out = new ByteArrayOutputStream();
-			
-			JSMin jsmin = new JSMin(in, out);
-			jsmin.jsmin();
-			
-			minifiedScriptContents = scriptContents; //new String(out.toString());
-			/*minifiedScriptContents = minifiedScriptContents.replaceAll("ÃÂµ", "mu");
-			minifiedScriptContents = minifiedScriptContents.replaceAll("Âµ", "mu");
-			minifiedScriptContents = minifiedScriptContents.replaceAll("ÃÂ", "sigma");
-			minifiedScriptContents = minifiedScriptContents.replaceAll("Ï", "sigma");*/
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (UnterminatedRegExpLiteralException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (UnterminatedCommentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (UnterminatedStringLiteralException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		minifiedScriptContent = "";
+		scriptContent = "";
+		for (ScriptFile sf : scriptList) {
+			minifiedScriptContent += "//" + sf.getFileSrc() + "\r\n";
+			minifiedScriptContent += sf.getFileMinifiedContents() + "\r\n\r\n";
+			scriptContent += sf.getFileContents() + "\r\n\r\n";
 		}
 		
+		this.expires = expires;
+		this.htmlContents = htmlContents;
 	}
-	
-	public boolean isExpired() {
-		return expires <= System.currentTimeMillis();
+
+	public String getCacheName() {
+		return cacheName;
 	}
-	
-	public String getHtmlFilePath() {
-		return htmlFilePath;
+
+	public void setCacheName(String cacheName) {
+		this.cacheName = cacheName;
 	}
-	
-	public String getScriptContents() {
-		return scriptContents;
-	}
-	public List<String> getScriptList() {
+
+	public List<ScriptFile> getScriptList() {
 		return scriptList;
 	}
-	
+
+	public void setScriptList(List<ScriptFile> scriptList) {
+		this.scriptList = scriptList;
+	}
+
+	public String getMinifiedScriptContent() {
+		return minifiedScriptContent;
+	}
+
+	public void setMinifiedScriptContent(String minifiedScriptContent) {
+		this.minifiedScriptContent = minifiedScriptContent;
+	}
+
+	public String getScriptContent() {
+		return scriptContent;
+	}
+
+	public void setScriptContent(String scriptContent) {
+		this.scriptContent = scriptContent;
+	}
+
 	public Long getExpires() {
 		return expires;
+	}
+
+	public void setExpires(Long expires) {
+		this.expires = expires;
+	}
+
+	public boolean isExpired() {
+		return expires <= System.currentTimeMillis();
 	}
 	
 	public String getHtmlContents() {
 		return htmlContents;
 	}
 	
-	public String getMinifiedScriptContents() {
-		return minifiedScriptContents;
+	public void setHtmlContents(String htmlContents) {
+		this.htmlContents = htmlContents;
 	}
+	
 }

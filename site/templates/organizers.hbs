@@ -1,0 +1,23 @@
+<div id="organizers" class="container content">
+  <h1>Organizers</h1>
+  <div class="row">
+    <p>
+      The core team of organizers for Ember Fest consists of people close to the Ember.js community, spread across Europe. Our aim is to create the most amazing Ember.js related event that we possibly can.
+    </p>
+    <div class="org-list">
+      {{#each o in controller}}
+        <div class="organizer right">
+          <img {{bindAttr src="o.imageUrl"}}>
+          <div class="info">
+            <h2>{{o.name}}</h2>
+            <div class="location">
+              <img src="/images/twitter_blue.png" alt="Twitter">
+              <a {{bindAttr href="o.twitterUrl"}}>{{o.twitter}}</a>Location: {{o.location}}
+            </div>
+            <p>{{o.bio}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

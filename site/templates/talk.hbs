@@ -1,0 +1,12 @@
+<div class="title">{{talkTitle}}</div>
+<div class="author">Suggested by {{talkSuggestedBy}}</div>
+{{#if view.viewProposal}}
+    <span class="proposalButton" {{action hideProposal target="view"}}>HIDE PROPOSAL</span>
+    <div class="proposalContent">
+        {{markdown talkText}}
+        <p><span class="infoButton">Talk Type</span> {{talkType}}</p>
+        <p><span class="infoButton">Talk Topics</span> {{talkTopics}}</p>
+    </div>
+{{else}}
+    <span class="proposalButton" {{action showProposal target="view"}}>VIEW PROPOSAL</span>
+{{/if}}

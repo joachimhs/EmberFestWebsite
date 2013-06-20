@@ -6,15 +6,14 @@ import java.util.List;
 public class ScriptHash {
 	private static Hashtable<String, ScriptCache> scriptHash = new Hashtable<String, ScriptCache>();
 	
-	public static ScriptCache updateScriptContents(String htmlFilePath, List<String> scriptFiles, String scriptContents, 
-			String htmlContent, long expires) {
+	public static ScriptCache updateScriptContents(String htmlFilePath, List<ScriptFile> scriptFiles, String htmlContent, long expires) {
 		ScriptCache cacheFromHash = scriptHash.get(htmlFilePath);
 		if (cacheFromHash != null) {
 			//Remove the old script cache
 			scriptHash.remove(htmlFilePath);
 		}
 		
-		cacheFromHash = new ScriptCache(scriptFiles, scriptContents, htmlFilePath, htmlContent, expires);		
+		cacheFromHash = new ScriptCache(htmlFilePath, scriptFiles, expires, htmlContent);		
 		scriptHash.put(htmlFilePath, cacheFromHash);
 		return cacheFromHash;
 	}
