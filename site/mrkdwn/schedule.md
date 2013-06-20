@@ -14,18 +14,65 @@ If we sell a total of 50 tickets before May 20th, we will be in a good position 
 Schedule
 --------
 
-- 09:00 - 09:20 - Welcome and Registration
-- 09:20 - 09:35 - Opening Talk By The Organizers
-- 09:40 - 10:00 - 20 Minute Talk. Topic TBA
-- 10:05 - 10:35 - 35 Minute Talk. Topic TBA
-- 10:35 - 11:00 - Coffee break with snacks
-- 11:00 - 11:20 - 20 Minute Talk. Topic TBA
-- 11:25 - 11:50 - 35 Minute Talk. Topic TBA
-- 11:55 - 12:30 - 35 Minute Talk. Topic TBA
-- 12.30 - 14:00 - Lunch
-- 14:00 - 14:20 - 20 Minute Talk. Topic TBA
-- 14:25 - 15:00 - 35 Minute Talk. Topic TBA
-- 15:00 - 15:30 - Coffee break with snacks
-- 15:30 - 15:50 - 20 Minute Talk. Topic TBA
-- 15:55 - 16:15 - 20 Minute TAlk. Topic TBA
-- 16:20 - 16:40 - Closing Talk by the Organizers
+<table>
+	<tr>
+		<td style="width: 140px;">09:00 - 09:20</td>
+		<td>Welcome and Registration</td>
+	</tr>
+	<tr>
+		<td>09:20 - 09:35</td>
+		<td>Opening Talk By The Organizers</td>
+	</tr>
+	<tr>
+		<td>09:40 - 10:00</td>
+		<td>20 Minute Talk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>10:05 - 10:35</td>
+		<td><a href="http://emberfest.eu/talks/2F76AB9D6A6EFBFC">Anthony Bull: Productive Out-of-the-Box</a></td>
+	</tr>
+	<tr>
+		<td>10:35 - 11:00</td>
+		<td>Coffee break with snacks</td>
+	</tr>
+	<tr>
+		<td>11:00 - 11:20</td>
+		<td><a href="http://emberfest.eu/talks/E7EF929D1FFD587E">Thomas Herrmann: Experiences building a hypervideo-based webapp with Ember.js, Popcorn.js and HTML5</a></td>
+	</tr>
+	<tr>
+		<td>11:25 - 11:50</td>
+		<td>35 Minute Talk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>11:55 - 12:30 </td>
+		<td>35 Minute Talk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>12.30 - 14:00</td>
+		<td>Lunch</td>
+	</tr>
+	<tr>
+		<td>14:00 - 14:20</td>
+		<td>20 Minute Talk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>14:25 - 15:00</td>
+		<td><a href="http://emberfest.eu/talks/09B14CD6B947191A">Sergey Bolshchikov: Ember reusable components and widgets</a></td>
+	</tr>
+	<tr>
+		<td>15:00 - 15:30</td>
+		<td>Coffee break with snacks</td>
+	</tr>
+	<tr>
+		<td>15:30 - 15:50</td>
+		<td>20 Minute Talk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>15:55 - 16:15</td>
+		<td>20 Minute TAlk. Topic TBA</td>
+	</tr>
+	<tr>
+		<td>16:20 - 16:40</td>
+		<td>Closing Talk by the Organizers</td>
+	</tr>
+</table>

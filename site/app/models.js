@@ -1,6 +1,6 @@
-ECE.Model = Ember.Object.extend();
+Emberfest.Model = Ember.Object.extend();
 
-ECE.Model.reopenClass({
+Emberfest.Model.reopenClass({
     find: function(id, type) {
         console.log('find: ' + type + " id: " + id);
         var foundItem = this.contentArrayContains(id, type);
@@ -105,13 +105,13 @@ ECE.Model.reopenClass({
     }
 });
 
-ECE.TopPage = ECE.Model.extend({
+Emberfest.TopPage = Emberfest.Model.extend({
     subPages: function() {
         var subPages = Ember.A();
         var pages = this.get('pages');
         if (pages) {
             pages.forEach(function(page) {
-                subPages.pushObject(ECE.Page.find(page));
+                subPages.pushObject(Emberfest.Page.find(page));
             });
         }
 
@@ -119,18 +119,18 @@ ECE.TopPage = ECE.Model.extend({
     }.property('pages', 'pages.length')
 });
 
-ECE.TopPage.reopenClass({
+Emberfest.TopPage.reopenClass({
     collection: Ember.A(),
     find: function(id) {
-        return ECE.Model.find(id, ECE.TopPage);
+        return Emberfest.Model.find(id, Emberfest.TopPage);
     },
 
     findAll: function() {
-        return ECE.Model.findAll('/topPages', ECE.TopPage, 'topPages');
+        return Emberfest.Model.findAll('/topPages', Emberfest.TopPage, 'topPages');
     }
 });
 
-ECE.Page = ECE.Model.extend({
+Emberfest.Page = Emberfest.Model.extend({
     isLinkToTalks: function() {
         return this.get('pageRoute') === 'talks'
     }.property('pageRoute'),
@@ -144,46 +144,46 @@ ECE.Page = ECE.Model.extend({
     }.property('pageRoute')
 });
 
-ECE.Page.reopenClass({
+Emberfest.Page.reopenClass({
     collection: Ember.A(),
     find: function(id) {
-        return ECE.Model.find(id, ECE.Page);
+        return Emberfest.Model.find(id, Emberfest.Page);
     },
 
     findAll: function() {
-        return ECE.Model.findAll('/pages', ECE.Page, 'pages');
+        return Emberfest.Model.findAll('/pages', Emberfest.Page, 'pages');
     }
 });
 
-ECE.Talk = ECE.Model.extend({
+Emberfest.Talk = Emberfest.Model.extend({
 
 });
 
-ECE.Talk.reopenClass({
+Emberfest.Talk.reopenClass({
     collection: Ember.A(),
 
     find: function(id) {
-        return ECE.Model.find(id, ECE.Talk);
+        return Emberfest.Model.find(id, Emberfest.Talk);
     },
 
     findAll: function() {
-        return ECE.Model.findAll('/abstracts', ECE.Talk, 'abstracts');
+        return Emberfest.Model.findAll('/abstracts', Emberfest.Talk, 'abstracts');
     },
 
     createRecord: function(model) {
-        ECE.Model.createRecord('/abstracts', ECE.Talk, model);
+        Emberfest.Model.createRecord('/abstracts', Emberfest.Talk, model);
     },
 
     updateRecord: function(model) {
-        ECE.Model.updateRecord("/abstracts", ECE.Talk, model);
+        Emberfest.Model.updateRecord("/abstracts", Emberfest.Talk, model);
     },
 
     delete: function(id) {
-        ECE.Model.delete('/abstracts', ECE.Talk, id);
+        Emberfest.Model.delete('/abstracts', Emberfest.Talk, id);
     }
 });
 
-ECE.User = ECE.Model.extend({
+Emberfest.User = Emberfest.Model.extend({
     ownsTalk: function(talkId) {
         var hasTalk = false;
         var userTalks = this.get('talks');
@@ -197,26 +197,26 @@ ECE.User = ECE.Model.extend({
     }
 });
 
-ECE.User.reopenClass({
+Emberfest.User.reopenClass({
    collection: Ember.A(),
 
     find: function(id) {
-        return ECE.Model.find(id, ECE.User);
+        return Emberfest.Model.find(id, Emberfest.User);
     },
 
     findAll: function() {
-        return ECE.Model.findAll('/user', ECE.User, "users");
+        return Emberfest.Model.findAll('/user', Emberfest.User, "users");
     },
 
     createRecord: function(model) {
-        ECE.Model.createRecord('/user', ECE.User, model);
+        Emberfest.Model.createRecord('/user', Emberfest.User, model);
     },
 
     updateRecord: function(model) {
-        ECE.Model.updateRecord("/user", ECE.User, model);
+        Emberfest.Model.updateRecord("/user", Emberfest.User, model);
     },
 
     delete: function(id) {
-        ECE.Model.delete('/user', ECE.User, id);
+        Emberfest.Model.delete('/user', Emberfest.User, id);
     }
 });

@@ -33,15 +33,24 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
 		routes = new LinkedHashMap<String, SimpleChannelUpstreamHandler>();
 		routes.put("equals:/index.html", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("equals:/", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
-        routes.put("startsWith:/pages/", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/pages", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/talks", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/tickets", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/schedule", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/venue", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/organizers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/sponsors", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        
         routes.put("startsWith:/register", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/call_for_speakers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
-        routes.put("startsWith:/talks", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        
+        
+        routes.put("startsWith:/training", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         
         routes.put("startsWith:/auth/login", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/logout", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/registerNewUser", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
-        
+
         routes.put("startsWith:/user", new UserHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         
         routes.put("startsWith:/abstracts", new TalksHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));

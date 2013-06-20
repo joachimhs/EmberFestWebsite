@@ -78,9 +78,9 @@ public class CachedScriptHandler extends FileServerHandler {
         //Set up and send the response.
 		DefaultHttpResponse response = new DefaultHttpResponse(HTTP_1_1, OK);;
         response.setHeader(HttpHeaders.Names.CONTENT_TYPE, "application/javascript");
-        setContentLength(response, scriptCache.getMinifiedScriptContents().length());
+        setContentLength(response, scriptCache.getMinifiedScriptContent().length());
 
-        response.setContent(ChannelBuffers.copiedBuffer(scriptCache.getMinifiedScriptContents(), "utf-8"));
+        response.setContent(ChannelBuffers.copiedBuffer(scriptCache.getMinifiedScriptContent(), "utf-8"));
         ChannelFuture writeFuture = e.getChannel().write(response);
 
         // Decide whether to close the connection or not.

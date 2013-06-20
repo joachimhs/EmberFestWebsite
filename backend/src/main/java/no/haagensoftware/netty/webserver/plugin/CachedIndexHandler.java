@@ -15,6 +15,7 @@ import java.util.List;
 
 import no.haagensoftware.netty.webserver.handler.FileServerHandler;
 import no.haagensoftware.netty.webserver.scriptCache.ScriptCache;
+import no.haagensoftware.netty.webserver.scriptCache.ScriptFile;
 import no.haagensoftware.netty.webserver.scriptCache.ScriptHash;
 
 import org.apache.log4j.Logger;
@@ -92,7 +93,7 @@ public class CachedIndexHandler extends FileServerHandler {
 	private ScriptCache updateScriptCacheForPath(String path) throws IOException {
 		Long before = System.currentTimeMillis();
 		StringBuffer scriptContentsCombined = new StringBuffer();
-		List<String> scriptPathList = new ArrayList<String>();
+		List<ScriptFile> scriptPathList = new ArrayList<ScriptFile>();
 		
 		Document htmlDocument = parseHtmlPage(path);
 		
@@ -117,8 +118,7 @@ public class CachedIndexHandler extends FileServerHandler {
 					}
 					
 					//cache and remove this <script src tag from the DOM 
-					scriptContentsCombined.append(cb.toString(Charset.defaultCharset())).append("\r\n\r\n");
-					scriptPathList.add(scriptSrc);
+					scriptPathList.add(new ScriptFile(scriptSrc, cb.toString(Charset.defaultCharset())));
 					scriptElement.remove();
 				}
 			}
@@ -133,7 +133,7 @@ public class CachedIndexHandler extends FileServerHandler {
 		
 		//Create or update the script contents for this HTML file path
 		String scriptsCombined = scriptContentsCombined.toString(); 
-		ScriptCache cache = ScriptHash.updateScriptContents(path, scriptPathList, scriptsCombined, htmlDocument.html(), System.currentTimeMillis() + (maxCacheSeconds * 1000));
+		ScriptCache cache = ScriptHash.updateScriptContents(path, scriptPathList, htmlDocument.html(), System.currentTimeMillis() + (maxCacheSeconds * 1000));
 		logger.info("Finished extracting script contents took: " + (System.currentTimeMillis() - before) + " ms.");
 		
 		return cache;

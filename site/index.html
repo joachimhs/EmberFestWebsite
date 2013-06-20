@@ -3,11 +3,11 @@
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Welcome to Ember Fest!</title>
-	<meta name="author" content="Joachim Haagen Skeie">
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome to Ember Fest!</title>
+    <meta name="author" content="Joachim Haagen Skeie">
+    <link rel="stylesheet" href="/stylesheets/emberfest.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/persona.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -19,24 +19,33 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();*/
     </script>
-
     <script src="https://login.persona.org/include.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/lib/Math.uuid.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/lib/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCfj4wb1TmjFRCeQOd0HpkmqapZYbd5RaQ&amp;sensor=false" type="text/javascript"></script>
+    <script src="/lib/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/lib/Math.uuid.js" type="text/javascript" charset="utf-8"></script>
     <script src="/lib/handlebars-1.0.0.rc.3.js" type="text/javascript" charset="utf-8"></script>
     <script src="/lib/ember-1.0.0-rc.2.js" type="text/javascript" charset="utf-8"></script>
     <script src="/lib/showdown.js" type="text/javascript" charset="utf-8"></script>
+
     <script src="/app/app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/pages.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/applicationController.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/applicationView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_tickets_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_talks_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/talks_controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_schedule_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_venue_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_organizers_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/organizers_controller.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_sponsors_route.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/index_route.js" type="text/javascript" charset="utf-8"></script>
     <script src="/app/models.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/register.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/cfs.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/talks.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/user.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/app/loginArea.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/talk_view.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/app/fix_top.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="/lib/waypoints.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-	
+    <div id="app"></div>
 </body>
 </html>
