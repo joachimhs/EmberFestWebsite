@@ -1,11 +1,11 @@
 Ember.Application.reopen({
+    templates: [],
+
     init: function() {
         this._super();
 
         this.loadTemplates();
     },
-
-    templates: [],
 
     loadTemplates: function() {
         var app = this,
@@ -50,6 +50,5 @@ Ember.Handlebars.registerBoundHelper('markdown', function(property) {
     var converter = new Showdown.converter();
 
     return new Handlebars.SafeString(converter.makeHtml(property));
-
 });
 

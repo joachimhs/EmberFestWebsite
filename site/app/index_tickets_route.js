@@ -8,6 +8,7 @@ Emberfest.IndexTicketsRoute = Ember.Route.extend({
 
     renderTemplate: function() {
         this._super();
+        Emberfest.set('lastTransition', new Date().getTime());
         Ember.run.schedule('afterRender', this, function(){
             document.getElementById('tickets').scrollIntoView();
         });

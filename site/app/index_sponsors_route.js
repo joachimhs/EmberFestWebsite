@@ -8,6 +8,8 @@ Emberfest.IndexSponsorsRoute = Ember.Route.extend({
 
     renderTemplate: function() {
         this._super();
+        Emberfest.set('lastTransition', new Date().getTime());
+        console.log('Sponsors renderTemplate: ' + Emberfest.get('lastTransition'));
         Ember.run.schedule('afterRender', this, function(){
             document.getElementById('sponsors').scrollIntoView();
         });

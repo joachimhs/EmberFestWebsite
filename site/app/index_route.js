@@ -9,6 +9,7 @@ Emberfest.IndexIndexRoute = Ember.Route.extend({
 
     renderTemplate: function() {
         this._super();
+        Emberfest.set('lastTransition', new Date().getTime());
         Ember.run.schedule('afterRender', this, function(){
             document.getElementById('home').scrollIntoView();
         });
