@@ -21,7 +21,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
         },{
             id: '3',
             name: 'Paul Chavard',
-            bio: 'Information about Paul will be coming up shortly!',
+            bio: 'Paul is a lead frontend developer at http://capitainetrain.com, an Ember.js contributor and an occasional speaker at Paris.js and Paris.rb.',
             twitter: '@tchak13',
             twitterUrl: 'http://www.twitter.com/tchak13',
             location: 'France',
