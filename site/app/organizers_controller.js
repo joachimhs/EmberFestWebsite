@@ -34,6 +34,14 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitterUrl: 'http://www.twitter.com/darthdeus',
             location: 'Czech Republic',
             imageUrl: '/images/placeholder.png'
+        },{
+            id: 5,
+            name: "Alex Speller",
+            bio: "Alex is the author of Ember Query, a query params library for Ember.js, and is an active contributor to other libraries in the Ember ecosystem. At Ember Fest he will be helping to host the hackathon on August 29th. In his day job he is a lead software engineer at http://digital-science.com",
+            twitter: "@alexspeller",
+            twitterUrl: "http://www.twitter.com/alexspeller",
+            location: "England",
+            imageUrl: '/images/alexspeller.jpg'
         }]
 
         this.set('content', organizers);

@@ -422,6 +422,7 @@ body {
 #sponsors {
   height: 500px;
   padding-top: 100px;
+  clear: right;
 }
 
 #sponsors h1 {
