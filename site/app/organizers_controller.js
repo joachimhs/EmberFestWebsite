@@ -9,7 +9,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitter: '@joachimhs',
             twitterUrl: 'http://www.twitter.com/joachimhs',
             location: 'Norway',
-            imageUrl: '/images/placeholder.png'
+            imageUrl: '/images/joachimhaagenskeie.jpg'
         },{
             id: '2',
             name: 'Adam Hawkins',
@@ -17,7 +17,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitter: '@twinturbo',
             twitterUrl: 'http://www.twitter.com/twinturbo',
             location: 'Germany',
-            imageUrl: '/images/placeholder.png'
+            imageUrl: '/images/adamhawkins.jpg'
         },{
             id: '3',
             name: 'Paul Chavard',
@@ -25,7 +25,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitter: '@tchak13',
             twitterUrl: 'http://www.twitter.com/tchak13',
             location: 'France',
-            imageUrl: '/images/placeholder.png'
+            imageUrl: '/images/paulchavard.jpg'
         },{
             id: '4',
             name: 'Jakub Arnold',
@@ -33,7 +33,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitter: '@darthdeus',
             twitterUrl: 'http://www.twitter.com/darthdeus',
             location: 'Czech Republic',
-            imageUrl: '/images/placeholder.png'
+            imageUrl: '/images/jakubarnold.jpg'
         },{
             id: 5,
             name: "Alex Speller",
