@@ -18,8 +18,6 @@ Emberfest.ApplicationController = Ember.Controller.extend({
         if ((new Date().getTime() - Emberfest.get('lastTransition')) > 450) {
             console.log('[ROUTE SCHEDULER]: scheduling destination route: ' + routeName);
             this.set('routeToGoTo', routeName);
-        } else {
-            console.log('[ROUTE SCHEDULER]: skip transition to: ' + routeName);
         }
     },
 
@@ -31,8 +29,6 @@ Emberfest.ApplicationController = Ember.Controller.extend({
             console.log('[ROUTE SCHEDULER]: transitioning to route: ' + routeToGoTo);
             this.transitionToRoute(routeToGoTo);
             this.set('routeToGoTo', null);
-        } else {
-            console.log('[ROUTE SCHEDULER]: No route to transition to');
         }
     }
 });
