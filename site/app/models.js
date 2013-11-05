@@ -105,56 +105,6 @@ Emberfest.Model.reopenClass({
     }
 });
 
-Emberfest.TopPage = Emberfest.Model.extend({
-    subPages: function() {
-        var subPages = Ember.A();
-        var pages = this.get('pages');
-        if (pages) {
-            pages.forEach(function(page) {
-                subPages.pushObject(Emberfest.Page.find(page));
-            });
-        }
-
-        return subPages;
-    }.property('pages', 'pages.length')
-});
-
-Emberfest.TopPage.reopenClass({
-    collection: Ember.A(),
-    find: function(id) {
-        return Emberfest.Model.find(id, Emberfest.TopPage);
-    },
-
-    findAll: function() {
-        return Emberfest.Model.findAll('/topPages', Emberfest.TopPage, 'topPages');
-    }
-});
-
-Emberfest.Page = Emberfest.Model.extend({
-    isLinkToTalks: function() {
-        return this.get('pageRoute') === 'talks'
-    }.property('pageRoute'),
-
-    isLinkToCfp: function() {
-        return this.get('pageRoute') === 'callForSpeakers'
-    }.property('pageRoute'),
-
-    isLinkToHome: function() {
-        return this.get('pageRoute') === 'index'
-    }.property('pageRoute')
-});
-
-Emberfest.Page.reopenClass({
-    collection: Ember.A(),
-    find: function(id) {
-        return Emberfest.Model.find(id, Emberfest.Page);
-    },
-
-    findAll: function() {
-        return Emberfest.Model.findAll('/pages', Emberfest.Page, 'pages');
-    }
-});
-
 Emberfest.Talk = Emberfest.Model.extend({
 
 });
@@ -198,7 +148,7 @@ Emberfest.User = Emberfest.Model.extend({
 });
 
 Emberfest.User.reopenClass({
-   collection: Ember.A(),
+    collection: Ember.A(),
 
     find: function(id) {
         return Emberfest.Model.find(id, Emberfest.User);

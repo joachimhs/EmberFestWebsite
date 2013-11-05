@@ -1,0 +1,12 @@
+<div id="talks" class="container content">
+    <h1>{{talkTitle}}</h1>
+    <div class="author">Suggested by {{talkSuggestedBy}}</div>
+    <div class="proposalContent">
+        {{markdown talkText}}
+        <p><span class="infoButton">Talk Type</span> {{talkType}}</p>
+        <p><span class="infoButton">Talk Topics</span> {{talkTopics}}</p>
+    </div>
+
+    {{#linkTo "talks"}}<div class="btn btn-default">Edit Talk</div>{{/linkTo}}
+    {{#linkTo "talks"}}<div class="btn btn-default">Back to Talks</div>{{/linkTo}}
+</div>

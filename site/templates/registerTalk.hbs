@@ -1,0 +1,40 @@
+<div id="talks" class="container content">
+    <h1><img src="/images/talks.png" alt="talks"> Submit Your Proposal</h1>
+    {{#if controllers.user.isLoggedIn}}
+        <form>
+            <fieldset>
+                <div class="form-group"">
+                    <label for="proposalTitle">Title</label>
+                    {{view Ember.TextField valueBinding="proposalTitle" classNames="form-control"}}
+                    {{#if titleValidationError}}
+                        <div class="alert alert-info">{{titleValidationError}}</div>
+                    {{/if}}
+                </div>
+                <div class="form-group">
+                    <label for="proposalText">Talk Abstract</label>
+                    {{view Ember.TextArea valueBinding="proposalText" rows="20" classNames="form-control"}}
+                    {{#if proposalValidationError}}
+                        <div class="alert alert-info">{{proposalValidationError}}</div>
+                    {{/if}}
+                </div>
+                <div class="form-group">
+                    <label for="proposalType">Talk Type</label>
+                    {{view Ember.TextField valueBinding="proposalType" rows="20" classNames="form-control"}}
+                    {{#if proposalTypeValidationError}}
+                        <div class="alert alert-info">{{proposalTypeValidationError}}</div>
+                    {{/if}}
+                </div>
+                <div class="form-group">
+                    <label for="topics">Topics</label>
+                    {{view Ember.TextField valueBinding="proposalTopics" rows="20" classNames="form-control"}}
+                    {{#if topicsValidationError}}
+                        <div class="alert alert-info">{{topicsValidationError}}</div>
+                    {{/if}}
+                </div>
+                <button type="submit" class="btn btn-default" {{action "submitAbstract"}}>Submit Proposal!</button>
+            </fieldset>
+        </form>
+    {{else}}
+        <br /><h2><span class="alert alert-danger">You need to log in, in order to submit a talk.</span></h2>
+    {{/if}}
+</div>

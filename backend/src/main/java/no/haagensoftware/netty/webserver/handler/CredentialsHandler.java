@@ -47,7 +47,7 @@ public class CredentialsHandler extends FileServerHandler {
 		}
 		String responseContent = "";
 		
-		if (isPost(e) && uri != null && uri.endsWith("login")) {
+		if (isPost(e)) {
 			String messageContent = getHttpMessageContent(e);
 			
 			if (cachedUserResult != null && cachedUserResult.getUuidToken() != null && cachedUserResult.isUuidValidated()) {
@@ -72,9 +72,6 @@ public class CredentialsHandler extends FileServerHandler {
 	        logger.info(responseContent);
 	        
 	        writeContentsToBuffer(ctx, responseContent, "text/json");
-		} else if (isPost(e) && uri != null && uri.endsWith("logout") && cookieUuidToken != null) {
-			authenticationContext.logUserOut(cookieUuidToken);
-			responseContent = "{\"loggedOut\": true}";
 		}
 		
 		logger.info("responseContent: " + responseContent);

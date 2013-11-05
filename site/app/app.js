@@ -27,7 +27,7 @@ Ember.Application.reopen({
 
 
 var Emberfest = Ember.Application.create({
-    templates: ['application', 'index', 'tickets', 'organizers', 'schedule', 'sponsors', 'talk', 'talks', 'tickets', 'venue'],
+    templates: ['application', 'index', 'munich'],
     rootElement: '#app'
 });
 
@@ -36,19 +36,13 @@ Emberfest.Router = Ember.Router.extend({
 });
 
 Emberfest.Router.map(function() {
-    this.resource("index", {path: "/"}, function() {
-        this.route('tickets');
-        this.route('talks');
-        this.route('schedule');
-        this.route('venue');
-        this.route('organizers');
-        this.route('sponsors');
-    });
+    this.route('munich');
 });
 
 Ember.Handlebars.registerBoundHelper('markdown', function(property) {
     var converter = new Showdown.converter();
-
-    return new Handlebars.SafeString(converter.makeHtml(property));
+    if (property != null) {
+        return new Handlebars.SafeString(converter.makeHtml(property));
+    }
 });
 

@@ -34,12 +34,14 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
 		routes.put("equals:/index.html", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("equals:/", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/pages", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
-        routes.put("startsWith:/talks", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/talk", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/tickets", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/schedule", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/venue", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/organizers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/sponsors", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/registerTalk", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/munich", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         
         routes.put("startsWith:/register", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/call_for_speakers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));

@@ -1,4 +1,16 @@
 Emberfest.ApplicationController = Ember.Controller.extend({
+    needs: ['user'],
+
+    doLogIn: function() {
+        console.log('doLogIn Action');
+        navigator.id.request();
+    },
+
+    doLogOut: function() {
+        console.log('doLogOut Action');
+        navigator.id.logout();
+    },
+
     logoUrl: '/images/logo_small_white.png',
 
     routeScheduler: null,

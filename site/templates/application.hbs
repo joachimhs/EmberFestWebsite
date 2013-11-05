@@ -1,22 +1,17 @@
-{{outlet}}
 <div class="sticky-navbar" id="nav">
   <ul id="navbar" class="sticky-nav">
     <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>
-    <li class="index-a">{{#linkTo index.index}}HOME{{/linkTo}}</li>
-    <li class="tickets-a">{{#linkTo index.tickets}}TICKETS{{/linkTo}}</li>
-    <li class="talks-a">{{#linkTo index.talks}}TALKS{{/linkTo}}</li>
-    <li class="schedule-a">{{#linkTo index.schedule}}SCHEDULE{{/linkTo}}</li>
-    <li class="venue-a">{{#linkTo index.venue}}VENUE{{/linkTo}}</li>
-    <li class="organizers-a">{{#linkTo index.organizers}}ORGANIZERS{{/linkTo}}</li>
-    <li class="sponsors-a">{{#linkTo index.sponsors}}SPONSORS{{/linkTo}}</li>
+    <li class="index-a">{{#linkTo index}}HOME{{/linkTo}}</li>
+    <li class="tickets-a">{{#linkTo munich}}2013{{/linkTo}}</li>
   </ul>
+    <div class="nav right">
+        <a class="twitter" href="https://twitter.com/EmberFest"><img src="/images/twitter.png" alt="Official EmberFest Twitter account"></a>
+        <a class="mail" href="mailto:joachim@haagen-software.no"><img src="/images/mail.png" alt="Contact EmberFest organizers"></a>
+    </div>
 </div>
-{{render "tickets"}}
-{{render "talks"}}
-{{render "schedule"}}
-{{render "venue"}}
-{{render "organizers"}}
-{{render "sponsors"}}
+
+{{outlet}}
+
 <div class="navbar footer">
   <ul class="nav">
     <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>

@@ -2,25 +2,19 @@
 /* GENERIC STUFF */
 
 @font-face {
-  font-family: 'LibelSuitRegular';
-  src: url('/fonts/libel/libelsuit-webfont.eot');
-  src: url('/fonts/libel/libelsuit-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/libel/libelsuit-webfont.woff') format('woff'),
-       url('/fonts/libel/libelsuit-webfont.ttf') format('truetype'),
-       url('/fonts/libel/libelsuit-webfont.svg#LibelSuitRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'LibelSuitRegular';
+    src: url('/fonts/libel/libelsuit-webfont.eot');
+    src: url('/fonts/libel/libelsuit-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/libel/libelsuit-webfont.woff') format('woff'), url('/fonts/libel/libelsuit-webfont.ttf') format('truetype'), url('/fonts/libel/libelsuit-webfont.svg#LibelSuitRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'LibelSuitRegular';
-  src: url('/fonts/libel/libelsuit-webfont.eot');
-  src: url('/fonts/libel/libelsuit-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/libel/libelsuit-webfont.woff') format('woff'),
-       url('/fonts/libel/libelsuit-webfont.ttf') format('truetype'),
-       url('/fonts/libel/libelsuit-webfont.svg#LibelSuitRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'LibelSuitRegular';
+    src: url('/fonts/libel/libelsuit-webfont.eot');
+    src: url('/fonts/libel/libelsuit-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/libel/libelsuit-webfont.woff') format('woff'), url('/fonts/libel/libelsuit-webfont.ttf') format('truetype'), url('/fonts/libel/libelsuit-webfont.svg#LibelSuitRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* ************* */
@@ -29,294 +23,319 @@
 /* GENERIC STUFF */
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #333;
-  background: #EBEBEB;
-  margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+    background: #EBEBEB;
+    margin: 0;
 }
 
 .container {
-  width: 976px;
-  margin: 0 auto;
+    width: 976px;
+    margin: 15px auto;
+    margin-top: 5px;
 }
 
 .right {
-  float: right;
+    float: right;
 }
 
 .left {
-  float: left;
+    float: left;
 }
 
 /* ************* */
 
 .nav {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .nav .twitter {
-  width: 50px !important;
+    float: left;
+    width: 50px !important;
 }
 
 .nav .mail {
-  width: 10px !important;
+    float: right;
+    width: 50px !important;
 }
 
 /* ************* */
 /* STICKY NAV BAR*/
 
 .sticky-nav {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 1050px;
-  font-size: 16px;
-  height: 87px;
-  font-family: "Helvetica Medium", Arial, sans-serif;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 1050px;
+    font-size: 14px;
+    height: 87px;
+    font-family: "Helvetica Medium", Arial, sans-serif;
 }
 
 .sticky-navbar {
-  clear: both;
-  margin: 0;
-  width: 100%;
-  background: #3B3C50;
+    clear: both;
+    margin: 0;
+    width: 100%;
+    background: #3B3C50;
 }
 
 .sticky-navbar .sticky-nav > li {
-  float: left;
-  line-height: 26px;
+    float: left;
+    line-height: 26px;
 }
 
 .sticky-navbar .sticky-nav > li > a {
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  width: 126px;
-  padding: 33px 0;
-  color: #FFFFFF;
+     text-decoration: none;
+     text-align: center;
+     display: block;
+     width: 105px;
+     padding: 33px 0;
+     color: #FFFFFF;
+ }
+
+.sticky-navbar .sticky-nav > li > button {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 105px;
+    height: 26px;
+    margin: 33px 0;
+    color: #FFFFFF;
+    background: #489489;
+    border: none;
+    cursor: pointer;
 }
 
 .sticky-navbar .sticky-nav .active {
-  color: #60BCAF;
+    color: #60BCAF;
 }
 
 .sticky-nav img {
-  margin-top: 23px;
+    margin-top: 23px;
 }
 
 .fix-top {
-  position: fixed;
-  top: 0;
-  z-index: 10;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .fix-top a {
-  color: #EBEBEB;
+    color: #EBEBEB;
 }
 
 /* ************* */
 
 .navbar {
-  clear: both;
-  margin: 0;
-  width: 100%;
-  display: inline-block;
+    clear: both;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    background: #3B3C50;
 }
 
 .navbar .nav > li {
-  float: left;
-  line-height: 13px;
+    float: left;
+    line-height: 13px;
 }
 
 .navbar .nav > li > a {
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  width: 106px;
-  color: #000000;
-  font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 106px;
+    color: #000000;
+    font-weight: bold;
 }
 
 #home {
-  width: 967px;
-  padding-top: 20px;
+    width: 967px;
+    padding-top: 20px;
 }
 
 .home-content {
-  position: relative;
-  height: 600px;
-  padding-bottom: 5px;
+    position: relative;
+    height: 600px;
+    padding-bottom: 5px;
 }
 
 .date {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .date h2 {
-  font-size: 20px;
-  color: gray;
-  font-weight: 200;
+    font-size: 20px;
+    color: gray;
+    font-weight: 200;
 }
 
 .logo {
-  position: relative;
-  z-index: 10;
+    position: relative;
+    z-index: 0;
 }
 
 .map {
-  position: absolute;
-  left: 46%;
-  top: 10%;
-  z-index: 0;
+    position: absolute;
+    left: 26%;
+    bottom: 00%;
+    opacity:0.4;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+    z-index: -1;
 }
 
 .mascot {
-  position: absolute;
-  top: 65%;
-  left: 80%;
+    position: absolute;
+    top: 45%;
+    left: 80%;
 }
 
 .text {
-  width: 500px;
+    width: 500px;
+    background: #fff;
+    padding: 5px;
+    margin-top: 20px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    color: #000;
 }
 
 .text h2 {
-  font-family: LibelSuitRegular, Arial, sans-serif;
-  font-size: 42px;
-  z-index: 10;
-  position: relative;
-  color: gray;
-  margin-top: 50px;
+    font-family: LibelSuitRegular, Arial, sans-serif;
+    font-size: 42px;
+    z-index: 1;
+    position: relative;
+    color: #222;
+    margin-top: 50px;
 }
 
 .content h1 {
-  font-family: LibelSuitRegular, Arial, sans-serif;
-  font-size: 42px;
-  position: relative;
-  color: gray;
-  margin-top: 50px;
-  margin-left: 60px;
+    font-family: LibelSuitRegular, Arial, sans-serif;
+    font-size: 42px;
+    position: relative;
+    color: gray;
+    margin-left: 60px;
+}
+
+h1 {
+    font-family: LibelSuitRegular, Arial, sans-serif;
+    font-size: 42px;
+    position: relative;
+    color: gray;
+    margin-left: 60px;
 }
 
 #talks h1 {
-  font-family: LibelSuitRegular, Arial, sans-serif;
-  font-size: 42px;
-  position: relative;
-  color: gray;
-  margin-top: 50px;
-  margin-left: 50px;
+    font-family: LibelSuitRegular, Arial, sans-serif;
+    font-size: 42px;
+    position: relative;
+    color: gray;
+    margin-left: 50px;
 }
 
 .button {
-  margin-top: 10%;
+    margin-top: 10%;
 }
 
 .button a {
-  padding: 10px;
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #3B3C50;
-  font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #3B3C50;
+    font-size: 18px;
 }
 
 #tickets {
-  height: 650px;
-  padding-top: 100px;
+    height: 650px;
 }
 
 #tickets .container {
-  background: #FFFFFF;
+    background: #FFFFFF;
 }
 
 #tickets img {
-  float: left;
-  margin-top: 31px;
+    float: left;
+    margin-top: 31px;
 }
 
 #tickets .side1 {
-  width: 250px;
-  float: left;
+    width: 250px;
+    float: left;
 }
 
 #tickets .side2 {
-  float: right;
+    float: right;
 }
 
 #talks {
-  height: 1000px;
-  padding-top: 100px;
 }
 
 #talks .side1 {
-  width: 600px;
-  height: 1000px;
-  float: left;
+    width: 600px;
+    float: left;
 }
 
 #talks .side1 ul {
     width: 600px;
-    height: 900px;
-    overflow: scroll;
 }
 
 #talks .side2 {
-  float: right;
-  width: 300px;
+    float: right;
+    width: 300px;
 }
 
 #talks .side1 img {
-  float: left;
-  margin-top: 23px;
+    float: left;
+    margin-top: 23px;
 }
 
 #talks .side2 img {
-  float: left;
-  margin-top: 38px;
+    float: left;
+    margin-top: 38px;
 }
 
 #talks .side2 h2 {
-  color: gray;
-  padding: 10px 0;
+    color: gray;
+    padding: 10px 0;
 }
 
 .talks {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .talks .title {
-  width: 440px;
+    width: 440px;
 }
 
 .talks li {
-  border-bottom: 1px solid gray;
-  padding: 25px 0;
+    border-bottom: 1px solid gray;
+    padding: 25px 0;
 }
 
 .talks .author {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
-.talks .infoButton {
-  text-decoration: none;
-  background: #3B3C50;
-  padding: 5px;
-  margin-bottom: 5px;
-  color: #FFFFFF;
+.infoButton {
+    text-decoration: none;
+    background: #3B3C50;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
 }
 
 .talks .proposalButton {
-  float: right;
-  margin-top: -41px;
-  text-decoration: none;
-  background: #3B3C50;
-  padding: 11px;
-  color: #FFFFFF;
+    float: right;
+    margin-top: -41px;
+    text-decoration: none;
+    background: #3B3C50;
+    padding: 11px;
+    color: #FFFFFF;
 }
 
 .proposalContent {
@@ -325,14 +344,9 @@ body {
     margin-top: 15px;
 }
 
-#schedule h1 {
-  font-size: 32px;
-  font-family: Helvetica, Arial, sans-serif;
-}
 
 #schedule {
-  height: 1500px;
-  padding-top: 200px;
+    padding-top: 5px;
 }
 
 #schedule .scheduleHeader {
@@ -347,105 +361,98 @@ body {
     color: #ffffff;
 }
 
-#schedule .side h1 {
-  margin-left: 0;
+.side .price-list {
+    padding-left: 16px;
 }
 
-#schedule .side .price-list {
-  padding-left: 16px;
-}
-
-#schedule .side {
-  margin-left: 170px;
-  margin-bottom: 70px;
+.side {
+    margin-left: 170px;
+    margin-bottom: 70px;
 }
 
 #schedule img {
-  float: left;
-  margin-top: -41px;
-  margin-right: 15px;
+    float: left;
 }
 
 #organizers {
-  height: 900px;
-  padding-top: 100px;
+    height: 900px;
 }
 
 #organizers h1 {
-  margin-left: 0;
-  margin-top: 50px;
+    margin-left: 0;
+    margin-top: 50px;
 }
 
 #organizers .organizer {
-  height: 280px;
-  margin: 0 15px;
-  padding: 30px 0;
-  border-bottom: 1px solid gray;
+    height: 280px;
+    margin: 0 15px;
+    padding: 30px 0;
+    border-bottom: 1px solid gray;
 }
 
 #organizers .info {
-  margin-left: 100px;
-  width: 358px;
+    margin-left: 100px;
+    width: 358px;
 }
 
 #organizers .info h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 #organizers img {
-  width: 80px;
-  float: left;
+    width: 80px;
+    float: left;
 }
 
 #organizers .org-list {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 #organizers a {
-  text-decoration: none;
-  border-right: 1px solid gray;
-  height: 20px;
-  display: inline-block;
-  padding-right: 10px;
-  margin-right: 15px;
-  color: gray;
+    text-decoration: none;
+    border-right: 1px solid gray;
+    height: 20px;
+    display: inline-block;
+    padding-right: 10px;
+    margin-right: 15px;
+    color: gray;
 }
 
 #organizers .info .location {
-  color: gray;
+    color: gray;
 }
 
 #organizers .info .location img {
-  width: 20px;
+    width: 20px;
 }
 
 #sponsors {
-  height: 500px;
-  padding-top: 100px;
-  clear: right;
+    height: 500px;
+
+    clear: right;
 }
 
 #sponsors h1 {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 #sponsors .logo {
-  height: 300px;
-  width: 300px;
-  display: inline-block;
-  background: white;
-  z-index: 0;
-  margin: 5px 15px;
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    background: white;
+    z-index: 0;
+    margin: 5px 15px;
 }
 
 #sponsors .row {
-  width: 990px;
-  margin: 0 auto;
+    width: 990px;
+    margin: 0 auto;
 }
 
 #sponsors .logo .manning {
-  margin-top: 45%;
-  margin-left: 13%;
+    margin-top: 45%;
+    margin-left: 13%;
 }
 
 #sponsors .logo .hs {
@@ -454,132 +461,142 @@ body {
     margin-right: 5%;
 }
 
+#sponsors .logo .addepar {
+    margin-top: 45%;
+    margin-left: 25%;
+    margin-right: 5%;
+}
+
 #sponsors .logo .infoq {
-  margin-top: 40%;
-  margin-left: 24%;
+    margin-top: 40%;
+    margin-left: 24%;
 }
 
 #sponsors .logo .mochaleaf {
-  margin-top: 32%;
-  margin-left: 33%;
+    margin-top: 32%;
+    margin-left: 33%;
 }
 
 .footer {
-  background: #3B3C50;
-  height: 153px;
-  display: block;
+    background: #3B3C50;
+    height: 153px;
+    display: block;
+}
+
+.navbar {
+    background: #3B3C50;
 }
 
 .footer .nav {
-  width: 1050px;
+    background: #3B3C50;
+    width: 1050px;
 }
 
 .footer .right {
-  font-size: 10px;
-  margin-top: 22px;
-  color: #FFFFFF;
-  float: right !important;
-  margin-top: 13%;
+    font-size: 10px;
+    margin-top: 22px;
+    color: #FFFFFF;
+    float: right !important;
+    margin-top: 13%;
 }
 
 .footer img {
-  margin-top: 60%;
+    margin-top: 60%;
 }
 
 .footer a {
-  text-decoration: none;
-  color: #FFFFFF;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 #venue {
-  height: 700px;
-  width: 100%;
-  padding-top: 92px;
+    height: 700px;
+    width: 100%;
 }
 
 #venue .venue {
-  height: 325px;
-  width: 600px;
-  background: #FFFFFF;
-  position: absolute;
-  z-index: 2;
-  left: 23%;
-  margin-top: 3%;
+    height: 325px;
+    width: 600px;
+    background: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+    left: 23%;
+    margin-top: 3%;
 }
 
 #venue .venue a {
-  padding: 10px;
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #3B3C50;
-  font-size: 18px;
-  margin-left: 25px;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #3B3C50;
+    font-size: 18px;
+    margin-left: 25px;
 }
 
 #venue .venue p {
-  padding: 0 25px;
+    padding: 0 25px;
 }
 
 #venue .venue .open-map {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 #venue .arrangements {
-  width: 100%;
-  height: 300px;
-  background: #EBEBEB;
-  position: absolute;
-  margin-top: -16%;
+    width: 100%;
+    height: 300px;
+    background: #EBEBEB;
+    position: absolute;
+    margin-top: -16%;
 }
 
 #venue .arrangements-content {
-  width: 976px;
-  margin: 0 auto;
-  margin-top: 40px;
+    width: 976px;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 #venue .arrangements .hotel {
-  width: 450px;
-  float: left;
+    width: 450px;
+    float: left;
 }
 
 #venue .arrangements .hotel a {
-  text-decoration: none;
-  color: #dd4b39;
+    text-decoration: none;
+    color: #dd4b39;
 }
 
 #venue .arrangements .snacks a {
-  text-decoration: none;
-  color: #dd4b39;
+    text-decoration: none;
+    color: #dd4b39;
 }
 
 #venue .arrangements .hotel img {
-  float: left;
-  margin-right: 20px;
+    float: left;
+    margin-right: 20px;
 }
 
 #venue .arrangements .snacks img {
-  float: left;
-  margin-right: 20px;
+    float: left;
+    margin-right: 20px;
 }
 
 #venue .arrangements .snacks {
-  width: 450px;
-  float: right;
+    width: 450px;
+    float: right;
 }
 
 #venue .venue h2 {
-  font-family: LibelSuitRegular, Arial, sans-serif;
-  font-size: 42px;
-  position: relative;
-  color: gray;
-  padding-left: 25px;
+    font-family: LibelSuitRegular, Arial, sans-serif;
+    font-size: 42px;
+    position: relative;
+    color: gray;
+    padding-left: 25px;
 }
 
 #venue-map {
-  height: 100%;
+    height: 100%;
 }
