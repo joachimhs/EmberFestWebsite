@@ -17,6 +17,22 @@
     font-style: normal;
 }
 
+#mc_embed_signup{
+    position: absolute;
+    top: -10%;
+    left: 65%;
+
+    color: #000;
+    background:#fff;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    width:350px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+
+
+}
+
 /* ************* */
 
 /* ************* */
@@ -180,7 +196,7 @@ body {
 
 .map {
     position: absolute;
-    left: 26%;
+    left: 0%;
     bottom: 00%;
     opacity:0.4;
     filter:alpha(opacity=40); /* For IE8 and earlier */
@@ -189,7 +205,7 @@ body {
 
 .mascot {
     position: absolute;
-    top: 45%;
+    top: -10%;
     left: 80%;
 }
 
@@ -198,8 +214,8 @@ body {
     background: #fff;
     padding: 5px;
     margin-top: 20px;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
     color: #000;
 }
 

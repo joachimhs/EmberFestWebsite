@@ -36,6 +36,7 @@ Emberfest.Router = Ember.Router.extend({
 });
 
 Emberfest.Router.map(function() {
+    this.route('index', {path: "/"});
     this.route('munich');
 });
 
