@@ -1730,7 +1730,7 @@
 10:08:25,398 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:08:25,398 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
 10:08:25,399 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
-10:08:36,280 INFO  [CredentialsHandler] email=joachim%40haagen.name&firstName=Joachim&lastName=Skeie&homeCountry=Norway
+10:08:36,280 INFO  [CredentialsHandler] userId=joachim%40haagen.name&firstName=Joachim&lastName=Skeie&homeCountry=Norway
 10:10:50,126 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:10:50,206 INFO  [CachedIndexHandler] Finished extracting script contents took: 73 ms.
 10:10:50,246 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
@@ -1740,7 +1740,7 @@
 10:10:51,668 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:10:51,668 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
 10:10:51,671 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
-10:11:02,266 INFO  [CredentialsHandler] email=joachim%40haagen.name&firstName=Joachim&lastName=SKeie&homeCountry=Norway
+10:11:02,266 INFO  [CredentialsHandler] userId=joachim%40haagen.name&firstName=Joachim&lastName=SKeie&homeCountry=Norway
 10:12:10,266 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:12:10,323 INFO  [CachedIndexHandler] Finished extracting script contents took: 56 ms.
 10:12:10,356 INFO  [FileServerHandler] contentType: text/css for path: /stylesheets/bootstrap.css
@@ -1750,9 +1750,9 @@
 10:12:11,592 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:12:11,592 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:12:11,593 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
-10:12:23,744 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
+10:12:23,744 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
 10:12:23,746 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Skeie Norway
-10:12:36,085 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
+10:12:36,085 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
 10:12:36,085 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Skeie Norway
 10:16:56,796 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:16:56,862 INFO  [CachedIndexHandler] Finished extracting script contents took: 66 ms.
@@ -1763,7 +1763,7 @@
 10:16:58,399 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
 10:16:58,400 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:16:58,401 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
-10:17:10,895 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
+10:17:10,895 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
 10:17:10,896 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Haagen Skeie Norway
 10:17:52,585 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:17:52,688 INFO  [CachedIndexHandler] Finished extracting script contents took: 103 ms.
@@ -1774,7 +1774,7 @@
 10:17:54,099 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:17:54,101 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:17:54,114 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
-10:18:01,937 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
+10:18:01,937 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
 10:18:01,938 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Skeie Norway
 10:18:35,877 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:18:35,925 INFO  [CachedIndexHandler] Finished extracting script contents took: 48 ms.
@@ -1785,7 +1785,7 @@
 10:18:37,482 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:18:37,483 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:18:37,485 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
-10:18:47,865 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
+10:18:47,865 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
 10:18:47,866 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Skeie Norway
 10:19:10,315 INFO  [CachedIndexHandler] Updating index.html from filesystem path: /index.html
 10:19:10,380 INFO  [CachedIndexHandler] Finished extracting script contents took: 65 ms.
@@ -1796,7 +1796,7 @@
 10:19:11,481 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:19:11,482 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
 10:19:11,482 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
-10:19:20,972 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachin","lastName":"Skeie","homeCountry":"Norway"}
+10:19:20,972 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachin","lastName":"Skeie","homeCountry":"Norway"}
 10:19:20,973 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachin Skeie Norway
 10:20:28,263 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
 10:20:28,420 INFO  [Main] Starting server
@@ -1821,7 +1821,7 @@
 10:20:32,248 INFO  [FileServerHandler] contentType: image/png for path: /img/side_graphic.png
 10:20:32,252 INFO  [FileServerHandler] contentType: image/png for path: /img/ece_logo.png
 10:20:32,253 INFO  [CacheableFileServerHandler] contentType: text/plain for path: /pages
-10:20:40,284 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
+10:20:40,284 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim","lastName":"Skeie","homeCountry":"Norway"}
 10:20:40,360 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Skeie Norway
 10:20:40,360 INFO  [CredentialsHandler] { "userRegistered": true}
 10:22:42,366 INFO  [Main]  * Property 'com.embercampeurope.netty.scriptsCacheSeconds' is not specified. Using default: '0' Configure in file config.properties.
@@ -1850,7 +1850,7 @@
 10:23:27,294 INFO  [CredentialsHandler] Logging in via Persona.
 10:23:31,711 INFO  [CredentialsHandler] { "authFailed": true, "error": "User not registered" }
 10:23:31,716 INFO  [CredentialsHandler] { "authFailed": true, "error": "User not registered" }
-10:23:36,826 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
+10:23:36,826 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
 10:23:36,828 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joachim Haagen Skeie Norway
 10:23:36,828 INFO  [CredentialsHandler] { "userRegistered": true}
 10:23:53,143 INFO  [CredentialsHandler] Logging in via Persona.
@@ -1883,11 +1883,11 @@
 10:33:24,090 INFO  [PerstUserDao] Persisted users:
 10:33:24,094 INFO  [CredentialsHandler] { "authFailed": true, "error": "User not registered" }
 10:33:24,102 INFO  [CredentialsHandler] { "authFailed": true, "error": "User not registered" }
-10:33:28,158 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
+10:33:28,158 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
 10:33:28,159 INFO  [PerstUserDao] Persisted users:
 10:33:28,160 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name joachim skeie norway
 10:33:28,160 INFO  [CredentialsHandler] { "userRegistered": true}
-10:33:36,268 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
+10:33:36,268 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
 10:33:36,269 INFO  [PerstUserDao] Persisted users:
 10:33:36,269 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name joachim skeie norway
 10:33:36,269 INFO  [CredentialsHandler] { "userRegistered": true}
@@ -1905,11 +1905,11 @@
 10:34:24,108 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/img
 10:34:24,108 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/mrkdwn
 10:34:24,108 INFO  [NettyWebserverPipelineFactory] Adding router for route: startsWith:/cachedScript
-10:34:24,152 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
+10:34:24,152 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
 10:34:24,257 INFO  [PerstUserDao] Persisted users:
 10:34:24,280 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name joachim skeie norway
 10:34:24,280 INFO  [CredentialsHandler] { "userRegistered": true}
-10:34:28,954 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
+10:34:28,954 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"joachim","lastName":"skeie","homeCountry":"norway"}
 10:34:28,955 INFO  [PerstUserDao] Persisted users:
 10:34:28,955 INFO  [PerstUserDao] user:joachim@haagen.name
 10:34:28,956 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name joachim skeie norway
@@ -4141,7 +4141,7 @@ __utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281
 15:45:15,669 INFO  [CredentialsHandler] coookieUuidToken 8d6e7191-9b99-42f2-a419-495c49af5720
 15:47:58,818 INFO  [FileServerHandler] cookie header: 
 __utma=111872281.1103232200.1365515103.1365515103.1365515103.1; __utmb=111872281.5.10.1365515103; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); uuidToken=8d6e7191-9b99-42f2-a419-495c49af5720
-15:47:58,819 INFO  [CredentialsHandler] {"email":"joachim@haagen-software.no","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
+15:47:58,819 INFO  [CredentialsHandler] {"userId":"joachim@haagen-software.no","firstName":"Joachim Haagen","lastName":"Skeie","homeCountry":"Norway"}
 15:47:58,852 INFO  [PerstUserDao] Persisted users:
 15:47:58,868 INFO  [CredentialsHandler] Registering new user: joachim@haagen-software.no Joachim Haagen Skeie Norway
 15:47:58,868 INFO  [CredentialsHandler] responseContent: { "userRegistered": true}
@@ -5858,7 +5858,7 @@ __utma=111872281.1103232200.1365515103.1365573282.1365614357.8; __utmc=111872281
 23:39:37,220 INFO  [CredentialsHandler] coookieUuidToken 659208db-f2dd-4a58-9894-8b180cb2eaf8
 23:39:50,936 INFO  [FileServerHandler] cookie header: 
 __utma=111872281.1103232200.1365515103.1365573282.1365614357.8; __utmc=111872281; __utmz=111872281.1365515103.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
-23:39:50,936 INFO  [CredentialsHandler] {"email":"joachim@haagen.name","firstName":"Joahcim haagen","lastName":"SKeie","homeCountry":"Norway"}
+23:39:50,936 INFO  [CredentialsHandler] {"userId":"joachim@haagen.name","firstName":"Joahcim haagen","lastName":"SKeie","homeCountry":"Norway"}
 23:39:50,938 INFO  [PerstUserDao] Persisted users:
 23:39:50,938 INFO  [PerstUserDao] user:joachim@haagen-software.no
 23:39:50,940 INFO  [CredentialsHandler] Registering new user: joachim@haagen.name Joahcim haagen SKeie Norway

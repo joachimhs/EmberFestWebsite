@@ -2,54 +2,79 @@ package no.haagensoftware.netty.webserver;
 
 public class SubmittedTalk {
 	private String id;
-	private String talkTitle;
-	private String talkText;
+	private String title;
+	private String talkAbstract;
+	private String topics;
 	private String talkType;
-	private String talkTopics;
+	private String outline;
+	private String participantRequirements;
+	private String comments;
 	
 	public SubmittedTalk() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
 
-	public String getTalkTitle() {
-		return talkTitle;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setTalkTitle(String talkTitle) {
-		this.talkTitle = talkTitle;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getTalkText() {
-		return talkText;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setTalkText(String talkText) {
-		this.talkText = talkText;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public String getTalkType() {
-		return talkType;
-	}
+    public String getTalkAbstract() {
+        return talkAbstract;
+    }
 
-	public void setTalkType(String talkType) {
-		this.talkType = talkType;
-	}
+    public void setTalkAbstract(String talkAbstract) {
+        this.talkAbstract = talkAbstract;
+    }
 
-	public String getTalkTopics() {
-		return talkTopics;
-	}
+    public String getTopics() {
+        return topics;
+    }
 
-	public void setTalkTopics(String talkTopics) {
-		this.talkTopics = talkTopics;
-	}
-	
-	
+    public void setTopics(String topics) {
+        this.topics = topics;
+    }
+
+    public String getTalkType() {
+        return talkType;
+    }
+
+    public void setTalkType(String talkType) {
+        this.talkType = talkType;
+    }
+
+    public String getOutline() {
+        return outline;
+    }
+
+    public void setOutline(String outline) {
+        this.outline = outline;
+    }
+
+    public String getParticipantRequirements() {
+        return participantRequirements;
+    }
+
+    public void setParticipantRequirements(String participantRequirements) {
+        this.participantRequirements = participantRequirements;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
 }

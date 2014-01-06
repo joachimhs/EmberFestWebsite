@@ -1,30 +1,73 @@
-<div id="talks" class="container content">
-    <div class="side1">
-    <img src="/images/talks.png" alt="talks">
-    <h1>Proposed Talks</h1>
-    <p>We are currently putting together a set of experts who are using Ember.js. Here's a list of proposed talks.</p>
-    <ul class="talks">
-      {{#each controllers.talks}}
-        <li>
-          <div class="title">{{talkTitle}}</div>
-          <div class="author">Suggested by {{talkSuggestedBy}}</div>
-          {{#linkTo "talks.talk" this}}<span class="proposalButton">VIEW PROPOSAL</span>{{/linkTo}}
-        </li>
-      {{/each}}
-    </ul>
+<div class="row">
+    <div class="col-md-7">
+        <h1>Talks</h1>
+        <p>Suggested talks are listed here in order to give you an idea of the types of talks that might be present at Ember Fest. See a talk you like? Vote it up!</p>
+
+        {{#unless controller.length}}
+            <p class="talkRow">There are currently no registered talks for Ember Fest 2014!<br /><br />
+                {{#if controllers.user.isLoggedIn}}
+                    {{#link-to "registerTalk"}}
+                        <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Submit your proposal today!</button>
+                    {{/link-to}}
+                {{else}}
+                    <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" {{action "doLogIn"}}>Sign in to submit your proposal!</button>
+                {{/if}}
+            </p>
+        {{/unless}}
+
+        {{#each talk in controller}}
+            <div class="row talkRow">
+                <div class="col-md-9">
+                    <p class="talkHeader">
+                        {{talk.title}}
+                    </p>
+                    <p class="talkDescription">
+                        {{talk.talkAbstract}}
+                    </p>
+                    <p><span class="talkHeader">Presenter:</span> {{talk.talkSuggestedBy}}</p>
+                    <p><span class="talkHeader">Type:</span> {{talk.talkType}}</p>
+                </div>
+                <div class="col-md-3">
+                    {{#link-to "talks.talk" talk}}
+                        <button class="btn btn-default" style="width: 100%;">
+                            {{view Emberfest.LiviconView data-name="search" data-color="#000" data-hovercolor="#000" data-size="24" data-op="1" class="pull-left"}}
+                            View
+                        </button>
+                    {{/link-to}}
+                </div>
+            </div>
+        {{/each}}
     </div>
-    <div class="side2">
-    <img src="/images/speakers.png" alt="talks">
-    <h1>Call for Speakers</h1>
-    <p>We are looking for the best and most worthwhile Ember.js related talks. Your topic can be about anything, as long as it relates to Ember.js development somehow.</p>
-    <h2>Talks: Format and Duration</h2>
-    <p>Talks are either 20 or 35 minutes long. Please note in your abstract how long you estimate your talk to be.</p>
-    <h2>Workshops/Tutorials</h2>
-    <p>We want to be able to offer a few hands-on workshops/tutorials. The details about the arrangement of these are not yet finalized. You can influence the setup by submitting an abstract!</p>
-    <h2>What you get</h2>
-    <p>Speakers with accepted abstracts get free admission to the mini-conference day (day 3) and will get invited to the Speakers Dinner.</p>
-    <h2>Submit yours today!</h2>
-    <p>We have currently filled up all available slots, and have therefore closed the Call for Speakers.</p>
-    {{#linkTo "registerTalk"}}<div class="btn btn-default">Register Talk</div>{{/linkTo}}
+    <div class="col-md-5">
+        <h1>Submit a Talk!</h1>
+        <p>Do you have something you want to share with the Ember.js community? Do you have a cool idea, have you worked on a cool projet, or have you learnt something awesome lately? Share your experiences with the rest of the European Ember.js community at Ember Fest 2014! All speakers get free admission to the Conference, and the Conference Dinner.</p>
+
+        <p>This year, we are looking for both workshops and presentations! Workshops will be held during the 2-day pre-conference workshop. This is where you will get to meet developers that are eager to learn all about the awesomeness that is Ember.js.</p>
+
+        <p>By registering your talk, your abstract for a presentation talk or a tutorial will be added to the list of suggestions for this year's conference. You may change the content of your abstract at any time during the period that the CfP is open. Other participants will be able to see your suggestion as soon as it is registered.</p>
+
+        <p>The talk proposals will be reviewed by a group of smart and friendly people, who will help you create the best proposal you can. You will receive feedback from reviewers by email.</p>
+
+        <h1>Topics</h1>
+        <ul>
+            <li>Ember.js Basics</li>
+            <li>Thrid party frameworks</li>
+            <li>Ember.js Persistence frameworks</li>
+            <li>Hands-on experiences and experience reports</li>
+            <li>Security</li>
+            <li>Build Tools</li>
+        </ul>
+
+        <h1>Talk Types</h1>
+
+        <p>There are four talk types that you can choose between. Standard presentations are either 20 or 35 minutes in length and will be held during the two main days of the conference. Workshops are held during the two pre-conference days and are either half day (3,5 hours including breaks), or full day (7 hours including breaks)</p>
+
+        {{#if controllers.user.isLoggedIn}}
+            {{#link-to "registerTalk"}}
+                <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Submit your proposal today!</button>
+            {{/link-to}}
+        {{else}}
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" {{action "doLogIn"}}>Sign in to submit your proposal!</button>
+        {{/if}}
     </div>
 </div>

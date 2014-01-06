@@ -2,6 +2,7 @@ package no.haagensoftware.netty.webserver;
 
 public class AuthenticationResult {
 	private String uuidToken;
+    private String userId;
 	private boolean uuidValidated = false;
 	private String statusMessage;
 	
@@ -32,4 +33,12 @@ public class AuthenticationResult {
 	public void setUuidValidated(boolean uuidValidated) {
 		this.uuidValidated = uuidValidated;
 	}
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }

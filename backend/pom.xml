@@ -61,6 +61,14 @@
 		    <groupId>org.iq80.leveldb</groupId>
 		    <artifactId>leveldb</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>com.dkhenry</groupId>
+            <artifactId>rethinkjava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ektorp</groupId>
+            <artifactId>org.ektorp</artifactId>
+        </dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -87,6 +95,16 @@
 			    <artifactId>leveldb</artifactId>
 			    <version>0.5</version>
 			</dependency>
+            <dependency>
+                <groupId>com.dkhenry</groupId>
+                <artifactId>rethinkjava</artifactId>
+                <version>0.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ektorp</groupId>
+                <artifactId>org.ektorp</artifactId>
+                <version>1.3.0</version>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -134,5 +152,13 @@
 			<url>http://repo1.maven.org/maven2</url>
 			<layout>default</layout>
 		</repository>
+        <repository>
+            <id>rethinkjava-mvn-repo</id>
+            <url>https://raw.github.com/dkhenry/rethinkjava/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
 	</repositories>
 </project>

@@ -1,0 +1,58 @@
+{{#if validationErrors}}
+    <div class="alert alert-danger">
+        <ul>
+            {{#each error in validationErrors}}
+                <li>{{error}}</li>
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Full Name</label>
+        <div class="col-sm-9">
+            {{input value=user.fullName type="text" class="form-control" placeholder="Enter your full name"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Company</label>
+        <div class="col-sm-9">
+            {{input value=user.company type="text" class="form-control" placeholder="Where do you work?"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Phone</label>
+        <div class="col-sm-9">
+            {{input value=user.phone type="text" class="form-control" placeholder="Your phone number"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Dietary Requirements</label>
+        <div class="col-sm-9">
+            {{textarea value=user.dietaryRequirements class="form-control" placeholder="Do you have any allergies? Are you vegetarian? Other dietary requirements?"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Country of Residence</label>
+        <div class="col-sm-9">
+            {{input value=user.countryOfResidence type="text" class="form-control" placeholder="Where do you live?"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Year of Birth</label>
+        <div class="col-sm-9">
+            {{input value=user.yearOfBirth type="text" class="form-control" placeholder="When where you born?"}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Conference Dinner</label>
+        <div class="col-sm-9">
+            <label>{{input type="checkbox" checked=user.attendingDinner}} I want to attend the conference dinner!</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-9 col-md-offset-3">
+            <button class="btn btn-primary form-control" {{action "verifyAccountInput"}}>{{buttonLabel}}</button>
+        </div>
+    </div>
+</form>

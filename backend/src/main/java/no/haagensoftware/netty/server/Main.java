@@ -2,19 +2,23 @@ package no.haagensoftware.netty.server;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.Executors;
-
 import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.pipeline.NettyWebserverPipelineFactory;
 import no.haagensoftware.netty.webserver.plugin.EmberCampRouterPlugin;
 import no.haagensoftware.pluginService.ApplicationServerInfo;
 
+import no.haagensoftware.db.DbEnv;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
 import org.haagensoftware.netty.webserver.spi.NettyWebserverRouterPlugin;
 import org.haagensoftware.netty.webserver.spi.PropertyConstants;
 import org.haagensoftware.netty.webserver.util.IntegerParser;
@@ -26,10 +30,15 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception{
 		//new Main().run();
-		configure();
+
 		
 		Main main = new Main();
-		main.run();
+
+
+        main.configureLog4J();
+        configure();
+
+        main.run();
 	}
 	
 	private static void configure() throws Exception {
@@ -86,10 +95,10 @@ public class Main {
 	public void run() throws Exception {
 		String webappDir = System.getProperty(PropertyConstants.WEBAPP_DIR);
 		System.setProperty("basedir", webappDir);
-		
-		LevelDbEnv dbEnv = new LevelDbEnv(System.getProperty(PropertyConstants.DB_PATH));
-		dbEnv.initializeDbAtPath();
-		
+
+        DbEnv dbEnv = new LevelDbEnv(System.getProperty(PropertyConstants.DB_PATH));
+        dbEnv.connect();
+
 		List<NettyWebserverRouterPlugin> routerPlugins = new ArrayList<NettyWebserverRouterPlugin>();
 		routerPlugins.add(new EmberCampRouterPlugin(new ApplicationServerInfo(), dbEnv));
 		logger.info("Starting server: " + System.getProperty(PropertyConstants.NETTY_PORT));
@@ -110,5 +119,14 @@ public class Main {
         bootstrap.bind(new InetSocketAddress(port));
         
         logger.info("Started server on port: " + port + " hosting directory: " + webappDir);
+    }
+
+    private void configureLog4J() throws IOException {
+        Logger root = Logger.getRootLogger();
+        if (!root.getAllAppenders().hasMoreElements()) {
+            //Log4J is not configured. Set it up correctly!
+            root.setLevel(Level.INFO);
+            root.addAppender(new ConsoleAppender(new PatternLayout("%d %-5p [%t] %C{1}: %m%n")));
+        }
     }
 }

@@ -1,100 +1,89 @@
 <div id="schedule" class="container content">
     <div class="side">
-        <h1>Ember Fest 2013 - Munich</h1>
+        <h1>{{view Emberfest.LiviconView data-name="fire" data-color="#000" data-hovercolor="#88564d" data-size="40" data-op="1"}} Ember Fest 2013 - Munich</h1>
         <p>Ember Fest 2013 was an absolute success! Ember Fest Munich offered two days of introductory Ember.js training, a world-class Hackathon as well as a full day conference. </p>
         <p>After the main event, a proper Bavarian celebration was played out at the amazing Hofbräuhaus.</p>
         <p><a href="http://www.infoq.com">InfoQ</a> were kind enough to send their videographer to film the presentations. These will be published on their website throughout the rest of 2013. Once the talks are made available, a link will be provided in the table below.</p>
     </div>
     <div class="side">
-        <img src="/images/talks.png" alt="talks">
-        <h1>Schedule</h1>
-        <table cellspacing="10" width="600">
+        <h1>{{view Emberfest.LiviconView data-name="presentation" data-color="#000" data-hovercolor="#88564d" data-size="40" data-op="1"}} 2013 Presentations</h1>
+        <table cellspacing="10" width="600" class="table table-striped" style="margin-top: 30px;">
             <tr class="scheduleHeader">
-                <td width="100">Time</td>
                 <td>Title</td>
-                <td width="100">Presenter</td>
-                <td width="100">Video</td>
+                <td width="200">Presenter</td>
+                <td width="150">Links</td>
             </tr>
             <tr>
-                <td>09:00 - 09:20</td>
-                <td>Welcome and Registration</td>
-                <td>The Organizers</td>
-                <td>-</td>
+                <td><span class="talkHeader">2-day Introductory Ember.js Training</span>
+                    <p class="talkDescription">Joachim is the author of Ember.js in Action and the lead organizer of Ember Fest. Joachim have worked with Ember.js since it forked out of SproutCore and have a wide experience developing web applications.</p>
+                </td>
+                <td>Joachim Haagen Skeie</td>
+                <td><a href="http://emberjstraining.com">Ember.js Training</a></td>
             </tr>
             <tr>
-                <td>09:20 - 09:35</td>
-                <td>Opening Talk</td>
-                <td>The Organizers</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>09:40 - 10:00</td>
-                <td>Query params with the Ember router: past, present and future</td>
+                <td><span class="talkHeader">Query params with the Ember router: past, present and future</span>
+                    <p class="talkDescription">Alex Speller introduces Ember Query, a library enabling query string usage in Ember: introduction, advanced usage, tips & tricks, the future.</p>
+                </td>
                 <td>Alex Speller</td>
                 <td><a href="http://www.infoq.com/presentations/ember-query-string?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row1">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>10:05 - 10:35</td>
-                <td>Productive Out-of-the-Box</td>
+                <td><span class="talkHeader">Productive Out-of-the-Box</span>
+                    <p class="talkDescription">Anthony provides a survey of the Ember.js tooling landscape, highlighting the use of Yeoman. Anthony Bull (@inkredabull) is the Sr. Web Engineer at CrowdFlower and has been working with Ember.js for over a year.</p>
+                </td>
                 <td>Anthony Bull</td>
-                <td>-</td>
-            </tr>
-            <tr class="breakRow">
-                <td colspan="3">Coffee Break With Snacks</td>
+                <td><a href="http://www.infoq.com/presentations/emberjs-tools-yeoman">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>11:00 - 11:20</td>
-                <td>Experiences building a hypervideo-based webapp with Ember.js, Popcorn.js and HTML5</td>
+                <td><span class="talkHeader">Experiences building a hypervideo-based webapp with Ember.js, Popcorn.js and HTML5</span>
+                    <p class="talkDescription">
+                        Thomas talks about the advantages, challenges and lessons learnt in realizing a multimedia-heavy, interactive HTML5 application with Ember.js.
+                    </p>
+                </td>
                 <td>Thomas Herrmann</td>
-                <td>-</td>
+                <td><a href="http://www.infoq.com/presentations/hypermedia-emberjs-html5">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>11:25 - 11:50</td>
-                <td>Custom Adapters in Ember Data</td>
-                <td>Andy Leeper</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>11:55 - 12:30</td>
-                <td>Forget Passwords, Use Persona.</td>
-                <td>Dan Callahan</td>
-                <td>-</td>
-            </tr>
-            <tr class="breakRow">
-                <td colspan="3">Buffet Lunch Break</td>
-            </tr>
-            <tr>
-                <td>14:00 - 14:20</td>
-                <td>Insights from using ember.js in the field</td>
+                <td><span class="talkHeader">Insights from using ember.js in the field</span>
+                    <p class="talkDescription">This talk will share some best practice about using ember.js to master the needs of real-world web applications and present the things who worked well and the ones who didn't.</p>
+                </td>
                 <td>Stefan Fochler</td>
-                <td>-</td>
+                <td><a href="http://www.infoq.com/presentations/emberjs-use-case">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>14:25 - 15:00</td>
-                <td>Ember Reusable Components and Widgets</td>
+                <td><span class="talkHeader">Ember Reusable Components and Widgets</span>
+                    <p class="talkDescription">Sergey is a Front-end developer in New Proimage (Agfa) residing in Israel. Sergeys talk will go over Ember.js' many strong sides. One of them is combination of Handlebars templates, Ember.View's and their nesting which allows to built indeed complex UI.</p>
+                </td>
                 <td>Sergey Bolshchikov</td>
-                <td>-</td>
-            </tr>
-            <tr class="breakRow">
-                <td colspan="3">Coffee Break With Snacks</td>
+                <td><a href="http://www.infoq.com/presentations/ember-view-handlebars-ui">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>15:30 - 16:05</td>
-                <td>Complex Architectures in Ember</td>
+                <td><span class="talkHeader">Complex Architectures in Ember</span>
+                    <p class="talkDescription">In Ember, convention trumps configuration so strongly we easily forget that there are a myriad of moving parts under the hood. Once we move past CRUD applications, understanding how messages move through Ember's views, controllers, and routes becomes crucial.</p>
+                </td>
                 <td>Matthew Beale</td>
-                <td>-</td>
+                <td><a href="http://www.infoq.com/presentations/emberjs-messages-views-controller-router">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>16:10 - 16:30</td>
-                <td>Advanced Patterns</td>
+                <td><span class="talkHeader">Ember-Data, the way forward</span>
+                    <p class="talkDescription">Igor Terzic presents several cases where Ember Data is used in production, and outlines some of the features that are intended to be included in the future.</p>
+                </td>
+                <td>Igor Terzic</td>
+                <td><a href="http://www.infoq.com/presentations/ember-data?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row3">Video (InfoQ)</a></td>
+            </tr>
+            <tr>
+                <td><span class="talkHeader">Advanced Patterns</span>
+                    <p class="talkDescription">Pauls talk presents a few advanced/non-obvious techniques, useful in process of building large EmberJS applications with Ember Data</p>
+                </td>
                 <td>Paul Chavard</td>
-                <td>-</td>
+                <td><a href="http://www.infoq.com/presentations/emberjs-patterns-data">Video (InfoQ)</a></td>
             </tr>
             <tr>
-                <td>16:35 - 16:45</td>
-                <td>Closing Talk</td>
-                <td>The Organizers</td>
-                <td>-</td>
+                <td><span class="talkHeader">Forget Passwords, Use Persona</span>
+                    <p class="talkDescription">Ember Fest uses Mozilla Persona for registration and sign-in. Come learn what Persona is, how Persona works, and how you can use Persona to get rid of passwords in your own applications. This will be a short introductory talk followed by an audience-driven deep dive into Persona's philosophy, design, and implementation.</p>
+                </td>
+                <td>Dan Callahan</td>
+                <td>Video Coming Soon!</td>
             </tr>
         </table>
     </div>

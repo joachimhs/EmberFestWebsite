@@ -1,20 +1,67 @@
-<div class="sticky-navbar" id="nav">
-  <ul id="navbar" class="sticky-nav">
-    <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>
-    <li class="index-a">{{#linkTo index}}HOME{{/linkTo}}</li>
-    <li class="tickets-a">{{#linkTo munich}}2013{{/linkTo}}</li>
-  </ul>
-    <div class="nav right">
-        <a class="twitter" href="https://twitter.com/EmberFest"><img src="/images/twitter.png" alt="Official EmberFest Twitter account"></a>
-        <a class="mail" href="mailto:joachim@haagen-software.no"><img src="/images/mail.png" alt="Contact EmberFest organizers"></a>
+<div id="headerLinks">
+    <div class="container">
+        <ul>
+            {{#link-to "index" tagName="li"}}HOME{{/link-to}}
+            {{#link-to "talks" tagName="li"}}TALKS{{/link-to}}
+            {{#link-to "tickets" tagName="li"}}TICKETS{{/link-to}}
+            {{#link-to "venue" tagName="li"}}VENUE{{/link-to}}
+            {{#link-to "organizers" tagName="li"}}ORGANIZERS{{/link-to}}
+            {{#link-to "partners" tagName="li"}}PARTNERS{{/link-to}}
+            {{#link-to "munich" tagName="li"}}2013{{/link-to}}
+            {{#if controllers.user.isLoggedIn}}
+                {{#link-to "profile" tagName="li"}}Your Profile{{/link-to}}
+                <li {{action "doLogOut"}}>Sign Out</li>
+            {{else}}
+                <li {{action "doLogIn"}}>Sign In</li>
+            {{/if}}
+
+        </ul>
+    </div>
+</div>
+<div id="headerLogo">
+    <div class="container">
+        <img class="logo" {{bind-attr src="logoUrl"}} style="height: 60px;" alt="Ember Fest 2013 Logo">
+
+        <div class="date">
+            <h2>Pre-Conference Workshop August, 26-27th 2014</h2>
+            <h2>Conference, August, 28-29th 2014</h2>
+        </div>
+    </div>
+</div>
+<div class="container contact">
+    <div class="pull-right">
+        <a class="twitter" href="https://twitter.com/EmberFest">
+            {{#view Emberfest.LiviconMorphView class="pull-left livicon morphOnehundredFifty thingreyborder" data-name="morph-c-s" data-size="40" data-color="#b72009" data-hovercolor="#ebdd01"}}
+                <div><p class="text-center">
+                    {{view Emberfest.LiviconView data-name="twitter" data-color="#fff" data-hovercolor="#b72009" data-size="24" data-op="1"}}
+                </p></div>
+            {{/view}}
+
+
+        </a>
+        <a class="mail" href="mailto:mail@emberfest.eu">
+            {{#view Emberfest.LiviconMorphView class="pull-left livicon morphOnehundredFifty thingreyborder" data-name="morph-c-s" data-size="40" data-color="#b72009" data-hovercolor="#ebdd01"}}
+                <div><p class="text-center">
+                    {{view Emberfest.LiviconView data-name="mail" data-color="#fff" data-hovercolor="#b72009" data-size="24" data-op="1"}}
+                </p></div>
+            {{/view}}
+        </a>
     </div>
 </div>
 
-{{outlet}}
 
-<div class="navbar footer">
-  <ul class="nav">
-    <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>
-    <li class="right"><span>Designed by <a href="http://www.mochaleaf.com/">MochaLeaf Inc.</a></span></li>
-  </ul>
+<div class="container">
+    {{outlet}}
+</div>
+
+<div class="cityscape container">
+    <img src="/images/barcelona_silhouette_small.png"/>
+</div>
+<div class="footer">
+    <div class="container">
+        <img class="footerCityText" src="/images/barcelona_white_text.png" />
+    </div>
+    <div class="container designedByText">
+        <p>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a></p>
+    </div>
 </div>

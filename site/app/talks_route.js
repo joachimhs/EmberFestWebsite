@@ -1,12 +1,5 @@
-Emberfest.TalksRoute = Ember.Route.extend( {
+Emberfest.TalksIndexRoute = Ember.Route.extend({
     model: function() {
-        return Emberfest.Talk.findAll()
-    },
-
-    setupController: function(controller, model) {
-        this._super(controller, model);
-        _gaq.push(['_trackPageview', "/talks"]);
-
-        document.title = 'Talks - Ember Fest';
+        return this.store.find('talk');
     }
 });

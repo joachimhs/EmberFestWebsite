@@ -2,6 +2,7 @@ Emberfest.UserController = Ember.ObjectController.extend({
     init: function() {
         this._super();
 
+        console.log('UserController init');
         var controller = this;
         // Mozilla Persona
         navigator.id.watch({
@@ -15,8 +16,7 @@ Emberfest.UserController = Ember.ObjectController.extend({
                         if (res.uuidToken) {
                             console.log('setting uuidToken: ' + res.uuidToken);
                             controller.createCookie("uuidToken", res.uuidToken, 1);
-                            controller.set('content', Emberfest.User.find(res.uuidToken));
-                            Emberfest.User.findAll();
+                            controller.store.find('user', res.uuidToken).then(function(user) { controller.set('model', user); });
                         }
                     },
                     error: function(xhr, status, err) {  }
@@ -73,7 +73,12 @@ Emberfest.UserController = Ember.ObjectController.extend({
         console.log('showRegistretionFormObserver: ' + this.get('id') + " authLevel: " + this.get('authLevel'));
         if (this.get('id') != null && this.get('authLevel') === 'not_registered') {
             console.log('transitioning to pages.register');
-            this.transitionToRoute('pages.register');
+            this.transitionToRoute('register');
         }
-    }.observes('uuidToken', 'authLevel')
+    }.observes('uuidToken', 'authLevel'),
+
+    contentObserver: function() {
+        console.log('user model updated: ');
+        console.log(this.get('model'));
+    }.observes('model')
 });

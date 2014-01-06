@@ -2,7 +2,6 @@ package no.haagensoftware.netty.webserver.plugin;
 
 import java.util.LinkedHashMap;
 
-import no.haagensoftware.leveldb.LevelDbEnv;
 import no.haagensoftware.netty.webserver.AuthenticationContext;
 import no.haagensoftware.netty.webserver.ServerInfo;
 import no.haagensoftware.netty.webserver.handler.CredentialsHandler;
@@ -10,6 +9,7 @@ import no.haagensoftware.netty.webserver.handler.FileServerHandler;
 import no.haagensoftware.netty.webserver.handler.TalksHandler;
 import no.haagensoftware.netty.webserver.handler.UserHandler;
 
+import no.haagensoftware.db.DbEnv;
 import org.haagensoftware.netty.webserver.spi.NettyWebserverRouterPlugin;
 import org.haagensoftware.netty.webserver.spi.PropertyConstants;
 import org.haagensoftware.netty.webserver.util.IntegerParser;
@@ -26,7 +26,7 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
 	private ServerInfo serverInfo;
 	private AuthenticationContext authenticationContext;
 	
-	public EmberCampRouterPlugin(ServerInfo serverInfo, LevelDbEnv dbEnv) {
+	public EmberCampRouterPlugin(ServerInfo serverInfo, DbEnv dbEnv) {
 		authenticationContext = new AuthenticationContext(dbEnv);
 		int scriptCacheSeconds = IntegerParser.parseIntegerFromString(System.getProperty(PropertyConstants.SCRIPTS_CACHE_SECONDS), 0);
 		
@@ -39,10 +39,11 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
         routes.put("startsWith:/schedule", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/venue", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/organizers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
-        routes.put("startsWith:/sponsors", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+        routes.put("startsWith:/partners", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/registerTalk", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/munich", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
-        
+        routes.put("startsWith:/profile", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+
         routes.put("startsWith:/register", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         routes.put("startsWith:/call_for_speakers", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
         
@@ -53,9 +54,9 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
         routes.put("startsWith:/auth/logout", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         routes.put("startsWith:/auth/registerNewUser", new CredentialsHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
 
-        routes.put("startsWith:/user", new UserHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
+        routes.put("startsWith:/json/user", new UserHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         
-        routes.put("startsWith:/abstracts", new TalksHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
+        routes.put("startsWith:/json/talk", new TalksHandler(serverInfo.getWebappPath(), authenticationContext, dbEnv));
         
         routes.put("startsWith:/stylesheets", new FileServerHandler(serverInfo.getWebappPath()));
         routes.put("startsWith:/img", new FileServerHandler(serverInfo.getWebappPath()));

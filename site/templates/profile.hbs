@@ -1,0 +1,29 @@
+<h1>Your Profile</h1>
+
+{{#if controllers.user.isLoggedIn}}
+    {{user-details user=controllers.user.model buttonLabel="Update Profile"}}
+
+    <h1>Your Suggested Talks</h1>
+    <table class="table" style="width: 500px;">
+        {{#each talk in talks}}
+            <tr>
+                <td>{{talk.title}}</td>
+                <td><button class="btn btn-default">
+                        {{view Emberfest.LiviconView data-name="pencil" data-color="#000" data-hovercolor="#000" data-size="24" data-op="1" class="pull-left"}}
+                        Edit
+                    </button>
+                    <button class="btn btn-default">
+                        {{view Emberfest.LiviconView data-name="search" data-color="#000" data-hovercolor="#000" data-size="24" data-op="1" class="pull-left"}}
+                        View
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+    <h1>Participant Information</h1>
+    <p>If your talk is approved, you will be notified by one of the organizers personally. We will accept talks at regular intervals until two weeks before the conference starts. If none of your talks get approved, you will get the opportunity to buy a ticket at the price valid when you registered your talk.</p>
+{{else}}
+    <p class="talkRow">You need to sign in to view your profile!<br /><br />
+        <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" {{action "doLogIn"}}>Sign in to view and edit your profile!</button>
+    </p>
+{{/if}}

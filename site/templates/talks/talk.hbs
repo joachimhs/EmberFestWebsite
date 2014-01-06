@@ -1,12 +1,19 @@
-<div id="talks" class="container content">
-    <h1>{{talkTitle}}</h1>
-    <div class="author">Suggested by {{talkSuggestedBy}}</div>
-    <div class="proposalContent">
-        {{markdown talkText}}
-        <p><span class="infoButton">Talk Type</span> {{talkType}}</p>
-        <p><span class="infoButton">Talk Topics</span> {{talkTopics}}</p>
-    </div>
+<h1>{{title}} ({{talkType}})</h1>
+<p style="margin-left: 25px; font-weight: 700;">By {{talkSuggestedBy}}</p>
+<div>{{markdown talkAbstract}}</div>
 
-    {{#linkTo "talks"}}<div class="btn btn-default">Edit Talk</div>{{/linkTo}}
-    {{#linkTo "talks"}}<div class="btn btn-default">Back to Talks</div>{{/linkTo}}
-</div>
+{{#if outline}}
+    <h2>Outline</h2>
+    {{markdown outline}}
+{{/if}}
+
+{{#if topic}}
+    <h2>Topics</h2>
+    {{topic}}
+{{/if}}
+
+{{#link-to "talks"}}
+    <button class="btn btn-primary" name="subscribe" style="margin-top: 10px;">
+        {{view Emberfest.LiviconView data-name="arrow-left" data-color="#000" data-hovercolor="#fff" data-size="24" data-op="1" class="pull-left"}} Back to talks
+    </button>
+{{/link-to}}

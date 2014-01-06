@@ -1,40 +1,89 @@
-<div id="talks" class="container content">
-    <h1><img src="/images/talks.png" alt="talks"> Submit Your Proposal</h1>
-    {{#if controllers.user.isLoggedIn}}
-        <form>
-            <fieldset>
-                <div class="form-group"">
-                    <label for="proposalTitle">Title</label>
-                    {{view Ember.TextField valueBinding="proposalTitle" classNames="form-control"}}
-                    {{#if titleValidationError}}
-                        <div class="alert alert-info">{{titleValidationError}}</div>
-                    {{/if}}
+{{#if controllers.user.isLoggedIn}}
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Register Your Talk for Ember Fest 2014!</h1>
+
+            {{#if validationErrors}}
+                <div class="alert alert-danger">
+                    <ul>
+                        {{#each error in validationErrors}}
+                            <li>{{error}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
+
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Title</label>
+                    <div class="col-sm-9">
+                        {{input value=title type="text" class="form-control" placeholder="Your talk title"}}
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="proposalText">Talk Abstract</label>
-                    {{view Ember.TextArea valueBinding="proposalText" rows="20" classNames="form-control"}}
-                    {{#if proposalValidationError}}
-                        <div class="alert alert-info">{{proposalValidationError}}</div>
-                    {{/if}}
+                    <label class="col-sm-3 control-label">Abstract</label>
+                    <div class="col-sm-9">
+                        {{textarea value=talkAbstract rows=7 class="form-control" placeholder="What is your talk about?"}}
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="proposalType">Talk Type</label>
-                    {{view Ember.TextField valueBinding="proposalType" rows="20" classNames="form-control"}}
-                    {{#if proposalTypeValidationError}}
-                        <div class="alert alert-info">{{proposalTypeValidationError}}</div>
-                    {{/if}}
+                    <label class="col-sm-3 control-label">Outline</label>
+                    <div class="col-sm-9">
+                        {{textarea value=outline rows=7 class="form-control" placeholder="Briefly outline the contents of your talk (required for workshops)"}}
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="topics">Topics</label>
-                    {{view Ember.TextField valueBinding="proposalTopics" rows="20" classNames="form-control"}}
-                    {{#if topicsValidationError}}
-                        <div class="alert alert-info">{{topicsValidationError}}</div>
-                    {{/if}}
+                    <label class="col-sm-3 control-label">Talk type</label>
+                    <div class="col-sm-9">
+                        {{input value=talkType type="text" class="form-control" placeholder="What type of talk? 15 or 35 min presentation ? Half or full day workshop?"}}
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-default" {{action "submitAbstract"}}>Submit Proposal!</button>
-            </fieldset>
-        </form>
-    {{else}}
-        <br /><h2><span class="alert alert-danger">You need to log in, in order to submit a talk.</span></h2>
-    {{/if}}
-</div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Participant requirements</label>
+                    <div class="col-sm-9">
+                        {{textarea value=participantRequirements rows=4 class="form-control" placeholder="What (if anything) do your participants need to bring? (most valid for workshops)"}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Topics</label>
+                    <div class="col-sm-9">
+                        {{input value=topics type="text" class="form-control" placeholder="Which topics will your talk cover?"}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-md-offset-3">
+                        <button class="btn btn-primary form-control" {{action "verifyTalkInput"}}>Register Talk!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <h1>About your talk!</h1>
+            <p>Do you have something you want to share with the Ember.js community? Do you have a cool idea, have you worked on a cool projet, or have you learnt something awesome lately? Share your experiences with the rest of the European Ember.js community at Ember Fest 2014! All speakers get free admission to the Conference, and the Conference Dinner.</p>
+
+            <p>This year, we are looking for both workshops and presentations! Workshops will be held during the 2-day pre-conference workshop. This is where you will get to meet developers that are eager to learn all about the awesomeness that is Ember.js.</p>
+
+            <p>By registering your talk, your abstract for a presentation talk or a tutorial will be added to the list of suggestions for this year's conference. You may change the content of your abstract at any time during the period that the CfP is open. Other participants will be able to see your suggestion as soon as it is registered.</p>
+
+            <p>The talk proposals will be reviewed by a group of smart and friendly people, who will help you create the best proposal you can. You will receive feedback from reviewers by email.</p>
+
+            <h1>Topics</h1>
+            <ul>
+                <li>Ember.js Basics</li>
+                <li>Thrid party frameworks</li>
+                <li>Ember.js Persistence frameworks</li>
+                <li>Hands-on experiences and experience reports</li>
+                <li>Security</li>
+                <li>Build Tools</li>
+            </ul>
+
+            <h1>Talk Types</h1>
+
+            <p>There are four talk types that you can choose between. Standard presentations are either 20 or 35 minutes in length and will be held during the two main days of the conference. Workshops are held during the two pre-conference days and are either half day (3,5 hours including breaks), or full day (7 hours including breaks)</p>
+        </div>
+    </div>
+{{else}}
+    <p class="talkRow">You need to sign in to register talks for Ember Fest 2014!<br /><br />
+        <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" {{action "doLogIn"}}>Sign in to submit your proposal!</button>
+    </p>
+{{/if}}
