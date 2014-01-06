@@ -14,7 +14,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Maven Pro', sans-serif;
   font-size: 1.8em;
-  margin-bottom: 1.6em;
+  margin: 1.8em 0 1.6em 0;
   text-align: center;
 }
 
@@ -24,6 +24,7 @@ h1, h3, h4 {
 
 h3 {
   font-size: 1.6em;
+  margin: 1.6em 0 1em 0;
 }
 
 .button {
@@ -39,7 +40,6 @@ header {
   background: url('/images/bg.jpg') no-repeat left top;
   background-size: cover;
   min-height: 580px;
-  margin-bottom: 4em;
 }
 
 header .top-bar {
@@ -151,6 +151,28 @@ header .social a:hover img {
 .main-content {
   padding: 1em;
 }
+
+
+/* ==========================================================================
+    Page: Sponsors
+   ========================================================================== */
+
+#sponsor-packages .title {
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: 'Maven Pro', 'sans-serif';
+}
+
+#sponsor-packages .gold li.title {
+  background: #f39c12;
+}
+#sponsor-packages .silver li.title {
+  background: #bdc3c7;
+}
+#sponsor-packages .bronze li.title {
+  background: #d35400;
+}
+
 
 /* ==========================================================================
     Footer
