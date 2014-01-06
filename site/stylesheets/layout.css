@@ -36,7 +36,7 @@ h3 {
    ========================================================================== */
 
 header {
-  background: url('/images/bg.png') no-repeat left top;
+  background: url('/images/bg.jpg') no-repeat left top;
   background-size: cover;
   min-height: 580px;
   margin-bottom: 4em;
