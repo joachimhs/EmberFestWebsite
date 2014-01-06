@@ -3,7 +3,14 @@
 Development:
 
 * Install Java 1.7
-* run `./build`
-* run `./boot`
-* Follow the instructions on screen
-* You need to install Perst into your local Maven Repo. Download from http://www.mcobject.com/perst
+* Build the backend: mvn clean; mvn install
+
+Run the Backend: 
+
+* Go to backend/
+* Edit config.properties to suit your setup
+* execute the JAR file: java -jar target/emberfest-0.1.0-jar-with-dependencies.jar
+
+Launch Website
+
+* http://localhost:8081 (port defined in config.properties)
