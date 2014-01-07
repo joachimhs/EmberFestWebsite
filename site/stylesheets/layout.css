@@ -222,10 +222,15 @@ article.topic span.author {
 
 footer {
   border-top: 1px solid #ddd;
-  padding: 1em 0;
+  padding: 3em 0;
+}
+
+footer a {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 footer small {
-  font-size: 0.85em;
+  font-size: 0.8em;
 }
 
