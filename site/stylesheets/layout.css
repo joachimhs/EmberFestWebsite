@@ -129,6 +129,7 @@ header h2 {
   font-family: 'Lato', sans-serif;
   color: #fff;
   text-transform: none;
+  margin-top: 0;
 }
 
 header .logo {
