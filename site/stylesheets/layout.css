@@ -60,7 +60,20 @@ header {
 
 header .top-bar {
   background: none;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+header .top-bar .title-area img {
+  max-height: 3em;
+}
+@media only screen and (max-width: 40em) {
+  header .top-bar .title-area img {
+    max-height: 2.8em;
+  }
+}
+
+header .top-bar .name h1 a {
+  padding-left: 0;
 }
 
 header .top-bar.expanded .title-area {
@@ -74,6 +87,10 @@ header .top-bar.expanded .toggle-topbar a {
 header .top-bar.expanded .toggle-topbar a span {
   -webkit-box-shadow: 0 10px 0 1px #E54C3A,0 16px 0 1px #E54C3A,0 22px 0 1px #E54C3A;
   box-shadow: 0 10px 0 1px #E54C3A,0 16px 0 1px #E54C3A,0 22px 0 1px #E54C3A;
+}
+
+header .top-bar-section {
+  margin-top: 10px;
 }
 
 header .top-bar ul {
@@ -126,7 +143,7 @@ header .top-bar:not(.expanded) .main-nav li a:not(.button):hover {
 }
 
 header .banner {
-  margin: 3em 0;
+  margin: 5em 0 3em 0;
 }
 
 header h1 {

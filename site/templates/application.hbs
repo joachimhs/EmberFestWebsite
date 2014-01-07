@@ -10,7 +10,9 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="#"><!-- Here will be logo on non-index page --></a></h1>
+            <h1>
+              {{#link-to "index"}}<img src="/images/logo.png" class="logo">{{/link-to}}
+            </h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
@@ -26,7 +28,6 @@
           </ul>
 
           <ul class="left main-nav">
-            <li>{{#link-to "index"}}Home{{/link-to}}</li>
             <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
             <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
             <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
@@ -39,7 +40,6 @@
 
       <!-- BEGIN BANNER -->
       <div class="banner text-center">
-        <img src="/images/logo.png" class="logo">
         <h1>The biggest ember.js event in Europe</h1>
         <h2>26 &ndash; 29 August 2014</h2>
 
