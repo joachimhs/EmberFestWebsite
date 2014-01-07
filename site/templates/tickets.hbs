@@ -1,1 +1,27 @@
 <h2>Tickets</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Ticket Type</th>
+        <th width="150">Price</th>
+        <th width="200">&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each ticket in controller}}
+        <tr>
+            <td>
+                <p class="title">{{ticket.name}}</p>
+                {{ticket.description}}
+            </td>
+            <td>${{ticket.price}}</td>
+            {{#if ticket.ticketsAvailable}}
+                <td><button class="button">Add to Cart</button></td>
+            {{else}}
+                <td><button class="button disabled">Sold Out</button></td>
+            {{/if}}
+
+        </tr>
+    {{/each}}
+</table>
