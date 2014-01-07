@@ -31,6 +31,22 @@ h3 {
   border-radius: 2px;
 }
 
+table p.title {
+  font-size: 1.1em;
+  color: #444;
+  font-weight: 600;
+}
+
+table tr td {
+  color: #444;
+}
+
+table thead tr th {
+  line-height: 2em;
+  font-weight: normal;
+  color: #666;
+}
+
 
 /* ==========================================================================
     Header
