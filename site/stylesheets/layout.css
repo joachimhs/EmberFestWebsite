@@ -1,0 +1,206 @@
+/* ==========================================================================
+    Includes - Ground zero
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+
+/* ==========================================================================
+    General
+   ========================================================================== */
+
+h2 {
+  color: #E54C3A;
+  text-transform: uppercase;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1.8em;
+  margin: 1.8em 0 1.6em 0;
+  text-align: center;
+}
+
+h1, h3, h4 {
+  color: #222;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin: 1.6em 0 1em 0;
+}
+
+.button {
+  border-radius: 2px;
+}
+
+table p.title {
+  font-size: 1.1em;
+  color: #444;
+  font-weight: 600;
+}
+
+table tr td {
+  color: #444;
+}
+
+table thead tr th {
+  line-height: 2em;
+  font-weight: normal;
+  color: #666;
+}
+
+
+/* ==========================================================================
+    Header
+   ========================================================================== */
+
+header {
+  background: url('/images/bg.jpg') no-repeat left top;
+  background-size: cover;
+  min-height: 580px;
+}
+
+header .top-bar {
+  background: none;
+  margin-top: 20px;
+}
+
+header .top-bar-section ul {
+  background: none;
+}
+
+header .top-bar-section ul li>a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+header .top-bar-section .main-nav li {
+  margin: 0 0.4rem;
+}
+
+header .top-bar-section .main-nav li a:not(.button) {
+  text-transform: uppercase;
+}
+
+header .top-bar-section li a:not(.button) {
+  background: none;
+  border: 2px solid transparent;
+  line-height: 2.3rem;
+}
+
+header .top-bar-section li a:not(.button):hover {
+  background: none;
+  text-decoration: underline;
+}
+
+header .top-bar-section .main-nav li a:not(.button):hover {
+  text-decoration: none;
+}
+
+header .top-bar-section .main-nav li a.active:not(.button) {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+header .top-bar-section .main-nav li a.active:not(.button):hover {
+  background: none;
+  color: #fff;
+}
+
+header .top-bar-section .main-nav li a:not(.button):hover {
+  background: #fff;
+  color: #1171DF;
+  border-radius: 2px;
+}
+
+header .banner {
+  margin: 3em 0;
+}
+
+header h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.4em;
+  color: #fff;
+  text-transform: none;
+}
+
+header h2 {
+  margin-bottom: 1.4em;
+  font-size: 1.4em;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  text-transform: none;
+  margin-top: 0;
+}
+
+header .logo {
+  max-width: 200px;
+}
+
+header .button {
+  text-transform: uppercase;
+  margin: 0.3em;
+}
+
+header .social {
+  margin-bottom: 1.4em;
+}
+
+header .social a {
+  padding: 2em 0.5em 0 0.5em;
+}
+
+header .social img {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+header .social a:hover img {
+  transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+}
+
+
+/* ==========================================================================
+    Main content
+   ========================================================================== */
+
+.main-content {
+  padding: 1em;
+}
+
+
+/* ==========================================================================
+    Page: Sponsors
+   ========================================================================== */
+
+#sponsor-packages .title {
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: 'Maven Pro', 'sans-serif';
+}
+
+#sponsor-packages .gold li.title {
+  background: #f39c12;
+}
+#sponsor-packages .silver li.title {
+  background: #bdc3c7;
+}
+#sponsor-packages .bronze li.title {
+  background: #d35400;
+}
+
+
+/* ==========================================================================
+    Footer
+   ========================================================================== */
+
+footer {
+  border-top: 1px solid #ddd;
+  padding: 1em 0;
+}
+
+footer small {
+  font-size: 0.85em;
+}
+

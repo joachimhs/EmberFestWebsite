@@ -13,8 +13,6 @@ Emberfest.ApplicationController = Ember.Controller.extend({
         }
     },
 
-    logoUrl: '/images/ef_logo_liten.png',
-
     routeScheduler: null,
     routeToGoTo: null,
 

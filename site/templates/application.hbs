@@ -1,67 +1,69 @@
-<div id="headerLinks">
-    <div class="container">
-        <ul>
-            {{#link-to "index" tagName="li"}}HOME{{/link-to}}
-            {{#link-to "talks" tagName="li"}}TALKS{{/link-to}}
-            {{#link-to "tickets" tagName="li"}}TICKETS{{/link-to}}
-            {{#link-to "venue" tagName="li"}}VENUE{{/link-to}}
-            {{#link-to "organizers" tagName="li"}}ORGANIZERS{{/link-to}}
-            {{#link-to "partners" tagName="li"}}PARTNERS{{/link-to}}
-            {{#link-to "munich" tagName="li"}}2013{{/link-to}}
-            {{#if controllers.user.isLoggedIn}}
-                {{#link-to "profile" tagName="li"}}Your Profile{{/link-to}}
-                <li {{action "doLogOut"}}>Sign Out</li>
-            {{else}}
-                <li {{action "doLogIn"}}>Sign In</li>
-            {{/if}}
+<header>
+  <div class="row">
+    <div class="small-12 large-12 columns">
 
+      <!-- BEGIN TOP NAV -->
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#"><!-- Here will be logo on non-index page --></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            {{#if controllers.user.isLoggedIn}}
+              <li>{{#link-to "profile"}}Your Profile{{/link-to}}</li>
+              <li><a {{action "doLogOut"}}>Sign out</a></li>
+            {{else}}
+              <li><a {{action "doLogIn"}}>Sign in</a></li>
+            {{/if}}
+          </ul>
+
+          <ul class="left main-nav">
+            <li>{{#link-to "index"}}Home{{/link-to}}</li>
+            <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
+            <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
+            <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
+            <li>{{#link-to "organizers"}}About{{/link-to}}</li>
+            <li>{{#link-to "munich"}}2013{{/link-to}}</li>
+          </ul>
+        </section>
+      </nav>
+      <!-- END TOP NAV -->
+
+      <!-- BEGIN BANNER -->
+      <div class="banner text-center">
+        <img src="/images/logo.png" class="logo">
+        <h1>The biggest ember.js event in Europe</h1>
+        <h2>26 &ndash; 29 August 2014</h2>
+
+        <a href="#" class="button">Subscribe</a>
+        {{#link-to "tickets" class="button disabled"}}Buy tickets{{/link-to}}
+      </div>
+      <!-- END BANNER -->
+
+      <div class="social text-center">
+        <a href="https://twitter.com/EmberFest"><img src="/images/icons/twitter.png"></a>
+        <a href="#"><img src="/images/icons/rss.png"></a>
+        <a href="mailto:mail@emberfest.eu"><img src="/images/icons/mail.png"></a>
+      </div>
+
     </div>
-</div>
-<div id="headerLogo">
-    <div class="container">
-        <img class="logo" {{bind-attr src="logoUrl"}} style="height: 60px;" alt="Ember Fest 2013 Logo">
+  </div>
+</header>
 
-        <div class="date">
-            <h2>Pre-Conference Workshop August, 26-27th 2014</h2>
-            <h2>Conference, August, 28-29th 2014</h2>
-        </div>
-    </div>
-</div>
-<div class="container contact">
-    <div class="pull-right">
-        <a class="twitter" href="https://twitter.com/EmberFest">
-            {{#view Emberfest.LiviconMorphView class="pull-left livicon morphOnehundredFifty thingreyborder" data-name="morph-c-s" data-size="40" data-color="#b72009" data-hovercolor="#ebdd01"}}
-                <div><p class="text-center">
-                    {{view Emberfest.LiviconView data-name="twitter" data-color="#fff" data-hovercolor="#b72009" data-size="24" data-op="1"}}
-                </p></div>
-            {{/view}}
-
-
-        </a>
-        <a class="mail" href="mailto:mail@emberfest.eu">
-            {{#view Emberfest.LiviconMorphView class="pull-left livicon morphOnehundredFifty thingreyborder" data-name="morph-c-s" data-size="40" data-color="#b72009" data-hovercolor="#ebdd01"}}
-                <div><p class="text-center">
-                    {{view Emberfest.LiviconView data-name="mail" data-color="#fff" data-hovercolor="#b72009" data-size="24" data-op="1"}}
-                </p></div>
-            {{/view}}
-        </a>
-    </div>
-</div>
-
-
-<div class="container">
+<div class="row main-content">
+  <div class="small-12 large-12 columns">
     {{outlet}}
+  </div>
 </div>
 
-<div class="cityscape container">
-    <img src="/images/barcelona_silhouette_small.png"/>
-</div>
-<div class="footer">
-    <div class="container">
-        <img class="footerCityText" src="/images/barcelona_white_text.png" />
+<footer>
+  <div class="row text-right">
+    <div class="small-12 large-12 columns">
+        <small>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a></small>
     </div>
-    <div class="container designedByText">
-        <p>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a></p>
-    </div>
-</div>
+  </div>
+</footer>
