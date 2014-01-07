@@ -44,7 +44,7 @@ table tr td {
 table thead tr th {
   line-height: 2em;
   font-weight: normal;
-  color: #666;
+  color: #777;
 }
 
 
@@ -166,7 +166,11 @@ header .social a:hover img {
    ========================================================================== */
 
 .main-content {
-  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.main-content a:not(.button):hover {
+  text-decoration: underline;
 }
 
 
@@ -183,11 +187,32 @@ header .social a:hover img {
 #sponsor-packages .gold li.title {
   background: #f39c12;
 }
+
 #sponsor-packages .silver li.title {
   background: #bdc3c7;
 }
+
 #sponsor-packages .bronze li.title {
   background: #d35400;
+}
+
+#sponsor-packages .bullet-item {
+  text-align: left;
+}
+
+
+/* ==========================================================================
+    Page: Talks
+   ========================================================================== */
+
+article.topic span.label {
+  line-height: 1.4em;
+  font-size: 0.9em;
+}
+
+article.topic span.author {
+  font-weight: 500;
+  padding-left: 0.5em;
 }
 
 
