@@ -1,19 +1,25 @@
-<h1>{{title}} ({{talkType}})</h1>
-<p style="margin-left: 25px; font-weight: 700;">By {{talkSuggestedBy}}</p>
-<div>{{markdown talkAbstract}}</div>
+<article class="topic">
+  <h2>{{title}}</h2>
 
-{{#if outline}}
-    <h2>Outline</h2>
-    {{markdown outline}}
-{{/if}}
+  <p>
+    <span class="label secondary">{{talkType}}</span>
+    <span class="author">by {{talkSuggestedBy}}</span>
+  </p>
 
-{{#if topic}}
-    <h2>Topics</h2>
-    {{topic}}
-{{/if}}
+  <h3>Abstract</h3>
+  <p>{{markdown talkAbstract}}</p>
 
-{{#link-to "talks"}}
-    <button class="btn btn-primary" name="subscribe" style="margin-top: 10px;">
-        {{view Emberfest.LiviconView data-name="arrow-left" data-color="#000" data-hovercolor="#fff" data-size="24" data-op="1" class="pull-left"}} Back to talks
-    </button>
-{{/link-to}}
+  {{#if outline}}
+    <h3>Outline</h3>
+    <p>{{markdown outline}}</p>
+  {{/if}}
+
+  {{#if topics}}
+    <h3>Topics</h3>
+    <p>{{topics}}</p>
+  {{/if}}
+
+  {{#link-to "talks" class="small button"}}
+    &#8592; Back to talks
+  {{/link-to}}
+</article>

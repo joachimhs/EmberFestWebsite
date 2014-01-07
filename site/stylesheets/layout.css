@@ -44,7 +44,7 @@ table tr td {
 table thead tr th {
   line-height: 2em;
   font-weight: normal;
-  color: #666;
+  color: #777;
 }
 
 
@@ -53,67 +53,100 @@ table thead tr th {
    ========================================================================== */
 
 header {
-  background: url('/images/bg.jpg') no-repeat left top;
-  background-size: cover;
-  min-height: 580px;
+  background: #0769d8;
 }
 
 header .top-bar {
   background: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-header .top-bar-section ul {
+header .top-bar .title-area img {
+  max-height: 3em;
+}
+@media only screen and (max-width: 40em) {
+  header .top-bar .title-area img {
+    max-height: 2.8em;
+  }
+}
+
+header .top-bar .name h1 a {
+  padding-left: 0;
+}
+
+header .top-bar.expanded .title-area {
   background: none;
 }
 
-header .top-bar-section ul li>a {
+header .top-bar.expanded .toggle-topbar a {
+  color: #fff;
+}
+
+header .top-bar.expanded .toggle-topbar a span {
+  -webkit-box-shadow: 0 10px 0 1px #E54C3A,0 16px 0 1px #E54C3A,0 22px 0 1px #E54C3A;
+  box-shadow: 0 10px 0 1px #E54C3A,0 16px 0 1px #E54C3A,0 22px 0 1px #E54C3A;
+}
+
+header .top-bar-section {
+  margin-top: 10px;
+}
+
+header .top-bar ul {
+  background: none;
+    padding-bottom: 5px;
+}
+
+header .top-bar ul li>a {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1em;
 }
 
-header .top-bar-section .main-nav li {
+header .top-bar:not(.expanded) .main-nav li {
   margin: 0 0.4rem;
 }
 
-header .top-bar-section .main-nav li a:not(.button) {
+header .top-bar:not(.expanded) .main-nav li a:not(.button) {
   text-transform: uppercase;
 }
 
-header .top-bar-section li a:not(.button) {
+header .top-bar li a:not(.button) {
   background: none;
   border: 2px solid transparent;
   line-height: 2.3rem;
 }
 
-header .top-bar-section li a:not(.button):hover {
+header .top-bar li a:not(.button):hover {
   background: none;
   text-decoration: underline;
 }
 
-header .top-bar-section .main-nav li a:not(.button):hover {
+header .top-bar:not(.expanded) .main-nav li a:not(.button):hover {
   text-decoration: none;
 }
 
-header .top-bar-section .main-nav li a.active:not(.button) {
+header .top-bar:not(.expanded) .main-nav li a.active:not(.button) {
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
 }
 
-header .top-bar-section .main-nav li a.active:not(.button):hover {
+header .top-bar .main-nav li a.active:not(.button):hover {
   background: none;
   color: #fff;
 }
 
-header .top-bar-section .main-nav li a:not(.button):hover {
+header .top-bar:not(.expanded) .main-nav li a:not(.button .social):hover {
   background: #fff;
   color: #1171DF;
   border-radius: 2px;
 }
 
 header .banner {
-  margin: 3em 0;
+  /*margin: 5em 0 3em 0;*/
+    padding-top: 3em;
+    background: url('/images/bg.jpg') no-repeat left top;
+    background-size: cover;
+    min-height: 380px;
 }
 
 header h1 {
@@ -141,20 +174,26 @@ header .button {
   margin: 0.3em;
 }
 
-header .social {
+.social {
   margin-bottom: 1.4em;
+    float: right;
 }
 
-header .social a {
+.social a {
   padding: 2em 0.5em 0 0.5em;
+    float: right;
 }
 
-header .social img {
+.social img {
   max-width: 32px;
   max-height: 32px;
+    float: right;
 }
 
-header .social a:hover img {
+.social a:hover {
+    background: none;
+}
+.social a:hover img {
   transform: rotate(-15deg);
   -ms-transform: rotate(-15deg);
   -webkit-transform: rotate(-15deg);
@@ -166,7 +205,11 @@ header .social a:hover img {
    ========================================================================== */
 
 .main-content {
-  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.main-content a:not(.button):hover {
+  text-decoration: underline;
 }
 
 
@@ -183,11 +226,32 @@ header .social a:hover img {
 #sponsor-packages .gold li.title {
   background: #f39c12;
 }
+
 #sponsor-packages .silver li.title {
   background: #bdc3c7;
 }
+
 #sponsor-packages .bronze li.title {
   background: #d35400;
+}
+
+#sponsor-packages .bullet-item {
+  text-align: left;
+}
+
+
+/* ==========================================================================
+    Page: Talks
+   ========================================================================== */
+
+article.topic span.label {
+  line-height: 1.4em;
+  font-size: 0.9em;
+}
+
+article.topic span.author {
+  font-weight: 500;
+  padding-left: 0.5em;
 }
 
 
@@ -197,10 +261,15 @@ header .social a:hover img {
 
 footer {
   border-top: 1px solid #ddd;
-  padding: 1em 0;
+  padding: 3em 0;
+}
+
+footer a {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 footer small {
-  font-size: 0.85em;
+  font-size: 0.8em;
 }
 

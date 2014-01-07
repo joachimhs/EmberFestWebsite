@@ -42,5 +42,10 @@ Emberfest.ApplicationController = Ember.Controller.extend({
             this.transitionToRoute(routeToGoTo);
             this.set('routeToGoTo', null);
         }
-    }
+    },
+
+    isOnHome: function() {
+        console.log('currentPath: ' + this.get('currentPath'));
+        return this.get('currentPath') === 'index'
+    }.property('currentPath')
 });

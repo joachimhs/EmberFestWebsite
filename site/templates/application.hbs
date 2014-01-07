@@ -1,3 +1,7 @@
+<script>
+  $(document).foundation();
+</script>
+
 <header>
   <div class="row">
     <div class="small-12 large-12 columns">
@@ -6,7 +10,9 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="#"><!-- Here will be logo on non-index page --></a></h1>
+            <h1>
+              {{#link-to "index"}}<img src="/images/logo.png" class="logo">{{/link-to}}
+            </h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
@@ -22,37 +28,36 @@
           </ul>
 
           <ul class="left main-nav">
-            <li>{{#link-to "index"}}Home{{/link-to}}</li>
             <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
             <li>{{#link-to "tickets"}}Tickets{{/link-to}}</li>
             <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
             <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
             <li>{{#link-to "organizers"}}About{{/link-to}}</li>
             <li>{{#link-to "munich"}}2013{{/link-to}}</li>
+              <li class="social">
+                  <a href="https://twitter.com/EmberFest""><img src="/images/icons/twitter.png"></a>
+              </li>
+              <li class="social">
+                  <a href="mailto:mail@emberfest.eu"><img src="/images/icons/mail.png"></a>
+              </li>
           </ul>
         </section>
       </nav>
       <!-- END TOP NAV -->
-
-      <!-- BEGIN BANNER -->
-      <div class="banner text-center">
-        <img src="/images/logo.png" class="logo">
-        <h1>The biggest ember.js event in Europe</h1>
-        <h2>26 &ndash; 29 August 2014</h2>
-
-        <a href="#" class="button">Subscribe</a>
-        {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
-      </div>
-      <!-- END BANNER -->
-
-      <div class="social text-center">
-        <a href="https://twitter.com/EmberFest"><img src="/images/icons/twitter.png"></a>
-        <a href="#"><img src="/images/icons/rss.png"></a>
-        <a href="mailto:mail@emberfest.eu"><img src="/images/icons/mail.png"></a>
-      </div>
-
     </div>
   </div>
+
+    <!-- BEGIN BANNER -->
+    {{#if isOnHome}}
+        <div class="banner text-center">
+            <h1>The biggest ember.js event in Europe</h1>
+            <h2>26 &ndash; 29 August 2014</h2>
+
+            <a href="#" class="button">Subscribe</a>
+            {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
+        </div>
+        <!-- END BANNER -->
+    {{/if}}
 </header>
 
 <div class="row main-content">
@@ -62,9 +67,19 @@
 </div>
 
 <footer>
-  <div class="row text-right">
-    <div class="small-12 large-12 columns">
-        <small>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a></small>
+  <div class="row">
+    <div class="small-12 large-6 columns text-left">
+      <ul class="inline-list">
+        <li>{{#link-to "index"}}Home{{/link-to}}</li>
+        <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
+        <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
+        <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
+        <li>{{#link-to "organizers"}}About{{/link-to}}</li>
+        <li>{{#link-to "munich"}}2013{{/link-to}}</li>
+      </ul>
+    </div>
+    <div class="small-12 large-6 columns text-right">
+        <small>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a> and <a href="https://twitter.com/tair">@tair</a></small>
     </div>
   </div>
 </footer>
