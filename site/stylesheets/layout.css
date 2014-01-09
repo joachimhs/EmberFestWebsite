@@ -2,6 +2,11 @@
     Includes - Ground zero
    ========================================================================== */
 
+@import url(normalize.css);
+@import url(foundation.min.css);
+@import url(foundation.min.css);
+@import url(social_foundicons.css);
+@import url(social_foundicons_ie7.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 
@@ -50,6 +55,17 @@ table thead tr th {
   color: #777;
 }
 
+a.icon:hover {
+  text-decoration: none !important;
+}
+[class*="foundicon-"] {
+  font-size: 1.6em;
+  color: rgba(0, 0, 0, 0.2);
+  margin-right: 0.2em;
+}
+a.icon:hover [class*="foundicon-"] {
+  color: #E54C3A;
+}
 
 /* ==========================================================================
     Header
@@ -217,6 +233,30 @@ header .button {
 
 .main-content a:not(.button):hover {
   text-decoration: underline;
+}
+
+article.person {
+  margin-top: 3em !important;
+}
+
+article.person .bio {
+  padding-left: 2.4em;
+}
+
+article.person .bio p {
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 40em) {
+  article.person .bio {
+    padding: 1.4em 1.2em 1.2em 1.2em;
+  }
+}
+
+article.person img {
+  border-radius: 100%;
+  max-width: 150px;
+  margin-top: 0.5em;
 }
 
 
