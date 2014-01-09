@@ -20,7 +20,7 @@
         <section class="top-bar-section">
           <ul class="right">
             {{#if controllers.user.isLoggedIn}}
-              <li>{{#link-to "profile"}}Your Profile{{/link-to}}</li>
+              <li>{{#link-to "profile"}}Profile{{/link-to}}</li>
               <li><a {{action "doLogOut"}}>Sign out</a></li>
             {{else}}
               <li><a {{action "doLogIn"}}>Sign in</a></li>
@@ -34,30 +34,28 @@
             <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
             <li>{{#link-to "organizers"}}About{{/link-to}}</li>
             <li>{{#link-to "munich"}}2013{{/link-to}}</li>
-              <li class="social">
-                  <a href="https://twitter.com/EmberFest""><img src="/images/icons/twitter.png"></a>
-              </li>
-              <li class="social">
-                  <a href="mailto:mail@emberfest.eu"><img src="/images/icons/mail.png"></a>
-              </li>
           </ul>
         </section>
       </nav>
       <!-- END TOP NAV -->
+
+      <!-- BEGIN BANNER -->
+      {{#if isOnHome}}
+          <div class="banner text-center">
+              <h1>The biggest ember.js event in Europe</h1>
+              <h2>26 &ndash; 29 August 2014</h2>
+
+              <a href="#" class="button">Subscribe</a>
+              {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
+          </div>
+          <!-- END BANNER -->
+      {{/if}}
+
+
     </div>
   </div>
 
-    <!-- BEGIN BANNER -->
-    {{#if isOnHome}}
-        <div class="banner text-center">
-            <h1>The biggest ember.js event in Europe</h1>
-            <h2>26 &ndash; 29 August 2014</h2>
 
-            <a href="#" class="button">Subscribe</a>
-            {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
-        </div>
-        <!-- END BANNER -->
-    {{/if}}
 </header>
 
 <div class="row main-content">
@@ -68,7 +66,7 @@
 
 <footer>
   <div class="row">
-    <div class="small-12 large-6 columns text-left">
+    <div class="small-12 large-6 columns">
       <ul class="inline-list">
         <li>{{#link-to "index"}}Home{{/link-to}}</li>
         <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
@@ -76,10 +74,17 @@
         <li>{{#link-to "partners"}}Sponsors{{/link-to}}</li>
         <li>{{#link-to "organizers"}}About{{/link-to}}</li>
         <li>{{#link-to "munich"}}2013{{/link-to}}</li>
+        <li><a href="mailto:mail@emberfest.eu">Contact us</a></li>
       </ul>
     </div>
-    <div class="small-12 large-6 columns text-right">
-        <small>Designed and developed by <a href="http://haagen-software.no">Haagen Software AS</a> and <a href="https://twitter.com/tair">@tair</a></small>
+    <div class="small-12 large-2 columns">
+      <a href="https://twitter.com/EmberFest" class="twitter-follow-button" data-show-count="false" data-lang="en">
+        Follow @EmberFest
+      </a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div class="small-12 large-4 columns text-right">
+      <small>Developed by <a href="http://haagen-software.no">Haagen Software AS</a> and <a href="http://351am.com">A&amp;M</a></small>
     </div>
   </div>
 </footer>

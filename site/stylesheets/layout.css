@@ -28,7 +28,10 @@ h3 {
 }
 
 .button {
+  text-transform: uppercase;
   border-radius: 2px;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
 table p.title {
@@ -53,7 +56,15 @@ table thead tr th {
    ========================================================================== */
 
 header {
-  background: #0769d8;
+  background: url('/images/bg.jpg') no-repeat left top;
+  background-size: cover;
+  min-height: 80px;
+}
+
+@media only screen and (max-width: 40em) {
+  header {
+    background: #0769d8;
+  }
 }
 
 header .top-bar {
@@ -142,11 +153,8 @@ header .top-bar:not(.expanded) .main-nav li a:not(.button .social):hover {
 }
 
 header .banner {
-  /*margin: 5em 0 3em 0;*/
-    padding-top: 3em;
-    background: url('/images/bg.jpg') no-repeat left top;
-    background-size: cover;
-    min-height: 380px;
+  margin-top: 3em;
+  min-height: 380px;
 }
 
 header h1 {
@@ -170,7 +178,6 @@ header .logo {
 }
 
 header .button {
-  text-transform: uppercase;
   margin: 0.3em;
 }
 
@@ -265,11 +272,22 @@ footer {
 }
 
 footer a {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: #777;
 }
 
 footer small {
-  font-size: 0.8em;
+  font-size: 0.75em;
+}
+
+footer small a {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 40em) {
+  footer div.columns {
+    margin-top: 1em;
+    text-align: center;
+  }
 }
 
