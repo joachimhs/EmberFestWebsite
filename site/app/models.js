@@ -101,7 +101,7 @@ Emberfest.Model.reopenClass({
                 }
             },
             error: function(xhr, status, err) { model.set('isError', false);  }
-        })
+        });
     }
 });
 

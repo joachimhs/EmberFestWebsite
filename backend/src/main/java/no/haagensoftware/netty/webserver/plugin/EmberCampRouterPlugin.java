@@ -61,7 +61,9 @@ public class EmberCampRouterPlugin extends NettyWebserverRouterPlugin {
         routes.put("startsWith:/stylesheets", new FileServerHandler(serverInfo.getWebappPath()));
         routes.put("startsWith:/img", new FileServerHandler(serverInfo.getWebappPath()));
         routes.put("startsWith:/mrkdwn", new FileServerHandler(serverInfo.getWebappPath()));
-        
+
+        routes.put("startsWith:/admin", new CachedIndexHandler(serverInfo.getWebappPath(), scriptCacheSeconds));
+
         routes.put("startsWith:/cachedScript", new CachedScriptHandler(serverInfo.getWebappPath()));
 	}
 	

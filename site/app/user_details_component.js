@@ -37,10 +37,10 @@ Emberfest.UserDetailsComponent = Ember.Component.extend({
 
     validateFieldContentString: function(fieldContent, length) {
         console.log('verifying: ' + fieldContent + " to be length: " + length);
-        return (fieldContent != null && fieldContent.length >= length);
+        return (fieldContent !== null && fieldContent.length >= length);
     },
 
     validateFieldNumber: function(fieldContent, length) {
-        return (fieldContent != null && fieldContent >= length);
+        return (fieldContent !== null && fieldContent >= length);
     }
 });

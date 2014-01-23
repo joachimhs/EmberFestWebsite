@@ -30,7 +30,7 @@ Emberfest.RegisterTalkController = Ember.Controller.extend({
         }
 
         if (this.get('validationErrors').length === 0) {
-            console.log('registering talk')
+            console.log('registering talk');
             var talkId = Math.uuid(16, 16);
             var talk = this.store.createRecord('talk', {
                 id: talkId,
@@ -50,6 +50,6 @@ Emberfest.RegisterTalkController = Ember.Controller.extend({
     },
 
     validateFieldContent: function(fieldContent, length) {
-        return (fieldContent != null && fieldContent.length >= length);
+        return (fieldContent !== null && fieldContent.length >= length);
     }
 });

@@ -1,0 +1,18 @@
+<h2>Ember Fest Administration</h2>
+
+<div class="row">
+    <div class="small-12 large-3 columns">
+        <h2>Types</h2>
+        <ul class="side-nav adminList">
+            {{#each data in controller}}
+                {{#link-to "adminData" data tagName="li"}}
+                    {{data.id}}
+                {{/link-to}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="small-12 large-9 columns">
+        {{outlet}}
+    </div>
+</div>

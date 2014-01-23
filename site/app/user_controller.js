@@ -41,12 +41,14 @@ Emberfest.UserController = Ember.ObjectController.extend({
     },
 
     createCookie:function (name, value, days) {
+        var expires = "";
+
         if (days) {
             var date = new Date();
             date.setTime(date.getTime()+(days*24*60*60*1000));
-            var expires = "; expires="+date.toGMTString();
+            expires = "; expires="+date.toGMTString();
         }
-        else var expires = "";
+        else expires = "";
         document.cookie = name+"="+value+expires+"; path=/";
     },
 
@@ -55,8 +57,8 @@ Emberfest.UserController = Ember.ObjectController.extend({
         var ca = document.cookie.split(';');
         for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
     },
@@ -66,12 +68,12 @@ Emberfest.UserController = Ember.ObjectController.extend({
     },
 
     isLoggedIn: function() {
-        return this.get('id') != null && (this.get('authLevel') === 'user' || this.get('authLevel') === 'admin' || this.get('authLevel') === 'root')
+        return this.get('id') !== null && (this.get('authLevel') === 'user' || this.get('authLevel') === 'admin' || this.get('authLevel') === 'root');
     }.property('id', 'authLevel'),
 
     showRegistrationForm: function() {
         console.log('showRegistretionFormObserver: ' + this.get('id') + " authLevel: " + this.get('authLevel'));
-        if (this.get('id') != null && this.get('authLevel') === 'not_registered') {
+        if (this.get('id') !== null && this.get('authLevel') === 'not_registered') {
             console.log('transitioning to pages.register');
             this.transitionToRoute('register');
         }

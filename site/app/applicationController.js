@@ -46,6 +46,6 @@ Emberfest.ApplicationController = Ember.Controller.extend({
 
     isOnHome: function() {
         console.log('currentPath: ' + this.get('currentPath'));
-        return this.get('currentPath') === 'index'
+        return this.get('currentPath') === 'index';
     }.property('currentPath')
 });
