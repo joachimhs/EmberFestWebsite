@@ -15,7 +15,7 @@ Emberfest.Router.map(function() {
     this.route('register');
     this.route('registerTalk');
     this.route('profile');
-    this.resource('admin', function() {
+    this.resource('emberfestAdmin', function() {
         this.resource('adminData', {path: '/data/:data_id'}, function() {
 
         });

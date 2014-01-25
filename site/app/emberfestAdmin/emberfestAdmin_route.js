@@ -1,4 +1,4 @@
-Emberfest.AdminRoute = Ember.Route.extend({
+Emberfest.EmberfestAdminRoute = Ember.Route.extend({
     model: function() {
         var data = [];
 
