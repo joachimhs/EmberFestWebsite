@@ -1,6 +1,6 @@
 Emberfest.MunichRoute = Ember.Route.extend({
     model: function() {
-        return this.store.find('page', 'munich')
+        return this.store.find('page', 'munich');
     },
 
     setupController: function(controller, model) {

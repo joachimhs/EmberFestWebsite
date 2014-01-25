@@ -1,6 +1,6 @@
 Emberfest.OrganizersRoute = Ember.Route.extend({
     model: function() {
-        return this.store.find('page', 'about')
+        return this.store.find('page', 'about');
     },
 
     setupController: function(controller, model) {
