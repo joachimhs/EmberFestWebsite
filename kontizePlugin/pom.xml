@@ -34,7 +34,7 @@
 	<dependencies>
         <dependency>
             <groupId>no.haagensoftware</groupId>
-            <artifactId>contentice-api</artifactId>
+            <artifactId>kontize-api</artifactId>
             <version>0.1</version>
         </dependency>
 		<dependency>

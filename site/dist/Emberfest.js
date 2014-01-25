@@ -29,53 +29,7 @@ Emberfest.AdminRoute = Ember.Route.extend({
         return data;
     }
 });
-Ember.Handlebars.registerBoundHelper('markdown', function(property) {
-    var converter = new Showdown.converter();
-    if (property !== null) {
-        return new Handlebars.SafeString(converter.makeHtml(property));
-    }
-});
 
-Emberfest.LiviconView = Ember.View.extend({
-    tagName: 'i',
-    attributeBindings: ["data-name", "data-color", "data-size", "data-hovercolor", "data-op"],
-
-    didInsertElement: function() {
-        $("#" + this.get('elementId')).addLivicon();
-    }
-});
-
-Emberfest.LiviconMorphView = Ember.View.extend({
-    tagName: 'div',
-    attributeBindings: ["data-name", "data-color", "data-size", "data-hovercolor", "data-op"],
-
-    didInsertElement: function() {
-        $("#" + this.get('elementId')).addLivicon();
-    }
-});
-
-Emberfest.Store = DS.Store.extend({
-    adapter:  "Emberfest.Adapter"
-});
-
-DS.RESTAdapter.reopen({
-    namespace: 'json'
-});
-
-Emberfest.Adapter = DS.RESTAdapter.extend({
-    defaultSerializer: "Emberfest/application"
-});
-
-Emberfest.ApplicationSerializer = DS.RESTSerializer.extend({});
-
-Emberfest.RawTransform = DS.Transform.extend({
-    deserialize: function(serialized) {
-        return serialized;
-    },
-    serialize: function(deserialized) {
-        return deserialized;
-    }
-});
 Emberfest.ApplicationController = Ember.Controller.extend({
     needs: ['user'],
 
@@ -128,17 +82,63 @@ Emberfest.ApplicationController = Ember.Controller.extend({
     }.property('currentPath')
 });
 
-Emberfest.IndexIndexRoute = Ember.Route.extend({
-    setupController: function(controller, model) {
-        this._super(controller, model);
-        console.log('INDEX');
-        _gaq.push(['_trackPageview', "/"]);
+Emberfest.UserDetailsComponent = Ember.Component.extend({
+    user: null,
 
-        document.title = 'Welcome to Ember Fest!';
+    actions: {
+        verifyAccountInput: function() {
+            this.verifyInput();
+        }
+    },
+
+    verifyInput: function() {
+        console.log('this verify: ' + this.get('user.yearOfBirth'));
+        this.set('validationErrors', []);
+        if (!this.validateFieldContentString(this.get('user.fullName'), 5)) {
+            this.get('validationErrors').pushObject('Your full name must contain at least 5 characters!');
+        }
+        if (!this.validateFieldContentString(this.get('user.company'), 2)) {
+            this.get('validationErrors').pushObject('Your company name must contain at least 2 characters!');
+        }
+        if (!this.validateFieldContentString(this.get('user.phone'), 7)) {
+            this.get('validationErrors').pushObject('Your phone number must contain at least 7 characters!');
+        }
+        if (!this.validateFieldContentString(this.get('user.countryOfResidence'), 3)) {
+            this.get('validationErrors').pushObject('Your country of residence must contain at least 3 characters!');
+        }
+        if (!this.validateFieldNumber(this.get('user.yearOfBirth'), 1900)) {
+            this.get('validationErrors').pushObject('Your year of birth must be after 1900! ' + this.get('user.yearOfBirth'));
+        }
+
+        if (this.get('validationErrors').length === 0) {
+            console.log('Registering user');
+            //this.get('controllers.user.model').save();
+            console.log(this.get('user'));
+            this.get('user').save();
+            //Emberfest.User.updateRecord(this.get('user'));
+        }
+    },
+
+    validateFieldContentString: function(fieldContent, length) {
+        console.log('verifying: ' + fieldContent + " to be length: " + length);
+        return (fieldContent !== null && fieldContent.length >= length);
+    },
+
+    validateFieldNumber: function(fieldContent, length) {
+        return (fieldContent !== null && fieldContent >= length);
     }
 });
-
+Ember.Handlebars.registerBoundHelper('markdown', function(property) {
+    var converter = new Showdown.converter();
+    if (property !== null) {
+        return new Handlebars.SafeString(converter.makeHtml(property));
+    }
+});
 Emberfest.IndexRoute = Ember.Route.extend({
+    model: function() {
+        return this.store.find('page', 'home')
+    },
+
     setupController: function(controller, model) {
         this._super(controller, model);
         console.log('INDEX');
@@ -295,6 +295,11 @@ Emberfest.Talk.reopenClass({
 Emberfest.AdminData = DS.Model.extend({
 
 });
+Emberfest.Page = DS.Model.extend({
+    title: DS.attr('string'),
+    visible: DS.attr('boolean'),
+    content: DS.attr('string')
+});
 Emberfest.Talk = DS.Model.extend({
     title: DS.attr('string'),
     talkAbstract: DS.attr('string'),
@@ -357,6 +362,32 @@ Emberfest.User = DS.Model.extend({
  Emberfest.Model.delete('/user', Emberfest.User, id);
  }
  });*/
+Emberfest.MunichRoute = Ember.Route.extend({
+    model: function() {
+        return this.store.find('page', 'munich')
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        console.log('INDEX');
+        _gaq.push(['_trackPageview', "/munich"]);
+
+        document.title = 'Munich 2013 - Ember Fest!';
+    }
+});
+Emberfest.OrganizersRoute = Ember.Route.extend({
+    model: function() {
+        return this.store.find('page', 'about')
+    },
+
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        console.log('INDEX');
+        _gaq.push(['_trackPageview', "/organizers"]);
+
+        document.title = 'About - Ember Fest!';
+    }
+});
 Emberfest.ProfileController = Ember.ObjectController.extend({
     needs: ['user'],
 
@@ -376,6 +407,55 @@ Emberfest.ProfileRoute = Ember.Route.extend({
             return this.store.find('user', uuidToken);
         }
     }
+});
+Emberfest.Router = Ember.Router.extend({
+    location: 'history'
+});
+
+Emberfest.Router.map(function() {
+    this.route('index', {path: "/"});
+    this.route('munich');
+    this.route('partners');
+    this.route('organizers');
+    this.resource('talks', function() {
+        this.route('talk', {path: "/:talk_id"});
+    });
+    this.route('tickets');
+    this.route('venue');
+    this.route('register');
+    this.route('registerTalk');
+    this.route('profile');
+    this.resource('admin', function() {
+        this.resource('adminData', {path: '/data/:data_id'}, function() {
+
+        });
+    });
+});
+Emberfest.Store = DS.Store.extend({
+    adapter:  "Emberfest.Adapter"
+});
+
+DS.RESTAdapter.reopen({
+    namespace: 'json'
+});
+
+Emberfest.Adapter = DS.RESTAdapter.extend({
+    defaultSerializer: "Emberfest/application"
+});
+
+Emberfest.ApplicationSerializer = DS.RESTSerializer.extend({});
+
+Emberfest.RawTransform = DS.Transform.extend({
+    deserialize: function(serialized) {
+        return serialized;
+    },
+    serialize: function(deserialized) {
+        return deserialized;
+    }
+});
+
+Emberfest.PageAdapter = Emberfest.Adapter.extend({
+    namespace: 'json/data'
 });
 Emberfest.RegisterController = Ember.Controller.extend({
     needs: ['user'],
@@ -494,35 +574,6 @@ Emberfest.RegisterTalkRoute = Ember.Route.extend({
 
         document.title = 'Register Talk - Ember Fest';
     }
-});
-Emberfest.RegisterTextfield = Ember.TextField.extend({
-    focusOut: function() {
-        console.log(this.get('controller'));
-        this.get('controller').verifyInput();
-    }
-});
-Emberfest.Router = Ember.Router.extend({
-    location: 'history'
-});
-
-Emberfest.Router.map(function() {
-    this.route('index', {path: "/"});
-    this.route('munich');
-    this.route('partners');
-    this.route('organizers');
-    this.resource('talks', function() {
-        this.route('talk', {path: "/:talk_id"});
-    });
-    this.route('tickets');
-    this.route('venue');
-    this.route('register');
-    this.route('registerTalk');
-    this.route('profile');
-    this.resource('admin', function() {
-        this.resource('adminData', {path: '/data/:data_id'}, function() {
-
-        });
-    });
 });
 Emberfest.TalksTalkRoute = Ember.Route.extend({
     model: function(key) {
@@ -673,49 +724,38 @@ Emberfest.UserController = Ember.ObjectController.extend({
         console.log(this.get('model'));
     }.observes('model')
 });
-Emberfest.UserDetailsComponent = Ember.Component.extend({
-    user: null,
-
-    actions: {
-        verifyAccountInput: function() {
-            this.verifyInput();
-        }
+Emberfest.VenueRoute = Ember.Route.extend({
+    model: function() {
+        return this.store.find('page', 'venue')
     },
 
-    verifyInput: function() {
-        console.log('this verify: ' + this.get('user.yearOfBirth'));
-        this.set('validationErrors', []);
-        if (!this.validateFieldContentString(this.get('user.fullName'), 5)) {
-            this.get('validationErrors').pushObject('Your full name must contain at least 5 characters!');
-        }
-        if (!this.validateFieldContentString(this.get('user.company'), 2)) {
-            this.get('validationErrors').pushObject('Your company name must contain at least 2 characters!');
-        }
-        if (!this.validateFieldContentString(this.get('user.phone'), 7)) {
-            this.get('validationErrors').pushObject('Your phone number must contain at least 7 characters!');
-        }
-        if (!this.validateFieldContentString(this.get('user.countryOfResidence'), 3)) {
-            this.get('validationErrors').pushObject('Your country of residence must contain at least 3 characters!');
-        }
-        if (!this.validateFieldNumber(this.get('user.yearOfBirth'), 1900)) {
-            this.get('validationErrors').pushObject('Your year of birth must be after 1900! ' + this.get('user.yearOfBirth'));
-        }
+    setupController: function(controller, model) {
+        this._super(controller, model);
+        console.log('INDEX');
+        _gaq.push(['_trackPageview', "/venue"]);
 
-        if (this.get('validationErrors').length === 0) {
-            console.log('Registering user');
-            //this.get('controllers.user.model').save();
-            console.log(this.get('user'));
-            this.get('user').save();
-            //Emberfest.User.updateRecord(this.get('user'));
-        }
-    },
+        document.title = 'Venue - Ember Fest!';
+    }
+});
+Emberfest.LiviconMorphView = Ember.View.extend({
+    tagName: 'div',
+    attributeBindings: ["data-name", "data-color", "data-size", "data-hovercolor", "data-op"],
 
-    validateFieldContentString: function(fieldContent, length) {
-        console.log('verifying: ' + fieldContent + " to be length: " + length);
-        return (fieldContent !== null && fieldContent.length >= length);
-    },
+    didInsertElement: function() {
+        $("#" + this.get('elementId')).addLivicon();
+    }
+});
+Emberfest.LiviconView = Ember.View.extend({
+    tagName: 'i',
+    attributeBindings: ["data-name", "data-color", "data-size", "data-hovercolor", "data-op"],
 
-    validateFieldNumber: function(fieldContent, length) {
-        return (fieldContent !== null && fieldContent >= length);
+    didInsertElement: function() {
+        $("#" + this.get('elementId')).addLivicon();
+    }
+});
+Emberfest.RegisterTextfield = Ember.TextField.extend({
+    focusOut: function() {
+        console.log(this.get('controller'));
+        this.get('controller').verifyInput();
     }
 });

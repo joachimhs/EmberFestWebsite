@@ -286,7 +286,7 @@ function program2(depth0,data) {
 Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
   
@@ -294,7 +294,12 @@ function program1(depth0,data) {
   data.buffer.push("2013 will be published");
   }
 
-  data.buffer.push("<h2>We're back</h2>\n\n<p>\n  Ember Fest 2013 was an absolute success. In 2014 Ember Fest will take the\n  conference to a new level over three amazing days in late August. As last\n  year, Ember Fest will by far be the European Ember.js event this year!\n</p>\n\n<p>\n  We are working hard on planning the event, which will contain hands-on\n  training sessions, a hackathon and awesome presentations that will showcase\n  what Ember.js brings to the table!\n</p>\n\n<p>\n  The videos from ");
+  data.buffer.push("<h2>");
+  stack1 = helpers._triageMustache.call(depth0, "content.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</h2>\n\n");
+  data.buffer.push(escapeExpression((helper = helpers.markdown || (depth0 && depth0.markdown),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "content.content", options) : helperMissing.call(depth0, "markdown", "content.content", options))));
+  data.buffer.push("\n\n<p>\n  The videos from ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "munich", options) : helperMissing.call(depth0, "link-to", "munich", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push(",\n  one video per week, throughout the rest of the year.\n</p>\n");
@@ -315,20 +320,30 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["munich"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<h2>Ember Fest 2013 - Munich</h2>\n\n<p>\n  Ember Fest 2013 was an absolute success! Ember Fest Munich offered two days\n  of introductory Ember.js training, a world-class Hackathon as well as a\n  full day conference. After the main event, a proper Bavarian celebration\n  was played out at the amazing Hofbräuhaus.\n</p>\n\n<p>\n  <a href=\"http://www.infoq.com\">InfoQ</a> were kind enough to send their\n  videographer to film the presentations. These will be published on their\n  website throughout the rest of 2013. Once the talks are made available,\n  a link will be provided in the table below.\n</p>\n\n\n<h3>The list of 2013 presentations</h3>\n\n\n<table>\n  <thead>\n    <tr>\n        <th>Title of the presentation</th>\n        <th width=\"150\">Presenter</th>\n        <th width=\"150\">Links</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>\n          <p class=\"title\">2-day Introductory Ember.js Training</p>\n          Joachim is the author of Ember.js in Action and the lead organizer of Ember Fest.\n          Joachim have worked with Ember.js since it forked out of SproutCore and have a wide experience developing web applications.\n        </td>\n        <td>Joachim Haagen Skeie</td>\n        <td><a href=\"http://emberjstraining.com\">Ember.js Training</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Query params with the Ember router: past, present and future</p>\n          Alex Speller introduces Ember Query, a library enabling query string usage in Ember: introduction, advanced usage, tips & tricks, the future.\n        </td>\n        <td>Alex Speller</td>\n        <td><a href=\"http://www.infoq.com/presentations/ember-query-string?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row1\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Productive Out-of-the-Box</p>\n          Anthony provides a survey of the Ember.js tooling landscape, highlighting the use of Yeoman. Anthony Bull (@inkredabull) is the Sr. Web Engineer at CrowdFlower and has been working with Ember.js for over a year.\n        </td>\n        <td>Anthony Bull</td>\n        <td><a href=\"http://www.infoq.com/presentations/emberjs-tools-yeoman\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Experiences building a hypervideo-based webapp with Ember.js, Popcorn.js and HTML5</p>\n          Thomas talks about the advantages, challenges and lessons learnt in realizing a multimedia-heavy, interactive HTML5 application with Ember.js.\n        </td>\n        <td>Thomas Herrmann</td>\n        <td><a href=\"http://www.infoq.com/presentations/hypermedia-emberjs-html5\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Insights from using ember.js in the field</p>\n          This talk will share some best practice about using ember.js to master the needs of real-world web applications and present the things who worked well and the ones who didn't.\n        </td>\n        <td>Stefan Fochler</td>\n        <td><a href=\"http://www.infoq.com/presentations/emberjs-use-case\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Ember Reusable Components and Widgets</p>\n          Sergey is a Front-end developer in New Proimage (Agfa) residing in Israel. Sergeys talk will go over Ember.js' many strong sides. One of them is combination of Handlebars templates, Ember.View's and their nesting which allows to built indeed complex UI.\n        </td>\n        <td>Sergey Bolshchikov</td>\n        <td><a href=\"http://www.infoq.com/presentations/ember-view-handlebars-ui\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Complex Architectures in Ember</p>\n          In Ember, convention trumps configuration so strongly we easily forget that there are a myriad of moving parts under the hood. Once we move past CRUD applications, understanding how messages move through Ember's views, controllers, and routes becomes crucial.\n        </td>\n        <td>Matthew Beale</td>\n        <td><a href=\"http://www.infoq.com/presentations/emberjs-messages-views-controller-router\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Ember-Data, the way forward</p>\n          Igor Terzic presents several cases where Ember Data is used in production, and outlines some of the features that are intended to be included in the future.\n        </td>\n        <td>Igor Terzic</td>\n        <td><a href=\"http://www.infoq.com/presentations/ember-data?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row3\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Advanced Patterns</p>\n          Pauls talk presents a few advanced/non-obvious techniques, useful in process of building large EmberJS applications with Ember Data\n        </td>\n        <td>Paul Chavard</td>\n        <td><a href=\"http://www.infoq.com/presentations/emberjs-patterns-data\">Video (InfoQ)</a></td>\n    </tr>\n    <tr>\n        <td>\n          <p class=\"title\">Forget Passwords, Use Persona</p>\n          Ember Fest uses Mozilla Persona for registration and sign-in. Come learn what Persona is, how Persona works, and how you can use Persona to get rid of passwords in your own applications. This will be a short introductory talk followed by an audience-driven deep dive into Persona's philosophy, design, and implementation.\n        </td>\n        <td>Dan Callahan</td>\n        <td>Video Coming Soon!</td>\n    </tr>\n  </tbody>\n</table>\n");
+  data.buffer.push("<h2>");
+  stack1 = helpers._triageMustache.call(depth0, "title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</h2>\n\n");
+  data.buffer.push(escapeExpression((helper = helpers.markdown || (depth0 && depth0.markdown),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "content.content", options) : helperMissing.call(depth0, "markdown", "content.content", options))));
+  return buffer;
   
 });
 
 Ember.TEMPLATES["organizers"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<h2>Meet the organizers</h2>\n\n<p>A parapraph of text explaining why are we doing what we are doing. Also, links to how to reach us.</p>\n\n<article class=\"person\">\n  <div class=\"row\">\n    <div class=\"small-12 large-2 columns text-center\">\n      <img src=\"/images/organizers/tair.png\">\n    </div>\n    <div class=\"small-12 large-10 columns bio\">\n      <h4>Tair Assimov</h4>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed ligula dictum, egestas odio hendrerit, mollis massa. Curabitur convallis cursus risus, id imperdiet leo rhoncus vitae. Nullam euismod lacus ac blandit mattis. Vivamus dictum adipiscing enim, et tempor lectus tincidunt ac. Ut dictum felis sem.\n      </p>\n      <div class=\"links\">\n        <a href=\"#\" class=\"icon\"><i class=\"foundicon-twitter\"></i></a>\n        <a href=\"#\" class=\"icon\"><i class=\"foundicon-github\"></i></a>\n        <a href=\"#\" class=\"icon\"><i class=\"foundicon-linkedin\"></i></a>\n        <!-- See social set here: http://zurb.com/playground/foundation-icons -->\n      </div>\n    </div>\n  </div>\n</article>\n");
+  data.buffer.push("<h2>");
+  stack1 = helpers._triageMustache.call(depth0, "content.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</h2>\n\n");
+  data.buffer.push(escapeExpression((helper = helpers.markdown || (depth0 && depth0.markdown),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "content.content", options) : helperMissing.call(depth0, "markdown", "content.content", options))));
+  return buffer;
   
 });
 
@@ -716,9 +731,14 @@ function program4(depth0,data) {
 Ember.TEMPLATES["venue"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<h2>Venue</h2>\n");
+  data.buffer.push("<h2>");
+  stack1 = helpers._triageMustache.call(depth0, "content.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</h2>\n\n");
+  data.buffer.push(escapeExpression((helper = helpers.markdown || (depth0 && depth0.markdown),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "content.content", options) : helperMissing.call(depth0, "markdown", "content.content", options))));
+  return buffer;
   
 });

@@ -2,6 +2,7 @@ package no.haagensoftware.kontize.plugin;
 
 import io.netty.channel.ChannelHandler;
 import no.haagensoftware.contentice.handler.FileServerHandler;
+import no.haagensoftware.contentice.handler.DataHandler;
 import no.haagensoftware.contentice.spi.RouterPlugin;
 import no.haagensoftware.kontize.handler.CredentialsHandler;
 import no.haagensoftware.kontize.handler.TalkHandler;
@@ -9,6 +10,7 @@ import no.haagensoftware.kontize.handler.UserHandler;
 import org.apache.log4j.Logger;
 
 import java.util.LinkedHashMap;
+
 
 /**
  * Created by jhsmbp on 1/24/14.
@@ -41,7 +43,6 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("startsWith:/registerTalk", FileServerHandler.class);
         routeMap.put("startsWith:/munich", FileServerHandler.class);
         routeMap.put("startsWith:/profile", FileServerHandler.class);
-
     }
 
     @Override
