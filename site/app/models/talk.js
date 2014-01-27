@@ -7,5 +7,6 @@ Emberfest.Talk = DS.Model.extend({
     participantRequirements: DS.attr('string'),
     comments: DS.attr('string'),
     talkSuggestedBy: DS.attr('string'),
-    talkBy: DS.attr('string')
+    talkBy: DS.attr('string'),
+    talkIntendedAudience: DS.attr('string')
 });

@@ -16,6 +16,10 @@ public class User {
     private Boolean attendingDinner;
     private String userLevel;
     private Long loginExpires;
+    private String bio;
+    private String twitter;
+    private String github;
+    private String linkedin;
 
 
     public User() {
@@ -116,5 +120,37 @@ public class User {
 
     public void setLoginExpires(Long loginExpires) {
         this.loginExpires = loginExpires;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getTwitter() {
+        return twitter;
+    }
+
+    public void setTwitter(String twitter) {
+        this.twitter = twitter;
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
+    }
+
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
     }
 }

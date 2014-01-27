@@ -12,6 +12,7 @@ public class SubmittedTalk {
     private String outline;
     private String participantRequirements;
     private String comments;
+    private String talkIntendedAudience;
 
     public SubmittedTalk() {
         // TODO Auto-generated constructor stub
@@ -79,5 +80,13 @@ public class SubmittedTalk {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public String getTalkIntendedAudience() {
+        return talkIntendedAudience;
+    }
+
+    public void setTalkIntendedAudience(String talkIntendedAudience) {
+        this.talkIntendedAudience = talkIntendedAudience;
     }
 }

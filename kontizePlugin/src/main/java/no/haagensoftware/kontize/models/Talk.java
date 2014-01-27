@@ -8,6 +8,7 @@ public class Talk {
     private String userId;
     private String title;
     private String talkAbstract;
+    private String talkIntendedAudience;
     private String topics;
     private String talkType;
     private String outline;
@@ -88,5 +89,13 @@ public class Talk {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public String getTalkIntendedAudience() {
+        return talkIntendedAudience;
+    }
+
+    public void setTalkIntendedAudience(String talkIntendedAudience) {
+        this.talkIntendedAudience = talkIntendedAudience;
     }
 }

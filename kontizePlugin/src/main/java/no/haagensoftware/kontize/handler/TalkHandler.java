@@ -86,6 +86,7 @@ public class TalkHandler extends ContenticeHandler {
                         updatedAbstract.setTalkAbstract(submittedTalk.getTalkAbstract());
                         updatedAbstract.setTalkType(submittedTalk.getTalkType());
                         updatedAbstract.setTopics(submittedTalk.getTopics());
+                        updatedAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         updatedAbstract.setUserId(cookie.getUserId());
                         LevelDbEnv.getInstance().getAbstractDao().persistAbstract(updatedAbstract);
 
@@ -102,6 +103,7 @@ public class TalkHandler extends ContenticeHandler {
                         newAbstract.setTalkAbstract(submittedTalk.getTalkAbstract());
                         newAbstract.setTalkType(submittedTalk.getTalkType());
                         newAbstract.setTopics(submittedTalk.getTopics());
+                        newAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         newAbstract.setUserId(cookie.getUserId());
                         LevelDbEnv.getInstance().getAbstractDao().persistAbstract(newAbstract);
 
@@ -142,6 +144,7 @@ public class TalkHandler extends ContenticeHandler {
         talkJson.addProperty("talkType", talk.getTalkType());
         talkJson.addProperty("outline", talk.getOutline());
         talkJson.addProperty("participantRequirements", talk.getParticipantRequirements());
+        talkJson.addProperty("talkIntendedAudience", talk.getTalkIntendedAudience());
         talkJson.addProperty("comments", talk.getComments());
 
         if (cookieUuidToken != null) {

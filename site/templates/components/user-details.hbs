@@ -10,6 +10,13 @@
 {{/if}}
 
 <form>
+    {{#if hasFileReader}}
+        <div class="row">
+            <div class="large-12 columns">
+                {{view Emberfest.FileReaderView}}
+            </div>
+        </div>
+    {{/if}}
 
   <div class="row">
     <div class="large-12 columns">
@@ -32,6 +39,13 @@
     </div>
   </div>
 
+    <div class="row">
+        <div class="large-12 columns">
+            <label>Bio</label>
+            {{textarea value=user.bio class="form-control" placeholder="Please include 5-6 sentences describing you, and what you as a potential speaker bring to Ember Fest"}}
+        </div>
+    </div>
+
   <div class="row">
     <div class="large-12 columns">
       <label>Dietary requirements</label>
@@ -53,6 +67,26 @@
     </div>
   </div>
 
+    <div class="row">
+        <div class="large-12 columns">
+            <label>Twitter</label>
+            {{input value=user.twitter type="text" class="form-control" placeholder="Your Twitter username"}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <label>GitHub</label>
+            {{input value=user.github type="text" class="form-control" placeholder="Your GitHub username"}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <label>LinkedIn</label>
+            {{input value=user.linkedIn type="text" class="form-control" placeholder="Your LinkedIn URL"}}
+        </div>
+    </div>
   <div class="row">
     <div class="large-12 columns">
       <label>Conference dinner</label>

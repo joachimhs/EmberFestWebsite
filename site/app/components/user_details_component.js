@@ -42,5 +42,9 @@ Emberfest.UserDetailsComponent = Ember.Component.extend({
 
     validateFieldNumber: function(fieldContent, length) {
         return (fieldContent !== null && fieldContent >= length);
-    }
+    },
+
+    hasFileReader: function() {
+        return (window.File && window.FileReader && window.FileList && window.Blob);
+    }.property()
 });

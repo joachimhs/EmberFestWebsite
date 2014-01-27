@@ -66,6 +66,10 @@ public class UserHandler extends ContenticeHandler {
                         storedUser.setCompany(newUser.getCompany());
                         storedUser.setCountryOfResidence(newUser.getCountryOfResidence());
                         storedUser.setDietaryRequirements(newUser.getDietaryRequirements());
+                        storedUser.setBio(newUser.getBio());
+                        storedUser.setTwitter(newUser.getTwitter());
+                        storedUser.setGithub(newUser.getGithub());
+                        storedUser.setLinkedin(newUser.getLinkedin());
                         storedUser.setPhone(newUser.getPhone());
                         storedUser.setYearOfBirth(newUser.getYearOfBirth());
                         authenticationContext.persistUser(storedUser);
@@ -102,6 +106,10 @@ public class UserHandler extends ContenticeHandler {
             userJson.addProperty("dietaryRequirements", user.getDietaryRequirements());
             userJson.addProperty("countryOfResidence", user.getCountryOfResidence());
             userJson.addProperty("yearOfBirth", user.getYearOfBirth());
+            userJson.addProperty("bio", user.getBio());
+            userJson.addProperty("twitter", user.getTwitter());
+            userJson.addProperty("github", user.getGithub());
+            userJson.addProperty("linkedin", user.getLinkedin();
             userJson.addProperty("attendingDinner", user.getAttendingDinner() != null ? user.getAttendingDinner().booleanValue() : false);
             userJson.addProperty("authLevel", user.getUserLevel());
         }
