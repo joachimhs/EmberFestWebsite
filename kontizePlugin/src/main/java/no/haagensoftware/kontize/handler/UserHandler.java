@@ -109,7 +109,7 @@ public class UserHandler extends ContenticeHandler {
             userJson.addProperty("bio", user.getBio());
             userJson.addProperty("twitter", user.getTwitter());
             userJson.addProperty("github", user.getGithub());
-            userJson.addProperty("linkedin", user.getLinkedin();
+            userJson.addProperty("linkedin", user.getLinkedin());
             userJson.addProperty("attendingDinner", user.getAttendingDinner() != null ? user.getAttendingDinner().booleanValue() : false);
             userJson.addProperty("authLevel", user.getUserLevel());
         }

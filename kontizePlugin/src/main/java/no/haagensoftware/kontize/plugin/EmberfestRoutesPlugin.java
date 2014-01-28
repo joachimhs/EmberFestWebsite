@@ -2,8 +2,8 @@ package no.haagensoftware.kontize.plugin;
 
 import io.netty.channel.ChannelHandler;
 import no.haagensoftware.contentice.handler.FileServerHandler;
-import no.haagensoftware.contentice.handler.DataHandler;
 import no.haagensoftware.contentice.spi.RouterPlugin;
+import no.haagensoftware.kontize.handler.AdminKeysHandler;
 import no.haagensoftware.kontize.handler.CredentialsHandler;
 import no.haagensoftware.kontize.handler.TalkHandler;
 import no.haagensoftware.kontize.handler.UserHandler;
@@ -32,6 +32,9 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
 
         routeMap.put("/json/talks", TalkHandler.class);
         routeMap.put("/json/talks/{talk}", TalkHandler.class);
+
+        routeMap.put("/json/adminKeys", AdminKeysHandler.class);
+        routeMap.put("/json/adminKeys/{adminKey}", AdminKeysHandler.class);
 
         routeMap.put("startsWith:/pages", FileServerHandler.class);
         routeMap.put("startsWith:/talk", FileServerHandler.class);

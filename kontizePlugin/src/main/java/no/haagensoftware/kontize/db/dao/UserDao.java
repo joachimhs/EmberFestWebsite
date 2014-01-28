@@ -1,13 +1,18 @@
 package no.haagensoftware.kontize.db.dao;
 
 import com.google.gson.Gson;
+import no.haagensoftware.kontize.models.AdminKey;
 import no.haagensoftware.kontize.models.Cookie;
+import no.haagensoftware.kontize.models.Talk;
 import no.haagensoftware.kontize.models.User;
 import org.apache.log4j.Logger;
 import org.iq80.leveldb.DB;
 import org.iq80.leveldb.DBIterator;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
+import java.util.List;
 
 import static org.iq80.leveldb.impl.Iq80DBFactory.asString;
 import static org.iq80.leveldb.impl.Iq80DBFactory.bytes;
@@ -27,6 +32,35 @@ public class UserDao {
         String userJson = new Gson().toJson(user);
         System.out.println("Persisting user: " + userJson);
         db.put(bytes("user_" + user.getUserId()), bytes(userJson));
+    }
+
+    public List<AdminKey> getKeys() {
+        List<AdminKey> keys = new ArrayList<>();
+
+        DBIterator iterator = db.iterator();
+        try {
+            for(iterator.seekToFirst(); iterator.hasNext(); iterator.next()) {
+                String json = asString(iterator.peekNext().getValue());
+                keys.add(new AdminKey(asString(iterator.peekNext().getKey()), json));
+            }
+        } finally {
+            try {
+                iterator.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
+        return keys;
+    }
+
+    public void storeKey(String key, String value) {
+        db.put(bytes(key), bytes(value));
+    }
+
+    public void deleteKey(String key) {
+        db.delete(bytes(key));
     }
 
     public User getUser(String userId) {
