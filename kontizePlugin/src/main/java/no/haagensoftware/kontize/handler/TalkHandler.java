@@ -17,25 +17,22 @@ import java.util.List;
  */
 public class TalkHandler extends ContenticeHandler {
     private static Logger logger = Logger.getLogger(TalkHandler.class.getName());
+    private AuthenticationContext authenticationContext;
+
+    public TalkHandler() {
+        authenticationContext = AuthenticationContext.getInstance();
+    }
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
-        String uri = getUri(fullHttpRequest);
-
         String id = getParameter("talk");
-
-        AuthenticationContext authenticationContext = AuthenticationContext.getInstance();
-
-        if (id != null) {
-            id = id.replaceAll("\\%20", " ");
-        }
-
-        logger.info("ID: " + id);
+        boolean isUser = false;
 
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
             cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
+            authenticationContext.isUser(cookieUuidToken, cachedUserResult.getUserId());
         }
         String responseContent = "";
 

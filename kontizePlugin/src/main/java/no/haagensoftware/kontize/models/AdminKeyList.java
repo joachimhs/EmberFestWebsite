@@ -1,5 +1,6 @@
 package no.haagensoftware.kontize.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,6 +10,7 @@ public class AdminKeyList {
     private List<AdminKey> adminKeys;
 
     public AdminKeyList() {
+        adminKeys = new ArrayList<>();
     }
 
     public List<AdminKey> getAdminKeys() {

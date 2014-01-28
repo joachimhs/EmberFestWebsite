@@ -18,6 +18,11 @@ import java.util.List;
  */
 public class UserHandler extends ContenticeHandler {
     private static final Logger logger = Logger.getLogger(UserHandler.class.getName());
+    private AuthenticationContext authenticationContext;
+
+    public UserHandler() {
+        authenticationContext = AuthenticationContext.getInstance();
+    }
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
@@ -25,8 +30,6 @@ public class UserHandler extends ContenticeHandler {
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
 
         logger.info("uuidToken: " + cookieUuidToken);
-
-        AuthenticationContext authenticationContext = AuthenticationContext.getInstance();
 
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {

@@ -157,6 +157,16 @@ public class AuthenticationContext {
         return authLevel;
     }
 
+    public boolean isAdmin(String cookieId, String userId) {
+        String authLevel = getUserAuthLevel(cookieId, userId);
+        return authLevel.equals("admin") || authLevel.equals("root");
+    }
+
+    public boolean isUser(String cookieId, String userId) {
+        String authLevel = getUserAuthLevel(cookieId, userId);
+        return authLevel.equals("admin") || authLevel.equals("root") || authLevel.equals("user");
+    }
+
     public User getUser(String email) {
         return LevelDbEnv.getInstance().getUserDao().getUser(email);
     }
