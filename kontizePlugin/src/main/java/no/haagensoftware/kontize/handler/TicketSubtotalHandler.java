@@ -75,9 +75,8 @@ public class TicketSubtotalHandler extends ContenticeHandler {
                     SubCategoryData subCategoryData = getStorage().getSubCategory("ticketTypes", ticket.getType());
                     if (subCategoryData != null) {
                         ticketTypes.add(TicketsDao.convertSubcategoryToTicketType(subCategoryData));
+                        subtotal += ticketTypes.get(ticketTypes.size() - 1).getPrice();
                     }
-
-                    subtotal += ticket.getPrice().longValue();
                 }
             }
 
