@@ -1,6 +1,7 @@
 package no.haagensoftware.kontize.handler;
 
-import no.haagensoftware.kontize.db.LevelDbEnv;
+import no.haagensoftware.contentice.spi.StoragePlugin;
+import no.haagensoftware.kontize.db.dao.UserDao;
 import no.haagensoftware.kontize.models.AuthenticationResult;
 import no.haagensoftware.kontize.models.Cookie;
 import no.haagensoftware.kontize.models.MozillaPersonaCredentials;
@@ -19,13 +20,19 @@ public class AuthenticationContext {
 
     private String rootUser = "";
 
-    private AuthenticationContext() {
+    private StoragePlugin storagePlugin = null;
+    private UserDao userDao = null;
+
+    private AuthenticationContext(StoragePlugin storagePlugin) {
         rootUser = System.getProperty("com.embercampeurope.rootuser", "");
+        this.storagePlugin = storagePlugin;
+        userDao = new UserDao(this.storagePlugin);
+
     }
 
-    public static AuthenticationContext getInstance() {
+    public static AuthenticationContext getInstance(StoragePlugin storagePlugin) {
         if (instance == null) {
-            instance = new AuthenticationContext();
+            instance = new AuthenticationContext(storagePlugin);
         }
 
         return instance;
@@ -35,7 +42,7 @@ public class AuthenticationContext {
 //		userDao.listDB(dbEnv.getDb());
 
         AuthenticationResult authResult = new AuthenticationResult();
-        Cookie cookie = LevelDbEnv.getInstance().getUserDao().getCookie(uuidToken);
+        Cookie cookie = userDao.getCookie(uuidToken);
         if (cookie != null) {
             authResult.setUuidToken(uuidToken);
             authResult.setUserId(cookie.getUserId());
@@ -50,7 +57,7 @@ public class AuthenticationContext {
     }
 
     public Cookie getAuthenticatedUser(String uuidToken) {
-        return LevelDbEnv.getInstance().getUserDao().getCookie(uuidToken);
+        return userDao.getCookie(uuidToken);
     }
 
     public AuthenticationResult verifyAndGetUser(MozillaPersonaCredentials credentials) {
@@ -68,7 +75,7 @@ public class AuthenticationContext {
                 cookie.setId(UUID.randomUUID().toString());
                 cookie.setCreated(System.currentTimeMillis());
                 cookie.setLastUsed(System.currentTimeMillis());
-                LevelDbEnv.getInstance().getUserDao().persistCookie(cookie);
+                userDao.persistCookie(cookie);
 
                 authResult.setUuidToken(cookie.getId());
                 authResult.setUuidValidated(true);
@@ -79,15 +86,19 @@ public class AuthenticationContext {
                 String uniqueUserId = UUID.randomUUID().toString();
                 User newUser = new User();
                 newUser.setUserId(credentials.getEmail());
-                newUser.setId(uniqueUserId);
-                registerNewUser(newUser, "not_registered");
+                newUser.setId(credentials.getEmail());
+                newUser.setAuthenticationToken(uniqueUserId);
+                newUser.setUserLevel("not_registered");
+                registerNewUser(newUser);
 
                 Cookie cookie = new Cookie();
                 cookie.setUserId(newUser.getUserId());
                 cookie.setId(UUID.randomUUID().toString());
                 cookie.setCreated(System.currentTimeMillis());
                 cookie.setLastUsed(System.currentTimeMillis());
-                LevelDbEnv.getInstance().getUserDao().persistCookie(cookie);
+
+                authResult.setUuidToken(cookie.getId());
+                userDao.persistCookie(cookie);
             }
         } else {
             authResult.setUuidValidated(false);
@@ -101,7 +112,7 @@ public class AuthenticationContext {
     public boolean logUserOut(String uuidToken) {
         boolean loggedOut = false;
 
-        LevelDbEnv.getInstance().getUserDao().deleteCookie(uuidToken);
+        userDao.deleteCookie(uuidToken);
 
         loggedOut = true;
 
@@ -112,26 +123,14 @@ public class AuthenticationContext {
         return getUser(email) == null;
     }
 
-    public boolean registerNewUser(User user, String userLevel) {
-        User newUser = new User();
-        newUser.setId(user.getId());
-        newUser.setUserId(user.getUserId());
-        newUser.setFullName((user.getFullName()));
-        newUser.setAttendingDinner(user.getAttendingDinner());
-        newUser.setUserLevel(userLevel);
-        newUser.setCompany(user.getCompany());
-        newUser.setCountryOfResidence(user.getCountryOfResidence());
-        newUser.setDietaryRequirements(user.getDietaryRequirements());
-        newUser.setPhone(user.getPhone());
-        newUser.setYearOfBirth(user.getYearOfBirth());
-
-        LevelDbEnv.getInstance().getUserDao().persistUser(newUser);
+    public boolean registerNewUser(User user) {
+        userDao.persistUser(user);
 
         return true;
     }
 
     public void persistUser(User user) {
-        LevelDbEnv.getInstance().getUserDao().persistUser(user);
+        userDao.persistUser(user);
     }
 
     public String getUserAuthLevel(String cookieId, String userId) {
@@ -146,7 +145,7 @@ public class AuthenticationContext {
                 logger.info("Setting authLevel to ROOT for : " + userId);
             } else if (userId != null) {
                 //If user have user-level privileges, apply them
-                User user = LevelDbEnv.getInstance().getUserDao().getUser(userId);
+                User user = userDao.getUser(userId);
 
                 if (user != null && user.getUserLevel() != null) {
                     authLevel = user.getUserLevel();
@@ -168,6 +167,6 @@ public class AuthenticationContext {
     }
 
     public User getUser(String email) {
-        return LevelDbEnv.getInstance().getUserDao().getUser(email);
+        return userDao.getUser(email);
     }
 }

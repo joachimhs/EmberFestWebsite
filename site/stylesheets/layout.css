@@ -299,6 +299,10 @@ article.person img {
   background: #d35400;
 }
 
+#sponsor-packages .iron li.title {
+    background: #595959;
+}
+
 #sponsor-packages .bullet-item {
   text-align: left;
 }

@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
-import no.haagensoftware.kontize.db.LevelDbEnv;
+import no.haagensoftware.kontize.db.dao.TalkDao;
 import no.haagensoftware.kontize.models.*;
 import org.apache.log4j.Logger;
 
@@ -18,13 +18,18 @@ import java.util.List;
 public class TalkHandler extends ContenticeHandler {
     private static Logger logger = Logger.getLogger(TalkHandler.class.getName());
     private AuthenticationContext authenticationContext;
-
-    public TalkHandler() {
-        authenticationContext = AuthenticationContext.getInstance();
-    }
+    private TalkDao talkDao = null;
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
+        if (authenticationContext == null) {
+            authenticationContext = AuthenticationContext.getInstance(getStorage());
+        }
+
+        if (talkDao == null) {
+            talkDao = new TalkDao(getStorage());
+        }
+
         String id = getParameter("talk");
         boolean isUser = false;
 
@@ -37,7 +42,8 @@ public class TalkHandler extends ContenticeHandler {
         String responseContent = "";
 
         if (isGet(fullHttpRequest) && id == null) {
-            List<Talk> talks = LevelDbEnv.getInstance().getAbstractDao().getAbstracts();
+            List<Talk> talks = talkDao.getTalks();
+
             logger.info("Submitted abstracts: ");
             StringBuffer sb = new StringBuffer();
             JsonArray abstarctsArray = new JsonArray();
@@ -55,7 +61,8 @@ public class TalkHandler extends ContenticeHandler {
 
             responseContent = topObject.toString();
         } else if (isGet(fullHttpRequest) && id != null) {
-            Talk talk = LevelDbEnv.getInstance().getAbstractDao().getAbstract(id);
+            Talk talk = talkDao.getTalk(id);
+
             if (talk != null) {
                 JsonObject talkJson = generateTalkJson(cookieUuidToken, talk);
 
@@ -72,7 +79,8 @@ public class TalkHandler extends ContenticeHandler {
                 SubmittedTalk submittedTalk = talkObject.getTalk();
                 Cookie cookie = authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken());
                 if (submittedTalk != null && cookie != null) {
-                    Talk talk = LevelDbEnv.getInstance().getAbstractDao().getAbstract(submittedTalk.getId());
+
+                    Talk talk = talkDao.getTalk(submittedTalk.getId());
                     if (talk != null && talk.getUserId().equals(cookie.getUserId())) {
                         Talk updatedAbstract = new Talk();
                         updatedAbstract.setAbstractId(submittedTalk.getId());
@@ -85,7 +93,8 @@ public class TalkHandler extends ContenticeHandler {
                         updatedAbstract.setTopics(submittedTalk.getTopics());
                         updatedAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         updatedAbstract.setUserId(cookie.getUserId());
-                        LevelDbEnv.getInstance().getAbstractDao().persistAbstract(updatedAbstract);
+
+                        talkDao.storeTalk(updatedAbstract, cachedUserResult.getUserId());
 
                         JsonObject toplevelObject = new JsonObject();
                         toplevelObject.add("talk", generateTalkJson(cookieUuidToken, updatedAbstract));
@@ -102,7 +111,8 @@ public class TalkHandler extends ContenticeHandler {
                         newAbstract.setTopics(submittedTalk.getTopics());
                         newAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         newAbstract.setUserId(cookie.getUserId());
-                        LevelDbEnv.getInstance().getAbstractDao().persistAbstract(newAbstract);
+
+                        talkDao.storeTalk(newAbstract, cachedUserResult.getUserId());
 
                         JsonObject toplevelObject = new JsonObject();
                         toplevelObject.add("talk", generateTalkJson(cookieUuidToken, newAbstract));
@@ -117,7 +127,7 @@ public class TalkHandler extends ContenticeHandler {
 
                 String authLevel = authenticationContext.getUserAuthLevel(cachedUserResult.getUuidToken(), cachedUserResult.getUserId());
                 if (authLevel.equals("root") || authLevel.equals("admin")) {
-                    LevelDbEnv.getInstance().getAbstractDao().deleteAbstract(id);
+                    talkDao.deleteTalk(id);
                     responseContent = "{\"deleted\": true}";
                 }
             }
@@ -130,9 +140,6 @@ public class TalkHandler extends ContenticeHandler {
     }
 
     private JsonObject generateTalkJson(String cookieUuidToken, Talk talk) {
-
-        AuthenticationContext authenticationContext = AuthenticationContext.getInstance();
-
         JsonObject talkJson = new JsonObject();
         talkJson.addProperty("id", talk.getAbstractId());
         talkJson.addProperty("title", talk.getTitle());

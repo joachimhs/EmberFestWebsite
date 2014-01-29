@@ -5,8 +5,7 @@ import com.google.gson.JsonObject;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
-import no.haagensoftware.contentice.spi.PropertyConstants;
-import no.haagensoftware.kontize.db.LevelDbEnv;
+import no.haagensoftware.kontize.db.dao.UserDao;
 import no.haagensoftware.kontize.models.AuthenticationResult;
 import no.haagensoftware.kontize.models.Cookie;
 import no.haagensoftware.kontize.models.MozillaPersonaCredentials;
@@ -28,25 +27,29 @@ import java.io.UnsupportedEncodingException;
  */
 public class CredentialsHandler extends ContenticeHandler {
     private static final Logger logger = Logger.getLogger(CredentialsHandler.class.getName());
+    private UserDao userDao = null;
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
+        if (userDao == null) {
+            userDao = new UserDao(getStorage());
+        }
         String responseContent = "";
         String uri = getUri(fullHttpRequest);
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         Cookie cachedCookie = null;
         User loggedInUser = null;
 
-        AuthenticationContext authenticationContext = AuthenticationContext.getInstance();
+        AuthenticationContext authenticationContext = AuthenticationContext.getInstance(getStorage());
 
         if (cookieUuidToken != null) {
             //cookie based validation
-            cachedCookie = LevelDbEnv.getInstance().getUserDao().getCookie(cookieUuidToken);
+            cachedCookie = userDao.getCookie(cookieUuidToken);
         }
 
         if (cachedCookie != null) {
             String userId = cachedCookie.getUserId();
-            loggedInUser = LevelDbEnv.getInstance().getUserDao().getUser(userId);
+            loggedInUser = userDao.getUser(userId);
         }
 
         if (isPost(fullHttpRequest) && uri.equals("/auth/login")) {
@@ -56,7 +59,7 @@ public class CredentialsHandler extends ContenticeHandler {
                 logger.info("Logging in via Cookie for " + cachedCookie.getUserId() + " automatically, without Persona.");
 
                 cachedCookie.setCreated(System.currentTimeMillis());
-                LevelDbEnv.getInstance().getUserDao().persistCookie(cachedCookie);
+                userDao.persistCookie(cachedCookie);
                 responseContent = "{ \"uuidToken\": \"" + cachedCookie.getId() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(cachedCookie.getId(), loggedInUser.getUserId()) + "\"}";
             } else {
                 logger.info("Logging in via Persona.");
@@ -66,20 +69,21 @@ public class CredentialsHandler extends ContenticeHandler {
                 MozillaPersonaCredentials credentials = new Gson().fromJson(responseContent, MozillaPersonaCredentials.class);
                 AuthenticationResult authResult = authenticationContext.verifyAndGetUser(credentials);
 
-                loggedInUser = LevelDbEnv.getInstance().getUserDao().getUser(credentials.getEmail());
+                loggedInUser = userDao.getUser(credentials.getEmail());
 
                 if (loggedInUser != null && authResult.getUuidToken() != null && authResult.isUuidValidated()) {
                     responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken(), credentials.getEmail()) + "\"}";
                 } else if (loggedInUser != null && authResult.getUuidToken() != null && !authResult.isUuidValidated()) {
                     responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken(), credentials.getEmail()) + "\"}";
                 } else {
-                    responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\" }";
+                    responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\", \"uuidToken:\": \"" + authResult.getUuidToken() + "\" }";
                 }
             }
         } else if (isPost(fullHttpRequest) && uri.equals("/auth/logout")) {
             if (cookieUuidToken != null) {
                 authenticationContext.logUserOut(cookieUuidToken);
             }
+            responseContent = "{}";
         }
 
         logger.info("responseContent: " + responseContent);

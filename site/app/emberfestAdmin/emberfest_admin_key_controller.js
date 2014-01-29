@@ -14,10 +14,10 @@ Emberfest.EmberfestAdminKeyController = Ember.ObjectController.extend({
             var controller = this;
             key.save().then(function(data) {
                 console.log('Deleting key. Transitioning');
-                controller.transitionToRoute('emberfestAdmin')
+                controller.transitionToRoute('emberfestAdmin');
             }, function(data) {
                 console.log('Deleting key. Transitioning2');
-                controller.transitionToRoute('emberfestAdmin')
+                controller.transitionToRoute('emberfestAdmin');
             });
         }
     }

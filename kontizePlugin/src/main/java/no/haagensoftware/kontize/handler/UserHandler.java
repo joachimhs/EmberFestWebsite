@@ -7,7 +7,7 @@ import com.google.gson.JsonPrimitive;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
-import no.haagensoftware.kontize.db.LevelDbEnv;
+import no.haagensoftware.kontize.db.dao.TalkDao;
 import no.haagensoftware.kontize.models.*;
 import org.apache.log4j.Logger;
 
@@ -19,13 +19,18 @@ import java.util.List;
 public class UserHandler extends ContenticeHandler {
     private static final Logger logger = Logger.getLogger(UserHandler.class.getName());
     private AuthenticationContext authenticationContext;
-
-    public UserHandler() {
-        authenticationContext = AuthenticationContext.getInstance();
-    }
+    private TalkDao talkDao = null;
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
+        if (authenticationContext == null) {
+            authenticationContext = AuthenticationContext.getInstance(getStorage());
+        }
+
+        if (talkDao == null) {
+            talkDao = new TalkDao(getStorage());
+        }
+
         String uri = getUri(fullHttpRequest);
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
 
@@ -45,7 +50,7 @@ public class UserHandler extends ContenticeHandler {
             //JsonArray usersArray = new JsonArray();
 
             if (user != null) {
-                List<Talk> userTalks = LevelDbEnv.getInstance().getAbstractDao().getAbstractsForUser(cachedUserResult.getUserId());
+                List<Talk> userTalks = talkDao.getTalksForUser(cachedUserResult.getUserId());
                 JsonObject userJson = createUserJson(cachedUserResult, user, userTalks);
 
                 //usersArray.add(userJson);
@@ -80,7 +85,7 @@ public class UserHandler extends ContenticeHandler {
 
                     User user = authenticationContext.getUser(cookie.getUserId());
 
-                    List<Talk> userTalks = LevelDbEnv.getInstance().getAbstractDao().getAbstractsForUser(cookie.getUserId());
+                    List<Talk> userTalks = talkDao.getTalksForUser(cookie.getUserId());
 
                     JsonObject userJson = createUserJson(cachedUserResult, user, userTalks);
                     responseContent = userJson.toString();
