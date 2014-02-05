@@ -3,3 +3,4 @@
 target
 site/node_modules
 dist
+site/uploads

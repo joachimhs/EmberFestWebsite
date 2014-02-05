@@ -18,4 +18,5 @@ Emberfest.Router.map(function() {
     this.resource('emberfestAdmin', function() {
         this.route('key', {path: '/key/:admin_key_id'});
     });
+    this.route('mailinglist');
 });

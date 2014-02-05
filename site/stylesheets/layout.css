@@ -7,12 +7,16 @@
 @import url(foundation.min.css);
 @import url(social_foundicons.css);
 @import url(social_foundicons_ie7.css);
-@import url(http://fonts.googleapis.com/css?family=Lato:300);
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
 
 /* ==========================================================================
     General
    ========================================================================== */
+
+.row {
+    max-width: 1100px !important;
+}
 
 h2 {
   color: #E54C3A;
@@ -67,19 +71,24 @@ a.icon:hover [class*="foundicon-"] {
   color: #E54C3A;
 }
 
+.profilePhoto {
+    max-height: 200px;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
 /* ==========================================================================
     Header
    ========================================================================== */
-
 header {
-  background: url('/images/bg.jpg') no-repeat left top;
+  background: url('/images/bg-abs.jpg') no-repeat left top;
   background-size: cover;
   min-height: 80px;
 }
 
 @media only screen and (max-width: 40em) {
   header {
-    background: #0769d8;
+    background: #5895c4;
   }
 }
 
@@ -169,7 +178,7 @@ header .top-bar:not(.expanded) .main-nav li a:not(.button .social):hover {
 }
 
 header .banner {
-  margin-top: 3em;
+  margin-top: 12em;
   min-height: 380px;
 }
 
@@ -257,6 +266,7 @@ article.person img {
   border-radius: 100%;
   max-width: 150px;
   margin-top: 0.5em;
+  max-height: 150px;
 }
 
 

@@ -1,72 +1,68 @@
 {{#if controllers.user.isLoggedIn}}
-<h2>Register your talk for Ember Fest 2014!</h2>
-{{#if validationErrors}}
-  <div data-alert class="alert-box warning radius">
-    <ul>
-      {{#each error in validationErrors}}
-        <li>{{error}}</li>
-      {{/each}}
-    </ul>
-    <a href="#" class="close">&times;</a>
-  </div>
-{{/if}}
+    <h2>Register your talk for Ember Fest 2014!</h2>
+    {{#if validationErrors}}
+      <div data-alert class="alert-box warning radius">
+        <ul>
+          {{#each error in validationErrors}}
+            <li>{{error}}</li>
+          {{/each}}
+        </ul>
+        <a href="#" class="close">&times;</a>
+      </div>
+    {{/if}}
 
-<form>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Title</label>
-      {{input value=title type="text" placeholder="Your talk title"}}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Abstract</label>
-      {{textarea value=talkAbstract rows=7 placeholder="What is your talk about?"}}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Outline</label>
-      {{textarea value=outline rows=7 placeholder="Briefly outline the contents of your talk (required for workshops)"}}
-    </div>
-  </div>
-
-    <div class="row">
+      <div class="row">
         <div class="large-12 columns">
-            <label>Intended Audience</label>
-            {{textarea value=talkIntendedAudience rows=7 placeholder="Briefly describe the intended audience for your talk"}}
+          <label>Title</label>
+          {{input value=title type="text" placeholder="Your talk title"}}
         </div>
-    </div>
+      </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Talk type</label>
-      {{input value=talkType type="text" placeholder="What type of talk? 15 or 35 min presentation ? Half or full day workshop?"}}
-    </div>
-  </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Abstract</label>
+          {{textarea value=talkAbstract rows=7 placeholder="What is your talk about?"}}
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Participant requirements</label>
-      {{textarea value=participantRequirements rows=7 placeholder="What (if anything) do your participants need to bring? (most valid for workshops)"}}
-    </div>
-  </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Outline</label>
+          {{textarea value=outline rows=7 placeholder="Briefly outline the contents of your talk (required for workshops)"}}
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Topics</label>
-      {{input value=topics type="text" placeholder="Which topics will your talk cover?"}}
-    </div>
-  </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Intended Audience</label>
+                {{textarea value=talkIntendedAudience rows=7 placeholder="Briefly describe the intended audience for your talk"}}
+            </div>
+        </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      <a {{action "verifyTalkInput"}} class="button small">Register talk</a>
-    </div>
-  </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Talk type</label>
+          {{input value=talkType type="text" placeholder="What type of talk? 15 or 35 min presentation ? Half or full day workshop?"}}
+        </div>
+      </div>
 
-</form>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Participant requirements</label>
+          {{textarea value=participantRequirements rows=7 placeholder="What (if anything) do your participants need to bring? (most valid for workshops)"}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Topics</label>
+          {{input value=topics type="text" placeholder="Which topics will your talk cover?"}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <a {{action "verifyTalkInput"}} class="button small">Register talk</a>
+        </div>
+      </div>
 {{/if}}

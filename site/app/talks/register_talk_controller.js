@@ -50,6 +50,6 @@ Emberfest.RegisterTalkController = Ember.Controller.extend({
     },
 
     validateFieldContent: function(fieldContent, length) {
-        return (fieldContent !== null && fieldContent.length >= length);
+        return (fieldContent && fieldContent.length >= length);
     }
 });

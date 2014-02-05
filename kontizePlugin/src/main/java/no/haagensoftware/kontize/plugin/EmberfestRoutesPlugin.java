@@ -44,6 +44,8 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("startsWith:/registerTalk", FileServerHandler.class);
         routeMap.put("startsWith:/munich", FileServerHandler.class);
         routeMap.put("startsWith:/profile", FileServerHandler.class);
+
+        routeMap.put("/json/uploadPhoto", UploadEmberfestPhotoHandler.class);
     }
 
     @Override

@@ -10,13 +10,26 @@
 {{/if}}
 
 <form>
-    {{#if hasFileReader}}
-        <div class="row">
-            <div class="large-12 columns">
-                {{view Emberfest.FileReaderView}}
+        {{#if user.photo}}
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Replace Photo</label>
+                    {{view Emberfest.FileReaderView name="photo"}}
+                </div>
+
+                <div class="large-12 columns">
+                    <img {{bind-attr src=user.photoUrl}} class="profilePhoto" />
+                </div>
             </div>
-        </div>
-    {{/if}}
+        {{else}}
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Upload new Photo</label>
+                    {{view Emberfest.FileReaderView name="photo"}}
+                </div>
+            </div>
+        {{/if}}
+
 
   <div class="row">
     <div class="large-12 columns">

@@ -20,6 +20,7 @@ public class User {
     private String twitter;
     private String github;
     private String linkedin;
+    private String photo;
 
 
     public User() {
@@ -152,5 +153,13 @@ public class User {
 
     public void setLinkedin(String linkedin) {
         this.linkedin = linkedin;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

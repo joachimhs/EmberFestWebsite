@@ -54,7 +54,12 @@ public class TalkDao {
 
     public Talk convertSubcategoryToTalk(SubCategoryData subCategoryData) {
         Talk talk = new Talk();
+
         talk.setAbstractId(subCategoryData.getId());
+        if (talk.getAbstractId().startsWith("talks_")) {
+            talk.setAbstractId(talk.getAbstractId().substring(6));
+        }
+
         talk.setTalkIntendedAudience(subCategoryData.getValueForKey("talkIntendedAudience"));
         talk.setComments(subCategoryData.getValueForKey("comments"));
         talk.setOutline(subCategoryData.getValueForKey("outline"));

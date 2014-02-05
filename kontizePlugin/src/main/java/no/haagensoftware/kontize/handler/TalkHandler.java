@@ -141,6 +141,7 @@ public class TalkHandler extends ContenticeHandler {
 
     private JsonObject generateTalkJson(String cookieUuidToken, Talk talk) {
         JsonObject talkJson = new JsonObject();
+
         talkJson.addProperty("id", talk.getAbstractId());
         talkJson.addProperty("title", talk.getTitle());
         talkJson.addProperty("talkAbstract", talk.getTalkAbstract());

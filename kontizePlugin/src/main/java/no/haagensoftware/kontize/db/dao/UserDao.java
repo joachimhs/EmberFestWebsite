@@ -119,6 +119,7 @@ public class UserDao {
         user.setUserLevel(subCategoryData.getValueForKey("userLevel"));
         user.setYearOfBirth(subCategoryData.getValueForKey("yearOfBirth"));
         user.setAuthenticationToken(subCategoryData.getValueForKey("authenticationToken"));
+        user.setPhoto(subCategoryData.getValueForKey("photo"));
 
         return user;
     }
@@ -182,6 +183,10 @@ public class UserDao {
 
         if (user.getAuthenticationToken() != null) {
             subCategoryData.getKeyMap().put("authenticationToken", new JsonPrimitive(user.getAuthenticationToken()));
+        }
+
+        if (user.getPhoto() != null) {
+            subCategoryData.getKeyMap().put("photo", new JsonPrimitive(user.getPhoto()));
         }
 
         return subCategoryData;

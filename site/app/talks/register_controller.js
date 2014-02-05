@@ -40,7 +40,14 @@ Emberfest.RegisterController = Ember.Controller.extend({
 
         if (this.get('validationErrors').length === 0) {
             console.log('Registering user');
-            this.get('controllers.user.model').save();
+            var controller = this;
+
+            this.get('controllers.user.model').save().then(function(data) {
+                if (data.get('id') !== null && (data.get('authLevel') === 'user' || data.get('authLevel') === 'admin')) {
+                    console.log('transitioning to index');
+                    this.transitionToRoute('index');
+                }
+            });
             //Emberfest.User.updateRecord(this.get('controllers.user.model'));
         }
     },

@@ -33,9 +33,6 @@ public class UserHandler extends ContenticeHandler {
 
         String uri = getUri(fullHttpRequest);
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
-
-        logger.info("uuidToken: " + cookieUuidToken);
-
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
             cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
@@ -80,6 +77,7 @@ public class UserHandler extends ContenticeHandler {
                         storedUser.setLinkedin(newUser.getLinkedin());
                         storedUser.setPhone(newUser.getPhone());
                         storedUser.setYearOfBirth(newUser.getYearOfBirth());
+                        storedUser.setPhoto(newUser.getPhoto());
                         authenticationContext.persistUser(storedUser);
                     }
 
@@ -88,7 +86,9 @@ public class UserHandler extends ContenticeHandler {
                     List<Talk> userTalks = talkDao.getTalksForUser(cookie.getUserId());
 
                     JsonObject userJson = createUserJson(cachedUserResult, user, userTalks);
-                    responseContent = userJson.toString();
+                    JsonObject topObject = new JsonObject();
+                    topObject.add("user", userJson);
+                    responseContent = topObject.toString();
                 }
 
                 logger.info("Registering new user: " + newUser.getUserId() + " " + newUser.getFullName() + " " + newUser.getCountryOfResidence());
@@ -118,6 +118,7 @@ public class UserHandler extends ContenticeHandler {
             userJson.addProperty("twitter", user.getTwitter());
             userJson.addProperty("github", user.getGithub());
             userJson.addProperty("linkedin", user.getLinkedin());
+            userJson.addProperty("photo", user.getPhoto());
             userJson.addProperty("attendingDinner", user.getAttendingDinner() != null ? user.getAttendingDinner().booleanValue() : false);
             userJson.addProperty("authLevel", user.getUserLevel());
         }
