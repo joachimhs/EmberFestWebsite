@@ -7,6 +7,7 @@ import no.haagensoftware.contentice.handler.ContenticeHandler;
 import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.models.TicketType;
 import no.haagensoftware.kontize.models.TicketTypeList;
+import no.haagensoftware.kontize.models.TicketTypeObject;
 import sun.security.krb5.internal.Ticket;
 
 import java.util.List;
@@ -25,14 +26,32 @@ public class TicketTypesHandler extends ContenticeHandler {
             ticketsDao = new TicketsDao(getStorage());
         }
 
-        if (isGet(fullHttpRequest)) {
+        String ticketTypeId = getParameter("ticketType");
+
+        if (isGet(fullHttpRequest) && ticketTypeId == null) {
+            //Get all
             List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes();
             TicketTypeList ticketTypeList = new TicketTypeList();
             ticketTypeList.setTicketTypes(ticketTypes);
 
             jsonReturn = new Gson().toJson(ticketTypeList);
+        } else if (isGet(fullHttpRequest) && ticketTypeId != null) {
+            //Get single
+
+            TicketType foundTicketType = null;
+
+            List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes();
+            for (TicketType ticketType : ticketTypes) {
+                if (ticketType.getId().equals(ticketTypeId)) {
+                    foundTicketType = ticketType;
+                }
+            }
+
+            TicketTypeObject topObject = new TicketTypeObject();
+            topObject.setTicketType(foundTicketType);
+            jsonReturn = new Gson().toJson(topObject);
         }
 
-        writeContentsToBuffer(channelHandlerContext, jsonReturn, "application/json; charset=UTF-8");
+        writeContentsToBuffer(channelHandlerContext, jsonReturn, "application/json");
     }
 }

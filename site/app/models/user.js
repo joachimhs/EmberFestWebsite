@@ -14,6 +14,7 @@ Emberfest.User = DS.Model.extend({
     linkedin: DS.attr('string'),
     photo: DS.attr('string'),
     talks: DS.hasMany('talk', { async: true }),
+    tickets: DS.hasMany('ticket', { async: true }),
 
     photoUrl: function() {
         if (this.get('photo')) {

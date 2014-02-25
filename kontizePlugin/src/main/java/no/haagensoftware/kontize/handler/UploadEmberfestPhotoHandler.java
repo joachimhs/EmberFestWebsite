@@ -86,7 +86,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
             }
         }
 
-        writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json; charset=UTF-8");
+        writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json");
     }
 
     /**

@@ -7,6 +7,7 @@ import no.haagensoftware.kontize.handler.*;
 import org.apache.log4j.Logger;
 
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 
 /**
@@ -30,7 +31,11 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("/json/talks", TalkHandler.class);
         routeMap.put("/json/talks/{talk}", TalkHandler.class);
 
+        routeMap.put("/json/tickets", TicketHandler.class);
+        routeMap.put("/json/tickets/{ticketId}", TicketHandler.class);
+
         routeMap.put("/json/ticketTypes", TicketTypesHandler.class);
+        routeMap.put("/json/ticketTypes/{ticketType}", TicketTypesHandler.class);
         routeMap.put("/json/ticketSubtotal", TicketSubtotalHandler.class);
         routeMap.put("/json/ticketsCallback", TicketsCallbackHandler.class);
 
@@ -56,5 +61,10 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
     @Override
     public Class<? extends ChannelHandler> getHandlerForRoute(String route) {
         return routeMap.get(route);
+    }
+
+    @Override
+    public Map<String, String> getPlurals() {
+        return null;
     }
 }

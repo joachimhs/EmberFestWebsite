@@ -1,0 +1,38 @@
+{{markdown content.content}}
+
+<h2>Purchased Tickets</h2>
+{{#if controllers.user.isLoggedIn}}
+    <p>In order for us to be able to print out tickets with the participants name, please associate each ticket with the participants full name.</p>
+
+    {{#if controllers.user.tickets}}
+        <table>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Ordernumber</th>
+                <th>Type</th>
+                <th class="ticketActionColumn">Ticket Holder</th>
+                <th class="ticketActionColumn">Action</th>
+            </tr>
+
+            {{#each ticket in controllers.user.tickets}}
+                <tr>
+                    <td>{{ticket.id}}</td>
+                    <td>{{ticket.ordernumber}}</td>
+                    <td>{{ticket.ticketType.name}}</td>
+                    <td>{{input type="text" value=ticket.ticketHolder}}</td>
+                    <td>
+                        {{#if ticket.isDirty}}
+                            <button class="button small" {{action "saveTicket" ticket}}>Save</button>
+                            <button class="button small secondary" {{action "rollbackTicket" ticket}}>Revert</button>
+                        {{/if}}
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    {{else}}
+        <p>We are unable to find any tickets purchased on your account. If your purchased tickets are not being displayed, please contact the <a href="mailto:mail@emberfest.eu">Organizers</a>!</p>
+    {{/if}}
+{{else}}
+    <p class="talkRow">You need to sign in to view and edit your profile!</p>
+    <a {{action "doLogIn"}} class="button small">Sign in with your email</a>
+{{/if}}

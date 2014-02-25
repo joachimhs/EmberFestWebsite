@@ -1,5 +1,7 @@
 package no.haagensoftware.kontize.models;
 
+import java.util.Date;
+
 /**
  * Created by jhsmbp on 1/28/14.
  */
@@ -9,7 +11,9 @@ public class TicketType {
     private String description;
     private Long price;
     private Long ticketsAvailable;
+    private Date availableFrom;
     private Boolean active;
+    private Long sortIndex;
 
     public TicketType() {
     }
@@ -60,5 +64,21 @@ public class TicketType {
 
     public void setTicketsAvailable(Long ticketsAvailable) {
         this.ticketsAvailable = ticketsAvailable;
+    }
+
+    public Date getAvailableFrom() {
+        return availableFrom;
+    }
+
+    public void setAvailableFrom(Date availableFrom) {
+        this.availableFrom = availableFrom;
+    }
+
+    public Long getSortIndex() {
+        return sortIndex;
+    }
+
+    public void setSortIndex(Long sortIndex) {
+        this.sortIndex = sortIndex;
     }
 }

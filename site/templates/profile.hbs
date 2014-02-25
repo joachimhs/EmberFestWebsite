@@ -7,18 +7,37 @@
       </div>
 
       <div class="small-12 large-6 large-offset-1 columns">
-        <p><em>You have suggested the following talks:</em></p>
-        <ul class="inline-list">
+          <h3>Purchased Tickets</h3>
+          <table>
+              <tr>
+                  <th>Type</th>
+                  <th>Ticket Holder</th>
+                  <th>Ordernumber</th>
+              </tr>
+
+            {{#each ticket in tickets}}
+                <tr>
+                    <td>{{ticket.ticketType.name}}</td>
+                    <td>{{ticket.ticketHolder}}</td>
+                    <td>{{ticket.ordernumber}}</td>
+                </tr>
+            {{/each}}
+
+              <tr>
+                  <td colspan="3" class="text-right">
+                      {{#link-to "tickets.purchased"}}<button class="button tiny">Update</button>{{/link-to}}
+                  </td>
+              </tr>
+          </table>
+
+          <h3>Suggested Talks</h3>
           {{#each talk in talks}}
-            <li>
-              <h4>{{talk.title}}</h4>
-              <ul class="inline-list">
-                <li><a href="#">Edit</a></li>
-                <li>{{#link-to "talks.talk" talk}}View{{/link-to}}</li>
-              </ul>
-            </li>
+              <div>
+                  <span class="profileTalkTitle">{{talk.title}}</span>
+                  {{#link-to "talks.talk" talk class="profileTalkLink"}}Edit{{/link-to}}
+                  {{#link-to "talks.talk" talk class="profileTalkLink"}}View{{/link-to}}
+              </div>
           {{/each}}
-        </ul>
         <h3>Participant Information</h3>
         <p>If your talk is approved, you will be notified by one of the organizers personally. We will accept talks at regular intervals until two weeks before the conference starts. If none of your talks get approved, you will get the opportunity to buy a ticket at the price valid when you registered your talk.</p>
       </div>

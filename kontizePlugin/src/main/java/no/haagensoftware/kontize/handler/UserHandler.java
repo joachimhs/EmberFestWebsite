@@ -8,6 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
 import no.haagensoftware.kontize.db.dao.TalkDao;
+import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.models.*;
 import org.apache.log4j.Logger;
 
@@ -20,6 +21,7 @@ public class UserHandler extends ContenticeHandler {
     private static final Logger logger = Logger.getLogger(UserHandler.class.getName());
     private AuthenticationContext authenticationContext;
     private TalkDao talkDao = null;
+    private TicketsDao ticketsDao = null;
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
@@ -29,6 +31,10 @@ public class UserHandler extends ContenticeHandler {
 
         if (talkDao == null) {
             talkDao = new TalkDao(getStorage());
+        }
+
+        if (ticketsDao == null) {
+            ticketsDao = new TicketsDao(getStorage());
         }
 
         String uri = getUri(fullHttpRequest);
@@ -41,14 +47,16 @@ public class UserHandler extends ContenticeHandler {
         String responseContent = "";
 
         if (isGet(fullHttpRequest) && cachedUserResult != null && cachedUserResult.getUuidToken() != null && cachedUserResult.isUuidValidated()) {
-            logger.info("cached uuidToken: " + cachedUserResult.getUuidToken());
+            logger.info("cached uuidToken: " + cachedUserResult.getUserId());
             User user = authenticationContext.getUser(authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken()).getUserId());
             JsonObject topObject = new JsonObject();
             //JsonArray usersArray = new JsonArray();
 
             if (user != null) {
                 List<Talk> userTalks = talkDao.getTalksForUser(cachedUserResult.getUserId());
-                JsonObject userJson = createUserJson(cachedUserResult, user, userTalks);
+                List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(cachedUserResult.getUserId());
+
+                JsonObject userJson = createUserJson(cachedUserResult, user, userTalks, purchasedTickets);
 
                 //usersArray.add(userJson);
                 topObject.add("user", userJson);
@@ -84,8 +92,9 @@ public class UserHandler extends ContenticeHandler {
                     User user = authenticationContext.getUser(cookie.getUserId());
 
                     List<Talk> userTalks = talkDao.getTalksForUser(cookie.getUserId());
+                    List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(cachedUserResult.getUserId());
 
-                    JsonObject userJson = createUserJson(cachedUserResult, user, userTalks);
+                    JsonObject userJson = createUserJson(cachedUserResult, user, userTalks, purchasedTickets);
                     JsonObject topObject = new JsonObject();
                     topObject.add("user", userJson);
                     responseContent = topObject.toString();
@@ -98,10 +107,10 @@ public class UserHandler extends ContenticeHandler {
         logger.info("responseContent: " + responseContent);
         logger.info("coookieUuidToken " + cookieUuidToken);
 
-        writeContentsToBuffer(channelHandlerContext, responseContent, "application/json; charset=UTF-8");
+        writeContentsToBuffer(channelHandlerContext, responseContent, "application/json");
     }
 
-    private JsonObject createUserJson(AuthenticationResult cachedUserResult, User user, List<Talk> userTalks) {
+    private JsonObject createUserJson(AuthenticationResult cachedUserResult, User user, List<Talk> userTalks, List<PurchasedTicket> purchasedTickets) {
         JsonObject userJson = new JsonObject();
         userJson.add("id",  new JsonPrimitive(cachedUserResult.getUuidToken()));
         userJson.add("userId", new JsonPrimitive(user.getUserId()));
@@ -122,15 +131,22 @@ public class UserHandler extends ContenticeHandler {
             userJson.addProperty("attendingDinner", user.getAttendingDinner() != null ? user.getAttendingDinner().booleanValue() : false);
             userJson.addProperty("authLevel", user.getUserLevel());
         }
-        JsonArray talkArray = new JsonArray();
 
+        JsonArray talkArray = new JsonArray();
         for (Talk talk : userTalks) {
             if (talk.getAbstractId() != null) {
                 talkArray.add(new JsonPrimitive(talk.getAbstractId()));
             }
         }
-
         userJson.add("talks", talkArray);
+
+
+        JsonArray ticketsArray = new JsonArray();
+        for (PurchasedTicket ticket : purchasedTickets) {
+            ticketsArray.add(new JsonPrimitive(ticket.getTicketId()));
+        }
+        userJson.add("tickets", ticketsArray);
+
         return userJson;
     }
 }

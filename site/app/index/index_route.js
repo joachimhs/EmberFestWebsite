@@ -8,6 +8,6 @@ Emberfest.IndexRoute = Ember.Route.extend({
         console.log('INDEX');
         _gaq.push(['_trackPageview', "/"]);
 
-        document.title = 'Welcome to Ember Fest!';
+        document.title = 'Ember Fest 2014 - Barcelona!';
     }
 });

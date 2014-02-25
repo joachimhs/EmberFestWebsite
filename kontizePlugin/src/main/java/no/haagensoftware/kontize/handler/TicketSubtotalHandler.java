@@ -1,6 +1,7 @@
 package no.haagensoftware.kontize.handler;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
@@ -100,9 +101,32 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             order.setUserId(cachedUserResult.getUserId());
 
             ticketsDao.storeOrder(order);
+        } else if (isUser && isGet(fullHttpRequest)) {
+            logger.info("Getting basket for: " + cachedUserResult.getUserId());
+            Order existingOrder = ticketsDao.getNewOrderForUser(cachedUserResult.getUserId());
+            logger.info("Got order: " + existingOrder);
+
+            if (existingOrder != null) {
+                logger.info("Got order: " + existingOrder.getStatus());
+                
+                jsonReturn.addProperty("numTickets", existingOrder.getTickets().size());
+                jsonReturn.addProperty("subtotal", existingOrder.getSubtotal());
+                jsonReturn.addProperty("md5Hash", calculateMD5(existingOrder.getSubtotal(), existingOrder.getOrderNumber()));
+                jsonReturn.addProperty("orderNumber", existingOrder.getOrderNumber());
+                jsonReturn.addProperty("continueUrl", continueUrl);
+                jsonReturn.addProperty("cancelUrl", cancelUrl);
+                jsonReturn.addProperty("callbackUrl", callbackUrl);
+
+                JsonArray basketTickets = new JsonArray();
+                for (Ticket ticket : existingOrder.getTickets()) {
+                    basketTickets.add(new Gson().toJsonTree(ticket));
+                }
+
+                jsonReturn.add("basket", basketTickets);
+            }
         }
 
-        writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json; charset=UTF-8");
+        writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json");
     }
 
     private String calculateMD5(long subtotal, String orderNumber) {

@@ -10,7 +10,10 @@ Emberfest.Router.map(function() {
     this.resource('talks', function() {
         this.route('talk', {path: "/:talk_id"});
     });
-    this.route('tickets');
+    this.resource('tickets', function() {
+        this.route('purchased');
+        this.route('cancelled');
+    });
     this.route('venue');
     this.route('register');
     this.route('registerTalk');

@@ -136,7 +136,7 @@ public class TalkHandler extends ContenticeHandler {
         logger.info("responseContent: " + responseContent);
         logger.info("coookieUuidToken " + cookieUuidToken);
 
-        writeContentsToBuffer(channelHandlerContext, responseContent, "application/json; charset=UTF-8");
+        writeContentsToBuffer(channelHandlerContext, responseContent, "application/json");
     }
 
     private JsonObject generateTalkJson(String cookieUuidToken, Talk talk) {
