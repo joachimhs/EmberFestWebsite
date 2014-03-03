@@ -19,11 +19,11 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
             }
 
 
-            basketedTickets.pushObject(Ember.Object.create({
+            var newTicket = Ember.Object.create({
                 type: ticketType.get('id'),
                 name: ticketType.get('name'),
                 price: ticketType.get('price')
-            }));
+            });
 
             ticketType.set('ticketsAvailable', ticketType.get('ticketsAvailable') - 1);
 
@@ -38,6 +38,8 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                 });
             });
 
+            tickets.push(newTicket);
+
             var order = {
                 orderNumber: this.get('orderNumber'),
                 tickets: tickets
@@ -46,26 +48,7 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
             console.log(order);
 
             var controller = this;
-            $.ajax({
-                type: "POST",
-                url: "/json/ticketSubtotal",
-                contentType: 'application/json',
-                data: JSON.stringify(order),
-                success: function(r) {
-                    console.log(r);
-                    if (r.numTickets && r.subtotal) {
-                        controller.set('numTickets', r.numTickets);
-                        controller.set('ticketSubtotal', r.subtotal);
-                        controller.set('ticketSubtotalEur', r.subtotal / 100);
-                        controller.set('ticketsMd5', r.md5Hash);
-                        controller.set('orderNumber', r.orderNumber);
-                        controller.set('continueUrl', r.continueUrl);
-                        controller.set('cancelUrl', r.cancelUrl);
-                        controller.set('callbackUrl', r.callbackUrl);
-                        controller.set('md5Secret', r.md5Secret);
-                    }
-                }
-            });
+            controller.attemptToAddTicketToBasket(order)
         },
 
         removeTicketFromBasket: function(basketTicket) {
@@ -97,26 +80,47 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
             };
 
             var controller = this;
-            $.ajax({
-                type: "POST",
-                url: "/json/ticketSubtotal",
-                contentType: 'application/json',
-                data: JSON.stringify(order),
-                success: function(r) {
-                    if (r.numTickets && r.subtotal) {
-                        controller.set('numTickets', r.numTickets);
-                        controller.set('ticketSubtotal', r.subtotal);
-                        controller.set('ticketSubtotalEur', r.subtotal / 100);
-                        controller.set('ticketsMd5', r.md5Hash);
-                        controller.set('orderNumber', r.orderNumber);
-                        controller.set('continueUrl', r.continueUrl);
-                        controller.set('cancelUrl', r.cancelUrl);
-                        controller.set('callbackUrl', r.callbackUrl);
-                        controller.set('md5Secret', r.md5Secret);
-                    }
-                }
-            });
+            controller.attemptToAddTicketToBasket(order);
         }
+    },
+
+    attemptToAddTicketToBasket: function(order) {
+        var controller = this;
+
+        $.ajax({
+            type: "POST",
+            url: "/json/ticketSubtotal",
+            contentType: 'application/json',
+            data: JSON.stringify(order),
+            success: function(r) {
+                console.log(r);
+                if (r.numTickets && r.subtotal) {
+                    controller.set('numTickets', r.numTickets);
+                    controller.set('ticketSubtotal', r.subtotal);
+                    controller.set('ticketSubtotalEur', r.subtotal / 100);
+                    controller.set('ticketsMd5', r.md5Hash);
+                    controller.set('orderNumber', r.orderNumber);
+                    controller.set('continueUrl', r.continueUrl);
+                    controller.set('cancelUrl', r.cancelUrl);
+                    controller.set('callbackUrl', r.callbackUrl);
+                    controller.set('md5Secret', r.md5Secret);
+
+                    var basket = [];
+
+                    console.log(r.basket);
+                    for (var index = 0; index < r.basket.length; index++) {
+                        var item = r.basket[index];
+                        basket.pushObject(Ember.Object.create({
+                            name: item.name,
+                            price: item.price,
+                            type: item.type
+                        }));
+                    }
+
+                    controller.set('basket', basket);
+                }
+            }
+        });
     },
 
     userObserver: function() {

@@ -3,17 +3,40 @@ Emberfest.UserController = Ember.ObjectController.extend({
         this._super();
 
         console.log('UserController init');
+
+        var uuidToken = this.readCookie('uuidToken');
+        if (uuidToken) {
+            this.performLoginCheck(uuidToken);
+        } else {
+            this.initializePersona();
+        }
+    },
+
+    performLoginCheck: function(uuidToken) {
         var controller = this;
+        controller.store.find('user', uuidToken).then(function(user) {
+            controller.set('model', user);
+            controller.initializePersona();
+        });
+    },
+
+    initializePersona: function() {
+        var controller = this;
+        var loggedIn = controller.get('user.userId');
+
+        console.log('calling navigator.id.watch()');
         // Mozilla Persona
         navigator.id.watch({
-            loggedInUser: null,
+            loggedInUser: loggedIn,
+
             onlogin: function(assertion) {
+                console.log("onlogin");
                 $.ajax({
                     type: 'POST',
                     url: '/auth/login',
                     data: {assertion: assertion},
                     success: function(res, status, xhr) {
-                        if (res.uuidToken) {
+                        if (res.uuidToken && res.uuidToken != controller.readCookie('uuidToken')) {
                             console.log('setting uuidToken: ' + res.uuidToken);
                             controller.createCookie("uuidToken", res.uuidToken, 1);
                             controller.store.find('user', res.uuidToken).then(function(user) { controller.set('model', user); });
@@ -24,6 +47,7 @@ Emberfest.UserController = Ember.ObjectController.extend({
             },
 
             onlogout: function() {
+                console.log("onlogout");
                 $.ajax({
                     type: 'POST',
                     url: '/auth/logout',
@@ -62,6 +86,7 @@ Emberfest.UserController = Ember.ObjectController.extend({
         }
         return null;
     },
+
 
     eraseCookie:function (name) {
         this.createCookie(name, "", -1);

@@ -82,7 +82,8 @@ public class TicketsDao {
 
 
     public void storeOrder(Order order) {
-        storagePlugin.setSubCategory("orders", order.getOrderNumber(), convertOrderToSubcategoryData(order));
+        SubCategoryData sd = convertOrderToSubcategoryData(order);
+        storagePlugin.setSubCategory("orders", order.getOrderNumber(), sd);
     }
 
     public Order getNewOrderForUser(String userid) {
@@ -112,14 +113,16 @@ public class TicketsDao {
 
         for (String ticketType : subCategoryData.getListForKey("tickets", ",")) {
             TicketType tt = this.getTicketType(ticketType);
-            Ticket newTicket = new Ticket();
-            newTicket.setName(tt.getName());
-            newTicket.setType(ticketType);
-            newTicket.setPrice(tt.getPrice());
+            if (tt != null) {
+                Ticket newTicket = new Ticket();
+                newTicket.setName(tt.getName());
+                newTicket.setType(ticketType);
+                newTicket.setPrice(tt.getPrice());
 
-            ticketList.add(newTicket);
+                ticketList.add(newTicket);
 
-            subtotal += (newTicket.getPrice() * 100);
+                subtotal += (newTicket.getPrice() * 100);
+            }
         }
         order.setTickets(ticketList);
         order.setSubtotal(subtotal);

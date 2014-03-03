@@ -1,4 +1,4 @@
-<h2>Tickets</h2>
+<h2>Purchase Tickets!</h2>
 
 <p>Join us for the second annual Ember Fest, in sunny Barcelona! We aim to gather 160 of the top developers from the Ember.js community in what will undoubtedly be
     the Ember event to attend in 2014! August 26th and 27 will offer pre-conference workshops, while August 28th and 29th will offer great talks from experienced
@@ -7,91 +7,96 @@
 <p>Please take the time to read Ember Fests code of conduct, below.</p>
 
 {{#if controller.model.length}}
-    <table>
-        <thead>
-        <tr>
-            <th>Ticket Type</th>
-            <th width="150">Price</th>
-            <th width="200">&nbsp;</th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each ticketType in controller}}
-            <tr>
-                <td>
-                    <p class="title">{{ticketType.name}}</p>
-                    {{ticketType.description}}
-                </td>
-                <td>€{{ticketType.price}}</td>
-                {{#if ticketType.saleStarted}}
-                    {{#if ticketType.ticketsAvailable}}
-                    <td>
-                        {{#if controllers.user.isLoggedIn}}
-                            <button class="button small" {{action "addTicketTypeToBasket" ticketType}}>Add to Cart</button></td>
-                        {{else}}
-                            <p class="talkRow">You need to <span {{action "doLogIn"}} >sign in</span> to purchase tickets!</p>
-                        {{/if}}
-                    {{else}}
-                        <td><button class="button small disabled">Sold Out</button></td>
-                    {{/if}}
-                {{else}}
-                    <td>Tickets are available from {{readable-date ticketType.availableFrom}}</td>
-                {{/if}}
+    <div class="row">
+        <div class="small-12 large-8 columns">
+            <h2>Tickets</h2>
 
-            </tr>
-        {{/each}}
-    </table>
-
-    <p>Tickets are refundable until July 26th, after which tickets can only be transferred. <a href="mailto:mail@emberfest.eu">Contact us</a> if you have any questions!</p>
-
-    {{#if basket}}
-        <h2>Shopping Cart</h2>
-
-        {{#if controller.ticketSubtotal}}
-            <div class="text-right" style="width: 100%">
-                <td>
-                    <form action="https://secure.quickpay.dk/form/" method="post">
-                        <input type="hidden" name="protocol" value="7" />
-                        <input type="hidden" name="msgtype" value="authorize" />
-                        <input type="hidden" name="merchant" value="99839257" />
-                        <input type="hidden" name="language" value="en" />
-                        <input type="hidden" name="ordernumber" {{bind-attr value=controller.orderNumber}} />
-                        <input type="hidden" name="amount" {{bind-attr value=controller.ticketSubtotal}} />
-                        <input type="hidden" name="currency" value="EUR" />
-                        <input type="hidden" name="continueurl" {{bind-attr value=controller.continueUrl}} />
-                        <input type="hidden" name="cancelurl" {{bind-attr value=controller.cancelUrl}} />
-                        <input type="hidden" name="callbackurl" {{bind-attr value=controller.callbackUrl}} />
-                        <input type="hidden" name="autocapture" value="0" />
-                        <input type="hidden" name="cardtypelock" value="" />
-                        <input type="hidden" name="splitpayment" value="1" />
-                        <input type="hidden" name="md5check" {{bind-attr value=controller.ticketsMd5}} />
-                        <button class="button small" >Purchase {{controller.numTickets}} Tickets for {{controller.ticketSubtotalEur}} &#x2771;</button>
-                    </form>
-                </td>
-            </div>
-        {{/if}}
-
-        <table style="width: 100%;">
-            <thead>
-            <tr>
-                <th>Ticket Name</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-
-            {{#each basketTicket in basket}}
+            <table>
+                <thead>
                 <tr>
-                    <td>{{basketTicket.name}}</td>
-                    <td>€{{basketTicket.price}}</td>
-                    <td><button class="button secondary small" {{action "removeTicketFromBasket" basketTicket}}>Remove</button></td>
+                    <th>Ticket Type</th>
+                    <th width="75">Price</th>
+                    <th width="170">&nbsp;</th>
                 </tr>
-            {{/each}}
-        </table>
-    {{/if}}
+                </thead>
+                <tbody>
+                {{#each ticketType in controller}}
+                    <tr>
+                        <td>
+                            <p class="title">{{ticketType.name}}</p>
+                            {{ticketType.description}}
+                        </td>
+                        <td>€{{ticketType.price}}</td>
+                        {{#if ticketType.saleStarted}}
+                            {{#if ticketType.ticketsAvailable}}
+                            <td>
+                                {{#if controllers.user.isLoggedIn}}
+                                    <button class="button small" {{action "addTicketTypeToBasket" ticketType}}>Add to Cart</button></td>
+                                {{else}}
+                                    <p class="talkRow">You need to <span {{action "doLogIn"}} >sign in</span> to purchase tickets!</p>
+                                {{/if}}
+                            {{else}}
+                                <td><button class="button small disabled">Sold Out</button></td>
+                            {{/if}}
+                        {{else}}
+                            <td>Tickets are available from {{readable-date ticketType.availableFrom}}</td>
+                        {{/if}}
 
-    {{markdown controller.codeOfConduct.content.content}}
+                    </tr>
+                {{/each}}
+            </table>
+
+            <p>Tickets are refundable until July 26th, after which tickets can only be transferred. <a href="mailto:mail@emberfest.eu">Contact us</a> if you have any questions!</p>
+        </div>
+
+        <div class="small-12 large-4 columns">
+            <h2>Shopping Cart</h2>
+
+            <table style="width: 100%;">
+                <thead>
+                <tr>
+                    <th>Ticket Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                {{#if basket}}
+                    {{#each basketTicket in basket}}
+                        <tr>
+                            <td>{{basketTicket.name}}</td>
+                            <td><button class="button secondary small" {{action "removeTicketFromBasket" basketTicket}}>Remove</button></td>
+                        </tr>
+                    {{/each}}
+
+                    <tr><td colspan="2">
+                        {{#if controller.ticketSubtotal}}
+                            <div class="text-right" style="width: 100%">
+                                <form action="https://secure.quickpay.dk/form/" method="post">
+                                    <input type="hidden" name="protocol" value="7" />
+                                    <input type="hidden" name="msgtype" value="authorize" />
+                                    <input type="hidden" name="merchant" value="99839257" />
+                                    <input type="hidden" name="language" value="en" />
+                                    <input type="hidden" name="ordernumber" {{bind-attr value=controller.orderNumber}} />
+                                    <input type="hidden" name="amount" {{bind-attr value=controller.ticketSubtotal}} />
+                                    <input type="hidden" name="currency" value="EUR" />
+                                    <input type="hidden" name="continueurl" {{bind-attr value=controller.continueUrl}} />
+                                    <input type="hidden" name="cancelurl" {{bind-attr value=controller.cancelUrl}} />
+                                    <input type="hidden" name="callbackurl" {{bind-attr value=controller.callbackUrl}} />
+                                    <input type="hidden" name="autocapture" value="0" />
+                                    <input type="hidden" name="cardtypelock" value="" />
+                                    <input type="hidden" name="splitpayment" value="1" />
+                                    <input type="hidden" name="md5check" {{bind-attr value=controller.ticketsMd5}} />
+                                    <button class="button small" >Purchase {{controller.numTickets}} Tickets for {{controller.ticketSubtotalEur}} &#x2771;</button>
+                                </form>
+                            </div>
+                        {{/if}}
+                    </td></tr>
+                {{/if}}
+            </table>
+        </div>
+    </div>
 {{else}}
-    <p class="talkRow">We are working hard on finalizing the tickets! We are aiming at opening ticket sales on February 28th.</p>
+    <p class="talkRow">We are working hard on finalizing the tickets!</p>
 {{/if}}
 
+{{markdown controller.codeOfConduct.content.content}}

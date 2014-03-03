@@ -1,4 +1,4 @@
-Emberfest.TicketsPurchasedController = Ember.ObjectController.extend({
+Emberfest.TicketsCancelledController = Ember.ObjectController.extend({
     needs: ['user'],
 
     actions: {

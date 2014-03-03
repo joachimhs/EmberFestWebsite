@@ -71,15 +71,23 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             Order order = new Gson().fromJson(messageContent, Order.class);
 
             long subtotal = 0l;
+            List<Ticket> validTickets = new ArrayList<>();
             if (order != null && order.getTickets().size() > 0) {
                 for (Ticket ticket : order.getTickets()) {
                     SubCategoryData subCategoryData = getStorage().getSubCategory("ticketTypes", ticket.getType());
                     if (subCategoryData != null) {
-                        ticketTypes.add(TicketsDao.convertSubcategoryToTicketType(subCategoryData));
-                        subtotal += ticketTypes.get(ticketTypes.size() - 1).getPrice();
+                        TicketType ticketType = TicketsDao.convertSubcategoryToTicketType(subCategoryData);
+                        if (ticketType != null && ticketType.getTicketsAvailable() > 0) {
+                            ticketTypes.add(ticketType);
+                            subtotal += ticketTypes.get(ticketTypes.size() - 1).getPrice();
+
+                            validTickets.add(ticket);
+                        }
                     }
                 }
             }
+
+            order.setTickets(validTickets);
 
             subtotal *= 100;
 
@@ -95,6 +103,21 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             jsonReturn.addProperty("cancelUrl", cancelUrl);
             jsonReturn.addProperty("callbackUrl", callbackUrl);
 
+            JsonArray purchasedTicketsArray = new JsonArray();
+            for (TicketType tt : ticketTypes) {
+                JsonObject ticket = new JsonObject();
+                if (tt.getId().startsWith("ticketTypes_")) {
+                    ticket.addProperty("type", tt.getId().substring(12));
+                } else {
+                    ticket.addProperty("type", tt.getId());
+                }
+                ticket.addProperty("name", tt.getName());
+                ticket.addProperty("price", tt.getPrice());
+
+                purchasedTicketsArray.add(ticket);
+            }
+
+            jsonReturn.add("basket", purchasedTicketsArray);
 
             order.setStatus("new");
             order.setSubtotal(subtotal);
@@ -108,7 +131,7 @@ public class TicketSubtotalHandler extends ContenticeHandler {
 
             if (existingOrder != null) {
                 logger.info("Got order: " + existingOrder.getStatus());
-                
+
                 jsonReturn.addProperty("numTickets", existingOrder.getTickets().size());
                 jsonReturn.addProperty("subtotal", existingOrder.getSubtotal());
                 jsonReturn.addProperty("md5Hash", calculateMD5(existingOrder.getSubtotal(), existingOrder.getOrderNumber()));
