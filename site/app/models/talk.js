@@ -8,5 +8,9 @@ Emberfest.Talk = DS.Model.extend({
     comments: DS.attr('string'),
     talkSuggestedBy: DS.attr('string'),
     talkBy: DS.attr('string'),
-    talkIntendedAudience: DS.attr('string')
+    talkIntendedAudience: DS.attr('string'),
+
+    talkShortAbstract: function() {
+        return this.get('talkAbstract').substring(0,250) + " ... ";
+    }.property('talkAbstract')
 });

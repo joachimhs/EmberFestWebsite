@@ -7,6 +7,11 @@ Emberfest.Router.map(function() {
     this.route('munich');
     this.route('partners');
     this.route('organizers');
+    this.route('venue');
+    this.route('register');
+    this.route('registerTalk');
+    this.route('profile');
+
     this.resource('talks', function() {
         this.route('talk', {path: "/:talk_id"});
     });
@@ -14,12 +19,6 @@ Emberfest.Router.map(function() {
         this.route('purchased');
         this.route('cancelled');
     });
-    this.route('venue');
-    this.route('register');
-    this.route('registerTalk');
-    this.route('profile');
-    this.resource('emberfestAdmin', function() {
-        this.route('key', {path: '/key/:admin_key_id'});
-    });
+
     this.route('mailinglist');
 });

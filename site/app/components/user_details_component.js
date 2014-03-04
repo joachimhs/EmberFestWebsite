@@ -30,8 +30,9 @@ Emberfest.UserDetailsComponent = Ember.Component.extend({
             console.log('Registering user');
             //this.get('controllers.user.model').save();
             console.log(this.get('user'));
-            this.get('user').save();
-            //Emberfest.User.updateRecord(this.get('user'));
+            this.get('user').save().then(function(data) {
+                alert('Thank you for updating your user data!');
+            });
         }
     },
 

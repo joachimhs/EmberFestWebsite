@@ -49,6 +49,10 @@
 
               {{#link-to "mailinglist" class="button"}}Subscribe{{/link-to}}
               {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
+
+              <h1 style="margin-top: 25px;">Gold Partners</h1>
+              {{pop-over buttonText="Partner With us!" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
+
           </div>
           <!-- END BANNER -->
       {{else}}
@@ -68,6 +72,19 @@
     {{outlet}}
 
   </div>
+</div>
+
+<div class="silverSponsors">
+    <div class="row">
+        <div class="small-12 large-12 columns text-center sponsor-padding">
+            <h2>Gold Partners</h2>
+            {{pop-over buttonText="Partner With us!" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
+
+            <h2>Silver Partners</h2>
+            {{pop-over imgSrc="/images/harvest_color_logo.png" hrefSrc="http://www.getharvest.com/platform" popoverContent="Harvest is a beautifully crafted time tracking tool. With the Harvest Platform, add time tracking to your web application before you finish a cup of coffee."}}
+            {{pop-over imgSrc="/images/partnerbutton.png" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
+        </div>
+    </div>
 </div>
 
 <footer>

@@ -48,7 +48,7 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
             console.log(order);
 
             var controller = this;
-            controller.attemptToAddTicketToBasket(order)
+            controller.attemptToAddTicketToBasket(order);
         },
 
         removeTicketFromBasket: function(basketTicket) {

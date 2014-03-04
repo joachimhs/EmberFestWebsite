@@ -13,26 +13,26 @@
   {{/if}}
 {{/unless}}
 
-{{#each talk in controller}}
 <table>
-  <thead>
+    <thead>
     <tr>
         <th width="150">Type</th>
         <th width="150">Title</th>
         <th width="150">Presenter</th>
         <th>Abstract</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td><span class="label secondary">{{talk.talkType}}</span></td>
-        <td>{{#link-to "talks.talk" talk}}{{talk.title}}{{/link-to}}</td>
-        <td>{{talk.talkSuggestedBy}}</td>
-        <td>{{talk.talkAbstract}}</td>
-    </tr>
-  </tbody>
+    </thead>
+    <tbody>
+        {{#each talk in controller}}
+            <tr>
+                <td><span class="label secondary">{{talk.talkType}}</span></td>
+                <td>{{#link-to "talks.talk" talk}}{{talk.title}}{{/link-to}}</td>
+                <td>{{talk.talkSuggestedBy}}</td>
+                <td>{{talk.talkShortAbstract}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
 </table>
-{{/each}}
 
 <h3>Submit a Talk!</h3>
 <p>
