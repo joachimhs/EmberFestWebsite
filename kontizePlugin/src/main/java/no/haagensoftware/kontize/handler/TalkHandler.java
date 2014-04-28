@@ -36,13 +36,13 @@ public class TalkHandler extends ContenticeHandler {
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
-            cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
-            authenticationContext.isUser(cookieUuidToken, cachedUserResult.getUserId());
+            cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
+            authenticationContext.isUser(getDomain().getWebappName(), cookieUuidToken, cachedUserResult.getUserId());
         }
         String responseContent = "";
 
         if (isGet(fullHttpRequest) && id == null) {
-            List<Talk> talks = talkDao.getTalks();
+            List<Talk> talks = talkDao.getTalks(getDomain().getWebappName());
 
             logger.info("Submitted abstracts: ");
             StringBuffer sb = new StringBuffer();
@@ -61,7 +61,7 @@ public class TalkHandler extends ContenticeHandler {
 
             responseContent = topObject.toString();
         } else if (isGet(fullHttpRequest) && id != null) {
-            Talk talk = talkDao.getTalk(id);
+            Talk talk = talkDao.getTalk(getDomain().getWebappName(), id);
 
             if (talk != null) {
                 JsonObject talkJson = generateTalkJson(cookieUuidToken, talk);
@@ -77,10 +77,10 @@ public class TalkHandler extends ContenticeHandler {
             if (cachedUserResult != null && cachedUserResult.isUuidValidated() && cachedUserResult.getUuidToken() != null) {
                 TalkObject talkObject = new Gson().fromJson(messageContent, TalkObject.class);
                 SubmittedTalk submittedTalk = talkObject.getTalk();
-                Cookie cookie = authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken());
+                Cookie cookie = authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cachedUserResult.getUuidToken());
                 if (submittedTalk != null && cookie != null) {
 
-                    Talk talk = talkDao.getTalk(submittedTalk.getId());
+                    Talk talk = talkDao.getTalk(getDomain().getWebappName(), submittedTalk.getId());
                     if (talk != null && talk.getUserId().equals(cookie.getUserId())) {
                         Talk updatedAbstract = new Talk();
                         updatedAbstract.setAbstractId(submittedTalk.getId());
@@ -94,7 +94,7 @@ public class TalkHandler extends ContenticeHandler {
                         updatedAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         updatedAbstract.setUserId(cookie.getUserId());
 
-                        talkDao.storeTalk(updatedAbstract, cachedUserResult.getUserId());
+                        talkDao.storeTalk(getDomain().getWebappName(), updatedAbstract, cachedUserResult.getUserId());
 
                         JsonObject toplevelObject = new JsonObject();
                         toplevelObject.add("talk", generateTalkJson(cookieUuidToken, updatedAbstract));
@@ -112,7 +112,7 @@ public class TalkHandler extends ContenticeHandler {
                         newAbstract.setTalkIntendedAudience(submittedTalk.getTalkIntendedAudience());
                         newAbstract.setUserId(cookie.getUserId());
 
-                        talkDao.storeTalk(newAbstract, cachedUserResult.getUserId());
+                        talkDao.storeTalk(getDomain().getWebappName(), newAbstract, cachedUserResult.getUserId());
 
                         JsonObject toplevelObject = new JsonObject();
                         toplevelObject.add("talk", generateTalkJson(cookieUuidToken, newAbstract));
@@ -125,9 +125,9 @@ public class TalkHandler extends ContenticeHandler {
 
             if (cachedUserResult != null) {
 
-                String authLevel = authenticationContext.getUserAuthLevel(cachedUserResult.getUuidToken(), cachedUserResult.getUserId());
+                String authLevel = authenticationContext.getUserAuthLevel(getDomain().getWebappName(), cachedUserResult.getUuidToken(), cachedUserResult.getUserId());
                 if (authLevel.equals("root") || authLevel.equals("admin")) {
-                    talkDao.deleteTalk(id);
+                    talkDao.deleteTalk(getDomain().getWebappName(), id);
                     responseContent = "{\"deleted\": true}";
                 }
             }
@@ -153,7 +153,7 @@ public class TalkHandler extends ContenticeHandler {
         talkJson.addProperty("comments", talk.getComments());
 
         if (cookieUuidToken != null) {
-            User user = authenticationContext.getUser(authenticationContext.getAuthenticatedUser(cookieUuidToken).getUserId());
+            User user = authenticationContext.getUser(getDomain().getWebappName(), authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cookieUuidToken).getUserId());
 
             if (user != null && user.getUserId().equals(talk.getUserId())) {
                 talkJson.addProperty("talkByLoggedInUser", true);
@@ -162,8 +162,29 @@ public class TalkHandler extends ContenticeHandler {
             }
         }
 
-        User author = authenticationContext.getUser(talk.getUserId());
-        talkJson.addProperty("talkSuggestedBy", author.getFullName());
+        User author = authenticationContext.getUser(getDomain().getWebappName(), talk.getUserId());
+        if (author != null) {
+            talkJson.addProperty("talkSuggestedBy", author.getFullName());
+            if (author.getBio() != null) {
+                talkJson.addProperty("talkByBio", author.getBio());
+            }
+
+            if (author.getTwitter() != null) {
+                talkJson.addProperty("talkByTwitter", author.getTwitter());
+            }
+
+            if (author.getLinkedin() != null) {
+                talkJson.addProperty("talkByLinkedin", author.getLinkedin());
+            }
+
+            if (author.getGithub() != null) {
+                talkJson.addProperty("talkByGithub", author.getGithub());
+            }
+
+            if (author.getPhoto() != null) {
+                talkJson.addProperty("talkByPhoto", author.getPhoto());
+            }
+        }
         return talkJson;
     }
 }

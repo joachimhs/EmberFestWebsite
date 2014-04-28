@@ -11,6 +11,7 @@ Emberfest.Router.map(function() {
     this.route('register');
     this.route('registerTalk');
     this.route('profile');
+    this.route('codeOfConduct');
 
     this.resource('talks', function() {
         this.route('talk', {path: "/:talk_id"});

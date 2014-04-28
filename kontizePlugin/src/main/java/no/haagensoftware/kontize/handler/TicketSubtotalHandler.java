@@ -33,6 +33,7 @@ public class TicketSubtotalHandler extends ContenticeHandler {
     private String cancelUrl = System.getProperty("eu.emberfest.ticket.cancelurl");
     private String callbackUrl = System.getProperty("eu.emberfest.ticket.callbackurl");
     private String md5Secret = System.getProperty("eu.emberfest.ticket.md5secret");
+    private String ticketsTest = System.getProperty("eu.emberfest.ticket.test", "0");
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
@@ -53,12 +54,12 @@ public class TicketSubtotalHandler extends ContenticeHandler {
 
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
-            cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
+            cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
             logger.info("cachedUserResult: " + cachedUserResult);
         }
 
         if (cachedUserResult != null) {
-            isUser = authenticationContext.isUser(cachedUserResult.getUuidToken(), cachedUserResult.getUserId());
+            isUser = authenticationContext.isUser(getDomain().getWebappName(), cachedUserResult.getUuidToken(), cachedUserResult.getUserId());
         }
 
         String messageContent = getHttpMessageContent(fullHttpRequest);
@@ -74,7 +75,7 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             List<Ticket> validTickets = new ArrayList<>();
             if (order != null && order.getTickets().size() > 0) {
                 for (Ticket ticket : order.getTickets()) {
-                    SubCategoryData subCategoryData = getStorage().getSubCategory("ticketTypes", ticket.getType());
+                    SubCategoryData subCategoryData = getStorage().getSubCategory(getDomain().getWebappName(), "ticketTypes", ticket.getType());
                     if (subCategoryData != null) {
                         TicketType ticketType = TicketsDao.convertSubcategoryToTicketType(subCategoryData);
                         if (ticketType != null && ticketType.getTicketsAvailable() > 0) {
@@ -97,8 +98,11 @@ public class TicketSubtotalHandler extends ContenticeHandler {
 
             jsonReturn.addProperty("numTickets", ticketTypes.size());
             jsonReturn.addProperty("subtotal", subtotal);
-            jsonReturn.addProperty("md5Hash", calculateMD5(subtotal, order.getOrderNumber()));
+            jsonReturn.addProperty("md5Hash", calculateMD5(subtotal, order.getOrderNumber(), ticketsTest));
             jsonReturn.addProperty("orderNumber", order.getOrderNumber());
+            if (ticketsTest.equals("1")) {
+                jsonReturn.addProperty("testmode", ticketsTest);
+            }
             jsonReturn.addProperty("continueUrl", continueUrl);
             jsonReturn.addProperty("cancelUrl", cancelUrl);
             jsonReturn.addProperty("callbackUrl", callbackUrl);
@@ -123,10 +127,10 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             order.setSubtotal(subtotal);
             order.setUserId(cachedUserResult.getUserId());
 
-            ticketsDao.storeOrder(order);
+            ticketsDao.storeOrder(getDomain().getWebappName(), order);
         } else if (isUser && isGet(fullHttpRequest)) {
             logger.info("Getting basket for: " + cachedUserResult.getUserId());
-            Order existingOrder = ticketsDao.getNewOrderForUser(cachedUserResult.getUserId());
+            Order existingOrder = ticketsDao.getNewOrderForUser(getDomain().getWebappName(), cachedUserResult.getUserId());
             logger.info("Got order: " + existingOrder);
 
             if (existingOrder != null) {
@@ -134,8 +138,11 @@ public class TicketSubtotalHandler extends ContenticeHandler {
 
                 jsonReturn.addProperty("numTickets", existingOrder.getTickets().size());
                 jsonReturn.addProperty("subtotal", existingOrder.getSubtotal());
-                jsonReturn.addProperty("md5Hash", calculateMD5(existingOrder.getSubtotal(), existingOrder.getOrderNumber()));
+                jsonReturn.addProperty("md5Hash", calculateMD5(existingOrder.getSubtotal(), existingOrder.getOrderNumber(), ticketsTest));
                 jsonReturn.addProperty("orderNumber", existingOrder.getOrderNumber());
+                if (ticketsTest.equals("1")) {
+                    jsonReturn.addProperty("testmode", ticketsTest);
+                }
                 jsonReturn.addProperty("continueUrl", continueUrl);
                 jsonReturn.addProperty("cancelUrl", cancelUrl);
                 jsonReturn.addProperty("callbackUrl", callbackUrl);
@@ -152,7 +159,7 @@ public class TicketSubtotalHandler extends ContenticeHandler {
         writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json");
     }
 
-    private String calculateMD5(long subtotal, String orderNumber) {
+    private String calculateMD5(long subtotal, String orderNumber, String testmode) {
         StringBuffer sb = new StringBuffer();
         sb.append("7");
         sb.append("authorize");
@@ -166,6 +173,9 @@ public class TicketSubtotalHandler extends ContenticeHandler {
         sb.append(callbackUrl);
         sb.append("0");
         sb.append("");
+        if (testmode.equals("1")) {
+            sb.append("1");
+        }
         sb.append("1");
         sb.append(md5Secret);
 

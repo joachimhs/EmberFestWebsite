@@ -103,6 +103,9 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                     controller.set('continueUrl', r.continueUrl);
                     controller.set('cancelUrl', r.cancelUrl);
                     controller.set('callbackUrl', r.callbackUrl);
+                    if (r.testmode) {
+                        controller.set('testmode', r.testmode);
+                    }
                     controller.set('md5Secret', r.md5Secret);
 
                     var basket = [];
@@ -143,6 +146,9 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                         controller.set('continueUrl', r.continueUrl);
                         controller.set('cancelUrl', r.cancelUrl);
                         controller.set('callbackUrl', r.callbackUrl);
+                        if (r.testmode) {
+                            controller.set('testmode', r.testmode);
+                        }
                         controller.set('md5Secret', r.md5Secret);
 
                         var basket = [];

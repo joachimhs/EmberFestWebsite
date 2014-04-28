@@ -21,10 +21,10 @@ public class TicketsDao {
         this.storagePlugin = storagePlugin;
     }
 
-    public List<TicketType> getActiveTicketTypes() {
+    public List<TicketType> getActiveTicketTypes(String host) {
         List<TicketType> ticketTypes = new ArrayList<>();
 
-        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories("ticketTypes")) {
+        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories(host, "ticketTypes")) {
             if (subCategoryData.getKeyMap().get("active") != null && subCategoryData.getKeyMap().get("active").getAsBoolean()) {
                 ticketTypes.add(convertSubcategoryToTicketType(subCategoryData));
             }
@@ -33,10 +33,10 @@ public class TicketsDao {
         return ticketTypes;
     }
 
-    public TicketType getTicketType(String type) {
+    public TicketType getTicketType(String host, String type) {
         TicketType ticketType = null;
 
-        SubCategoryData ticketData = storagePlugin.getSubCategory("ticketTypes", type);
+        SubCategoryData ticketData = storagePlugin.getSubCategory(host, "ticketTypes", type);
 
         if (ticketData != null) {
             ticketType = convertSubcategoryToTicketType(ticketData);
@@ -45,15 +45,15 @@ public class TicketsDao {
         return ticketType;
     }
 
-    public void storeTicketType(TicketType ticketType) {
+    public void storeTicketType(String host, TicketType ticketType) {
         SubCategoryData subCategoryData = convertTicketTypeToSubcategory(ticketType);
-        storagePlugin.setSubCategory("ticketTypes", subCategoryData.getId(), subCategoryData);
+        storagePlugin.setSubCategory(host, "ticketTypes", subCategoryData.getId(), subCategoryData);
     }
 
-    public List<PurchasedTicket> getPurchasedTickets(String userid) {
+    public List<PurchasedTicket> getPurchasedTickets(String host, String userid) {
         List<PurchasedTicket> purchasedTicketList = new ArrayList<>();
 
-        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories("tickets")) {
+        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories(host, "tickets")) {
             PurchasedTicket pt = convertSubcategoryToPurchasedTicket(subCategoryData);
             if (pt.getUserId().equals(userid)) {
                 purchasedTicketList.add(pt);
@@ -63,10 +63,10 @@ public class TicketsDao {
         return purchasedTicketList;
     }
 
-    public PurchasedTicket getPurchasedTicket(String userid, String ticketid) {
+    public PurchasedTicket getPurchasedTicket(String host, String userid, String ticketid) {
         PurchasedTicket purchasedTicket = null;
 
-        SubCategoryData subCategoryData = storagePlugin.getSubCategory("tickets", userid + "-" + ticketid);
+        SubCategoryData subCategoryData = storagePlugin.getSubCategory(host, "tickets", userid + "-" + ticketid);
         if (subCategoryData != null) {
             purchasedTicket = convertSubcategoryToPurchasedTicket(subCategoryData);
         }
@@ -74,25 +74,25 @@ public class TicketsDao {
         return purchasedTicket;
     }
 
-    public void storeTicket(PurchasedTicket ticket) {
+    public void storeTicket(String host, PurchasedTicket ticket) {
         SubCategoryData subCategoryData = convertPurchasedTicketToSubcategory(ticket);
 
-        storagePlugin.setSubCategory("tickets", subCategoryData.getId(), subCategoryData);
+        storagePlugin.setSubCategory(host, "tickets", subCategoryData.getId(), subCategoryData);
     }
 
 
-    public void storeOrder(Order order) {
+    public void storeOrder(String host, Order order) {
         SubCategoryData sd = convertOrderToSubcategoryData(order);
-        storagePlugin.setSubCategory("orders", order.getOrderNumber(), sd);
+        storagePlugin.setSubCategory(host, "orders", order.getOrderNumber(), sd);
     }
 
-    public Order getNewOrderForUser(String userid) {
+    public Order getNewOrderForUser(String host, String userid) {
         Order foundOrder = null;
 
-        List<SubCategoryData> subCategoryDataList = storagePlugin.getSubCategories("orders");
+        List<SubCategoryData> subCategoryDataList = storagePlugin.getSubCategories(host, "orders");
 
         for (SubCategoryData subCategoryData : subCategoryDataList) {
-            Order order = convertSubcategoryDataToOrder(subCategoryData);
+            Order order = convertSubcategoryDataToOrder(host, subCategoryData);
             if (order.getUserId().equals(userid) && order.getStatus().equals("new")) {
                 foundOrder = order;
             }
@@ -101,7 +101,7 @@ public class TicketsDao {
         return foundOrder;
     }
 
-    private Order convertSubcategoryDataToOrder(SubCategoryData subCategoryData) {
+    private Order convertSubcategoryDataToOrder(String host, SubCategoryData subCategoryData) {
         Order order = new Order();
         order.setUserId(subCategoryData.getId());
 
@@ -112,7 +112,7 @@ public class TicketsDao {
         Long subtotal = 0l;
 
         for (String ticketType : subCategoryData.getListForKey("tickets", ",")) {
-            TicketType tt = this.getTicketType(ticketType);
+            TicketType tt = this.getTicketType(host, ticketType);
             if (tt != null) {
                 Ticket newTicket = new Ticket();
                 newTicket.setName(tt.getName());

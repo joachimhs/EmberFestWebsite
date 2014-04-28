@@ -44,12 +44,12 @@ public class CredentialsHandler extends ContenticeHandler {
 
         if (cookieUuidToken != null) {
             //cookie based validation
-            cachedCookie = userDao.getCookie(cookieUuidToken);
+            cachedCookie = userDao.getCookie(getDomain().getWebappName(), cookieUuidToken);
         }
 
         if (cachedCookie != null) {
             String userId = cachedCookie.getUserId();
-            loggedInUser = userDao.getUser(userId);
+            loggedInUser = userDao.getUser(getDomain().getWebappName(), userId);
         }
 
         if (isPost(fullHttpRequest) && uri.equals("/auth/login")) {
@@ -59,29 +59,29 @@ public class CredentialsHandler extends ContenticeHandler {
                 logger.info("Logging in via Cookie for " + cachedCookie.getUserId() + " automatically, without Persona.");
 
                 cachedCookie.setCreated(System.currentTimeMillis());
-                userDao.persistCookie(cachedCookie);
-                responseContent = "{ \"uuidToken\": \"" + cachedCookie.getId() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(cachedCookie.getId(), loggedInUser.getUserId()) + "\"}";
+                userDao.persistCookie(getDomain().getWebappName(), cachedCookie);
+                responseContent = "{ \"uuidToken\": \"" + cachedCookie.getId() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(getDomain().getWebappName(), cachedCookie.getId(), loggedInUser.getUserId()) + "\"}";
             } else {
                 logger.info("Logging in via Persona.");
 
                 responseContent = loginViaMozillaPersona(responseContent, messageContent);
 
                 MozillaPersonaCredentials credentials = new Gson().fromJson(responseContent, MozillaPersonaCredentials.class);
-                AuthenticationResult authResult = authenticationContext.verifyAndGetUser(credentials);
+                AuthenticationResult authResult = authenticationContext.verifyAndGetUser(getDomain().getWebappName(), credentials);
 
-                loggedInUser = userDao.getUser(credentials.getEmail());
+                loggedInUser = userDao.getUser(getDomain().getWebappName(), credentials.getEmail());
 
                 if (loggedInUser != null && authResult.getUuidToken() != null && authResult.isUuidValidated()) {
-                    responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken(), credentials.getEmail()) + "\"}";
+                    responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(getDomain().getWebappName(), authResult.getUuidToken(), credentials.getEmail()) + "\"}";
                 } else if (loggedInUser != null && authResult.getUuidToken() != null && !authResult.isUuidValidated()) {
-                    responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(authResult.getUuidToken(), credentials.getEmail()) + "\"}";
+                    responseContent = "{ \"uuidToken\": \"" + authResult.getUuidToken() + "\", \"authLevel\": \"" + authenticationContext.getUserAuthLevel(getDomain().getWebappName(), authResult.getUuidToken(), credentials.getEmail()) + "\"}";
                 } else {
                     responseContent = "{ \"authFailed\": true, \"error\": \"" + authResult.getStatusMessage() + "\", \"uuidToken:\": \"" + authResult.getUuidToken() + "\" }";
                 }
             }
         } else if (isPost(fullHttpRequest) && uri.equals("/auth/logout")) {
             if (cookieUuidToken != null) {
-                authenticationContext.logUserOut(cookieUuidToken);
+                authenticationContext.logUserOut(getDomain().getWebappName(), cookieUuidToken);
             }
             responseContent = "{}";
         }

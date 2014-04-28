@@ -82,6 +82,9 @@
                                     <input type="hidden" name="continueurl" {{bind-attr value=controller.continueUrl}} />
                                     <input type="hidden" name="cancelurl" {{bind-attr value=controller.cancelUrl}} />
                                     <input type="hidden" name="callbackurl" {{bind-attr value=controller.callbackUrl}} />
+                                    {{#if controller.testmode}}
+                                        <input type="hidden" name="testmode" {{bind-attr value=controller.testmode}} />
+                                    {{/if}}
                                     <input type="hidden" name="autocapture" value="0" />
                                     <input type="hidden" name="cardtypelock" value="" />
                                     <input type="hidden" name="splitpayment" value="1" />

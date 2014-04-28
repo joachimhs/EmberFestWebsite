@@ -41,15 +41,15 @@ public class TicketHandler extends ContenticeHandler {
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
-            cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
-            authenticationContext.isUser(cookieUuidToken, cachedUserResult.getUserId());
+            cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
+            authenticationContext.isUser(getDomain().getWebappName(), cookieUuidToken, cachedUserResult.getUserId());
         }
 
         String ticketId = getParameter("ticketId");
 
         List<String> ids = getQueryStringIds();
         if (isGet(fullHttpRequest) && ids != null && ids.size() > 0 && cachedUserResult != null && cachedUserResult.isUuidValidated()) {
-            List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(cachedUserResult.getUserId());
+            List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(getDomain().getWebappName(), cachedUserResult.getUserId());
             List<PurchasedTicket> tickets = new ArrayList<>();
 
             PurchasedTicketsArray topObject = new PurchasedTicketsArray();
@@ -79,10 +79,10 @@ public class TicketHandler extends ContenticeHandler {
                 ticketholderName = purchasedTicketObject.getTicket().getTicketHolder();
             }
 
-            PurchasedTicket storedTicket = ticketsDao.getPurchasedTicket(cachedUserResult.getUserId(), ticketId);
+            PurchasedTicket storedTicket = ticketsDao.getPurchasedTicket(getDomain().getWebappName(), cachedUserResult.getUserId(), ticketId);
             storedTicket.setTicketHolder(ticketholderName);
 
-            ticketsDao.storeTicket(storedTicket);
+            ticketsDao.storeTicket(getDomain().getWebappName(), storedTicket);
 
             PurchasedTicketObject topObject = new PurchasedTicketObject();
             storedTicket.setId(ticketId);

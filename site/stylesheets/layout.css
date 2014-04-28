@@ -337,6 +337,32 @@ article.topic span.author {
     height: 400px;
 }
 
+.greyBox {
+    background: #e9eaed;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.talkPhoto {
+    max-width: 130px;
+    max-height: 130px;
+    padding-top: 0.5em;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+article h2 {
+    padding-top: 0em;
+    margin-top: 0em;
+}
+
+.talkSoMe {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
 /* ==========================================================================
     Sponsors
    ========================================================================== */

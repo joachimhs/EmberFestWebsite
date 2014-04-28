@@ -26,15 +26,15 @@ public class UserDao {
         this.storagePlugin = storagePlugin;
     }
 
-    public void persistUser(User user) {
-        storagePlugin.setSubCategory("users", user.getId(), convertUserToSubcategory(user));
+    public void persistUser(String host, User user) {
+        storagePlugin.setSubCategory(host, "users", user.getId(), convertUserToSubcategory(user));
     }
 
-    public User getUser(String userId) {
+    public User getUser(String host, String userId) {
         logger.info("Getting user: " + userId);
         User user = null;
 
-        SubCategoryData subCategoryData = storagePlugin.getSubCategory("users", userId);
+        SubCategoryData subCategoryData = storagePlugin.getSubCategory(host, "users", userId);
         if (subCategoryData != null) {
             user = convertSubcategoryToUser(subCategoryData);
         }
@@ -43,14 +43,14 @@ public class UserDao {
         return user;
     }
 
-    public void persistCookie(Cookie cookie) {
-        storagePlugin.setSubCategory("cookies", cookie.getId(), convertCookieToSubcategoryData(cookie));
+    public void persistCookie(String host, Cookie cookie) {
+        storagePlugin.setSubCategory(host, "cookies", cookie.getId(), convertCookieToSubcategoryData(cookie));
     }
 
-    public Cookie getCookie(String id) {
+    public Cookie getCookie(String host, String id) {
         Cookie cookie = null;
 
-        SubCategoryData subCategoryData = storagePlugin.getSubCategory("cookies", id);
+        SubCategoryData subCategoryData = storagePlugin.getSubCategory(host, "cookies", id);
         if (subCategoryData != null) {
             cookie = convertSubcategoryToCookie(subCategoryData);
         }
@@ -58,8 +58,8 @@ public class UserDao {
         return cookie;
     }
 
-    public void deleteCookie(String id) {
-        storagePlugin.deleteSubcategory("cookies", id);
+    public void deleteCookie(String host, String id) {
+        storagePlugin.deleteSubcategory(host, "cookies", id);
     }
 
     private Cookie convertSubcategoryToCookie(SubCategoryData subCategoryData) {

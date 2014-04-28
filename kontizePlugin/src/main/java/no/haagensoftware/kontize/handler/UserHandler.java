@@ -41,20 +41,20 @@ public class UserHandler extends ContenticeHandler {
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
-            cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
+            cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
             logger.info("cachedUserResult: " + cachedUserResult);
         }
         String responseContent = "";
 
         if (isGet(fullHttpRequest) && cachedUserResult != null && cachedUserResult.getUuidToken() != null && cachedUserResult.isUuidValidated()) {
             logger.info("cached uuidToken: " + cachedUserResult.getUserId());
-            User user = authenticationContext.getUser(authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken()).getUserId());
+            User user = authenticationContext.getUser(getDomain().getWebappName(), authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cachedUserResult.getUuidToken()).getUserId());
             JsonObject topObject = new JsonObject();
             //JsonArray usersArray = new JsonArray();
 
             if (user != null) {
-                List<Talk> userTalks = talkDao.getTalksForUser(cachedUserResult.getUserId());
-                List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(cachedUserResult.getUserId());
+                List<Talk> userTalks = talkDao.getTalksForUser(getDomain().getWebappName(), cachedUserResult.getUserId());
+                List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(getDomain().getWebappName(), cachedUserResult.getUserId());
 
                 JsonObject userJson = createUserJson(cachedUserResult, user, userTalks, purchasedTickets);
 
@@ -69,9 +69,9 @@ public class UserHandler extends ContenticeHandler {
             UserObject userObject = new Gson().fromJson(messageContent, UserObject.class);
             User newUser = userObject.getUser();
             if (newUser != null) {
-                Cookie cookie= authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken());
+                Cookie cookie= authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cachedUserResult.getUuidToken());
                 if (cookie != null) {
-                    User storedUser = authenticationContext.getUser(cookie.getUserId());
+                    User storedUser = authenticationContext.getUser(getDomain().getWebappName(), cookie.getUserId());
                     if (storedUser != null && storedUser.getUserId().equals(cookie.getUserId())) {
                         storedUser.setFullName((newUser.getFullName()));
                         storedUser.setAttendingDinner(newUser.getAttendingDinner());
@@ -86,13 +86,13 @@ public class UserHandler extends ContenticeHandler {
                         storedUser.setPhone(newUser.getPhone());
                         storedUser.setYearOfBirth(newUser.getYearOfBirth());
                         storedUser.setPhoto(newUser.getPhoto());
-                        authenticationContext.persistUser(storedUser);
+                        authenticationContext.persistUser(getDomain().getWebappName(), storedUser);
                     }
 
-                    User user = authenticationContext.getUser(cookie.getUserId());
+                    User user = authenticationContext.getUser(getDomain().getWebappName(), cookie.getUserId());
 
-                    List<Talk> userTalks = talkDao.getTalksForUser(cookie.getUserId());
-                    List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(cachedUserResult.getUserId());
+                    List<Talk> userTalks = talkDao.getTalksForUser(getDomain().getWebappName(), cookie.getUserId());
+                    List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(getDomain().getWebappName(), cachedUserResult.getUserId());
 
                     JsonObject userJson = createUserJson(cachedUserResult, user, userTalks, purchasedTickets);
                     JsonObject topObject = new JsonObject();

@@ -78,7 +78,7 @@ public class TicketsCallbackHandler extends ContenticeHandler {
 
             String qpOrdernumber = formMap.get("ordernumber");
             if (qpOrdernumber != null) {
-                order = getStorage().getSubCategory("orders", qpOrdernumber);
+                order = getStorage().getSubCategory(getDomain().getWebappName(), "orders", qpOrdernumber);
                 if (order != null) {
                     order.getKeyMap().put("qpOrdernumber", new JsonPrimitive(qpOrdernumber));
                 }
@@ -108,14 +108,14 @@ public class TicketsCallbackHandler extends ContenticeHandler {
                 order.getKeyMap().put("status", new JsonPrimitive("unknown status code: " + formMap.get("qpstat")));
             }
 
-            getStorage().setSubCategory("orders", qpOrdernumber, order);
+            getStorage().setSubCategory(getDomain().getWebappName(), "orders", qpOrdernumber, order);
         } else {
             logger.info("MD5 check failed!");
             SubCategoryData order = null;
 
             String qpOrdernumber = formMap.get("ordernumber");
             if (qpOrdernumber != null) {
-                order = getStorage().getSubCategory("orders", qpOrdernumber);
+                order = getStorage().getSubCategory(getDomain().getWebappName(), "orders", qpOrdernumber);
                 if (order != null) {
                     order.getKeyMap().put("qpOrdernumber", new JsonPrimitive(qpOrdernumber));
                 }
@@ -123,7 +123,7 @@ public class TicketsCallbackHandler extends ContenticeHandler {
 
             order.getKeyMap().put("status", new JsonPrimitive("md5checkfailed"));
 
-            getStorage().setSubCategory("orders", qpOrdernumber, order);
+            getStorage().setSubCategory(getDomain().getWebappName(), "orders", qpOrdernumber, order);
         }
 
         writeContentsToBuffer(channelHandlerContext, "", "text/plain; charset=UTF-8");
@@ -149,7 +149,7 @@ public class TicketsCallbackHandler extends ContenticeHandler {
 
                 logger.info("\tPersisting ticket: " + ticketType);
 
-                getStorage().setSubCategory("tickets", ticket.getId(), ticket);
+                getStorage().setSubCategory(getDomain().getWebappName(), "tickets", ticket.getId(), ticket);
 
                 ticketIds.add(ticket.getId());
             }
@@ -166,9 +166,9 @@ public class TicketsCallbackHandler extends ContenticeHandler {
         }
 
         for (String type : ticketTypes) {
-            TicketType ticketType = ticketsDao.getTicketType(type);
+            TicketType ticketType = ticketsDao.getTicketType(getDomain().getWebappName(), type);
             ticketType.setTicketsAvailable(ticketType.getTicketsAvailable() - 1);
-            ticketsDao.storeTicketType(ticketType);
+            ticketsDao.storeTicketType(getDomain().getWebappName(), ticketType);
         }
     }
 

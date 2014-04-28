@@ -30,7 +30,7 @@ public class TicketTypesHandler extends ContenticeHandler {
 
         if (isGet(fullHttpRequest) && ticketTypeId == null) {
             //Get all
-            List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes();
+            List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes(getDomain().getWebappName());
             TicketTypeList ticketTypeList = new TicketTypeList();
             ticketTypeList.setTicketTypes(ticketTypes);
 
@@ -40,7 +40,7 @@ public class TicketTypesHandler extends ContenticeHandler {
 
             TicketType foundTicketType = null;
 
-            List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes();
+            List<TicketType> ticketTypes = ticketsDao.getActiveTicketTypes(getDomain().getWebappName());
             for (TicketType ticketType : ticketTypes) {
                 if (ticketType.getId().equals(ticketTypeId)) {
                     foundTicketType = ticketType;

@@ -45,13 +45,13 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");
         AuthenticationResult cachedUserResult = null;
         if (cookieUuidToken != null) {
-            cachedUserResult = authenticationContext.verifyUUidToken(cookieUuidToken);
+            cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
             logger.info("cachedUserResult: " + cachedUserResult);
         }
 
         if (isPost(fullHttpRequest) && cachedUserResult != null && cachedUserResult.getUuidToken() != null && cachedUserResult.isUuidValidated()) {
 
-            User user = authenticationContext.getUser(authenticationContext.getAuthenticatedUser(cachedUserResult.getUuidToken()).getUserId());
+            User user = authenticationContext.getUser(getDomain().getWebappName(), authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cachedUserResult.getUuidToken()).getUserId());
 
             try {
                 decoder = new HttpPostRequestDecoder(factory, fullHttpRequest);
@@ -81,7 +81,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
                     logger.info("Adding photo to user: " + newFilename + " :: " + user.getUserId());
                     user.setPhoto(newFilename);
                     jsonReturn.addProperty("filename", newFilename);
-                    authenticationContext.persistUser(user);
+                    authenticationContext.persistUser(getDomain().getWebappName(), user);
                 }
             }
         }

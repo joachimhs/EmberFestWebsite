@@ -18,20 +18,20 @@ public class TalkDao {
         this.storagePlugin = storagePlugin;
     }
 
-    public List<Talk> getTalks() {
+    public List<Talk> getTalks(String host) {
         List<Talk> talks = new ArrayList<>();
 
-        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories("talks")) {
+        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories(host, "talks")) {
             talks.add(convertSubcategoryToTalk(subCategoryData));
         }
 
         return talks;
     }
 
-    public List<Talk> getTalksForUser(String userId) {
+    public List<Talk> getTalksForUser(String host, String userId) {
         List<Talk> talksForUser = new ArrayList<>();
 
-        for (Talk talk : getTalks()) {
+        for (Talk talk : getTalks(host)) {
             if (talk.getUserId().equals(userId)) {
                 talksForUser.add(talk);
             }
@@ -40,10 +40,10 @@ public class TalkDao {
         return talksForUser;
     }
 
-    public Talk getTalk(String subcategory) {
+    public Talk getTalk(String host, String subcategory) {
         Talk talk = null;
 
-        SubCategoryData subCategoryData = storagePlugin.getSubCategory("talks", subcategory);
+        SubCategoryData subCategoryData = storagePlugin.getSubCategory(host, "talks", subcategory);
 
         if (subCategoryData != null) {
             talk = convertSubcategoryToTalk(subCategoryData);
@@ -72,7 +72,7 @@ public class TalkDao {
         return talk;
     }
 
-    public void storeTalk(Talk talk, String userId) {
+    public void storeTalk(String host, Talk talk, String userId) {
         SubCategoryData subCategoryData = new SubCategoryData();
         subCategoryData.setId(talk.getAbstractId());
         subCategoryData.getKeyMap().put("abstractId", new JsonPrimitive(talk.getAbstractId()));
@@ -108,10 +108,10 @@ public class TalkDao {
             subCategoryData.getKeyMap().put("topics", new JsonPrimitive(talk.getTopics()));
         }
 
-        storagePlugin.setSubCategory("talks", subCategoryData.getId(), subCategoryData);
+        storagePlugin.setSubCategory(host, "talks", subCategoryData.getId(), subCategoryData);
     }
 
-    public void deleteTalk(String talkId) {
-        storagePlugin.deleteSubcategory("talks", talkId);
+    public void deleteTalk(String host, String talkId) {
+        storagePlugin.deleteSubcategory(host, "talks", talkId);
     }
 }
