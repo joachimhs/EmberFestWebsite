@@ -4,3 +4,5 @@ target
 site/node_modules
 dist
 site/uploads
+site/Sitemap.xml
+site/static

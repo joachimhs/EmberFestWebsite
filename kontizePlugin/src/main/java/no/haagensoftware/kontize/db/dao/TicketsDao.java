@@ -135,6 +135,13 @@ public class TicketsDao {
             order.setOrderNumber(subCategoryData.getName());
         }
 
+        if (subCategoryData.getLongValueForKey("couponDiscount") != null) {
+            order.setCouponDiscount(subCategoryData.getLongValueForKey("couponDiscount"));
+        }
+
+        if (subCategoryData.getValueForKey("couponCode") != null) {
+            order.setCouponCode(subCategoryData.getValueForKey("couponCode"));
+        }
 
         return order;
     }
@@ -164,6 +171,14 @@ public class TicketsDao {
             subCategoryData.getKeyMap().put("subtotal", new JsonPrimitive(order.getSubtotal()));
         }
 
+        if (order.getCouponCode() != null) {
+            subCategoryData.getKeyMap().put("couponCode", new JsonPrimitive(order.getCouponCode()));
+        }
+
+        if (order.getCouponDiscount() != null) {
+            subCategoryData.getKeyMap().put("couponDiscount", new JsonPrimitive(order.getCouponDiscount()));
+        }
+
         if (order.getUserId() != null) {
             subCategoryData.getKeyMap().put("userId", new JsonPrimitive(order.getUserId()));
         }
@@ -186,8 +201,25 @@ public class TicketsDao {
         ticketType.setTicketsAvailable(subCategoryData.getLongValueForKey("ticketsAvailable"));
         ticketType.setAvailableFrom(subCategoryData.getDateForKey("availableFrom"));
         ticketType.setSortIndex(subCategoryData.getLongValueForKey("sortIndex"));
+        ticketType.setDiscountable(subCategoryData.getBooleanValueForKey("discountable"));
 
         return ticketType;
+    }
+
+    public static CouponCode convertSubcategoryToCouponCode(SubCategoryData subCategoryData) {
+        CouponCode couponCode = new CouponCode();
+
+        couponCode.setId(subCategoryData.getId());
+        if (couponCode.getId().startsWith("couponCode_")) {
+            couponCode.setId(couponCode.getId().substring(11));
+        }
+
+        couponCode.setActive(subCategoryData.getBooleanValueForKey("active"));
+        couponCode.setValidFrom(subCategoryData.getDateForKey("validFrom"));
+        couponCode.setValidTo(subCategoryData.getDateForKey("validTo"));
+        couponCode.setDiscountAmount(subCategoryData.getDoubleValueForKey("discountAmount"));
+
+        return couponCode;
     }
 
     public static SubCategoryData convertTicketTypeToSubcategory(TicketType ticketType) {

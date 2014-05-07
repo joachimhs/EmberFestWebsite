@@ -8,10 +8,7 @@ import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.data.SubCategoryData;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
 import no.haagensoftware.kontize.db.dao.TicketsDao;
-import no.haagensoftware.kontize.models.AuthenticationResult;
-import no.haagensoftware.kontize.models.Order;
-import no.haagensoftware.kontize.models.Ticket;
-import no.haagensoftware.kontize.models.TicketType;
+import no.haagensoftware.kontize.models.*;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Logger;
 
@@ -71,7 +68,9 @@ public class TicketSubtotalHandler extends ContenticeHandler {
         if (isUser && isPost(fullHttpRequest) && messageContent.length() >= 3) {
             Order order = new Gson().fromJson(messageContent, Order.class);
 
-            long subtotal = 0l;
+            long subtotalNonDiscountable = 0l;
+            long subtotalDiscountable = 0l;
+            long discount = 0l;
             List<Ticket> validTickets = new ArrayList<>();
             if (order != null && order.getTickets().size() > 0) {
                 for (Ticket ticket : order.getTickets()) {
@@ -80,7 +79,12 @@ public class TicketSubtotalHandler extends ContenticeHandler {
                         TicketType ticketType = TicketsDao.convertSubcategoryToTicketType(subCategoryData);
                         if (ticketType != null && ticketType.getTicketsAvailable() > 0) {
                             ticketTypes.add(ticketType);
-                            subtotal += ticketTypes.get(ticketTypes.size() - 1).getPrice();
+
+                            if (ticketType.getDiscountable() == null || !ticketType.getDiscountable().booleanValue()) {
+                                subtotalNonDiscountable += ticketTypes.get(ticketTypes.size() - 1).getPrice();
+                            } else {
+                                subtotalDiscountable += ticketTypes.get(ticketTypes.size() - 1).getPrice();
+                            }
 
                             validTickets.add(ticket);
                         }
@@ -88,43 +92,51 @@ public class TicketSubtotalHandler extends ContenticeHandler {
                 }
             }
 
+            if (order.getCouponCode() == null || order.getCouponCode().equals("")) {
+                order.setCouponCode("");
+                discount = 0;
+            } else {
+                SubCategoryData subCategoryData = getStorage().getSubCategory(getDomain().getWebappName(), "coupons", order.getCouponCode());
+                if (subCategoryData != null) {
+                    CouponCode couponCode = TicketsDao.convertSubcategoryToCouponCode(subCategoryData);
+
+                    if (couponCode.isValid()) {
+                        discount = (long)(subtotalDiscountable * ((couponCode.getDiscountAmount()) / 100d));
+                    }
+                }
+            }
+
             order.setTickets(validTickets);
 
-            subtotal *= 100;
+            long subtotal = (subtotalDiscountable + subtotalNonDiscountable) * 100;
+            discount *= 100;
+
+            order.setSubtotal(subtotal);
+            order.setCouponDiscount(discount);
 
             if (order.getOrderNumber() == null || order.getOrderNumber().length() < 10) {
                 order.setOrderNumber(UUID.randomUUID().toString().replaceAll("-", "").substring(0, 20));
             }
 
-            jsonReturn.addProperty("numTickets", ticketTypes.size());
-            jsonReturn.addProperty("subtotal", subtotal);
-            jsonReturn.addProperty("md5Hash", calculateMD5(subtotal, order.getOrderNumber(), ticketsTest));
-            jsonReturn.addProperty("orderNumber", order.getOrderNumber());
-            if (ticketsTest.equals("1")) {
-                jsonReturn.addProperty("testmode", ticketsTest);
-            }
-            jsonReturn.addProperty("continueUrl", continueUrl);
-            jsonReturn.addProperty("cancelUrl", cancelUrl);
-            jsonReturn.addProperty("callbackUrl", callbackUrl);
 
-            JsonArray purchasedTicketsArray = new JsonArray();
+            List<Ticket> tickets = new ArrayList<>();
             for (TicketType tt : ticketTypes) {
-                JsonObject ticket = new JsonObject();
-                if (tt.getId().startsWith("ticketTypes_")) {
-                    ticket.addProperty("type", tt.getId().substring(12));
-                } else {
-                    ticket.addProperty("type", tt.getId());
-                }
-                ticket.addProperty("name", tt.getName());
-                ticket.addProperty("price", tt.getPrice());
+                Ticket ticket = new Ticket();
 
-                purchasedTicketsArray.add(ticket);
+                if (tt.getId().startsWith("ticketTypes_")) {
+                    ticket.setType(tt.getId().substring(12));
+                } else {
+                    ticket.setType(tt.getId());
+                }
+                ticket.setName(tt.getName());
+                ticket.setPrice(tt.getPrice());
+
+                tickets.add(ticket);
             }
 
-            jsonReturn.add("basket", purchasedTicketsArray);
+            jsonReturn = buildJsonReturn(tickets, order);
 
             order.setStatus("new");
-            order.setSubtotal(subtotal);
             order.setUserId(cachedUserResult.getUserId());
 
             ticketsDao.storeOrder(getDomain().getWebappName(), order);
@@ -136,27 +148,49 @@ public class TicketSubtotalHandler extends ContenticeHandler {
             if (existingOrder != null) {
                 logger.info("Got order: " + existingOrder.getStatus());
 
-                jsonReturn.addProperty("numTickets", existingOrder.getTickets().size());
-                jsonReturn.addProperty("subtotal", existingOrder.getSubtotal());
-                jsonReturn.addProperty("md5Hash", calculateMD5(existingOrder.getSubtotal(), existingOrder.getOrderNumber(), ticketsTest));
-                jsonReturn.addProperty("orderNumber", existingOrder.getOrderNumber());
-                if (ticketsTest.equals("1")) {
-                    jsonReturn.addProperty("testmode", ticketsTest);
-                }
-                jsonReturn.addProperty("continueUrl", continueUrl);
-                jsonReturn.addProperty("cancelUrl", cancelUrl);
-                jsonReturn.addProperty("callbackUrl", callbackUrl);
-
-                JsonArray basketTickets = new JsonArray();
-                for (Ticket ticket : existingOrder.getTickets()) {
-                    basketTickets.add(new Gson().toJsonTree(ticket));
-                }
-
-                jsonReturn.add("basket", basketTickets);
+                jsonReturn = buildJsonReturn(existingOrder.getTickets(), existingOrder);
             }
         }
 
         writeContentsToBuffer(channelHandlerContext, jsonReturn.toString(), "application/json");
+    }
+
+    private JsonObject buildJsonReturn(List<Ticket> tickets, Order order) {
+        JsonObject jsonReturn = new JsonObject();
+        jsonReturn.addProperty("numTickets", tickets.size());
+
+        long subtotal = 0l;
+        if (order.getCouponDiscount() == null) {
+            subtotal = order.getSubtotal();
+            jsonReturn.addProperty("discount", 0);
+        } else {
+            subtotal = order.getSubtotal() - order.getCouponDiscount();
+            jsonReturn.addProperty("discount", order.getCouponDiscount());
+        }
+
+        jsonReturn.addProperty("subtotal", subtotal);
+
+        if (order.getCouponDiscount() != null) {
+            jsonReturn.addProperty("couponCode", order.getCouponCode());
+        }
+
+        jsonReturn.addProperty("md5Hash", calculateMD5(subtotal, order.getOrderNumber(), ticketsTest));
+        jsonReturn.addProperty("orderNumber", order.getOrderNumber());
+        if (ticketsTest.equals("1")) {
+            jsonReturn.addProperty("testmode", ticketsTest);
+        }
+        jsonReturn.addProperty("continueUrl", continueUrl);
+        jsonReturn.addProperty("cancelUrl", cancelUrl);
+        jsonReturn.addProperty("callbackUrl", callbackUrl);
+
+        JsonArray basketTickets = new JsonArray();
+        for (Ticket ticket : tickets) {
+            basketTickets.add(new Gson().toJsonTree(ticket));
+        }
+
+        jsonReturn.add("basket", basketTickets);
+
+        return jsonReturn;
     }
 
     private String calculateMD5(long subtotal, String orderNumber, String testmode) {

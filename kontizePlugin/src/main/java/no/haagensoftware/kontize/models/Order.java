@@ -7,6 +7,8 @@ import java.util.List;
  */
 public class Order {
     private String orderNumber;
+    private String couponCode;
+    private Long couponDiscount;
     private String status;
     private String userId;
     private Long subtotal;
@@ -33,6 +35,22 @@ public class Order {
 
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    public String getCouponCode() {
+        return couponCode;
+    }
+
+    public void setCouponCode(String couponCode) {
+        this.couponCode = couponCode;
+    }
+
+    public Long getCouponDiscount() {
+        return couponDiscount;
+    }
+
+    public void setCouponDiscount(Long couponDiscount) {
+        this.couponDiscount = couponDiscount;
     }
 
     public String getStatus() {

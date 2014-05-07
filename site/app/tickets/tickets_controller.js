@@ -18,7 +18,6 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                 this.set('basket', basketedTickets);
             }
 
-
             var newTicket = Ember.Object.create({
                 type: ticketType.get('id'),
                 name: ticketType.get('name'),
@@ -27,28 +26,19 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
 
             ticketType.set('ticketsAvailable', ticketType.get('ticketsAvailable') - 1);
 
-            var tickets = [];
-
-
-            basketedTickets.forEach(function(ticket) {
-                tickets.push({
-                    type: ticket.get('type'),
-                    name: ticket.get('name'),
-                    price: ticket.get('price')
-                });
-            });
-
-            tickets.push(newTicket);
-
-            var order = {
-                orderNumber: this.get('orderNumber'),
-                tickets: tickets
-            };
-
-            console.log(order);
+            var order = this.buildOrder(newTicket);
 
             var controller = this;
             controller.attemptToAddTicketToBasket(order);
+        },
+
+        addCouponCode: function() {
+            if (this.get('couponCode')) {
+                console.log('Coupon Code: ' + this.get('couponCode'));
+            }
+
+            var order = this.buildOrder();
+            this.attemptToAddTicketToBasket(order);
         },
 
         removeTicketFromBasket: function(basketTicket) {
@@ -57,6 +47,13 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
 
             basketedTickets.removeObject(basketTicket);
 
+            if (basketedTickets.get('length') === 0) {
+                this.set('basket', []);
+                this.set('numTickets', 0);
+                this.set('ticketSubtotal', 0);
+                this.set('ticketDiscountAmount', 0);
+            }
+
             //Increase the available number of tickets
             this.get('model').forEach(function(ticketType) {
                 if (ticketType.get('id') === basketTicket.get('type')) {
@@ -64,8 +61,19 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                 }
             });
 
-            var tickets = [];
+            var order = this.buildOrder();
 
+            var controller = this;
+            controller.attemptToAddTicketToBasket(order);
+        }
+    },
+
+    buildOrder: function(newTicket) {
+        var basketedTickets = this.get('basket');
+
+        var tickets = [];
+
+        if (basketedTickets) {
             basketedTickets.forEach(function(ticket) {
                 tickets.push({
                     type: ticket.get('type'),
@@ -73,15 +81,19 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                     price: ticket.get('price')
                 });
             });
-
-            var order = {
-                orderNumber: this.get('orderNumber'),
-                tickets: tickets
-            };
-
-            var controller = this;
-            controller.attemptToAddTicketToBasket(order);
         }
+
+        if (newTicket) {
+            tickets.push(newTicket);
+        }
+
+        var order = {
+            orderNumber: this.get('orderNumber'),
+            tickets: tickets,
+            couponCode: this.get('couponCode')
+        };
+
+        return order;
     },
 
     attemptToAddTicketToBasket: function(order) {
@@ -98,6 +110,15 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                     controller.set('numTickets', r.numTickets);
                     controller.set('ticketSubtotal', r.subtotal);
                     controller.set('ticketSubtotalEur', r.subtotal / 100);
+                    if (r.discount !== null) {
+                        controller.set('ticketDiscountAmount', r.discount / 100);
+                    } else {
+                        controller.set('ticketDiscountAmount', 0);
+                    }
+
+                    if (r.couponCode) {
+                        controller.set('couponCode', r.couponCode);
+                    }
                     controller.set('ticketsMd5', r.md5Hash);
                     controller.set('orderNumber', r.orderNumber);
                     controller.set('continueUrl', r.continueUrl);
@@ -141,6 +162,15 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
                         controller.set('numTickets', r.numTickets);
                         controller.set('ticketSubtotal', r.subtotal);
                         controller.set('ticketSubtotalEur', r.subtotal / 100);
+                        if (r.discount) {
+                            controller.set('ticketDiscountAmount', r.discount / 100);
+                        } else {
+                            controller.set('ticketDiscountAmount', 0);
+                        }
+
+                        if (r.couponCode) {
+                            controller.set('couponCode', r.couponCode);
+                        }
                         controller.set('ticketsMd5', r.md5Hash);
                         controller.set('orderNumber', r.orderNumber);
                         controller.set('continueUrl', r.continueUrl);

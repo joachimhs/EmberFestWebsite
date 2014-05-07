@@ -26,7 +26,7 @@
                             <p class="title">{{ticketType.name}}</p>
                             {{ticketType.description}}
                         </td>
-                        <td>€{{ticketType.price}}</td>
+                        <td>&euro;{{ticketType.price}}</td>
                         {{#if ticketType.saleStarted}}
                             {{#if ticketType.ticketsAvailable}}
                             <td>
@@ -60,7 +60,9 @@
                 </tr>
                 </thead>
 
-                {{#if basket}}
+
+                <tbody>
+
                     {{#each basketTicket in basket}}
                         <tr>
                             <td>{{basketTicket.name}}</td>
@@ -68,8 +70,22 @@
                         </tr>
                     {{/each}}
 
+                    <tr>
+                        <td>{{input type="text" class="tiny" value=controller.couponCode placeholder="Your Coupon Code"}}</td>
+                        <td>
+                            <button class="button secondary tiny" style="width: 100%;" {{action "addCouponCode"}}>Apply</button>
+                        </td>
+                    </tr>
+
+                    {{#if controller.couponCode}}
+                        <tr>
+                            <td>Coupon Discount Amount: </td>
+                            <td>&euro;{{controller.ticketDiscountAmount}}</td>
+                        </tr>
+                    {{/if}}
+
                     <tr><td colspan="2">
-                        {{#if controller.ticketSubtotal}}
+                        {{#if controller.numTickets}}
                             <div class="text-right" style="width: 100%">
                                 <form action="https://secure.quickpay.dk/form/" method="post">
                                     <input type="hidden" name="protocol" value="7" />
@@ -89,12 +105,12 @@
                                     <input type="hidden" name="cardtypelock" value="" />
                                     <input type="hidden" name="splitpayment" value="1" />
                                     <input type="hidden" name="md5check" {{bind-attr value=controller.ticketsMd5}} />
-                                    <button class="button small" >Purchase {{controller.numTickets}} Tickets for {{controller.ticketSubtotalEur}} &#x2771;</button>
+                                    <button class="button small" style="width: 100%;">Purchase {{controller.numTickets}} Tickets for {{controller.ticketSubtotalEur}} &#x2771;</button>
                                 </form>
                             </div>
                         {{/if}}
                     </td></tr>
-                {{/if}}
+                </tbody>
             </table>
         </div>
     </div>

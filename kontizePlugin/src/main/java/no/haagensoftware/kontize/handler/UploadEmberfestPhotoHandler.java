@@ -74,7 +74,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
 
                 // example of reading chunk by chunk (minimize memory usage due to
                 // Factory)
-                newFilename = readHttpDataChunkByChunk();
+                newFilename = readHttpDataChunkByChunk(getDomain().getWebappName());
 
                 logger.info("newFilename: " + newFilename + " user: " + user);
                 if (newFilename != null && user != null) {
@@ -92,7 +92,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
     /**
      * Example of reading request by chunk and getting values from chunk to chunk
      */
-    private String readHttpDataChunkByChunk() {
+    private String readHttpDataChunkByChunk(String host) {
         String newFilename = null;
 
         try {
@@ -101,7 +101,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
                 if (data != null) {
                     try {
                         // new value
-                        newFilename = writeHttpData(data);
+                        newFilename = writeHttpData(host, data);
                     } finally {
                         data.release();
                     }
@@ -114,7 +114,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
         return newFilename;
     }
 
-    private String writeHttpData(InterfaceHttpData data) {
+    private String writeHttpData(String host, InterfaceHttpData data) {
         String newFilename = null;
 
         if (data.getHttpDataType() == InterfaceHttpData.HttpDataType.FileUpload) {
@@ -125,7 +125,7 @@ public class UploadEmberfestPhotoHandler extends ContenticeHandler {
                 try {
                     String uuidFile = UUID.randomUUID().toString().replaceAll("-","") + fileending;
 
-                    String filename = System.getProperty("no.haagensoftware.contentice.webappDir") + "/uploads/" + uuidFile;
+                    String filename = System.getProperty("no.haagensoftware.contentice.webappDir") + "/" + host +  "/uploads/" + uuidFile;
 
                     fileUpload.renameTo(new File(filename));
 

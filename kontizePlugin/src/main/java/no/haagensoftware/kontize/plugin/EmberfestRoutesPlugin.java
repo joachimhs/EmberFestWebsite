@@ -41,6 +41,11 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("/json/ticketSubtotal", TicketSubtotalHandler.class);
         routeMap.put("/json/ticketsCallback", TicketsCallbackHandler.class);
 
+
+        routeMap.put("/json/uploadPhoto", UploadEmberfestPhotoHandler.class);
+        routeMap.put("/json/uploadPhoto/", UploadEmberfestPhotoHandler.class);
+
+
         routeMap.put("startsWith:/pages", FileServerHandler.class);
         routeMap.put("startsWith:/talk", FileServerHandler.class);
         routeMap.put("startsWith:/tickets", FileServerHandler.class);
@@ -52,7 +57,7 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("startsWith:/munich", FileServerHandler.class);
         routeMap.put("startsWith:/profile", FileServerHandler.class);
 
-        routeMap.put("/json/uploadPhoto", UploadEmberfestPhotoHandler.class);
+
     }
 
     @Override

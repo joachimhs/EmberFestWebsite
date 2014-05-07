@@ -14,6 +14,7 @@ public class TicketType {
     private Date availableFrom;
     private Boolean active;
     private Long sortIndex;
+    private Boolean discountable;
 
     public TicketType() {
     }
@@ -80,5 +81,13 @@ public class TicketType {
 
     public void setSortIndex(Long sortIndex) {
         this.sortIndex = sortIndex;
+    }
+
+    public Boolean getDiscountable() {
+        return discountable;
+    }
+
+    public void setDiscountable(Boolean discountable) {
+        this.discountable = discountable;
     }
 }

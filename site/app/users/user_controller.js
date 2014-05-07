@@ -17,6 +17,9 @@ Emberfest.UserController = Ember.ObjectController.extend({
         controller.store.find('user', uuidToken).then(function(user) {
             controller.set('model', user);
             controller.initializePersona();
+        }, function(user) {
+            controller.eraseCookie('uuidToken');
+            controller.initializePersona();
         });
     },
 
