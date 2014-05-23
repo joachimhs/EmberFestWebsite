@@ -24,3 +24,7 @@ Emberfest.RawTransform = DS.Transform.extend({
 Emberfest.PageAdapter = Emberfest.Adapter.extend({
     namespace: 'json/data'
 });
+
+Emberfest.AcceptedTalkAdapter = Emberfest.Adapter.extend({
+    namespace: 'json/data'
+});

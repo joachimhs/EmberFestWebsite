@@ -57,7 +57,7 @@ public class TicketHandler extends ContenticeHandler {
 
             for (String id : ids) {
                 for (PurchasedTicket purchasedTicket : purchasedTickets) {
-                    if (purchasedTicket.getId().equals("tickets_" + cachedUserResult.getUserId() + "-" + id)) {
+                    if (purchasedTicket.getId().equals(id) || purchasedTicket.getId().equals("tickets_" + cachedUserResult.getUserId() + "-" + id)) {
                         PurchasedTicket newPurchasedTicket = new PurchasedTicket(purchasedTicket);
                         newPurchasedTicket.setId(id);
                         tickets.add(newPurchasedTicket);

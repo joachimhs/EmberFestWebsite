@@ -1,6 +1,6 @@
 Emberfest.IndexRoute = Ember.Route.extend({
     model: function() {
-        return this.store.find('page', 'home');
+        return this.store.find('acceptedTalk');
     },
 
     setupController: function(controller, model) {

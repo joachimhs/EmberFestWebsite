@@ -11,11 +11,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="contentice-api" />
+    <orderEntry type="module" module-name="contentice-api" scope="PROVIDED" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.13" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-all:4.0.14.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.6.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.netty:netty-all:4.0.14.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jsoup:jsoup:1.6.3" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.1.1" level="project" />

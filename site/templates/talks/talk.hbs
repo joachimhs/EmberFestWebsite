@@ -17,6 +17,16 @@
             <p>{{markdown outline}}</p>
           {{/if}}
 
+          {{#if talkIntendedAudience}}
+            <h3>Who is this talk for?</h3>
+            <p>{{talkIntendedAudience}}</p>
+          {{/if}}
+
+            {{#if participantRequirements}}
+                <h3>Preparation</h3>
+                <p>{{participantRequirements}}</p>
+            {{/if}}
+
           {{#if topics}}
             <h3>Topics</h3>
             <p>{{topics}}</p>

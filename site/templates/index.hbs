@@ -1,8 +1,34 @@
-<h2>{{content.title}}</h2>
+<h2>Our Confirmed Speakers</h2>
 
-{{markdown content.content}}
+<p>We are still working on finalizing the speaker lineup and the schedule for Ember Fest 2014! Still, we have confirmed a bunch of great speakers already!</p>
 
-<p>
+<div class="row" id="sponsor-packages">
+    {{#each acceptedTalk in controller}}
+        <div class="small-12 large-4 columns">
+            <ul class="pricing-table iron">
+                <li class="title">{{acceptedTalk.talk.talkSuggestedBy}}</li>
+                <li class="bullet-item text-center acceptedSpeakerRow">
+                    {{#if acceptedTalk.talk.photoUrl}}
+                        <img {{bind-attr src=acceptedTalk.talk.photoUrl}} class="talkPhoto">
+                    {{else}}
+                        <img src="/images/genericHead.png" class="talkPhoto"/>
+                    {{/if}}
+                </li>
+                <li class="description text-left acceptedSpeakerRow">
+                    {{#if acceptedTalk.talk.talkShortBio}}
+                        {{markdown acceptedTalk.talk.talkShortBio}}
+                    {{/if}}
+                </li>
+                <li class="bullet-item text-center">
+                    <div class="acceptedSpeakerHalfRow"><h4 >{{acceptedTalk.talk.title}}</h4></div>
+                    {{#link-to "talks.talk" acceptedTalk.talk.id class="acceptedSpeakerHalfRow"}}View Talk{{/link-to}}</li>
+            </ul>
+        </div>
+    {{/each}}
+</div>
+
+<h2>Talks from 2013</h2>
+
+<div>
   You can find the recorded presentations from 2013 on the {{#link-to "munich"}}Munich{{/link-to}} page.
-
-</p>
+</div>

@@ -19,7 +19,11 @@
                 <tr>
                     <td>{{ticket.ticketType.name}}</td>
                     <td>{{ticket.ticketHolder}}</td>
-                    <td>{{ticket.ordernumber}}</td>
+                    <td>
+                        {{#link-to "tickets.receipt" ticket.ordernumber}}
+                            {{ticket.ordernumber}}
+                        {{/link-to}}
+                    </td>
                 </tr>
             {{/each}}
 
@@ -31,15 +35,21 @@
           </table>
 
           <h3>Suggested Talks</h3>
-          {{#each talk in talks}}
-              <div>
-                  <span class="profileTalkTitle">{{talk.title}}</span>
-                  {{#link-to "talks.talk" talk class="profileTalkLink"}}Edit{{/link-to}}
-                  {{#link-to "talks.talk" talk class="profileTalkLink"}}View{{/link-to}}
-              </div>
-          {{/each}}
+          <table>
+              {{#each talk in talks}}
+                  <tr>
+                      <td><span class="profileTalkTitle">{{talk.title}}</span></td>
+                      <td>{{#link-to "talks.edit" talk class="profileTalkLink"}}<button class="button secondary tiny">Edit</button>{{/link-to}}</td>
+                      <td>{{#link-to "talks.talk" talk class="profileTalkLink"}}<button class="button secondary tiny">View</button>{{/link-to}}</td>
+                  </tr>
+              {{/each}}
+          </table>
         <h3>Participant Information</h3>
         <p>If your talk is approved, you will be notified by one of the organizers personally. We will accept talks at regular intervals until two weeks before the conference starts. If none of your talks get approved, you will get the opportunity to buy a ticket at the price valid when you registered your talk.</p>
+
+        <h3>Code of Conduct</h3>
+        <p>Please take some time to read through out {{#link-to "codeOfConduct"}}Code of Conduct{{/link-to}}!</p>
+
       </div>
     </div>
 

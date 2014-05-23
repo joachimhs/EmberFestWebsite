@@ -1,0 +1,65 @@
+{{#if orderNumber}}
+    <div class="receiptDiv" style="max-width: 600px;">
+            <div class="row">
+                <div class="small-12 large-6 columns left-align">
+                    <img src="/images/hs_logo.png" />
+                </div>
+                <div class="small-12 large-6 columns right-align">
+                    <img src="/images/logo_black.png" />
+                </div>
+            </div>
+            <div class="right-align">
+                <p class="right-align" style="text-align: right;">Haagen Software AS<br />
+                    VAT no: 998 392 578 MVA<br />
+                    Rosenholmveien 25<br />
+                    N-1414 Trollåsen<br />
+                    Norway
+                </p>
+            </div>
+            <div class="left-align">
+                <p style="font-weight: 900;">
+                    {{companyName}}<br />
+                    {{country}}<br />
+                </p>
+            </div>
+            <div class="text-center" style="text-transform: uppercase; margin-top: 45px;">
+                <p>Ember Fest Ticket Receipt, Order Number {{id}}</p>
+            </div>
+
+            <table style="width: 100%;">
+                <tr>
+                    <th>Item</th>
+                    <th style="width: 150px;">Ticket Holder</th>
+                    <th style="width: 70px; text-align: right;">Price</th>
+                </tr>
+
+                {{#each ticket in tickets}}
+                    <tr>
+                        <td>{{ticket.ticketType.name}}</td>
+                        <td>{{ticket.ticketHolder}}</td>
+                        <td style="text-align: right;">€ {{ticket.ticketType.price}}</td>
+                    </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Subtotal: € {{subtotal}}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Coupon Discount: € {{couponDiscount}}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Total Amount: € {{totalAmount}}</td>
+                </tr>
+            </table>
+    </div>
+{{else}}
+    <h2>There is no valid order with that Ordernumber</h2>
+    <ul>
+        <li>Either the ordernumber is invalid</li>
+        <li>Or the order is not associated with your account</li>
+    </ul>
+
+    <p>Please contact the organizers if you are unable to view your Order!</p>
+{{/if}}

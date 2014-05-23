@@ -63,6 +63,19 @@ public class TicketsDao {
         return purchasedTicketList;
     }
 
+    public List<PurchasedTicket> getPurchasedTicketsForOrderId(String host, String orderId) {
+        List<PurchasedTicket> purchasedTicketList = new ArrayList<>();
+
+        for (SubCategoryData subCategoryData : storagePlugin.getSubCategories(host, "tickets")) {
+            PurchasedTicket pt = convertSubcategoryToPurchasedTicket(subCategoryData);
+            if (pt.getOrdernumber().equals(orderId)) {
+                purchasedTicketList.add(pt);
+            }
+        }
+
+        return purchasedTicketList;
+    }
+
     public PurchasedTicket getPurchasedTicket(String host, String userid, String ticketid) {
         PurchasedTicket purchasedTicket = null;
 
@@ -94,6 +107,21 @@ public class TicketsDao {
         for (SubCategoryData subCategoryData : subCategoryDataList) {
             Order order = convertSubcategoryDataToOrder(host, subCategoryData);
             if (order.getUserId().equals(userid) && order.getStatus().equals("new")) {
+                foundOrder = order;
+            }
+        }
+
+        return foundOrder;
+    }
+
+    public Order getOrderForOrderId(String host, String orderId) {
+        Order foundOrder = null;
+
+        List<SubCategoryData> subCategoryDataList = storagePlugin.getSubCategories(host, "orders");
+
+        for (SubCategoryData subCategoryData : subCategoryDataList) {
+            Order order = convertSubcategoryDataToOrder(host, subCategoryData);
+            if (order.getOrderNumber().equals(orderId) && order.getStatus().equals("approved")) {
                 foundOrder = order;
             }
         }
@@ -245,6 +273,10 @@ public class TicketsDao {
 
         if (ticketType.getTicketsAvailable() != null) {
             tt.getKeyMap().put("ticketsAvailable", new JsonPrimitive(ticketType.getTicketsAvailable()));
+        }
+
+        if (ticketType.getDiscountable() != null) {
+            tt.getKeyMap().put("discountable", new JsonPrimitive(ticketType.getDiscountable()));
         }
 
         if (ticketType.getAvailableFrom() != null) {

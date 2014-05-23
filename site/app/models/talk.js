@@ -14,9 +14,19 @@ Emberfest.Talk = DS.Model.extend({
     talkByPhoto: DS.attr('string'),
     talkBy: DS.attr('string'),
     talkIntendedAudience: DS.attr('string'),
+    talkByLoggedInUser: DS.attr('boolean'),
 
     talkShortAbstract: function() {
         return this.get('talkAbstract').substring(0,250) + " ... ";
+    }.property('talkAbstract'),
+
+    talkShortBio: function() {
+        if (this.get('talkByBio')) {
+            return this.get('talkByBio').substring(0,250) + " ... ";
+        } else {
+            return "";
+        }
+
     }.property('talkAbstract'),
 
     photoUrl: function() {

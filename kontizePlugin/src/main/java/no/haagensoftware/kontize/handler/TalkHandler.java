@@ -80,6 +80,10 @@ public class TalkHandler extends ContenticeHandler {
                 Cookie cookie = authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cachedUserResult.getUuidToken());
                 if (submittedTalk != null && cookie != null) {
 
+                    if (isPut(fullHttpRequest)) {
+                        submittedTalk.setId(id);
+                    }
+
                     Talk talk = talkDao.getTalk(getDomain().getWebappName(), submittedTalk.getId());
                     if (talk != null && talk.getUserId().equals(cookie.getUserId())) {
                         Talk updatedAbstract = new Talk();

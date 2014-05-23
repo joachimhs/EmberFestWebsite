@@ -36,6 +36,24 @@ h3 {
   margin: 1.6em 0 1em 0;
 }
 
+.receiptDiv {
+    padding-top: 45px;
+    margin: 0 auto;
+}
+
+.registerTalkDiv {
+
+}
+
+.registerTalkDiv > textarea {
+    height: 150px;
+}
+
+.inputTextarea {
+    height: 150px;
+    min-height: 150px;
+}
+
 .button {
   text-transform: uppercase;
   border-radius: 2px;
@@ -348,9 +366,6 @@ article.topic span.author {
     max-width: 130px;
     max-height: 130px;
     padding-top: 0.5em;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
 }
 
 article h2 {
@@ -361,6 +376,18 @@ article h2 {
 .talkSoMe {
     margin-bottom: 0.5em;
     text-align: center;
+}
+
+.acceptedSpeakerRow {
+    min-height: 150px;
+    height: 150px;
+    line-height: 90px;
+}
+
+.acceptedSpeakerHalfRow {
+    min-height: 75px;
+    height: 75px;
+    line-height: 75px;
 }
 
 /* ==========================================================================

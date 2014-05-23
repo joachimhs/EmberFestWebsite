@@ -1,5 +1,6 @@
 package no.haagensoftware.kontize.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,7 @@ public class Order {
     private String chstatmsg;
 
     public Order() {
+        tickets = new ArrayList<>();
     }
 
     public String getOrderNumber() {
