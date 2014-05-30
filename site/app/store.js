@@ -28,3 +28,15 @@ Emberfest.PageAdapter = Emberfest.Adapter.extend({
 Emberfest.AcceptedTalkAdapter = Emberfest.Adapter.extend({
     namespace: 'json/data'
 });
+
+Emberfest.ScheduleDayAdapter = Emberfest.Adapter.extend({
+    namespace: 'json/data'
+});
+
+Emberfest.ScheduleTrackAdapter = Emberfest.Adapter.extend({
+    namespace: 'json/data'
+});
+
+Emberfest.ScheduleEventAdapter = Emberfest.Adapter.extend({
+    namespace: 'json/data'
+});

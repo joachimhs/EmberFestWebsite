@@ -1,4 +1,4 @@
-Emberfest.RegisterTalkRoute = Ember.Route.extend({
+Emberfest.RegisterTalkRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         return Ember.Object.create();
     },

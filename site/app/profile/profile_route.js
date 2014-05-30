@@ -1,4 +1,4 @@
-Emberfest.ProfileRoute = Ember.Route.extend({
+Emberfest.ProfileRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         var uuidToken = this.controllerFor('user').readCookie('uuidToken');
         console.log('ProfileRoute uuidToken: ' + uuidToken);

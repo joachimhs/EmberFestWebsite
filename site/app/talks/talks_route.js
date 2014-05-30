@@ -1,4 +1,4 @@
-Emberfest.TalksIndexRoute = Ember.Route.extend({
+Emberfest.TalksIndexRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         return this.store.find('talk');
     },

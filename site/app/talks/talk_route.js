@@ -1,4 +1,4 @@
-Emberfest.TalksTalkRoute = Ember.Route.extend({
+Emberfest.TalksTalkRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function(key) {
         console.log('!!!TalksTalkRoute model!!');
         console.log(key);

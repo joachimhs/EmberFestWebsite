@@ -1,4 +1,4 @@
-Emberfest.VenueRoute = Ember.Route.extend({
+Emberfest.VenueRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         return this.store.find('page', 'venue');
     },

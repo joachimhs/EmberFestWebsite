@@ -1,4 +1,4 @@
-Emberfest.MunichRoute = Ember.Route.extend({
+Emberfest.MunichRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         return this.store.find('page', 'munich');
     },

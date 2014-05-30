@@ -66,6 +66,10 @@ public class TalkHandler extends ContenticeHandler {
             if (talk != null) {
                 JsonObject talkJson = generateTalkJson(cookieUuidToken, talk);
 
+                if (id.startsWith("talks_") && !talk.getAbstractId().startsWith("talks_")) {
+                    talkJson.addProperty("id", "talks_" + talk.getAbstractId());
+                }
+
                 JsonObject topObject = new JsonObject();
                 topObject.add("talk", talkJson);
 
