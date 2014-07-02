@@ -1,4 +1,4 @@
-Emberfest.OrganizersController = Ember.ArrayController.extend({
+Emberfest.IndexOrganizersController = Ember.ArrayController.extend({
     init: function() {
         this._super();
         var organizers = [{
@@ -42,7 +42,7 @@ Emberfest.OrganizersController = Ember.ArrayController.extend({
             twitterUrl: "http://www.twitter.com/alexspeller",
             location: "England",
             imageUrl: '/images/alexspeller.jpg'
-        }]
+        }];
 
         this.set('content', organizers);
     }

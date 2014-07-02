@@ -1,0 +1,5 @@
+{{#if userController.isLoggedIn}}
+    <span class="loginButton" {{action "doLogOut"}}>Log Out</span>
+{{else}}
+    <span class="loginButton" {{action "doLogIn"}}>Log In</span>
+{{/if}}

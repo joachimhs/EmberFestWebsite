@@ -52,6 +52,10 @@ body {
 
 /* ************* */
 
+#nav {
+    z-index: 100;
+}
+
 .nav {
   list-style: none;
   margin: 0 auto;
@@ -95,7 +99,7 @@ body {
   text-decoration: none;
   text-align: center;
   display: block;
-  width: 126px;
+  width: 116px;
   padding: 33px 0;
   color: #FFFFFF;
 }
@@ -582,4 +586,14 @@ body {
 
 #venue-map {
   height: 100%;
+}
+
+.loginButton {
+    background-color: #60BCAF;
+    color: #fff;
+    float: right;
+    line-height: 26px;
+    margin-top: 27px;
+    padding: 5px;
+    cursor: pointer;
 }

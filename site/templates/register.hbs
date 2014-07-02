@@ -1,0 +1,34 @@
+<div class="container content" id="register">
+    <div class="markdownArea">
+        <h1>Register a new Account!</h1>
+        <p>You have successfully logged in via Mozilla, persona, but we need some more information about you, in order to set up an account for you!</p>
+        <p>With your account, you will be able to answer the upcoming call for speakers, as well as comment on the call for speakers submissions. We use Mozilla Persona, which we think is a great online authentication system. Its great for us, because we do not need to know and keep your password. Mozilla Persona is safe and secure, and we are hoping it will become the identity system for the web!</p>
+        <p style="margin-bottom: 20px;">We still need to know who you are, in order to link your email address to your account details.</p>
+        <form role="form">
+            <div class="form-group">
+                <label for="inputEmail">First Name</label>
+                {{view Ember.TextField valueBinding="firstName" classNames="form-control"}}
+                {{#if firstNameValidationError}}
+                    <span class="text-danger">{{firstNameValidationError}}</span>
+                {{/if}}
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="inputEmail">Last Name</label>
+                {{view Ember.TextField valueBinding="lastName" classNames="form-control"}}
+                {{#if lastNameValidationError}}
+                    <span class="text-danger">{{lastNameValidationError}}</span>
+                {{/if}}
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="inputEmail">Home Country</label>
+                {{view Ember.TextField valueBinding="homeCountry" classNames="form-control"}}
+                {{#if homeCountryValidationError}}
+                    <span class="text-danger">{{homeCountryValidationError}}</span>
+                {{/if}}
+            </div>
+            <div class="form-actions" style="background: none;">
+                <button type="submit" class="btn btn-primary" {{action "registerNewAccount"}}>Register New Account</button>
+            </div>
+        </form>
+    </div>
+</div>

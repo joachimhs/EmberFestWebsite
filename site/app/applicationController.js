@@ -1,4 +1,6 @@
-Emberfest.ApplicationController = Ember.Controller.extend({
+Emberfest.ApplicationController = Ember.ArrayController.extend({
+    needs: ['user'],
+
     logoUrl: '/images/logo_small_white.png',
 
     routeScheduler: null,
@@ -16,6 +18,7 @@ Emberfest.ApplicationController = Ember.Controller.extend({
         }
 
         if ((new Date().getTime() - Emberfest.get('lastTransition')) > 450) {
+            Emberfest.set('lastTransition', new Date().getTime());
             console.log('[ROUTE SCHEDULER]: scheduling destination route: ' + routeName);
             this.set('routeToGoTo', routeName);
         }
@@ -25,7 +28,7 @@ Emberfest.ApplicationController = Ember.Controller.extend({
         var routeToGoTo = this.get('routeToGoTo');
 
 
-        if (routeToGoTo) {
+            if (routeToGoTo) {
             console.log('[ROUTE SCHEDULER]: transitioning to route: ' + routeToGoTo);
             this.transitionToRoute(routeToGoTo);
             this.set('routeToGoTo', null);

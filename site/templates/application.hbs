@@ -1,22 +1,21 @@
-{{outlet}}
 <div class="sticky-navbar" id="nav">
   <ul id="navbar" class="sticky-nav">
     <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>
-    <li class="index-a">{{#linkTo index.index}}HOME{{/linkTo}}</li>
-    <li class="tickets-a">{{#linkTo index.tickets}}TICKETS{{/linkTo}}</li>
-    <li class="talks-a">{{#linkTo index.talks}}TALKS{{/linkTo}}</li>
-    <li class="schedule-a">{{#linkTo index.schedule}}SCHEDULE{{/linkTo}}</li>
-    <li class="venue-a">{{#linkTo index.venue}}VENUE{{/linkTo}}</li>
-    <li class="organizers-a">{{#linkTo index.organizers}}ORGANIZERS{{/linkTo}}</li>
-    <li class="sponsors-a">{{#linkTo index.sponsors}}SPONSORS{{/linkTo}}</li>
+    <li class="index-a">{{#linkTo "index.index"}}HOME{{/linkTo}}</li>
+    <li class="tickets-a">{{#linkTo "index.tickets"}}TICKETS{{/linkTo}}</li>
+    <li class="talks-a">{{#linkTo "talks"}}TALKS{{/linkTo}}</li>
+    <li class="schedule-a">{{#linkTo "index.schedule"}}SCHEDULE{{/linkTo}}</li>
+    <li class="venue-a">{{#linkTo "index.venue"}}VENUE{{/linkTo}}</li>
+    <li class="organizers-a">{{#linkTo "index.organizers"}}ORGANIZERS{{/linkTo}}</li>
+    <li class="sponsors-a">{{#linkTo "index.sponsors"}}SPONSORS{{/linkTo}}</li>
+
+    <li class="sponsors-a">{{login-button userController=controllers.user}}</li>
+
   </ul>
 </div>
-{{render "tickets"}}
-{{render "talks"}}
-{{render "schedule"}}
-{{render "venue"}}
-{{render "organizers"}}
-{{render "sponsors"}}
+
+{{outlet}}
+
 <div class="navbar footer">
   <ul class="nav">
     <li><img {{bindAttr src="logoUrl"}} alt="Ember Fest 2013 Logo"></li>

@@ -27,7 +27,7 @@ Ember.Application.reopen({
 
 
 var Emberfest = Ember.Application.create({
-    templates: ['application', 'index', 'tickets', 'organizers', 'schedule', 'sponsors', 'talk', 'talks', 'tickets', 'venue'],
+    templates: ['application', 'index', '_tickets', 'organizers', '_schedule', '_sponsors', 'talk', 'talks', '_tickets', '_venue', "register", 'registerTalk', 'components/login-button'],
     rootElement: '#app'
 });
 
@@ -36,14 +36,19 @@ Emberfest.Router = Ember.Router.extend({
 });
 
 Emberfest.Router.map(function() {
-    this.resource("index", {path: "/"}, function() {
+    this.resource('index', {path: "/"}, function() {
         this.route('tickets');
-        this.route('talks');
+        this.resource('talks', function() {
+            this.route('talk', {path: "/talk/:talk_id"});
+        });
         this.route('schedule');
         this.route('venue');
         this.route('organizers');
         this.route('sponsors');
     });
+
+    this.route("registerTalk");
+    this.route('register');
 });
 
 Ember.Handlebars.registerBoundHelper('markdown', function(property) {

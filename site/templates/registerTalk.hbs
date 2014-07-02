@@ -1,0 +1,59 @@
+<div class="container content" id="registerTalk">
+    <div class="markdownArea">
+        <h1>Submit your Proposal!</h1>
+
+        {{#if controllers.user.isLoggedIn}}
+            <form role="form">
+                <div class="form-group">
+                    <label class="control-label" for="proposalTitle">Title</label>
+                    <div class="controls">
+                        {{view Ember.TextField valueBinding="proposalTitle" classNames="span5" classNames="form-control"}}
+                        {{#if titleValidationError}}
+                            <span class="bg-danger">{{titleValidationError}}</span>
+                            {{else}}
+                            <span class="help-block">This is your Abstract Title</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="proposalText">Proposal</label>
+                    <div class="form">
+                        {{view Ember.TextArea valueBinding="proposalText" rows="20" classNames="span5" classNames="form-control"}}
+                        {{#if proposalValidationError}}
+                            <span class="hbg-danger">{{proposalValidationError}}</span>
+                            {{else}}
+                            <span class="help-block">This is your Proposals content</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="proposalType">Proposal Type</label>
+                    <div class="form">
+                        {{view Ember.TextField valueBinding="proposalType" rows="20" classNames="span5" classNames="form-control"}}
+                        {{#if proposalTypeValidationError}}
+                            <span class="bg-danger">{{proposalTypeValidationError}}</span>
+                            {{else}}
+                            <span class="help-block">20 or 35 minute talk, or tutorial</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="form-label" for="topics">Topics</label>
+                    <div class="form">
+                        {{view Ember.TextField valueBinding="proposalTopics" rows="20" classNames="span5" classNames="form-control"}}
+                        {{#if topicsValidationError}}
+                            <span class="bg-danger">{{topicsValidationError}}</span>
+                            {{else}}
+                            <span class="help-block">A comma separated keyword-list</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                <div class="form-actions" style="background: none;">
+                    <button type="submit" class="btn btn-primary" {{action "submitAbstract"}}>Submit Proposal!</button>
+                    </div>
+                </form>
+            {{else}}
+            <p>You need to log in, in order to submit an abstract.</p>
+        {{/if}}
+    </div>
+</div>

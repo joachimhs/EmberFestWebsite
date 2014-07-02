@@ -1,6 +1,13 @@
 Emberfest.TalksController = Ember.ArrayController.extend({
+    needs: ['application'],
+
     init: function() {
         this._super();
-        this.set('content', Emberfest.Talk.findAll());
+    },
+
+    actions: {
+        navigateToTalkSubmit: function() {
+            this.get('controllers.application').scheduleRouteTransition('registerTalk');
+        }
     }
 });
