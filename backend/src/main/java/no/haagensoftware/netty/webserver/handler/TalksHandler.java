@@ -128,7 +128,8 @@ public class TalksHandler extends FileServerHandler {
 		talkJson.addProperty("talkTopics", talk.getAbstractTopics());
 		talkJson.addProperty("talkType", talk.getAbstractType());
 		
-		if (cookieUuidToken != null) {
+		if (cookieUuidToken != null && authenticationContext.getAuthenticatedUser(cookieUuidToken) != null) {
+
 			PerstUser user = authenticationContext.getUser(authenticationContext.getAuthenticatedUser(cookieUuidToken).getEmail());
 			
 			if (user != null && user.getUserId().equals(talk.getUserId())) {
