@@ -7,6 +7,7 @@ import com.google.gson.JsonPrimitive;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
+import no.haagensoftware.emberfest.email.EpostExecutor;
 import no.haagensoftware.kontize.db.dao.TalkDao;
 import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.models.*;
@@ -36,6 +37,9 @@ public class UserHandler extends ContenticeHandler {
         if (ticketsDao == null) {
             ticketsDao = new TicketsDao(getStorage());
         }
+
+        //Start the email service
+        EpostExecutor.getInstance(getDomain().getWebappName()).sendRemainingEmails(getStorage());
 
         String uri = getUri(fullHttpRequest);
         String cookieUuidToken = getCookieValue(fullHttpRequest, "uuidToken");

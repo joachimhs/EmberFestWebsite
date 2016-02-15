@@ -15,6 +15,7 @@ Emberfest.Talk = DS.Model.extend({
     talkBy: DS.attr('string'),
     talkIntendedAudience: DS.attr('string'),
     talkByLoggedInUser: DS.attr('boolean'),
+    video: DS.attr('string'),
 
     talkShortAbstract: function() {
         return this.get('talkAbstract').substring(0,250) + " ... ";

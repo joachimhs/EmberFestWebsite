@@ -4,7 +4,7 @@ Emberfest.Router = Ember.Router.extend({
 
 Emberfest.Router.map(function() {
     this.route('index', {path: "/"});
-    this.route('munich');
+    this.route('previousYears');
     this.route('partners');
     this.route('organizers');
     this.route('venue');
@@ -12,6 +12,7 @@ Emberfest.Router.map(function() {
     this.route('registerTalk');
     this.route('profile');
     this.route('codeOfConduct');
+    this.route('swag');
     this.route('schedule');
 
     this.resource('talks', function() {

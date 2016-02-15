@@ -201,7 +201,7 @@ public class TicketSubtotalHandler extends ContenticeHandler {
         sb.append("en");
         sb.append(orderNumber);
         sb.append("" + subtotal);
-        sb.append("EUR");
+        sb.append("GBP");
         sb.append(continueUrl);
         sb.append(cancelUrl);
         sb.append(callbackUrl);

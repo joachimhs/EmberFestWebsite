@@ -1,125 +1,47 @@
-<script>
-  $(document).foundation();
-</script>
+<header id="header" class="fest-header">
+    <div class="page-content">
+        {{#link-to "index"}}
+            <img class="logo" src="/images/logo.png"/>
+        {{/link-to}}
 
-<header>
-  <div class="row">
-    <div class="small-12 large-12 columns">
+            <ul id="menu">
+                {{link-to "Talks" "talks" tagName="li"}}
+                {{link-to "Tickets" "tickets" tagName="li"}}
+                {{link-to "Venue" "venue" tagName="li"}}
+                {{link-to "Partners" "partners" tagName="li"}}
+                {{link-to "Previous Years" "previousYears" tagName="li"}}
 
-      <!-- BEGIN TOP NAV -->
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1>
-              {{#link-to "index"}}<img src="/images/logo.png" class="logo">{{/link-to}}
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
+                {{#if controllers.user.isLoggedIn}}
+                    {{link-to "My Account" "profile" tagName="li"}}
+                    <li {{action "doLogOut"}}>Log Out</li>
+                {{else}}
+                    <li {{action "doLogIn"}}>Login</li>
+                {{/if}}
+            </ul>
 
-        <section class="top-bar-section">
-          <ul class="right">
-            {{#if controllers.user.isLoggedIn}}
-              <li><a {{action "doLogOut"}}>Sign out</a></li>
-            {{else}}
-              <li><a {{action "doLogIn"}}>Sign in</a></li>
-            {{/if}}
-          </ul>
-
-          <ul class="left main-nav">
-            <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
-            <li>{{#link-to "schedule"}}Schedule{{/link-to}}</li>
-            <li>{{#link-to "tickets"}}Tickets{{/link-to}}</li>
-            <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
-            <li>{{#link-to "partners"}}Partners{{/link-to}}</li>
-            <li>{{#link-to "organizers"}}About{{/link-to}}</li>
-            <li>{{#link-to "munich"}}2013{{/link-to}}</li>
-            {{#if controllers.user.isLoggedIn}}
-                <li>{{#link-to "profile"}}Profile{{/link-to}}</li>
-            {{/if}}
-          </ul>
-        </section>
-      </nav>
-      <!-- END TOP NAV -->
-
-      <!-- BEGIN BANNER -->
-      {{#if isOnHome}}
-          <div class="banner text-center">
-              <h1>The biggest ember.js event in Europe</h1>
-              <h2><span style="font-weight: 700">Barcelona</span> 26th &ndash; 29th August 2014</h2>
-
-              {{#link-to "mailinglist" class="button"}}Subscribe{{/link-to}}
-              {{#link-to "tickets" class="button"}}Buy tickets{{/link-to}}
-
-              <h1 style="margin-top: 25px;">Gold Partners</h1>
-              {{pop-over imgSrc="/images/fundinggates_color_logo.png" hrefSrc="http://fundinggates.com" popoverContent="Funding Gates is the company behind FG Receivables Manager, an application that helps businesses track, organize and take actions on open invoices. The FG Receivables Manager is the #1 rated receivables add-on to QuickBooks."}}
-              {{pop-over buttonText="Partner With us!" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
-
-          </div>
-          <!-- END BANNER -->
-      {{else}}
-          <div class="nobanner text-center">
-          </div>
-      {{/if}}
-
-
+        <button id="burgerMenuButton" class="burger-hidden cmn-toggle-switch cmn-toggle-switch__rot" {{action "toggleMenu"}}>
+            <span>toggle menu</span>
+        </button>
     </div>
-  </div>
-
-
 </header>
 
-<div class="row main-content">
-  <div class="small-12 large-12 columns">
-    {{outlet}}
+{{outlet}}
 
-  </div>
-</div>
 
-<div class="silverSponsors">
-    <div class="row">
-        <div class="small-12 large-12 columns text-center sponsor-padding">
-            <h2>Gold Partners</h2>
-            {{pop-over imgSrc="/images/fundinggates_color_logo.png" hrefSrc="http://fundinggates.com" popoverContent="Funding Gates is the company behind FG Receivables Manager, an application that helps businesses track, organize and take actions on open invoices. The FG Receivables Manager is the #1 rated receivables add-on to QuickBooks."}}
-            {{pop-over buttonText="Partner With us!" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
 
-            <h2>Silver Partners</h2>
-            {{pop-over imgSrc="/images/harvest_color_logo.png" hrefSrc="http://www.getharvest.com/platform" popoverContent="Harvest is a beautifully crafted time tracking tool. With the Harvest Platform, add time tracking to your web application before you finish a cup of coffee."}}
-            {{pop-over imgSrc="/images/tutsplus.png" hrefSrc="http://tutsplus.com" popoverContent="Tuts+ helps millions of people shape the life they want by learning creative skills with video courses and free tutorials."}}
-            {{pop-over imgSrc="/images/partnerbutton.png" linkRoute="partners" popoverContent="Help us make Ember Fest as awesome as possible by partnering with us! We will help promote your brand to highly talented webdevelopers throughout Europe!"}}
+<footer class="partner-area">
+    <div class="page-content">
+        <h1>Partners</h1>
+        <div class="row">
+            <div class="small-12 large-4 columns">
+                {{rollover-image colorImage="/uploads/partner_hs.png" greyImage="/uploads/partner_hs_grey.png" url="http://haagen-software.no"}}
+            </div>
+            <div class="small-12 large-4 columns">
 
-            <h2>Iron Partners</h2>
-            {{pop-over imgSrc="/images/logo_201_created.png" hrefSrc="http://www.201-created.com/" popoverContent="201 Created build space-age apps with Ember.js!"}}
+            </div>
+            <div class="small-12 large-4 columns">
+
+            </div>
         </div>
     </div>
-</div>
-
-<footer>
-  <div class="row">
-    <div class="small-12 large-7 columns">
-
-      <ul class="inline-list">
-        <li>{{#link-to "index"}}Home{{/link-to}}</li>
-        <li>{{#link-to "talks"}}Talks{{/link-to}}</li>
-        <li>{{#link-to "venue"}}Venue{{/link-to}}</li>
-        <li>{{#link-to "codeOfConduct"}}Code Of Conduct{{/link-to}}</li>
-        <li>{{#link-to "partners"}}Partners{{/link-to}}</li>
-        <li>{{#link-to "organizers"}}About{{/link-to}}</li>
-        <li>{{#link-to "munich"}}2013{{/link-to}}</li>
-        <li><a href="mailto:mail@emberfest.eu">Contact us</a></li>
-      </ul>
-    </div>
-    <div class="small-12 large-2 columns">
-      <a href="https://twitter.com/EmberFest" class="twitter-follow-button" data-show-count="false" data-lang="en">
-        Follow @EmberFest
-      </a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-    <div class="small-12 large-3 columns text-right">
-      <small>Developed by <a href="http://haagen-software.no">Haagen Software AS</a> and <a href="http://351am.com">A&amp;M</a></small>
-    </div>
-      <div class="small-12 large-12 columns text-left">
-        <small>Ember Fest is hosted by Haagen Software AS, Org. nr. 998 392 578 MVA, Rosenholmveien 25, N-1414 Trollåsen, Norway</small>
-      </div>
-  </div>
 </footer>

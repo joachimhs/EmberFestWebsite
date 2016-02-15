@@ -12,9 +12,13 @@ import no.haagensoftware.kontize.models.MozillaPersonaCredentials;
 import no.haagensoftware.kontize.models.User;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -104,7 +108,7 @@ public class CredentialsHandler extends ContenticeHandler {
         assertionJson.addProperty("audience", System.getProperty("eu.emberfest.personaAudience", "localhost:8081"));
 
         int statusCode = -1;
-        DefaultHttpClient httpclient = new DefaultHttpClient();
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         HttpPost httpPost = new HttpPost("https://verifier.login.persona.org/verify");
         System.out.println(assertionJson.toString());
@@ -113,7 +117,7 @@ public class CredentialsHandler extends ContenticeHandler {
         requestEntity.setContentType("application/json");
 
         httpPost.setEntity(requestEntity);
-        HttpResponse response = httpclient.execute(httpPost);
+        CloseableHttpResponse response = httpClient.execute(httpPost);
         statusCode = response.getStatusLine().getStatusCode();
 
         BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));

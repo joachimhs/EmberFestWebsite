@@ -159,6 +159,7 @@ public class TalkHandler extends ContenticeHandler {
         talkJson.addProperty("participantRequirements", talk.getParticipantRequirements());
         talkJson.addProperty("talkIntendedAudience", talk.getTalkIntendedAudience());
         talkJson.addProperty("comments", talk.getComments());
+        talkJson.addProperty("video", talk.getVideo());
 
         if (cookieUuidToken != null) {
             User user = authenticationContext.getUser(getDomain().getWebappName(), authenticationContext.getAuthenticatedUser(getDomain().getWebappName(), cookieUuidToken).getUserId());

@@ -8,6 +8,6 @@ Emberfest.TalksIndexRoute = Ember.Route.extend(Emberfest.ResetScroll, {
         console.log('INDEX');
         _gaq.push(['_trackPageview', "/talks"]);
 
-        document.title = 'Talks - Ember Fest 2014!';
+        document.title = 'Talks - Ember Fest!';
     }
 });

@@ -69,6 +69,7 @@ public class TalkDao {
         talk.setTalkType(subCategoryData.getValueForKey("talkType"));
         talk.setTopics(subCategoryData.getValueForKey("topics"));
         talk.setUserId(subCategoryData.getValueForKey("userId"));
+        talk.setVideo(subCategoryData.getValueForKey("video"));
         return talk;
     }
 
@@ -106,6 +107,10 @@ public class TalkDao {
 
         if (talk.getTopics() != null) {
             subCategoryData.getKeyMap().put("topics", new JsonPrimitive(talk.getTopics()));
+        }
+
+        if (talk.getVideo() != null) {
+            subCategoryData.getKeyMap().put("video", new JsonPrimitive(talk.getVideo()));
         }
 
         storagePlugin.setSubCategory(host, "talks", subCategoryData.getId(), subCategoryData);

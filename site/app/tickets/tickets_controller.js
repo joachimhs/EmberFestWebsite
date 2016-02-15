@@ -65,6 +65,22 @@ Emberfest.TicketsIndexController = Ember.ArrayController.extend({
 
             var controller = this;
             controller.attemptToAddTicketToBasket(order);
+        },
+
+        clickPurchase: function() {
+            var self = this;
+            var handler = self.get('stripeHandler');
+            console.log("Handling stripe: " + handler);
+
+            if (handler) {
+                handler.open({
+                    name: 'Stripe.com',
+                    description: self.get('description'),
+                    amount: self.get('cart.subtotal'),
+                    email: self.get('emailAddress'),
+                    currency: 'gbp'
+                });
+            }
         }
     },
 

@@ -4,10 +4,12 @@ Emberfest.IndexRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     },
 
     setupController: function(controller, model) {
+        controller.set('page', controller.store.find('page', 'home'));
+
         this._super(controller, model);
         console.log('INDEX');
         _gaq.push(['_trackPageview', "/"]);
 
-        document.title = 'Ember Fest 2014 - Barcelona!';
+        document.title = 'Ember Fest 2016!';
     }
 });

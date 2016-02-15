@@ -1,5 +1,6 @@
 package no.haagensoftware.kontize.db.dao;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonPrimitive;
 import no.haagensoftware.contentice.data.SubCategoryData;
 import no.haagensoftware.contentice.spi.StoragePlugin;
@@ -106,12 +107,29 @@ public class TicketsDao {
 
         for (SubCategoryData subCategoryData : subCategoryDataList) {
             Order order = convertSubcategoryDataToOrder(host, subCategoryData);
-            if (order.getUserId().equals(userid) && order.getStatus().equals("new")) {
+            //new for Stripe, approved for QuickPay
+            if (order.getUserId().equals(userid) && (order.getStatus().equals("new") || order.getStatus().equals("approved"))) {
                 foundOrder = order;
             }
         }
 
         return foundOrder;
+    }
+
+    public List<Order> getOrdersWithoutConfirmationEmail(String host) {
+        List<Order> foundOrders = new ArrayList<>();
+
+        List<SubCategoryData> subCategoryDataList = storagePlugin.getSubCategories(host, "orders");
+
+        for (SubCategoryData subCategoryData : subCategoryDataList) {
+            Order order = convertSubcategoryDataToOrder(host, subCategoryData);
+            //new for Stripe, approved for QuickPay
+            if (!order.getConfirmationEmailSent() && order.getTransaction() != null) {
+                foundOrders.add(order);
+            }
+        }
+
+        return foundOrders;
     }
 
     public Order getOrderForOrderId(String host, String orderId) {
@@ -121,7 +139,7 @@ public class TicketsDao {
 
         for (SubCategoryData subCategoryData : subCategoryDataList) {
             Order order = convertSubcategoryDataToOrder(host, subCategoryData);
-            if (order.getOrderNumber().equals(orderId) && order.getStatus().equals("approved")) {
+            if (order.getOrderNumber().equals(orderId) && order.getStatus().equals("new")) {
                 foundOrder = order;
             }
         }
@@ -171,6 +189,60 @@ public class TicketsDao {
             order.setCouponCode(subCategoryData.getValueForKey("couponCode"));
         }
 
+        if (subCategoryData.getValueForKey("transaction") != null) {
+            order.setTransaction(subCategoryData.getValueForKey("transaction"));
+        }
+
+        if (subCategoryData.getValueForKey("msgtype") != null) {
+            order.setMsgtype(subCategoryData.getValueForKey("msgtype"));
+        }
+
+        if (subCategoryData.getValueForKey("ordernumber") != null) {
+            order.setOrderNumber(subCategoryData.getValueForKey("ordernumber"));
+        }
+
+        if (subCategoryData.getValueForKey("amount") != null) {
+            order.setAmount(subCategoryData.getValueForKey("amount"));
+        }
+
+        if (subCategoryData.getValueForKey("currency") != null) {
+            order.setCurrency(subCategoryData.getValueForKey("currency"));
+        }
+
+        if (subCategoryData.getValueForKey("time") != null) {
+            order.setTime(subCategoryData.getValueForKey("time"));
+        }
+
+        if (subCategoryData.getValueForKey("state") != null) {
+            order.setState(subCategoryData.getValueForKey("state"));
+        }
+
+        if (subCategoryData.getValueForKey("qpstat") != null) {
+            order.setQpstat(subCategoryData.getValueForKey("qpstat"));
+        }
+
+        if (subCategoryData.getValueForKey("cardtype") != null) {
+            order.setCardtype(subCategoryData.getValueForKey("cardtype"));
+        }
+
+        if (subCategoryData.getValueForKey("cardnumber") != null) {
+            order.setCardnumber(subCategoryData.getValueForKey("cardnumber"));
+        }
+
+        if (subCategoryData.getValueForKey("chstat") != null) {
+            order.setChstat(subCategoryData.getValueForKey("chstat"));
+        }
+
+        if (subCategoryData.getValueForKey("ticketIds") != null) {
+            order.setTicketIds(subCategoryData.getListForKey("ticketIds", ","));
+        }
+
+        if (subCategoryData.getValueForKey("couponCode") != null) {
+            order.setCouponCode(subCategoryData.getValueForKey("couponCode"));
+        }
+
+        order.setConfirmationEmailSent(subCategoryData.getBooleanValueForKey("confirmationEmailSent"));
+
         return order;
     }
 
@@ -207,8 +279,63 @@ public class TicketsDao {
             subCategoryData.getKeyMap().put("couponDiscount", new JsonPrimitive(order.getCouponDiscount()));
         }
 
+        if (order.getTicketIds() != null && order.getTicketIds().size() > 0) {
+            JsonArray ticketIdsArray = new JsonArray();
+            for (String ticketId : order.getTicketIds()) {
+                ticketIdsArray.add(new JsonPrimitive(ticketId));
+            }
+
+            subCategoryData.getKeyMap().put("ticketIds", ticketIdsArray);
+        }
+
+        if (order.getAmount() != null) {
+            subCategoryData.getKeyMap().put("amount", new JsonPrimitive(order.getAmount()));
+        }
+
+        if (order.getCurrency() != null) {
+            subCategoryData.getKeyMap().put("currency", new JsonPrimitive(order.getCurrency()));
+        }
+
+        if (order.getTime() != null) {
+            subCategoryData.getKeyMap().put("time", new JsonPrimitive(order.getTime()));
+        }
+
+        if (order.getTransaction() != null) {
+            subCategoryData.getKeyMap().put("transaction", new JsonPrimitive(order.getTransaction()));
+        }
+
+        if (order.getOrderNumber() != null) {
+            subCategoryData.getKeyMap().put("ordernumber", new JsonPrimitive(order.getOrderNumber()));
+        }
+
+        if (order.getMsgtype() != null) {
+            subCategoryData.getKeyMap().put("msgtype", new JsonPrimitive(order.getMsgtype()));
+        }
+
         if (order.getUserId() != null) {
             subCategoryData.getKeyMap().put("userId", new JsonPrimitive(order.getUserId()));
+        }
+
+        if (order.getCurrency() != null) {
+            subCategoryData.getKeyMap().put("currency", new JsonPrimitive(order.getCurrency()));
+        }
+
+        if (order.getState() != null) {
+            subCategoryData.getKeyMap().put("state", new JsonPrimitive(order.getState()));
+        }
+
+        if (order.getQpstat() != null) {
+            subCategoryData.getKeyMap().put("qpstat", new JsonPrimitive(order.getQpstat()));
+        }
+
+        if (order.getCardtype() != null) {
+            subCategoryData.getKeyMap().put("cardtype", new JsonPrimitive(order.getCardtype()));
+        }
+
+        if (order.getConfirmationEmailSent() != null && order.getConfirmationEmailSent().booleanValue()) {
+            subCategoryData.getKeyMap().put("confirmationEmailSent", new JsonPrimitive(order.getConfirmationEmailSent().booleanValue()));
+        } else {
+            subCategoryData.getKeyMap().put("confirmationEmailSent", new JsonPrimitive(false));
         }
 
         return subCategoryData;

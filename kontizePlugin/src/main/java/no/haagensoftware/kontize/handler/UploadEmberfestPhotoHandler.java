@@ -28,7 +28,6 @@ import java.util.UUID;
 public class UploadEmberfestPhotoHandler extends ContenticeHandler {
     private static final Logger logger = Logger.getLogger(UploadEmberfestPhotoHandler.class.getName());
 
-
     private HttpRequest request;
     private HttpPostRequestDecoder decoder;
     private static final HttpDataFactory factory = new DefaultHttpDataFactory(DefaultHttpDataFactory.MINSIZE);

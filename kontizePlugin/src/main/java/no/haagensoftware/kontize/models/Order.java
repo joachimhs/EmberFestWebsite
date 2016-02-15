@@ -14,6 +14,7 @@ public class Order {
     private String userId;
     private Long subtotal;
     private List<Ticket> tickets;
+    private List<String> ticketIds;
     private String msgtype;
     private String amount;
     private String currency;
@@ -26,6 +27,7 @@ public class Order {
     private String cardnumber;
     private String chstat;
     private String chstatmsg;
+    private Boolean confirmationEmailSent;
 
     public Order() {
         tickets = new ArrayList<>();
@@ -181,5 +183,21 @@ public class Order {
 
     public void setChstatmsg(String chstatmsg) {
         this.chstatmsg = chstatmsg;
+    }
+
+    public List<String> getTicketIds() {
+        return ticketIds;
+    }
+
+    public void setTicketIds(List<String> ticketIds) {
+        this.ticketIds = ticketIds;
+    }
+
+    public Boolean getConfirmationEmailSent() {
+        return confirmationEmailSent;
+    }
+
+    public void setConfirmationEmailSent(Boolean confirmationEmailSent) {
+        this.confirmationEmailSent = confirmationEmailSent;
     }
 }

@@ -14,6 +14,7 @@ public class Talk {
     private String outline;
     private String participantRequirements;
     private String comments;
+    private String video;
 
     public Talk() {
 
@@ -73,6 +74,14 @@ public class Talk {
 
     public void setOutline(String outline) {
         this.outline = outline;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 
     public String getParticipantRequirements() {

@@ -1,4 +1,4 @@
-Emberfest.MunichRoute = Ember.Route.extend(Emberfest.ResetScroll, {
+Emberfest.PreviousYearsRoute = Ember.Route.extend(Emberfest.ResetScroll, {
     model: function() {
         return this.store.find('page', 'munich');
     },
@@ -8,6 +8,6 @@ Emberfest.MunichRoute = Ember.Route.extend(Emberfest.ResetScroll, {
         console.log('INDEX');
         _gaq.push(['_trackPageview', "/munich"]);
 
-        document.title = 'Munich 2013 - Ember Fest!';
+        document.title = 'Ember Fest - Previous years!';
     }
 });

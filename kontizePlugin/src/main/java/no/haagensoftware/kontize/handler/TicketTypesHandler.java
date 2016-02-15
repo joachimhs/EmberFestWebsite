@@ -8,7 +8,6 @@ import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.models.TicketType;
 import no.haagensoftware.kontize.models.TicketTypeList;
 import no.haagensoftware.kontize.models.TicketTypeObject;
-import sun.security.krb5.internal.Ticket;
 
 import java.util.List;
 

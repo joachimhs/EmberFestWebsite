@@ -1,5 +1,6 @@
 package no.haagensoftware.kontize.plugin;
 
+import com.stripe.Stripe;
 import io.netty.channel.ChannelHandler;
 import no.haagensoftware.contentice.handler.FileServerHandler;
 import no.haagensoftware.contentice.spi.RouterPlugin;
@@ -43,10 +44,11 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("/json/ticketSubtotal", TicketSubtotalHandler.class);
         routeMap.put("/json/ticketsCallback", TicketsCallbackHandler.class);
 
+        routeMap.put("/emberfest/stripePayment", EmberfestStripePaymentHandler.class);
+
 
         routeMap.put("/json/uploadPhoto", UploadEmberfestPhotoHandler.class);
         routeMap.put("/json/uploadPhoto/", UploadEmberfestPhotoHandler.class);
-
 
         routeMap.put("startsWith:/pages", FileServerHandler.class);
         routeMap.put("startsWith:/talk", FileServerHandler.class);
@@ -59,7 +61,7 @@ public class EmberfestRoutesPlugin extends RouterPlugin {
         routeMap.put("startsWith:/munich", FileServerHandler.class);
         routeMap.put("startsWith:/profile", FileServerHandler.class);
 
-
+        Stripe.apiKey = System.getProperty("eu.emberfest.stripeSecret");
     }
 
     @Override

@@ -5,7 +5,7 @@
 </p>
 
 {{#unless controller.length}}
-  <p><em>There are currently no registered talks for Ember Fest 2014!</em></p>
+  <p><em>There are currently no registered talks for Ember Fest 2015! Be the first to submit a talk!</em></p>
   {{#if controllers.user.isLoggedIn}}
     {{#link-to "registerTalk" class="button small"}}Submit proposal{{/link-to}}
   {{else}}
@@ -44,17 +44,17 @@
 </p>
 
 <p>
-  This year, we are looking for both workshops and presentations! Workshops
-  will be held during the 2-day pre-conference workshop. This is where you
-  will get to meet developers that are eager to learn all about the awesomeness
-  that is Ember.js.
+  This year, we are looking for both workshops and presentations! The days will be split in two
+    where the first half will consist of lightning talks and presentations, while the second
+    half will consist of workshops, a hackathon as well as an open space session. There will only
+    be one ticket type this year, which includes everything the conference has to offer!
 </p>
 
 <p>
-  By registering your talk, your abstract for a presentation talk or a tutorial
+  By registering your talk, your abstract for a presentation, lightning talk or a workshop
   will be added to the list of suggestions for this year's conference. You may
   change the content of your abstract at any time during the period that the
-  CfP is open. Other participants will be able to see your suggestion as soon
+  Call for Speakers is open. Other participants will be able to see your suggestion as soon
   as it is registered.
 </p>
 
@@ -65,7 +65,7 @@
 </p>
 
 <h3>Deadline</h3>
-<p>Call for Papers will end on May 15th. However, as we are accepting talks continuously,
+<p>Call for Papers will end on July 30th. However, as we are accepting talks continuously,
 all spots might be taken before the final deadline, so get your talk submitted as early
 as possible!</p>
 
@@ -73,20 +73,25 @@ as possible!</p>
 <ul>
   <li>Ember.js Basics</li>
   <li>Thrid party frameworks</li>
-  <li>Ember.js Persistence frameworks</li>
-  <li>Hands-on experiences and experience reports</li>
+    <li>Ember CLI</li>
+    <li>Real world experience reports and project reports</li>
+  <li>Ember.js Persistence frameworks (Ember Data, EPF, Orbit, etc.)</li>
   <li>Security</li>
   <li>Build Tools</li>
+    <li>Backend strategies</li>
 </ul>
 
 <h3>Talk Types</h3>
 
 <p>
-  There are four talk types that you can choose between. Standard presentations
-  are either 20 or 35 minutes in length and will be held during the two main
-  days of the conference. Workshops are held during the two pre-conference days
-  and are either half day (3,5 hours including breaks), or full
-  day (7 hours including breaks)
+  There are four talk types that you can choose between.
+    <ul>
+    <li>Lightning talks - 15 minutes</li>
+    <li>Presentation - 35 minutes</li>
+    <li>Presentation - 45 minutes</li>
+    <li>Workshop - 1,5 hours</li>
+    <li>Workshop - 3 hours</li>
+    </ul>
 </p>
 
 {{#if controllers.user.isLoggedIn}}

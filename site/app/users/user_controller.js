@@ -10,6 +10,11 @@ Emberfest.UserController = Ember.ObjectController.extend({
         } else {
             this.initializePersona();
         }
+
+        Ember.run.schedule('afterRender', this, function(){
+            console.log('initializing Stellar.js!');
+            $.stellar();
+        });
     },
 
     performLoginCheck: function(uuidToken) {
@@ -57,8 +62,10 @@ Emberfest.UserController = Ember.ObjectController.extend({
                     success: function(xhr, status, err) {
                         console.log('onlogout: ');
                         console.log(xhr);
-                        controller.set('content.id', null);
-                        controller.set('content.authLevel', null);
+                        if (controller.get('content.id')) {
+                            controller.set('content.id', null);
+                            controller.set('content.authLevel', null);
+                        }
                         controller.eraseCookie("uuidToken");
                     },
                     error: function(xhr, status, err) { console.log("error: " + status + " error: " + err); }
@@ -93,6 +100,10 @@ Emberfest.UserController = Ember.ObjectController.extend({
 
     eraseCookie:function (name) {
         this.createCookie(name, "", -1);
+    },
+
+    reloadUser: function() {
+        this.get('model').reload();
     },
 
     isLoggedIn: function() {

@@ -13,6 +13,6 @@ Emberfest.ProfileRoute = Ember.Route.extend(Emberfest.ResetScroll, {
         console.log('INDEX');
         _gaq.push(['_trackPageview', "/profile"]);
 
-        document.title = 'Profile - Ember Fest 2014!';
+        document.title = 'Profile - Ember Fest!';
     }
 });

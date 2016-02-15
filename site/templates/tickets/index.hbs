@@ -1,11 +1,31 @@
 <h2>Purchase Tickets!</h2>
 
-<p>Join us for the second annual Ember Fest, in sunny Barcelona! We aim to gather 160 of the top developers from the Ember.js community in what will undoubtedly be
-    the Ember event to attend in 2014! August 26th and 27 will offer pre-conference workshops, while August 28th and 29th will offer great talks from experienced
-    Ember.js developers! parallel to the workshops on August 27th, we will also host an Ember.js hackathon. We hope to see you there!</p>
+<p>Join us for the third annual Ember Fest in Budapest, Hungary! Ember Fest will gather 150 of the top developers from the Ember.js community
+    in what will undoubtedly be the Ember event to attend in 2016! The conference will be a two-day event from October 27th to October 28th,
+    preceeded with a one-day Ember.js training and Hackathon on October 26th.
+    We hope to see you there!</p>
 
-<p>Please take the time to read Ember Fests code of conduct, below.</p>
+<p>Please take the time to read Ember Fest's code of conduct, below.</p>
 
+<p><span style="font-weight:900;">Your ticket includes:</span>
+
+    <ul>
+        <li>2 Days Conference Pass</li>
+        <li>Breaks including coffee and light refreshments</li>
+        <li>Buffet lunch for both conference days</li>
+        <li>Conference dinner cruise on the danube on October 28th (7PM-9PM)</li>
+    </ul>
+</p>
+<p><span style="font-weight:900;">We are also offering accommodation options at the venue. The accommdation ticket includes:</span>
+
+    <ul>
+        <li>2 or 3 Days accommodation at the conference hotel</li>
+        <li>Single standard bedroom</li>
+        <li>Breakfast</li>
+    </ul>
+</p>
+
+<h3>Tickets sales will close on August 30th!</h3>
 {{#if controller.model.length}}
     <div class="row">
         <div class="small-12 large-8 columns">
@@ -24,9 +44,9 @@
                     <tr>
                         <td>
                             <p class="title">{{ticketType.name}}</p>
-                            {{ticketType.description}}
+                            <p class="ticket-description">{{ticketType.description}}</p>
                         </td>
-                        <td>&euro;{{ticketType.price}}</td>
+                        <td>&euro; {{ticketType.price}}</td>
                         {{#if ticketType.saleStarted}}
                             {{#if ticketType.ticketsAvailable}}
                             <td>
@@ -46,7 +66,7 @@
                 {{/each}}
             </table>
 
-            <p>Tickets are refundable until July 26th, after which tickets can only be transferred. <a href="mailto:mail@emberfest.eu">Contact us</a> if you have any questions!</p>
+            <p>Tickets are refundable until August 30th, after which tickets can only be transferred. <a href="mailto:mail@emberfest.eu">Contact us</a> if you have any questions!</p>
         </div>
 
         <div class="small-12 large-4 columns">
@@ -80,7 +100,7 @@
                     {{#if controller.couponCode}}
                         <tr>
                             <td>Coupon Discount Amount: </td>
-                            <td>&euro;{{controller.ticketDiscountAmount}}</td>
+                            <td>&euro; {{controller.ticketDiscountAmount}}</td>
                         </tr>
                     {{/if}}
 
@@ -94,7 +114,7 @@
                                     <input type="hidden" name="language" value="en" />
                                     <input type="hidden" name="ordernumber" {{bind-attr value=controller.orderNumber}} />
                                     <input type="hidden" name="amount" {{bind-attr value=controller.ticketSubtotal}} />
-                                    <input type="hidden" name="currency" value="EUR" />
+                                    <input type="hidden" name="currency" value="GBP" />
                                     <input type="hidden" name="continueurl" {{bind-attr value=controller.continueUrl}} />
                                     <input type="hidden" name="cancelurl" {{bind-attr value=controller.cancelUrl}} />
                                     <input type="hidden" name="callbackurl" {{bind-attr value=controller.callbackUrl}} />
@@ -105,7 +125,7 @@
                                     <input type="hidden" name="cardtypelock" value="" />
                                     <input type="hidden" name="splitpayment" value="1" />
                                     <input type="hidden" name="md5check" {{bind-attr value=controller.ticketsMd5}} />
-                                    <button class="button small" style="width: 100%;">Purchase {{controller.numTickets}} Tickets for {{controller.ticketSubtotalEur}} &#x2771;</button>
+                                    <button class="button small" style="width: 100%;">Purchase {{controller.numTickets}} Tickets for &euro; {{controller.ticketSubtotalEur}} &#x2771;</button>
                                 </form>
                             </div>
                         {{/if}}
