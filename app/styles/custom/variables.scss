@@ -1,12 +1,23 @@
+//GRID
+
+$small-screen-up: 601px !default;
+$medium-screen-up: 601px !default;
+$large-screen-up: 601px !default;
+
+$small-screen: 600px !default;
+$medium-screen: 600px !default;
+$large-screen: 600px !default;
+
 // Application vars
 
-$app-body-background: #f5f5f5;
-$app-color-primary: #7500cd !default;
+$app-body-background: #fff;
+$app-color-primary: #000 !default;
 $app-color-primary-inverse: #fff;
-$app-color-primary-active: #fe9134;
+$app-color-primary-active: #e34c32;
+
 $app-color-gray: #bdbec0;
 
-$app-font-family: 'Open Sans', sans-serif;
+$app-font-family: 'Share Tech Mono', sans-serif;
 
 $app-color-secondary: lighten($app-color-primary, 10%) !default;
 $app-color-primary-light: lighten($app-color-primary, 20%) !default;
@@ -31,7 +42,7 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 $secondary-color: $app-color-secondary !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: $app-color-primary-active !default;
 
 
 //Header
@@ -52,6 +63,14 @@ $switch-unchecked-lever-bg: #e5e5e5 !default;
 //Ornio Panel
 $ornio-panel-border: 1px solid $primary-color-light;
 $ornio-panel-padding: 20px 17px 12px;
+
+//Navigation 
+
+$navbar-height: 96px !default;
+$navbar-height-mobile: 96px !default;
+
+$navbar-font-color: $app-color-primary !default;
+
 //Navigation Sidebar
 $sidenav-bg-color: $primary-color;
 $sidenav-text-color: #f3f3f3;

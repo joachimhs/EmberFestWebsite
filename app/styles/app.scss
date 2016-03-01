@@ -6,7 +6,7 @@
 
 //Fonts New Direcotry
 $roboto-font-path: "../assets/fonts/Roboto/" !default;
-$font-path: "../assets/fonts/OpenSans/" !default;
+$font-path: "../assets/fonts/Share_Tech_Mono/" !default;
 $icons-path: "../assets/fonts/MaterialIcons/" !default;
 
 @import "custom/icons";
@@ -20,6 +20,12 @@ $icons-path: "../assets/fonts/MaterialIcons/" !default;
 
 // Application global style
 @import "custom/global";
+@import "custom/nav";
+@import "custom/slider";
+
+@import "custom/note";
+@import "custom/speakers";
+
 
 // Application components
 

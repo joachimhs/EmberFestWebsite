@@ -65,9 +65,9 @@ small { font-size: 75%; }
 }
 
 .brand-logo{
-    //Logo - Reset and Style
+    @include background-image(ember-fest-logo, 100%);
+    position: relative !important;
     display: block;
-    @include background-image(logo-arka-black, 100%);
     width: 125px;
     height: 55px;
     color: #fff;

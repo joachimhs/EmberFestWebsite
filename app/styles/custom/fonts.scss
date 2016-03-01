@@ -1,21 +1,10 @@
 @mixin font-face($font-family, $file-prefix) {
     @font-face {
         font-family: '#{$font-family}';
-        src: url('#{$font-path}#{$file-prefix}-webfont.eot');
-        src: url('#{$font-path}#{$file-prefix}-webfont.eot?#iefix') format('embedded-opentype'),
-        url('#{$font-path}#{$file-prefix}-webfont.woff') format('woff'),
-        url('#{$font-path}#{$file-prefix}-webfont.ttf') format('truetype'),
-        url('#{$font-path}#{$file-prefix}-webfont.svg#open_sanssemibold') format('svg');
+        src: url('#{$font-path}#{$file-prefix}.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
 }
 
-@include font-face('open_sansbold', 'OpenSans-Bold');
-@include font-face('open_sansextrabold', 'OpenSans-Extrabold');
-@include font-face('open_sansitalic', 'OpenSans-Italic');
-@include font-face('open_sanslight', 'OpenSans-Light');
-@include font-face('open_sansregular', 'OpenSans-Regular');
-@include font-face('open_sanssemibold', 'OpenSans-Semibold');
-
-
+@include font-face('Share Tech Mono', 'ShareTechMono-Regular');

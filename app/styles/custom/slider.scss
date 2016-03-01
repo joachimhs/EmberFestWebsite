@@ -1,0 +1,50 @@
+$image-path-slider: 'images' !default;
+$fallback-extension: 'jepg' !default;
+
+
+.slider{
+	background: url(images/slider-cover.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	color: $app-color-primary-inverse;
+  	text-align: center;
+  	padding: 100px 0;
+  	height: 600px;
+  	.slider-header{
+  		position: relative;
+  		padding: 1px 50px;
+  		&:after,&:before{ 
+			position: absolute;
+			top: 0;
+  			font-size: 145px;	        	
+			line-height: 1;
+		}
+		&:after{content: ' }'; right: 0;}
+		&:before{content: '{ '; left: 0;}
+  	}
+  	.slider-divider{
+  		height: 1px;
+  		width: 360px;
+  		display: block;
+  		margin: 5rem auto;
+  		background: $app-color-primary-inverse;
+  	}
+  	.slider-order-ticket{
+  		position: relative;
+		
+  	}
+  	.slider-order-actions{
+  		margin-top: 3rem;
+  		a{
+  			background: transparent;
+  			border: 1px solid #fff;
+  			border-radius: 20px;
+  			@extend .z-depth-0;
+  			&:hover{
+  				background: $app-color-primary-active;
+  			}
+  		}
+  	}
+}

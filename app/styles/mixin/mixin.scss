@@ -20,9 +20,10 @@
   -o-border-radius: $radius;
 }
 
-$image-path: 'images' !default;
+$image-path: 'images/logo' !default;
 $fallback-extension: 'png' !default;
 $retina-suffix: '@2x';
+
 @mixin background-image($name, $size:false){
     background-image: url(#{$image-path}/#{$name}.svg);
     @if($size){

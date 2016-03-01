@@ -1,0 +1,38 @@
+nav {
+	background-color: $app-body-background;
+	@extend .z-depth-0;
+	
+	// Navbar Links
+	ul {
+	  	li {
+	  		transition: background-color .3s;
+	  		float: left;
+	  		padding: 0;
+
+	  		&.active {
+	  			position: relative;
+	  			background-color: transparent;
+	  			&:after,&:before{ 	        	
+	  				position: absolute;
+	  				top: 0;
+	  			}
+	  			&:after{content: ' }}'; right: 0;}
+	  			&:before{content: '{{ '; left: 0;}
+				&:hover{
+					color: $app-color-primary-active;
+					a{
+						color: $app-color-primary-active;	
+					}
+				}
+	  		}
+	  		a{
+	  			background-color: transparent;
+	  			text-transform: uppercase;
+	  			&:hover{
+	  				background-color: transparent;
+	  				color: $app-color-primary-active;
+	  			}	
+	  		}
+	  	}
+  	}   
+}
