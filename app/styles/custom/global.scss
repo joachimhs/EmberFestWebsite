@@ -1,0 +1,74 @@
+html{
+    font-family: $app-font-family;
+    font-weight: 400;
+    color: $primary-color;
+}
+
+body{
+    background: $app-body-background;
+}
+
+body > .ember-view{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+
+// Text Styles
+em { font-style: italic; }
+strong, .strong { font-weight: 600; }
+small { font-size: 75%; }
+
+.light { font-weight: 300; }
+.bold{font-weight: 600;}
+.bold-1{font-weight: 700;}
+.bold-2{font-weight: 800;}
+
+.no-margin{margin: 0;  }
+.text-small{font-size: 10px;}
+.no-padding{padding: 0;}
+
+.padding-left-58{padding-left: 58px !important;}
+
+// Header bar
+.header-bar{
+    background: $app-color-primary-inverse;
+    min-height: 70px;
+    @include box-shadow(0 0.188rem 0.188rem rgba(0, 0, 0, 0.05));
+    margin-bottom: 20px;
+}
+
+.app-border{
+    border: 1px solid $app-color-primary;
+}
+
+.v-divider{
+    background: $app-color-primary-darken;
+    border-left: 1px solid $app-color-primary-dark;
+    width: 1px;
+    margin: 15px;
+}
+
+.brand-logo{
+    //Logo - Reset and Style
+    display: block;
+    @include background-image(logo-arka-black, 100%);
+    width: 125px;
+    height: 55px;
+    color: #fff;
+}

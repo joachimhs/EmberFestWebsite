@@ -1,0 +1,75 @@
+// Application vars
+
+$app-body-background: #f5f5f5;
+$app-color-primary: #7500cd !default;
+$app-color-primary-inverse: #fff;
+$app-color-primary-active: #fe9134;
+$app-color-gray: #bdbec0;
+
+$app-font-family: 'Open Sans', sans-serif;
+
+$app-color-secondary: lighten($app-color-primary, 10%) !default;
+$app-color-primary-light: lighten($app-color-primary, 20%) !default;
+$app-color-primary-lighten: lighten($app-color-primary, 40%) !default;
+$app-color-primary-dark: darken($app-color-primary, 20%);
+$app-color-primary-darken: darken($app-color-primary, 40%);
+
+$app-border-radius: 0;
+$app-border-color: #e2bcff;
+$app-border: 1px solid $app-border-color;
+
+// Materialize color vars
+
+$green-color: #00b87b;
+$orange-color: #ff5654;
+$black-color: #000;
+
+$primary-color: $app-color-primary !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: $app-color-secondary !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+
+//Header
+
+//Form
+$search-input-color: $secondary-color;
+$search-input-color-focust: $primary-color-dark;
+$input-border-color: $primary-color-dark;
+$input-success-color: $primary-color;
+$input-focus-color: $primary-color-light;
+
+//Switch
+$switch-bg-color: $orange-color !default;
+$switch-unchecked-bg: $green-color !default;
+$switch-checked-lever-bg: #e5e5e5 !default;
+$switch-unchecked-lever-bg: #e5e5e5 !default;
+
+//Ornio Panel
+$ornio-panel-border: 1px solid $primary-color-light;
+$ornio-panel-padding: 20px 17px 12px;
+//Navigation Sidebar
+$sidenav-bg-color: $primary-color;
+$sidenav-text-color: #f3f3f3;
+
+/*** Dropdown ***/
+$dropdown-bg-color: #f9f9f9 !default;
+$dropdown-hover-bg-color: #eee !default;
+$dropdown-color: #000 !default;
+
+/*** Collections - Sidebar Color ***/
+
+/*** Date Picker ***/
+$datepicker-weekday-bg: darken($primary-color, 7%) !default;
+$datepicker-date-bg: $primary-color !default;
+$datepicker-year: $app-color-primary-inverse !default;
+
+$datepicker-focus: $primary-color !default;
+
+$datepicker-selected: $primary-color !default;
+$datepicker-selected-outfocus: transparent !default;
+

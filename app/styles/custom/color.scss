@@ -1,0 +1,54 @@
+$app-color-palette: (
+        "lighten-8":  #f8efff,
+        "lighten-7":  #e2bcff,
+        "lighten-6":  #d49aff,
+        "lighten-5":  #c578ff,
+        "lighten-4":  #b656ff,
+        "lighten-3":  #a834ff,
+        "lighten-2":  #9912ff,
+        "lighten-1":  #8800ef,
+        "base":       #7500cd,
+        "darken-1":   #6200ab,
+        "darken-2":   #4e0089,
+        "darken-3":   #3b0067,
+        "darken-4":   #1e0034,
+);
+
+$app-colors: (
+        "app-color": $app-color-palette
+);
+
+@each $color_name, $color in $app-colors {
+    @each $color_type, $color_value in $color {
+        @if $color_type == "base" {
+            .#{$color_name} {
+                background-color: $color_value !important;
+            }
+            .#{$color_name}-text {
+                color: $color_value !important;
+            }
+        }
+        @else {
+            .#{$color_name}.#{$color_type} {
+                background-color: $color_value !important;
+            }
+            .#{$color_name}-text.text-#{$color_type} {
+                color: $color_value !important;
+            }
+        }
+    }
+}
+
+$app-color-lighten-8: #f8efff;
+$app-color-lighten-7: #e2bcff;
+$app-color-lighten-6: #d49aff;
+$app-color-lighten-5: #c578ff;
+$app-color-lighten-4: #b656ff;
+$app-color-lighten-3: #a834ff;
+$app-color-lighten-2: #9912ff;
+$app-color-lighten-1: #8800ef;
+$app-color-base: #7500cd;
+$app-color-darken-1: #6200ab;
+$app-color-darken-2: #4e0089;
+$app-color-darken-3: #3b0067;
+$app-color-darken-4: #1e0034;

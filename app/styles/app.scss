@@ -1,0 +1,32 @@
+// Different mixins
+@import 'mixin/mixin';
+
+// Application vars
+@import "custom/variables";
+
+//Fonts New Direcotry
+$roboto-font-path: "../assets/fonts/Roboto/" !default;
+$font-path: "../assets/fonts/OpenSans/" !default;
+$icons-path: "../assets/fonts/MaterialIcons/" !default;
+
+@import "custom/icons";
+@import "custom/fonts";
+
+// Core materialize style
+@import 'materialize';
+
+// Application color palette
+@import "custom/color";
+
+// Application global style
+@import "custom/global";
+
+// Application components
+
+
+// Application layout style
+
+
+
+
+
