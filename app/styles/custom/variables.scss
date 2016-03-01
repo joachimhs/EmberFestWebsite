@@ -1,12 +1,12 @@
 //GRID
 
 $small-screen-up: 601px !default;
-$medium-screen-up: 601px !default;
-$large-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 993px !default;
 
 $small-screen: 600px !default;
-$medium-screen: 600px !default;
-$large-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 992px !default;
 
 // Application vars
 
@@ -46,6 +46,10 @@ $link-color: $app-color-primary-active !default;
 
 
 //Header
+
+//Button 
+$button-color: $app-color-primary-active; 
+
 
 //Form
 $search-input-color: $secondary-color;

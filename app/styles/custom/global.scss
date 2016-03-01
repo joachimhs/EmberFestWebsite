@@ -20,7 +20,11 @@ body > .ember-view{
     -ms-flex-direction: column;
     flex-direction: column;
 }
-
+.container {
+  margin: 0 auto;
+  max-width: 992px;
+  width: 90%;
+}
 main{
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
