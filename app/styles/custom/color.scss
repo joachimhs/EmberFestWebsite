@@ -28,28 +28,6 @@ $app-color-palette: (
         "darken-4":   $app-color-darken-4,
 );
 
-$app-colors: (
-        "app-color": $app-color-palette
+$colors: (
+    "app-color": $app-color-palette
 );
-
-@each $color_name, $color in $app-colors {
-    @each $color_type, $color_value in $color {
-        @if $color_type == "base" {
-            .#{$color_name} {
-                background-color: $color_value !important;
-            }
-            .#{$color_name}-text {
-                color: $color_value !important;
-            }
-        }
-        @else {
-            .#{$color_name}.#{$color_type} {
-                background-color: $color_value !important;
-            }
-            .#{$color_name}-text.text-#{$color_type} {
-                color: $color_value !important;
-            }
-        }
-    }
-}
-

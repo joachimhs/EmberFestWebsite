@@ -7,7 +7,11 @@ html{
 body{
     background: $app-body-background;
 }
-
+a{
+    &:hover{
+        color: $link-color-hover;
+    }
+}
 body > .ember-view{
     display: -webkit-box;
     display: -webkit-flex;

@@ -42,7 +42,9 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 $secondary-color: $app-color-secondary !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: $app-color-primary-active !default;
+
+$link-color: $app-color-primary !default;
+$link-color-hover : $app-color-primary-active !default;
 
 
 //Header
