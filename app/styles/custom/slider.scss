@@ -24,11 +24,21 @@ $fallback-extension: 'jepg' !default;
   	.slider-header{
   		position: relative;
   		padding: 1px 50px;
+      h3{
+          margin: 1rem 0 1.168rem 0;
+          font-size: 2.4rem;
+      }
+      @media #{$medium-and-up} {
+        h3{
+          margin: 1.46rem 0 2rem 0;
+          font-size: 2.92rem;
+        }
+      }
   		&:after,&:before{ 
-			position: absolute;
-			top: 0;
+			  position: absolute;
+			  top: 0;
   			font-size: 145px;	        	
-			line-height: 1;
+			 line-height: 1;
 		}
 		&:after{content: ' }'; right: 0;}
 		&:before{content: '{ '; left: 0;}
