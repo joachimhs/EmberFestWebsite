@@ -76,12 +76,10 @@ small { font-size: 75%; }
 }
 
 .brand-logo{
-    @include background-image(ember-fest-logo, 100%);
-    position: relative !important;
-    display: block;
-    width: 125px;
-    height: 55px;
-    color: #fff;
+    @include background-image(ember-fest-logo, 100%);   
+    width: 247px;
+    height: 52px;   
+    margin-top: 20px;
 }
 
 // Footer
