@@ -11,13 +11,15 @@
 			position: relative;
   			background-color: transparent;
   			&.active{
-	  			&:after,&:before{ 	        	
-	  				position: absolute;
-	  				top: 0;
-	  				font-size: 68px;
-	  			}
-	  			&:after{content: '}'; right: 0;}
-	  			&:before{content: '{'; left: 0;}
+  				@media #{$medium-and-up} {
+			      	&:after,&:before{ 	        	
+		  				position: absolute;
+		  				top: 0;
+		  				font-size: 68px;
+		  			}
+		  			&:after{content: '}'; right: 0;}
+		  			&:before{content: '{'; left: 0;}
+			    }	  			
 				&:hover{
 					color: $app-color-primary-active;
 					a{
@@ -36,6 +38,7 @@
 .session-content{
 	.title{
 		border-bottom: 1px solid #000;
+		padding: 1rem 0;
 	}
 	.session-item{
 		@extend .clearfix;

@@ -21,7 +21,7 @@ $app-font-family: 'Share Tech Mono', sans-serif;
 
 $app-color-secondary: lighten($app-color-primary, 10%) !default;
 $app-color-primary-light: lighten($app-color-primary, 20%) !default;
-$app-color-primary-lighten: lighten($app-color-primary, 40%) !default;
+$app-color-primary-lighten: lighten($app-color-primary, 70%) !default;
 $app-color-primary-dark: darken($app-color-primary, 20%);
 $app-color-primary-darken: darken($app-color-primary, 40%);
 
@@ -35,6 +35,13 @@ $green-color: #00b87b;
 $orange-color: #ff5654;
 $black-color: #000;
 
+
+$gold-color: #f0d30c;
+$silver-color: #b2b2b2;
+$bronz-color: #bd967f;
+
+
+//App Colors
 $primary-color: $app-color-primary !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
@@ -45,9 +52,6 @@ $error-color: color("red", "base") !default;
 
 $link-color: $app-color-primary !default;
 $link-color-hover : $app-color-primary-active !default;
-
-
-//Header
 
 //Button 
 $button-color: $app-color-primary-active; 
@@ -60,15 +64,6 @@ $input-border-color: $primary-color-dark;
 $input-success-color: $primary-color;
 $input-focus-color: $primary-color-light;
 
-//Switch
-$switch-bg-color: $orange-color !default;
-$switch-unchecked-bg: $green-color !default;
-$switch-checked-lever-bg: #e5e5e5 !default;
-$switch-unchecked-lever-bg: #e5e5e5 !default;
-
-//Ornio Panel
-$ornio-panel-border: 1px solid $primary-color-light;
-$ornio-panel-padding: 20px 17px 12px;
 
 //Navigation 
 
@@ -81,20 +76,7 @@ $navbar-font-color: $app-color-primary !default;
 $sidenav-bg-color: $primary-color;
 $sidenav-text-color: #f3f3f3;
 
-/*** Dropdown ***/
-$dropdown-bg-color: #f9f9f9 !default;
-$dropdown-hover-bg-color: #eee !default;
-$dropdown-color: #000 !default;
 
-/*** Collections - Sidebar Color ***/
 
-/*** Date Picker ***/
-$datepicker-weekday-bg: darken($primary-color, 7%) !default;
-$datepicker-date-bg: $primary-color !default;
-$datepicker-year: $app-color-primary-inverse !default;
-
-$datepicker-focus: $primary-color !default;
-
-$datepicker-selected: $primary-color !default;
-$datepicker-selected-outfocus: transparent !default;
-
+$footer-bg-color: $app-color-primary-lighten !default;
+$footer-color: $app-color-primary !default;

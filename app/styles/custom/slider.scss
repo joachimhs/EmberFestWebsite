@@ -11,7 +11,16 @@ $fallback-extension: 'jepg' !default;
   	color: $app-color-primary-inverse;
   	text-align: center;
   	padding: 100px 0;
-  	height: 600px;
+    height: 800px;
+    margin: 0px;
+
+    @media #{$medium-and-up} {
+      height: 700px;
+    }
+    @media #{$large-and-up} { 
+      height: 600px;
+    }
+
   	.slider-header{
   		position: relative;
   		padding: 1px 50px;
@@ -37,14 +46,22 @@ $fallback-extension: 'jepg' !default;
   	}
   	.slider-order-actions{
   		margin-top: 3rem;
+
   		a{
+
   			background: transparent;
   			border: 1px solid #fff;
-  			border-radius: 20px;
-  			@extend .z-depth-0;
-  			&:hover{
+  			border-radius: 20px;  			
+        margin-top: 1rem;
+
+        @extend .z-depth-0;
+  			
+        &:hover{
   				background: $app-color-primary-active;
   			}
+        @media #{$medium-and-up} {
+          margin-top: 0;
+        }        
   		}
   	}
 }
