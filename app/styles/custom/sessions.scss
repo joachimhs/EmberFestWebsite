@@ -10,6 +10,12 @@
 			overflow: visible;
 			position: relative;
   			background-color: transparent;
+  			h5{
+  				font-size: 1rem;
+  				@media #{$medium-and-up} {
+			      font-size: 1.64rem;
+			    }
+  			}
   			&.active{
   				@media #{$medium-and-up} {
 			      	&:after,&:before{ 	        	

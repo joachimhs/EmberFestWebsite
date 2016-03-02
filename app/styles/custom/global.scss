@@ -84,6 +84,7 @@ small { font-size: 75%; }
 
 // Footer
 footer.page-footer {
+    position: relative;
     color: $footer-color;
     .footer-copyright {
         padding: 3rem 0;
@@ -111,4 +112,10 @@ footer.page-footer {
             }
         }
     }
+}
+.scroll-top{
+    position: absolute;
+    top: -18.5px;
+    left: 50%;
+    margin-left: -18.5px;
 }

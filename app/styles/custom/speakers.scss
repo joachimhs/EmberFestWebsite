@@ -1,10 +1,12 @@
 .speaker{
 	display: block;
-	margin-bottom: 30px;
-	img{
-		
-	}
+	@include opacity(0);
+	a{
+		display: block;
+		margin-bottom: 30px;		
+	}	
 }
+
 .btn-speakers,.btn-subscribe{
 	border-radius: 20px;
 }
