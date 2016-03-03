@@ -25,7 +25,8 @@
 		  			}
 		  			&:after{content: '}'; right: 0;}
 		  			&:before{content: '{'; left: 0;}
-			    }	  			
+			    }
+			    color: darken($app-color-primary-active, 10%);			
 				&:hover{
 					color: $app-color-primary-active;
 					a{
@@ -36,7 +37,7 @@
 		}
 	}
 	.indicator{
-
+		background-color: $app-color-primary-active;
 	}
 	//Tabs Content 
 
@@ -49,7 +50,7 @@
 	.session-item{
 		@extend .clearfix;
 		min-height: 100px;
-		border-bottom: 1px solid color("app-color", "lighten-3");
+		border-bottom: 1px solid color("app-color", "lighten-4");
 		.time{
 			color: color("app-color", "lighten-3");
 			margin-top: 0.82rem;
