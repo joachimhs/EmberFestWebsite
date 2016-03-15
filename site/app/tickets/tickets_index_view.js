@@ -1,11 +1,11 @@
 Emberfest.TicketsIndexView = Ember.View.extend({
-    /*didInsertElement: function() {
+    didInsertElement: function() {
         this._super();
 
         console.log('creating stripe handler: ' + this.get('controller'));
         var self = this;
         var stripeHandler = StripeCheckout.configure({
-            key: 'pk_test_PRHiMkWcmTAn7NLe0nSglWbx',
+            key: 'pk_live_9geD3qsefkSmBPXR1q3ruQ4B',
             image: '/square-image.png',
             token: function(token) {
                 // Use the token to create the charge with a server-side script.
@@ -49,5 +49,5 @@ Emberfest.TicketsIndexView = Ember.View.extend({
         if (this.get('stripeHandler')) {
             this.get('stripeHandler').close();
         }
-    }*/
+    }
 });

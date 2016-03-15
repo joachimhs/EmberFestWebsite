@@ -107,26 +107,7 @@
                     <tr><td colspan="2">
                         {{#if controller.numTickets}}
                             <div class="text-right" style="width: 100%">
-                                <form action="https://secure.quickpay.dk/form/" method="post">
-                                    <input type="hidden" name="protocol" value="7" />
-                                    <input type="hidden" name="msgtype" value="authorize" />
-                                    <input type="hidden" name="merchant" value="99839257" />
-                                    <input type="hidden" name="language" value="en" />
-                                    <input type="hidden" name="ordernumber" {{bind-attr value=controller.orderNumber}} />
-                                    <input type="hidden" name="amount" {{bind-attr value=controller.ticketSubtotal}} />
-                                    <input type="hidden" name="currency" value="GBP" />
-                                    <input type="hidden" name="continueurl" {{bind-attr value=controller.continueUrl}} />
-                                    <input type="hidden" name="cancelurl" {{bind-attr value=controller.cancelUrl}} />
-                                    <input type="hidden" name="callbackurl" {{bind-attr value=controller.callbackUrl}} />
-                                    {{#if controller.testmode}}
-                                        <input type="hidden" name="testmode" {{bind-attr value=controller.testmode}} />
-                                    {{/if}}
-                                    <input type="hidden" name="autocapture" value="0" />
-                                    <input type="hidden" name="cardtypelock" value="" />
-                                    <input type="hidden" name="splitpayment" value="1" />
-                                    <input type="hidden" name="md5check" {{bind-attr value=controller.ticketsMd5}} />
-                                    <button class="button small" style="width: 100%;">Purchase {{controller.numTickets}} Tickets for &euro; {{controller.ticketSubtotalEur}} &#x2771;</button>
-                                </form>
+                                <button class="button small" style="width: 100%;" {{action "clickPurchase"}}>Purchase {{controller.numTickets}} Tickets for &euro; {{controller.ticketSubtotalEur}} &#x2771;</button>
                             </div>
                         {{/if}}
                     </td></tr>

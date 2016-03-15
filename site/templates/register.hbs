@@ -1,23 +1,27 @@
-<h2>Register new account</h2>
+<div class="header-padding"></div>
 
-<div class="row">
-  <div class="small-12 large-5 columns">
-    {{#if controllers.user.model}}
-      {{user-details user=controllers.user.model buttonLabel="Register"}}
-    {{else}}
-      <p>You need to sign in with you email (Mozilla Persona) to register your Ember Fest account</p>
-      <a {{action "doLogIn"}} class="button small">Sign in</a>
-    {{/if}}
-  </div>
+<div class="page-content">
+    <h2>Register new account</h2>
 
-  <div class="small-12 large-6 large-offset-1 columns">
-    <h4>Why do I need to register?</h4>
-    <p>
-      In order for us to be able to accept your talk proposal, or ticket purchases we need to know who you are :)
-      Once the conference starts, you will also be able to use your account to give feedback to the speakers, as well as leave feedback for the conference.
-    </p>
-    <p>We take you privacy extremely serious, and will never share your personal details with anyone!</p>
-    <h4>Mozilla Persona</h4>
-    <p>Sign in is provided securely via Mozilla Persona. This enables us to authenticate and validate your email address without you ever having to provide Ember Fest with a password, as your password is safely stored with Mozilla Persona!</p>
-  </div>
+    <div class="row">
+      <div class="small-12 large-5 columns">
+        {{#if controllers.user.model}}
+          {{user-details user=controllers.user.model buttonLabel="Register"}}
+        {{else}}
+          <p>You need to sign in with you email (Mozilla Persona) to register your Ember Fest account</p>
+          <a {{action "doLogIn"}} class="button small">Sign in</a>
+        {{/if}}
+      </div>
+
+      <div class="small-12 large-6 large-offset-1 columns">
+        <h4>Why do I need to register?</h4>
+        <p>
+          In order for us to be able to accept your talk proposal, or ticket purchases we need to know who you are :)
+          Once the conference starts, you will also be able to use your account to give feedback to the speakers, as well as leave feedback for the conference.
+        </p>
+        <p>We take you privacy extremely serious, and will never share your personal details with anyone!</p>
+        <h4>Mozilla Persona</h4>
+        <p>Sign in is provided securely via Mozilla Persona. This enables us to authenticate and validate your email address without you ever having to provide Ember Fest with a password, as your password is safely stored with Mozilla Persona!</p>
+      </div>
+    </div>
 </div>

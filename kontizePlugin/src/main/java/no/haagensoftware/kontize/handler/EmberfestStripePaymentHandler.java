@@ -3,6 +3,7 @@ package no.haagensoftware.kontize.handler;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonPrimitive;
+import com.stripe.Stripe;
 import com.stripe.model.Charge;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
@@ -27,6 +28,8 @@ public class EmberfestStripePaymentHandler extends ContenticeHandler {
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest fullHttpRequest) throws Exception {
+        Stripe.apiKey = System.getProperty("eu.emberfest.stripeSecret");
+
         if (ticketsDao == null) {
             ticketsDao = new TicketsDao(getStorage());
         }
@@ -54,14 +57,17 @@ public class EmberfestStripePaymentHandler extends ContenticeHandler {
 
         Map<String, Object> chargeParams = new HashMap<String, Object>();
         chargeParams.put("amount", order.getSubtotal());
-        chargeParams.put("currency", "gbp");
+        chargeParams.put("currency", "eur");
         chargeParams.put("card", token.getStripeToken()); // obtained with Stripe.js
         chargeParams.put("description", "Emberfest Order for " + token.getStripeEmail());
 
         Charge charge = Charge.create(chargeParams);
 
+        boolean paymentSuccessful = false;
         if (charge.getPaid().booleanValue() && charge.getCaptured().booleanValue()) {
-            order.setStatus(charge.getStatus());
+            paymentSuccessful = charge.getPaid().booleanValue();
+
+            order.setStatus(paymentSuccessful ? "paid" : "failed");
             order.setAmount("" + charge.getAmount());
             order.setCurrency(charge.getCurrency());
             order.setTime("" + charge.getCreated());
@@ -76,7 +82,7 @@ public class EmberfestStripePaymentHandler extends ContenticeHandler {
 
         logger.info(new Gson().toJson(charge));
 
-        String returnVal = "{\"status\": \"" + charge.getStatus() + "\"}";
+        String returnVal = "{\"status\": \"" + (paymentSuccessful ? "succeeded" : "failed") + "\"}";
 
         writeContentsToBuffer(channelHandlerContext, returnVal, "application/json");
     }
