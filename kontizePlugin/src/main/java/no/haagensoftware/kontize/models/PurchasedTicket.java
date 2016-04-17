@@ -1,15 +1,19 @@
 package no.haagensoftware.kontize.models;
 
+import com.google.gson.annotations.Expose;
+import no.haagensoftware.hyrrokkin.annotations.SerializedClassName;
+
 /**
  * Created by jhsmbp on 25/02/14.
  */
+@SerializedClassName("ticket")
 public class PurchasedTicket {
-    private String id;
-    private String ticketId;
+    @Expose private String id;
+    @Expose private String ticketId;
     private String userId;
-    private String ordernumber;
-    private String ticketType;
-    private String ticketHolder;
+    @Expose private String ordernumber;
+    @Expose private String ticketType;
+    @Expose private String ticketHolder;
 
     public PurchasedTicket() {
     }

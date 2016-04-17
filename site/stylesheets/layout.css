@@ -342,6 +342,20 @@ header ul li.active {
     background-color: #eaecea;
 }
 
+.partner-area a {
+    text-align: center;
+}
+
+.partner-area h3 {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.partner-area img {
+    max-width: 300px;
+}
+
 .partner-area h1 {
     margin-bottom: 45px;
     text-align: center;

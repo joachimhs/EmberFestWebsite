@@ -64,12 +64,15 @@ public class TicketsDao {
         return purchasedTicketList;
     }
 
-    public List<PurchasedTicket> getPurchasedTicketsForOrderId(String host, String orderId) {
+    public List<PurchasedTicket> getPurchasedTicketsForOrderId(String host, String orderId, String userId) {
         List<PurchasedTicket> purchasedTicketList = new ArrayList<>();
 
         for (SubCategoryData subCategoryData : storagePlugin.getSubCategories(host, "tickets")) {
             PurchasedTicket pt = convertSubcategoryToPurchasedTicket(subCategoryData);
             if (pt.getOrdernumber().equals(orderId)) {
+                if (pt.getId().startsWith("tickets_" + userId)) {
+                    pt.setId(pt.getTicketId());
+                }
                 purchasedTicketList.add(pt);
             }
         }
@@ -132,16 +135,33 @@ public class TicketsDao {
         return foundOrders;
     }
 
-    public Order getOrderForOrderId(String host, String orderId) {
+    public Order getNewOrderForOrderId(String host, String orderId) {
         Order foundOrder = null;
 
         List<SubCategoryData> subCategoryDataList = storagePlugin.getSubCategories(host, "orders");
 
         for (SubCategoryData subCategoryData : subCategoryDataList) {
-            Order order = convertSubcategoryDataToOrder(host, subCategoryData);
-            if (order.getOrderNumber().equals(orderId) && order.getStatus().equals("new")) {
-                foundOrder = order;
+            if (subCategoryData.getValueForKey("ordernumber") != null && subCategoryData.getValueForKey("ordernumber").equals(orderId)
+                    && subCategoryData.getValueForKey("status") != null && subCategoryData.getValueForKey("status").equals("new")) {
+
+                Order order = convertSubcategoryDataToOrder(host, subCategoryData);
+                if (order.getStatus().equals("new")) {
+                    foundOrder = order;
+                }
             }
+        }
+
+        return foundOrder;
+    }
+
+    public Order getOrderForOrderId(String host, String orderId) {
+        Order foundOrder = null;
+
+        SubCategoryData orderSd = storagePlugin.getSubCategory(host, "orders", orderId);
+
+        if (orderSd != null) {
+            Order order = convertSubcategoryDataToOrder(host, orderSd);
+            foundOrder = order;
         }
 
         return foundOrder;
@@ -233,9 +253,7 @@ public class TicketsDao {
             order.setChstat(subCategoryData.getValueForKey("chstat"));
         }
 
-        if (subCategoryData.getValueForKey("ticketIds") != null) {
-            order.setTicketIds(subCategoryData.getListForKey("ticketIds", ","));
-        }
+        order.setTicketIds(subCategoryData.getListForKey("ticketIds", ","));
 
         if (subCategoryData.getValueForKey("couponCode") != null) {
             order.setCouponCode(subCategoryData.getValueForKey("couponCode"));

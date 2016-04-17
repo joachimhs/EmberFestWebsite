@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
+import no.haagensoftware.emberfest.email.EpostExecutor;
 import no.haagensoftware.kontize.db.dao.TalkDao;
 import no.haagensoftware.kontize.models.*;
 import org.apache.log4j.Logger;
@@ -29,6 +30,9 @@ public class TalkHandler extends ContenticeHandler {
         if (talkDao == null) {
             talkDao = new TalkDao(getStorage());
         }
+
+        //Start the email service
+        EpostExecutor.getInstance(getDomain().getWebappName()).sendRemainingEmails(getStorage());
 
         String id = getParameter("talk");
         boolean isUser = false;

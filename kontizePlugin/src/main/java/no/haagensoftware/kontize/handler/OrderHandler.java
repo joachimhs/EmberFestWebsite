@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import no.haagensoftware.contentice.handler.ContenticeHandler;
+import no.haagensoftware.emberfest.email.EpostExecutor;
 import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.db.dao.UserDao;
 import no.haagensoftware.kontize.models.*;
@@ -39,6 +40,9 @@ public class OrderHandler extends ContenticeHandler {
             cachedUserResult = authenticationContext.verifyUUidToken(getDomain().getWebappName(), cookieUuidToken);
         }
 
+        //Start the email service
+        EpostExecutor.getInstance(getDomain().getWebappName()).sendRemainingEmails(getStorage());
+
         String domain = getDomain().getWebappName();
 
         String ordernumber = getParameter("orderId");
@@ -51,7 +55,8 @@ public class OrderHandler extends ContenticeHandler {
 
             if (cachedUserResult != null && cachedUserResult.getUserId().equals(order.getUserId())) {
                 if (order != null) {
-                    for (PurchasedTicket purchasedTicket : ticketsDao.getPurchasedTicketsForOrderId(domain, order.getOrderNumber())) {
+                    for (PurchasedTicket purchasedTicket : ticketsDao.getPurchasedTicketsForOrderId(domain, order.getOrderNumber(), order.getUserId())) {
+
                         userOrder.getTickets().add(purchasedTicket.getId());
                     }
 

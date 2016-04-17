@@ -22,7 +22,7 @@ Emberfest.Router.map(function() {
     this.resource('tickets', function() {
         this.route('purchased');
         this.route('cancelled');
-        this.route('receipt', {path: "/:order_id"});
+        this.route('receipt', {path: "/receipt/:order_id"});
     });
 
     this.route('mailinglist');

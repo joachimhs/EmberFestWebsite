@@ -6,3 +6,6 @@ dist
 site/uploads
 site/Sitemap.xml
 site/static
+bower_components
+node_modules
+tmp

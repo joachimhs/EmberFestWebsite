@@ -1,7 +1,6 @@
 package no.haagensoftware.kontize.handler;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonPrimitive;
 import com.stripe.Stripe;
 import com.stripe.model.Charge;
@@ -53,10 +52,16 @@ public class EmberfestStripePaymentHandler extends ContenticeHandler {
         logger.info("stripeEmail:" + token.getStripeEmail());
         logger.info("stripeOrder:" + token.getOrder());
 
-        Order order = ticketsDao.getOrderForOrderId(getDomain().getWebappName(), token.getOrder());
+        Order order = ticketsDao.getNewOrderForOrderId(getDomain().getWebappName(), token.getOrder());
 
         Map<String, Object> chargeParams = new HashMap<String, Object>();
-        chargeParams.put("amount", order.getSubtotal());
+
+        Long chargeAmount = order.getSubtotal();
+        if (order.getCouponDiscount() != null && order.getCouponDiscount().longValue() > 0) {
+            chargeAmount -= order.getCouponDiscount();
+        }
+
+        chargeParams.put("amount", chargeAmount);
         chargeParams.put("currency", "eur");
         chargeParams.put("card", token.getStripeToken()); // obtained with Stripe.js
         chargeParams.put("description", "Emberfest Order for " + token.getStripeEmail());

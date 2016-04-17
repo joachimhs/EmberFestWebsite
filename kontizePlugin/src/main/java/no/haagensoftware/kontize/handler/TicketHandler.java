@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import no.haagensoftware.contentice.handler.ContenticeHandler;
+import no.haagensoftware.hyrrokkin.base.HyrrokkinSerializer;
+import no.haagensoftware.hyrrokkin.serializer.RestSerializer;
 import no.haagensoftware.kontize.db.dao.TicketsDao;
 import no.haagensoftware.kontize.models.AuthenticationResult;
 import no.haagensoftware.kontize.models.PurchasedTicket;
@@ -48,7 +50,15 @@ public class TicketHandler extends ContenticeHandler {
         String ticketId = getParameter("ticketId");
 
         List<String> ids = getQueryStringIds();
-        if (isGet(fullHttpRequest) && ids != null && ids.size() > 0 && cachedUserResult != null && cachedUserResult.isUuidValidated()) {
+        if (isGet(fullHttpRequest) && ids != null && ids.size() == 0 && ticketId != null && ticketId.length() > 0) {
+            PurchasedTicket purchasedTicket = ticketsDao.getPurchasedTicket(getDomain().getWebappName(), cachedUserResult.getUserId(), ticketId);
+
+            if (purchasedTicket != null) {
+                purchasedTicket.setId(ticketId);
+            }
+
+            jsonReturn = new RestSerializer().serialize(purchasedTicket, new ArrayList<String>()).toString();
+        } else if (isGet(fullHttpRequest) && ids != null && ids.size() > 0 && cachedUserResult != null && cachedUserResult.isUuidValidated()) {
             List<PurchasedTicket> purchasedTickets = ticketsDao.getPurchasedTickets(getDomain().getWebappName(), cachedUserResult.getUserId());
             List<PurchasedTicket> tickets = new ArrayList<>();
 
@@ -83,12 +93,8 @@ public class TicketHandler extends ContenticeHandler {
             storedTicket.setTicketHolder(ticketholderName);
 
             ticketsDao.storeTicket(getDomain().getWebappName(), storedTicket);
-
-            PurchasedTicketObject topObject = new PurchasedTicketObject();
             storedTicket.setId(ticketId);
-            topObject.setTicket(storedTicket);
-
-            jsonReturn = new Gson().toJson(topObject);
+            jsonReturn = new RestSerializer().serialize(storedTicket, new ArrayList<String>()).toString();
         }
 
         writeContentsToBuffer(channelHandlerContext, jsonReturn, "application/json");

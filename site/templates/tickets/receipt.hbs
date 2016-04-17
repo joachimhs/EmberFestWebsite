@@ -1,3 +1,6 @@
+<div class="header-padding"></div>
+<div class="header-padding"></div>
+
 {{#if orderNumber}}
     <div class="receiptDiv" style="max-width: 600px;">
             <div class="row">
@@ -11,8 +14,8 @@
             <div class="right-align">
                 <p class="right-align" style="text-align: right;">Haagen Software AS<br />
                     VAT no: 998 392 578 MVA<br />
-                    Rosenholmveien 25<br />
-                    N-1414 Trollåsen<br />
+                    Munkerudtunet 10<br />
+                    N-1164 Oslo<br />
                     Norway
                 </p>
             </div>
@@ -37,20 +40,20 @@
                     <tr>
                         <td>{{ticket.ticketType.name}}</td>
                         <td>{{ticket.ticketHolder}}</td>
-                        <td style="text-align: right;">€ {{ticket.ticketType.price}}</td>
+                        <td style="text-align: right;">&euro; {{ticket.ticketType.price}}</td>
                     </tr>
                 {{/each}}
 
                 <tr>
-                    <td colspan="3" style="text-align: right; font-weight: 900;">Subtotal: € {{subtotal}}</td>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Subtotal: &euro; {{subtotal}}</td>
                 </tr>
 
                 <tr>
-                    <td colspan="3" style="text-align: right; font-weight: 900;">Coupon Discount: € {{couponDiscount}}</td>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Coupon Discount: &euro; {{couponDiscount}}</td>
                 </tr>
 
                 <tr>
-                    <td colspan="3" style="text-align: right; font-weight: 900;">Total Amount: € {{totalAmount}}</td>
+                    <td colspan="3" style="text-align: right; font-weight: 900;">Total Amount: &euro; {{totalAmount}}</td>
                 </tr>
             </table>
     </div>
