@@ -1,11 +1,37 @@
-.idea
-.DS_Store
-target
-site/node_modules
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
 dist
-site/uploads
-site/Sitemap.xml
-site/static
-bower_components
-node_modules
 tmp
+
+# dependencies
+node_modules
+bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+site/static
+
+# IDE
+.buildpath
+.idea
+.project
+.settings/
+..sw
+.*.un~
+build/
+composer.lock
+nbproject
+tmp/
+
+#Mac
+.DS_Store
+
+#Java
+target
+.class

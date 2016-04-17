@@ -1,0 +1,33 @@
+$app-color-lighten-8:   #919191;
+$app-color-lighten-7:   #898989;
+$app-color-lighten-6:   #808080;
+$app-color-lighten-5:   #787878;
+$app-color-lighten-4:   #6f6f6f;
+$app-color-lighten-3:   #676767;
+$app-color-lighten-2:   #5e5e5e;
+$app-color-lighten-1:   #565656;
+$app-color-base:        #4d4d4d;
+$app-color-darken-1:    #343434;
+$app-color-darken-2:    #2b2b2b;
+$app-color-darken-3:    #232323;
+$app-color-darken-4:    #232323;
+
+$app-color-palette: (
+        "lighten-8":  $app-color-lighten-8,
+        "lighten-7":  $app-color-lighten-7,
+        "lighten-6":  $app-color-lighten-6,
+        "lighten-5":  $app-color-lighten-5,
+        "lighten-4":  $app-color-lighten-4,
+        "lighten-3":  $app-color-lighten-3,
+        "lighten-2":  $app-color-lighten-2,
+        "lighten-1":  $app-color-lighten-1,
+        "base":       $app-color-base,
+        "darken-1":   $app-color-darken-1,
+        "darken-2":   $app-color-darken-2,
+        "darken-3":   $app-color-darken-3,
+        "darken-4":   $app-color-darken-4,
+);
+
+$colors: (
+    "app-color": $app-color-palette
+);

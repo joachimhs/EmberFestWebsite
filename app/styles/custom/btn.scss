@@ -1,0 +1,13 @@
+.btn-flat {	
+	&:hover{
+		color: $app-color-primary-inverse;	
+		background: darken($app-color-primary-active, 10%);
+	}
+}
+.btn-radius{
+	border-radius: 20px;
+	background: $button-color;
+}
+.btn-subscribe{
+	margin-top: 20px;
+}

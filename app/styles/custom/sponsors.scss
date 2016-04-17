@@ -1,0 +1,38 @@
+.sponsors{
+	.sponsor{
+		border-top: 1px solid color("app-color", "lighten-3");
+		padding: 2rem 0;
+		.gold, .silver, .bronz{
+			h6{
+				margin: 2px 0px;	
+			}
+			i{
+				background: #000;
+	    		color: #000;
+	    		border-radius: 50%;
+	    		font-size: 1rem;
+	    		&.gold-color{
+	    			background: $gold-color;
+	    			color: $gold-color;
+	    		}
+	    		&.silver-color{
+	    			background: $silver-color;
+	    			color: $silver-color;
+	    		}
+	    		&.bronz-color{
+	    			background:  $bronz-color;
+	    			color:  $bronz-color;
+	    		}
+			}
+		}
+		.gold{
+			color: $gold-color;
+		}
+		.silver{
+			color: $silver-color;
+		}
+		.bronz{
+			color: $bronz-color;
+		}
+	}
+}
