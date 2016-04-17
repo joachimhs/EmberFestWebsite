@@ -3,7 +3,7 @@ $fallback-extension: 'jepg' !default;
 
 
 .slider{
-	background: url(images/slider-cover.jpg) no-repeat center center fixed; 
+	background: linear-gradient( rgba(0, 0, 0, -0.6), rgba(0, 0, 0, 0.7) ), url(images/slider-cover.jpg) no-repeat center center fixed;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -17,7 +17,7 @@ $fallback-extension: 'jepg' !default;
     @media #{$medium-and-up} {
       height: 700px;
     }
-    @media #{$large-and-up} { 
+    @media #{$large-and-up} {
       height: 600px;
     }
 
@@ -34,15 +34,15 @@ $fallback-extension: 'jepg' !default;
           font-size: 2.92rem;
         }
       }
-      @media #{$large-and-up} { 
+      @media #{$large-and-up} {
         h3{
-          margin: 1.46rem 0 1.5rem 0;          
+          margin: 1.46rem 0 1.5rem 0;
         }
       }
-  		&:after,&:before{ 
+  		&:after,&:before{
 			  position: absolute;
 			  top: 0;
-  			font-size: 145px;	        	
+  			font-size: 145px;
 			 line-height: 1;
 		}
 		&:after{content: ' }'; right: 0;}
@@ -57,26 +57,26 @@ $fallback-extension: 'jepg' !default;
   	}
   	.slider-order-ticket{
   		position: relative;
-		
+
   	}
   	.slider-order-actions{
   		margin-top: 3rem;
 
   		a{
 
-  			background: transparent;
+  			background: #fff;
   			border: 1px solid #fff;
-  			border-radius: 20px;  			
+  			border-radius: 20px;
         margin-top: 1rem;
 
         @extend .z-depth-0;
-  			
+
         &:hover{
   				background: $app-color-primary-active;
   			}
         @media #{$medium-and-up} {
           margin-top: 0;
-        }        
+        }
   		}
   	}
 }

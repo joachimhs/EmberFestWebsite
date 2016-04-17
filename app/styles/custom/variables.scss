@@ -36,6 +36,7 @@ $orange-color: #ff5654;
 $black-color: #000;
 
 
+$white-color: #ffffff;
 $gold-color: #f0d30c;
 $silver-color: #b2b2b2;
 $bronz-color: #bd967f;
@@ -53,9 +54,9 @@ $error-color: color("red", "base") !default;
 $link-color: $app-color-primary !default;
 $link-color-hover : $app-color-primary-active !default;
 
-//Button 
-$button-color: $app-color-primary-active; 
-$button-color-flat: $app-color-primary-inverse; 
+//Button
+$button-color: $app-color-primary-active;
+$button-color-flat: $app-color-primary-inverse;
 
 //Form
 $search-input-color: $secondary-color;
@@ -65,7 +66,7 @@ $input-success-color: $primary-color;
 $input-focus-color: $primary-color-light;
 
 
-//Navigation 
+//Navigation
 
 $navbar-height: 96px !default;
 $navbar-height-mobile: 96px !default;

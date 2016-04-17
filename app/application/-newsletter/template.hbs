@@ -1,21 +1,38 @@
 <div class="container">
-	<div class="row">			
+	<div class="row">
 		<div class="col s12 m8 offset-m2">
 			<section id="newsletter" class="newsletter">
 				<h4 class="center-align">{Subscribe to our mailing list}</h4>
-				<form >
-			      <div class="row">
-			        <div class="input-field col s12">
-			         	<input id="email" type="email" class="validate" required="" aria-required="true">
-          				<label for="email">Email</label>
-			        </div>
-			      </div>			     
-			      <div class="row">
-			      	<div class="input-field col s12">		      
-			      		<button type="submit" class="btn-flat waves-effect btn-radius waves-light btn-subscribe">SUBSCRIBE</button>
-			      	</div>
-			      </div>
-			    </form>
+
+
+          <!-- Begin MailChimp Signup Form -->
+          <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+              /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+              <form action="//emberfest.us3.list-manage.com/subscribe/post?u=f1cbf4663b7b23940ac7e5009&amp;id=532b2f138c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                    {{material-design/md-input name="EMAIL" icon="email" class="input-field col s12" inputValue="" inputTitle="Email Address*"}}
+                    {{material-design/md-input name="LNAME" icon="contacts" class="input-field col s12" inputValue="" inputTitle="Full Name*"}}
+                    {{material-design/md-input name="CNAME" icon="my_location" class="input-field col s12" inputValue="" inputTitle="Country"}}
+                      <div class="mc-field-group input-group">
+                          <strong>Email Format </strong>
+                          <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
+                              <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+                          </ul>
+                      </div>
+                      <div id="mce-responses" class="clear">
+                          <div class="response" id="mce-error-response" style="display:none"></div>
+                          <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_f1cbf4663b7b23940ac7e5009_532b2f138c" tabindex="-1" value=""></div>
+                      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-flat waves-effect btn-radius waves-light btn-subscribe"></div>
+                  </div>
+              </form>
+          </div>
+          <!--End mc_embed_signup-->
 			</section>
 		</div>
 	</div>

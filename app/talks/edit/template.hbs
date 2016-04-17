@@ -1,0 +1,8 @@
+<div class="container">
+  {{#if session.isLoggedIn}}
+    {{talk-details talk=model.talk}}
+  {{else}}
+      <p class="talkRow">You need to sign in to view and edit your profile!</p>
+      <a {{action "doLogIn"}} class="button small">Sign in with your email</a>
+  {{/if}}
+</div>

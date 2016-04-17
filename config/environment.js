@@ -2,6 +2,15 @@
 
 module.exports = function(environment) {
   var ENV = {
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-39888793-1'
+        }
+      }
+    ],
     modulePrefix: 'emberfest',
     environment: environment,
     baseURL: '/',

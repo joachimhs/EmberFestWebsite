@@ -1,0 +1,66 @@
+<div class="container">
+  {{#if session.isLoggedIn}}
+      <div class="row">
+          <div class="s12 m6 col">
+              <h3>Your Profile</h3>
+            {{user-details user=model.user buttonLabel="Update profile"}}
+          </div>
+
+          <div class="s12 m6 col">
+              <h3>Purchased Tickets</h3>
+              <table>
+                  <tr>
+                      <th>Type</th>
+                      <th>Ticket Holder</th>
+                      <th>Ordernumber</th>
+                  </tr>
+
+                {{#each model.user.tickets as |ticket|}}
+                    <tr>
+                        <td>{{ticket.ticketType.name}}</td>
+                        <td>{{ticket.ticketHolder}}</td>
+                        <td>
+                          {{#link-to "tickets.receipt" ticket.ordernumber}}
+                            {{ticket.ordernumber}}
+                          {{/link-to}}
+                        </td>
+                    </tr>
+                {{/each}}
+
+                  <tr>
+                      <td colspan="3" class="text-right">
+                        {{#link-to "tickets.purchased"}}
+                            <button class="waves-effect btn-radius btn-flat">Update</button>{{/link-to}}
+                      </td>
+                  </tr>
+              </table>
+
+              <h3>Suggested Talks</h3>
+              <table>
+                {{#each model.user.talks as |talk|}}
+                    <tr>
+                        <td><span class="profileTalkTitle">{{talk.title}}</span></td>
+                        <td>{{#link-to "talks.edit" talk.id class="profileTalkLink"}}
+                            <button class="waves-effect btn-radius btn-flat">Edit</button>{{/link-to}}</td>
+                        <td>{{#link-to "talks.talk" talk.id class="profileTalkLink"}}
+                            <button class="waves-effect btn-radius btn-flat">View</button>{{/link-to}}</td>
+                    </tr>
+                {{/each}}
+              </table>
+              <h3>Participant Information</h3>
+              <p>If your talk is approved, you will be notified by one of the organizers personally. We will accept
+                  talks at regular intervals until two weeks before the conference starts. If none of your talks get
+                  approved, you will get the opportunity to buy a ticket at the price valid when you registered your
+                  talk.</p>
+
+              <h3>Code of Conduct</h3>
+              <p>Please take some time to read through out {{#link-to "codeOfConduct"}}Code of Conduct{{/link-to}}!</p>
+
+          </div>
+      </div>
+
+  {{else}}
+      <p class="talkRow">You need to sign in to view and edit your profile!</p>
+      <a {{action "doLogIn"}} class="waves-effect btn-radius btn-flat">Sign in with your email</a>
+  {{/if}}
+</div>
