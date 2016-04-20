@@ -1,0 +1,68 @@
+<div class="container">
+  {{#if session.isLoggedIn}}
+      <h2>Register your talk for Ember Fest 2016!</h2>
+    {{#if validationErrors}}
+        <div id="registerError" class="card-panel red lighten-2">
+            <ul>
+              {{#each validationErrors as |error|}}
+                  <li>{{error}}</li>
+              {{/each}}
+            </ul>
+        </div>
+    {{/if}}
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">subject</i>
+              {{input id="talkTitleInput" value=title type="text"}}
+              <label for="talkTitleInput">Your Talk Title</label>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">comment</i>
+            {{textarea id="talkAbstractInput" value=talkAbstract class="materialize-textarea"}}
+              <label for="talkAbstractInput">Your Talk Abstract - What is your talk about?</label>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">speaker_notes</i>
+            {{textarea id="talkOutlineInput" value=outline class="materialize-textarea"}}
+              <label for="talkOutlineInput">Briefly outline the contents of your talk</label>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">supervisor_account</i>
+            {{textarea id="talkAudienceInput" value=talkIntendedAudience class="materialize-textarea"}}
+              <label for="talkAudienceInput">Briefly describe the intended audience for your talk</label>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">av_timer</i>
+              <input disabled value="Talks for 2016 will be 45 minutes long" id="talkTypeInput" type="text" class="validate">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+              <i class="material-icons prefix">turned_in</i>
+              {{input id="talkTopicsInput" value=topics type="text"}}
+              <label for="talkTopicsInput">Which topics will your talk cover?</label>
+          </div>
+      </div>
+
+
+      <div class="row">
+          <div class="large-12 columns">
+              <a {{action "verifyTalkInput"}} class="waves-effect btn-radius btn-flat">Register talk</a>
+          </div>
+      </div>
+  {{/if}}
+</div>

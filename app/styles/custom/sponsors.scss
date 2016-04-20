@@ -4,7 +4,7 @@
 		padding: 2rem 0;
 		.gold, .silver, .bronz{
 			h6{
-				margin: 2px 0px;	
+				margin: 2px 0px;
 			}
 			i{
 				background: #000;
@@ -35,4 +35,33 @@
 			color: $bronz-color;
 		}
 	}
+}
+
+.sponsor-packages {
+
+}
+
+.pricing-table .price {
+  background-color: #f6f6f6;
+  padding: 0.9375rem 1.25rem;
+  text-align: center;
+  color: #333;
+  font-weight: normal;
+  font-size: 22px;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.pricing-table .title {
+  font-size: 28px;
+  text-align: center;
+}
+
+.pricing-table .bullet-item {
+  text-align: center;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.sponsors h3 {
+  font-size: 12px;
 }

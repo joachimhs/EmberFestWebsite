@@ -1,7 +1,7 @@
 nav {
 	background-color: $app-body-background;
 	@extend .z-depth-0;
-	
+
 	// Navbar Links
 	ul {
 	  	li {
@@ -10,11 +10,11 @@ nav {
 	  		padding: 0 10px;
 	  		&.active {
 	  			background-color: transparent;
-	  			
+
 				a{
 					position: relative;
 					color: $app-color-primary-active;
-		  			&:after,&:before{ 	        	
+		  			&:after,&:before{
 		  				position: absolute;
 		  				top: 0;
 		  			}
@@ -30,10 +30,14 @@ nav {
 	  			&:hover{
 	  				background-color: transparent;
 	  				color: $app-color-primary-active;
-	  			}	
+	  			}
 	  		}
+        a.active {
+          text-decoration: underline;
+          color: $app-color-primary-active;
+        }
 	  	}
-  	} 
+  	}
   	.side-nav{
   		li{
 			a{
