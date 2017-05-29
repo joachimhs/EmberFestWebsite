@@ -1,0 +1,77 @@
+body {
+  height: 100%;
+  line-height: 1.7;
+  font-weight: 300;
+  font-family: "Consolas", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased; }
+
+.section {
+  padding: 40px 0; }
+  .section h4 {
+    font-size: 24px; }
+  .section.alternate {
+    background: #e25641;
+    color: #fff; }
+
+.title {
+  padding: 80px 0 20px 0;
+  text-align: center;
+  background-image: url(/images/berlin.jpg);
+  background-size: cover;
+  min-height: 100vh; }
+  .title img {
+    margin-bottom: 10px; }
+  .title h2 {
+    margin: 120px 0 40px 0;
+    font-family: "Consolas-Bold";
+    font-size: 32px; }
+    .title h2 span {
+      color: #000;
+      font-size: 20px;
+      margin: 0 3px 0 3px; }
+      .title h2 span strong {
+        color: #dadada;
+        font-weight: normal; }
+    .title h2 a, .title h2 a:hover {
+      color: #fff;
+      text-decoration: none; }
+  .title h1 {
+    font-family: "Consolas-Bold";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 20px 0 40px 0; }
+    .title h1 strong {
+      color: #000;
+      font-family: "Consolas";
+      font-weight: normal; }
+
+.footer {
+  background: #e25641;
+  padding: 10px 0;
+  margin-top: -20px;
+  font-size: 12px; }
+  .footer a {
+    color: #333;
+    transition: color ease-in-out .15s; }
+    .footer a:hover {
+      color: #fff;
+      text-decoration: none; }
+  .footer .links a {
+    margin-left: 10px; }
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 24px; }
+  .title h2 {
+    font-size: 20px; } }
+#map-canvas {
+  height: 250px;
+  margin: 10px 0 10px 0; }
+
+html, body {
+  /** Disable horizontal scroll on smaller devices **/
+  max-width: 100%;
+  overflow-x: hidden; }
