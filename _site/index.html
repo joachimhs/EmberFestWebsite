@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EmberFest - the European Community Ember Conference"/>
+    <meta name="keywords" content="" />
+    <meta name="language" content="en"/>
+    <meta name="content-language" content="en"/>
+    <meta name="publisher" content="EmberFest" />
+    <title>EmberFest</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/vendor/font-consolas.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="row title section">
+  <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4">
+        <a href="/">
+          <img src="/images/logo.png" alt="EmberFest Logo" class="img-responsive center-block" width="400" height="70">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h1>the European Community Ember Conference</h1>
+        <h2>Berlin, Oct. 12 &amp; 13th</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row section alternate">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+      <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <h4>Speakers</h4>
+        <p>The Call for Speakers will open soon and speakers will be announced shortly thereafter.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row section">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+      <div class="col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <h4>The Venue</h4>
+        <p>EmberFest 2017 will be held at Villa Elisabeth in the center of Berlin.</p>
+        <p>Villa Elisabeth is a nice venue bla bla…</p>
+      </div>
+      <div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <img src="images/villa-elisabeth.jpg" alt="Villa Elisabeth" class="img-responsive center-block">
+        <div id="map-canvas" style="position: relative; overflow: hidden;">
+          <script src="//maps.google.com/maps/api/js?sensor=false"></script>
+          <script>  
+            google.maps.event.addDomListener(window, 'load', function() {
+              var position = new google.maps.LatLng(52.5331106, 13.3950178);
+              var map      = new google.maps.Map(document.getElementById('map-canvas'), {
+                zoom:             16,
+                center:           position,
+                mapTypeId:        google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true
+              });
+              var marker = new google.maps.Marker({
+                map:       map,
+                position:  position,
+                clickable: false
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="row footer">
+      <div id="footer-logo" class="col-xs-5 col-xs-offset-1 col-md-4 col-md-offset-2">
+        <span>&copy; 2017 </span>
+        <a href="https://emberfest.eu" target="_blank">EmberFest</i></a>
+      </div>
+      <div class="col-xs-5 col-md-4 text-right links">
+        <a href="/imprint">Imprint</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53237918-17', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
