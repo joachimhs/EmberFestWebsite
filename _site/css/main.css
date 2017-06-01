@@ -7,13 +7,22 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased; }
 
+p {
+  font-size: 18px; }
+
 .section {
   padding: 40px 0; }
   .section h4 {
     font-size: 24px; }
+  .section a {
+    color: #e25641; }
+    .section a:hover {
+      text-decoration: underline; }
   .section.alternate {
     background: #e25641;
     color: #fff; }
+    .section.alternate a {
+      color: #333; }
 
 .title {
   padding: 80px 0 20px 0;
@@ -49,16 +58,13 @@ body {
       font-weight: normal; }
 
 .footer {
-  background: #e25641;
   padding: 10px 0;
-  margin-top: -20px;
   font-size: 12px; }
   .footer a {
-    color: #333;
+    color: #e25641;
     transition: color ease-in-out .15s; }
     .footer a:hover {
-      color: #fff;
-      text-decoration: none; }
+      text-decoration: underline; }
   .footer .links a {
     margin-left: 10px; }
 

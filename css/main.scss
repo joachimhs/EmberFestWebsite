@@ -11,6 +11,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  font-size: 18px;
+}
+
 .section {
   padding: 40px 0;
 
@@ -18,9 +22,21 @@ body {
     font-size: 24px;
   }
 
+  a {
+    color: #e25641;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &.alternate {
     background: #e25641;
     color: #fff;
+
+    a {
+      color: #333;
+    }
   }
 }
 
@@ -73,18 +89,15 @@ body {
 }
 
 .footer {
-  background: #e25641;
   padding: 10px 0;
-  margin-top: -20px;
   font-size: 12px;
 
   a {
-    color: #333;
+    color: #e25641;
     transition: color ease-in-out .15s;
 
     &:hover {
-      color: #fff;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
