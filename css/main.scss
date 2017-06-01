@@ -40,11 +40,18 @@ p {
   }
 }
 
+.location {
+  .address > span {
+    display: block;
+    text-align: center;
+  }
+}
+
 .title {
   padding: 80px 0 20px 0;
   text-align: center;
-  background-image: url(/images/berlin.jpg);
-  background-size: cover;
+  background-image: url(/images/berlin-sm.jpg);
+  background-size: 100%;
   min-height: 100vh;
 
   img {
@@ -130,4 +137,3 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
