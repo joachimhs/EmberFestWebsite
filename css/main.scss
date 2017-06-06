@@ -52,7 +52,7 @@ p {
   text-align: center;
   background-image: url(/images/berlin.jpg);
   background-size: 100%;
-  min-height: 100vh;
+  min-height: 140vh;
 
   img {
     margin-bottom: 10px;
@@ -142,7 +142,7 @@ p {
 
 @media (min-width: 481px) and (max-width: 1024px) {
   .title {
-    min-height: 50vh;
+    min-height: 90vh;
 
     h1 {
       font-size: 28px;
