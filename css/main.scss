@@ -115,6 +115,10 @@ p {
   }
 }
 
+.address > span {
+  display: block;
+}
+
 @media (max-width: 480px) {
   .title {
     min-height: 80vh;
