@@ -51,8 +51,9 @@ p {
   padding: 80px 0 20px 0;
   text-align: center;
   background-image: url(/images/berlin.jpg);
-  background-size: 100%;
-  min-height: 140vh;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 
   img {
     margin-bottom: 10px;
