@@ -100,14 +100,14 @@ p {
   padding: 10px 0;
   font-size: 12px;
 
-  a {
-    color: #e25641;
-    transition: color ease-in-out .15s;
+    a {
+      color: #e25641;
+      transition: color ease-in-out .15s;
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
 
   .links {
     a {
