@@ -40,11 +40,19 @@ p {
   }
 }
 
+.location {
+  .address > span {
+    display: block;
+    text-align: center;
+  }
+}
+
 .title {
   padding: 80px 0 20px 0;
   text-align: center;
   background-image: url(/images/berlin.jpg);
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
 
   img {
@@ -108,15 +116,56 @@ p {
   }
 }
 
-@media (max-width: 768px) {
+.address > span {
+  display: block;
+}
+
+@media (max-width: 480px) {
   .title {
+    min-height: 80vh;
+
     h1 {
       font-size: 24px;
     }
 
     h2 {
       font-size: 20px;
+      margin: 100px 0 20px 0;
     }
+  }
+
+  .location {
+    .address > span {
+      font-size: 12px;
+    }
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .title {
+    min-height: 50vh;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .location {
+    .address > span {
+      font-size: 18px;
+    }
+  }
+
+  .footer {
+    font-size: 14px;
   }
 }
 
@@ -130,4 +179,3 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
