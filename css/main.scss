@@ -187,6 +187,33 @@ p {
   }
 }
 
+.mailing-list {
+  .indicates-required {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+
+  .mc-field-group {
+    margin-bottom: 20px;
+    overflow: auto;
+
+    label {
+      cursor: pointer;
+      float: left;
+      padding-top: 3px;
+      width: 160px;
+    }
+    input {
+      width: 280px;
+      padding: 5px;
+    }
+  }
+
+  input[type="submit"] {
+    @extend .call-to-action;
+  }
+}
+
 @media (max-width: 480px) {
   .title {
     min-height: 80vh;
