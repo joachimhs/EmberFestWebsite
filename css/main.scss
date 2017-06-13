@@ -120,25 +120,97 @@ p {
   display: block;
 }
 
-.tito-tickets-button {
-  background-color: #e25641;
+@mixin button-large {
+  background-color: #DDD;
   border-radius: 3px;
-  color: #fff;
+  color: #333;
+  font-size: 24px;
   font-weight: bold;
   display: inline-block;
   padding: 10px;
   appearance: none;
-  webkit-appearance: none;
+  -webkit-appearance: none;
   box-shadow: none;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: #c93d28;
+    background-color: #CCC;
   }
 
   &:focus {
     outline: none;
+  }
+}
+
+.call-to-action {
+  @include button-large;
+
+  background-color: #e25641;
+  color: #FFF;
+
+  &:hover {
+    background-color: #c93d28;
+  }
+}
+
+.tito-tickets-button {
+  @extend .call-to-action;
+}
+
+.learn-more {
+  bottom: 10%;
+  margin-left: 15px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 4px #FFF;
+  width: 100%;
+
+  a {
+    color: #888;
+
+    em {
+      display: block;
+      font-style: normal;
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      svg {
+        transform: translateY(7px);
+      }
+    }
+  }
+}
+
+.mailing-list {
+  .indicates-required {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+
+  .mc-field-group {
+    margin-bottom: 20px;
+    overflow: auto;
+
+    label {
+      cursor: pointer;
+      float: left;
+      padding-top: 3px;
+      width: 160px;
+    }
+    input {
+      width: 280px;
+      padding: 5px;
+    }
+  }
+
+  input[type="submit"] {
+    @extend .call-to-action;
   }
 }
 
@@ -188,6 +260,12 @@ p {
 
   .footer {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    display: none;
   }
 }
 
