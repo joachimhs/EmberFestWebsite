@@ -158,6 +158,35 @@ p {
   @extend .call-to-action;
 }
 
+.learn-more {
+  bottom: 10%;
+  margin-left: 15px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 4px #FFF;
+  width: 100%;
+
+  a {
+    color: #888;
+
+    em {
+      display: block;
+      font-style: normal;
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      svg {
+        transform: translateY(7px);
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .title {
     min-height: 80vh;
@@ -204,6 +233,12 @@ p {
 
   .footer {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    display: none;
   }
 }
 
