@@ -120,26 +120,42 @@ p {
   display: block;
 }
 
-.tito-tickets-button {
-  background-color: #e25641;
+@mixin button-large {
+  background-color: #DDD;
   border-radius: 3px;
-  color: #fff;
+  color: #333;
+  font-size: 24px;
   font-weight: bold;
   display: inline-block;
   padding: 10px;
   appearance: none;
-  webkit-appearance: none;
+  -webkit-appearance: none;
   box-shadow: none;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: #c93d28;
+    background-color: #CCC;
   }
 
   &:focus {
     outline: none;
   }
+}
+
+.call-to-action {
+  @include button-large;
+
+  background-color: #e25641;
+  color: #FFF;
+
+  &:hover {
+    background-color: #c93d28;
+  }
+}
+
+.tito-tickets-button {
+  @extend .call-to-action;
 }
 
 @media (max-width: 480px) {
