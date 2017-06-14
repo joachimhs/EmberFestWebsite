@@ -6,7 +6,7 @@
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-    <form action="http://emberfest.us3.list-manage.com/subscribe/post?u=f1cbf4663b7b23940ac7e5009&amp;id=532b2f138c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="//emberfest.us3.list-manage.com/subscribe/post?u=f1cbf4663b7b23940ac7e5009&amp;id=532b2f138c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <h2>Subscribe to our mailing list</h2>
         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
         <div class="mc-field-group">
@@ -82,7 +82,7 @@
         }
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+        script.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js';
         head.appendChild(script);
         try {
             var validatorLoaded=jQuery("#fake-form").validate({});
@@ -97,7 +97,7 @@
             var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
             var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
             $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-            options = { url: 'http://emberfest.us3.list-manage.com/subscribe/post-json?u=f1cbf4663b7b23940ac7e5009&id=532b2f138c&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+            options = { url: 'https://emberfest.us3.list-manage.com/subscribe/post-json?u=f1cbf4663b7b23940ac7e5009&id=532b2f138c&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
                 beforeSubmit: function(){
                     $('#mce_tmp_error_msg').remove();
                     $('.datefield','#mc_embed_signup').each(
