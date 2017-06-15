@@ -188,28 +188,30 @@ p {
 }
 
 .mailing-list {
-  .indicates-required {
-    font-size: 0.8em;
-    margin-bottom: 10px;
+  #mc_embed_signup {
+    .indicates-required {
+      text-align: left;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    .mc-field-group {
+      overflow: auto;
+
+      label {
+        cursor: pointer;
+        float: left;
+        width: 160px;
+        line-height: 1;
+      }
+      input {
+        width: 280px;
+        padding: 5px;
+      }
+    }
   }
 
-  .mc-field-group {
-    margin-bottom: 20px;
-    overflow: auto;
-
-    label {
-      cursor: pointer;
-      float: left;
-      padding-top: 3px;
-      width: 160px;
-    }
-    input {
-      width: 280px;
-      padding: 5px;
-    }
-  }
-
-  #mc_embed_signup div.mce_inline_error {
+  #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
     clear: both;
     margin: 4px 0 0 160px;
     width: 280px;
@@ -241,7 +243,7 @@ p {
   }
 
   .mailing-list {
-    #mc_embed_signup div.mce_inline_error {
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
       margin-left: 0;
     }
   }
