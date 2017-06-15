@@ -209,6 +209,12 @@ p {
     }
   }
 
+  #mc_embed_signup div.mce_inline_error {
+    clear: both;
+    margin: 4px 0 0 160px;
+    width: 280px;
+  }
+
   input[type="submit"] {
     @extend .call-to-action;
   }
@@ -231,6 +237,12 @@ p {
   .location {
     .address > span {
       font-size: 12px;
+    }
+  }
+
+  .mailing-list {
+    #mc_embed_signup div.mce_inline_error {
+      margin-left: 0;
     }
   }
 
