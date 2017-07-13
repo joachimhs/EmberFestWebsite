@@ -5,7 +5,7 @@ body {
   height: 100%;
   line-height: 1.7;
   font-weight: 300;
-  font-family: "Consolas", sans-serif;
+  font-family: "Helvetica", sans-serif;
   letter-spacing: 1px;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -20,10 +20,11 @@ p {
 
   h4 {
     font-size: 24px;
+    font-weight: bold;
   }
 
   a {
-    color: #e25641;
+    color: #000;
 
     &:hover {
       text-decoration: underline;
@@ -35,7 +36,8 @@ p {
     color: #fff;
 
     a {
-      color: #333;
+      color: #fff;
+      font-weight: bold;
     }
   }
 }
@@ -48,10 +50,11 @@ p {
 }
 
 .title {
-  padding: 80px 0 20px 0;
+  padding: 40px 0 20px 0;
   text-align: center;
-  background-image: url(/images/berlin.jpg);
+  background-image: url(/images/skyline.svg);
   background-size: cover;
+  background-color: rgb(189,204,212);
   background-position: center;
   min-height: 100vh;
 
@@ -59,10 +62,11 @@ p {
     margin-bottom: 10px;
   }
 
-  h2 {
-    margin: 120px 0 40px 0;
-    font-family: "Consolas-Bold";
-    font-size: 32px;
+  h1 {
+    margin: 40px 0 30px 0;
+    font-family: "Helvetica";
+    font-size: 54px;
+    color: #fff;
 
     span {
       color: #000;
@@ -80,25 +84,12 @@ p {
       text-decoration: none;
     }
   }
-
-  h1 {
-    font-family: "Consolas-Bold";
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 150%;
-    margin: 20px 0 40px 0;
-
-    strong {
-      color: #000;
-      font-family: "Consolas";
-      font-weight: normal;
-    }
-  }
 }
 
 .footer {
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: bold;
 
     a {
       color: #e25641;
@@ -107,6 +98,11 @@ p {
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    hr {
+      color: #000;
+      border-width: 1px;
     }
 
   .links {
@@ -127,7 +123,6 @@ p {
   font-size: 24px;
   font-weight: bold;
   display: inline-block;
-  padding: 10px;
   appearance: none;
   -webkit-appearance: none;
   box-shadow: none;
@@ -159,15 +154,16 @@ p {
 }
 
 .learn-more {
-  bottom: 10%;
+  margin-top: 50px;
   margin-left: 15px;
-  position: absolute;
+  font-size: 20px;
   text-align: center;
   text-shadow: 0 0 4px #FFF;
+  font-weight: bold;
   width: 100%;
 
   a {
-    color: #888;
+    color: #e25641;
 
     em {
       display: block;
@@ -222,16 +218,26 @@ p {
   }
 }
 
+.bear {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:0;
+  }
+}
+
+hr { 
+  margin: 0px;
+  border: solid 1px rgb(189,204,212);
+}
+
 @media (max-width: 480px) {
   .title {
     min-height: 80vh;
 
     h1 {
       font-size: 24px;
-    }
-
-    h2 {
-      font-size: 20px;
       margin: 100px 0 20px 0;
     }
   }
@@ -259,10 +265,6 @@ p {
 
     h1 {
       font-size: 28px;
-    }
-
-    h2 {
-      font-size: 24px;
     }
   }
 
