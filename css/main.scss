@@ -218,12 +218,26 @@ p {
   }
 }
 
+.sponsors {
+  h4 {
+    padding: 30px;
+  }
+
+  img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+  }
+}
+
 .bear {
   padding: 0px;
   img {
     position: absolute;
     right:0;
     bottom:0;
+    width: 100px;
   }
 }
 
