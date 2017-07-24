@@ -1,0 +1,311 @@
+---
+---
+
+body {
+  height: 100%;
+  line-height: 1.7;
+  font-weight: 300;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: 18px;
+}
+
+.section {
+  padding: 40px 0;
+
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  a {
+    color: #e25641;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.alternate {
+    background: #e25641;
+    color: #fff;
+
+    a {
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+.location {
+  .address > span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.title {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  background-image: url(/images/skyline.svg);
+  background-size: cover;
+  background-color: rgb(189,204,212);
+  background-position: center;
+  min-height: 100vh;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin: 40px 0 30px 0;
+    font-family: "Helvetica";
+    font-size: 54px;
+    color: #fff;
+
+    span {
+      color: #000;
+      font-size: 20px;
+      margin: 0 3px 0 3px;
+
+      strong {
+        color: #dadada;
+        font-weight: normal;
+      }
+    }
+
+    a, a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer {
+  padding: 10px 0;
+  font-size: 11px;
+  font-weight: bold;
+
+    a {
+      color: #e25641;
+      transition: color ease-in-out .15s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    hr {
+      color: #000;
+      border-width: 1px;
+    }
+
+  .links {
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.address > span {
+  display: block;
+}
+
+@mixin button-large {
+  background-color: #DDD;
+  border-radius: 3px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: #CCC;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.call-to-action {
+  @include button-large;
+
+  background-color: #e25641;
+  color: #FFF;
+
+  &:hover {
+    background-color: #c93d28;
+  }
+}
+
+.tito-tickets-button {
+  @extend .call-to-action;
+}
+
+.learn-more {
+  margin-top: 50px;
+  margin-left: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0 0 4px #FFF;
+  font-weight: bold;
+  width: 100%;
+
+  a {
+    color: #e25641;
+
+    em {
+      display: block;
+      font-style: normal;
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      svg {
+        transform: translateY(7px);
+      }
+    }
+  }
+}
+
+.mailing-list {
+  #mc_embed_signup {
+    .indicates-required {
+      text-align: left;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    .mc-field-group {
+      overflow: auto;
+
+      label {
+        cursor: pointer;
+        float: left;
+        width: 160px;
+        line-height: 1;
+      }
+      input {
+        width: 280px;
+        padding: 5px;
+      }
+    }
+  }
+
+  #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    clear: both;
+    margin: 4px 0 0 160px;
+    width: 280px;
+  }
+
+  input[type="submit"] {
+    @extend .call-to-action;
+  }
+}
+
+.sponsors {
+  h4 {
+    padding: 30px;
+  }
+
+  img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+  }
+}
+
+.bear {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 100px;
+  }
+}
+
+hr { 
+  margin: 0px;
+  border: solid 1px rgb(189,204,212);
+}
+
+@media (max-width: 480px) {
+  .title {
+    min-height: 80vh;
+
+    h1 {
+      font-size: 24px;
+      margin: 100px 0 20px 0;
+    }
+  }
+
+  .location {
+    .address > span {
+      font-size: 12px;
+    }
+  }
+
+  .mailing-list {
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+      margin-left: 0;
+    }
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .title {
+    min-height: 50vh;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .location {
+    .address > span {
+      font-size: 18px;
+    }
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    display: none;
+  }
+}
+
+#map-canvas {
+  height: 250px;
+  margin: 10px 0 10px 0;
+}
+
+html, body {
+  /** Disable horizontal scroll on smaller devices **/
+  max-width: 100%;
+  overflow-x: hidden;
+}
