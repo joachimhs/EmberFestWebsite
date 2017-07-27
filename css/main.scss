@@ -16,6 +16,8 @@ p {
 }
 
 .section {
+  background: #bdccd4;
+  color: #fff;
   padding: 40px 0;
 
   h4 {
@@ -33,10 +35,9 @@ p {
 
   &.alternate {
     background: #e25641;
-    color: #fff;
 
     a {
-      color: #fff;
+      color: #bdccd4;
       font-weight: bold;
     }
   }
@@ -114,6 +115,21 @@ p {
 
 .address > span {
   display: block;
+}
+
+.sponsors {
+  h4, h5 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  .premier-logos {
+    margin-bottom: 40px;
+  }
 }
 
 @mixin button-large {
@@ -215,19 +231,6 @@ p {
 
   input[type="submit"] {
     @extend .call-to-action;
-  }
-}
-
-.sponsors {
-  h4 {
-    padding: 30px;
-  }
-
-  img {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    width: 150px;
   }
 }
 
