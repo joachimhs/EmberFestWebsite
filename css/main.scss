@@ -148,6 +148,12 @@ p {
   .premier-logos {
     margin-bottom: 40px;
   }
+
+  .supporting-logos {
+    .row {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @mixin button-large {
