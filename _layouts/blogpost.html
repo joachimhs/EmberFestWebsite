@@ -22,9 +22,12 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    {{content}}
+  <body class="blog">
     <div class="container">
+      {% include logo_row.html %}
+      <div class="post-content">
+        {{content}}
+      </div>
       {% include footer.html %}
     </div>
     {% include google_analytics.html %}
