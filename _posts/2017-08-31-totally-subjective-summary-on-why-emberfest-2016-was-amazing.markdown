@@ -1,9 +1,9 @@
 ---
 layout: blogpost
 title: Totally subjective summary on why EmberFest'16 was amazing - and why EmberFest'17 will be
+author: Balint Erdi
+author_link: https://twitter.com/baaz
 ---
-
-# Totally subjective summary on why EmberFest'16 was amazing - and why EmberFest'17 will be
 
 When I learned that EmberFest'16 was to be held in my hometown, Budapest, I
 could barely contain my excitement. I attended all previous EmberFests in other
@@ -21,7 +21,7 @@ before the conference. It turned out extremely well, with a record-high
 attendance for our small group (~40 people were sitting into a small room) and
 great talks.
 
-![Isaac presenting his Ember side-project](/images/blog/isaac-presenting-at-meetup.jpg)
+![Isaac presenting his Ember side-project]({{ site.url }}/images/blog/isaac-presenting-at-meetup.jpg)
 
 After the talks, we moved headquarters to Budapest's bar district to have a
 post-meetup, pre-conference drinks and continue chatting.
@@ -29,8 +29,6 @@ post-meetup, pre-conference drinks and continue chatting.
 The evening had a great vibe, with Ember friends flying here from all over the
 world (some of them seeing the illuminated city, which is quite the sight, for
 the first time), and I was ever so excited for being able to "host" them here.
-
-![Ember friends on tram](/images/blog/friends-on-tram.jpg)
 
 ### The conference
 
@@ -40,23 +38,11 @@ the lobby between talks were great and the whole vibe was very laid back and
 familiar, although I might be biased as I still couldn't believe my Ember peeps
 came to me this time (the feeling only went away when the conference was over).
 
-### Dinner on a boat
-
-EmberFest also has the venerable tradition of having a dinner in the evening of
-the second day, after the conference is over. That's a tradition I really
-cherish and last year's occasion was really a special one.
-
-The dinner took place on a boat that cruised along the Danube, with the
-illuminated city as backdrop - not too shabby! It was hard to say goodbye to
-friends, old and new, once the ship returned to its port, so we didn't yet. We
-went back to Budapest's bar district and postponed the moment we had to part
-ways by a few hours.
-
-![Dinner on boat with illuminated Budapest as backdrop](/images/blog/dinner-on-boat.jpg)
-
 As Joachim, who almost single-handedly organized the previous 3 EmberFest
 conferences, announced his resigation from this position at the end of the
 talks, new plans started to slowly form...
+
+![Ember friends on tram]({{ site.url }}/images/blog/friends-on-tram.jpg)
 
 ### EmberFest not dead
 
