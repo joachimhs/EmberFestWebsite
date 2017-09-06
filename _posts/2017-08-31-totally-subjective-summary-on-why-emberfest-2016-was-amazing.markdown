@@ -62,19 +62,11 @@ confirmed they're speaking at EmberFest, and we're in the process of selecting
 talks for the remaining slots.
 
 The conference is again going to be a 1-track, 2-day one and is happening on
-the 27th and 28th of October.
-
-<!--
-We'd like to continue the tradition of the EmberFest dinner but we wanted to
-first and foremost ensure the conference is happening. If your company would be
-willing to sponsor the dinner and help carrying on the tradition ~~to the next
-generation~~ this year, please [get in contact with us][mail].
--->
+the 12th and 13th of October.
 
 Do you have your ticket already?
 <tito-button event="emberfest/emberfest-2017">No, but I want one!</tito-button>
 
-[mail]: mailto:mail@emberfest.eu
 [villa]: http://www.elisabeth.berlin/
 [ember.bp]: https://www.meetup.com/ember-bp/
 [ember-berlin]: https://www.meetup.com/Ember-js-Berlin/
