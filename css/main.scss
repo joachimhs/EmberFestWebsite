@@ -9,6 +9,9 @@ body {
   letter-spacing: 1px;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  &.blog {
+    background: #bdccd4;
+  }
 }
 
 p {
@@ -41,6 +44,7 @@ p {
       font-weight: bold;
     }
   }
+
 }
 
 .location {
@@ -268,7 +272,7 @@ p {
   }
 }
 
-hr { 
+hr {
   margin: 0px;
   border: solid 1px rgb(189,204,212);
 }
@@ -335,4 +339,23 @@ html, body {
   /** Disable horizontal scroll on smaller devices **/
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.blog {
+  h1 {
+    margin: 30px 0;
+  }
+  h2 {
+    margin: 25px 0;
+  }
+  h3 {
+    margin: 20px 0;
+  }
+}
+
+.post-content {
+  margin: 20px 0;
+  img {
+    width: 100%;
+  }
 }
