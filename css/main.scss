@@ -150,7 +150,9 @@ p {
   }
 
   .premier-logos {
-    margin-bottom: 40px;
+    .row {
+      margin-bottom: 40px;
+    }
   }
 
   .supporting-logos {
