@@ -152,6 +152,11 @@ p {
   .premier-logos {
     .row {
       margin-bottom: 40px;
+
+      img {
+        max-height: 75px;
+        margin: auto;
+      }
     }
   }
 
