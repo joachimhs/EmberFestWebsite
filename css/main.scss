@@ -150,7 +150,14 @@ p {
   }
 
   .premier-logos {
-    margin-bottom: 40px;
+    .row > div {
+      margin-bottom: 40px;
+
+      img {
+        max-height: 75px;
+        margin: auto;
+      }
+    }
   }
 
   .supporting-logos {
