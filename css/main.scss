@@ -54,10 +54,15 @@ p {
     font-weight: bold;
   }
 
+  tr:nth-child(4n) {
+    color: #fff;
+    background-color: #e25641;
+  }
+
   th {
     color: #fff;
     background-color: #e25641;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   &.alternate {
@@ -81,6 +86,7 @@ p {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    padding-top: 30px;
   }
 }
 
@@ -102,8 +108,11 @@ p {
   }
 
   hr {
-    margin-top: 30px;
+    margin-top: 7%;
+    margin-left: 10%;
     display: block;
+    width: 80%;
+    align: center;
   }
 }
 
@@ -182,7 +191,9 @@ p {
 }
 
 .speaker-list {
-  text-align: center;
+  h6 {
+    text-align: center;
+  }
 }
 
 .speaker {
@@ -198,12 +209,15 @@ p {
 .speaker-image {
   height: 200px;
   width: 200px;
+  display: block;
+  margin: auto;
 }
 
 .speaker-circle {
-  height: 190px;
-  width: 190px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
+  padding: 10px;
 }
 
 .sponsors {
