@@ -202,6 +202,10 @@ p {
     font-weight: bold;
     text-align: center;
   }
+
+  img {
+    margin: 0 auto;
+  }
 }
 
 .speaker-image {
@@ -359,8 +363,8 @@ p {
 }
 
 hr {
-  margin: 0px;
-  border: solid 1px rgb(189,204,212);
+  margin: 0 0 10px 0;
+  color: #fff;
 }
 
 @media (max-width: 480px) {
