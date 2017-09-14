@@ -36,16 +36,16 @@ p {
     }
   }
 
-  table, th, td {
+  table {
+    width: 100%;
+  }
+
+  th, td {
     padding: 10px;
     text-align: center;
     border-collapse: collapse;
     border-spacing: 0;
     border-bottom: solid 2px #e25641;
-  }
-
-  table {
-    margin: 40px;
   }
 
   tr {
