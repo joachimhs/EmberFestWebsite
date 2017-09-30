@@ -1,37 +1,22 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-dist
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
 tmp
 
-#Mac
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+_site
 .DS_Store
-
-# dependencies
-node_modules
-bower_components
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage/*
-/libpeerconnection.log
-npm-debug.log
-testem.log
-site/static
-
-# IDE
-.buildpath
-.idea
-.project
-.settings/
-..sw
-.*.un~
-build/
-composer.lock
-nbproject
-tmp/
-
-#Java
-target
-.class
+.sass-cache
+vendor/ruby
