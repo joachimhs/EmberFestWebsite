@@ -1,0 +1,455 @@
+---
+---
+
+body {
+  height: 100%;
+  line-height: 1.7;
+  font-weight: 300;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  &.blog {
+    background: #bdccd4;
+  }
+}
+
+p {
+  font-size: 18px;
+}
+
+.section {
+  background: #bdccd4;
+  color: #fff;
+  padding: 40px 0;
+
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  a {
+    color: #e25641;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: solid 2px #e25641;
+  }
+
+  tr {
+    color: #000;
+    background-color: #fff;
+    font-weight: bold;
+  }
+
+  tr:nth-child(4n) {
+    color: #fff;
+    background-color: #e25641;
+  }
+
+  th {
+    color: #fff;
+    background-color: #e25641;
+    font-size: 20px;
+  }
+
+  &.alternate {
+    background: #e25641;
+
+    a {
+      color: #bdccd4;
+      font-weight: bold;
+    }
+
+    .speaker-list {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.schedule {
+  h5 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+}
+
+.program {
+  h4 {
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  hr {
+    margin-top: 7%;
+    margin-left: 10%;
+    display: block;
+    width: 80%;
+    align: center;
+  }
+}
+
+.location {
+  .address > span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.title {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  background-image: url(/images/skyline.svg);
+  background-size: cover;
+  background-color: rgb(189,204,212);
+  background-position: center;
+  min-height: 100vh;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin: 40px 0 30px 0;
+    font-family: "Helvetica";
+    font-size: 54px;
+    color: #fff;
+
+    span {
+      color: #000;
+      font-size: 20px;
+      margin: 0 3px 0 3px;
+
+      strong {
+        color: #dadada;
+        font-weight: normal;
+      }
+    }
+
+    a, a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer {
+  padding: 10px 0;
+  font-size: 11px;
+  font-weight: bold;
+
+    a {
+      color: #e25641;
+      transition: color ease-in-out .15s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    hr {
+      color: #000;
+      border-width: 1px;
+    }
+
+  .links {
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.address > span {
+  display: block;
+}
+
+.speaker-list {
+  h6 {
+    text-align: center;
+  }
+}
+
+.speaker {
+  h5 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.speaker-image {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.speaker-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.sponsors {
+  h4, h5 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  .premier-logos {
+    .row > div {
+      margin-bottom: 40px;
+
+      img {
+        max-height: 75px;
+        margin: auto;
+      }
+    }
+  }
+
+  .supporting-logos {
+    .row {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@mixin button-large {
+  background-color: #DDD;
+  border-radius: 3px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: #CCC;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.call-to-action {
+  @include button-large;
+
+  background-color: #e25641;
+  color: #FFF;
+
+  &:hover {
+    background-color: #c93d28;
+  }
+}
+
+.tito-tickets-button {
+  @extend .call-to-action;
+}
+
+.learn-more {
+  margin-top: 50px;
+  margin-left: 15px;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0 0 4px #FFF;
+  font-weight: bold;
+  width: 100%;
+
+  a {
+    color: #e25641;
+
+    em {
+      display: block;
+      font-style: normal;
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      svg {
+        transform: translateY(7px);
+      }
+    }
+  }
+}
+
+.mailing-list {
+  #mc_embed_signup {
+    .indicates-required {
+      text-align: left;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    .mc-field-group {
+      overflow: auto;
+
+      label {
+        cursor: pointer;
+        float: left;
+        width: 160px;
+        line-height: 1;
+      }
+      input {
+        width: 280px;
+        padding: 5px;
+      }
+    }
+  }
+
+  #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    clear: both;
+    margin: 4px 0 0 160px;
+    width: 280px;
+  }
+
+  input[type="submit"] {
+    @extend .call-to-action;
+  }
+}
+
+.bear {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 100px;
+  }
+}
+
+hr {
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .title {
+    min-height: 80vh;
+
+    h1 {
+      font-size: 24px;
+      margin: 100px 0 20px 0;
+    }
+  }
+
+  .location {
+    .address > span {
+      font-size: 12px;
+    }
+  }
+
+  .mailing-list {
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+      margin-left: 0;
+    }
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .title {
+    min-height: 50vh;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .location {
+    .address > span {
+      font-size: 18px;
+    }
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    display: none;
+  }
+}
+
+#map-canvas {
+  height: 250px;
+  margin: 10px 0 10px 0;
+}
+
+html, body {
+  /** Disable horizontal scroll on smaller devices **/
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.blog {
+  h1 {
+    margin: 30px 0;
+  }
+  h2 {
+    margin: 25px 0;
+  }
+  h3 {
+    margin: 20px 0;
+  }
+}
+
+.post-content {
+  margin: 20px 0;
+  img {
+    width: 100%;
+  }
+}
+
+.schedule-table--timeslot {
+  white-space: nowrap;
+}
