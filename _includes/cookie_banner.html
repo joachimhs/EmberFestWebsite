@@ -1,0 +1,29 @@
+<div class="cookie-banner" id="cookie-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-1 col-sm-8 col-sm-offset-1 col-xs-12">
+        <p>This website uses cookies. <a href="/privacy/">Learn more</a></p>
+      </div>
+      <div class="col-md-4 col-sm-2 col-xs-12">
+        <a class="custom-button cookie-button pull-right" id="cookie-button" onclick="accept()">Ok</a>
+        <script>
+          var banner = document.getElementById('cookie-banner');
+          var button = document.getElementById('cookie-button');
+          
+          function accept() {
+            document.cookie = "cookiesAccepted=true;path=/;expires=Mon, 24 Mar 2319 09:52:10 GMT";
+            banner.remove();
+          }
+
+          function cookiesAccepted() {
+            if (document.cookie.includes('cookiesAccepted=true')) {
+              banner.remove();
+            }
+          }
+
+          window.onload = cookiesAccepted;
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
