@@ -251,6 +251,12 @@ p {
   }
 }
 
+.privacy {
+  h1 {
+    text-align: center;
+  }
+}
+
 @mixin button-large {
   background-color: #DDD;
   border-radius: 3px;
