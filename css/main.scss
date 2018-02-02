@@ -251,6 +251,12 @@ p {
   }
 }
 
+.privacy {
+  h1 {
+    text-align: center;
+  }
+}
+
 @mixin button-large {
   background-color: #DDD;
   border-radius: 3px;
@@ -368,6 +374,34 @@ hr {
   color: #fff;
 }
 
+.cookie-banner {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #DDD;
+
+  a {
+    color: #e25641;
+  }
+}
+
+.cookie-button {
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  padding: 5px 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #e25641;
+    color: #DDD;
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 480px) {
   .title {
     min-height: 80vh;
@@ -392,6 +426,14 @@ hr {
 
   .footer {
     font-size: 10px;
+  }
+
+  .cookie-banner {
+    text-align: center;
+  }
+
+  .cookie-button {
+    float: none!important;
   }
 }
 
