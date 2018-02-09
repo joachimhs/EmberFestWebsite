@@ -127,7 +127,8 @@ p {
   padding: 40px 0 20px 0;
   text-align: center;
   background-image: url(/images/skyline.svg);
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
   background-color: rgb(189,204,212);
   background-position: center;
   min-height: 100vh;
@@ -364,13 +365,13 @@ p {
   }
 }
 
-.bear {
+.mill {
   padding: 0px;
   img {
     position: absolute;
     right:0;
-    bottom:0;
-    width: 100px;
+    bottom:-27px;
+    width: 250px;
   }
 }
 
@@ -411,9 +412,20 @@ hr {
   .title {
     min-height: 80vh;
 
+    img {
+      max-width: 100%;
+    }
+
     h1 {
       font-size: 24px;
       margin: 100px 0 20px 0;
+    }
+  }
+
+  .supporting-logos {
+
+    img {
+      margin-bottom: 10px;
     }
   }
 
@@ -440,6 +452,13 @@ hr {
   .cookie-button {
     float: none!important;
   }
+
+  .mill {
+    img {
+      bottom: -15px;
+      width: 150px;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -459,6 +478,13 @@ hr {
 
   .footer {
     font-size: 14px;
+  }
+
+  .mill {
+    img {
+      bottom: -15px;
+      width: 150px;
+    }
   }
 }
 
