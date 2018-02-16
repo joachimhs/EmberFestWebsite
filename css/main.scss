@@ -149,11 +149,13 @@ p {
 }
 
 #title-small {
-  max-height: 40vh;
+  max-height: 30vh;
 
   .title-img {
+    background-image: url(/images/skyline-small.svg);
     background-position: top;
-    background-size: 400px;
+    background-size: 450px;
+    margin-top: -70px;
   }
 }
 
@@ -441,6 +443,16 @@ hr {
     }
   }
 
+  #title-small {
+    min-height: 15vh;
+    max-height: 15vh;
+
+    .title-img {
+      background-size: 240px;
+      margin-top: -60px;
+    }
+  }
+
   #title-2017 {
     min-height: 40vh;
     background-size: cover;
@@ -491,6 +503,16 @@ hr {
 
     h1 {
       font-size: 28px;
+    }
+  }
+
+  #title-small {
+    min-height: 15vh;
+    max-height: 15vh;
+
+    .title-img {
+      background-size: 370px;
+      margin-top: -60px;
     }
   }
 
