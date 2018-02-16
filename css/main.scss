@@ -149,7 +149,12 @@ p {
 }
 
 #title-small {
-  min-height: 70vh;
+  max-height: 40vh;
+
+  .title-img {
+    background-position: top;
+    background-size: 400px;
+  }
 }
 
 #title-2017 {
