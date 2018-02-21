@@ -149,7 +149,7 @@ p {
 }
 
 #title-small {
-  max-height: 15vh;
+  height: 150px;
 
   .title-img {
     background-image: url(/images/emberfest_logo.svg);
@@ -442,12 +442,10 @@ hr {
   }
 
   #title-small {
-    min-height: 15vh;
-    max-height: 15vh;
-
+    min-height: 150px;
 
     .title-img {
-      margin-top: -25px;
+      margin: auto;
     }
   }
 
@@ -505,8 +503,11 @@ hr {
   }
 
   #title-small {
-    min-height: 10vh;
-    max-height: 10vh;
+    min-height: 150px;
+
+    .title-img {
+      margin: auto;
+    }
   }
 
   #title-2017 {
