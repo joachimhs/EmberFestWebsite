@@ -149,13 +149,11 @@ p {
 }
 
 #title-small {
-  max-height: 30vh;
+  max-height: 15vh;
 
   .title-img {
-    background-image: url(/images/skyline-small.svg);
+    background-image: url(/images/emberfest_logo.svg);
     background-position: top;
-    background-size: 450px;
-    margin-top: -70px;
   }
 }
 
@@ -447,9 +445,9 @@ hr {
     min-height: 15vh;
     max-height: 15vh;
 
+
     .title-img {
-      background-size: 240px;
-      margin-top: -60px;
+      margin-top: -25px;
     }
   }
 
@@ -507,13 +505,8 @@ hr {
   }
 
   #title-small {
-    min-height: 15vh;
-    max-height: 15vh;
-
-    .title-img {
-      background-size: 370px;
-      margin-top: -60px;
-    }
+    min-height: 10vh;
+    max-height: 10vh;
   }
 
   #title-2017 {
