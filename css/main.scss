@@ -19,6 +19,32 @@ p {
 }
 
 .section {
+  background: #f2f2f1;
+  color: #fff;
+  padding: 40px 0;
+
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &.alternate {
+    background: #e25641;
+
+    a {
+      color: #bdccd4;
+      font-weight: bold;
+    }
+
+    .speaker-list {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.section-2017 {
   background: #bdccd4;
   color: #fff;
   padding: 40px 0;
@@ -63,21 +89,6 @@ p {
     color: #fff;
     background-color: #e25641;
     font-size: 20px;
-  }
-
-  &.alternate {
-    background: #e25641;
-
-    a {
-      color: #bdccd4;
-      font-weight: bold;
-    }
-
-    .speaker-list {
-      a {
-        color: #fff;
-      }
-    }
   }
 }
 
@@ -126,38 +137,32 @@ p {
 .title {
   padding: 40px 0 20px 0;
   text-align: center;
-  background-image: url(/images/skyline.svg);
+  
+  .title-img {
+    display: block;
+    background-image: url(/images/skyline.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+
+#title-small {
+  height: 150px;
+
+  .title-img {
+    background-image: url(/images/emberfest_logo.svg);
+    background-position: top;
+  }
+}
+
+#title-2017 {
+  background-image: url(/2017/images/skyline.svg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-color: rgb(189,204,212);
-  background-position: center;
-  min-height: 100vh;
-
-  img {
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    margin: 40px 0 30px 0;
-    font-family: "Helvetica";
-    font-size: 54px;
-    color: #fff;
-
-    span {
-      color: #000;
-      font-size: 20px;
-      margin: 0 3px 0 3px;
-
-      strong {
-        color: #dadada;
-        font-weight: normal;
-      }
-    }
-
-    a, a:hover {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
+  min-height: 120vh;
 }
 
 .footer {
@@ -224,6 +229,15 @@ p {
 }
 
 .sponsors {
+  color: #000;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.sponsors-2017 {
   h4, h5 {
     text-align: center;
     margin-bottom: 40px;
@@ -364,6 +378,16 @@ p {
   }
 }
 
+.mill {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:-27px;
+    width: 250px;
+  }
+}
+
 .bear {
   padding: 0px;
   img {
@@ -409,12 +433,26 @@ hr {
 
 @media (max-width: 480px) {
   .title {
-    min-height: 80vh;
+    min-height: 60vh;
 
     h1 {
       font-size: 24px;
       margin: 100px 0 20px 0;
     }
+  }
+
+  #title-small {
+    min-height: 150px;
+
+    .title-img {
+      margin: auto;
+    }
+  }
+
+  #title-2017 {
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
   }
 
   .location {
@@ -440,6 +478,19 @@ hr {
   .cookie-button {
     float: none!important;
   }
+
+  .mill {
+    img {
+      bottom: -15px;
+      width: 150px;
+    }
+  }
+
+  .bear {
+    img {
+      width: 80px;
+    }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -451,6 +502,20 @@ hr {
     }
   }
 
+  #title-small {
+    min-height: 150px;
+
+    .title-img {
+      margin: auto;
+    }
+  }
+
+  #title-2017 {
+    min-height: 50vh;
+    background-size: auto;
+    background-position: center;
+  }
+
   .location {
     .address > span {
       font-size: 18px;
@@ -459,6 +524,13 @@ hr {
 
   .footer {
     font-size: 14px;
+  }
+
+  .mill {
+    img {
+      bottom: -15px;
+      width: 150px;
+    }
   }
 }
 
