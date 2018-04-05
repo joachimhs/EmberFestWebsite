@@ -14,6 +14,20 @@ body {
   }
 }
 
+.announcement {
+  font-size: 30px;
+  font-weight: bold;
+
+  a {
+    color: #e25641;
+    transition: color ease-in-out .15s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 p {
   font-size: 18px;
 }
@@ -137,7 +151,7 @@ p {
 .title {
   padding: 40px 0 20px 0;
   text-align: center;
-  
+
   .title-img {
     display: block;
     background-image: url(/images/skyline.svg);
