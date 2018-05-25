@@ -262,9 +262,30 @@ p {
 .sponsors {
   color: #000;
 
-  h4 {
+  h4, h5 {
     text-align: center;
     margin-bottom: 40px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  .premier-logos {
+    .row > div {
+      margin-bottom: 40px;
+
+      img {
+        max-height: 75px;
+        margin: auto;
+      }
+    }
+  }
+
+  .supporting-logos {
+    .row {
+      margin-bottom: 10px;
+    }
   }
 }
 
