@@ -42,6 +42,15 @@ p {
     font-weight: bold;
   }
 
+  &.speakers {
+    color: black !important;
+
+    a {
+      color: #bdccd4;
+      font-weight: bold;
+    }
+  }
+
   &.alternate {
     background: #e25641;
 
