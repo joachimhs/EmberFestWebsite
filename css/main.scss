@@ -14,20 +14,6 @@ body {
   }
 }
 
-.announcement {
-  font-size: 30px;
-  font-weight: bold;
-
-  a {
-    color: #e25641;
-    transition: color ease-in-out .15s;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 p {
   font-size: 18px;
 }
