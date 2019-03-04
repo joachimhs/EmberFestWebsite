@@ -161,7 +161,7 @@ p {
 }
 
 .title {
-  padding: 40px 0 20px 0;
+  padding: 0px 0 0px 0;
   text-align: center;
 
   .title-img {
@@ -412,7 +412,7 @@ p {
       color: #fff;
     }
   }
-  
+
   #mc_embed_signup #mce-success-response {
     color: #fff;
   }
@@ -428,12 +428,12 @@ p {
   }
 }
 
-.mill {
+.mascot {
   padding: 0px;
   img {
     position: absolute;
     right:0;
-    bottom:-27px;
+    bottom:1px;
     width: 250px;
   }
 }
@@ -483,7 +483,17 @@ hr {
 
 @media (max-width: 480px) {
   .title {
-    min-height: 60vh;
+    padding: 0px 0 0px 0;
+    text-align: center;
+
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 55vh;
+    }
 
     h1 {
       font-size: 24px;
@@ -529,10 +539,11 @@ hr {
     float: none!important;
   }
 
-  .mill {
+  .mascot {
     img {
-      bottom: -15px;
-      width: 150px;
+      bottom: 1px;
+      width: 120px;
+      height: 140px;
     }
   }
 
@@ -545,8 +556,13 @@ hr {
 
 @media (min-width: 481px) and (max-width: 1024px) {
   .title {
-    min-height: 50vh;
-
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     h1 {
       font-size: 28px;
     }
@@ -576,9 +592,9 @@ hr {
     font-size: 14px;
   }
 
-  .mill {
+  .mascot {
     img {
-      bottom: -15px;
+      bottom: 1px;
       width: 150px;
     }
   }
