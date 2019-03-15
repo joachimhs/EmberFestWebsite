@@ -429,6 +429,16 @@ p {
   }
 }
 
+.mill {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:-27px;
+    width: 250px;
+  }
+}
+
 .mascot {
   padding: 0px;
   img {
@@ -436,6 +446,13 @@ p {
     right:0;
     bottom:1px;
     width: 250px;
+  }
+}
+
+.mill {
+  img {
+    bottom: -15px;
+    width: 150px;
   }
 }
 
@@ -591,6 +608,13 @@ hr {
 
   .footer {
     font-size: 14px;
+  }
+
+  .mill {
+    img {
+      bottom: -15px;
+      width: 150px;
+    }
   }
 
   .mascot {
