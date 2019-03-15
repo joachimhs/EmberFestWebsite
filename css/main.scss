@@ -586,6 +586,19 @@ hr {
     }
   }
 
+  .title-2018 {
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    h1 {
+      font-size: 28px;
+    }
+  }
+
   #title-small {
     min-height: 150px;
 
