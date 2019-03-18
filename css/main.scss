@@ -61,11 +61,11 @@ p {
 
     .venue-img {
       display: block;
-      background-image: url(/images/venue.jpg);
-      background-size: auto;
+      background-image: url(/images/europe-map.png);
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      min-height: 40vh;
+      min-height: 50vh;
     }
   }
 }
