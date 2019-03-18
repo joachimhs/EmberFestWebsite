@@ -53,7 +53,7 @@ p {
   }
 
   &.venue-bg {
-    background: rgb(128,197,234);
+    background: #30ADC3;
 
     a {
       color: #460D0D;
@@ -61,18 +61,18 @@ p {
 
     .venue-img {
       display: block;
-      background-image: url(/images/venue.jpg);
-      background-size: auto;
+      background-image: url(/images/europe-map.png);
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      min-height: 40vh;
+      min-height: 50vh;
     }
   }
 }
 
 .section-2017 {
-  background: #f2f2f1;
-  color: #black;
+  background: #FAF9F7;
+  color: #fff;
   padding: 40px 0;
 
   h4 {
@@ -161,7 +161,7 @@ p {
 }
 
 .title {
-  padding: 40px 0 20px 0;
+  padding: 0px 0 0px 0;
   text-align: center;
 
   .title-img {
@@ -169,6 +169,7 @@ p {
     background-image: url(/images/skyline.svg);
     background-size: auto;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     min-height: 100vh;
   }
@@ -279,7 +280,7 @@ p {
 
   .supporting-logos {
     .row {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -412,7 +413,7 @@ p {
       color: #fff;
     }
   }
-  
+
   #mc_embed_signup #mce-success-response {
     color: #fff;
   }
@@ -435,6 +436,23 @@ p {
     right:0;
     bottom:-27px;
     width: 250px;
+  }
+}
+
+.mascot {
+  padding: 0px;
+  img {
+    position: absolute;
+    right:0;
+    bottom:1px;
+    width: 250px;
+  }
+}
+
+.mill {
+  img {
+    bottom: -15px;
+    width: 150px;
   }
 }
 
@@ -483,7 +501,17 @@ hr {
 
 @media (max-width: 480px) {
   .title {
-    min-height: 60vh;
+    padding: 0px 0 0px 0;
+    text-align: center;
+
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 55vh;
+    }
 
     h1 {
       font-size: 24px;
@@ -529,10 +557,11 @@ hr {
     float: none!important;
   }
 
-  .mill {
+  .mascot {
     img {
-      bottom: -15px;
-      width: 150px;
+      bottom: 1px;
+      width: 120px;
+      height: 140px;
     }
   }
 
@@ -545,8 +574,26 @@ hr {
 
 @media (min-width: 481px) and (max-width: 1024px) {
   .title {
-    min-height: 50vh;
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    h1 {
+      font-size: 28px;
+    }
+  }
 
+  .title-2018 {
+    .title-img {
+      display: block;
+      background-image: url(/images/skyline.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     h1 {
       font-size: 28px;
     }
@@ -579,6 +626,13 @@ hr {
   .mill {
     img {
       bottom: -15px;
+      width: 150px;
+    }
+  }
+
+  .mascot {
+    img {
+      bottom: 1px;
       width: 150px;
     }
   }
