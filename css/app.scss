@@ -176,14 +176,12 @@ p {
     font-size: 30px;
     font-weight: bold;
     position: absolute;
-    bottom: 20%;
+    top: 10%;
     left: 0;
     width: 100vw;
-  
     a {
       color: #e25641;
       transition: color ease-in-out .15s;
-  
       &:hover {
         text-decoration: underline;
       }
