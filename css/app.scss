@@ -160,6 +160,22 @@ p {
   }
 }
 
+.announcement {
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  width: 100vw;
+  a {
+    color: #e25641;
+    transition: color ease-in-out .15s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .title {
   padding: 0px 0 0px 0;
   text-align: center;
@@ -170,22 +186,6 @@ p {
     bottom: 10%;
     left: 0;
     width: 100vw;
-  }
-
-  .announcement {
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100vw;
-    a {
-      color: #e25641;
-      transition: color ease-in-out .15s;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 
   .title-img {
