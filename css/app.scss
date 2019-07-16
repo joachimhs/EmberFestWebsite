@@ -29,6 +29,7 @@ p {
   }
 
   &.speakers {
+    background-color: #fde3df;
     color: black !important;
 
     a {
@@ -38,7 +39,7 @@ p {
   }
 
   &.alternate {
-    background: #e25641;
+    background: #30adc3;
 
     a {
       color: #bdccd4;
@@ -53,7 +54,7 @@ p {
   }
 
   &.venue-bg {
-    background: rgb(128,197,234);
+    background: #30adc3;
 
     a {
       color: #460D0D;
