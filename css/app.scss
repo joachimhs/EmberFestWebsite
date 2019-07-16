@@ -29,16 +29,26 @@ p {
   }
 
   &.speakers {
+    background-color: #fde3df;
     color: black !important;
+
+    h4 {
+      margin-bottom: 1em;
+    }
 
     a {
       color: #460D0D;
       font-weight: bold;
     }
+
+    hr {
+      border-top: 1px solid #dec9c5;
+      margin: 4em 0;
+    }
   }
 
   &.alternate {
-    background: #e25641;
+    background: #30adc3;
 
     a {
       color: #bdccd4;
@@ -53,7 +63,7 @@ p {
   }
 
   &.venue-bg {
-    background: rgb(128,197,234);
+    background: #30adc3;
 
     a {
       color: #460D0D;
