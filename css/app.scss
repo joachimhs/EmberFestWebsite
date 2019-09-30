@@ -78,6 +78,22 @@ p {
       min-height: 50vh;
     }
   }
+  &.diner-bg {
+    background: #30adc3;
+
+    a {
+      color: #460D0D;
+    }
+
+    .diner-img {
+      display: block;
+      background-image: url(/images/Vestauranten.jpg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 50vh;
+    }
+  }
 }
 
 .section-2017 {
@@ -687,6 +703,11 @@ hr {
 }
 
 #map-canvas {
+  height: 250px;
+  margin: 10px 0 10px 0;
+}
+
+#map-canvas2 {
   height: 250px;
   margin: 10px 0 10px 0;
 }
