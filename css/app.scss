@@ -29,7 +29,7 @@ p {
   }
 
   &.speakers {
-    background-color: #fde3df;
+    background-color: #f2f2f1;
     color: black !important;
 
     h4 {
@@ -88,7 +88,7 @@ p {
 
     .dinner-img {
       display: block;
-      background-image: url(/images/Vestauranten.jpg);
+      background-image: url(/2019/images/Vestauranten.jpg);
       background-size: auto;
       background-repeat: no-repeat;
       background-position: center;
@@ -205,7 +205,7 @@ p {
 
   .title-img {
     display: block;
-    background-image: url(/images/skyline-cph.svg);
+    background-image: url(/images/website-header.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -213,6 +213,23 @@ p {
     min-height: 100vh;
   }
 }
+
+.title-2019 {
+  padding: 0px 0 0px 0;
+  text-align: center;
+
+  .title-img {
+    display: block;
+    background-image: url(/2019/images/skyline-cph.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+
+
 
 .title-2018 {
   padding: 0px 0 0px 0;
@@ -448,7 +465,7 @@ p {
 .mailing-list {
   #mc_embed_signup {
     .indicates-required {
-      text-align: left;
+      text-align: center;
       font-size: 0.8em;
       margin-bottom: 10px;
     }
@@ -565,7 +582,7 @@ hr {
 
     .title-img {
       display: block;
-      background-image: url(/images/skyline-cph.svg);
+      background-image: url(/images/website-header.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -635,8 +652,8 @@ hr {
   .title {
     .title-img {
       display: block;
-      background-image: url(/images/skyline-cph.svg);
-      background-size: cover;
+      background-image: url(/images/website-header.png);
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
     }
