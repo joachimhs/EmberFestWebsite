@@ -69,7 +69,25 @@ p {
       color: #460D0D;
     }
 
-    .venue-img {
+    .venue-2017-img {
+      display: block;
+      background-image: url(/2017/images/villa-elisabeth.jpg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 50vh;
+    }
+
+    .venue-2018-img {
+      display: block;
+      background-image: url(/2018/images/venue.jpg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 50vh;
+    }
+
+    .venue-2019-img {
       display: block;
       background-image: url(/2019/images/venue.jpg);
       background-size: auto;
@@ -77,6 +95,8 @@ p {
       background-position: center;
       min-height: 50vh;
     }
+
+
   }
   &.dinner-bg {
     background: #f2f2f1;
