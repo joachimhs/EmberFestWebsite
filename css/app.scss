@@ -29,7 +29,7 @@ p {
   }
 
   &.speakers {
-    background-color: #fde3df;
+    background-color: #f2f2f1;
     color: black !important;
 
     h4 {
@@ -69,14 +69,34 @@ p {
       color: #460D0D;
     }
 
-    .venue-img {
+    .venue-2017-img {
       display: block;
-      background-image: url(/images/venue.jpg);
+      background-image: url(/2017/images/villa-elisabeth.jpg);
       background-size: auto;
       background-repeat: no-repeat;
       background-position: center;
       min-height: 50vh;
     }
+
+    .venue-2018-img {
+      display: block;
+      background-image: url(/2018/images/venue.jpg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 50vh;
+    }
+
+    .venue-2019-img {
+      display: block;
+      background-image: url(/2019/images/venue.jpg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 50vh;
+    }
+
+
   }
   &.dinner-bg {
     background: #f2f2f1;
@@ -88,7 +108,7 @@ p {
 
     .dinner-img {
       display: block;
-      background-image: url(/images/Vestauranten.jpg);
+      background-image: url(/2019/images/Vestauranten.jpg);
       background-size: auto;
       background-repeat: no-repeat;
       background-position: center;
@@ -205,7 +225,7 @@ p {
 
   .title-img {
     display: block;
-    background-image: url(/images/skyline-cph.svg);
+    background-image: url(/images/website-header.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -213,6 +233,23 @@ p {
     min-height: 100vh;
   }
 }
+
+.title-2019 {
+  padding: 0px 0 0px 0;
+  text-align: center;
+
+  .title-img {
+    display: block;
+    background-image: url(/2019/images/skyline-cph.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+
+
 
 .title-2018 {
   padding: 0px 0 0px 0;
@@ -229,11 +266,28 @@ p {
   }
 }
 
+
+.title-2017 {
+  padding: 0px 0 0px 0;
+  text-align: center;
+
+  .title-img {
+    display: block;
+    background-image: url(/2017/images/skyline.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+
+
 #title-small {
   height: 150px;
 
   .title-img {
-    background-image: url(/images/emberfest_logo.svg);
+    background-image: url(/2018/images/emberfest_logo.svg);
     background-position: top;
   }
 }
@@ -245,6 +299,25 @@ p {
   background-color: rgb(189,204,212);
   min-height: 100vh;
 }
+
+
+
+.title-logo {
+  padding: 0px 0 0px 0;
+  text-align: center;
+
+  .title-img {
+    display: block;
+    background-image: url(/2018/images/emberfest_logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+  }
+}
+
+
+
 
 .footer {
   padding: 10px 0;
@@ -418,8 +491,9 @@ p {
 .learn-more {
   margin-top: 50px;
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
+  vertical-align: center;
   text-shadow: 0 0 4px #FFF;
   font-weight: bold;
   width: 100%;
@@ -448,7 +522,7 @@ p {
 .mailing-list {
   #mc_embed_signup {
     .indicates-required {
-      text-align: left;
+      text-align: center;
       font-size: 0.8em;
       margin-bottom: 10px;
     }
@@ -565,7 +639,7 @@ hr {
 
     .title-img {
       display: block;
-      background-image: url(/images/skyline-cph.svg);
+      background-image: url(/images/website-header.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -635,8 +709,8 @@ hr {
   .title {
     .title-img {
       display: block;
-      background-image: url(/images/skyline-cph.svg);
-      background-size: cover;
+      background-image: url(/images/website-header.png);
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
     }
