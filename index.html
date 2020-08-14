@@ -1,100 +1,73 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Emberfest</title>
-
-  <link href="/css/app.css" type="text/css" rel="stylesheet">
-</head>
-
-<body>
-
-  <div class="header__landing-page">
-    <div class="header__date">
-      <h4 class="header__landing-page__date"> Community workshop Oct 16, 2020 </h4>
-    </div>
-    <div class="header__title"> Ember<span class="header__brackets">{{</span>fest<span class="header__brackets">}}</span></div>
-  </div> <!-- header -->
-
-  <div class="introduction">
-    <div class="pre-heading">
-      <div class="icon__arrow"> </div>
-      <h4>The European Community Ember Conference </h4>
-    </div>
-    <div class="introduction__text">
-      <div class="paragraphLarge bold"><span class="text__highlight">
-          EmberFest</span> is the European Community Ember Conference. If you're looking for updates on the latest and greatest in Ember and Glimmer this is the place to be. <span class="text__highlight">EmberFest</span> is also a great opportunity to
-          get in touch with the European Ember Community (and friends from abroad) and hiring Ember talent.<br>
-          <br>
-          Instead of a full-fledged <span class="text__highlight">EmberFest</span> 2020 conference, we will run a community virtual workshop. Find all the details below! <br>
-          <br>
-          To stay up-to-date, please <a href="https://twitter.com/emberfest">follow us on Twitter</a> and
-          <a href="#mc_embed_signup">subscribe to our mailing list</a>.
-      </div>
-    </div>
-    <hr></hr>
-  </div> <!--introduction-->
-
-  <div class="workshop">
-    <img class="workshop__image" src="/images/workshop-image@2x.jpg" alt="workshopimage">
-    <div class="workshop__paragraph">
-      <div class="pre-heading">
-        <div class="icon__arrow"> </div>
-        <h4>Ember Community Workshop </h4>
-      </div>
-      <div class="workshop__name paragraphLarge"> Workshop name pellentesque eu suscipit </div>
-      <div class="workshop__infos">
-        <h4> Friday October 16th, 14:00-17:00 CEST Maximum attendees: 50</h4>
-      </div>
-    </div>
-    <div class="workshop__text paragraphBase"> At the heart of open source are developers like you: people of all backgrounds, interests, and experience levels. In this 3-hour workshop, you'll learn how to contribute to Ember, meet the other
-      developers who shape our favorite framework, and if you're up for the challenge, make a pull request! <br>
-      <br>
-      The workshop will begin with some formal instruction. Where do you start? What goes into a good PR? Who will help? What knowledge or skills do you need before you jump in? (Spoiler alert—not a whole lot! Learning new things is part of the fun.) <br>
-      <br>
-      The rest will be guided coding time. You'll have the opportunity to pair program or fly solo as you tackle an issue in Ember's learning resources or core code. Available issues will cover a wide range, appropriate for beginners and experts
-      alike. A group of experienced contributors will be there to help debug, advise, and answer questions. <br>
-      <br>
-      The workshop will include some formal instruction, guidance from a team of experienced contributors, and hands-on coding time. Attendees should bring a laptop, budget an hour of setup time in the week before the workshop, and watch for emailed
-      instructions about setup.</div>
-      <div class="button">
-        <div class="button__text"> <h4> Get your ticket! </h4> </div>
-      </div>
-      <hr>
-      </hr>
-
-  <!--  <div class="workshop__subsection">
-      <h3> Workshop Leads</h3>
-    </div> -->
+---
+layout: default
+title: EmberFest
+---
+<div class="header__landing-page">
+  <div class="header__date">
+    <h4 class="header__landing-page__date"> Community workshop Oct 16, 2020 </h4>
   </div>
+  <div class="header__title"> Ember<span class="header__brackets">{% raw %}{{</span>fest<span class="header__brackets">}}{% endraw %}</span></div>
+</div> <!-- header -->
 
-  <!--<div class="video-2019">
+<div class="introduction">
+  <div class="pre-heading">
+    <div class="icon__arrow"> </div>
+    <h4>The European Community Ember Conference </h4>
+  </div>
+  <div class="introduction__text">
+    <div class="paragraphLarge bold"><span class="text__highlight">
+        EmberFest</span> is the European Community Ember Conference. If you're looking for updates on the latest and greatest in Ember and Glimmer this is the place to be. <span class="text__highlight">EmberFest</span> is also a great opportunity to
+        get in touch with the European Ember Community (and friends from abroad) and hiring Ember talent.<br>
+        <br>
+        Instead of a full-fledged <span class="text__highlight">EmberFest</span> 2020 conference, we will run a community virtual workshop. Find all the details below! <br>
+        <br>
+        To stay up-to-date, please <a href="https://twitter.com/emberfest">follow us on Twitter</a> and
+        <a href="#mc_embed_signup">subscribe to our mailing list</a>.
+    </div>
+  </div>
+  <hr></hr>
+</div> <!--introduction-->
+
+<div class="workshop">
+  <img class="workshop__image" src="/images/workshop-image@2x.jpg" alt="workshopimage">
+  <div class="workshop__paragraph">
     <div class="pre-heading">
       <div class="icon__arrow"> </div>
-      <h4>About last year </h4>
+      <h4>Ember Community Workshop </h4>
     </div>
-    <h2><span class="text__highlight">EmberFest</span> 2019 in Copenhagen was a blast! We captured some of the atmosphere and statements from speakers and attendees in this video.</h2>
-
-
-
-  </div> <!--video-section-->
-
-  <div class=" footer">
-    <div class="footer__wrapper--top">
-      <img class="icon" src="/images/glasses.svg" alt="icon">
-      <div class="footer__copyright paragraphBase"> © 2017 - 2020 EmberFest </div>
+    <div class="workshop__name paragraphLarge"> Workshop name pellentesque eu suscipit </div>
+    <div class="workshop__infos">
+      <h4> Friday October 16th, 14:00-17:00 CEST Maximum attendees: 50</h4>
+    </div>
+  </div>
+  <div class="workshop__text paragraphBase"> At the heart of open source are developers like you: people of all backgrounds, interests, and experience levels. In this 3-hour workshop, you'll learn how to contribute to Ember, meet the other
+    developers who shape our favorite framework, and if you're up for the challenge, make a pull request! <br>
+    <br>
+    The workshop will begin with some formal instruction. Where do you start? What goes into a good PR? Who will help? What knowledge or skills do you need before you jump in? (Spoiler alert—not a whole lot! Learning new things is part of the fun.) <br>
+    <br>
+    The rest will be guided coding time. You'll have the opportunity to pair program or fly solo as you tackle an issue in Ember's learning resources or core code. Available issues will cover a wide range, appropriate for beginners and experts
+    alike. A group of experienced contributors will be there to help debug, advise, and answer questions. <br>
+    <br>
+    The workshop will include some formal instruction, guidance from a team of experienced contributors, and hands-on coding time. Attendees should bring a laptop, budget an hour of setup time in the week before the workshop, and watch for emailed
+    instructions about setup.</div>
+    <div class="button">
+      <div class="button__text"> <h4> Get your ticket! </h4> </div>
     </div>
     <hr>
     </hr>
-    <div class="footer__wrapper--bottom">
-      <div class="footer__pastEvents paragraphBase"> <a class="footer__links" href="/2017">2017</a> • <a class="footer__links" href="/2018">2018</a> • <a class="footer__links" href="/2019">2019</a> </div>
-      <div class="footer__thanks paragraphBase"> Thanks to <a class="footer__links" href='https://ti.to'>Tito</a> for supporting EmberFest <br> Icons from the Noun Project and Freepik </div>
-      <div class="footer__bottomNav paragraphBase"> <a class="footer__links" href="/code-of-conduct">Code of Conduct</a> • <a class="footer__links" href="/cancellation">Cancellation</a> • <a class="footer__links" href="/imprint">Imprint</a> </div>
-    </div>
-    <hr>
-    </hr>
-  </div> <!-- footer -->
 
-</body>
+<!--  <div class="workshop__subsection">
+    <h3> Workshop Leads</h3>
+  </div> -->
+</div>
 
-</html>
+<!--<div class="video-2019">
+  <div class="pre-heading">
+    <div class="icon__arrow"> </div>
+    <h4>About last year </h4>
+  </div>
+  <h2><span class="text__highlight">EmberFest</span> 2019 in Copenhagen was a blast! We captured some of the atmosphere and statements from speakers and attendees in this video.</h2>
+
+
+
+</div> <!--video-section-->
