@@ -379,6 +379,8 @@ label {
   justify-content: center;
   outline: none;
   border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
   &:hover, &:focus {
     background: var(--flamePea);
