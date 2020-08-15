@@ -120,8 +120,8 @@ a {
 }
 
 .footer {
-  margin-left: var(--space-xl);
-  margin-right: var(--space-xl);
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
 }
 
 .footer__wrapper--top {
@@ -167,8 +167,8 @@ hr {
 
 .introduction {
   margin-bottom: var(--space-xl);
-  margin-left: var(--space-xl);
-  margin-right: var(--space-xl);
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
 }
 
 .introduction__text {
@@ -187,8 +187,8 @@ hr {
 }
 
 .workshop {
-  margin-left: var(--space-xl);
-  margin-right: var(--space-xl);
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
   background-image: url(/images/workshop-image@2x.jpg);
   background-position: top left;
   background-repeat: no-repeat;
@@ -235,6 +235,11 @@ hr {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    img {
+      width: 75%;
+      height: auto;
+    }
 
     .workshop__lead-links {
       display: flex;
@@ -294,8 +299,8 @@ hr {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: var(--space-xl);
-  padding-right: var(--space-xl);
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
 
   iframe {
     width: 280px;
@@ -313,9 +318,21 @@ hr {
     background-image: url(/images/background-tablet.svg);
   }
 
+  .introduction {
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
+  }
+
+  .video-2019 {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+  }
+
   .workshop {
     background-size: 75%;
     padding-top: 25%;
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
   }
 
   .workshop__heading {
@@ -366,6 +383,11 @@ hr {
     width: 560px;
     height: 315px;
   }
+
+  .footer {
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
+  }
 }
 
 /*
@@ -377,9 +399,21 @@ hr {
     background-image: url(/images/hero-background-1.svg);
   }
 
+  .introduction {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
+  }
+
+  .video-2019 {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+  }
+
   .workshop {
     background-size: 75%;
     padding-top: 25%;
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 
   .workshop__heading {
@@ -392,6 +426,10 @@ hr {
 
   .workshop__lead {
     margin-right: var(--space-xl);
+
+    img {
+      width: auto;
+    }
   }
 
   h2 {
@@ -436,6 +474,11 @@ hr {
   .button {
     width: 416px;
   }
+
+  .footer {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
+  }
 }
 
 /*
@@ -447,9 +490,21 @@ hr {
     background-image: url(/images/hero-background-1.svg);
   }
 
+  .introduction {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
+  }
+
+  .video-2019 {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+  }
+
   .workshop {
     background-size: 75%;
     padding-top: 25%;
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 
   .workshop__heading {
@@ -462,6 +517,10 @@ hr {
 
   .workshop__lead {
     margin-right: var(--space-xl);
+
+    img {
+      width: auto;
+    }
   }
 
   h2 {
@@ -531,5 +590,10 @@ hr {
   .video-2019 iframe {
     width: 960px;
     height: 540px;
+  }
+
+  .footer {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 }
