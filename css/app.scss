@@ -37,6 +37,8 @@ body {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -205,6 +207,57 @@ hr {
   }
 }
 
+.mailing-list {
+  display: flex;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  color: var(--blue);
+
+  h2 {
+    color: var(--blue);
+  }
+
+  .form, .image {
+    flex: 50%;
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .indicates-required {
+    margin-bottom: var(--space-l);
+  }
+
+  .form {
+    padding: var(--space-xl);
+    background: white;
+
+    input, .button {
+      width: 100%;
+    }
+  }
+
+  .image {
+    background-image: url(/images/mailing-list-background.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
 .text__highlight {
   color: var(--flamePea);
 }
@@ -293,6 +346,25 @@ hr {
   }
 }
 
+input {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  border-radius: 24px;
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  background: white;
+  height: 48px;
+  outline: none;
+  margin-bottom: var(--space-l);
+}
+
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: var(--space-s);
+  display: block;
+}
+
 .button, .tito-tickets-button {
   color: var(--blue);
   border-radius: 24px;
@@ -337,6 +409,33 @@ hr {
     width: 280px;
     height: 158px;
     margin: 0 auto;
+  }
+}
+
+/*
+  ##Device = Mobile
+  ##Screen = below 768px
+*/
+@media (max-width: 767px) {
+  .mailing-list {
+    flex-direction: column;
+
+    .form {
+      padding-bottom: 200px;
+    }
+
+    .image {
+      background: none;
+      margin-top: -150px;
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: block;
+      }
+    }
   }
 }
 
