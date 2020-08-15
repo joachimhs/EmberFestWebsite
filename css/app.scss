@@ -201,19 +201,28 @@ hr {
 .workshop {
   margin-left: var(--space-xl);
   margin-right: var(--space-xl);
+  background-image: url(/images/workshop-image@2x.jpg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 50%;
 }
 
-.workshop__image {
-  width: 100%;
-}
-
-.workshop__name {
-  padding-top: var(--space-l);
+.workshop__infos h4 + h4 {
+  margin-top: 0;
 }
 
 .workshop__text {
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
+}
+
+.workshop__button {
+  margin: 0 auto;
+}
+
+.workshop__content {
+  margin-bottom: var(--space-l);
 }
 
 .button {
@@ -222,7 +231,6 @@ hr {
   background: var(--sunglo);
   height: 48px;
   width: 288px;
-  margin-bottom: var(--space-l);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,6 +263,15 @@ hr {
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
     background-image: url(/images/background-tablet.svg);
+  }
+
+  .workshop {
+    background-size: 75%;
+    padding-top: 25%;
+  }
+
+  .workshop__heading {
+    padding-left: 25%;
   }
 
   .paragraphLarge {
@@ -295,23 +312,6 @@ hr {
     padding-bottom: var(--space-l);
   }
 
-  .workshop__image {
-    width: 66%;
-  }
-
-  .workshop__name {
-    padding-top: var(--space-l);
-  }
-
-  .workshop__text {
-    padding-top: var(--space-l);
-    padding-bottom: var(--space-l);
-  }
-
-  .workshop__paragraph {
-    padding-left: 212px;
-  }
-
   .button {
     width: 416px;
   }
@@ -324,6 +324,15 @@ hr {
 @media (min-width: 1025px) and (max-width: 1280px) {
   body {
     background-image: url(/images/hero-background-1.svg);
+  }
+
+  .workshop {
+    background-size: 75%;
+    padding-top: 25%;
+  }
+
+  .workshop__heading {
+    padding-left: 25%;
   }
 
   h2 {
@@ -373,10 +382,6 @@ hr {
     padding-bottom: var(--space-xxl);
   }
 
-  .workshop__image {
-    width: 66%;
-  }
-
   .button {
     width: 416px;
   }
@@ -391,6 +396,15 @@ hr {
     background-image: url(/images/hero-background-1.svg);
   }
 
+  .workshop {
+    background-size: 75%;
+    padding-top: 25%;
+  }
+
+  .workshop__heading {
+    padding-left: 25%;
+  }
+
   h2 {
     font-size: 40px;
     width: var(--max-paragraph-width);
@@ -401,10 +415,17 @@ hr {
     text-align: left;
   }
 
+  .workshop__content {
+    padding-left: 25%;
+  }
+
+  .workshop__button {
+    margin: 0;
+  }
+
   .paragraphLarge {
     font-size: var(--font-size-big);
     line-height: var(--line-height-big);
-    width: var(--max-paragraph-width);
   }
 
   .header {
@@ -457,30 +478,5 @@ hr {
   .footer__bottomNav {
     width: 33%;
     text-align: right;
-  }
-
-  .workshop__image {
-    width: 66%;
-  }
-
-  .workshop__name {
-    padding-left: 399px;
-  }
-
-  .workshop__infos {
-    padding-left: 399px;
-  }
-
-  .workshop__text {
-    padding-left: 399px;
-  }
-
-  .pre-heading {
-    padding-left: 399px;
-  }
-
-  .button {
-    margin-left: 399px;
-    width: 416px;
   }
 }
