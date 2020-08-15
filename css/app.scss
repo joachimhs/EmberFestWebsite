@@ -33,6 +33,10 @@ body {
   color: var(--gallery);
   display: flex;
   flex-direction: column;
+  background-image: url(/images/background-mobile.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*
@@ -108,11 +112,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url(/images/background-mobile.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 288px;
+  height: 50vh;
   justify-content: center;
 }
 
@@ -178,7 +178,6 @@ hr {
 }
 
 .introduction {
-  margin-top: -64px;
   margin-bottom: var(--space-xl);
   margin-left: var(--space-xl);
   margin-right: var(--space-xl);
@@ -262,6 +261,10 @@ hr {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-image: url(/images/background-tablet.svg);
+  }
+
   .paragraphLarge {
     line-height: var(--line-height-medium);
   }
@@ -286,10 +289,6 @@ hr {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(/images/background-tablet.svg);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    height: 501px;
     justify-content: center;
   }
 
@@ -302,10 +301,6 @@ hr {
     padding-right: var(--space-xl);
     padding-top: var(--space-l);
     padding-bottom: var(--space-l);
-  }
-
-  .pre-heading {
-    margin-top: -128px;
   }
 
   .workshop__image {
@@ -335,6 +330,10 @@ hr {
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background-image: url(/images/hero-background-1.svg);
+  }
+
   h2 {
     font-size: 40px;
     width: var(--max-paragraph-width);
@@ -368,10 +367,6 @@ hr {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(/images/hero-background-1.svg);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    height: 880px;
     justify-content: center;
   }
 
@@ -384,10 +379,6 @@ hr {
     padding-right: var(--space-xl);
     padding-top: var(--space-xxl);
     padding-bottom: var(--space-xxl);
-  }
-
-  .pre-heading {
-    margin-top: -128px;
   }
 
   .workshop__image {
@@ -404,6 +395,10 @@ hr {
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+  body {
+    background-image: url(/images/hero-background-1.svg);
+  }
+
   h2 {
     font-size: 40px;
     width: var(--max-paragraph-width);
@@ -436,10 +431,6 @@ hr {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(/images/hero-background-1.svg);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    height: 880px;
     justify-content: center;
   }
 
@@ -474,10 +465,6 @@ hr {
   .footer__bottomNav {
     width: 33%;
     text-align: right;
-  }
-
-  .pre-heading {
-    margin-top: -128px;
   }
 
   .workshop__image {

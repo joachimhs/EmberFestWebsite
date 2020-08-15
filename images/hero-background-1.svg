@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1440px" height="400px" viewBox="0 0 1440 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>34755401-2008-450E-B197-B19508ADDCA9@1.00x</title>
+<svg width="1440px" height="800px" viewBox="0 0 1440 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hero background 1</title>
     <defs>
         <rect id="path-1" x="0" y="0" width="1440" height="800"></rect>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="hero-background" transform="translate(0.000000, -200.000000)">
+    <g id="EmberFest-2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero-background">
             <mask id="mask-2" fill="white">
                 <use xlink:href="#path-1"></use>
             </mask>
