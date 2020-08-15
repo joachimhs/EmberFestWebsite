@@ -119,8 +119,8 @@ a {
   padding-left: var(--space-m);
   padding-right: var(--space-m);
   padding-bottom: var(--space-l);
-  margin-left: var(--space-xl);
-  margin-right: var(--space-xl);
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
 }
 
 .footer {
@@ -400,9 +400,9 @@ hr {
   }
 
   .wrapper {
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
     padding-bottom: var(--space-l);
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
   }
 
   .button {
@@ -496,8 +496,8 @@ hr {
   }
 
   .wrapper {
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
     padding-bottom: var(--space-xxl);
   }
 
@@ -600,8 +600,8 @@ hr {
   }
 
   .wrapper {
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
+    width: 50%;
+    margin: 0 auto;
     padding-bottom: var(--space-xxl);
   }
 
