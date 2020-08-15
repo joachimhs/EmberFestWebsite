@@ -266,14 +266,16 @@ hr {
 
     .desktop {
       display: block;
+      margin-top: 25%;
+      display: block;
+      max-width: 50%;
+      max-height: 50%;
+      width: auto;
+      height: auto;
     }
 
     .mobile {
       display: none;
-    }
-
-    img {
-      width: 50%;
     }
   }
 }
@@ -458,6 +460,9 @@ label {
 
       .mobile {
         display: block;
+        width: auto;
+        height: auto;
+        margin-top: 0;
       }
     }
   }
