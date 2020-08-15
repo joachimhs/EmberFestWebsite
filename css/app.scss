@@ -90,12 +90,8 @@ a:hover {
 .header {
   display: flex;
   align-items: center;
-  background-image: url(/images/background-mobile.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 176px;
   justify-content: center;
+  height: 50vh;
 }
 
 .header__title {
@@ -109,11 +105,7 @@ a:hover {
 }
 
 .header__landing-page {
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  height: 50vh;
-  justify-content: center;
 }
 
 .wrapper {
@@ -123,7 +115,6 @@ a:hover {
   flex-direction: column;
   padding-left: var(--space-m);
   padding-right: var(--space-m);
-  padding-top: var(--space-l);
   padding-bottom: var(--space-l);
   margin-left: var(--space-xl);
   margin-right: var(--space-xl);
@@ -285,20 +276,11 @@ hr {
   .header {
     display: flex;
     align-items: center;
-    background-image: url(/images/background-tablet.svg);
-    height: 211px;
     justify-content: center;
   }
 
   .header__title {
     font-size: 69px;
-  }
-
-  .header__landing-page {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .header__landing-page__date {
@@ -308,7 +290,6 @@ hr {
   .wrapper {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
-    padding-top: var(--space-l);
     padding-bottom: var(--space-l);
   }
 
@@ -355,20 +336,11 @@ hr {
   .header {
     display: flex;
     align-items: center;
-    background-image: url(/images/hero-background-1.svg);
-    height: 400px;
     justify-content: center;
   }
 
   .header__title {
     font-size: 136px;
-  }
-
-  .header__landing-page {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .header__landing-page__date {
@@ -378,7 +350,6 @@ hr {
   .wrapper {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
-    padding-top: var(--space-xxl);
     padding-bottom: var(--space-xxl);
   }
 
@@ -431,20 +402,11 @@ hr {
   .header {
     display: flex;
     align-items: center;
-    background-image: url(/images/hero-background-1.svg);
-    height: 400px;
     justify-content: center;
   }
 
   .header__title {
     font-size: 136px;
-  }
-
-  .header__landing-page {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .header__landing-page__date {
@@ -454,7 +416,6 @@ hr {
   .wrapper {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
-    padding-top: var(--space-xxl);
     padding-bottom: var(--space-xxl);
   }
 
