@@ -10,7 +10,7 @@
   --font-size-big: 27px;
   --height-big: 162px;
   --line-height-big: 40.5px;
-  --font-size-medium: 22px;
+  --font-size-medium: 24px;
   --height-medium: 132px;
   --line-height-medium: 33px;
   --font-size-small: 18px;
@@ -52,14 +52,13 @@ h2 {
 h3 {
   font-size: var(--font-size-medium);
   letter-spacing: 2px;
+  font-weight: bold;
   text-transform: uppercase;
-  font-weight: normal;
 }
 
 h4 {
-  text-transform: uppercase;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 22px;
   letter-spacing: 2px;
   margin-bottom: var(--space-s);
 }
@@ -115,7 +114,6 @@ a:hover {
 
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-left: var(--space-m);
@@ -202,6 +200,14 @@ hr {
   background-repeat: no-repeat;
   background-size: 100%;
   padding-top: 50%;
+}
+
+.workshop__infos h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-s);
 }
 
 .workshop__infos h4 + h4 {
@@ -323,7 +329,6 @@ hr {
 
   h2 {
     font-size: 40px;
-    width: var(--max-paragraph-width);
     line-height: var(--line-height-big);
   }
 
@@ -333,8 +338,6 @@ hr {
 
   .paragraphLarge {
     font-size: var(--font-size-big);
-    line-height: var(--line-height-big);
-    width: var(--max-paragraph-width);
     line-height: var(--line-height-big);
   }
 
@@ -383,7 +386,6 @@ hr {
 
   h2 {
     font-size: 40px;
-    width: var(--max-paragraph-width);
     line-height: var(--line-height-big);
   }
 
