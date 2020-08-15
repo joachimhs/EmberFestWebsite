@@ -214,23 +214,31 @@ hr {
 }
 
 .workshop__button {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .workshop__content {
   margin-bottom: var(--space-l);
 }
 
-.button {
+.tito-tickets-button {
+  color: white;
   border-radius: 24px;
-  font-size: 13px;
+  font-size: var(--font-size-small);
   background: var(--sunglo);
   height: 48px;
   width: 288px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: center;
+  outline: none;
+  border: none;
+
+  &:hover, &:focus {
+    background: var(--flamePea);
+  };
 }
 
 .button__text {
@@ -392,7 +400,7 @@ hr {
   }
 
   .workshop__button {
-    margin: 0;
+    justify-content: left;
   }
 
   .paragraphLarge {
