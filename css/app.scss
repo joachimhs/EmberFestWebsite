@@ -293,10 +293,12 @@ hr {
   }
 }
 
-.tito-tickets-button {
-  color: white;
+.button, .tito-tickets-button {
+  color: var(--blue);
   border-radius: 24px;
   font-size: var(--font-size-small);
+  font-weight: bold;
+  text-transform: uppercase;
   background: var(--sunglo);
   height: 48px;
   width: 288px;
