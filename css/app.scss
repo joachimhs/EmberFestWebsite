@@ -191,12 +191,16 @@ hr {
     margin-bottom: var(--space-l);
 
     a {
-      display: inline-flex;
+      display: flex;
+      align-items: center;
     }
 
     img {
-      max-width: 15vw;
-      max-height: 100px;
+      max-width: 18vw;
+      max-height: 50px;
+      display: block;
+      width: auto;
+      height: auto;
     }
   }
 }
