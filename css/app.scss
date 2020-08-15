@@ -70,6 +70,26 @@ h4 {
   line-height: var(--line-height-medium);
 }
 
+.cookie-banner {
+  position: fixed;
+  background: white;
+  color: var(--blue);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-m);
+  text-align: right;
+
+  a {
+    color: var(--blue);
+  }
+
+  .button {
+    width: 100px;
+    float: right;
+  }
+}
+
 .bold {
   font-weight: bold;
 }
