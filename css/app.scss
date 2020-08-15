@@ -217,10 +217,46 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: var(--space-l);
 }
 
 .workshop__content {
   margin-bottom: var(--space-l);
+}
+
+.workshop__leads-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: var(--space-l);
+
+  .workshop__lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .workshop__lead-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: flex;
+        height: var(--font-size-small);
+        width: var(--font-size-small);
+
+        img {
+          height: var(--font-size-small);
+          width: var(--font-size-small);
+        }
+      }
+
+      a + a {
+        margin-left: 12px;
+      }
+    }
+  }
 }
 
 .tito-tickets-button {
@@ -278,6 +314,14 @@ hr {
     padding-left: 25%;
   }
 
+  .workshop__leads-list {
+    justify-content: flex-start;
+  }
+
+  .workshop__lead {
+    margin-right: var(--space-xl);
+  }
+
   .paragraphLarge {
     line-height: var(--line-height-medium);
   }
@@ -327,6 +371,14 @@ hr {
 
   .workshop__heading {
     padding-left: 25%;
+  }
+
+  .workshop__leads-list {
+    justify-content: flex-start;
+  }
+
+  .workshop__lead {
+    margin-right: var(--space-xl);
   }
 
   h2 {
@@ -384,6 +436,14 @@ hr {
 
   .workshop__heading {
     padding-left: 25%;
+  }
+
+  .workshop__leads-list {
+    justify-content: flex-start;
+  }
+
+  .workshop__lead {
+    margin-right: var(--space-xl);
   }
 
   h2 {
