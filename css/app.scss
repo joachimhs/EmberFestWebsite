@@ -176,6 +176,27 @@ hr {
   padding-bottom: var(--space-l);
 }
 
+.sponsors {
+  margin-left: var(--space-s);
+  margin-right: var(--space-s);
+
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+
+    a {
+      display: inline-flex;
+    }
+
+    img {
+      max-width: 15vw;
+      max-height: 100px;
+    }
+  }
+}
+
 .text__highlight {
   color: var(--flamePea);
 }
@@ -328,6 +349,11 @@ hr {
     padding-right: var(--space-m);
   }
 
+  .sponsors {
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
+  }
+
   .workshop {
     background-size: 75%;
     padding-top: 25%;
@@ -407,6 +433,11 @@ hr {
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
+  }
+
+  .sponsors {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 
   .workshop {
@@ -498,6 +529,11 @@ hr {
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
+  }
+
+  .sponsors {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 
   .workshop {
