@@ -45,6 +45,7 @@ body {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
+
 h2 {
   font-size: 28px;
   font-weight: bold;
@@ -52,17 +53,17 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-medium);
+  font-size: 22px;
   letter-spacing: 2px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: var(--space-s);
+  text-transform: uppercase;
 }
 
 .paragraphLarge {
@@ -111,6 +112,10 @@ a {
   height: 50vh;
 }
 
+.header__date {
+  text-align: center;
+}
+
 .header__title {
   color: var(--flamePea);
   font-size: 40px;
@@ -131,7 +136,15 @@ a {
 }
 
 .header__landing-page__date {
-  font-size: 14px;
+  margin-bottom: var(--space-m);
+}
+
+
+#content-mobile {
+}
+
+#content-tablet-desktop {
+  display: none;
 }
 
 .wrapper {
@@ -186,20 +199,26 @@ a {
   padding-bottom: var(--space-l);
 }
 
+
 hr {
   align-self: center;
   border-top: 2px solid;
 }
 
 .introduction {
+  margin-top: -32px;
   margin-bottom: var(--space-xl);
   margin-left: var(--space-s);
   margin-right: var(--space-s);
 }
 
 .introduction__text {
-  padding-top: var(--space-l);
   padding-bottom: var(--space-l);
+}
+
+.sponsors__heading {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 
 .sponsors {
@@ -284,7 +303,9 @@ hr {
   color: var(--flamePea);
 }
 
+
 .pre-heading {
+  display: flex;
   border-bottom: 3px solid;
   padding-top: var(--space-l);
   text-align: left;
@@ -310,6 +331,12 @@ hr {
 
 .workshop__infos h4 + h4 {
   margin-top: 0;
+}
+
+.workshop__name {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-s);
+
 }
 
 .workshop__text {
@@ -390,8 +417,9 @@ label {
 .button, .tito-tickets-button {
   color: var(--blue);
   border-radius: 24px;
-  font-size: var(--font-size-small);
+  font-size: 13px;
   font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
   background: var(--sunglo);
   height: 48px;
@@ -430,8 +458,8 @@ label {
   padding-right: var(--space-s);
 
   iframe {
-    width: 280px;
-    height: 158px;
+    width: 320px;
+    height: 181px;
     margin: 0 auto;
   }
 }
@@ -477,6 +505,14 @@ label {
     background-image: url(/images/background-tablet.svg);
   }
 
+  #content-tablet-desktop {
+    display: block;
+  }
+
+  #content-mobile {
+    display: none;
+  }
+
   .introduction {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
@@ -485,6 +521,13 @@ label {
   .video-2019 {
     padding-left: var(--space-m);
     padding-right: var(--space-m);
+    background-image: url(/images/video-2019-background-tablet.svg);
+    height: 727px;
+  }
+  iframe {
+    width: 704px;
+    height: 398px;
+    margin: 0 auto;
   }
 
   .sponsors {
@@ -494,13 +537,18 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 28%;
     margin-left: var(--space-m);
     margin-right: var(--space-m);
   }
 
   .workshop__heading {
     padding-left: 25%;
+  }
+
+  .workshop__date {
+    font-size: 22px;
+    line-height: 33px;
   }
 
   .workshop__leads-list {
@@ -544,8 +592,10 @@ label {
   }
 
   .video-2019 iframe {
-    width: 560px;
-    height: 315px;
+    width: 704px;
+    height: 398px;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 
   .footer {
@@ -563,6 +613,14 @@ label {
     background-image: url(/images/hero-background-1.svg);
   }
 
+  #content-mobile {
+    display: none;
+  }
+
+  #content-tablet-desktop {
+    display: block;
+  }
+
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
@@ -571,6 +629,8 @@ label {
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
+    background-image: url(/images/video-2019-background-desktop.svg);
+    height: 1085px;
   }
 
   .sponsors {
@@ -580,13 +640,18 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 33%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
   }
 
   .workshop__heading {
     padding-left: 25%;
+  }
+
+  .workshop__date {
+    font-size: 27px;
+    line-height: 40.5px;
   }
 
   .workshop__leads-list {
@@ -636,13 +701,15 @@ label {
   }
 
   .video-2019 iframe {
-    width: 720px;
-    height: 405px;
+    height: 505px;
+    width: 1022.29px;
+    margin-top: var(--space-xl);
   }
 
   .button {
     width: 416px;
   }
+
 
   .footer {
     margin-left: var(--space-xl);
@@ -659,6 +726,14 @@ label {
     background-image: url(/images/hero-background-1.svg);
   }
 
+  #content-mobile {
+    display: none;
+  }
+
+  #content-tablet-desktop {
+    display: block;
+  }
+
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
@@ -667,6 +742,7 @@ label {
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
+    height: 1146px;
   }
 
   .sponsors {
@@ -676,13 +752,18 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 33%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
   }
 
   .workshop__heading {
     padding-left: 25%;
+  }
+
+  .workshop__date {
+    font-size: 27px;
+    line-height: 40.5px;
   }
 
   .workshop__leads-list {
@@ -708,10 +789,11 @@ label {
 
   .workshop__content {
     padding-left: 25%;
+
   }
 
   .workshop__button {
-    justify-content: left;
+
   }
 
   .paragraphLarge {
@@ -739,6 +821,8 @@ label {
     padding-bottom: var(--space-xxl);
   }
 
+
+
   .footer__wrapper--bottom {
     display: flex;
     justify-content: space-between;
@@ -764,6 +848,7 @@ label {
   .video-2019 iframe {
     width: 960px;
     height: 540px;
+    margin-top: var(--space-xl)
   }
 
   .footer {
