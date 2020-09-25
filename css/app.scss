@@ -145,6 +145,7 @@ a {
 
 #content-tablet-desktop {
   display: none;
+  margin-bottom: 38px;
 }
 
 .wrapper {
@@ -213,7 +214,7 @@ hr {
 }
 
 .introduction__text {
-  padding-bottom: var(--space-l);
+
 }
 
 .sponsors__heading {
@@ -340,7 +341,7 @@ hr {
 }
 
 .workshop__text {
-  padding-top: var(--space-l);
+
   padding-bottom: var(--space-l);
 }
 
@@ -359,7 +360,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: var(--space-l);
+  margin-bottom: 47px;
 
   .workshop__lead {
     display: flex;
@@ -516,6 +517,7 @@ label {
   .introduction {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
+    margin-top: var(--space-l);
   }
 
   .video-2019 {
@@ -553,10 +555,19 @@ label {
 
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
     margin-right: var(--space-xl);
+  }
+
+  .workshop__button {
+    margin-bottom: var(--space-xl);
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .paragraphLarge {
@@ -565,6 +576,10 @@ label {
 
   h4 {
     text-align: left;
+  }
+
+  h3 {
+    margin-top: var(--space-xl);
   }
 
   .header {
@@ -624,6 +639,15 @@ label {
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: 2%;
+  }
+
+  .introduction__text {
+    margin-bottom: var(--space-xl);
+  }
+
+  .pre-heading {
+    margin-top: var(--space-xl);
   }
 
   .video-2019 {
@@ -640,9 +664,13 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 33%;
+    padding-top: 27%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .workshop__heading {
@@ -656,6 +684,7 @@ label {
 
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
@@ -669,6 +698,11 @@ label {
   h2 {
     font-size: 40px;
     line-height: var(--line-height-big);
+    margin-top: var(--space-xl);
+  }
+
+  h3 {
+    margin-top: var(--space-xl);
   }
 
   h4 {
@@ -737,6 +771,11 @@ label {
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: 13%;
+  }
+
+  .pre-heading {
+    margin-top: var(--space-xl);
   }
 
   .video-2019 {
@@ -752,7 +791,7 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 33%;
+    padding-top: 27%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
   }
@@ -768,6 +807,7 @@ label {
 
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
@@ -783,6 +823,10 @@ label {
     line-height: var(--line-height-big);
   }
 
+  h3 {
+    margin-top: var(--space-xl);
+  }
+
   h4 {
     text-align: left;
   }
@@ -793,7 +837,12 @@ label {
   }
 
   .workshop__button {
+    justify-content: left;
 
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .paragraphLarge {
@@ -815,6 +864,9 @@ label {
     font-size: 40px;
   }
 
+.pre-heading {
+  margin-bottom: var(--space-xl);
+}
   .wrapper {
     width: 50%;
     margin: 0 auto;
