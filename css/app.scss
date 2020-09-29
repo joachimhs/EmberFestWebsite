@@ -297,6 +297,10 @@ hr {
     .mobile {
       display: none;
     }
+
+    .tablet {
+      display: none;
+    }
   }
 }
 
@@ -493,6 +497,10 @@ label {
         height: auto;
         margin-top: 0;
       }
+
+      .tablet {
+        display: none;
+      }
     }
   }
 }
@@ -616,6 +624,61 @@ label {
   .footer {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
+  }
+
+
+  .mailing-list {
+    display: flex;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    color: var(--blue);
+
+    h2 {
+      color: var(--blue);
+    }
+
+    .form, .image {
+      flex: 50%;
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-xl);
+    }
+
+    .indicates-required {
+      margin-bottom: var(--space-l);
+    }
+
+    .form {
+      padding: var(--space-xl);
+      background: white;
+
+      input, .button {
+        width: 100%;
+      }
+    }
+
+    .image {
+      background-image: url(/images/mailing-list-background.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      .tablet {
+        display: block;
+        display: block;
+        width: auto;
+        height: auto;
+      }
+    }
   }
 }
 
