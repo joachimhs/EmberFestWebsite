@@ -141,11 +141,11 @@ a {
 
 
 #content-mobile {
+  display: none;
 }
 
 #content-tablet-desktop {
-  display: none;
-  margin-bottom: 38px;
+  display: block;
 }
 
 .wrapper {
@@ -474,6 +474,16 @@ label {
   ##Screen = below 768px
 */
 @media (max-width: 767px) {
+
+  #content-mobile {
+    display: block;
+  }
+
+  #content-tablet-desktop {
+    display: none;
+  }
+
+
   .mailing-list {
     flex-direction: column;
 
@@ -514,14 +524,6 @@ label {
     background-image: url(/images/background-tablet.svg);
   }
 
-  #content-tablet-desktop {
-    display: block;
-  }
-
-  #content-mobile {
-    display: none;
-  }
-
   .introduction {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
@@ -532,7 +534,6 @@ label {
     padding-left: var(--space-m);
     padding-right: var(--space-m);
     background-image: url(/images/video-2019-background-tablet.svg);
-    height: 727px;
   }
   iframe {
     width: 704px;
@@ -674,7 +675,6 @@ label {
 
       .tablet {
         display: block;
-        display: block;
         width: auto;
         height: auto;
       }
@@ -691,13 +691,6 @@ label {
     background-image: url(/images/hero-background-1.svg);
   }
 
-  #content-mobile {
-    display: none;
-  }
-
-  #content-tablet-desktop {
-    display: block;
-  }
 
   .introduction {
     margin-left: var(--space-xl);
@@ -717,7 +710,6 @@ label {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
     background-image: url(/images/video-2019-background-desktop.svg);
-    height: 1085px;
   }
 
   .sponsors {
@@ -801,6 +793,7 @@ label {
     height: 505px;
     width: 1022.29px;
     margin-top: var(--space-xl);
+    margin-bottom: var(--space-xxl);
   }
 
   .button {
@@ -823,14 +816,6 @@ label {
     background-image: url(/images/hero-background-1.svg);
   }
 
-  #content-mobile {
-    display: none;
-  }
-
-  #content-tablet-desktop {
-    display: block;
-  }
-
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
@@ -844,7 +829,6 @@ label {
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
-    height: 1146px;
   }
 
   .sponsors {
@@ -963,7 +947,8 @@ label {
   .video-2019 iframe {
     width: 960px;
     height: 540px;
-    margin-top: var(--space-xl)
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xxl);
   }
 
   .footer {
