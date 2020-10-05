@@ -45,6 +45,7 @@ body {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
+
 h2 {
   font-size: 28px;
   font-weight: bold;
@@ -52,17 +53,17 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-medium);
+  font-size: 22px;
   letter-spacing: 2px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: var(--space-s);
+  text-transform: uppercase;
 }
 
 .paragraphLarge {
@@ -111,6 +112,10 @@ a {
   height: 50vh;
 }
 
+.header__date {
+  text-align: center;
+}
+
 .header__title {
   color: var(--flamePea);
   font-size: 40px;
@@ -131,7 +136,16 @@ a {
 }
 
 .header__landing-page__date {
-  font-size: 14px;
+  margin-bottom: var(--space-m);
+}
+
+
+#content-mobile {
+  display: none;
+}
+
+#content-tablet-desktop {
+  display: block;
 }
 
 .wrapper {
@@ -186,20 +200,26 @@ a {
   padding-bottom: var(--space-l);
 }
 
+
 hr {
   align-self: center;
   border-top: 2px solid;
 }
 
 .introduction {
+  margin-top: -32px;
   margin-bottom: var(--space-xl);
   margin-left: var(--space-s);
   margin-right: var(--space-s);
 }
 
 .introduction__text {
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-l);
+
+}
+
+.sponsors__heading {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 
 .sponsors {
@@ -277,6 +297,10 @@ hr {
     .mobile {
       display: none;
     }
+
+    .tablet {
+      display: none;
+    }
   }
 }
 
@@ -284,7 +308,9 @@ hr {
   color: var(--flamePea);
 }
 
+
 .pre-heading {
+  display: flex;
   border-bottom: 3px solid;
   padding-top: var(--space-l);
   text-align: left;
@@ -312,8 +338,14 @@ hr {
   margin-top: 0;
 }
 
+.workshop__name {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-s);
+
+}
+
 .workshop__text {
-  padding-top: var(--space-l);
+
   padding-bottom: var(--space-l);
 }
 
@@ -332,7 +364,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: var(--space-l);
+  margin-bottom: 47px;
 
   .workshop__lead {
     display: flex;
@@ -390,8 +422,9 @@ label {
 .button, .tito-tickets-button {
   color: var(--blue);
   border-radius: 24px;
-  font-size: var(--font-size-small);
+  font-size: 13px;
   font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
   background: var(--sunglo);
   height: 48px;
@@ -430,8 +463,8 @@ label {
   padding-right: var(--space-s);
 
   iframe {
-    width: 280px;
-    height: 158px;
+    width: 320px;
+    height: 181px;
     margin: 0 auto;
   }
 }
@@ -441,6 +474,16 @@ label {
   ##Screen = below 768px
 */
 @media (max-width: 767px) {
+
+  #content-mobile {
+    display: block;
+  }
+
+  #content-tablet-desktop {
+    display: none;
+  }
+
+
   .mailing-list {
     flex-direction: column;
 
@@ -464,6 +507,10 @@ label {
         height: auto;
         margin-top: 0;
       }
+
+      .tablet {
+        display: none;
+      }
     }
   }
 }
@@ -480,11 +527,18 @@ label {
   .introduction {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
+    margin-top: var(--space-l);
   }
 
   .video-2019 {
     padding-left: var(--space-m);
     padding-right: var(--space-m);
+    background-image: url(/images/video-2019-background-tablet.svg);
+  }
+  iframe {
+    width: 704px;
+    height: 398px;
+    margin: 0 auto;
   }
 
   .sponsors {
@@ -494,7 +548,7 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 28%;
     margin-left: var(--space-m);
     margin-right: var(--space-m);
   }
@@ -503,12 +557,26 @@ label {
     padding-left: 25%;
   }
 
+  .workshop__date {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
     margin-right: var(--space-xl);
+  }
+
+  .workshop__button {
+    margin-bottom: var(--space-xl);
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .paragraphLarge {
@@ -517,6 +585,10 @@ label {
 
   h4 {
     text-align: left;
+  }
+
+  h3 {
+    margin-top: var(--space-xl);
   }
 
   .header {
@@ -544,13 +616,72 @@ label {
   }
 
   .video-2019 iframe {
-    width: 560px;
-    height: 315px;
+    width: 704px;
+    height: 398px;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 
   .footer {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
+  }
+
+
+  .mailing-list {
+    display: flex;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    color: var(--blue);
+
+    h2 {
+      color: var(--blue);
+    }
+
+    .form, .image {
+      flex: 50%;
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-xl);
+    }
+
+    .indicates-required {
+      margin-bottom: var(--space-l);
+    }
+
+    .form {
+      padding: var(--space-xl);
+      background: white;
+
+      input, .button {
+        width: 100%;
+      }
+    }
+
+    .image {
+      background-image: url(/images/mailing-list-background.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      .tablet {
+        margin-top: 25%;
+        display: block;
+        max-width: 50%;
+        max-height: 50%;
+        width: auto;
+        height: auto;
+      }
+    }
   }
 }
 
@@ -563,14 +694,25 @@ label {
     background-image: url(/images/hero-background-1.svg);
   }
 
+
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: 2%;
+  }
+
+  .introduction__text {
+    margin-bottom: var(--space-xl);
+  }
+
+  .pre-heading {
+    margin-top: var(--space-xl);
   }
 
   .video-2019 {
     padding-left: var(--space-xl);
     padding-right: var(--space-xl);
+    background-image: url(/images/video-2019-background-desktop.svg);
   }
 
   .sponsors {
@@ -580,17 +722,27 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 27%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .workshop__heading {
     padding-left: 25%;
   }
 
+  .workshop__date {
+    font-size: 27px;
+    line-height: 40.5px;
+  }
+
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
@@ -604,6 +756,11 @@ label {
   h2 {
     font-size: 40px;
     line-height: var(--line-height-big);
+    margin-top: var(--space-xl);
+  }
+
+  h3 {
+    margin-top: var(--space-xl);
   }
 
   h4 {
@@ -636,13 +793,16 @@ label {
   }
 
   .video-2019 iframe {
-    width: 720px;
-    height: 405px;
+    height: 505px;
+    width: 1022.29px;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xxl);
   }
 
   .button {
     width: 416px;
   }
+
 
   .footer {
     margin-left: var(--space-xl);
@@ -662,6 +822,11 @@ label {
   .introduction {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: 13%;
+  }
+
+  .pre-heading {
+    margin-top: var(--space-xl);
   }
 
   .video-2019 {
@@ -676,7 +841,7 @@ label {
 
   .workshop {
     background-size: 75%;
-    padding-top: 25%;
+    padding-top: 27%;
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
   }
@@ -685,8 +850,14 @@ label {
     padding-left: 25%;
   }
 
+  .workshop__date {
+    font-size: 27px;
+    line-height: 40.5px;
+  }
+
   .workshop__leads-list {
     justify-content: flex-start;
+    margin-bottom: var(--space-xl);
   }
 
   .workshop__lead {
@@ -702,16 +873,26 @@ label {
     line-height: var(--line-height-big);
   }
 
+  h3 {
+    margin-top: var(--space-xl);
+  }
+
   h4 {
     text-align: left;
   }
 
   .workshop__content {
     padding-left: 25%;
+
   }
 
   .workshop__button {
     justify-content: left;
+
+  }
+
+  .tito-tickets-button {
+    width: 416px;
   }
 
   .paragraphLarge {
@@ -733,11 +914,16 @@ label {
     font-size: 40px;
   }
 
+.pre-heading {
+  margin-bottom: var(--space-xl);
+}
   .wrapper {
     width: 50%;
     margin: 0 auto;
     padding-bottom: var(--space-xxl);
   }
+
+
 
   .footer__wrapper--bottom {
     display: flex;
@@ -764,6 +950,8 @@ label {
   .video-2019 iframe {
     width: 960px;
     height: 540px;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xxl);
   }
 
   .footer {
