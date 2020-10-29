@@ -208,13 +208,8 @@ hr {
 
 .introduction {
   margin-top: -32px;
-  margin-bottom: var(--space-xl);
   margin-left: var(--space-s);
   margin-right: var(--space-s);
-}
-
-.introduction__text {
-
 }
 
 .sponsors__heading {
@@ -908,6 +903,7 @@ label {
 
   .header__title {
     font-size: 136px;
+    margin-top: 15%;
   }
 
   .header__landing-page__date {
