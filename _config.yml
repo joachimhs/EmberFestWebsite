@@ -1,0 +1,9 @@
+name: EmberFest
+
+sass:
+  sass_dir: css
+
+gems:
+  - jekyll-sitemap
+
+exclude: [vendor]

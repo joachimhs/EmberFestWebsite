@@ -1,0 +1,34 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3305001, 2016-11-07T14:28:43-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed fonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Consolas by Ascender
+ * URL: http://www.myfonts.com/fonts/ascender/consolas/regular/
+ * 
+ * Webfont: Consolas-Bold by Ascender
+ * URL: http://www.myfonts.com/fonts/ascender/consolas/bold/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3305001
+ * Licensed pageviews: 250,000
+ * fonts copyright: &#x00A9; 2007 Microsoft Corporation. All Rights Reserved.
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/326e29");
+
+  
+@font-face {font-family: 'Consolas';src: url('../fonts/326E29_0_0.eot');src: url('../fonts/326E29_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/326E29_0_0.woff2') format('woff2'),url('../fonts/326E29_0_0.woff') format('woff'),url('../fonts/326E29_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Consolas-Bold';src: url('../fonts/326E29_1_0.eot');src: url('../fonts/326E29_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/326E29_1_0.woff2') format('woff2'),url('../fonts/326E29_1_0.woff') format('woff'),url('../fonts/326E29_1_0.ttf') format('truetype');}
+ 
