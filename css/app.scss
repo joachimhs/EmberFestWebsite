@@ -111,7 +111,27 @@ h4 {
   .button {
     width: 100px;
     float: right;
+    color: white;
   }
+}
+
+.button {
+  color: var(--blue);
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--bayOfMany);
+  font-family: var(--font-bold);
+  height: 48px;
+  width: 288px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
 }
 
 .header {
@@ -157,7 +177,7 @@ h4 {
 
 }
 
-.button {
+.button__title {
   background-color: var(--bayOfMany);
   color: white;
   border-radius: 10px;
@@ -180,7 +200,7 @@ h4 {
 
 }
 
-.button::after{
+.button__title::after{
   content: url(/images/arrow-right.svg);
   margin-left: 10px;
   align-content: center;
@@ -658,7 +678,7 @@ hr {
     margin-right: var(--space-m);
   }
 
-  .button {
+  .button__title {
     width: 416px;
   }
 
@@ -835,7 +855,7 @@ hr {
     margin-bottom: var(--space-xxl);
   }
 
-  .button {
+  .button__title{
     width: 416px;
   }
 
@@ -999,7 +1019,7 @@ hr {
     // margin-bottom: var(--space-s);
   }
 
-  .button {
+  .button__title {
     height: 67px;
     width: 416px;
     margin-top: var(--space-s);
