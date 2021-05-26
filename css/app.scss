@@ -564,6 +564,14 @@ hr {
      padding-top: 95%;
    }
 
+   .mailing-list {
+     .form {
+      input {
+        font-size: 18px;
+      }
+  
+     }
+   }
    .wrapper {
     // width: 50%;
     margin-top: 10%;
@@ -599,6 +607,19 @@ hr {
   }
 
 
+  .past_speakers_wrapper {
+    justify-content: center;
+    flex-direction: row;
+    flex: none;
+    // flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+   
+  .past_speakers_item {
+    flex: none;
+    // justify-content: center;
+  }
+
   .wrapper {
     // width: 50%;
     margin-top: 125%;
@@ -623,6 +644,10 @@ hr {
     .form {
       padding: var(--space-xl) var(--space-m);
       padding-bottom: 200px;
+
+      input {
+        font-size: 18px;
+      }
     }
 
     .image {
@@ -788,66 +813,36 @@ hr {
 
 
   .mailing-list {
-    display: flex;
-    background-image: url(/images/2021_Geometric_Background.svg); 
-    background-position: top;
-    // background-size: 905px 700px;
-    background-repeat: no-repeat;
-    margin-top: var(--space-xl);
-    // margin-bottom: var(--space-xl);
-    // color: var(--blue);
-
-    h2, h3, h4 {
-      padding-bottom: var(--space-l);
-      text-align: center;
-      // padding-right: var(--space-l);
-      padding-left: 188px;
-    }
-
-    .form, .image {
-      flex: 50%;
-      padding-top: var(--space-xl);
-      padding-bottom: var(--space-xl);
-    }
-
-    .indicates-required {
-      margin-bottom: var(--space-l);
-    }
-
+    background-size: cover;
     .form {
-      padding: var(--space-xl);
-      // background: white;
-
-      input, .button {
+      h2, h3 {
+        // font-size: 35px;
         width: 100%;
+        text-align: center;
+      }
+      h4 {
+        // font-size: 28px;
+        width: 100%;
+        text-align: center;
+      }
+      form {
+        display: inline-block;
+        margin-left: var(--space-l);
+        // margin-right: var(--space-l);
+        text-align: left;
+      }
+       .button {
+         width: 416px;
+         height: 67px;
+      }
+
+       input {
+         width: 416px;
+         height: 48px;
+         font-size: 20px;
+      // border: none;
       }
     }
-
-    // .image {
-    //   background-image: url(/images/mailing-list-background.svg);
-    //   background-position: center center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   display: flex;
-    //   justify-content: center;
-
-    //   .desktop {
-    //     display: none;
-    //   }
-
-    //   .mobile {
-    //     display: none;
-    //   }
-
-    //   .tablet {
-    //     margin-top: 25%;
-    //     display: block;
-    //     max-width: 50%;
-    //     max-height: 50%;
-    //     width: auto;
-    //     height: auto;
-    //   }
-    // }
   }
 }
 
@@ -932,6 +927,12 @@ hr {
   .past-speakers::before {
     background-size: 569.79px 569.79px;
     background-position: right -130px bottom -368px ;
+  }
+
+  .past_speakers_wrapper {
+    width: 867px;
+    margin: auto;
+    padding-bottom: 2%;
   }
 
   h2 {
@@ -1035,6 +1036,7 @@ hr {
        input {
          width: 416px;
          height: 48px;
+         font-size: 20px;
       // border: none;
       }
     }
@@ -1150,6 +1152,14 @@ hr {
   .past-speakers::before {
     background-size: 569.79px 569.79px;
     background-position: right -130px bottom -368px ;
+  }
+
+  .past_speakers_wrapper {
+    width: 867px;
+    // padding-left: 0 auto;
+    padding-bottom: 2%;
+    // margin-top: 3%;
+    margin: auto;
   }
 
   .past_speakers_item {
@@ -1283,6 +1293,7 @@ hr {
        input {
          width: 416px;
          height: 48px;
+         font-size: 20px;
       // border: none;
       }
     }
