@@ -43,7 +43,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain, cover;
   // background-size: 100% 100vh, cover;
-  background-position: center bottom, top;
+  background-position: center bottom;
   // background-origin: content-box;
   margin: 0;
   padding: 0;
@@ -552,34 +552,45 @@ hr {
   border-top: 2px solid;
 }
 
-.header {
-  // margin-top: 65%;
-.wrapper {
-  // width: 50%;
-  // margin-top: 100%;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: var(--space-l);
-   
-  h2 {
-    // font-size: 40px;
-    color: var(--burntSienna);
-    font-family: var(--font-bold)
-  }
 
-  a {
-    color: var(--bayOfMany);
+
+@media (min-width: 320px) and (max-width: 479px) {
+   .header {
+    //  padding-top: 25%;
+   }
+
+   .introduction {
+    //  margin-top: 75%;
+     padding-top: 95%;
+   }
+
+   .wrapper {
+    // width: 50%;
+    margin-top: 10%;
+    padding-top: 175%;
+    text-align: center;
+    // margin: 0 auto;
+    padding-bottom: var(--space-l);
+     
+    h2 {
+      // font-size: 40px;
+      color: var(--burntSienna);
+      font-family: var(--font-bold)
+    }
+  
+    a {
+      color: var(--bayOfMany);
+    }
   }
-}
 }
 /*
   ##Device = Mobile
   ##Screen = below 768px
 */
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
 
   .introduction {
-    margin-top: 65%;
+    padding-top: 65%;
   }
 
   .get-involved__wrapper {
@@ -590,7 +601,7 @@ hr {
 
   .wrapper {
     // width: 50%;
-    margin-top: 85%;
+    margin-top: 125%;
     text-align: center;
     // margin: 0 auto;
     padding-bottom: var(--space-xxl);
@@ -654,7 +665,7 @@ hr {
     // margin-right: var(--space-m);
     // margin-top: var(--space-l);
     // padding-top: 270px;
-    margin-top: 55%;
+    padding-top: 65%;
   }
 
   .pre-heading {
@@ -727,9 +738,13 @@ hr {
     font-size: 69px;
   }
 
+  .header__pre-title, .header__date {
+    font-size: 28px;
+  }
+
   .wrapper {
     // width: 50%;
-    margin-top: 65%;
+    margin-top: 120%;
     text-align: center;
     // margin: 0 auto;
     padding-bottom: var(--space-xxl);
@@ -956,7 +971,7 @@ hr {
 
   .wrapper {
     // width: 50%;
-    margin-top: 45%;
+    margin-top: 55%;
     text-align: center;
     // margin: 0 auto;
     padding-bottom: var(--space-xxl);
