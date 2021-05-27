@@ -39,11 +39,11 @@ body {
   font-size: var(--space-m);
   display: flex;
   flex-direction: column;
-  background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+  background: url(/images/location_buildings.svg) 50% 50%, url(/images/hero-background-mobile.svg);
   background-repeat: no-repeat;
-  background-size: contain, cover;
+  background-size: contain, 650px auto;
   // background-size: 100% 100vh, cover;
-  background-position: center bottom;
+  background-position: center bottom 205px, top;
   // background-origin: content-box;
   margin: 0;
   padding: 0;
@@ -164,7 +164,7 @@ h4 {
 .header__pre-title {
   font-size: var(--space-m);
   font-family: var(--font-bold);
-  padding-top: 200px;
+  padding-top: 20px;
   padding-bottom: var(--space-l);
   color: white;
 
@@ -218,7 +218,7 @@ h4 {
   background-position: right bottom -70px;
   background-size: 149.94px 149.94px;
   background-repeat: no-repeat;
-  // padding-top: var(--space-s);
+  padding-top: 30%;
   padding-bottom: var(--space-l);
 }
 
@@ -504,7 +504,7 @@ h4 {
   background-color: var(--bayOfMany);
   color: white;
   padding-top: var(--space-xl);
-  background-position: cover;
+  background-size: cover;
 }
 
 .footer__wrapper--top {
@@ -519,10 +519,13 @@ h4 {
 
 .footer__wrapper--bottom {
   display: flex;
-  align-items: center;
+  align-items: left;
+  justify-content: left;
   flex-direction: column;
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
+  // height: 358px;
+  // width: 289px;
 }
 
 .footer__copyright {}
@@ -554,14 +557,14 @@ hr {
 
 
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media (min-width: 320px) and (max-width: 400px) {
    .header {
     //  padding-top: 25%;
    }
 
    .introduction {
     //  margin-top: 75%;
-     padding-top: 95%;
+    //  padding-top: 30%;
    }
 
    .mailing-list {
@@ -595,10 +598,17 @@ hr {
   ##Device = Mobile
   ##Screen = below 768px
 */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 635px) and (max-width: 767px) {
+
+  body {
+    background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: center bottom -3px, top;
+  }
 
   .introduction {
-    padding-top: 65%;
+    padding-top: 48%;
   }
 
   .get-involved__wrapper {
@@ -685,17 +695,20 @@ hr {
     background-position: center bottom;
   }
 
+  .header {
+    margin-top:  10%;
+  }
   .introduction {
     // margin-left: var(--space-m);
     // margin-right: var(--space-m);
     // margin-top: var(--space-l);
     // padding-top: 270px;
-    padding-top: 65%;
+    padding-top: 25%;
   }
 
-  .pre-heading {
-    margin-top: var(--space-l);
-  }
+  // .pre-heading {
+  //   padding-top: var(--space-xl);
+  // }
 
   .laurel-image-left {
     // margin-top: var(--space-s);
@@ -861,11 +874,13 @@ hr {
     // min-height: 75vh;
   }
 
-
+  .header {
+    margin-top: 10%;
+  }
   .introduction {
     // margin-left: var(--space-xl);
     // margin-right: var(--space-xl);
-    margin-top: 35%;
+    padding-top: 15%;
     // padding-top: 580px;
     background-size: 569.79px 569.79px;
     background-position: right bottom -415px;
@@ -1075,7 +1090,7 @@ hr {
   .introduction {
     // margin-left: var(--space-xl);
     // margin-right: var(--space-xl);
-    margin-top: 25%;
+    padding-top: 13%;
     // padding-top: 450px;
     // padding-left: 350px;
     // width: 867px;
@@ -1197,7 +1212,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin-top: 10%;
+    margin-top: 10%;
     // margin-top: 20%
   }
 
@@ -1238,10 +1253,13 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
   }
 
   .footer__pastEvents {
     width: 33%;
+   
   }
 
   .footer__thanks {
@@ -1262,6 +1280,7 @@ hr {
   }
 
   .footer {
+    background-size: cover;
     // margin-left: var(--space-xl);
     // margin-right: var(--space-xl);
   }
