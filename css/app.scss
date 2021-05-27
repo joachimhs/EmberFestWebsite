@@ -15,6 +15,9 @@
   --space-l: 32px;
   --space-xl: 64px;
   --space-xxl: 128px;
+  --line-height-small: 24px;
+  --line-height-medium: 33px;
+  --line-height-big: 40.5px;
 
 }
 
@@ -81,7 +84,7 @@ body {
 
 .paragraphLarge {
   font-size: var(--space-m);
-  line-height: 24px;
+  line-height: var(--line-height-medium);
   margin-left: var(--space-m);
   margin-right: var(--space-m);
   margin-top: 15px;
@@ -379,6 +382,7 @@ h4 {
   flex-direction: row;
   flex: 1;
   flex-wrap: wrap;
+  padding-bottom: 2%;
 }
  
 .past_speakers_item {
@@ -562,9 +566,6 @@ hr {
 
 .wrapper {
   margin: 0 auto;
-  // margin-top: 10%;
-  // padding-top: 175%;
-  // text-align: center;
   padding-bottom: var(--space-l);
 
   .paragraphLarge {
@@ -611,6 +612,7 @@ hr {
     flex-direction: row;
     flex: none;
     flex-wrap: wrap;
+    padding-bottom: 2%;
   }
    
   .past_speakers_item {
@@ -724,6 +726,7 @@ hr {
     flex-direction: row;
     flex: none;
     flex-wrap: wrap;
+    padding-bottom: 2%;
   }
    
   .past_speakers_item {
@@ -939,6 +942,7 @@ hr {
   }
 
   h3 {
+    font-size: 35px;
     margin-top: var(--space-xl);
   }
 
@@ -984,7 +988,7 @@ hr {
       font-size: 40px;
       color: var(--burntSienna);
       font-family: var(--font-bold);
-      padding-left: 75px;
+      padding-left: 15px;
     }
 
     a {
@@ -1081,7 +1085,7 @@ hr {
      padding-left: 75px;
      margin: auto;
      font-size: 22px;
-     line-height: 33px;
+     line-height: var(--line-height-big);
   }
 
   .laurel-image-left {
