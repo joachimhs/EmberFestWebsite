@@ -108,18 +108,17 @@ h4 {
 }
 
 .cookie-banner {
-  position: relative;
+  position: sticky;
   background: white;
   color: var(--blue);
   left: 0;
   right: 0;
   bottom: 0;
-  padding: var(--space-m);
+  padding: var(--space-l);
   text-align: center;
 
   p {
-    margin-left: 25%;
-    width: 50%;
+    text-align: center;
     padding-top: 10px;
     a {
       color: black;
@@ -132,16 +131,10 @@ h4 {
 
   .cookie-button {
     border-style: solid;
+    display: block;
     width: 100px;
-    margin-top: 16%;
+    margin: 1rem auto 0 auto;
     cursor: pointer;
-    text-transform: uppercase;
-    align-self: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -613,13 +606,7 @@ hr {
 
   .cookie-banner {
     p {
-      margin-left: 25%;
-      width: 50%;
       padding-top: 10px;
-     }
-
-     .cookie-button {
-       margin-top: 6%;
      }
   }
 
@@ -715,13 +702,7 @@ hr {
 
   .cookie-banner {
     p {
-      margin-left: 25%;
-      width: 50%;
       padding-top: 10px;
-     }
-
-     .cookie-button {
-       margin-top: 6%;
      }
   }
 
@@ -893,14 +874,7 @@ hr {
 
   .cookie-banner {
     p {
-      margin-left: 15%;
-      width: 50%;
       padding-top: 10px;
-     }
-
-     .cookie-button {
-       margin-top: 0%;
-       margin-left: 15%;
      }
   }
 
@@ -1111,7 +1085,7 @@ hr {
   .paragraphLarge {
      width: 867px;
      text-align: center;
-     padding-left: 75px;
+     padding-left: 0;
      margin: auto;
      font-size: 22px;
      line-height: var(--line-height-big);
@@ -1240,7 +1214,7 @@ hr {
       font-size: 40px;
       color: var(--burntSienna);
       font-family: var(--font-bold);
-      padding-left: 75px;
+      padding-left: 0;
     }
 
     a {
@@ -1313,15 +1287,7 @@ hr {
 
   .cookie-banner {
      p {
-      margin-left: 15%;
-      width: 50%;
       padding-top: 10px;
-     }
-
-     .cookie-button {
-       margin-left: 15%;
-       margin-top: 0%;
-      // margin-bottom: -10%;
      }
     }
 }
