@@ -168,7 +168,6 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
   flex-direction: column;
   color: white;
  
@@ -708,7 +707,10 @@ hr {
     background-size: contain, auto;
     background-position: center bottom, top;
     padding-bottom: var(--space-xxl);
-   
+  }
+
+  .header__index-page {
+    height: 100vh;
   }
 
   .cookie-banner {
