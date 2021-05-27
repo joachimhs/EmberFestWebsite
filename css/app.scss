@@ -222,15 +222,28 @@ h4 {
   justify-content: center;
   outline: none;
   border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+  cursor: pointer;
 }
 
-.button__title::after{
-  content: url(/images/arrow-right.svg);
-  margin-left: 10px;
-  align-content: center;
+.button__title button {
+  background-color: var(--bayOfMany);
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+  height: 57px;
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
 }
 
 .introduction {
