@@ -85,10 +85,9 @@ body {
 .paragraphLarge {
   font-size: var(--space-m);
   line-height: var(--line-height-medium);
-  margin-left: var(--space-m);
-  margin-right: var(--space-m);
-  margin-top: 15px;
-  margin-bottom: 20px;
+  width: 66%;
+  margin: 15px auto 20px auto;
+  text-align: center;
 }
 
 h3 {
@@ -797,7 +796,7 @@ hr {
       text-align: left;
       color: var(--burntSienna);
       font-family: var(--font-bold);
-      padding-left: 18px;
+      padding-left: 0;
     }
 
     a {
