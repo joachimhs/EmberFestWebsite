@@ -65,7 +65,10 @@ body {
   flex-direction: column;
   margin: 0;
   padding-top: var(--space-m);
- 
+}
+
+.header__index-page {
+  height: 100vh;
 }
 
 .paragraphBase {
@@ -880,6 +883,10 @@ hr {
     padding-top: 150px;
   }
 
+  .header__index-page {
+    height: 100vh;
+  }
+
   .cookie-banner {
     p {
       margin-left: 15%;
@@ -1077,6 +1084,10 @@ hr {
     background-position: center bottom, top right;
     padding-bottom: 200px;
     padding-top: var(--space-xxl);
+  }
+
+  .header__index-page {
+    height: 100vh;
   }
 
   .header__pre-title, .header__date {
