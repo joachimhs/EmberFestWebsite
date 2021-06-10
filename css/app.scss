@@ -1467,3 +1467,19 @@ hr {
      }
     }
 }
+
+.cfp-link {
+  text-align: center;
+  padding: var(--space-l) 0;
+
+  .custom-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    background: #2a3b90;
+    border-radius: 10px;
+    text-align: center;
+    padding: var(--space-m);
+    font-weight: bold;
+  }
+}
