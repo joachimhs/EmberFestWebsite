@@ -359,7 +359,6 @@ h4 {
 
 .past-speakers {
   background-color: var(--linen);
-  margin-bottom: var(--space-xl);
   position: relative;
   border-radius: 0px;
 }
@@ -410,6 +409,61 @@ h4 {
   }
 }
 
+.venue-bg {
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 157px;
+    height: 271px;
+    width: 261px;
+    background-color: var(--linen);
+    border-radius: 0px;
+  }
+
+  .location{
+    margin: auto 16px auto 16px;
+    h3 {
+     width: 350px;
+     height: 44px;   
+     text-align: left;
+     line-height: 43.75px;
+    }
+
+    p {
+     width: 288px;
+     height: 144px;
+     color: rgb(0, 0, 0);
+     font-size: 16px;
+     line-height: var(--line-height-medium);
+     margin-bottom: 101px;
+    }
+
+    a {
+     color: black;
+     text-decoration: none;
+    }
+
+    #map-canvas {
+      height: 139px;
+      width: 288px;
+      border-radius: 0px;
+    }
+  }
+
+  .venue-2021-img {
+    margin: 32px 16px 32px 16px;
+    flex-shrink: 0;
+    height: 282px;
+    width: 272px;
+    background: url(/images/Palazzo_Brancaccio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+}
+
 .speaker_name {
   margin-top: var(--space-m);
   margin-bottom: var(--space-m);
@@ -430,7 +484,7 @@ h4 {
 
 .sponsors {
   margin-bottom: var(--space-l);
-  margin-top: -50px;
+  margin-top: 350px;
 
   .row {
     display: flex;
@@ -961,7 +1015,7 @@ hr {
        height: 132px;
        color: rgb(0, 0, 0);
        font-size: 22px;
-       line-height: 33px;
+       line-height: var(--line-height-big);
        margin-bottom: 101px;
       }
 
@@ -988,6 +1042,10 @@ hr {
       background-position: left;
     }
 
+  }
+
+  .sponsors {
+    margin-top: -50px;
   }
 
   h2 {
@@ -1212,7 +1270,7 @@ hr {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      margin: 0px 463px 157px 0px;
+      margin-bottom: 157px;
       width: 597px;
       height: 620px;
       background-color: var(--linen);
@@ -1234,7 +1292,7 @@ hr {
        height: 132px;
        color: rgb(0, 0, 0);
        font-size: 22px;
-       line-height: 33px;
+       line-height: var(--line-height-big);
        margin-bottom: 101px;
       }
 
@@ -1266,6 +1324,7 @@ hr {
   .sponsors {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: -50px;
 
     .row {
       margin-top: var(--space-l);
