@@ -586,6 +586,9 @@ h4 {
   flex-direction: column;
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+  text-align: center;
 }
 
 .footer__copyright {}
@@ -872,9 +875,10 @@ hr {
     margin-bottom: var(--space-xl);
   }
 
-  .footer {
-    // margin-left: var(--space-m);
-    // margin-right: var(--space-m);
+  .footer_bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: center;
   }
 
 
@@ -1124,9 +1128,10 @@ hr {
   }
 
 
-  .footer {
-    // margin-left: var(--space-xl);
-    // margin-right: var(--space-xl);
+  .footer__bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: center;
   }
 
   .mailing-list {
@@ -1417,6 +1422,12 @@ hr {
 
   .footer {
     background-size: cover;
+  }
+
+  .footer__bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: right;
   }
 
   .mailing-list {
