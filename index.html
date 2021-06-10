@@ -8,7 +8,7 @@ title: EmberFest
   <div class="header__title">
     <a href="/">Ember<span class="header__brackets">{% raw %}{{</span>fest<span class="header__brackets">}}{% endraw %}</span></a>
   </div>
-  <h3 class="header__date">Sept. 30 – Oct. 1, 2021</h3>
+  <h3 class="header__date">Sept. 30 – Oct. 1, 2021 || Rome, Italy</h3>
   <!--
   <tito-button event="emberfest/emberfest-2021" class="button__title">Get your tickets</tito-button>
   -->
@@ -127,7 +127,42 @@ title: EmberFest
   </div>
 </div><!-- End Past Speakers Section-->
 
-
+<div class="venue-bg">
+  <div class="row">
+    <div class="venue-2021-img"></div>
+    <div class="location" class="row-item">
+      <h3>Conference venue</h3>
+      <p>This year’s EmberFest will take place in the beautiful <strong><a
+            href="https://www.palazzobrancaccio.net/brancaccio-palace-the-luxury-location-in-rome">Palazzo
+            Brancaccio</a></strong> right in the heart of Rome. Talks will be held in the spacious Gala Hall and all
+        breaks are hosted outside in the main garden and adjacent lodge.</p>
+      <div id="map-canvas" style="position: relative; overflow: hidden;">
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2AF6kfYY-iLx8r1Y9hIohTj_9DdYG8uY&callback=initMap"
+          async></script>
+        <script>
+          function initMap() {
+            google.maps.event.addDomListener(window, 'load', function () {
+              var position = new google.maps.LatLng(41.894885265283264, 12.499211076719122);
+              var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                zoom: 16,
+                center: position,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true
+              });
+              var marker = new google.maps.Marker({
+                map: map,
+                position: position,
+                clickable: false
+              });
+            });
+          }
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="sponsors">
   <div class="pre-heading">
