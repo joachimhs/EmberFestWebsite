@@ -410,31 +410,27 @@ h4 {
 }
 
 .venue-bg {
+  background-color: #FDF3EB;
   .row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 157px;
-    height: 271px;
-    width: 261px;
-    background-color: var(--linen);
-    border-radius: 0px;
+    width: calc(100% - var(--space-xl));
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: var(--space-xl);
+    padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
   }
 
   .location{
-    margin: auto 16px auto 16px;
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h3 {
      text-align: left;
      line-height: 43.75px;
     }
 
     p {
-     width: 288px;
-     height: 144px;
-     color: rgb(0, 0, 0);
-     font-size: 16px;
-     line-height: var(--line-height-medium);
-     margin-bottom: 101px;
+      line-height: var(--line-height-big);
     }
 
     a {
@@ -443,21 +439,22 @@ h4 {
     }
 
     #map-canvas {
-      height: 139px;
-      width: 288px;
-      border-radius: 0px;
+      width: 100%;
+      height: 300px;
     }
   }
 
   .venue-2021-img {
-    margin: 32px 16px 32px 16px;
+    margin: 32px 0 0 0;
     flex-shrink: 0;
-    height: 282px;
-    width: 272px;
-    background: url(/images/Palazzo_Brancaccio.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
 }
@@ -482,7 +479,6 @@ h4 {
 
 .sponsors {
   margin-bottom: var(--space-l);
-  margin-top: 350px;
 
   .row {
     display: flex;
@@ -654,12 +650,27 @@ hr {
   ##Device = Mobile
   ##Screen = below 768px
 */
-@media (min-width: 635px) and (max-width: 767px) {
+@media (max-width: 767px) {
 
   .cookie-banner {
     p {
       padding-top: 10px;
      }
+  }
+
+  .venue-bg {
+    .row {
+      grid-template-columns: repeat(1, 100%);
+      padding: 0 0 var(--space-xl) var(--space-xl);
+    }
+
+    .location {
+      margin-top: 24px;
+    }
+  }
+
+  .sponsors {
+    margin-top: 0;
   }
 
   .past_speakers_wrapper {
@@ -988,31 +999,26 @@ hr {
 
   .venue-bg {
     .row{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin: 0px 463px 157px 0px;
-      width: 497px;
-      height: 620px;
-      background-color: var(--linen);
-      border-radius: 0px;
+      width: calc(100% - var(--space-xl));
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-column-gap: var(--space-xl);
+      padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
     }
 
     .location{
-      margin: auto 76px auto 60px;
+      margin-top: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
        text-align: left;
        line-height: 43.75px;
-       margin-top: 128px;
+       margin-top: 0;
       }
 
       p {
-       width: 475px;
-       height: 132px;
-       color: rgb(0, 0, 0);
-       font-size: 22px;
-       line-height: var(--line-height-big);
-       margin-bottom: 101px;
+        line-height: var(--line-height-big);
       }
 
       a {
@@ -1021,21 +1027,22 @@ hr {
       }
 
       #map-canvas {
-        width: 500px;
-        height: 310px;
-        border-radius: 0px;
+        width: 100%;
+        height: 300px;
       }
     }
 
     .venue-2021-img {
-      margin: 128px auto auto 64px;
+      margin: 128px 0 0 0;
       flex-shrink: 0;
-      width: 497px;
-      height: 620px;
-      background: url(/images/Palazzo_Brancaccio.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: left;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
   }
@@ -1263,31 +1270,26 @@ hr {
 
   .venue-bg {
     .row{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin-bottom: 157px;
-      width: 597px;
-      height: 620px;
-      background-color: var(--linen);
-      border-radius: 0px;
+      width: calc(100% - var(--space-xl));
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-column-gap: var(--space-xl);
+      padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
     }
 
     .location{
-      margin: auto 106px auto 70px;
+      margin-top: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       h3 {
        text-align: left;
        line-height: 43.75px;
-       margin-top: 128px;
+       margin-top: 0;
       }
 
       p {
-       width: 603px;
-       height: 132px;
-       color: rgb(0, 0, 0);
-       font-size: 22px;
-       line-height: var(--line-height-big);
-       margin-bottom: 101px;
+        line-height: var(--line-height-big);
       }
 
       a {
@@ -1296,21 +1298,22 @@ hr {
       }
 
       #map-canvas {
-        width: 644px;
-        height: 310px;
-        border-radius: 0px;
+        width: 100%;
+        height: 300px;
       }
    }
 
     .venue-2021-img {
-      margin: 128px auto auto 64px;
+      margin: 128px 0 0 0;
       flex-shrink: 0;
-      width: 597px;
-      height: 620px;
-      background: url(/images/Palazzo_Brancaccio.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: left;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
   }
