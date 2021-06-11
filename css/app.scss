@@ -57,10 +57,10 @@ body {
 
 .header__landing-page {
   display: flex;
-  background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+  background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain, auto;
-  background-position: center bottom, top;
+  background-position: center bottom -3px, top;
   padding-bottom: var(--space-xxl);
   flex-direction: column;
   margin: 0;
@@ -359,7 +359,6 @@ h4 {
 
 .past-speakers {
   background-color: var(--linen);
-  margin-bottom: var(--space-xl);
   position: relative;
   border-radius: 0px;
 }
@@ -410,6 +409,56 @@ h4 {
   }
 }
 
+.venue-bg {
+  background-color: #FDF3EB;
+  .row{
+    width: calc(100% - var(--space-xl));
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: var(--space-xl);
+    padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+  }
+
+  .location{
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+     text-align: left;
+     line-height: 43.75px;
+    }
+
+    p {
+      line-height: var(--line-height-big);
+    }
+
+    a {
+     color: black;
+     text-decoration: none;
+    }
+
+    #map-canvas {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  .venue-2021-img {
+    margin: 32px 0 0 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
 .speaker_name {
   margin-top: var(--space-m);
   margin-bottom: var(--space-m);
@@ -430,7 +479,6 @@ h4 {
 
 .sponsors {
   margin-bottom: var(--space-l);
-  margin-top: -50px;
 
   .row {
     display: flex;
@@ -602,12 +650,27 @@ hr {
   ##Device = Mobile
   ##Screen = below 768px
 */
-@media (min-width: 635px) and (max-width: 767px) {
+@media (max-width: 767px) {
 
   .cookie-banner {
     p {
       padding-top: 10px;
      }
+  }
+
+  .venue-bg {
+    .row {
+      grid-template-columns: repeat(1, 100%);
+      padding: 0 0 var(--space-xl) var(--space-xl);
+    }
+
+    .location {
+      margin-top: 24px;
+    }
+  }
+
+  .sponsors {
+    margin-top: 0;
   }
 
   .past_speakers_wrapper {
@@ -689,10 +752,10 @@ hr {
 @media (min-width: 768px) and (max-width: 1024px) {
   .header__landing-page {
     display: flex;
-    background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+    background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain, auto;
-    background-position: center bottom, top;
+    background-position: center bottom -5px, top;
     padding-bottom: var(--space-xxl);
   }
 
@@ -860,10 +923,10 @@ hr {
 @media (min-width: 1025px) and (max-width: 1280px) {
   .header__landing-page {
     display: flex;
-    background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+    background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: center bottom, top right;
+    background-position: center bottom -12px, top right;
     padding-bottom: 250px;
     padding-top: 150px;
   }
@@ -932,6 +995,60 @@ hr {
     width: 66%;
     margin: auto;
     padding-bottom: 2%;
+  }
+
+  .venue-bg {
+    .row{
+      width: calc(100% - var(--space-xl));
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-column-gap: var(--space-xl);
+      padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+    }
+
+    .location{
+      margin-top: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+       text-align: left;
+       line-height: 43.75px;
+       margin-top: 0;
+      }
+
+      p {
+        line-height: var(--line-height-big);
+      }
+
+      a {
+       color: black;
+       text-decoration: none;
+      }
+
+      #map-canvas {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    .venue-2021-img {
+      margin: 128px 0 0 0;
+      flex-shrink: 0;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  .sponsors {
+    margin-top: -50px;
   }
 
   h2 {
@@ -1056,10 +1173,10 @@ hr {
 
   .header__landing-page {
     display: flex;
-    background-image: url(/images/location_buildings.svg), url(/images/hero-background-mobile.svg);
+    background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: center bottom, top right;
+    background-position: center bottom -12px, top right;
     padding-bottom: 200px;
     padding-top: var(--space-xxl);
   }
@@ -1150,9 +1267,61 @@ hr {
       width: 190px;
      }
   }
+
+  .venue-bg {
+    .row{
+      width: calc(100% - var(--space-xl));
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-column-gap: var(--space-xl);
+      padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+    }
+
+    .location{
+      margin-top: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+       text-align: left;
+       line-height: 43.75px;
+       margin-top: 0;
+      }
+
+      p {
+        line-height: var(--line-height-big);
+      }
+
+      a {
+       color: black;
+       text-decoration: none;
+      }
+
+      #map-canvas {
+        width: 100%;
+        height: 300px;
+      }
+   }
+
+    .venue-2021-img {
+      margin: 128px 0 0 0;
+      flex-shrink: 0;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
   .sponsors {
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
+    margin-top: -50px;
 
     .row {
       margin-top: var(--space-l);
