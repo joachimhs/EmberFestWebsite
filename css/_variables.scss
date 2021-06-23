@@ -1,23 +1,19 @@
-:root {
-    --bayOfMany: #2a3b90;
-    --linen: #fdf8f4;
-    --burntSienna: #e76146;
-    --font: Poppins Regular;
-    --font-bold: Poppins Bold;
-    --font-size-small: 16px;
-    --space-xxs: 2px;
-    --space-xs: 4px;
-    --space-s: 8px;
-    --space-m: 16px;
-    --space-l: 32px;
-    --space-xl: 64px;
-    --space-xxl: 128px;
-    --line-height-small: 24px;
-    --line-height-medium: 33px;
-    --line-height-big: 40.5px;
-    $desktop-xl-breakpoint: 1400px;
-    $desktop-breakpoint: 1200px;
-    $tab-breakpoint: 768px;
-    $mobile-breakpoint: 576px;
-  
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+
+//variables
+$font: 'Poppins', sans-serif;
+
+//breakpoints
+$desktop-xl-breakpoint: 1400px;
+$desktop-breakpoint: 1200px;
+$tab-breakpoint: 768px;
+$mobile-breakpoint: 576px;
+
+//colors
+
+$white: white;
+$base: #000;
+$primary_col: rgb(226, 86, 65);
+$secondary_col: rgb(42, 59, 144);
+$custom_col-1: rgb(253, 248, 244);
