@@ -5,8 +5,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: var(--space-l);
+    padding: 20px;
     text-align: center;
+    z-index: 9999;
   
     p {
       text-align: center;
@@ -26,6 +27,7 @@
       width: 100px;
       margin: 1rem auto 0 auto;
       cursor: pointer;
+      border-radius: 35px;
     }
 }
 
@@ -56,6 +58,9 @@
     padding: 21px;
     width: 100%;
     display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
 
     svg, img{
       margin-left: 10px;
@@ -116,4 +121,65 @@
     margin: auto;
 
   }
+}
+
+//decorative elements
+
+.section_wrapper{
+  position: relative;
+  overflow: hidden;
+}
+
+.decoration_element{
+
+  &_left, &_right{
+    @include interpolate("width", 600px, 145px, 1400px, 345px );
+    position: absolute;
+  }
+
+  &_left{
+    
+    left: 0;
+    top: 35%;
+    z-index: 1;
+    @include tablet{
+      top: 45%;
+    }
+    @include desktop-xl{
+      top: 39%;
+    }
+    transform: rotate(160deg);
+  }
+
+  &_right{
+    right: 0;
+    top: 39%;
+    z-index: 1;
+    @include tablet{
+      top: 43%;
+    }
+  }
+}
+
+//tito button
+
+.primary_btn button {
+  background-color: $secondary_col;
+  color: $white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 21px;
+  width: 100%;
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
 }
