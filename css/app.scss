@@ -586,6 +586,9 @@ h4 {
   flex-direction: column;
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+  text-align: center;
 }
 
 .footer__copyright {}
@@ -872,9 +875,10 @@ hr {
     margin-bottom: var(--space-xl);
   }
 
-  .footer {
-    // margin-left: var(--space-m);
-    // margin-right: var(--space-m);
+  .footer_bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: center;
   }
 
 
@@ -1124,9 +1128,10 @@ hr {
   }
 
 
-  .footer {
-    // margin-left: var(--space-xl);
-    // margin-right: var(--space-xl);
+  .footer__bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: center;
   }
 
   .mailing-list {
@@ -1419,6 +1424,12 @@ hr {
     background-size: cover;
   }
 
+  .footer__bottomNav {
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    text-align: right;
+  }
+
   .mailing-list {
     background-size: cover;
     .form {
@@ -1455,4 +1466,20 @@ hr {
       padding-top: 10px;
      }
     }
+}
+
+.cfp-link {
+  text-align: center;
+  padding: var(--space-l) 0;
+
+  .custom-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    background: #2a3b90;
+    border-radius: 10px;
+    text-align: center;
+    padding: var(--space-m);
+    font-weight: bold;
+  }
 }
