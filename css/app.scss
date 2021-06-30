@@ -49,7 +49,7 @@ html {
 //hero section start
 
 .hero{
-  padding-bottom: 105px;
+  padding-bottom: 112px;
   background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
   background-repeat: no-repeat;
   background-position: center bottom -2px, center;
@@ -57,6 +57,7 @@ html {
   background-size: contain, cover;
 
   @include tablet{
+    padding-bottom: 105px;
     background-position: center bottom -5px, center;
   }
 
@@ -248,7 +249,7 @@ html {
   .primary_btn {
     margin: auto;
     max-width: 416px;
-    margin-top: 2.5;
+    margin-top: 2.5rem;
     font-size: 1rem;
     display: block;
     text-transform: capitalize;
