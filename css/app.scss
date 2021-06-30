@@ -1,6 +1,7 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 @import "reset";
 @import "variables";
 @import "mixins";
@@ -100,34 +101,27 @@ html {
     }
   }
 
-  .primary_btn{
+  button {
     margin-top: 4rem;
     max-width: 288px;
-
-    @include tablet{
-      max-width: 416px;
-    }
-  }
-
-  button {
     background-color: $secondary_col;
     color: $white;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: bold;
-    line-height: 0px;
+    line-height: 1.2rem;
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
     padding: 1.3rem;
-    width: 100%;
-    display: inline-block;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
+
+    svg, img{
+      margin-left: 0.6rem;
+    }
+
+    @include tablet{
+      width: 416px;
+    }
   }
 }
 
@@ -259,7 +253,6 @@ html {
 
 //past-speakers end
 
-
 //venue start
 
 .venue{
@@ -277,21 +270,28 @@ html {
     }
   }
 
+  &-img{
+    img{
+      object-fit: cover;
+    min-height: 100%;
+    }
+  }
+
   .location{
     
 
     @include tablet{
-      max-width: 50%;
+      max-width: 48%;
     }
 
     .content-text{
-      margin-top: 1rem;
+      margin-top: 16px;
     }
 
   }
 
   .map-block{
-    margin-top: 1.9rem;
+    margin-top: 30px;
     height: 200px;
     max-width: 500px;
   }

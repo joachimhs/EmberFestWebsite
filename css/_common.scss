@@ -184,3 +184,18 @@ tito-button button{
     }
   }
 }
+
+//clearing floats
+.clearfix {
+	overflow : visible;
+
+	&::after {
+		content : "";
+		clear : both;
+		display : block;
+	}
+}
+
+.hidden {
+	display : none !important;
+}
