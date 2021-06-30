@@ -17,19 +17,18 @@
   src: url(/css/fonts/FontsFree-Net-Poppins-Bold.ttf);
 }
 
-body {
+html {
   font-family: $font;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 1.5rem;
   color: $base;
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   position: relative;
   z-index: 10;
-
   @include desktop{
     max-width: 1140px;
     margin: auto;
@@ -50,7 +49,6 @@ body {
 //hero section start
 
 .hero{
-  @include interpolate("padding-top", 600px, 64px, 1200px, 105px );
   padding-bottom: 105px;
   background-image: url(/images/rome.svg), url(/images/hero-background-mobile.svg);
   background-repeat: no-repeat;
@@ -76,30 +74,59 @@ body {
   }
 
   &__title{
-    @include interpolate("font-size", 600px, 35px, 1200px, 107px );
-    @include interpolate("line-height", 600px, 49px, 1200px, 149px );
     letter-spacing: 1.24px;
-    margin: 32px 0;
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    line-height: 3.1rem;
 
     @include tablet{
-      margin: 16px 0;
+      margin: 1rem 0;
+      font-size: 4.1rem;
+      line-height: 4.7rem;
+    }
+
+    @include desktop{
+      margin: 1rem 0;
+      font-size: 107px;
+      line-height: 149px;
     }
   }
 
   &__pre-title, &__date{
     @include mobile{
-      font-size: 28px;
-      line-height: 39px;
+      font-size: 1.75rem;
+      line-height: 2.4rem;
     }
   }
 
   .primary_btn{
-    margin-top: 64px;
+    margin-top: 4rem;
     max-width: 288px;
 
     @include tablet{
       max-width: 416px;
     }
+  }
+
+  button {
+    background-color: $secondary_col;
+    color: $white;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.3rem;
+    width: 100%;
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
   }
 }
 
@@ -115,7 +142,7 @@ body {
     text-align: center;
     background-color: white;
     border-radius: 10px;
-    padding: 32px 40px;
+    padding: 2rem 2.5rem;
     max-height: 137px;
     width: 100%;
 
@@ -125,7 +152,7 @@ body {
 
     .content-text{
       display: block;
-      margin-top: 16px;
+      margin-top: 1rem;
 
     }
   }
@@ -148,12 +175,20 @@ body {
 .video-2019{
    
     .video{
-      @include interpolate("height", 400px, 276px, 1200px, 615px );
       max-width: 1088px;
       width: 100%;
       display: block;
       margin: auto;
-      margin-top: 50px;
+      margin-top: 3.1rem;
+      height: 276px;
+      
+      @include tablet{
+        height: 400px;
+      }
+
+      @include desktop{
+        height: 615px;
+      }
     }
 }
 
@@ -195,7 +230,7 @@ body {
       }
 
       &_name{
-        margin-top: 16px;
+        margin-top: 1rem;
       }
 
     }
@@ -203,22 +238,23 @@ body {
   }
 
   &_links{
-      margin-top: 12px;
+      margin-top: 0.75rem;
 
       a + a{
-        margin-left: 16px;
+        margin-left: 1rem;
       }
   }
 
-  .primary_btn{
+  .primary_btn {
     margin: auto;
     max-width: 416px;
-    margin-top: 40px;
-    font-size: 16px;
+    margin-top: 2.5;
+    font-size: 1rem;
     display: block;
     text-transform: capitalize;
   }
 }
+
 
 //past-speakers end
 
@@ -248,13 +284,13 @@ body {
     }
 
     .content-text{
-      margin-top: 16px;
+      margin-top: 1rem;
     }
 
   }
 
   .map-block{
-    margin-top: 30px;
+    margin-top: 1.9rem;
     height: 200px;
     max-width: 500px;
   }
@@ -285,10 +321,10 @@ body {
   }
 
   .row + .row{
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
     @include tablet{
-      margin-top: 60px;
+      margin-top: 3.8rem;
     }
   }
 }
@@ -311,55 +347,55 @@ body {
 
   .indicates-required{
     font-weight: bold;
-    margin-top: 16px;
+    margin-top: 1rem;
 
     @include tablet{
-      font-size: 24px;
-      line-height: 33px;
-      margin-top: 37px;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 2.3rem;
     }
   }
 
   form {
     max-width: 416px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 1.9rem;
 
     @include tablet{
       margin-top: 60px;
     }
 
     label{
-      font-size: 13px;
-      line-height: 19px;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
       font-weight: bold;
       letter-spacing: 2px;
       display: block;
       text-align: left;
-      margin-bottom: 14px;
+      margin-bottom: 0.9rem;
     }
 
     input{
     width: 100%;
-    font-size: 18px;
-    line-height: 22px;
-    padding: 13.2px;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding: 0.83rem;
     border-radius: 5px;
     outline: none;
     border: none;
     }
 
     .primary_btn{
-      margin-top: 30px;
+      margin-top: 1.9rem;
       @include tablet{
-        margin-top: 64px;
-        padding: 17px;
+        margin-top: 4rem;
+        padding: 1.1rem;
       }
     }
   }
 
   .mc-field-group + .mc-field-group{
-    margin-top: 30px;
+    margin-top: 1.9rem;
   }
 
 }
@@ -371,11 +407,11 @@ body {
 .footer{
   background: $secondary_col;
   color: $white;
-  padding-top: 64px;
-  padding-bottom: 32px;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 
   @include tablet{
-    padding-bottom: 64px;
+    padding-bottom: 4rem;
   }
 
   &__wrapper--top{
@@ -383,8 +419,8 @@ body {
   }
 
   &__copyright, &__wrapper--bottom{
-    padding-top: 30px;
-    padding-bottom: 36px;
+    padding-top: 1.9rem;
+    padding-bottom: 2.25rem;
     border-bottom: 2px solid #fff;
   }
 
@@ -403,20 +439,20 @@ body {
 
 //code of conduct
 .coc-wrapper {
-    ul {
-      max-width: 50%;
-      margin: auto;
-    }
+  ul {
+    max-width: 50%;
+    margin: auto;
+  }
 
-    li {
-      list-style-type: disc;
-    }
+  li {
+    list-style-type: disc;
+  }
 
-    .pre-heading__text {
-      margin-bottom: 15px;
-    }
+  .pre-heading__text {
+    margin-bottom: 0.9rem;
+  }
 
-    .content-text + .pre-heading__text {
-      margin-top: 30px;
-    }
+  .content-text + .pre-heading__text {
+    margin-top: 1.9rem;
+  }
 }
