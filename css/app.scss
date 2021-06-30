@@ -26,8 +26,8 @@ html {
 }
 
 .container {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
   z-index: 10;
   @include desktop{
@@ -265,7 +265,7 @@ html {
     
     @include tablet{
       justify-content: space-between;
-      column-gap: 50px;
+      column-gap: 70px;
       flex-wrap: nowrap;
     }
   }
