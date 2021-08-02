@@ -199,3 +199,7 @@ tito-button button{
 .hidden {
 	display : none !important;
 }
+
+button:hover {
+   cursor: pointer;
+}
