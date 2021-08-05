@@ -311,18 +311,51 @@ html {
   .row {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 
     img {
-      max-width: 15vw;
-      max-height: 45px;
       display: block;
     }
 
+    &.live-stream {
+      img {
+        width: 40vw;
+        max-height: 300px;
+      }
+    }
+
+    &.partners {
+      img {
+        width: 20vw;
+        max-height: 200px;
+      }
+    }
+
+    &.supporters {
+      img {
+        width: 10vw;
+        max-height: 150px;
+      }
+    }
   }
 
-  .row:nth-child(2n + 1){
-    justify-content: space-between;
+  h4 {
+    font-size: 1.75rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+  }
+  
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+  }
+  
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: bold;
   }
 
   .row + .row{
