@@ -17,4 +17,12 @@ To run the app via Docker, use the included setup with
 docker compose up
 ```
 
+### Vagrant
+
+Alternatively, you can use the included Vagrantfile with
+
+```bash
+vagrant up
+```
+
 Copyright &copy; 2017 EmberFest UG (https://emberfest.eu)
