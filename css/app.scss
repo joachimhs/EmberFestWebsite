@@ -210,6 +210,10 @@ html {
     }
   }
 
+  &_list + &_list {
+    margin-top: 2.5rem;
+  }
+
   &_item{
     text-align: center;
 
