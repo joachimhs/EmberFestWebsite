@@ -595,10 +595,15 @@ html {
         color: black;
         text-align: left;
         font-weight: bold;
+        clear: both;
       }
 
       h6, p {
         margin-bottom: .5rem;
+      }
+
+      h6:nth-of-type(3) {
+        padding-top: .5rem;
       }
 
       img.speaker {
