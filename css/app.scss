@@ -220,12 +220,12 @@ html {
     .speaker{
       &_image{
         border-radius: 50%;
-      overflow: hidden;
+        overflow: hidden;
 
-      img{
-        width: 25rem;
-        height: 100%;
-      }
+        img {
+          width: 25rem;
+          height: 100%;
+        }
       }
 
       &_name{
