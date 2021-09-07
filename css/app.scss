@@ -210,6 +210,10 @@ html {
     }
   }
 
+  &_list + &_list {
+    margin-top: 2.5rem;
+  }
+
   &_item{
     text-align: center;
 
@@ -219,7 +223,7 @@ html {
       overflow: hidden;
 
       img{
-        width: 100%;
+        width: 25rem;
         height: 100%;
       }
       }
@@ -500,5 +504,121 @@ html {
 
   .content-text + .pre-heading__text {
     margin-top: 1.9rem;
+  }
+}
+
+.schedule {
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .timetable {
+    @include media-min(576px) {
+      max-width: 80%;
+      margin: auto;
+    }
+
+    h5, h6 {
+      color: #e25641;
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      font-weight: bold;
+      margin-bottom: .5rem;
+    }
+    
+    h6 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    a[href] {
+      color: #2a3b90;
+      font-weight: bold;
+    }
+
+    a[name] {
+      font-weight: bold;
+    }
+
+    .full-schedule {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .day2 {
+      margin-top: 2rem;
+    }
+
+    &.full-timetable {
+      .day2 {
+        margin-top: 8rem;
+      }
+    }
+
+    th {
+      font-variant: all-small-caps;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    table {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    tbody tr {
+      border-top: 1px dotted grey;
+    }
+
+    td {
+      font-size: 1rem;
+      text-align: left;
+      padding: 1rem 1rem 1rem 0;
+      vertical-align: top;
+
+      .speaker {
+        display: block;
+      }
+    }
+
+    th.time {
+      width: 20%;
+    }
+
+    td.talk-details {
+      h6 {
+        color: black;
+        text-align: left;
+        font-weight: bold;
+        clear: both;
+      }
+
+      h6, p {
+        margin-bottom: .5rem;
+      }
+
+      h6:nth-of-type(3) {
+        padding-top: .5rem;
+      }
+
+      img.speaker {
+        float: left;
+        margin-right: 1rem;
+        overflow: hidden;
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+
+        @include media-min(576px) {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
   }
 }
