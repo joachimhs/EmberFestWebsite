@@ -132,7 +132,7 @@ html {
 //get-involved start
 
 .get-involved{
-  
+
   &__item{
     text-align: center;
     background-color: white;
@@ -168,7 +168,7 @@ html {
 //video-2019 start
 
 .video-2019{
-   
+
     .video{
       max-width: 1088px;
       width: 100%;
@@ -176,7 +176,7 @@ html {
       margin: auto;
       margin-top: 3.1rem;
       height: 276px;
-      
+
       @include tablet{
         height: 400px;
       }
@@ -197,7 +197,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    
+
     margin: auto;
 
     @include mobile{
@@ -266,7 +266,7 @@ html {
     flex-wrap: wrap;
     justify-content: flex-start;
     row-gap: 33px;
-    
+
     @include tablet{
       justify-content: space-between;
       column-gap: 70px;
@@ -282,7 +282,7 @@ html {
   }
 
   .location{
-    
+
 
     @include tablet{
       max-width: 48%;
@@ -355,13 +355,13 @@ html {
     line-height: 2.0rem;
     font-weight: bold;
   }
-  
+
   h5 {
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: bold;
   }
-  
+
   h6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -534,10 +534,16 @@ html {
       font-weight: bold;
       margin-bottom: .5rem;
     }
-    
+
     h6 {
       font-size: 1.25rem;
       line-height: 1.5rem;
+    }
+
+    .timezone-remark {
+      color: #e25641;
+      text-align: center;
+      font-size: 0.75rem;
     }
 
     a[href] {
