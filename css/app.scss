@@ -643,3 +643,15 @@ html {
   font-weight: bold;
 }
 
+.youtube-link {
+  display: block;
+}
+
+.youtube-link i {
+  background-image: url(/images/yt.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+}
