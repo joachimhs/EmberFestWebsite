@@ -1,0 +1,37 @@
+
+//Responsive Web Desin Mixins
+@mixin media-min($mn-wdith) {
+    @media only screen and (min-width: $mn-wdith) {
+        @content;
+    }
+}
+
+@mixin media-max($mx-wdith) {
+  @media only screen and (max-width: $mx-wdith) {
+      @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media only screen and (min-width: $desktop-xl-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tab-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile {
+    @media only screen and (min-width: $mobile-breakpoint) {
+      @content;
+    }
+  }
