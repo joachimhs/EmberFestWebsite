@@ -133,7 +133,11 @@ p {
 }
 
 p + p, p + h4 {
-  margin-top: 40px;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 }
 
 main {
@@ -206,59 +210,75 @@ section {
     }
   }
 
-  .speakers {
-    margin-top: 100px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
-    li {
-      width: 128px;
-
-      @include tablet {
-        width: 190px;
-      }
-    }
-
-    img.photo {
-      display: inline-block;
-      height: 128px;
-      width: 128px;
-      border-radius: 50%;
-      margin-bottom: 12px;
-
-      @include tablet {
-        height: 190px;
-        width: 190px;
-      }
-    }
-
-    h4 {
-      color: rgb(0, 0, 0);
-      font-family: "Lato", sans-serif;
-      font-size: 18px;
-      font-weight: normal;
-      line-height: 27px;
-      text-align: center;
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 8px;
-
-      @include tablet {
-        font-size: 18px;
-        line-height: 27px;
-      }
-    }
-
-    .links {
+  &.speakers {
+    ul {
+      margin-top: 40px;
+      list-style-type: none;
       display: flex;
-      justify-content: center;
-      margin-top: 12px;
-      margin-bottom: 32px;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  
+      @include tablet {
+        margin-top: 100px;
+      }
+  
+      li {
+        width: 128px;
+  
+        @include tablet {
+          width: 190px;
+        }
+      }
+  
+      img.photo {
+        display: inline-block;
+        height: 128px;
+        width: 128px;
+        border-radius: 50%;
+        margin-bottom: 12px;
+  
+        @include tablet {
+          height: 190px;
+          width: 190px;
+        }
+      }
+  
+      h4 {
+        color: rgb(0, 0, 0);
+        font-family: "Lato", sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 27px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+  
+        @include tablet {
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+  
+      .links {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        margin-bottom: 32px;
+  
+        a {
+          margin: 0 8px;
+        }
+      }
+    }
 
-      a {
-        margin: 0 8px;
+    .button {
+      padding: 24px 0;
+      width: 261px;
+      margin: auto;
+      
+      @include tablet {
+        width: 402px;
       }
     }
   }
@@ -425,8 +445,13 @@ footer {
     li + li::before {
       content: "•";
       display: inline-block;
-      margin-left: 6px;
-      margin-right: 6px;
+      margin-left: 2px;
+      margin-right: 2px;
+
+      @include tablet {
+        margin-left: 6px;
+        margin-right: 6px;
+      }
     }
   }
 
