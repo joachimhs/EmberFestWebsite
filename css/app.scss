@@ -356,7 +356,7 @@ section {
       border: 1px solid rgb(219, 219, 219);
       box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.1),
       0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-      font-size: 32px;
+      font-size: 24px;
       line-height: 48px;
       margin-bottom: 32px;
       width: 100%;
@@ -371,6 +371,10 @@ section {
       line-height: 22px;
       display: flex;
       align-items: center;
+
+      img {
+        margin-left: 10px;
+      }
     }
   }
 }
