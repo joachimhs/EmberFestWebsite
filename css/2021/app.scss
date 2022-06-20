@@ -1,0 +1,657 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import "2021/reset";
+@import "2021/variables";
+@import "2021/mixins";
+@import "2021/common";
+
+
+@font-face {
+  font-family: Poppins Regular;
+  src: url(/css/fonts/FontsFree-Net-Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins Bold;
+  src: url(/css/fonts/FontsFree-Net-Poppins-Bold.ttf);
+}
+
+html {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: $base;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+  @include desktop{
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include desktop-xl {
+    max-width: 1310px;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+//hero section start
+
+.hero{
+  padding-bottom: 112px;
+  background-image: url(/2021/images/rome.svg), url(/2021/images/hero-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom -2px, center;
+  text-align: center;
+  background-size: contain, cover;
+
+  @include tablet{
+    padding-bottom: 105px;
+    background-position: center bottom -8px, center;
+  }
+
+  @include desktop{
+    background-position: center bottom -12px, center;
+  }
+
+  @include desktop-xl{
+    background-position: center bottom -12px, center;
+  }
+
+  &__pre-title, &__title, &__date{
+    color: $white;
+    font-weight: bold;
+  }
+
+  &__title{
+    letter-spacing: 1.24px;
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    line-height: 3.1rem;
+
+    @include tablet{
+      margin: 1rem 0;
+      font-size: 4.1rem;
+      line-height: 4.7rem;
+    }
+
+    @include desktop{
+      margin: 1rem 0;
+      font-size: 107px;
+      line-height: 149px;
+    }
+  }
+
+  &__pre-title, &__date{
+    @include mobile{
+      font-size: 1.75rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  button {
+    margin-top: 4rem;
+    max-width: 288px;
+    background-color: $secondary_col;
+    color: $white;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.3rem;
+
+    svg, img{
+      margin-left: 0.6rem;
+    }
+
+    @include tablet{
+      width: 416px;
+    }
+  }
+}
+
+//hero section end
+
+
+
+//get-involved start
+
+.get-involved{
+
+  &__item{
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    max-height: 137px;
+    width: 100%;
+
+    @include tablet{
+      flex-basis: 45%;
+    }
+
+    .content-text{
+      display: block;
+      margin-top: 1rem;
+
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 64px;
+    row-gap: 16px;
+  }
+}
+
+//get-involved end
+
+
+//video-2019 start
+
+.video-2019{
+
+    .video{
+      max-width: 1088px;
+      width: 100%;
+      display: block;
+      margin: auto;
+      margin-top: 3.1rem;
+      height: 276px;
+
+      @include tablet{
+        height: 400px;
+      }
+
+      @include desktop{
+        height: 615px;
+      }
+    }
+}
+
+//video-2019 end
+
+//speakers start
+
+.speakers{
+
+  &_list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+
+    margin: auto;
+
+    @include mobile{
+      max-width: 70%;
+    }
+
+    @include tablet{
+      grid-template-columns: repeat(3, auto);
+      gap: 64px;
+    }
+  }
+
+  &_list + &_list {
+    margin-top: 2.5rem;
+  }
+
+  &_item{
+    text-align: center;
+
+    .speaker{
+      &_image{
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 25rem;
+          height: 100%;
+        }
+      }
+
+      &_name{
+        margin-top: 1rem;
+      }
+
+    }
+
+  }
+
+  &_links{
+      margin-top: 0.75rem;
+
+      a + a{
+        margin-left: 1rem;
+      }
+  }
+
+  .primary_btn {
+    margin: auto;
+    max-width: 416px;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    display: block;
+    text-transform: capitalize;
+  }
+}
+
+
+//speakers end
+
+//venue start
+
+.venue{
+
+  >.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 33px;
+
+    @include tablet{
+      justify-content: space-between;
+      column-gap: 70px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &-img{
+    img{
+      object-fit: cover;
+    min-height: 100%;
+    }
+  }
+
+  .location{
+
+
+    @include tablet{
+      max-width: 48%;
+    }
+
+    .content-text{
+      margin-top: 16px;
+    }
+
+  }
+
+  .map-block{
+    margin-top: 30px;
+    height: 300px;
+
+    @include tablet{
+      height: 200px;
+      max-width: 500px;
+    }
+  }
+}
+
+//venue end
+
+
+//sponsors start
+
+.sponsors {
+
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      display: block;
+    }
+
+    &.live-stream {
+      img {
+        max-width: 70vw;
+        max-height: 70vw;
+        min-height: 20vw;
+        min-width: 30vw;
+      }
+    }
+
+    &.partners {
+      img {
+        max-width: 27.5vw;
+        max-height: 27.5vw;
+        min-height: 22.5vw;
+        min-width: 22.5vw;
+        object-fit: contain;
+      }
+    }
+
+    &.supporters {
+      img {
+        max-width: 17.5vw;
+        max-height: 17.5vw;
+        min-height: 12.5vw;
+        min-width: 12.5vw;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: 2.0rem;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+
+  .row + .row{
+    margin-top: 1.25rem;
+
+    @include tablet{
+      margin-top: 3.8rem;
+    }
+  }
+}
+
+//sponsors end
+
+
+//mailinglist start
+
+.mailing-list{
+  color: white;
+  background-image: url(/2021/images/2021_Geometric_Background.svg);
+  background-size: cover;
+  text-align: center;
+
+  .pre-heading__text{
+    color: $white;
+    margin: auto;
+  }
+
+  .indicates-required{
+    font-weight: bold;
+    margin-top: 1rem;
+
+    @include tablet{
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin-top: 2.3rem;
+    }
+  }
+
+  form {
+    max-width: 416px;
+    margin: auto;
+    margin-top: 1.9rem;
+
+    @include tablet{
+      margin-top: 60px;
+    }
+
+    label{
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      display: block;
+      text-align: left;
+      margin-bottom: 0.9rem;
+    }
+
+    input{
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding: 0.83rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    }
+
+    .primary_btn{
+      margin-top: 1.9rem;
+      @include tablet{
+        margin-top: 4rem;
+        padding: 1.1rem;
+      }
+    }
+  }
+
+  .mc-field-group + .mc-field-group{
+    margin-top: 1.9rem;
+  }
+
+}
+
+//mailinglist end
+
+//footer start
+
+.footer{
+  background: $secondary_col;
+  color: $white;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+  @include tablet{
+    padding-bottom: 4rem;
+  }
+
+  &__wrapper--top{
+    text-align: center;
+  }
+
+  &__copyright, &__wrapper--bottom{
+    padding-top: 1.9rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 2px solid #fff;
+  }
+
+  &__wrapper--bottom{
+    display: grid;
+    row-gap: 32px;
+
+    @include tablet{
+      column-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+//footer end
+
+//code of conduct
+.coc-wrapper {
+  ul {
+    margin-left: 20px;
+   @include media-min(576px) {
+    max-width: 80%;
+    margin: auto;
+   }
+
+   @include tablet{
+     max-width: 50%;
+   }
+  }
+
+  li {
+    list-style-type: disc;
+  }
+
+  .pre-heading__text {
+    margin-bottom: 0.9rem;
+  }
+
+  .content-text + .pre-heading__text {
+    margin-top: 1.9rem;
+  }
+}
+
+.schedule {
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .timetable {
+    @include media-min(576px) {
+      max-width: 80%;
+      margin: auto;
+    }
+
+    h5, h6 {
+      color: #e25641;
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      font-weight: bold;
+      margin-bottom: .5rem;
+    }
+
+    h6 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    .timezone-remark {
+      color: #e25641;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    a[href] {
+      color: #2a3b90;
+      font-weight: bold;
+    }
+
+    a[name] {
+      font-weight: bold;
+    }
+
+    .full-schedule {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .day2 {
+      margin-top: 2rem;
+    }
+
+    &.full-timetable {
+      .day2 {
+        margin-top: 8rem;
+      }
+    }
+
+    th {
+      font-variant: all-small-caps;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    table {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    tbody tr {
+      border-top: 1px dotted grey;
+    }
+
+    td {
+      font-size: 1rem;
+      text-align: left;
+      padding: 1rem 1rem 1rem 0;
+      vertical-align: top;
+
+      .speaker {
+        display: block;
+      }
+    }
+
+    th.time {
+      width: 20%;
+    }
+
+    td.talk-details {
+      h6 {
+        color: black;
+        text-align: left;
+        font-weight: bold;
+        clear: both;
+      }
+
+      h6, p {
+        margin-bottom: .5rem;
+      }
+
+      h6:nth-of-type(3) {
+        padding-top: .5rem;
+      }
+
+      img.speaker {
+        float: left;
+        margin-right: 1rem;
+        overflow: hidden;
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+
+        @include media-min(576px) {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.content-link {
+  color: #2a3b90;
+}
+
+.content-strong {
+  font-weight: bold;
+}
+
+.youtube-link {
+  display: block;
+}
+
+.youtube-link i {
+  background-image: url(/2021/images/yt.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+}

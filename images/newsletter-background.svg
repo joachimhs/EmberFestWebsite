@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1443px" height="870px" viewBox="0 0 1443 870" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F211C628-B7B3-4160-8F23-3127BB7027DE@1x</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="86.8830744%" id="linearGradient-1">
+            <stop stop-color="#356EE3" offset="0%"></stop>
+            <stop stop-color="#F3A2A2" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1443" height="870"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="78.3469356%" id="linearGradient-4">
+            <stop stop-color="#FFEACC" offset="0%"></stop>
+            <stop stop-color="#FC8585" offset="100%"></stop>
+            <stop stop-color="#F3A2A2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="EmberFest-2022" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2022-Desktop-HD---Location-unnanounced" transform="translate(1.000000, -6633.000000)">
+            <g id="newsletter-background" transform="translate(-1.000000, 6633.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <g id="stars" mask="url(#mask-3)" fill="#F9EAD4">
+                    <g transform="translate(30.000000, 0.000000)" id="Oval">
+                        <circle cx="242" cy="262" r="2"></circle>
+                        <circle cx="162" cy="72" r="2"></circle>
+                        <circle cx="2" cy="142" r="2"></circle>
+                        <circle cx="492" cy="102" r="2"></circle>
+                        <circle cx="821" cy="1" r="1"></circle>
+                        <circle cx="931" cy="121" r="1"></circle>
+                        <circle cx="891" cy="261" r="1"></circle>
+                        <circle cx="1271" cy="331" r="1"></circle>
+                        <circle cx="849" cy="442" r="2"></circle>
+                        <circle cx="1219" cy="292" r="2"></circle>
+                        <circle cx="1379" cy="82" r="2"></circle>
+                        <circle cx="388" cy="411" r="1"></circle>
+                        <circle cx="398" cy="396" r="1"></circle>
+                        <circle cx="338" cy="166" r="1"></circle>
+                        <circle cx="142" cy="74" r="1"></circle>
+                        <circle cx="32" cy="204" r="1"></circle>
+                    </g>
+                </g>
+                <path d="M721.473484,551 C958.882053,551 1153.49356,734.236003 1171.59824,966.998243 L271.34873,966.998243 C289.453408,734.236003 484.064916,551 721.473484,551 Z" id="Combined-Shape" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
