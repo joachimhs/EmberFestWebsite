@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "reset";
 @import "variables";
 @import "fonts";
@@ -19,7 +20,7 @@ html {
   padding-top: 134px;
   padding-bottom: 298px;
 
-  &__title{
+  &__title {
     color: rgb(255, 248, 238);
     font-family: "Playfair Display", serif;
     font-size: 40px;
@@ -79,7 +80,7 @@ h3 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
   line-height: 43.75px;
-  font-size: 32px;
+  font-size: 48px;
   text-align: center;
   margin-bottom: 47.25px;
 
@@ -132,7 +133,8 @@ p {
   }
 }
 
-p + p, p + h4 {
+p + p,
+p + h4 {
   margin-top: 20px;
 
   @include tablet {
@@ -217,32 +219,32 @@ section {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-  
+
       @include tablet {
         margin-top: 100px;
       }
-  
+
       li {
         width: 128px;
-  
+
         @include tablet {
           width: 190px;
         }
       }
-  
+
       img.photo {
         display: inline-block;
         height: 128px;
         width: 128px;
         border-radius: 50%;
         margin-bottom: 12px;
-  
+
         @include tablet {
           height: 190px;
           width: 190px;
         }
       }
-  
+
       h4 {
         color: rgb(0, 0, 0);
         font-family: "Lato", sans-serif;
@@ -253,19 +255,19 @@ section {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 8px;
-  
+
         @include tablet {
           font-size: 18px;
           line-height: 27px;
         }
       }
-  
+
       .links {
         display: flex;
         justify-content: center;
         margin-top: 12px;
         margin-bottom: 32px;
-  
+
         a {
           margin: 0 8px;
         }
@@ -276,9 +278,156 @@ section {
       padding: 24px 0;
       width: 261px;
       margin: auto;
-      
+
       @include tablet {
         width: 402px;
+      }
+    }
+  }
+
+  &.schedule {
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    @media only screen and (min-width: 576px) {
+      .timetable {
+        max-width: 80%;
+        margin: auto;
+      }
+    }
+
+    .content {
+      width: 100vw;
+      @include tablet {
+        width: 90vw;
+      }
+    }
+
+    .timetable {
+      h5,
+      h6 {
+        color: #2a3b90;
+        text-align: center;
+      }
+
+      h5 {
+        font-size: 2rem;
+        line-height: 1.75rem;
+        margin-bottom: 1rem;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+      }
+
+      h6 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+      }
+
+      a[href] {
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        color: #2a3b90;
+        font-size: 0.88rem;
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      a[href]:last-child {
+        font-size: 1rem;
+      }
+
+      .full-schedule {
+        display: block;
+        text-align: center;
+        margin-top: 2.5rem;
+        @include tablet {
+          margin-top: 3.75rem;
+        }
+      }
+
+      th {
+        font-weight: bold;
+        text-align: left;
+        color: #2a3b90;
+        font-size: 0.88rem;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      table {
+        margin-top: 5rem;
+        width: 100%;
+      }
+
+      thead tr th {
+        padding-bottom: 7px;
+      }
+
+      thead tr th:first-child {
+        padding-left: 28px;
+        @media only screen and (min-width: 576px) {
+          padding-left: 0;
+          min-width: 224px;
+        }
+      }
+
+      tbody tr {
+        border-top: 1px dotted grey;
+        min-width: 100vw;
+      }
+
+      tbody tr > td:first-child {
+        padding-left: 26px;
+        padding-right: 0px;
+        @media only screen and (min-width: 576px) {
+          padding-left: 0;
+        }
+      }
+
+      tbody tr > td:last-child {
+        padding-right: 26px;
+        @media only screen and (min-width: 576px) {
+          padding-right: 0;
+        }
+      }
+
+      tbody tr:last-child {
+        border-bottom: 1px dotted grey;
+        min-width: 100%;
+      }
+
+      td {
+        font-size: 0.88rem;
+        text-align: left;
+        padding: 1.5rem 0 1.5rem 0;
+        vertical-align: top;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+        .speaker {
+          margin-top: 0.5rem;
+          display: block;
+        }
+      }
+
+      th.time {
+        width: 8rem;
+        @include tablet {
+          width: 12rem;
+        }
       }
     }
   }
@@ -314,7 +463,8 @@ section {
     text-align: center;
     padding-top: 134px;
 
-    h3, p {
+    h3,
+    p {
       color: rgb(255, 248, 238);
     }
 
@@ -350,12 +500,13 @@ section {
       }
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="text"],
+    input[type="email"] {
       background: rgb(255, 255, 255);
       border-radius: 3px;
       border: 1px solid rgb(219, 219, 219);
       box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.1),
-      0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        0px 2px 3px 0px rgba(0, 0, 0, 0.1);
       font-size: 24px;
       line-height: 48px;
       margin-bottom: 32px;
