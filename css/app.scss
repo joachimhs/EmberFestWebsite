@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "reset";
 @import "variables";
 @import "fonts";
@@ -19,7 +20,7 @@ html {
   padding-top: 134px;
   padding-bottom: 298px;
 
-  &__title{
+  &__title {
     color: rgb(255, 248, 238);
     font-family: "Playfair Display", serif;
     font-size: 40px;
@@ -132,7 +133,8 @@ p {
   }
 }
 
-p + p, p + h4 {
+p + p,
+p + h4 {
   margin-top: 20px;
 
   @include tablet {
@@ -217,32 +219,32 @@ section {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-  
+
       @include tablet {
         margin-top: 100px;
       }
-  
+
       li {
         width: 128px;
-  
+
         @include tablet {
           width: 190px;
         }
       }
-  
+
       img.photo {
         display: inline-block;
         height: 128px;
         width: 128px;
         border-radius: 50%;
         margin-bottom: 12px;
-  
+
         @include tablet {
           height: 190px;
           width: 190px;
         }
       }
-  
+
       h4 {
         color: rgb(0, 0, 0);
         font-family: "Lato", sans-serif;
@@ -253,19 +255,19 @@ section {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 8px;
-  
+
         @include tablet {
           font-size: 18px;
           line-height: 27px;
         }
       }
-  
+
       .links {
         display: flex;
         justify-content: center;
         margin-top: 12px;
         margin-bottom: 32px;
-  
+
         a {
           margin: 0 8px;
         }
@@ -276,7 +278,7 @@ section {
       padding: 24px 0;
       width: 261px;
       margin: auto;
-      
+
       @include tablet {
         width: 402px;
       }
@@ -284,6 +286,8 @@ section {
   }
 
   &.past-sponsors {
+    margin-top: 100px;
+
     .row {
       margin-bottom: 60px;
       display: flex;
@@ -314,7 +318,8 @@ section {
     text-align: center;
     padding-top: 134px;
 
-    h3, p {
+    h3,
+    p {
       color: rgb(255, 248, 238);
     }
 
@@ -350,12 +355,13 @@ section {
       }
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="text"],
+    input[type="email"] {
       background: rgb(255, 255, 255);
       border-radius: 3px;
       border: 1px solid rgb(219, 219, 219);
       box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.1),
-      0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        0px 2px 3px 0px rgba(0, 0, 0, 0.1);
       font-size: 24px;
       line-height: 48px;
       margin-bottom: 32px;
