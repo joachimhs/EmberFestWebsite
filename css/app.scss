@@ -285,6 +285,98 @@ section {
     }
   }
 
+  &.locations {
+    background-color: #2a3b90;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+
+    @include tablet {
+      padding-bottom: 6.25rem;
+      padding-top: 6.25rem;
+    }
+
+    .tb_padding:nth-child(2) {
+      padding-bottom: 0;
+      padding-top: 80px;
+
+      @include tablet {
+        padding-top: 200px;
+      }
+    }
+
+    .pre-heading__text,
+    .content-text {
+      color: #fff8ee;
+      @include tablet {
+        text-align: left;
+      }
+    }
+
+    .content-text {
+      margin-top: 2.25rem;
+      font-size: 1rem;
+      @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+        margin-top: 0;
+      }
+    }
+
+    .venue {
+      padding-left: 12vw;
+      padding-right: 12vw;
+
+      .pre-heading__text {
+        margin-bottom: 1.5rem;
+      }
+
+      .map-block {
+        margin-top: 2.5rem;
+      }
+
+      .content-text {
+        margin-bottom: 40px;
+      }
+
+      @include tablet {
+        .content-text {
+          margin-bottom: 0;
+        }
+        .container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 24px;
+          row-gap: 1em;
+
+          .venue-img {
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: 4;
+          }
+        }
+
+        &:nth-child(2) .venue-img {
+          grid-column: 2;
+        }
+
+        .location {
+          max-width: 48%;
+        }
+      }
+
+      &-img {
+        img {
+          border: 2px solid #f9ead4;
+          object-fit: cover;
+          min-height: 100%;
+        }
+      }
+
+      #conference-venue img {
+        order: -1;
+      }
+    }
+  }
+
   &.past-sponsors {
     margin-top: 100px;
 
