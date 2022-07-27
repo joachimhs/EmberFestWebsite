@@ -173,7 +173,6 @@ section {
     background-image: url(/images/get-involved.svg);
     background-position: bottom center;
     background-size: contain;
-    margin-bottom: 128px;
 
     h3 {
       margin-bottom: 107.25px;
@@ -208,6 +207,27 @@ section {
           height: 32px;
           margin-bottom: 21px;
         }
+      }
+    }
+  }
+
+  &.ember-2021{
+    margin-top: 128px;
+    
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    iframe {
+      width: 320px;
+      height: 181px;
+      margin-top: 40px;
+
+      @include tablet {
+        width: 960px;
+        height: 540px;
       }
     }
   }
