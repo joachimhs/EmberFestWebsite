@@ -4,6 +4,7 @@
 		<div class="sponsors-grid-container">
 
 			{% if site.data.sponsors.premier_partners %}
+			<h4>Premier Partners</h4>
 			<div class="sponsors-grid premier-partners">
 				{% for premier_partner in site.data.sponsors.premier_partners %}
 				<a href="{{ premier_partner.link }}">
@@ -14,6 +15,7 @@
 			{% endif %}
 
 			{% if site.data.sponsors.partners %}
+			<h5>Partners</h5>
 			<div class="sponsors-grid partners">
 				{% for partner in site.data.sponsors.partners %}
 				<a href="{{ partner.link }}">
@@ -24,6 +26,7 @@
 			{% endif %}
 
 			{% if site.data.sponsors.supporters %}
+			<h6>Supporters</h6>
 				<div class="sponsors-grid supporters">
 					{% for supporter in site.data.sponsors.supporters %}
 					<a href="{{ supporter.link }}">
