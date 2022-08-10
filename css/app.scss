@@ -397,6 +397,52 @@ section {
     }
   }
 
+  &.sponsors {
+    margin-top: 100px;
+
+    .sponsors-grid-container {
+      display: grid;
+      gap: 4rem;
+      padding: 1rem;
+      @include mobile {
+        width: auto;
+      }
+    }
+
+    .sponsors-grid {
+      display: flex;
+      gap: 4rem;
+      width: 100%;
+      justify-content: center;
+      flex-flow: row wrap;
+      justify-self: center;
+
+      &.premier-partners img {
+        height: 3.5rem;
+        @include mobile {
+          height: 2.5rem;
+        }
+      }
+      
+      &.partners img {
+        height: 2.5rem;
+        @include mobile {
+          height: 1.5rem;
+        }
+      }
+      
+      &.supporters {
+        width: 80%;
+        img {
+          height: 2rem;
+          @include mobile {
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+
   &.past-sponsors {
     margin-top: 100px;
 
