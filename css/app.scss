@@ -104,18 +104,44 @@ h3 {
   }
 }
 
-h4 {
+h4, h5, h6 {
   color: rgb(42, 59, 144);
   font-family: "Playfair Display", serif;
-  font-size: 24px;
-  font-weight: bold;
   line-height: 28px;
+  font-weight: bold;
+  @include tablet {
+    line-height: 30px;
+  }
   text-align: center;
   margin-bottom: 40px;
 
   @include tablet {
     font-size: 32px;
     line-height: 30px;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+  
+  @include tablet {
+    font-size: 2rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+  
+  @include tablet {
+    font-size: 1.5rem;
   }
 }
 
@@ -393,6 +419,56 @@ section {
 
       #conference-venue img {
         order: -1;
+      }
+    }
+  }
+
+  &.sponsors {
+    margin-top: 100px;
+
+    h4, h5, h6 {
+      margin: 0
+    }
+
+    .sponsors-grid-container {
+      display: grid;
+      gap: 4rem;
+      padding: 1rem;
+      @include mobile {
+        width: auto;
+      }
+    }
+
+    .sponsors-grid {
+      display: flex;
+      gap: 4rem;
+      width: 100%;
+      justify-content: center;
+      flex-flow: row wrap;
+      justify-self: center;
+
+      &.premier-partners img {
+        height: 3.5rem;
+        @include mobile {
+          height: 2.5rem;
+        }
+      }
+      
+      &.partners img {
+        height: 2.5rem;
+        @include mobile {
+          height: 1.5rem;
+        }
+      }
+      
+      &.supporters {
+        width: 80%;
+        img {
+          height: 2rem;
+          @include mobile {
+            height: 1rem;
+          }
+        }
       }
     }
   }
