@@ -17,6 +17,14 @@ To run the app via Docker, use the included setup with
 docker compose up
 ```
 
+#### Troubleshooting
+
+Make sure you are up to date by building/rebuilding services:
+
+```bash
+docker compose build
+```
+
 ### Vagrant
 
 Alternatively, you can use the included Vagrantfile with
