@@ -155,11 +155,11 @@
 
 - time: 14:30 - 15:00
   speaker: Chris Manson
-  talk: TBA
+  talk: Bottled Ember - Batteries Included Web Framework, tiny tiny living space
   id: chris-manson
-  image_extension: jpg
+  image_extension: png
   description: TBA
-  bio: TBA
+  bio: Developer at @simplabs, creator of Empress and member of the Ember Core Learning Team
 
 - time: 15:00 - 15:30
   isBreakTime: true
