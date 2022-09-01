@@ -26,460 +26,71 @@ title: Schedule
                 <h6>Doors open</h6>
               </td>
             </tr>
+            {% for info in site.data.schedule.day1 %}
             <tr>
-              <td class="schedule-table--timeslot">10:00&ndash;10:30</td>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+              <td>{{ info.text }}</td>
+              {% else %}
               <td class="talk-details">
-                <h6><a name="bartlomiej-dudzik">Data validation libraries in Ember</a></h6>
-                <a class="youtube-link" href="https://www.youtube.com/watch?v=7rExaNCZRKM">
-                  <i></i>
-                </a>
-                <p>
-                  For years ember community has been leaning on one of the two validation libraries ember-cp-validations
-                  and ember-changeset they were playing out extremely well in pre-octane because they made it easy to
-                  validate data and hook them up to the ember’s reactivity system all that was left for us developers
-                  was to simply define the validations and call them in templates. But with tracked system it’s easier
-                  than ever to integrate a validation library of your choice without the need to rely on just these
-                  options
-                </p>
+                <h6><a name="{{ info.id }}">{{ info.talk }}</a></h6>
+                {{ info.description}}
+                {% if info.speaker %}
                 <div class="speaker-profile">
-                  <h6 class="speaker">Zoë Bijl</h6>
-                  <img src="/images/speakers/zoe-bijl.jpg" class="speaker">
-                  <p>
-                    Coder, interested in almost everything that there is about our field - frontend through backend to
-                    DevOps. Most of the time I code in Ember.js and Phoenix but also IAAC with Terraform, actually like
-                    testing stuff too, though sometimes it's a love-hate relationship. Currently happily trying to
-                    improve Ember Simple Auth while giving something back to the community.
-                  </p>
+                  <h6 class="speaker">{{ info.speaker }}</h6>
+                  <img src="/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  {{ info.bio }}
                 </div>
+                {% endif %}
               </td>
+              {% endif %}
             </tr>
-            <tr>
-              <td class="schedule-table--timeslot">10:45&ndash;11:15</td>
-              <td class="talk-details">
-                <h6><a name="alexis-falaise">Bootstrap your dashboard the right way</a></h6>
-                <p>
-                  Drawing on the web has never been straightforward, and multiple standards have been emerging to adress
-                  that complexity. Whether you decide to opt for the versatility of HTML canvas, or keep closer to the
-                  scalability and resilience of SVGs, choosing the right library to fulfill all product requirements can
-                  be dreadful.
-                </p>
-                <p>
-                  What are the critical questions to address when building a dashboard? How to keep accessibility in
-                  mind? And first of all, which library should you go for when working with Ember?
-                </p>
-                <div class="speaker-profile">
-                  <h6 class="speaker">Alexis Falaise</h6>
-                  <img src="/images/speakers/alexis-falaise.png" class="speaker">
-                  <p>
-                    Hi ! I’m Alexis. I’ve been passionated with crafting intuitive interfaces for quite some time, and
-                    I’m now taking that passion to another level working at Qonto. I spend most of my time listening to
-                    (or making) music when not working on lines of code - when I can’t do both 😄.
-                  </p>
-                </div>
-              </td>
+            {% endfor %}
             </tr>
-            <tr>
-              <td class="schedule-table--timeslot">11:30&ndash;12:00</td>
-              <td class="talk-details">
-                <h6><a name="aaron-chambers"> &#123;&#123;should-avoid this.renderModifiers butHow=true&#125;&#125; </a>
-                </h6>
-                <p>
-                  The ember-render-modifiers README states that the modifiers are “very useful for quickly bridging the
-                  gap between classic components and Glimmer components, but they are still generally an anti-pattern.”
-                  It also says that you should “rethink your functionality rather than use these modifiers as a
-                  crutch.”.
-                </p>
-                <p>
-                  However, the README doesn’t give any real guidance on what we should do instead.
-                </p>
-                <p>
-                  In this talk I’m explain why these modifiers are problematic and explore the two main use cases I’ve
-                  seen ember-render-modifiers used for and how we can go about replacing them with modern Ember patterns
-                  that will set us up for success in the future. And finally, after this talk, we’ll have a resource to
-                  which we can point future engineers when they scratch their heads about how to avoid these modifiers.
-                </p>
-                <div class="speaker-profile">
-                  <h6 class="speaker">Aaron Chambers</h6>
-                  <img src="/images/speakers/aaron-chambers.jpeg" class="speaker">
-                  <p>
-                    Senior Product Engineer, helping enable engineers and increasing developer productivity @ Intercom.
-                    I help organize Ember Europe and I co-authored that deployment thing a while back.
-                  </p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="schedule-table--timeslot">12:00&ndash;13:00</td>
-              <td>Lunch</td>
-            </tr>
-            <tr>
-              <td class="schedule-table--timeslot">13:00&ndash;13:30</td>
-              <td class="talk-details">
-                <h6><a name="mo-fiebiger">Two Ember Apps Become One</a></h6>
-                <p>
-                  Have you ever imagined how you would be challenged to embed one Ember app inside another? Well, if you
-                  have, then you’re in luck and if you haven’t, buckle up, because it’s gonna be a weird 30 minutes!
-                </p>
-                <p>
-                  Just like every developer, here at Phorest, we are all dealing with the impact of legacy code. In turn
-                  this can lead to difficult decisions, but even more creative solutions. While migrating our entire
-                  system to a browser only product, we found a solution to embed our older Ember application into our
-                  current Ember application via… you guessed it… an iframe.
-                </p>
-                <p>
-                  With the tale of two apps becoming one, we can deliver a browser product to our users faster than
-                  ever. Alongside this, we will discuss the technical decisions made from rooting between the two
-                  applications all the way to standardising styles. What seemed impossible in the beginning now is a
-                  seamless experience of one magical Ember application inside another.
-                </p>
-                <div class="speaker-profile">
-                  <h6 class="speaker">Mo Fiebiger (she/her)</h6>
-                  <img src="/images/speakers/mo-fiebiger.jpeg" class="speaker">
-                  <p>
-                    Mo is a Software Engineer at Phorest Salon Software and her background is in visual arts and
-                    psychology. Before she started her masters in computer science, she had never written a single line
-                    of code. This was a challenge, but looking back, Mo feels taking the leap of faith was the best
-                    thing she has ever done. Now, Mo’s passion is being an advocate for diversity in tech and teaching
-                    others to grow their technical skills as a Co-host on Fizz Buzz Podcast.
-                  </p>
-                </div>
-              </td>
+          </tbody>
+        </table>
 
-            </tr>
-
+        <h5 class="day2">• Day 2 •</h5>
+        <h6>Oct 1, Friday</h6>
+        <div class="timezone-remark">(Times are local, CEST)</div>
+        <table class="table">
+          <thead>
             <tr>
-              <td class="schedule-table--timeslot">13:45&ndash;14:15</td>
-              <td class="talk-details">
-                <h6><a name="">Mock & Roll</a><span class="speaker"></h6>
-                <a class="youtube-link" href="https://www.youtube.com/watch?v=tOSqtIPxAsA">
-                  <i></i>
-                </a>
-                <p>
-                  Testing is usually the Achilles Heel of most teams, where knowledge is lacking and practice doesn’t
-                  necessarily translate in good standard guidelines. Throw mock into the mix, and the picture gets ever
-                  fuzzier. What to mock? What not to mock? Wait, what’s the difference between a mock and a stub??
-                  This talk will give the audience a practical mental framework of when to use each class of fake
-                  objects and methods we have at our disposal, with the specific flavour of Sinon.js.
-                </p>
-                <div class="speaker-profile">
-                  <h6 class="speaker">Gonçalo Morais</h6>
-                  <img src="/images/speakers/goncalo-morais.jpeg" class="speaker">
-                  <p>
-                    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in London.
-                    Recurse Center alumnus, digital nomad wannabe, jack of all trades because there are too many
-                    interesting things. Relatively new to Ember, he’s happy to have joined such a friendly community! He
-                    grows a beard most of the time.
-                  </p>
-                </div>
-              </td>
-
+              <th class="time">Time</th>
+              <th class="talk">Talk</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td class="schedule-table--timeslot">14:30&ndash;15:00</td>
+              <td class="schedule-table--timeslot">9:00</td>
               <td class="talk-details">
-                <h6><a name="panel-ember-at-scale">Panel: Ember at Scale</a></h6>
-                <a class="youtube-link" href="https://www.youtube.com/watch?v=47-9p8ODPLs">
-                  <i></i>
-                </a>
-                <p>
-                  In this panel, we’ll be talking about working with large scale Ember applications. Engineers from five
-                  well-known companies using Ember will share their experiences and challenges they run into. We’ll be
-                  discussing strategies to apply when working with large scale Ember apps as well as how Ember supports
-                  those use cases (and where it might fall short)
-                </p>
-                <p><strong class="content-strong">Panelists</strong></p>
-                <ul>
-                  <li><strong class="content-strong">Pat O'Callaghan</strong>, Intercom</li>
-                  <li><strong class="content-strong">Jamie White</strong>, HashiCorp</li>
-                  <li><strong class="content-strong">Melanie Sumner</strong>, HashiCorp, previously LinkedIn</li>
-                  <li><strong class="content-strong">Jan Buschtöns</strong>, CLARK</li>
-                  <li><strong class="content-strong">Chris Krycho</strong>, LinkedIn</li>
-                </ul>
+                <h6>Doors open</h6>
               </td>
             </tr>
+            {% for info in site.data.schedule.day2 %}
             <tr>
-              <td class="schedule-table--timeslot">15:00&ndash;15:30</td>
-              <td>Snack break</td>
-            </tr>
-            <tr>
-              <td class="schedule-table--timeslot">15:30&ndash;16:00</td>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+              <td>{{ info.text }}</td>
+              {% else %}
               <td class="talk-details">
-                <h6><a name="ignace-maes">Automated Visual Testing in Ember</a></h6>
-                <p>
-                  Ember gives developers the power to write tests and be confident about deployments. But have you ever
-                  made a change that broke your application layout while still passing all tests?
-                </p>
-                <p>
-                  In this talk we’ll explore the world of visual testing to keep your app pixel perfect and have that
-                  peace of mind when deploying. By the end, you should be able to understand how visual testing works
-                  and how to set it up in a reliable way, even for applications with complex data structures and time
-                  dependent logic.
-                </p>
+                <h6><a name="{{ info.id }}">{{ info.talk }}</a></h6>
+                {{ info.description}}
+                {% if info.speaker %}
                 <div class="speaker-profile">
-                  <h6 class="speaker">Ignace Maes</h6>
-                  <img src="/images/speakers/ignace-maes.jpeg" class="speaker">
-                  <p>
-                    I’m a software engineer from Belgium. As a passionate developer I love all things tech and did
-                    projects ranging from back-end and mobile app development, to front-end development as well. I’m
-                    currently working at OTA Insight where I’ve had the pleasure to build ambitious web applications
-                    with Ember for 4 years and counting.
-                  </p>
+                  <h6 class="speaker">{{ info.speaker }}</h6>
+                  <img src="/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  {{ info.bio }}
                 </div>
+                {% endif %}
+              </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+            </tr>
+          </tbody>
+        </table>
       </div>
-      </td>
-      </tr>
-      <tr>
-        <td class="schedule-table--timeslot">16:15&ndash;16:45</td>
-        <td class="talk-details">
-          <h6><a name="edward-faulkner">AMA with Ed Faulkner</a></h6>
-          <a class="youtube-link" href="https://www.youtube.com/watch?v=Fa2wPpGIQnU">
-            <i></i>
-          </a>
-          <p>A full slot dedicated to ask an Ember Core Team member everything you want to know about the framework,
-            ember-animated/liquid-fire, and his most recent work on Embroider.</p>
-          <div class="speaker-profile">
-            <h6 class="speaker">Ed Faulkner</h6>
-            <img src="/images/speakers/edward-faulkner.jpeg" class="speaker">
-            <p>
-              Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library.
-              His open source code is running on mainstream gaming consoles, major social media sites, and hordes of
-              enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse
-              group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing
-              group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security
-              infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
-              <br> <br> Ed resides in Somerville, Massachusetts with his wife and two sons.
-            </p>
-
-
-
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="schedule-table--timeslot">17:00&ndash;</td>
-        <td class="talk-details">
-          <h6><a name="happy-hour">Happy Hour(s) with Simplabs</a></h6>
-          <p>Grab a drink and talk to your friends, old and new!</p>
-        </td>
-      </tr>
-      </tbody>
-      </table>
-
-      <h5 class="day2">• Day 2 •</h5>
-      <h6>Oct 1, Friday</h6>
-      <div class="timezone-remark">(Times are local, CEST)</div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="time">Time</th>
-            <th class="talk">Talk</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="schedule-table--timeslot">9:00</td>
-            <td class="talk-details">
-              <h6>Doors open</h6>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">10:00&ndash;10:30</td>
-            <td class="talk-details">
-              <h6><a name="melanie-sumner">Accessibility in Ember: where we are, where we need to go, how to get
-                  involved</a></h6>
-              <a class="youtube-link" href="https://www.youtube.com/watch?v=byi4JPCXakw">
-                <i></i>
-              </a>
-              <p>TBA</p>
-              <div class="speaker-profile">
-                <h6 class="speaker">Melanie Sumner</h6>
-                <img src="/images/speakers/melanie-sumner.jpg" class="speaker">
-                <p>Melanie is a decorated, disabled military veteran who decided to turn her hobby (writing code) into
-                  her second career after her enlistment ended. She now works as a Senior Engineer in Design Systems at
-                  HashiCorp.
-                  She is an active member of the <a href="https://emberjs.com/team/" target="_blank"
-                    rel="noopener">Ember.js core team</a>, a member of the WAI-ARIA working group, and a judge for the
-                  <a href="https://cssdesignawards.com/" target="_blank" rel="noopener">CSS Design Awards</a>. She is
-                  also a member of the <a href="https://twitter.com/OpenSourceOrg" target="_blank" rel="noopener">Open
-                    Source Foundation</a> and the <a href="https://twitter.com/longnow" target="_blank"
-                    rel="noopener">Long Now Foundation</a>.</p>
-            </td>
-          </tr>
     </div>
-    <tr>
-      <td class="schedule-table--timeslot">10:45&ndash;11:15</td>
-      <td class="talk-details">
-        <h6><a name="tomek-niezurawski">Performance culture. New opportunities with Embroider</a></h6>
-        <p>
-          Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough
-          and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if
-          wanted to embrace performance culture, wasn’t able to actually iterate on the results.
-        </p>
-        <p>
-          In my talk, I’ll go through the goals we’ve set and how we accomplished some great results by using Embroider
-          and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I’ll
-          show what are the tools we use to make sure we keep the quality high.
-        </p>
-        <div class="speaker-profile">
-          <h6 class="speaker">Tomek Nieżurawski</h6>
-          <img src="/images/speakers/tomek-niezurawski.jpeg" class="speaker">
-          <p>
-            Tomek Nieżurawski, front-end dev by day, full-stack by night. Staff Engineer at Phorest. I love the Web and
-            creating user-centric interfaces. In my spare time, I work on an app for dog owners.
-          </p>
-      </td>
   </div>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">11:30&ndash;12:00</td>
-    <td class="talk-details">
-      <h6><a name="floris-list">Test as if you’re in someone else’s shoes</a></h6>
-      <p>
-        Having Ember historically so closely modelled to Ruby on Rails, it is easy to also apply the same approach in
-        writing tests for both. What has been shown in the last 10 or so years is that backends are fundamentally
-        different from frontends. This fundamental difference also requires a fundamentally different approach to
-        thinking about and writing tests. This shift in thinking can be difficult or underestimated by developers who
-        come from a Rails/backend background, which is the case for plenty of Ember developers. The result is a vast and
-        diverse pool of tests written using different patterns.
-      </p>
-      <p>
-        At Intercom we have done testing with and without thinking about the user first. Inevitably a code base being
-        worked on by many engineers brings many different patterns together. This results in a highly diverse test suite
-        that a lot can be learned from. Taking stock of whatever is present and seeing how we can improve upon what
-        exists following a set of guiding principles makes Intercom an org with ever improving code quality. This talk
-        will bring some real world examples of patterns (good and bad) that live within the Intercom codebase today. We
-        will (potentially) go over some refactoring of these real world examples to solidify the learnings and
-        principles outlined in the talk. With anecdotal evidence it becomes easier to see the power and value of user
-        centric testing.
-      </p>
-      <div class="speaker-profile">
-        <h6 class="speaker">Floris List</h6>
-        <img src="/images/speakers/floris-list.jpeg" class="speaker">
-        <p>
-          Currently a Product Engineer at Intercom, naturally very curious with a drive to understand how great products
-          are made from the ground up. On a continuous journey to thoroughly grasp the full stack of product
-          development, from frontend to DevOps to shipping at scale to a hint of design. Beyond technical stuff he loves
-          traveling across the globe and learning the different cuisines of countries he travels to (oh and coffee is
-          great).
-        </p>
-    </td>
-    </div>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">12:00&ndash;13:00</td>
-    <td>Lunch</td>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">13:00&ndash;13:30</td>
-    <td class="talk-details">
-      <h6><a name="goncalo-morais">Move Fast and (Don't) Break Things</a></h6>
-      <p>
-        Feature flags are a common way to deploy ongoing work into production and keep it under radar until it is ready
-        to be put in front of our users. The thing is: there is more thought that should be put into this practice, it’s
-        not just about flipping a switch to turn a feature on. Developer experience can be greatly affected if a team
-        doesn’t come up with processes around how to manage feature flags in an agile process.
-      </p>
-      <p>
-        Cleaning up feature flags gets forgotten and complexity accumulates. And how about tests, how do you make sure
-        all paths get properly covered? I will cover the good, the bad, and the ugly aspect of feature flags, how we can
-        put them into place effectively and, as a bonus, the extra benefits we get from this.
-      </p>
-      <div class="speaker-profile">
-        <h6 class="speaker">Gonçalo Morais</h6>
-        <img src="/images/speakers/goncalo-morais.jpeg" class="speaker">
-        <p>
-          Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in Lyon (France) and
-          working at CrowdStrike. Recurse Center alumnus, codebar London co-organiser, amateur ultrarunner & climber,
-          jack of all trades. Grows a beard most of the time.
-        </p>
-    </td>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">13:45&ndash;14:15</td>
-    <td class="talk-details">
-      <h6><a name="aymeric-augustin">A framework for ambitious companies</a></h6>
-      <p>
-        When we started building Qonto, we knew that the default path of piling up features would lead to a codebase
-        where it’s hard to implement changes and easy to create bugs. That’s why we adopted Ember.js. The framework
-        provided us with stable foundations and consistent practices, making it technically easy for our team of 50
-        engineers to build new features or make improvements in any domain of our apps.
-      </p>
-      <p>
-        Similarly, we know that the default path of growing a company by specializing teams leads to Big Company
-        Disease. Attempts to create economies of scale cut the connection with customers. Focus shifts to defining
-        scopes, setting up procedures, and standardizing work. Agile withers to solidified processes and tools, with
-        little care given to individuals and interactions. Team mood suffers.
-      </p>
-      <p>
-        What if we had a framework?
-      </p>
-      <div class="speaker-profile">
-        <h6 class="speaker">Aymeric Augustin</h6>
-        <img src="/images/speakers/aymeric-augustin.jpg" class="speaker">
-        <p>
-          I’m CTO at Qonto, the leading European business finance solution. I was a Django core developer for a decade,
-          contributing to most components of the framework and also to the governance of the project. These days I’m
-          focusing my open-source efforts on the websockets Python package. I spend most of my life keeping things as
-          simple as they can be and making it easy for engineers to build good code.
-        </p>
-    </td>
-    </div>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">14:30&ndash;15:00</td>
-    <td class="talk-details">
-      <h6><a name="l-preston-sego-iii">Let's do it Live!</a></h6>
-      <a class="youtube-link" href="https://www.youtube.com/watch?v=ME074uDJtfU">
-        <i></i>
-      </a>
-      <p>
-        Ever wanted to make a playground for your design system? Or maybe an interactive way to document your components
-        for whichever library?
-        With just a couple of "easy" steps, you can have some in-browser-editing fun, too!
-      </p>
-      <p>
-        This talk will go in to how to make a REPL/Playground, as well as things to consider when the playground content
-        is not vaild.
-      </p>
-      <div class="speaker-profile">
-        <h6 class="speaker">L. Preston Sego III</h6>
-        <img src="/images/speakers/zoe-bijl.jpg" class="speaker">
-        <p>
-          Preston is an open source advocate and Ember enthusiast who likes to hang out in the ember discord,
-          occasionally work on documentation, fix ember bugs, and submit RFCs. He also loves StarCraft, Swing Dancing,
-          and Quadcopter / Drone flying. (I also don't like writing bios about myself........ :) )
-        </p>
-    </td>
-    </div>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">15:00&ndash;15:30</td>
-    <td>Snack break</td>
-  </tr>
-  <tr>
-    <td class="schedule-table--timeslot">15:30&ndash;16:15</td>
-    </td>
-    <td class="talk-details">
-      <h6><a name="panel-future-of-ember">Panel: the future of Ember</a></h6>
-      <a class="youtube-link" href="https://www.youtube.com/watch?v=7WGKzK718fY">
-        <i></i>
-      </a>
-      <p>
-        To end the conference, we’ll be holding a panel to discuss the future of Ember. We’ll be talking about the most
-        important current initiatives that will shape Ember’s future as well as a longer term outlook. We’ll discuss
-        where web development is going in general and where Ember fits into that.
-      </p>
-      <p><strong class="content-strong">Panelists</strong></p>
-      <ul>
-        <li><strong class="content-strong">Tom Dale</strong>, LinkedIn</li>
-        <li><strong class="content-strong">Preston Sego</strong>, CrowdStrike</li>
-        <li><strong class="content-strong">Ed Faulkner</strong>, Cardstack</li>
-        <li><strong class="content-strong">Chris Manson</strong>, simplabs</li>
-      </ul>
-    </td>
-  </tr>
-  </tbody>
-  </table>
-
-  </div>
-  </div>
+</section>
