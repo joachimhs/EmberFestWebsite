@@ -1,0 +1,67 @@
+- time: 10:00 - 10:30
+  speaker: Bartlomiej Dudzik
+  talk: Data validation libraries in Ember
+  id: bartlomiej-dudzik
+  description: description1
+  bio: bio1
+
+- time: 10:45 - 11:15
+  speaker: Alexis Falaise
+  talk: Bootstrap your dashboard the right way
+  id: alexis-falaise
+  description: description2
+  bio: bio2
+
+- time: 11:30 - 12:00
+  speaker: Aaron Chambers
+  talk: "{{should-avoid this.renderModifiers butHow=true}}"
+  id: aaron-chambers
+  description: description3
+  bio: bio3
+
+- time: 12:00 - 13:00
+  isBreakTime: true
+  text: Lunch
+
+- time: 13:00 - 13:30
+  speaker: Mo Fiebiger
+  talk: Two Ember Apps Become One
+  id: mo-fiebiger
+  description: description4
+  bio: bio4
+
+- time: 13:45 - 14:15
+  speaker: Gonçalo Morais
+  talk: Mock & Roll
+  id: goncalo-morais
+  description: description4
+  bio: bio4
+
+- time: 14:30 - 15:00
+  speaker: Pat O'Callaghan, Jamie White, Melanie Sumner, Jan Buschtöns, Chris Krycho
+  talk: "Panel: Ember at Scale"
+  id: panel-ember-at-scale
+  description: description4
+  bio: bio4
+
+- time: 15:00 - 15:30
+  isBreakTime: true
+  text: Snack break
+
+- time: 15:30 - 16:00
+  speaker: Ignace Maes
+  talk: Automated Visual Testing in Ember
+  id: ignace-maes
+  description: description4
+  bio: bio4
+
+- time: 16:15 - 16:45
+  speaker: Ed Faulkner
+  talk: AMA with Ed Faulkner
+  id: edward-faulkner
+  description: description4
+  bio: bio4
+
+- time: "17:00"
+  isBreakTime: true
+  text: Happy Hour

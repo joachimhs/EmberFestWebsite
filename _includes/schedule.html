@@ -13,65 +13,18 @@
           </tr>
         </thead>
         <tbody>
+          {% for info in site.data.schedule.day1 %}
           <tr>
-            <td class="schedule-table--timeslot">10:00&ndash;10:30</td>
-            <td><a href="/schedule/#bartlomiej-dudzik">Data validation libraries in Ember</a><span
-                class="speaker">Bartlomiej Dudzik</span>
+            <td class="schedule-table--timeslot">{{ info.time }}</td>
+            {% if info.isBreakTime %}
+            <td>{{ info.text }}</td>
+            {% else %}
+            <td><a href="/schedule/#{{ info.id }}">{{ info.talk }}</a><span class="speaker">{{
+                info.speaker }}</span>
             </td>
+            {% endif %}
           </tr>
-          <tr>
-            <td class="schedule-table--timeslot">10:45&ndash;11:15</td>
-            <td><a href="/schedule/#alexis-falaise">Bootstrap your dashboard the right way</a><span
-                class="speaker">Alexis Falaise</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">11:30&ndash;12:00</td>
-            <td><a href="/schedule/#aaron-chambers"> &#123;&#123;should-avoid this.renderModifiers
-                butHow=true&#125;&#125;</a><span class="speaker">Aaron Chambers</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">12:00&ndash;13:00</td>
-            <td>Lunch</td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">13:00&ndash;13:30</td>
-            <td><a href="/schedule/#mo-fiebiger">Two Ember Apps Become One</a><span class="speaker">Mo Fiebiger</span>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="schedule-table--timeslot">13:45&ndash;14:15</td>
-            <td><a href="/schedule/#goncalo-morais">Mock & Roll</a><span class="speaker">Gonçalo Morais</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">14:30&ndash;15:00</td>
-            <td><a href="/schedule/#panel-ember-at-scale">Panel: Ember at Scale</a><span class="speaker">Pat
-                O'Callaghan, Jamie White, Melanie Sumner, Jan Buschtöns, Chris Krycho</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">15:00&ndash;15:30</td>
-            <td>Snack break</td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">15:30&ndash;16:00</td>
-            <td><a href="/schedule/#ignace-maes">Automated Visual Testing in Ember</a><span class="speaker">Ignace
-                Maes</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">16:15&ndash;16:45</td>
-            <td><a href="/schedule/#edward-faulkner">AMA with Ed Faulkner</a><span class="speaker">Ed Faulkner</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">17:00&ndash;</td>
-            <td><a href="/schedule/#happy-hour">Happy Hour</a><span class="speaker">Sponsored by Simplabs</span>
-            </td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
 
@@ -86,56 +39,18 @@
           </tr>
         </thead>
         <tbody>
+          {% for info in site.data.schedule.day2 %}
           <tr>
-            <td class="schedule-table--timeslot">10:00&ndash;10:30</td>
-            <td><a href="/schedule/#melanie-sumner">Accessibility in Ember: where we are, where we need to go, how to
-                get involved</a><span class="speaker">Melanie Sumner</span>
+            <td class="schedule-table--timeslot">{{ info.time }}</td>
+            {% if info.isBreakTime %}
+            <td>{{ info.text }}</td>
+            {% else %}
+            <td><a href="/schedule/#{{ info.id }}">{{ info.talk }}</a><span class="speaker">{{
+                info.speaker }}</span>
             </td>
+            {% endif %}
           </tr>
-          <tr>
-            <td class="schedule-table--timeslot">10:45&ndash;11:15</td>
-            <td><a href="/schedule/#tomek-niezurawski">Performance culture. New opportunities with Embroider</a><span
-                class="speaker">Tomek Nieżurawski</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">11:30&ndash;12:00</td>
-            <td><a href="/schedule/#floris-list">Test as if you’re in someone else’s shoes</a><span
-                class="speaker">Floris List</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">12:00&ndash;13:00</td>
-            <td>Lunch</td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">13:00&ndash;13:30</td>
-            <td><a href="/schedule/#goncalo-morais">Move Fast and (Don't) Break Things</a><span class="speaker">Gonçalo
-                Morais</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">13:45&ndash;14:15</td>
-            <td><a href="/schedule/#aymeric-augustin">A framework for ambitious companies</a><span
-                class="speaker">Aymeric Augustin</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">14:30&ndash;15:00</td>
-            <td><a href="/schedule/#l-preston-sego-iii">Let's do it Live!</a><span class="speaker">L. Preston Sego
-                III</span>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">15:00&ndash;15:30</td>
-            <td>Snack break</td>
-          </tr>
-          <tr>
-            <td class="schedule-table--timeslot">15:30&ndash;16:15</td>
-            </td>
-            <td><a href="/schedule/#panel-future-of-ember">Panel: The Future of Ember</a><span class="speaker">Tom Dale,
-                Preston Sego, Ed Faulkner, Chris Manson</span>
-            </td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
       <div class="full-schedule">

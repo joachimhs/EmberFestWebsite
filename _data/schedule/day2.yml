@@ -1,0 +1,67 @@
+- time: 10:00 - 10:30
+  speaker: Melanie Sumner
+  talk: "Accessibility in Ember: where we are, where we need to go, how to get involved"
+  id: melani-sumner
+  description: description1
+  bio: bio1
+
+- time: 10:45 - 11:15
+  speaker: Tomek Nieżurawski
+  talk: Performance culture. New opportunities with Embroider
+  id: tomek-niezurawski
+  description: description2
+  bio: bio2
+
+- time: 11:30 - 12:00
+  speaker: Floris List
+  talk: "Test as if you're in someone else's shoes"
+  id: floris-list
+  description: description3
+  bio: bio3
+
+- time: 12:00 - 13:00
+  isBreakTime: true
+  text: Lunch
+
+- time: 13:00 - 13:30
+  speaker: "Gonçalo Morais"
+  talk: "Move Fast and (Don't) Break Things"
+  id: goncalo-morais
+  description: description4
+  bio: bio4
+
+- time: 13:45 - 14:15
+  speaker: Aymeric Augustin
+  talk: "A framework for ambitious companies"
+  id: aymeric-augustin
+  description: description4
+  bio: bio4
+
+- time: 14:30 - 15:00
+  speaker: "Let's do it Live!"
+  talk: "L. Preston Sego III"
+  id: l-preston-sego-iii
+  description: description4
+  bio: bio4
+
+- time: 15:00 - 15:30
+  isBreakTime: true
+  text: Snack break
+
+- time: 15:30 - 16:00
+  speaker: "Tom Dale, Preston Sego, Ed Faulkner, Chris Manson"
+  talk: "Panel: The Future of Ember"
+  id: panel-future-of-ember
+  description: description4
+  bio: bio4
+
+- time: 16:15 - 16:45
+  speaker: id4
+  talk: talk4
+  id: id4
+  description: description4
+  bio: bio4
+
+- time: 17:00 -
+  isBreakTime: true
+  text: Dinner
