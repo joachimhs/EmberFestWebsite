@@ -1,20 +1,22 @@
 - time: 10:00 - 10:30
-  speaker: Melanie Sumner
-  talk: "Accessibility in Ember: where we are, where we need to go, how to get involved"
-  id: melanie-sumner
-  image_extension: jpg
+  speaker: Ed Faulkner
+  talk: TBA
+  id: edward-faulkner
+  image_extension: "jpeg"
   description: TBA
-  bio:
-    <p>Melanie is a decorated, disabled military veteran who decided to turn her hobby (writing code) into
-    her second career after her enlistment ended. She now works as a Senior Engineer in Design Systems
-    at
-    HashiCorp.
-    She is an active member of the <a href="https://emberjs.com/team/" target="_blank"
-    rel="noopener">Ember.js core team</a>, a member of the WAI-ARIA working group, and a judge for the
-    <a href="https://cssdesignawards.com/" target="_blank" rel="noopener">CSS Design Awards</a>. She is
-    also a member of the <a href="https://twitter.com/OpenSourceOrg" target="_blank" rel="noopener">Open
-    Source Foundation</a> and the <a href="https://twitter.com/longnow" target="_blank"
-    rel="noopener">Long Now Foundation</a>.
+  bio: <p>
+    Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
+    library.
+    His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+    of
+    enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a
+    diverse
+    group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social
+    Computing
+    group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale
+    security
+    infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+    <br> <br> Ed resides in Somerville, Massachusetts with his wife and two sons.
     </p>
 
 - time: 10:45 - 11:15
@@ -95,34 +97,23 @@
   text: Lunch
 
 - time: 13:00 - 13:30
-  speaker: "Gonçalo Morais"
-  talk: "Move Fast and (Don't) Break Things"
+  speaker: Gonçalo Morais
+  talk: Mock & Roll
   id: goncalo-morais
-  image_extension: jpeg
+  image_extension: "jpeg"
   description: "<p>
-    Feature flags are a common way to deploy ongoing work into production and keep it under radar until it is
-    ready
-    to be put in front of our users. The thing is: there is more thought that should be put into this practice,
-    it's
-    not just about flipping a switch to turn a feature on. Developer experience can be greatly affected if a
-    team
-    doesn't come up with processes around how to manage feature flags in an agile process.
-    </p>
-    <p>
-    Cleaning up feature flags gets forgotten and complexity accumulates. And how about tests, how do you make
-    sure
-    all paths get properly covered? I will cover the good, the bad, and the ugly aspect of feature flags, how we
-    can
-    put them into place effectively and, as a bonus, the extra benefits we get from this.
+    Testing is usually the Achilles Heel of most teams, where knowledge is lacking and practice doesn’t
+    necessarily translate in good standard guidelines. Throw mock into the mix, and the picture gets ever
+    fuzzier. What to mock? What not to mock? Wait, what’s the difference between a mock and a stub??
+    This talk will give the audience a practical mental framework of when to use each class of fake
+    objects and methods we have at our disposal, with the specific flavour of Sinon.js.
     </p>"
-  bio: <p>
-    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in Lyon
-    (France)
-    and
-    working at CrowdStrike. Recurse Center alumnus, codebar London co-organiser, amateur ultrarunner &
-    climber,
-    jack of all trades. Grows a beard most of the time.
-    </p>
+  bio: "<p>
+    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in London.
+    Recurse Center alumnus, digital nomad wannabe, jack of all trades because there are too many
+    interesting things. Relatively new to Ember, he’s happy to have joined such a friendly community! He
+    grows a beard most of the time.
+    </p>"
 
 - time: 13:45 - 14:15
   speaker: Aymeric Augustin
@@ -163,33 +154,24 @@
     </p>
 
 - time: 14:30 - 15:00
-  speaker: "Let's do it Live!"
-  talk: "L. Preston Sego III"
-  id: l-preston-sego-iii
-  image_extension: png
-  description: <p>
-    Ever wanted to make a playground for your design system? Or maybe an interactive way to document your
-    components
-    for whichever library?
-    With just a couple of "easy" steps, you can have some in-browser-editing fun, too!
-    </p>
-    <p>
-    This talk will go in to how to make a REPL/Playground, as well as things to consider when the playground
-    content
-    is not vaild.
-    </p>
-  bio: <p>
-    Preston is an open source advocate and Ember enthusiast who likes to hang out in the ember discord,
-    occasionally work on documentation, fix ember bugs, and submit RFCs. He also loves StarCraft, Swing
-    Dancing,
-    and Quadcopter / Drone flying. (I also don't like writing bios about myself........ :) )
-    </p>
+  speaker: Chris Manson
+  talk: TBA
+  id: chris-manson
+  image_extension: jpg
+  description: TBA
+  bio: TBA
 
 - time: 15:00 - 15:30
   isBreakTime: true
   text: Snack break
 
 - time: 15:30 - 16:00
+  talk: "Lightning talks: TBA"
+  id: lightning-talks
+  image_extension: jpg
+  description: TBA
+
+- time: 16:15 - 16:45
   talk: "Panel: The Future of Ember"
   id: panel-future-of-ember
   image_extension: jpg

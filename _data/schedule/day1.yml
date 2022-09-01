@@ -1,41 +1,29 @@
 - time: 10:00 - 10:30
-  speaker: Zoë Bijl
-  talk: Data validation libraries in Ember
-  id: zoe-bijl
-  image_extension: "jpg"
-  description:
-    "<p>For years ember community has been leaning on one of the two validation libraries ember-cp-validations
-    and ember-changeset they were playing out extremely well in pre-octane because they made it easy to
-    validate data and hook them up to the ember’s reactivity system all that was left for us developers
-    was to simply define the validations and call them in templates. But with tracked system it’s easier
-    than ever to integrate a validation library of your choice without the need to rely on just these
-    options</p>"
+  speaker: Melanie Sumner
+  talk: "Accessibility in Ember: where we are, where we need to go, how to get involved"
+  id: melanie-sumner
+  image_extension: jpg
+  description: TBA
   bio:
-    "<p>Coder, interested in almost everything that there is about our field - frontend through backend to
-    DevOps. Most of the time I code in Ember.js and Phoenix but also IAAC with Terraform, actually like
-    testing stuff too, though sometimes it's a love-hate relationship. Currently happily trying to
-    improve Ember Simple Auth while giving something back to the community.</p>"
+    <p>Melanie is a decorated, disabled military veteran who decided to turn her hobby (writing code) into
+    her second career after her enlistment ended. She now works as a Senior Engineer in Design Systems
+    at
+    HashiCorp.
+    She is an active member of the <a href="https://emberjs.com/team/" target="_blank"
+    rel="noopener">Ember.js core team</a>, a member of the WAI-ARIA working group, and a judge for the
+    <a href="https://cssdesignawards.com/" target="_blank" rel="noopener">CSS Design Awards</a>. She is
+    also a member of the <a href="https://twitter.com/OpenSourceOrg" target="_blank" rel="noopener">Open
+    Source Foundation</a> and the <a href="https://twitter.com/longnow" target="_blank"
+    rel="noopener">Long Now Foundation</a>.
+    </p>
 
 - time: 10:45 - 11:15
-  speaker: Alexis Falaise
-  talk: Bootstrap your dashboard the right way
-  id: alexis-falaise
-  image_extension: "png"
-  description: "<p>
-    Drawing on the web has never been straightforward, and multiple standards have been emerging to adress
-    that complexity. Whether you decide to opt for the versatility of HTML canvas, or keep closer to the
-    scalability and resilience of SVGs, choosing the right library to fulfill all product requirements can
-    be dreadful.
-    </p>
-    <p>
-    What are the critical questions to address when building a dashboard? How to keep accessibility in
-    mind? And first of all, which library should you go for when working with Ember?
-    </p>"
-  bio: "<p>
-    Hi ! I'm Alexis. I've been passionated with crafting intuitive interfaces for quite some time, and
-    I'm now taking that passion to another level working at Qonto. I spend most of my time listening to
-    (or making) music when not working on lines of code - when I can't do both 😄.
-    </p>"
+  speaker: Dries de Lange
+  talk: Building a phygital platform with Ember.js
+  id: dries-de-lange
+  image_extension: jpeg
+  description: TBA
+  bio: TBA
 
 - time: 11:30 - 12:00
   speaker: Aaron Chambers
@@ -96,48 +84,27 @@
     </p>"
 
 - time: 13:45 - 14:15
-  speaker: Gonçalo Morais
-  talk: Mock & Roll
-  id: goncalo-morais
-  image_extension: "jpeg"
+  speaker: Alexis Falaise
+  talk: Bootstrap your dashboard the right way
+  id: alexis-falaise
+  image_extension: "png"
   description: "<p>
-    Testing is usually the Achilles Heel of most teams, where knowledge is lacking and practice doesn’t
-    necessarily translate in good standard guidelines. Throw mock into the mix, and the picture gets ever
-    fuzzier. What to mock? What not to mock? Wait, what’s the difference between a mock and a stub??
-    This talk will give the audience a practical mental framework of when to use each class of fake
-    objects and methods we have at our disposal, with the specific flavour of Sinon.js.
+    Drawing on the web has never been straightforward, and multiple standards have been emerging to adress
+    that complexity. Whether you decide to opt for the versatility of HTML canvas, or keep closer to the
+    scalability and resilience of SVGs, choosing the right library to fulfill all product requirements can
+    be dreadful.
+    </p>
+    <p>
+    What are the critical questions to address when building a dashboard? How to keep accessibility in
+    mind? And first of all, which library should you go for when working with Ember?
     </p>"
   bio: "<p>
-    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in London.
-    Recurse Center alumnus, digital nomad wannabe, jack of all trades because there are too many
-    interesting things. Relatively new to Ember, he’s happy to have joined such a friendly community! He
-    grows a beard most of the time.
+    Hi ! I'm Alexis. I've been passionated with crafting intuitive interfaces for quite some time, and
+    I'm now taking that passion to another level working at Qonto. I spend most of my time listening to
+    (or making) music when not working on lines of code - when I can't do both 😄.
     </p>"
 
 - time: 14:30 - 15:00
-  talk: "Panel: Ember at Scale"
-  id: panel-ember-at-scale
-  image_extension: "jpg"
-  description: <p>
-    In this panel, we'll be talking about working with large scale Ember applications. Engineers from five
-    well-known companies using Ember will share their experiences and challenges they run into. We'll be
-    discussing strategies to apply when working with large scale Ember apps as well as how Ember supports
-    those use cases (and where it might fall short)
-    </p>
-    <p><strong class="content-strong">Panelists</strong></p>
-    <ul>
-    <li><strong class="content-strong">Pat O'Callaghan</strong>, Intercom</li>
-    <li><strong class="content-strong">Jamie White</strong>, HashiCorp</li>
-    <li><strong class="content-strong">Melanie Sumner</strong>, HashiCorp, previously LinkedIn</li>
-    <li><strong class="content-strong">Jan Buschtöns</strong>, CLARK</li>
-    <li><strong class="content-strong">Chris Krycho</strong>, LinkedIn</li>
-    </ul>
-
-- time: 15:00 - 15:30
-  isBreakTime: true
-  text: Snack break
-
-- time: 15:30 - 16:00
   speaker: Ignace Maes
   talk: Automated Visual Testing in Ember
   id: ignace-maes
@@ -159,29 +126,33 @@
     with Ember for 4 years and counting.
     </p>"
 
-- time: 16:15 - 16:45
-  speaker: Ed Faulkner
-  talk: AMA with Ed Faulkner
-  id: edward-faulkner
-  image_extension: "jpeg"
-  description:
-    <p>A full slot dedicated to ask an Ember Core Team member everything you want to know about the framework,
-    ember-animated/liquid-fire, and his most recent work on Embroider.</p>
-  bio: <p>
-    Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
-    library.
-    His open source code is running on mainstream gaming consoles, major social media sites, and hordes
-    of
-    enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a
-    diverse
-    group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social
-    Computing
-    group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale
-    security
-    infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
-    <br> <br> Ed resides in Somerville, Massachusetts with his wife and two sons.
-    </p>
-
-- time: "17:00"
+- time: 15:00 - 15:30
   isBreakTime: true
-  text: Happy Hour
+  text: Snack break
+
+- time: 15:30 - 16:00
+  talk: "Panel: Ember at Scale"
+  id: panel-ember-at-scale
+  image_extension: "jpg"
+  description: <p>
+    In this panel, we'll be talking about working with large scale Ember applications. Engineers from five
+    well-known companies using Ember will share their experiences and challenges they run into. We'll be
+    discussing strategies to apply when working with large scale Ember apps as well as how Ember supports
+    those use cases (and where it might fall short)
+    </p>
+    <p><strong class="content-strong">Panelists</strong></p>
+    <ul>
+    <li><strong class="content-strong">Pat O'Callaghan</strong>, Intercom</li>
+    <li><strong class="content-strong">Jamie White</strong>, HashiCorp</li>
+    <li><strong class="content-strong">Melanie Sumner</strong>, HashiCorp, previously LinkedIn</li>
+    <li><strong class="content-strong">Jan Buschtöns</strong>, CLARK</li>
+    <li><strong class="content-strong">Chris Krycho</strong>, LinkedIn</li>
+    </ul>
+
+- time: 16:15 - 16:45
+  speaker: Yehuda Katz
+  talk: TBA
+  id: yehuda-katz
+  image_extension: "jpeg"
+  description: TBA
+  bio: TBA
