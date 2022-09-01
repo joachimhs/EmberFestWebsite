@@ -79,6 +79,54 @@ enable_sponsors: true
     </div>
   </section>
 
+  <section class="organizers">
+    <div class="content">
+      <h3 class="divider">Organizers</h3>
+      <p>EmberFest is organized by</p>
+      <ul>
+        <li>
+          <img src="images/organizers/joschka-kintscher.jpeg" class="photo" />
+          <h4>Joschka Kintscher</h4>
+          <div class="links">
+            <a href="https://twitter.com/jkintscher"
+              ><img src="/images/icons/twitter-blue.svg"
+            /></a>
+            <a href="https://github.com/jkintscher">
+              <img src="/images/icons/link-blue.svg" />
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <img src="images/organizers/balint-erdi.jpeg" class="photo" />
+          <h4>Balint Erdi</h4>
+          <div class="links">
+            <a href="https://twitter.com/baaz"
+              ><img src="/images/icons/twitter-blue.svg"
+            /></a>
+            <a href="https://balinterdi.com/"
+              ><img src="/images/icons/link-blue.svg"
+            /></a>
+          </div>
+        </li>
+
+        <li>
+          <img src="/images/organizers/simplabs-blue-logo.svg" class="photo logo" />
+          <h4>simplabs</h4>
+          <div class="links">
+            <a href="https://twitter.com/simplabs"
+              ><img src="/images/icons/twitter-blue.svg"
+            /></a>
+            <a href="https://simplabs.com/">
+              <img src="/images/icons/link-blue.svg" />
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
   <section class="locations">
     <div class="venue tb_padding" id="conference-venue">
       <div class="container">
@@ -105,11 +153,14 @@ enable_sponsors: true
     </div>
   </section>
 
+
   {% if page.enable_sponsors %}
     {% include sponsors.html %}
   {% else %}
     {% include past_sponsors.html %}
   {% endif %}
+
+
 
   <section class="newsletter">
     <div class="content-wide">
