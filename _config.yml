@@ -6,4 +6,4 @@ sass:
 gems:
   - jekyll-sitemap
 
-exclude: [vendor]
+exclude: [vendor, schedule]
