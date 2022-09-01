@@ -1,23 +1,94 @@
 - time: 10:00 - 10:30
   speaker: Melanie Sumner
   talk: "Accessibility in Ember: where we are, where we need to go, how to get involved"
-  id: melani-sumner
-  description: description1
-  bio: bio1
+  id: melanie-sumner
+  image_extension: jpg
+  description: TBA
+  bio:
+    <p>Melanie is a decorated, disabled military veteran who decided to turn her hobby (writing code) into
+    her second career after her enlistment ended. She now works as a Senior Engineer in Design Systems
+    at
+    HashiCorp.
+    She is an active member of the <a href="https://emberjs.com/team/" target="_blank"
+    rel="noopener">Ember.js core team</a>, a member of the WAI-ARIA working group, and a judge for the
+    <a href="https://cssdesignawards.com/" target="_blank" rel="noopener">CSS Design Awards</a>. She is
+    also a member of the <a href="https://twitter.com/OpenSourceOrg" target="_blank" rel="noopener">Open
+    Source Foundation</a> and the <a href="https://twitter.com/longnow" target="_blank"
+    rel="noopener">Long Now Foundation</a>.
+    </p>
 
 - time: 10:45 - 11:15
   speaker: Tomek Nieżurawski
   talk: Performance culture. New opportunities with Embroider
   id: tomek-niezurawski
-  description: description2
-  bio: bio2
+  image_extension: jpeg
+  description: <p>
+    Performance culture is a unique culture that is not often seen among companies. Only the ones that
+    care
+    enough
+    and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even
+    if
+    wanted to embrace performance culture, wasn't able to actually iterate on the results.
+    </p>
+    <p>
+    In my talk, I'll go through the goals we've set and how we accomplished some great results by using
+    Embroider
+    and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for
+    you.
+    I'll
+    show what are the tools we use to make sure we keep the quality high.
+    </p>
+  bio: <p>
+    Tomek Nieżurawski, front-end dev by day, full-stack by night. Staff Engineer at Phorest. I love the
+    Web
+    and
+    creating user-centric interfaces. In my spare time, I work on an app for dog owners.
+    </p>
 
 - time: 11:30 - 12:00
   speaker: Floris List
   talk: "Test as if you're in someone else's shoes"
   id: floris-list
-  description: description3
-  bio: bio3
+  image_extension: jpeg
+  description: <p>
+    Having Ember historically so closely modelled to Ruby on Rails, it is easy to also apply the same approach
+    in
+    writing tests for both. What has been shown in the last 10 or so years is that backends are fundamentally
+    different from frontends. This fundamental difference also requires a fundamentally different approach to
+    thinking about and writing tests. This shift in thinking can be difficult or underestimated by developers
+    who
+    come from a Rails/backend background, which is the case for plenty of Ember developers. The result is a vast
+    and
+    diverse pool of tests written using different patterns.
+    </p>
+    <p>
+    At Intercom we have done testing with and without thinking about the user first. Inevitably a code base
+    being
+    worked on by many engineers brings many different patterns together. This results in a highly diverse test
+    suite
+    that a lot can be learned from. Taking stock of whatever is present and seeing how we can improve upon what
+    exists following a set of guiding principles makes Intercom an org with ever improving code quality. This
+    talk
+    will bring some real world examples of patterns (good and bad) that live within the Intercom codebase today.
+    We
+    will (potentially) go over some refactoring of these real world examples to solidify the learnings and
+    principles outlined in the talk. With anecdotal evidence it becomes easier to see the power and value of
+    user
+    centric testing.
+    </p>
+  bio: <p>
+    Currently a Product Engineer at Intercom, naturally very curious with a drive to understand how
+    great
+    products
+    are made from the ground up. On a continuous journey to thoroughly grasp the full stack of product
+    development, from frontend to DevOps to shipping at scale to a hint of design. Beyond technical
+    stuff he
+    loves
+    traveling across the globe and learning the different cuisines of countries he travels to (oh and
+    coffee
+    is
+    great).
+    </p>
 
 - time: 12:00 - 13:00
   isBreakTime: true
@@ -27,40 +98,114 @@
   speaker: "Gonçalo Morais"
   talk: "Move Fast and (Don't) Break Things"
   id: goncalo-morais
-  description: description4
-  bio: bio4
+  image_extension: jpeg
+  description: "<p>
+    Feature flags are a common way to deploy ongoing work into production and keep it under radar until it is
+    ready
+    to be put in front of our users. The thing is: there is more thought that should be put into this practice,
+    it's
+    not just about flipping a switch to turn a feature on. Developer experience can be greatly affected if a
+    team
+    doesn't come up with processes around how to manage feature flags in an agile process.
+    </p>
+    <p>
+    Cleaning up feature flags gets forgotten and complexity accumulates. And how about tests, how do you make
+    sure
+    all paths get properly covered? I will cover the good, the bad, and the ugly aspect of feature flags, how we
+    can
+    put them into place effectively and, as a bonus, the extra benefits we get from this.
+    </p>"
+  bio: <p>
+    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in Lyon
+    (France)
+    and
+    working at CrowdStrike. Recurse Center alumnus, codebar London co-organiser, amateur ultrarunner &
+    climber,
+    jack of all trades. Grows a beard most of the time.
+    </p>
 
 - time: 13:45 - 14:15
   speaker: Aymeric Augustin
   talk: "A framework for ambitious companies"
   id: aymeric-augustin
-  description: description4
-  bio: bio4
+  image_extension: jpg
+  description: <p>
+    When we started building Qonto, we knew that the default path of piling up features would lead to a
+    codebase
+    where it's hard to implement changes and easy to create bugs. That's why we adopted Ember.js. The
+    framework
+    provided us with stable foundations and consistent practices, making it technically easy for our team
+    of 50
+    engineers to build new features or make improvements in any domain of our apps.
+    </p>
+    <p>
+    Similarly, we know that the default path of growing a company by specializing teams leads to Big
+    Company
+    Disease. Attempts to create economies of scale cut the connection with customers. Focus shifts to
+    defining
+    scopes, setting up procedures, and standardizing work. Agile withers to solidified processes and
+    tools, with
+    little care given to individuals and interactions. Team mood suffers.
+    </p>
+    <p>
+    What if we had a framework?
+    </p>
+  bio: <p>
+    I'm CTO at Qonto, the leading European business finance solution. I was a Django core developer for
+    a
+    decade,
+    contributing to most components of the framework and also to the governance of the project. These
+    days I'm
+    focusing my open-source efforts on the websockets Python package. I spend most of my life keeping
+    things
+    as
+    simple as they can be and making it easy for engineers to build good code.
+    </p>
 
 - time: 14:30 - 15:00
   speaker: "Let's do it Live!"
   talk: "L. Preston Sego III"
   id: l-preston-sego-iii
-  description: description4
-  bio: bio4
+  image_extension: png
+  description: <p>
+    Ever wanted to make a playground for your design system? Or maybe an interactive way to document your
+    components
+    for whichever library?
+    With just a couple of "easy" steps, you can have some in-browser-editing fun, too!
+    </p>
+    <p>
+    This talk will go in to how to make a REPL/Playground, as well as things to consider when the playground
+    content
+    is not vaild.
+    </p>
+  bio: <p>
+    Preston is an open source advocate and Ember enthusiast who likes to hang out in the ember discord,
+    occasionally work on documentation, fix ember bugs, and submit RFCs. He also loves StarCraft, Swing
+    Dancing,
+    and Quadcopter / Drone flying. (I also don't like writing bios about myself........ :) )
+    </p>
 
 - time: 15:00 - 15:30
   isBreakTime: true
   text: Snack break
 
 - time: 15:30 - 16:00
-  speaker: "Tom Dale, Preston Sego, Ed Faulkner, Chris Manson"
   talk: "Panel: The Future of Ember"
   id: panel-future-of-ember
-  description: description4
-  bio: bio4
-
-- time: 16:15 - 16:45
-  speaker: id4
-  talk: talk4
-  id: id4
-  description: description4
-  bio: bio4
+  image_extension: jpg
+  description: <p>
+    To end the conference, we'll be holding a panel to discuss the future of Ember. We'll be talking about the
+    most
+    important current initiatives that will shape Ember's future as well as a longer term outlook. We'll discuss
+    where web development is going in general and where Ember fits into that.
+    </p>
+    <p><strong class="content-strong">Panelists</strong></p>
+    <ul>
+    <li><strong class="content-strong">Tom Dale</strong>, LinkedIn</li>
+    <li><strong class="content-strong">Preston Sego</strong>, CrowdStrike</li>
+    <li><strong class="content-strong">Ed Faulkner</strong>, Cardstack</li>
+    <li><strong class="content-strong">Chris Manson</strong>, simplabs</li>
+    </ul>
 
 - time: 17:00 -
   isBreakTime: true

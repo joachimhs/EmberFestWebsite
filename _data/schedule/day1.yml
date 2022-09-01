@@ -1,23 +1,66 @@
 - time: 10:00 - 10:30
-  speaker: Bartlomiej Dudzik
+  speaker: Zoë Bijl
   talk: Data validation libraries in Ember
-  id: bartlomiej-dudzik
-  description: description1
-  bio: bio1
+  id: zoe-bijl
+  image_extension: "jpg"
+  description:
+    "<p>For years ember community has been leaning on one of the two validation libraries ember-cp-validations
+    and ember-changeset they were playing out extremely well in pre-octane because they made it easy to
+    validate data and hook them up to the ember’s reactivity system all that was left for us developers
+    was to simply define the validations and call them in templates. But with tracked system it’s easier
+    than ever to integrate a validation library of your choice without the need to rely on just these
+    options</p>"
+  bio:
+    "<p>Coder, interested in almost everything that there is about our field - frontend through backend to
+    DevOps. Most of the time I code in Ember.js and Phoenix but also IAAC with Terraform, actually like
+    testing stuff too, though sometimes it's a love-hate relationship. Currently happily trying to
+    improve Ember Simple Auth while giving something back to the community.</p>"
 
 - time: 10:45 - 11:15
   speaker: Alexis Falaise
   talk: Bootstrap your dashboard the right way
   id: alexis-falaise
-  description: description2
-  bio: bio2
+  image_extension: "png"
+  description: "<p>
+    Drawing on the web has never been straightforward, and multiple standards have been emerging to adress
+    that complexity. Whether you decide to opt for the versatility of HTML canvas, or keep closer to the
+    scalability and resilience of SVGs, choosing the right library to fulfill all product requirements can
+    be dreadful.
+    </p>
+    <p>
+    What are the critical questions to address when building a dashboard? How to keep accessibility in
+    mind? And first of all, which library should you go for when working with Ember?
+    </p>"
+  bio: "<p>
+    Hi ! I'm Alexis. I've been passionated with crafting intuitive interfaces for quite some time, and
+    I'm now taking that passion to another level working at Qonto. I spend most of my time listening to
+    (or making) music when not working on lines of code - when I can't do both 😄.
+    </p>"
 
 - time: 11:30 - 12:00
   speaker: Aaron Chambers
   talk: "{{should-avoid this.renderModifiers butHow=true}}"
   id: aaron-chambers
-  description: description3
-  bio: bio3
+  image_extension: "jpeg"
+  description: "<p>
+    The ember-render-modifiers README states that the modifiers are “very useful for quickly bridging the
+    gap between classic components and Glimmer components, but they are still generally an anti-pattern.”
+    It also says that you should “rethink your functionality rather than use these modifiers as a
+    crutch.”.
+    </p>
+    <p>
+    However, the README doesn’t give any real guidance on what we should do instead.
+    </p>
+    <p>
+    In this talk I’m explain why these modifiers are problematic and explore the two main use cases I’ve
+    seen ember-render-modifiers used for and how we can go about replacing them with modern Ember patterns
+    that will set us up for success in the future. And finally, after this talk, we’ll have a resource to
+    which we can point future engineers when they scratch their heads about how to avoid these modifiers.
+    </p>"
+  bio: "<p>
+    Senior Product Engineer, helping enable engineers and increasing developer productivity @ Intercom.
+    I help organize Ember Europe and I co-authored that deployment thing a while back.
+    </p>"
 
 - time: 12:00 - 13:00
   isBreakTime: true
@@ -27,22 +70,68 @@
   speaker: Mo Fiebiger
   talk: Two Ember Apps Become One
   id: mo-fiebiger
-  description: description4
-  bio: bio4
+  image_extension: "jpeg"
+  description: "<p>
+    Have you ever imagined how you would be challenged to embed one Ember app inside another? Well, if you
+    have, then you’re in luck and if you haven’t, buckle up, because it’s gonna be a weird 30 minutes!
+    </p>
+    <p>
+    Just like every developer, here at Phorest, we are all dealing with the impact of legacy code. In turn
+    this can lead to difficult decisions, but even more creative solutions. While migrating our entire
+    system to a browser only product, we found a solution to embed our older Ember application into our
+    current Ember application via… you guessed it… an iframe.
+    </p>
+    <p>
+    With the tale of two apps becoming one, we can deliver a browser product to our users faster than
+    ever. Alongside this, we will discuss the technical decisions made from rooting between the two
+    applications all the way to standardising styles. What seemed impossible in the beginning now is a
+    seamless experience of one magical Ember application inside another.
+    </p>"
+  bio: "<p>
+    Mo is a Software Engineer at Phorest Salon Software and her background is in visual arts and
+    psychology. Before she started her masters in computer science, she had never written a single line
+    of code. This was a challenge, but looking back, Mo feels taking the leap of faith was the best
+    thing she has ever done. Now, Mo’s passion is being an advocate for diversity in tech and teaching
+    others to grow their technical skills as a Co-host on Fizz Buzz Podcast.
+    </p>"
 
 - time: 13:45 - 14:15
   speaker: Gonçalo Morais
   talk: Mock & Roll
   id: goncalo-morais
-  description: description4
-  bio: bio4
+  image_extension: "jpeg"
+  description: "<p>
+    Testing is usually the Achilles Heel of most teams, where knowledge is lacking and practice doesn’t
+    necessarily translate in good standard guidelines. Throw mock into the mix, and the picture gets ever
+    fuzzier. What to mock? What not to mock? Wait, what’s the difference between a mock and a stub??
+    This talk will give the audience a practical mental framework of when to use each class of fake
+    objects and methods we have at our disposal, with the specific flavour of Sinon.js.
+    </p>"
+  bio: "<p>
+    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in London.
+    Recurse Center alumnus, digital nomad wannabe, jack of all trades because there are too many
+    interesting things. Relatively new to Ember, he’s happy to have joined such a friendly community! He
+    grows a beard most of the time.
+    </p>"
 
 - time: 14:30 - 15:00
-  speaker: Pat O'Callaghan, Jamie White, Melanie Sumner, Jan Buschtöns, Chris Krycho
   talk: "Panel: Ember at Scale"
   id: panel-ember-at-scale
-  description: description4
-  bio: bio4
+  image_extension: "jpg"
+  description: <p>
+    In this panel, we'll be talking about working with large scale Ember applications. Engineers from five
+    well-known companies using Ember will share their experiences and challenges they run into. We'll be
+    discussing strategies to apply when working with large scale Ember apps as well as how Ember supports
+    those use cases (and where it might fall short)
+    </p>
+    <p><strong class="content-strong">Panelists</strong></p>
+    <ul>
+    <li><strong class="content-strong">Pat O'Callaghan</strong>, Intercom</li>
+    <li><strong class="content-strong">Jamie White</strong>, HashiCorp</li>
+    <li><strong class="content-strong">Melanie Sumner</strong>, HashiCorp, previously LinkedIn</li>
+    <li><strong class="content-strong">Jan Buschtöns</strong>, CLARK</li>
+    <li><strong class="content-strong">Chris Krycho</strong>, LinkedIn</li>
+    </ul>
 
 - time: 15:00 - 15:30
   isBreakTime: true
@@ -52,15 +141,46 @@
   speaker: Ignace Maes
   talk: Automated Visual Testing in Ember
   id: ignace-maes
-  description: description4
-  bio: bio4
+  image_extension: "jpeg"
+  description: "<p>
+    Ember gives developers the power to write tests and be confident about deployments. But have you ever
+    made a change that broke your application layout while still passing all tests?
+    </p>
+    <p>
+    In this talk we’ll explore the world of visual testing to keep your app pixel perfect and have that
+    peace of mind when deploying. By the end, you should be able to understand how visual testing works
+    and how to set it up in a reliable way, even for applications with complex data structures and time
+    dependent logic.
+    </p>"
+  bio: "<p>
+    I’m a software engineer from Belgium. As a passionate developer I love all things tech and did
+    projects ranging from back-end and mobile app development, to front-end development as well. I’m
+    currently working at OTA Insight where I’ve had the pleasure to build ambitious web applications
+    with Ember for 4 years and counting.
+    </p>"
 
 - time: 16:15 - 16:45
   speaker: Ed Faulkner
   talk: AMA with Ed Faulkner
   id: edward-faulkner
-  description: description4
-  bio: bio4
+  image_extension: "jpeg"
+  description:
+    <p>A full slot dedicated to ask an Ember Core Team member everything you want to know about the framework,
+    ember-animated/liquid-fire, and his most recent work on Embroider.</p>
+  bio: <p>
+    Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
+    library.
+    His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+    of
+    enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a
+    diverse
+    group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social
+    Computing
+    group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale
+    security
+    infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+    <br> <br> Ed resides in Somerville, Massachusetts with his wife and two sons.
+    </p>
 
 - time: "17:00"
   isBreakTime: true
