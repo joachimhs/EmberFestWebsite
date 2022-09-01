@@ -14,6 +14,17 @@
 			</div>
 			{% endif %}
 
+			{% if site.data.sponsors.dinner %}
+			<h4>Dinner Sponsor</h4>
+			<div class="sponsors-grid premier-partners">
+				{% for dinner_sponsor in site.data.sponsors.dinner %}
+				<a href="{{ dinner_sponsor.link }}">
+					<img src="/images/sponsors/{{dinner_sponsor.logo}}.svg" />
+				</a>
+				{% endfor %}
+			</div>
+			{% endif %}
+
 			{% if site.data.sponsors.partners %}
 			<h5>Partners</h5>
 			<div class="sponsors-grid partners">
