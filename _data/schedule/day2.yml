@@ -158,7 +158,7 @@
   talk: Bottled Ember - Batteries Included Web Framework, tiny tiny living space
   id: chris-manson
   image_extension: png
-  description: TBA
+  description: <p>All Ember addons come with the concept of a “dummy app”. This has been super useful to test our addons and has even been part of the reason why we have been able to support so many different versions of Ember from a single addon using ember-try scenarios. This talk gives a bit of detail on how things work with “classic” V1 addons and dummy apps and talks a little bit about why this can’t work for new Embroider V2 addons.</p><p>I will then go into a detail on a particular setup that could bring the simplicity and magic of dummy apps to the standards focused Embroider world. This should make it super easy for developers to tests their apps in all the versions of Ember that they want to.</p>
   bio: Developer at @simplabs, creator of Empress and member of the Ember Core Learning Team
 
 - time: 15:00 - 15:30
