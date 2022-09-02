@@ -1,9 +1,9 @@
 - time: 10:00 - 10:30
   speaker: Melanie Sumner
-  talk: "Accessibility in Ember: where we are, where we need to go, how to get involved"
+  talk: "Universal Design: A new process for better apps"
   id: melanie-sumner
   image_extension: jpg
-  description: TBA
+  description: "<p>In this talk, you will learn about Universal Design: what it is and what it isn't; the principles behind Universal Design; how it's already being used in other industries; and how you can apply some of these principles while building your apps for improved outcomes for all users.</p>"
   bio:
     <p>Melanie is a decorated, disabled military veteran who decided to turn her hobby (writing code) into
     her second career after her enlistment ended. She now works as a Senior Engineer in Design Systems
