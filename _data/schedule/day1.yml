@@ -151,8 +151,8 @@
 
 - time: 16:15 - 16:45
   speaker: Yehuda Katz
-  talk: TBA
+  talk: Starbeam, and what it means for Ember
   id: yehuda-katz
   image_extension: "jpeg"
   description: TBA
-  bio: TBA
+  bio: <p>Yehuda Katz is passionate about all things Open Source. He is one of the creators of Ember.js, a member of the Rust Core Team, and a retired member of the Ruby on Rails and jQuery Core Teams. He is a member of ECMAScript's TC39 standards committee, and a former member of the W3C's TAG (Technical Architecture Group).  His 9-to-5 home is at the startup he founded, <a href="http://www.tilde.io/">Tilde Inc.</a>. There he works on <a href="https://www.skylight.io/">Skylight</a>, the smart profiler for Rails, and does Ember.js consulting.</p>
