@@ -3,7 +3,7 @@
   talk: Routing in Polaris
   id: edward-faulkner
   image_extension: "jpeg"
-  description: TBA
+  description: 
   bio: <p>
     Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
     library.
@@ -157,7 +157,7 @@
   speaker: Chris Manson
   talk: Bottled Ember - Batteries Included Web Framework, tiny tiny living space
   id: chris-manson
-  image_extension: png
+  image_extension: jpg
   description: <p>All Ember addons come with the concept of a “dummy app”. This has been super useful to test our addons and has even been part of the reason why we have been able to support so many different versions of Ember from a single addon using ember-try scenarios. This talk gives a bit of detail on how things work with “classic” V1 addons and dummy apps and talks a little bit about why this can’t work for new Embroider V2 addons.</p><p>I will then go into a detail on a particular setup that could bring the simplicity and magic of dummy apps to the standards focused Embroider world. This should make it super easy for developers to tests their apps in all the versions of Ember that they want to.</p>
   bio: Developer at @simplabs, creator of Empress and member of the Ember Core Learning Team
 
@@ -175,20 +175,8 @@
   talk: "Panel: The Future of Ember"
   id: panel-future-of-ember
   image_extension: jpg
-  description: <p>
-    To end the conference, we'll be holding a panel to discuss the future of Ember. We'll be talking about the
-    most
-    important current initiatives that will shape Ember's future as well as a longer term outlook. We'll discuss
-    where web development is going in general and where Ember fits into that.
-    </p>
-    <p><strong class="content-strong">Panelists</strong></p>
-    <ul>
-    <li><strong class="content-strong">Tom Dale</strong>, LinkedIn</li>
-    <li><strong class="content-strong">Preston Sego</strong>, CrowdStrike</li>
-    <li><strong class="content-strong">Ed Faulkner</strong>, Cardstack</li>
-    <li><strong class="content-strong">Chris Manson</strong>, simplabs</li>
-    </ul>
+  description: 
 
-- time: 17:00 -
+- time: ~19:00 -
   isBreakTime: true
   text: Dinner

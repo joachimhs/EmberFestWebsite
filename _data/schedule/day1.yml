@@ -131,28 +131,15 @@
   text: Snack break
 
 - time: 15:30 - 16:00
-  talk: "Panel: Ember at Scale"
-  id: panel-ember-at-scale
+  talk: "Panel: Data in Ember"
+  id: panel-data-in-ember
   image_extension: "jpg"
-  description: <p>
-    In this panel, we'll be talking about working with large scale Ember applications. Engineers from five
-    well-known companies using Ember will share their experiences and challenges they run into. We'll be
-    discussing strategies to apply when working with large scale Ember apps as well as how Ember supports
-    those use cases (and where it might fall short)
-    </p>
-    <p><strong class="content-strong">Panelists</strong></p>
-    <ul>
-    <li><strong class="content-strong">Pat O'Callaghan</strong>, Intercom</li>
-    <li><strong class="content-strong">Jamie White</strong>, HashiCorp</li>
-    <li><strong class="content-strong">Melanie Sumner</strong>, HashiCorp, previously LinkedIn</li>
-    <li><strong class="content-strong">Jan Buschtöns</strong>, CLARK</li>
-    <li><strong class="content-strong">Chris Krycho</strong>, LinkedIn</li>
-    </ul>
+  description: 
 
 - time: 16:15 - 16:45
   speaker: Yehuda Katz
   talk: Starbeam, and what it means for Ember
   id: yehuda-katz
   image_extension: "jpeg"
-  description: TBA
+  description: 
   bio: <p>Yehuda Katz is passionate about all things Open Source. He is one of the creators of Ember.js, a member of the Rust Core Team, and a retired member of the Ruby on Rails and jQuery Core Teams. He is a member of ECMAScript's TC39 standards committee, and a former member of the W3C's TAG (Technical Architecture Group).  His 9-to-5 home is at the startup he founded, <a href="http://www.tilde.io/">Tilde Inc.</a>. There he works on <a href="https://www.skylight.io/">Skylight</a>, the smart profiler for Rails, and does Ember.js consulting.</p>
