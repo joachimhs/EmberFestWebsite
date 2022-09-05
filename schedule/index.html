@@ -38,7 +38,9 @@ title: Schedule
                 {% if info.speaker %}
                 <div class="speaker-profile">
                   <h6 class="speaker">{{ info.speaker }}</h6>
+                  {% if info.image_extension %}
                   <img src="/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  {% endif %}
                   {{ info.bio }}
                 </div>
                 {% endif %}
