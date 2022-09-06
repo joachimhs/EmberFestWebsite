@@ -98,21 +98,18 @@
 
 - time: 13:00 - 13:30
   speaker: Gonçalo Morais
-  talk: Mock & Roll
+  talk: Move Fast and (Don't) Break Things by Gonçalo Morais
   id: goncalo-morais
   image_extension: "jpeg"
   description: "<p>
-    Testing is usually the Achilles Heel of most teams, where knowledge is lacking and practice doesn’t
-    necessarily translate in good standard guidelines. Throw mock into the mix, and the picture gets ever
-    fuzzier. What to mock? What not to mock? Wait, what’s the difference between a mock and a stub??
-    This talk will give the audience a practical mental framework of when to use each class of fake
-    objects and methods we have at our disposal, with the specific flavour of Sinon.js.
+    Feature flags are a common way to deploy ongoing work into production and keep it under radar until it is ready to be put in front of our users. The thing is: there is more thought that should be put into this practice, it’s not just about flipping a switch to turn a feature on. Developer experience can be greatly affected if a team doesn’t come up with processes around how to manage feature flags in an agile process.
+    </p>
+
+    <p>
+    Cleaning up feature flags gets forgotten and complexity accumulates. And how about tests, how do you make sure all paths get properly covered? I will cover the good, the bad, and the ugly aspect of feature flags, how we can put them into place effectively and, as a bonus, the extra benefits we get from this.
     </p>"
   bio: "<p>
-    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in London.
-    Recurse Center alumnus, digital nomad wannabe, jack of all trades because there are too many
-    interesting things. Relatively new to Ember, he’s happy to have joined such a friendly community! He
-    grows a beard most of the time.
+    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in Lyon (France) and working at CrowdStrike. Recurse Center alumnus, codebar London co-organiser, amateur ultrarunner & climber, jack of all trades. Grows a beard most of the time.
     </p>"
 
 - time: 13:45 - 14:15
