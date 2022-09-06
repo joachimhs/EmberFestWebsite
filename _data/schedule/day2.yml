@@ -169,9 +169,9 @@
   description:
 
 - time: 16:15 - 16:45
+  speaker: <ul><li>Chris Manson</li><li>Ed Faulkner</li><li>Chris Krycho</li><li>Melanie Sumner</li></ul>
   talk: "Panel: The Future of Ember"
   id: panel-future-of-ember
-  image_extension: jpg
   description: 
 
 - time: ~19:00 -
