@@ -18,7 +18,7 @@ html {
   background-size: cover;
   text-align: center;
   padding-top: 134px;
-  padding-bottom: 298px;
+  padding-bottom: 400px;
 
   &__title {
     color: rgb(255, 248, 238);
@@ -62,6 +62,7 @@ html {
     letter-spacing: 1.78px;
     display: flex;
     align-items: center;
+    box-shadow: rgba(42, 59, 144, 0.25) 0px 54px 55px, rgba(42, 59, 144, 0.12) 0px -12px 30px, rgba(42, 59, 144, 0.12) 0px 4px 6px, rgba(42, 59, 144, 0.17) 0px 12px 13px, rgba(42, 59, 144, 0.09) 0px -3px 5px;
 
     @include tablet {
       font-size: 18px;
