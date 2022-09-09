@@ -18,7 +18,7 @@ html {
   background-size: cover;
   text-align: center;
   padding-top: 134px;
-  padding-bottom: 400px;
+  padding-bottom: 380px;
 
   &__title {
     color: rgb(255, 248, 238);
@@ -55,18 +55,18 @@ html {
     @include button;
     text-transform: uppercase;
     margin: 24px auto 0;
-    padding: 23px 63px;
-    font-size: 16px;
+    padding: 28px 68px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 19px;
+    line-height: 22px;
     letter-spacing: 1.78px;
     display: flex;
     align-items: center;
-    box-shadow: rgba(42, 59, 144, 0.25) 0px 54px 55px, rgba(42, 59, 144, 0.12) 0px -12px 30px, rgba(42, 59, 144, 0.12) 0px 4px 6px, rgba(42, 59, 144, 0.17) 0px 12px 13px, rgba(42, 59, 144, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     @include tablet {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 20px;
+      line-height: 24px;
       letter-spacing: 2px;
     }
 
@@ -210,11 +210,13 @@ section {
     .links {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 12px;
       flex-direction: column;
 
       @include tablet {
         flex-direction: row;
+        gap: 72px;
       }
 
       a {
@@ -224,17 +226,16 @@ section {
         align-items: center;
         justify-content: center;
         margin-bottom: 16px;
-        padding: 24px 0;
+        padding: 16px 0;
 
         @include tablet {
-          width: 402px;
           margin-bottom: 124px;
         }
 
         img {
           width: 32px;
           height: 32px;
-          margin-bottom: 21px;
+          margin-bottom: 8px;
         }
       }
     }
