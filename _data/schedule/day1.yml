@@ -1,3 +1,7 @@
+- time: 09:00 - 10:00
+  isBreakTime: true
+  text: Doors open & Breakfast 
+
 - time: 10:00 - 10:30
   speaker: Melanie Sumner
   talk: "Universal Design: A new process for better apps"
