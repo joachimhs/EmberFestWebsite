@@ -1,13 +1,13 @@
 - time: 09:00 - 10:00
   isBreakTime: true
-  text: Doors open & Breakfast 
-  
+  text: Doors open & Breakfast
+
 - time: 10:00 - 10:30
   speaker: Ed Faulkner
   talk: Routing in Polaris
   id: edward-faulkner
   image_extension: "jpeg"
-  description: 
+  description:
   bio: <p>
     Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
     library.
@@ -160,7 +160,7 @@
   id: chris-manson
   image_extension: jpg
   description: <p>All Ember addons come with the concept of a “dummy app”. This has been super useful to test our addons and has even been part of the reason why we have been able to support so many different versions of Ember from a single addon using ember-try scenarios. This talk gives a bit of detail on how things work with “classic” V1 addons and dummy apps and talks a little bit about why this can’t work for new Embroider V2 addons.</p><p>I will then go into a detail on a particular setup that could bring the simplicity and magic of dummy apps to the standards focused Embroider world. This should make it super easy for developers to tests their apps in all the versions of Ember that they want to.</p>
-  bio: <p>Developer at @simplabs, creator of Empress and member of the Ember Core Learning Team.</p>
+  bio: <p>Developer at @Mainmatter, creator of Empress and member of the Ember Core Learning Team.</p>
 
 - time: 15:00 - 15:30
   isBreakTime: true
@@ -176,7 +176,7 @@
   speaker: <ul><li>Chris Manson</li><li>Ed Faulkner</li><li>Chris Krycho</li><li>Melanie Sumner</li></ul>
   talk: "Panel: The Future of Ember"
   id: panel-future-of-ember
-  description: 
+  description:
 
 - time: ~19:00 -
   isBreakTime: true
