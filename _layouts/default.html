@@ -10,7 +10,7 @@
     <meta name="content-language" content="en" />
     <meta name="publisher" content="EmberFest" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/{{ page.css | default: 'app' }}.css" />
   </head>
   <body>
     {{ content }}

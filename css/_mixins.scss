@@ -30,3 +30,15 @@
     @content;
   }
 }
+
+@mixin desktop {
+  @media only screen and (min-width: 845px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 844px) {
+    @content;
+  }
+}
