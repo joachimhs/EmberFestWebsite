@@ -1,21 +1,20 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import "2021/reset";
 @import "2021/variables";
 @import "2021/mixins";
 @import "2021/common";
 
-
 @font-face {
   font-family: Poppins Regular;
-  src: url(/css/fonts/FontsFree-Net-Poppins-Regular.ttf);
+  src: url(/2021/css/fonts/FontsFree-Net-Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: Poppins Bold;
-  src: url(/css/fonts/FontsFree-Net-Poppins-Bold.ttf);
+  src: url(/2021/css/fonts/FontsFree-Net-Poppins-Bold.ttf);
 }
 
 html {
@@ -30,7 +29,7 @@ html {
   padding-right: 1rem;
   position: relative;
   z-index: 10;
-  @include desktop{
+  @include desktop {
     max-width: 1140px;
     margin: auto;
     padding-left: 0;
@@ -49,53 +48,57 @@ html {
 
 //hero section start
 
-.hero{
+.hero {
   padding-bottom: 112px;
-  background-image: url(/2021/images/rome.svg), url(/2021/images/hero-background-mobile.svg);
+  background-image: url(/2021/images/rome.svg),
+    url(/2021/images/hero-background-mobile.svg);
   background-repeat: no-repeat;
   background-position: center bottom -2px, center;
   text-align: center;
   background-size: contain, cover;
 
-  @include tablet{
+  @include tablet {
     padding-bottom: 105px;
     background-position: center bottom -8px, center;
   }
 
-  @include desktop{
+  @include desktop {
     background-position: center bottom -12px, center;
   }
 
-  @include desktop-xl{
+  @include desktop-xl {
     background-position: center bottom -12px, center;
   }
 
-  &__pre-title, &__title, &__date{
+  &__pre-title,
+  &__title,
+  &__date {
     color: $white;
     font-weight: bold;
   }
 
-  &__title{
+  &__title {
     letter-spacing: 1.24px;
     margin: 2rem 0;
     font-size: 2.2rem;
     line-height: 3.1rem;
 
-    @include tablet{
+    @include tablet {
       margin: 1rem 0;
       font-size: 4.1rem;
       line-height: 4.7rem;
     }
 
-    @include desktop{
+    @include desktop {
       margin: 1rem 0;
       font-size: 107px;
       line-height: 149px;
     }
   }
 
-  &__pre-title, &__date{
-    @include mobile{
+  &__pre-title,
+  &__date {
+    @include mobile {
       font-size: 1.75rem;
       line-height: 2.4rem;
     }
@@ -115,11 +118,12 @@ html {
     text-transform: uppercase;
     padding: 1.3rem;
 
-    svg, img{
+    svg,
+    img {
       margin-left: 0.6rem;
     }
 
-    @include tablet{
+    @include tablet {
       width: 416px;
     }
   }
@@ -127,13 +131,10 @@ html {
 
 //hero section end
 
-
-
 //get-involved start
 
-.get-involved{
-
-  &__item{
+.get-involved {
+  &__item {
     text-align: center;
     background-color: white;
     border-radius: 10px;
@@ -141,14 +142,13 @@ html {
     max-height: 137px;
     width: 100%;
 
-    @include tablet{
+    @include tablet {
       flex-basis: 45%;
     }
 
-    .content-text{
+    .content-text {
       display: block;
       margin-top: 1rem;
-
     }
   }
 
@@ -164,47 +164,44 @@ html {
 
 //get-involved end
 
-
 //video-2019 start
 
-.video-2019{
+.video-2019 {
+  .video {
+    max-width: 1088px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 3.1rem;
+    height: 276px;
 
-    .video{
-      max-width: 1088px;
-      width: 100%;
-      display: block;
-      margin: auto;
-      margin-top: 3.1rem;
-      height: 276px;
-
-      @include tablet{
-        height: 400px;
-      }
-
-      @include desktop{
-        height: 615px;
-      }
+    @include tablet {
+      height: 400px;
     }
+
+    @include desktop {
+      height: 615px;
+    }
+  }
 }
 
 //video-2019 end
 
 //speakers start
 
-.speakers{
-
-  &_list{
+.speakers {
+  &_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
 
     margin: auto;
 
-    @include mobile{
+    @include mobile {
       max-width: 70%;
     }
 
-    @include tablet{
+    @include tablet {
       grid-template-columns: repeat(3, auto);
       gap: 64px;
     }
@@ -214,11 +211,11 @@ html {
     margin-top: 2.5rem;
   }
 
-  &_item{
+  &_item {
     text-align: center;
 
-    .speaker{
-      &_image{
+    .speaker {
+      &_image {
         border-radius: 50%;
         overflow: hidden;
 
@@ -228,20 +225,18 @@ html {
         }
       }
 
-      &_name{
+      &_name {
         margin-top: 1rem;
       }
-
     }
-
   }
 
-  &_links{
-      margin-top: 0.75rem;
+  &_links {
+    margin-top: 0.75rem;
 
-      a + a{
-        margin-left: 1rem;
-      }
+    a + a {
+      margin-left: 1rem;
+    }
   }
 
   .primary_btn {
@@ -254,51 +249,46 @@ html {
   }
 }
 
-
 //speakers end
 
 //venue start
 
-.venue{
-
-  >.container{
+.venue {
+  > .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     row-gap: 33px;
 
-    @include tablet{
+    @include tablet {
       justify-content: space-between;
       column-gap: 70px;
       flex-wrap: nowrap;
     }
   }
 
-  &-img{
-    img{
+  &-img {
+    img {
       object-fit: cover;
-    min-height: 100%;
+      min-height: 100%;
     }
   }
 
-  .location{
-
-
-    @include tablet{
+  .location {
+    @include tablet {
       max-width: 48%;
     }
 
-    .content-text{
+    .content-text {
       margin-top: 16px;
     }
-
   }
 
-  .map-block{
+  .map-block {
     margin-top: 30px;
     height: 300px;
 
-    @include tablet{
+    @include tablet {
       height: 200px;
       max-width: 500px;
     }
@@ -307,11 +297,9 @@ html {
 
 //venue end
 
-
 //sponsors start
 
 .sponsors {
-
   .row {
     display: flex;
     flex-wrap: nowrap;
@@ -353,7 +341,7 @@ html {
 
   h4 {
     font-size: 1.75rem;
-    line-height: 2.0rem;
+    line-height: 2rem;
     font-weight: bold;
   }
 
@@ -369,10 +357,10 @@ html {
     font-weight: bold;
   }
 
-  .row + .row{
+  .row + .row {
     margin-top: 1.25rem;
 
-    @include tablet{
+    @include tablet {
       margin-top: 3.8rem;
     }
   }
@@ -380,25 +368,24 @@ html {
 
 //sponsors end
 
-
 //mailinglist start
 
-.mailing-list{
+.mailing-list {
   color: white;
   background-image: url(/2021/images/2021_Geometric_Background.svg);
   background-size: cover;
   text-align: center;
 
-  .pre-heading__text{
+  .pre-heading__text {
     color: $white;
     margin: auto;
   }
 
-  .indicates-required{
+  .indicates-required {
     font-weight: bold;
     margin-top: 1rem;
 
-    @include tablet{
+    @include tablet {
       font-size: 1.5rem;
       line-height: 2.1rem;
       margin-top: 2.3rem;
@@ -410,11 +397,11 @@ html {
     margin: auto;
     margin-top: 1.9rem;
 
-    @include tablet{
+    @include tablet {
       margin-top: 60px;
     }
 
-    label{
+    label {
       font-size: 0.8rem;
       line-height: 1.2rem;
       font-weight: bold;
@@ -424,60 +411,60 @@ html {
       margin-bottom: 0.9rem;
     }
 
-    input{
-    width: 100%;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-    padding: 0.83rem;
-    border-radius: 5px;
-    outline: none;
-    border: none;
+    input {
+      width: 100%;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      padding: 0.83rem;
+      border-radius: 5px;
+      outline: none;
+      border: none;
     }
 
-    .primary_btn{
+    .primary_btn {
       margin-top: 1.9rem;
-      @include tablet{
+      @include tablet {
         margin-top: 4rem;
         padding: 1.1rem;
       }
     }
   }
 
-  .mc-field-group + .mc-field-group{
+  .mc-field-group + .mc-field-group {
     margin-top: 1.9rem;
   }
-
 }
 
 //mailinglist end
 
 //footer start
 
-.footer{
+.footer {
   background: $secondary_col;
   color: $white;
   padding-top: 4rem;
   padding-bottom: 2rem;
 
-  @include tablet{
+  @include tablet {
     padding-bottom: 4rem;
   }
 
-  &__wrapper--top{
+  &__wrapper--top {
     text-align: center;
   }
 
-  &__copyright, &__wrapper--bottom{
+  &__copyright,
+  &__wrapper--bottom {
     padding-top: 1.9rem;
     padding-bottom: 2.25rem;
     border-bottom: 2px solid #fff;
   }
 
-  &__wrapper--bottom{
+  &__wrapper--bottom {
     display: grid;
     row-gap: 32px;
 
-    @include tablet{
+    @include tablet {
       column-gap: 10px;
       grid-template-columns: repeat(3, 1fr);
     }
@@ -490,14 +477,14 @@ html {
 .coc-wrapper {
   ul {
     margin-left: 20px;
-   @include media-min(576px) {
-    max-width: 80%;
-    margin: auto;
-   }
+    @include media-min(576px) {
+      max-width: 80%;
+      margin: auto;
+    }
 
-   @include tablet{
-     max-width: 50%;
-   }
+    @include tablet {
+      max-width: 50%;
+    }
   }
 
   li {
@@ -524,7 +511,8 @@ html {
       margin: auto;
     }
 
-    h5, h6 {
+    h5,
+    h6 {
       color: #e25641;
       text-align: center;
     }
@@ -533,7 +521,7 @@ html {
       font-size: 1.5rem;
       line-height: 1.75rem;
       font-weight: bold;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     h6 {
@@ -610,12 +598,13 @@ html {
         clear: both;
       }
 
-      h6, p {
-        margin-bottom: .5rem;
+      h6,
+      p {
+        margin-bottom: 0.5rem;
       }
 
       h6:nth-of-type(3) {
-        padding-top: .5rem;
+        padding-top: 0.5rem;
       }
 
       img.speaker {
