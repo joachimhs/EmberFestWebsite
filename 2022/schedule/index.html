@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: 2022/default
 title: Schedule
 ---
-{% include main_header.html %}
+{% include 2022/main_header.html %}
 
 <section class="schedule">
   <div class="schedule-wrapper schedule">
@@ -33,7 +33,7 @@ title: Schedule
                 <div class="speaker-profile">
                   <h6 class="speaker">{{ info.speaker }}</h6>
                   {% if info.image_extension %}
-                  <img src="/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  <img src="/2022/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
                   {% endif %}
                   {{ info.bio }}
                 </div>
@@ -70,7 +70,7 @@ title: Schedule
                 <div class="speaker-profile">
                   <h6 class="speaker">{{ info.speaker }}</h6>
                   {% if info.image_extension %}
-                  <img src="/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  <img src="/2022/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
                   {% endif %}
                   {{ info.bio }}
                 </div>

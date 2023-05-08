@@ -1,18 +1,18 @@
 ---
 ---
 
-@import "reset";
-@import "variables";
-@import "fonts";
-@import "mixins";
-@import "common";
+@import "2022/reset";
+@import "2022/variables";
+@import "2022/fonts";
+@import "2022/mixins";
+@import "2022/common";
 
 html {
   font-family: $font;
 }
 
 .hero {
-  background-image: url(/images/background.svg);
+  background-image: url(/2022/images/background.svg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -101,7 +101,7 @@ h3 {
       display: block;
       height: 38px;
       width: 174px;
-      background-image: url(/images/divider.svg);
+      background-image: url(/2022/images/divider.svg);
       margin-bottom: 32px;
     }
   }
@@ -201,7 +201,7 @@ section {
   }
 
   &.get-involved {
-    background-image: url(/images/get-involved.svg);
+    background-image: url(/2022/images/get-involved.svg);
     background-position: bottom center;
     background-size: contain;
 
@@ -763,7 +763,7 @@ section {
   }
 
   &.newsletter {
-    background-image: url(/images/newsletter-background.svg);
+    background-image: url(/2022/images/newsletter-background.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;

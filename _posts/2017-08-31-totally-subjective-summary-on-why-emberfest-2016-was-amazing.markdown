@@ -1,5 +1,5 @@
 ---
-layout: blogpost
+layout: 2017/blogpost
 title: Totally subjective summary on why EmberFest'16 was amazing - and why EmberFest'17 will be
 author: Balint Erdi
 author_link: https://twitter.com/baaz

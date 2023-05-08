@@ -14,16 +14,18 @@
         </thead>
         <tbody>
           {% for info in site.data.schedule.day1 %}
-          <tr>
-            <td class="schedule-table--timeslot">{{ info.time }}</td>
-            {% if info.isBreakTime %}
-            <td>{{ info.text }}</td>
-            {% else %}
-            <td><a href="/schedule/#{{ info.id }}">{{ info.talk }}</a><span class="speaker">{{
-                info.speaker }}</span>
-            </td>
-            {% endif %}
-          </tr>
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+                <td>{{ info.text }}</td>
+              {% else %}
+                <td>
+                  <a href="/2022/schedule/#{{ info.id }}">{{ info.talk }}</a>
+                  <span class="speaker">{{
+   info.speaker }}</span>
+                </td>
+              {% endif %}
+            </tr>
           {% endfor %}
         </tbody>
       </table>
@@ -40,21 +42,23 @@
         </thead>
         <tbody>
           {% for info in site.data.schedule.day2 %}
-          <tr>
-            <td class="schedule-table--timeslot">{{ info.time }}</td>
-            {% if info.isBreakTime %}
-            <td>{{ info.text }}</td>
-            {% else %}
-            <td><a href="/schedule/#{{ info.id }}">{{ info.talk }}</a><span class="speaker">{{
-                info.speaker }}</span>
-            </td>
-            {% endif %}
-          </tr>
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+                <td>{{ info.text }}</td>
+              {% else %}
+                <td>
+                  <a href="/2022/schedule/#{{ info.id }}">{{ info.talk }}</a>
+                  <span class="speaker">{{
+   info.speaker }}</span>
+                </td>
+              {% endif %}
+            </tr>
           {% endfor %}
         </tbody>
       </table>
       <div class="full-schedule">
-        <a href="/schedule">
+        <a href="/2022/schedule">
           See full schedule
         </a>
       </div>
