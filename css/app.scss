@@ -5,19 +5,27 @@
 @import "variables";
 @import "fonts";
 @import "mixins";
+@import "footer";
 
 html {
   font-family: $main-font;
 }
 
+body {
+  background-color: $grey-light;
+}
+
+a:hover {
+  color: $orange;
+}
+
 .hero {
+  font-family: $main-font-bold;
   min-height: 667px;
   min-width: 350px;
-  height: 100vh;
 
-  background-color: $grey-light;
   background-image: url("/images/backgrounds/background_yellow_dots.svg");
-  background-position: center;
+  background-position: center -60px;
   background-size: auto 106%;
 
   @include lg {
@@ -31,12 +39,12 @@ html {
     align-items: center;
     gap: 90px;
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 100px;
     margin: 0 18px;
     justify-content: space-between;
-    height: 100%;
 
     @include lg {
+      position: relative;
       margin: inherit;
       gap: 125px;
       padding-top: 60px;

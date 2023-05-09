@@ -1,0 +1,100 @@
+footer {
+  font-family: $main-font;
+  max-width: 90%;
+  font-size: 20px;
+  line-height: 26px;
+  min-width: 350px;
+
+  @include lg {
+    max-width: 80%;
+    font-size: 26px;
+    line-height: 34px;
+  }
+  margin: auto;
+  background-color: $transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 50px;
+  color: $dark-blue;
+  font-family: $main-font;
+  letter-spacing: 0;
+  text-align: center;
+
+  .glass-separator {
+    display: grid;
+    grid-template-columns: minmax(90px, auto) minmax(128px, 200px) minmax(
+        90px,
+        auto
+      );
+    column-gap: 16px;
+    @include lg {
+      column-gap: 30px;
+    }
+    width: 100%;
+    align-items: center;
+  }
+
+  hr {
+    width: 100%;
+    border: 1.5px solid $dark-blue;
+  }
+
+  ul {
+    list-style-type: "-  ";
+    display: flex;
+    row-gap: 3px;
+    column-gap: 20px;
+    @include lg {
+      column-gap: 30px;
+    }
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li:first-child {
+      list-style: none;
+    }
+  }
+
+  .links {
+    display: grid;
+    row-gap: 30px;
+    width: 80%;
+
+    @include lg {
+      grid-template-columns: 1fr 320px 1fr;
+      gap: 20px;
+      justify-content: space-between;
+      width: 100%;
+
+      & > :first-child {
+        justify-self: start;
+      }
+      & > :last-child {
+        justify-self: end;
+      }
+    }
+
+    justify-content: center;
+    align-items: center;
+
+    .tito-link {
+      color: $orange;
+    }
+  }
+
+  .arrow-group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 90px;
+    &.right {
+      grid-template-columns: 90px auto;
+      .arrow {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
