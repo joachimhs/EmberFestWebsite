@@ -92,10 +92,12 @@ p {
 .content {
   margin: auto;
   max-width: 70%;
+  padding-bottom: 150px;
 
   @include mobile {
     margin: 0 27px;
     max-width: 100%;
+    padding-bottom: 80px;
   }
 
   h3.cancellation__title {
