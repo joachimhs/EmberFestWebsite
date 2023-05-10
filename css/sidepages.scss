@@ -75,15 +75,14 @@ p {
   }
 
   .date_and_location {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     color: $dark_blue;
     font-size: 2.5rem;
-    max-width: 11.5rem;
     text-transform: uppercase;
 
     @include mobile {
-      max-width: 14rem;
+      display: flex;
+      flex-wrap: wrap;
       font-size: 1.3rem;
       line-height: 1.7rem;
     }

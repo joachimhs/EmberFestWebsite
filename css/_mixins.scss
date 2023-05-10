@@ -32,13 +32,13 @@
 }
 
 @mixin desktop {
-  @media only screen and (min-width: 845px) {
+  @media only screen and (min-width: 898px) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media only screen and (max-width: 844px) {
+  @media only screen and (max-width: 897px) {
     @content;
   }
 }
