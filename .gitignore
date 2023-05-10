@@ -22,3 +22,6 @@ _site
 .DS_Store
 .sass-cache
 vendor/ruby
+
+# VS Code
+.vscode
