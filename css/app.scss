@@ -79,6 +79,17 @@ a:hover {
   }
 
   .button.book-tickets {
+    &:hover {
+      a {
+        color: $light-yellow;
+      }
+      border: 2px solid $light-yellow;
+    }
+
+    &:active {
+      border: none;
+    }
+
     color: $light-yellow;
     letter-spacing: 0;
 
