@@ -98,6 +98,24 @@ p {
     max-width: 100%;
   }
 
+  .imprint__responsible_info {
+    gap: 40px;
+    display: flex;
+    text-align: center;
+    padding-bottom: 20px;
+    flex-direction: column;
+
+    p:last-of-type {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+
+      @include mobile {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
   h3 {
     font-size: 5rem;
     font-weight: 800;
