@@ -34,36 +34,35 @@ p {
   align-items: center;
   justify-content: center;
 
-  .logo_horizontal {
-    display: none;
-  }
 
   @include mobile {
-    gap: 20px;
-    padding: 10px 8px 50px;
+    display: grid;
+    grid-gap: 10px 20px;
+    justify-items: center;
+    padding: 30px 8px 50px;
 
-    .logo_vertical {
-      display: none;
+    .logo, .header__image {
+      grid-row: 1;
     }
 
-    .logo_horizontal {
-      display: block;
-    }
-
-    .logo_and_date {
+    .date_and_location {
       gap: 10px;
       display: flex;
-      flex-direction: column;
-    }
-
-    .location::before {
-      content: "/";
-      padding: 0 4px;
+      grid-column: 1 / span 2;
     }
   }
 
-  img.logo_vertical {
-    height: 9rem;
+  .location::before {
+    content: "/";
+    padding: 0 4px;
+  }
+
+  img.logo {
+    height: 144px;
+
+    @include mobile {
+      height: 24px;
+    }
   }
 
   img.header__image {
@@ -81,6 +80,7 @@ p {
     text-transform: uppercase;
 
     @include mobile {
+      gap:0;
       display: flex;
       flex-wrap: wrap;
       font-size: 1.3rem;
