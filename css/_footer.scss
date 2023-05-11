@@ -87,14 +87,28 @@ footer {
   }
 
   .arrow-group {
-    display: grid;
+    height: 12px;
+    display: flex;
     align-items: center;
-    grid-template-columns: auto 90px;
-    &.right {
-      grid-template-columns: 90px auto;
-      .arrow {
-        transform: scaleX(-1);
-      }
+    position: relative;
+
+    .arrow-head {
+      position: absolute;
+      top: 0;
+    }
+
+    .arrow-body {
+      width: 100%;
+      height: 2px;
+    }
+
+    &.left .arrow-head {
+      right: -1px;
+    }
+
+    &.right .arrow-head {
+      transform: scaleX(-1);
+      left: -1px;
     }
   }
 }
