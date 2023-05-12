@@ -29,11 +29,13 @@ a:hover {
   background-size: auto 106%;
 
   @include lg {
+    height: 100vh;
     background-size: auto 114%;
     min-height: 982px;
   }
 
   .content {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
