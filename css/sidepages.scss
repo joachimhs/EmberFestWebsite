@@ -21,7 +21,7 @@ p {
   line-height: 2.125rem;
   font-family: $main-font;
 
-  @include mobile {
+  @include tablet {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
@@ -35,7 +35,7 @@ p {
   justify-content: center;
 
 
-  @include mobile {
+  @include tablet {
     display: grid;
     grid-gap: 10px 20px;
     justify-items: center;
@@ -60,7 +60,7 @@ p {
   img.logo {
     height: 144px;
 
-    @include mobile {
+    @include tablet {
       height: 24px;
     }
   }
@@ -68,7 +68,7 @@ p {
   img.header__image {
     height: 52px;
 
-    @include mobile {
+    @include tablet {
       height: 25px;
     }
   }
@@ -79,7 +79,7 @@ p {
     font-size: 2.5rem;
     text-transform: uppercase;
 
-    @include mobile {
+    @include tablet {
       gap:0;
       display: flex;
       flex-wrap: wrap;
@@ -98,6 +98,10 @@ p {
     margin: 0 27px;
     max-width: 100%;
     padding-bottom: 80px;
+  }
+
+  @include tablet {
+    max-width: 90%;
   }
 
   h3.cancellation__title {
@@ -130,7 +134,7 @@ p {
     margin-bottom: 60px;
     font-family: $secondary-font;
 
-    @include mobile {
+    @include tablet {
       padding: 0 10px;
       font-size: 2.875rem;
       line-height: 2.875rem;
@@ -143,14 +147,14 @@ p {
     padding: 60px 0 20px 0;
     font-family: $main-font-bold;
 
-    @include mobile {
+    @include tablet {
       padding: 40px 0;
     }
   }
 
   p.conduct__first_paragraph {
     padding-bottom: 40px;
-    @include mobile {
+    @include tablet {
       padding-bottom: 0;
     }
   }
