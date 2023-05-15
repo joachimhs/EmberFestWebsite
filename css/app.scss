@@ -207,7 +207,9 @@ a:hover {
       }
 
       @include mobile {
-        max-width: 90%;
+        max-width: 85%;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
       }
     }
   }
@@ -234,10 +236,12 @@ a:hover {
     font-weight: 800;
     color: $dark_blue;
     line-height: 5rem;
+    text-align: center;
     font-family: $secondary-font;
 
-    @include small-desktop {
-      text-align: center;
+    @include mobile {
+      font-size: 3.43rem;
+      line-height: 3.43rem;
     }
   }
 
@@ -246,6 +250,11 @@ a:hover {
     font-size: 1.625rem;
     line-height: 2.125rem;
     font-family: $main-font;
+
+    @include mobile {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+    }
   }
 
   .button.get-involved {
@@ -262,8 +271,13 @@ a:hover {
     background-color: rgba(8, 23, 94, 1);
     box-shadow: 0 25px 35px 0 $shadow-color;
 
-    @include small-desktop {
+    @include mobile {
       margin-top: 0px;
+      font-size: 2rem;
+      line-height: 2rem;
+      border-radius: 32px;
+      padding: 22px 49px 14px;
+      box-shadow: 0 21px 29px 0 $shadow-color;
     }
   }
 }
