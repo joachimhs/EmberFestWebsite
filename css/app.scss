@@ -127,3 +127,66 @@ a:hover {
     }
   }
 }
+
+.about {
+  width: 100vw;
+  background-size: 118%;
+  background-color: $light-yellow;
+  background-position: center;
+  background-image: url(../images/backgrounds/background_2.svg);
+
+  .info {
+    margin: auto;
+    display: grid;
+    max-width: 80%;
+    column-gap: 70px;
+    padding: 163px 0 145px 0;
+    grid-template-columns: 1fr 2fr;
+
+    @include small-desktop {
+      gap: 60px;
+      display: flex;
+      padding: 60px 0;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  h3 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: $dark_blue;
+    line-height: 5rem;
+    font-family: $secondary-font;
+
+    @include small-desktop {
+      text-align: center;
+    }
+  }
+
+  p {
+    color: $dark_blue;
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+    font-family: $main-font;
+  }
+
+  .button.get-involved {
+    grid-column: 2;
+    margin-top: 62px;
+    font-size: 2.5rem;
+    width: fit-content;
+    border-radius: 59px;
+    line-height: 2.5rem;
+    color: $light-yellow;
+    background: $dark-blue;
+    padding: 30px 50px 22px;
+    text-transform: uppercase;
+    background-color: rgba(8, 23, 94, 1);
+    box-shadow: 0 25px 35px 0 $shadow-color;
+
+    @include small-desktop {
+      margin-top: 0px;
+    }
+  }
+}
