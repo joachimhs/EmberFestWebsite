@@ -1,0 +1,139 @@
+.past-sponsors {
+  font-family: $main-font;
+  background-image: url("/images/backgrounds/pattern_1.svg");
+  background-repeat: repeat;
+  background-size: 200px;
+  background-position: left -30px top;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  @include lg {
+    background-position: left -40px top;
+    background-size: 400px;
+    padding-top: 250px;
+    padding-bottom: 150px;
+  }
+
+  h3 {
+    font-family: $secondary-font;
+    font-size: 47px;
+    line-height: 47px;
+    margin-bottom: 40px;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    color: $orange;
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include lg {
+  }
+
+  .past-sponsors-list {
+    background: $translucent;
+    backdrop-filter: blur(8px);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    margin: 0 18px;
+    justify-content: space-evenly;
+    padding: 25px;
+    gap: 30px;
+    min-width: 350px;
+    @include lg {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 65px;
+      gap: 80px;
+    }
+    margin-bottom: 60px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-height: 32px;
+      min-height: 20px;
+      max-width: 140px;
+      @include lg {
+        max-height: 50px;
+        min-height: 40px;
+        max-width: 235px;
+      }
+    }
+  }
+
+  .organizers {
+    display: flex;
+    @include lg {
+      flex-wrap: wrap;
+    }
+    justify-content: center;
+    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    .organizer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      @include lg {
+        gap: 28px;
+        flex-direction: row;
+      }
+
+      .avatar {
+        @include lg {
+          z-index: 2;
+        }
+      }
+
+      .name {
+        width: 110px;
+        text-align: center;
+        @include lg {
+          display: flex;
+          align-items: center;
+          margin-left: -78px;
+          padding-left: 78px;
+          padding-right: 18px;
+          background-color: $translucent;
+          backdrop-filter: blur(8px);
+          border-radius: 12px;
+          height: 100%;
+          width: 325px;
+        }
+      }
+
+      .name p {
+        margin-top: 5px;
+        font-family: $main-font;
+        font-size: 20px;
+        @include lg {
+          font-size: 26px;
+        }
+        color: $dark-blue;
+        letter-spacing: 0;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .past-sponsors-list,
+  .organizers {
+    border-radius: 12px;
+    max-width: 1200px;
+    width: 95%;
+    @include lg {
+      width: 90%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
