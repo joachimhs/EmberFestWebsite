@@ -1,0 +1,22 @@
+<section class="past-speakers">
+	<h3>Past Speakers</h3>
+	<ul class="past-speakers-list">
+		{% for speaker in site.data.past-speakers %}
+		<li class="speaker">
+			<img class="avatar" alt="{{ speaker.name }} avatar" src="/images/past-speakers/{{ speaker.avatar }}"/>
+			<div class="speaker-info">
+				<p>{{ speaker.name }}</p>
+				<div class="speaker-links">
+					<a class="icon-link twitter" href="{{ speaker.twitter }}">
+						<img alt="twitter icon" src="/images/icons/twitter.svg" />
+					</a>
+					<a class="icon-link external-link" href="{{ speaker.link }}">
+						<img alt="link icon" src="/images/icons/link.svg" />
+					</a>
+				</div>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+	<button href="" alt="Submit a Talk">Submit a Talk</button>
+</section>

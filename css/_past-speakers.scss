@@ -1,0 +1,134 @@
+.past-speakers {
+  font-family: $main-font;
+  color: $light-yellow;
+  background-color: $dark-blue;
+  background-image: url("/images/backgrounds/background_3.svg");
+  background-size: 400% auto;
+  background-position: top -200px left -400px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 50px 0 $shadow-color;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+
+  @include lg {
+    background-size: 100% auto;
+    background-position: center top -250px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  h3 {
+    font-family: $secondary-font;
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 30px;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include lg {
+  }
+
+  .past-speakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 23px;
+    gap: 30px;
+    min-width: 350px;
+    justify-content: center;
+
+    @include lg {
+      padding: 25px;
+      padding: 65px;
+      gap: 80px;
+    }
+    margin-bottom: 60px;
+
+    .speaker {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      @include lg {
+        gap: 30px;
+        flex-direction: column;
+      }
+
+      .avatar {
+        height: 140px;
+        width: 140px;
+        @include lg {
+          height: 194px;
+          width: 194px;
+        }
+      }
+
+      .speaker-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 171px;
+        @include lg {
+          width: initial;
+          align-items: center;
+        }
+        p {
+          font-size: 32px;
+          line-height: 32px;
+          @include lg {
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+          }
+          letter-spacing: 0;
+        }
+        .speaker-links {
+          display: flex;
+          gap: 10px;
+          .icon-link {
+            background: $light-yellow;
+            border: 1px solid $light-yellow;
+            border-radius: 50%;
+            height: 42px;
+            width: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    background: $light-yellow;
+    box-shadow: 0 0 35px 0 rgba(253, 255, 214, 0.6);
+    border-radius: 59px;
+    font-family: $main-font;
+    font-size: 32px;
+    line-height: 40px;
+    @include lg {
+      font-size: 40px;
+      line-height: 60px;
+    }
+    color: $dark-blue;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 12px;
+  }
+}

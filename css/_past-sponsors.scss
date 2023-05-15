@@ -7,6 +7,7 @@
   padding-top: 100px;
   padding-bottom: 60px;
   @include lg {
+    margin-top: -100px;
     background-position: left -40px top;
     background-size: 400px;
     padding-top: 250px;
