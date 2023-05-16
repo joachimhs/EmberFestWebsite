@@ -116,9 +116,5 @@
     font-family: $main-font-bold;
     background-color: rgba(8, 23, 94, 1);
     box-shadow: 0 25px 35px 0 $shadow-color;
-
-    @include small-desktop {
-      align-self: center;
-    }
   }
 }
