@@ -8,6 +8,7 @@
 @import "hero";
 @import "past-speakers";
 @import "past-sponsors";
+@import "stay-up-to-date";
 @import "footer";
 
 html {
@@ -281,4 +282,6 @@ a:hover {
       box-shadow: 0 21px 29px 0 $shadow-color;
     }
   }
+
+
 }
