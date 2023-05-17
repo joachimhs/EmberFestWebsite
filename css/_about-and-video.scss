@@ -86,15 +86,13 @@
 
   .info {
     margin: auto;
-    display: grid;
+    display: flex;
     max-width: 80%;
-    column-gap: 70px;
+    gap: 70px;
     padding: 163px 0 145px 0;
-    grid-template-columns: 1fr 2fr;
 
     @include small-desktop {
       gap: 60px;
-      display: flex;
       padding: 60px 0;
       align-items: center;
       flex-direction: column;
@@ -128,7 +126,6 @@
   }
 
   .button.get-involved {
-    grid-column: 2;
     margin-top: 62px;
     font-size: 2.5rem;
     width: fit-content;
@@ -141,10 +138,12 @@
     background-color: rgba(8, 23, 94, 1);
     box-shadow: 0 25px 35px 0 $shadow-color;
 
-    @include mobile {
-      margin-top: 0px;
+    @include small-desktop {
       font-size: 2rem;
       line-height: 2rem;
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
       border-radius: 32px;
       padding: 22px 49px 14px;
       box-shadow: 0 21px 29px 0 $shadow-color;
