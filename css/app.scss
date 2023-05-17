@@ -16,120 +16,11 @@ html {
 }
 
 body {
-  background-color: $grey-light;
+  background-color: $white;
 }
 
 a:hover {
   color: $orange;
-}
-
-.hero {
-  font-family: $main-font-bold;
-  min-height: 667px;
-  min-width: 350px;
-
-  background-image: url("/images/backgrounds/background_yellow_dots.svg");
-  background-position: center -60px;
-  background-size: auto 106%;
-
-  @include lg {
-    height: 100vh;
-    background-size: auto 114%;
-    min-height: 982px;
-    max-height: 2000px;
-  }
-
-  .content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 90px;
-    padding-top: 40px;
-    padding-bottom: 100px;
-    margin: 0 18px;
-    justify-content: space-between;
-
-    @include lg {
-      position: relative;
-      margin: inherit;
-      gap: 125px;
-      padding-top: 60px;
-      padding-bottom: 228px;
-      justify-content: center;
-    }
-
-    .date-and-location {
-      color: $dark-blue;
-      letter-spacing: 0;
-      text-align: center;
-      text-transform: uppercase;
-      margin: 0 60px;
-
-      font-size: 32px;
-      line-height: 32px;
-
-      @include lg {
-        font-size: 40px;
-      }
-    }
-
-    .logos-container {
-      max-width: 650px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      @include lg {
-        gap: 60px;
-      }
-    }
-  }
-
-  .button.book-tickets {
-    &:hover {
-      a {
-        color: $light-yellow;
-      }
-      border: 2px solid $light-yellow;
-    }
-
-    &:active {
-      border: none;
-    }
-
-    color: $light-yellow;
-    letter-spacing: 0;
-
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: $dark-blue;
-    box-shadow: 0 25px 35px 0 $shadow-color;
-
-    width: 300px;
-    height: 50px;
-    padding-top: 12px;
-    border-radius: 32px;
-
-    @include lg {
-      font-size: 40px;
-      line-height: 40px;
-      justify-content: center;
-
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-
-      width: 171px;
-      height: 171px;
-
-      border-radius: 50%;
-    }
-  }
 }
 
 .about-and-video {
@@ -158,7 +49,7 @@ a:hover {
   }
 
   .video-2022::after {
-    background-color: white;
+    background-color: $white;
   }
 
   .video-2022 {
@@ -282,6 +173,4 @@ a:hover {
       box-shadow: 0 21px 29px 0 $shadow-color;
     }
   }
-
-
 }

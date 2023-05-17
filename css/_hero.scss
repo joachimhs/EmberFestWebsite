@@ -1,3 +1,5 @@
+@import "variables";
+
 .hero {
   font-family: $main-font-bold;
   min-height: 667px;
@@ -6,6 +8,7 @@
   background-image: url("/images/backgrounds/background_yellow_dots.svg");
   background-position: center -60px;
   background-size: auto 106%;
+  background-color: $grey-light;
 
   @include lg {
     height: 100vh;

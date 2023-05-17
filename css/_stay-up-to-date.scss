@@ -1,121 +1,127 @@
-.stay-up-to-date {
-  margin: auto;
-  display: grid;
-  background-color: white;
-  column-gap: 111px;
-  padding: 150px 120px 150px 175px;
-  grid-template-columns: 1fr 1fr;
+.stay-up-to-date-and-footer {
   background-size: 117%;
   background-position: center;
   background-image: url(../images/backgrounds/background_4.svg);
+  background-color: $white;
 
   @include small-desktop {
-    justify-content: center;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
     background-size: 290%;
     background-position: right top 40px;
   }
 
-  .title {
-    max-width: 470px;
-    font-size: 5rem;
-    grid-column: 1;
-    grid-row: 1/2;
-    color: $dark-blue;
-    line-height: 5rem;
-    text-align: center;
-    justify-self: center;
-    font-family: $secondary-font;
+  .stay-up-to-date {
+    margin: auto;
+    display: grid;
+    column-gap: 111px;
+    padding: 150px 120px 150px 175px;
+    grid-template-columns: 1fr 1fr;
 
     @include small-desktop {
-      grid-row: 1;
+      justify-content: center;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
     }
 
-    .emberfest-logo {
-      color: #ea473b;
-      font-family: $secondary-font-extra-bold;
-    }
-  }
-
-  form {
-    display: flex;
-    grid-row: 1/2;
-    grid-column: 2;
-    max-width: 460px;
-    flex-direction: column;
-
-    @include small-desktop {
-      grid-row: 2;
+    .title {
+      max-width: 470px;
+      font-size: 5rem;
       grid-column: 1;
-    }
-
-    label,
-    input {
-      letter-spacing: 0;
-      font-size: 1.625rem;
-      line-height: 2.125rem;
-    }
-
-    label {
-      margin-bottom: 10px;
+      grid-row: 1/2;
       color: $dark-blue;
-      font-family: $main-font;
+      line-height: 5rem;
+      text-align: center;
+      justify-self: center;
+      font-family: $secondary-font;
+
+      @include small-desktop {
+        grid-row: 1;
+      }
+
+      .emberfest-logo {
+        color: #ea473b;
+        font-family: $secondary-font-extra-bold;
+      }
     }
 
-    input {
-      border-style: none;
-      padding: 10px 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
+    form {
+      display: flex;
+      grid-row: 1/2;
+      grid-column: 2;
+      max-width: 460px;
+      flex-direction: column;
+
+      @include small-desktop {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      label,
+      input {
+        letter-spacing: 0;
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+      }
+
+      label {
+        margin-bottom: 10px;
+        color: $dark-blue;
+        font-family: $main-font;
+      }
+
+      input {
+        border-style: none;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        color: $light-yellow;
+        background: $dark-blue;
+        font-family: $main-font-thin;
+        box-shadow: 0 25px 35px 0 $shadow-color;
+      }
+    }
+
+    .social-media {
+      gap: 30px;
+      display: flex;
+      grid-column: 1;
+      padding-top: 48px;
+      justify-content: center;
+
+      @include small-desktop {
+        margin-bottom: 60px;
+      }
+    }
+
+    .social-media-button {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      background: $dark-blue;
+      justify-content: center;
+      box-shadow: 0 25px 35px 0$shadow-color;
+    }
+
+    .social-media-button img {
+      height: fit-content;
+    }
+
+    .button {
+      border: none;
+      margin-top: 60px;
+      font-size: 2.5rem;
+      letter-spacing: 0;
+      width: fit-content;
+      border-radius: 59px;
+      line-height: 2.5rem;
       color: $light-yellow;
       background: $dark-blue;
-      font-family: $main-font-thin;
+      padding: 33px 50px 19px;
+      text-transform: uppercase;
+      font-family: $main-font-bold;
+      background-color: rgba(8, 23, 94, 1);
       box-shadow: 0 25px 35px 0 $shadow-color;
     }
-  }
-
-  .social-media {
-    gap: 30px;
-    display: flex;
-    grid-column: 1;
-    padding-top: 48px;
-    justify-content: center;
-
-    @include small-desktop {
-      margin-bottom: 60px;
-    }
-  }
-
-  .social-media-button {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    border-radius: 50%;
-    align-items: center;
-    background: $dark-blue;
-    justify-content: center;
-    box-shadow: 0 25px 35px 0$shadow-color;
-  }
-
-  .social-media-button img {
-    height: fit-content;
-  }
-
-  .button {
-    border: none;
-    margin-top: 60px;
-    font-size: 2.5rem;
-    letter-spacing: 0;
-    width: fit-content;
-    border-radius: 59px;
-    line-height: 2.5rem;
-    color: $light-yellow;
-    background: $dark-blue;
-    padding: 33px 50px 19px;
-    text-transform: uppercase;
-    font-family: $main-font-bold;
-    background-color: rgba(8, 23, 94, 1);
-    box-shadow: 0 25px 35px 0 $shadow-color;
   }
 }

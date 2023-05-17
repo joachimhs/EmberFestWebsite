@@ -1,47 +1,50 @@
-<section class="stay-up-to-date">
-  <div class="title">
-    <p>
-      Stay up to date with
-      <span class="emberfest-logo">Ember &#123;&#123;fest&#125;&#125;</span>
-    </p>
-    <div class="social-media">
-      <a class="social-media-button" href="https://twitter.com/emberfest">
-        <img src="/images/icons/twitter-yellow-logo.svg" />
-      </a>
-      <a class="social-media-button" href="#">
-        <img src="/images/icons/mailing-list-logo.svg" />
-      </a>
+<div class="stay-up-to-date-and-footer">
+  <section class="stay-up-to-date">
+    <div class="title">
+      <p>
+        Stay up to date with
+        <span class="emberfest-logo">Ember &#123;&#123;fest&#125;&#125;</span>
+      </p>
+      <div class="social-media">
+        <a class="social-media-button" href="https://twitter.com/emberfest">
+          <img src="/images/icons/twitter-yellow-logo.svg" />
+        </a>
+        <a class="social-media-button" href="#">
+          <img src="/images/icons/mailing-list-logo.svg" />
+        </a>
+      </div>
     </div>
-  </div>
-
-  <form
-    action="//emberfest.us16.list-manage.com/subscribe/post?u=214d2441f851e9fa9c9dfc96d&amp;id=fe26330e01"
-    method="post"
-    name="mc-embedded-subscribe-form"
-    target="_blank"
-    novalidate
-  >
-    <label for="email">Email</label>
-    <input
-      type="text"
-      id="email"
-      name="email"
-      placeholder="example@company.com"
-      required
-    />
-
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Jonh Bull" required />
-
-    <label for="country">Country</label>
-    <input
-      type="text"
-      id="country"
-      name="country"
-      placeholder="U.S.A"
-      required
-    />
-
-    <button class="button" type="submit">Subscribe</button>
-  </form>
-</section>
+  
+    <form
+      action="//emberfest.us16.list-manage.com/subscribe/post?u=214d2441f851e9fa9c9dfc96d&amp;id=fe26330e01"
+      method="post"
+      name="mc-embedded-subscribe-form"
+      target="_blank"
+      novalidate
+    >
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="example@company.com"
+        required
+      />
+  
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Jonh Bull" required />
+  
+      <label for="country">Country</label>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        placeholder="U.S.A"
+        required
+      />
+  
+      <button class="button" type="submit">Subscribe</button>
+    </form>
+  </section>
+  {% include footer.html %}
+</div>
