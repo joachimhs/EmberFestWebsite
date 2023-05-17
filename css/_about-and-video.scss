@@ -87,7 +87,7 @@
   .info {
     margin: auto;
     display: flex;
-    max-width: 80%;
+    max-width: 70%;
     gap: 70px;
     padding: 163px 0 145px 0;
 
@@ -114,6 +114,7 @@
   }
 
   p {
+    width: 85%;
     color: $dark_blue;
     font-size: 1.625rem;
     line-height: 2.125rem;
@@ -123,12 +124,16 @@
       font-size: 1.25rem;
       line-height: 1.625rem;
     }
+
+    @include small-desktop {
+      width: 100%;
+    }
   }
 
   .button.get-involved {
     margin-top: 62px;
     font-size: 2.5rem;
-    width: fit-content;
+    width: max-content;
     border-radius: 59px;
     line-height: 2.5rem;
     color: $light-yellow;
