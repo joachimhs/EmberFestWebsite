@@ -7,6 +7,11 @@
   background-size: 118%;
   background-position: center -675px;
 
+  @include mobile {
+    background-size: 290%;
+    background-position: left -168px top -42px;
+  }
+
   .container {
     position: relative;
   }
@@ -57,6 +62,10 @@
       @include mobile {
         width: 100%;
         padding: 0 2px;
+      }
+      
+      @include small-desktop {
+        width: 75%;
       }
     }
 
