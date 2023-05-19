@@ -27,6 +27,10 @@
       justify-content: center;
     }
 
+    .title, form {
+      max-width: 470px;
+    }
+
     .title {
       font-size: 5rem;
       grid-column: 1;
