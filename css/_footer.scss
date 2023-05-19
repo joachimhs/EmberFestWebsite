@@ -3,7 +3,6 @@ footer {
   max-width: 90%;
   font-size: 20px;
   line-height: 26px;
-  min-width: 350px;
 
   @include lg {
     max-width: 80%;
@@ -24,12 +23,10 @@ footer {
 
   .glass-separator {
     display: grid;
-    grid-template-columns: minmax(90px, auto) minmax(128px, 200px) minmax(
-        90px,
-        auto
-      );
+    grid-template-columns: auto 128px auto;
     column-gap: 16px;
     @include lg {
+      grid-template-columns: auto 200px auto;
       column-gap: 30px;
     }
     width: 100%;

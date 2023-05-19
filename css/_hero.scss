@@ -3,7 +3,6 @@
 .hero {
   font-family: $main-font-bold;
   min-height: 667px;
-  min-width: 350px;
 
   background-image: url("/images/backgrounds/background_yellow_dots.svg");
   background-position: center -60px;
@@ -42,7 +41,7 @@
       letter-spacing: 0;
       text-align: center;
       text-transform: uppercase;
-      margin: 0 60px;
+      margin: 0 auto;
 
       font-size: 32px;
       line-height: 32px;

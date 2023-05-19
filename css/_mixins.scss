@@ -1,6 +1,12 @@
 // Inspired by Tailwind
 // https://tailwindcss.com/docs/screens
 
+@mixin ssm {
+  @media only screen and (min-width: 375px) {
+    @content;
+  }
+}
+
 @mixin sm {
   @media only screen and (min-width: 640px) {
     @content;
@@ -53,4 +59,12 @@
   @media only screen and (max-width: 1024px) {
     @content;
   }
+}
+
+@mixin responsiveTitle($min-font-size, $max-font-size) {
+  $title-font-size-resposive: calc(
+    max(#{$min-font-size}, min(12.5vw, #{$max-font-size}))
+  );
+  font-size: $title-font-size-resposive;
+  line-height: $title-font-size-resposive;
 }

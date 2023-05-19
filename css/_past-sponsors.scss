@@ -7,6 +7,7 @@
   background-position: left -30px top;
   padding-top: 100px;
   padding-bottom: 60px;
+  margin-top: -50px;
   @include lg {
     margin-top: -100px;
     background-position: left -40px top;
@@ -16,9 +17,8 @@
   }
 
   h3 {
+    @include responsiveTitle(40px, 80px);
     font-family: $secondary-font;
-    font-size: 47px;
-    line-height: 47px;
     margin-bottom: 40px;
     @include lg {
       font-size: 80px;
@@ -45,7 +45,6 @@
     justify-content: space-evenly;
     padding: 25px;
     gap: 30px;
-    min-width: 350px;
     @include lg {
       display: flex;
       flex-wrap: wrap;
@@ -74,12 +73,12 @@
 
   .organizers {
     display: flex;
-    @include lg {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @include ssm {
+      justify-content: center;
     }
-    justify-content: center;
     gap: 18px;
-    grid-template-columns: repeat(3, 1fr);
     .organizer {
       display: flex;
       align-items: center;
@@ -91,13 +90,17 @@
       }
 
       .avatar {
+        width: 94px;
+        aspect-ratio: 1 / 1;
+
         @include lg {
+          width: 100px;
           z-index: 2;
         }
       }
 
       .name {
-        width: 110px;
+        width: 94px;
         text-align: center;
         @include lg {
           display: flex;
@@ -117,12 +120,13 @@
         margin-top: 5px;
         font-family: $main-font;
         font-size: 20px;
+        line-height: 26px;
         @include lg {
           font-size: 26px;
+          line-height: 34px;
         }
         color: $dark-blue;
         letter-spacing: 0;
-        line-height: 34px;
       }
     }
   }

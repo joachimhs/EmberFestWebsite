@@ -24,8 +24,7 @@
 
   h3 {
     font-family: $secondary-font;
-    font-size: 55px;
-    line-height: 55px;
+    @include responsiveTitle(40px, 55px);
     margin-bottom: 30px;
     @include lg {
       font-size: 80px;
@@ -47,7 +46,6 @@
     align-items: center;
     margin: 0 23px;
     gap: 30px;
-    min-width: 350px;
     justify-content: center;
 
     @include lg {
