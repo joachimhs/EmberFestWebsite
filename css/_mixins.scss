@@ -68,3 +68,8 @@
   font-size: $title-font-size-resposive;
   line-height: $title-font-size-resposive;
 }
+
+@mixin blurFilter($blur) {
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+}

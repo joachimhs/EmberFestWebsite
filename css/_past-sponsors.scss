@@ -37,7 +37,7 @@
 
   .past-sponsors-list {
     background: $translucent;
-    backdrop-filter: blur(8px);
+    @include blurFilter(8px);
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: center;
@@ -109,7 +109,7 @@
           padding-left: 78px;
           padding-right: 18px;
           background-color: $translucent;
-          backdrop-filter: blur(8px);
+          @include blurFilter(8px);
           border-radius: 12px;
           height: 100%;
           width: 325px;
