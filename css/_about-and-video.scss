@@ -59,13 +59,13 @@
       aspect-ratio: 16 / 9;
       background: #d8d8d8;
 
+      @include small-desktop {
+        width: 75%;
+      }
+
       @include mobile {
         width: 100%;
         padding: 0 2px;
-      }
-      
-      @include small-desktop {
-        width: 75%;
       }
     }
 
