@@ -75,12 +75,25 @@
       border: none;
     }
 
-    color: $light-yellow;
-    letter-spacing: 0;
+    button {
+      background-color: initial;
+      border: initial;
+      cursor: pointer;
+    }
 
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
+    &,
+    span {
+      font-family: $main-font;
+      color: $light-yellow;
+      letter-spacing: 0;
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      @include lg {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
 
     display: flex;
     align-items: center;
@@ -94,8 +107,6 @@
     border-radius: 32px;
 
     @include lg {
-      font-size: 40px;
-      line-height: 40px;
       justify-content: center;
 
       position: absolute;

@@ -11,6 +11,14 @@
     <meta name="publisher" content="EmberFest" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/{{ page.css | default: 'app' }}.css" />
+    <script>
+      if(!window.tito) {
+        var script = document.createElement('script');
+        script.src = `https://js.tito.io/v2${['localhost', '127.0.0.1'].includes(window.location.hostname)? '/with/development_mode' : ''}`;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    </script>
   </head>
   <body>
     {{ content }}
