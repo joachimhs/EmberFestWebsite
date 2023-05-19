@@ -146,8 +146,9 @@
     line-height: 2.5rem;
     color: $light-yellow;
     background: $dark-blue;
-    padding: 30px 50px 15.5px;
+    padding: 31.5px 50px 16.5px;
     text-transform: uppercase;
+    border: 2px solid $dark-blue;
     background-color: rgba(8, 23, 94, 1);
     box-shadow: 0 25px 35px 0 $shadow-color;
 
@@ -158,8 +159,16 @@
       margin-left: auto;
       margin-right: auto;
       border-radius: 32px;
-      padding: 22px 49px 14px;
+      padding: 16px 49px 4px;
       box-shadow: 0 21px 29px 0 $shadow-color;
     }
+  }
+
+  .button.get-involved:hover {
+    border: 2px solid $light-yellow;
+  }
+
+  .button.get-involved a:hover{
+    color: $light-yellow;
   }
 }
