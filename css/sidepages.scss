@@ -8,9 +8,8 @@
 @import "footer";
 
 body {
-  background-size: auto 114%;
+  background-position: center -60px;
   background-color: $light-yellow;
-  background-position: top center;
   background-image: url(../images/backgrounds/background_1-grey.svg);
   font-family: $main-font;
 }
