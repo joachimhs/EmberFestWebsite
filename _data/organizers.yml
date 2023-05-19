@@ -2,10 +2,10 @@
   logo: joschka-kintscher.png
   name: Joschka Kintscher
 
-- link: https://balinterdi.com/
-  logo: balint-erdi.png
-  name: Balint Erdi
-
 - link: https://mainmatter.com/
   logo: mainmatter.svg
   name: Mainmatter
+
+- link: https://balinterdi.com/
+  logo: balint-erdi.png
+  name: Balint Erdi
