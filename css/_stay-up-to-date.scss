@@ -27,7 +27,8 @@
       justify-content: center;
     }
 
-    .title, form {
+    .title,
+    form {
       max-width: 470px;
     }
 
@@ -117,7 +118,6 @@
     }
 
     .button {
-      border: none;
       margin-top: 40px;
       font-size: 2.5rem;
       letter-spacing: 0;
@@ -126,9 +126,10 @@
       line-height: 2.5rem;
       color: $light-yellow;
       background: $dark-blue;
-      padding: 33px 50px 19px;
+      padding: 31px 50px 17px;
       text-transform: uppercase;
       font-family: $main-font-bold;
+      border: 2px solid $dark-blue;
       background-color: rgba(8, 23, 94, 1);
       box-shadow: 0 25px 35px 0 $shadow-color;
 
@@ -136,8 +137,12 @@
         font-size: 2rem;
         line-height: 2rem;
         align-self: center;
-        padding: 19px 50px 5px;
+        padding: 16px 50px 4px;
       }
+    }
+
+    .button:hover {
+      border: 2px solid #fdffd6;
     }
   }
 }
