@@ -63,15 +63,16 @@
   }
 
   .button.book-tickets {
+    border: 2px solid $dark-blue;
     &:hover {
       a {
         color: $light-yellow;
       }
-      border: 2px solid $light-yellow;
+      border-color: $light-yellow;
     }
 
     &:active {
-      border: none;
+      border-color: $dark-blue;
     }
 
     button {
@@ -100,8 +101,7 @@
     background: $dark-blue;
     box-shadow: 0 25px 35px 0 $shadow-color;
 
-    width: 300px;
-    height: 50px;
+    width: calc(min(300px, 95vw));
     padding-top: 12px;
     border-radius: 32px;
 
