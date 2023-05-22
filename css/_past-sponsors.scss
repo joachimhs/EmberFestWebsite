@@ -35,22 +35,17 @@
     margin-right: auto;
   }
 
-  @include lg {
-  }
-
   .past-sponsors-list {
     background: $translucent;
     @include blurFilter(8px);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0 18px;
     justify-content: space-evenly;
     padding: 25px;
-    gap: 30px;
+    gap: 25px;
     @include lg {
-      display: flex;
-      flex-wrap: wrap;
       padding: 65px;
       gap: 80px;
     }
