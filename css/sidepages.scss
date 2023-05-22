@@ -33,14 +33,14 @@ p {
   align-items: center;
   justify-content: center;
 
-
   @include tablet {
     display: grid;
     grid-gap: 10px 20px;
     justify-items: center;
     padding: 30px 8px 50px;
 
-    .logo, .header__image {
+    .logo,
+    .header__image {
       grid-row: 1;
     }
 
@@ -79,12 +79,35 @@ p {
     text-transform: uppercase;
 
     @include tablet {
-      gap:0;
+      gap: 0;
       display: flex;
       flex-wrap: wrap;
       font-size: 1.3rem;
       line-height: 1.7rem;
     }
+  }
+}
+
+h3 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: $dark_blue;
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: $secondary-font;
+  margin: auto;
+  max-width: calc(min(900px, 80vw));
+  margin-bottom: 60px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    max-width: initial;
+    @include responsiveTitle(80%, 2.875rem);
+  }
+
+  &.cancellation__title {
+    @include responsiveTitle(80%, 2.875rem, 11vw);
+    margin-bottom: 20px;
   }
 }
 
@@ -103,16 +126,13 @@ p {
     max-width: 90%;
   }
 
-  h3.cancellation__title {
-    margin-bottom: 20px;
-  }
-
   .imprint__responsible_info {
     gap: 40px;
     display: flex;
     text-align: center;
     padding-bottom: 20px;
     flex-direction: column;
+    overflow-wrap: break-word;
 
     p:last-of-type {
       font-size: 2.5rem;
@@ -125,21 +145,6 @@ p {
     }
   }
 
-  h3 {
-    font-size: 5rem;
-    font-weight: 800;
-    color: $dark_blue;
-    text-align: center;
-    margin-bottom: 60px;
-    font-family: $secondary-font;
-
-    @include tablet {
-      padding: 0 10px;
-      font-size: 2.875rem;
-      line-height: 2.875rem;
-    }
-  }
-
   h4 {
     font-size: 2.5rem;
     color: $dark_blue;
@@ -147,6 +152,7 @@ p {
     font-family: $main-font-bold;
 
     @include tablet {
+      @include responsiveTitle(80%, 2rem);
       padding: 40px 0;
     }
   }
