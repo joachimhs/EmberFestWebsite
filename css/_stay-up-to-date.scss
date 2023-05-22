@@ -21,7 +21,6 @@
     }
 
     @include mobile {
-      // width: 93%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -45,8 +44,6 @@
 
       @include mobile {
         @include responsiveTitle(80%, 3.44rem, 14.5vw);
-        // font-size: 3.43rem;
-        // line-height: 3.43rem;
       }
 
       .emberfest-logo {
@@ -62,8 +59,6 @@
 
       @include mobile {
         width: 100%;
-        // max-width: 760px;
-        // align-self: center;
       }
 
       label,
@@ -120,6 +115,7 @@
     }
 
     .button {
+      cursor: pointer;
       margin-top: 40px;
       font-size: 2.5rem;
       letter-spacing: 0;
