@@ -101,19 +101,19 @@
     }
 
     .social-media-button {
-      width: 60px;
-      height: 60px;
+      width: 58px;
+      height: 58px;
       display: flex;
       border-radius: 50%;
       align-items: center;
       background: $dark-blue;
       justify-content: center;
+      border: 2px solid $dark-blue;
       box-shadow: 0 25px 35px 0$shadow-color;
     }
 
     .social-media-button:hover {
       border: 2px solid #fdffd6;
-      box-shadow: 0 25px 35px 0 rgba(8, 23, 94, 0.3);
     }
 
     .social-media-button img {
