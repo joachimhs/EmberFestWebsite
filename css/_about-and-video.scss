@@ -95,7 +95,7 @@
   .info {
     margin: auto;
     display: flex;
-    max-width: 70%;
+    max-width: calc(min(85vw, 1080px));
     gap: 70px;
     padding: 163px 0 145px 0;
 
@@ -116,13 +116,11 @@
     font-family: $secondary-font;
 
     @include mobile {
-      font-size: 3.43rem;
-      line-height: 3.43rem;
+      @include responsiveTitle(80%, 3.43rem);
     }
   }
 
   p {
-    max-width: 80%;
     color: $dark_blue;
     font-size: 1.625rem;
     line-height: 2.125rem;
@@ -138,28 +136,43 @@
     }
   }
 
+  .text-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 60px;
+    @include sm {
+      text-align: center;
+    }
+    @include lg {
+      text-align: left;
+    }
+  }
+
   .button.get-involved {
-    margin-top: 62px;
     font-size: 2.5rem;
-    width: max-content;
     border-radius: 59px;
     line-height: 2.5rem;
     color: $light-yellow;
     background: $dark-blue;
     padding: 31.5px 50px 16.5px;
     text-transform: uppercase;
+    text-align: center;
     border: 2px solid $dark-blue;
     background-color: rgba(8, 23, 94, 1);
     box-shadow: 0 25px 35px 0 $shadow-color;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    min-width: calc(min(290px, 90vw));
     @include small-desktop {
       font-size: 2rem;
       line-height: 2rem;
-      margin-top: 60px;
       margin-left: auto;
       margin-right: auto;
       border-radius: 32px;
-      padding: 16px 49px 4px;
+      padding: 16px 4px 4px;
       box-shadow: 0 21px 29px 0 $shadow-color;
     }
   }
@@ -168,7 +181,7 @@
     border: 2px solid $light-yellow;
   }
 
-  .button.get-involved a:hover{
+  .button.get-involved a:hover {
     color: $light-yellow;
   }
 }
