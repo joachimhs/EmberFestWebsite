@@ -17,7 +17,10 @@
   }
 
   h3 {
-    @include responsiveTitle(40px, 80px);
+    @include responsiveTitle(80%, 80px);
+    &:first-child {
+      @include responsiveTitle(80%, 80px, 14.68vw);
+    }
     font-family: $secondary-font;
     margin-bottom: 40px;
     @include lg {
@@ -39,7 +42,7 @@
     background: $translucent;
     @include blurFilter(8px);
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     align-items: center;
     margin: 0 18px;
     justify-content: space-evenly;
