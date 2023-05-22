@@ -110,6 +110,11 @@
       box-shadow: 0 25px 35px 0$shadow-color;
     }
 
+    .social-media-button:hover {
+      border: 2px solid #fdffd6;
+      box-shadow: 0 25px 35px 0 rgba(8, 23, 94, 0.3);
+    }
+
     .social-media-button img {
       height: fit-content;
     }
