@@ -21,10 +21,11 @@
     }
 
     @include mobile {
-      width: 93%;
+      // width: 93%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     .title,
@@ -43,8 +44,9 @@
       font-family: $secondary-font;
 
       @include mobile {
-        font-size: 3.43rem;
-        line-height: 3.43rem;
+        @include responsiveTitle(80%, 3.44rem, 14.5vw);
+        // font-size: 3.43rem;
+        // line-height: 3.43rem;
       }
 
       .emberfest-logo {
@@ -60,8 +62,8 @@
 
       @include mobile {
         width: 100%;
-        max-width: 760px;
-        align-self: center;
+        // max-width: 760px;
+        // align-self: center;
       }
 
       label,
@@ -134,10 +136,12 @@
       box-shadow: 0 25px 35px 0 $shadow-color;
 
       @include mobile {
+        width: calc(min(242px, 95vw));
+        word-break: break-word;
         font-size: 2rem;
         line-height: 2rem;
         align-self: center;
-        padding: 16px 50px 4px;
+        padding: 16px 10px 4px;
       }
     }
 
