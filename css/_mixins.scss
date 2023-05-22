@@ -61,9 +61,13 @@
   }
 }
 
-@mixin responsiveTitle($min-font-size, $max-font-size) {
+@mixin responsiveTitle(
+  $min-font-size,
+  $max-font-size,
+  $min-screen-width: 12.5vw
+) {
   $title-font-size-resposive: calc(
-    max(#{$min-font-size}, min(12.5vw, #{$max-font-size}))
+    max(#{$min-font-size}, min(#{$min-screen-width}, #{$max-font-size}))
   );
   font-size: $title-font-size-resposive;
   line-height: $title-font-size-resposive;
