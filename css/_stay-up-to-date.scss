@@ -12,9 +12,10 @@
   .stay-up-to-date {
     margin: auto;
     display: grid;
-    column-gap: 111px;
-    padding: 150px 120px 150px 175px;
-    grid-template-columns: 1fr 1fr;
+    column-gap: 140px;
+    padding: 150px 0;
+    grid-template-columns: repeat(2, minmax(auto, 400px));
+    justify-content: center;
 
     @include small-desktop {
       padding: 60px 18px 100px;
