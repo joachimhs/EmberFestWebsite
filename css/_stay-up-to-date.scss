@@ -92,7 +92,7 @@
     }
 
     .social-media {
-      gap: 30px;
+      gap: calc(min(30px, 8vw));
       display: flex;
       grid-column: 1;
       padding-top: 48px;
