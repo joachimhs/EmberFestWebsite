@@ -110,7 +110,7 @@ h3 {
     max-width: initial;
     @include responsiveTitle(80%, 2.875rem);
     &.cancellation__title, &.conduct__title, &.imprint__title  {
-      @include responsiveTitle(80%, 2.875rem, 10.5vw);
+      @include responsiveTitle(80%, 2.875rem, 10vw);
     }
   }
 
