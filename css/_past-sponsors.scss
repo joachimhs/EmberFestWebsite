@@ -1,0 +1,142 @@
+.past-sponsors {
+  font-family: $main-font;
+  background-image: url("/images/backgrounds/pattern_1.svg");
+  background-color: $grey-light;
+  background-repeat: repeat;
+  background-size: 200px;
+  background-position: left -30px top;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  margin-top: -50px;
+  @include lg {
+    margin-top: -100px;
+    background-position: left -40px top;
+    background-size: 400px;
+    padding-top: 250px;
+    padding-bottom: 150px;
+  }
+
+  h3 {
+    @include responsiveTitle(80%, 80px);
+    &:first-child {
+      @include responsiveTitle(80%, 80px, 14.68vw);
+    }
+    font-family: $secondary-font;
+    margin-bottom: 40px;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    color: $orange;
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .past-sponsors-list {
+    background: $translucent;
+    @include blurFilter(8px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 18px;
+    justify-content: space-evenly;
+    padding: 25px;
+    gap: 25px;
+    @include lg {
+      padding: 65px;
+      gap: 80px;
+    }
+    margin-bottom: 60px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-height: 32px;
+      min-height: 20px;
+      max-width: 140px;
+      @include lg {
+        max-height: 50px;
+        min-height: 40px;
+        max-width: 235px;
+      }
+    }
+  }
+
+  .organizers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @include ssm {
+      justify-content: center;
+    }
+    gap: 18px;
+    .organizer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      @include lg {
+        gap: 28px;
+        flex-direction: row;
+      }
+
+      .avatar {
+        width: 94px;
+        aspect-ratio: 1 / 1;
+
+        @include lg {
+          width: 100px;
+          z-index: 2;
+        }
+      }
+
+      .name {
+        width: 94px;
+        text-align: center;
+        @include lg {
+          display: flex;
+          align-items: center;
+          margin-left: -78px;
+          padding-left: 78px;
+          padding-right: 18px;
+          background-color: $translucent;
+          @include blurFilter(8px);
+          border-radius: 12px;
+          height: 100%;
+          width: 325px;
+        }
+      }
+
+      .name p {
+        margin-top: 5px;
+        font-family: $main-font;
+        font-size: 20px;
+        line-height: 26px;
+        @include lg {
+          font-size: 26px;
+          line-height: 34px;
+        }
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .past-sponsors-list,
+  .organizers {
+    border-radius: 12px;
+    max-width: 1200px;
+    width: 95%;
+    @include lg {
+      width: 90%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

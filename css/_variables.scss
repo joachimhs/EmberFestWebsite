@@ -1,7 +1,21 @@
 //variables
-$font: 'Lato', sans-serif;
+$main-font-bold: "TomkinCondense-Medium", sans-serif;
+$main-font-thin: "TomkinCondense-Thin", sans-serif;
+$main-font: "TomkinCondense-Regular", sans-serif;
+$secondary-font: "TT Travels Next Trial Variable Extra Bold", sans-serif;
 
 //breakpoints
 $desktop-breakpoint: 1200px;
 $tablet-breakpoint: 768px;
 $mobile-breakpoint: 576px;
+
+//colors
+$grey-light: #e8e8e8;
+$shadow-color: rgba(8, 23, 94, 0.3);
+$dark-shadow-color: rgba(8, 23, 94, 0.6);
+$dark-blue: #08175e;
+$light-yellow: #fdffd6;
+$transparent: transparent;
+$translucent: rgba(0, 0, 0, 0.05);
+$orange: #ea473b;
+$white: white;

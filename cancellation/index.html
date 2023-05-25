@@ -1,19 +1,36 @@
 ---
 layout: default
+css: sidepages
 title: EmberFest
 ---
-{% include main_header.html %}
+
+{% include sidepages_header.html %}
 
 <main>
-  <section>
-    <div class="content">
-      <h3 class="divider">Cancellation Policy</h3>
-      <h4>Up to 30 days before the start of the conference</h4>
-      <p>Up to 30 days before the start of the conference, you can get a full refund for your ticket. Send an email to mail@emberfest.eu and we will process your refund.</p>
-      <h4>Within 30 days of the start of the conference</h4>
-      <p>We are unable to offer refunds within 30 days of the conference, however your ticket can be reassigned at any time to a different attendee. To reassign your ticket, please follow the link on your original confirmation email.</p>
-      <h4>“Force majeure” events</h4>
-      <p>Should the conference be cancelled for any reason (including due to restrictions because of the Coronavirus pandemic), purchased tickets will be valid for the next year.</p>
-    </div>
-  </section>
-</main>
+    <section>
+      <h3 class="cancellation__title">Cancellation Policy</h3>
+      <div class="content">
+        <h4>Up to 30 days before the start of the conference</h4>
+        <p>
+          Up to 30 days before the start of the conference, you can get a full
+          refund for your ticket. Send an email to mail@emberfest.eu and we will
+          process your refund.
+        </p>
+        <h4>Within 30 days of the start of the conference</h4>
+        <p>
+          We are unable to offer refunds within 30 days of the conference, however
+          your ticket can be reassigned at any time to a different attendee. To
+          reassign your ticket, please follow the link on your original
+          confirmation email.
+        </p>
+        <h4>“Force majeure” events</h4>
+        <p>
+          Should the conference be cancelled for any reason (including due to
+          restrictions because of the Coronavirus pandemic), purchased tickets
+          will be valid for the next year.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}

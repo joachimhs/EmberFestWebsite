@@ -1,0 +1,88 @@
+---
+layout: 2022/default
+title: Schedule
+---
+{% include 2022/main_header.html %}
+
+<section class="schedule">
+  <div class="schedule-wrapper schedule">
+    <div class="container tb_padding">
+      <h3>Schedule</h3>
+      <div class="timetable full-timetable">
+        <h5>• Day 1 •</h5>
+        <h6>Sep 22 (Thursday)</h6>
+        <div class="timezone-remark">(Times are local, CEST)</div>
+        <table class="table schedule-table">
+          <thead>
+            <tr>
+              <th class="time">Time</th>
+              <th class="talk">Talk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for info in site.data.2022.schedule.day1 %}
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+              <td>{{ info.text }}</td>
+              {% else %}
+              <td class="talk-details">
+                <h6><a name="{{ info.id }}">{{ info.talk }}</a></h6>
+                {{ info.description}}
+                {% if info.speaker %}
+                <div class="speaker-profile">
+                  <h6 class="speaker">{{ info.speaker }}</h6>
+                  {% if info.image_extension %}
+                  <img src="/2022/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  {% endif %}
+                  {{ info.bio }}
+                </div>
+                {% endif %}
+              </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+
+        <h5 class="day2">• Day 2 •</h5>
+        <h6>Sep 23 (Friday)</h6>
+        <div class="timezone-remark">(Times are local, CEST)</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="time">Time</th>
+              <th class="talk">Talk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for info in site.data.2022.schedule.day2 %}
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+              <td>{{ info.text }}</td>
+              {% else %}
+              <td class="talk-details">
+                <h6><a name="{{ info.id }}">{{ info.talk }}</a></h6>
+                {{ info.description}}
+                {% if info.speaker %}
+                <div class="speaker-profile">
+                  <h6 class="speaker">{{ info.speaker }}</h6>
+                  {% if info.image_extension %}
+                  <img src="/2022/images/speakers/{{ info.id }}.{{ info.image_extension }}" class="speaker">
+                  {% endif %}
+                  {{ info.bio }}
+                </div>
+                {% endif %}
+              </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
