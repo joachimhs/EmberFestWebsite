@@ -111,8 +111,8 @@ h3 {
     @include responsiveTitle(80%, 2.875rem);
   }
 
-  &.cancellation__title {
-    @include responsiveTitle(80%, 2.875rem, 11vw);
+  &.cancellation__title, &.conduct__title{
+    @include responsiveTitle(80%, 2.875rem, 10.5vw);
     margin-bottom: 20px;
   }
 }
