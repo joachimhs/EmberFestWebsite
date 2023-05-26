@@ -11,12 +11,13 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 50px 0 $dark-shadow-color;
-  border-radius: 80px;
+  border-radius: 30px;
   position: relative;
   z-index: 2;
 
   @include lg {
     background-size: 100% auto;
+    border-radius: 80px;
     background-position: center top -250px;
     padding-top: 100px;
     padding-bottom: 100px;
