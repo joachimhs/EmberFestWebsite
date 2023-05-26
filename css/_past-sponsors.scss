@@ -44,7 +44,13 @@
     margin: 0 18px;
     justify-content: space-evenly;
     padding: 25px;
-    gap: 25px;
+    column-gap: 25px;
+    row-gap: 40px;
+
+    @include sm {
+      gap: 40px;
+    }
+    
     @include lg {
       padding: 65px;
       gap: 80px;
