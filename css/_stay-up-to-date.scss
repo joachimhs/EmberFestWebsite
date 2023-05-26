@@ -85,6 +85,19 @@
         font-family: $main-font-thin;
         box-shadow: 0 25px 35px 0 $shadow-color;
       }
+
+      input:autofill,
+      input:autofill:hover,
+      input:autofill:focus,
+      input:autofill:active,
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $light-yellow;
+        background-color: $dark-blue;
+      }
     }
 
     .social-media {
