@@ -20,7 +20,7 @@ title: Schedule
             </tr>
           </thead>
           <tbody>
-            {% for info in site.data.2022.schedule.day1 %}
+            {% for info in site.data.year2022.schedule.day1 %}
             <tr>
               <td class="schedule-table--timeslot">{{ info.time }}</td>
               {% if info.isBreakTime %}
@@ -57,7 +57,7 @@ title: Schedule
             </tr>
           </thead>
           <tbody>
-            {% for info in site.data.2022.schedule.day2 %}
+            {% for info in site.data.year2022.schedule.day2 %}
             <tr>
               <td class="schedule-table--timeslot">{{ info.time }}</td>
               {% if info.isBreakTime %}
