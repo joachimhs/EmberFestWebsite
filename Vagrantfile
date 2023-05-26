@@ -20,14 +20,14 @@ Vagrant.configure('2') do |config|
     git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
     echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 
-    ~/.rbenv/bin/rbenv install 2.7.3
-    ~/.rbenv/bin/rbenv global 2.7.3
+    ~/.rbenv/bin/rbenv install 3.2.2
+    ~/.rbenv/bin/rbenv global 3.2.2
   SCRIPT
 
   config.vm.provision :shell, privileged: false, inline: <<-SCRIPT
     ~/.rbenv/shims/gem update --system
     ~/.rbenv/shims/gem install bundler
-    ~/.rbenv/shims/gem install bundler:1.14.6
+    ~/.rbenv/shims/gem install bundler:2.4.13
   SCRIPT
 
   config.vm.provider 'virtualbox' do |v|

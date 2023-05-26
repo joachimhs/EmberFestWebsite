@@ -1,6 +1,6 @@
-FROM ruby:2.7.3-alpine
+FROM ruby:3.2.2-alpine
 
-ENV BUNDLER_VERSION=1.14.6
+ENV BUNDLER_VERSION=2.4.13
 ENV PATH /app/bin:$PATH
 
 RUN apk add --update --no-cache \
