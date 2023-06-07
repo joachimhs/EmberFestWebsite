@@ -43,6 +43,12 @@
   }
 }
 
+@mixin small-mobile {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media only screen and (max-width: 897px) {
     @content;

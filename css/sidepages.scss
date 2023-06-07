@@ -55,6 +55,14 @@ p {
       display: flex;
       grid-column: 1 / span 2;
     }
+
+    a {
+      display: flex;
+      justify-self: left;
+      grid-row: 1;
+      grid-column: 2;
+      margin-bottom: 20px;
+    }
   }
 
   .location::before {
@@ -71,10 +79,10 @@ p {
   }
 
   img.header__image {
-    height: 52px;
+    height: 189px;
 
     @include tablet {
-      height: 25px;
+      height: 91px;
     }
   }
 
@@ -90,6 +98,14 @@ p {
       flex-wrap: wrap;
       font-size: 1.3rem;
       line-height: 1.7rem;
+      margin-top: 50px;
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    @include small-mobile {
+      margin-top: 65px;
+      text-align: center;
     }
   }
 }
@@ -109,7 +125,9 @@ h3 {
     margin-bottom: 40px;
     max-width: initial;
     @include responsiveTitle(80%, 2.875rem);
-    &.cancellation__title, &.conduct__title, &.imprint__title  {
+    &.cancellation__title,
+    &.conduct__title,
+    &.imprint__title {
       @include responsiveTitle(80%, 2.875rem, 10vw);
     }
   }
