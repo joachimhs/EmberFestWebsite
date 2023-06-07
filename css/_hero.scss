@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 90px;
+    gap: 42px;
     padding-top: 40px;
     padding-bottom: 100px;
     margin: 0 18px;
@@ -30,10 +30,15 @@
     @include lg {
       position: relative;
       margin: inherit;
-      gap: 125px;
+      gap: 68px;
       padding-top: 60px;
-      padding-bottom: 228px;
       justify-content: center;
+
+      .logo-title {
+        height: 100%;
+        width: auto;
+        min-height: 720px;
+      }
     }
 
     .date-and-location {
@@ -48,16 +53,6 @@
 
       @include lg {
         font-size: 40px;
-      }
-    }
-
-    .logos-container {
-      max-width: 650px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      @include lg {
-        gap: 60px;
       }
     }
   }
