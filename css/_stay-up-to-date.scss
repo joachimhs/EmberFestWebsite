@@ -3,6 +3,8 @@
   background-position: center;
   background-image: url(../images/backgrounds/background_4.svg);
   background-color: $white;
+  padding-top: 100px;
+  margin-top: -100px;
 
   @include mobile {
     background-size: 290%;

@@ -8,12 +8,17 @@
   padding-top: 100px;
   padding-bottom: 60px;
   margin-top: -50px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
   @include lg {
     margin-top: -100px;
     background-position: left -40px top;
     background-size: 400px;
     padding-top: 250px;
     padding-bottom: 150px;
+    border-radius: 80px;
   }
 
   h3 {
