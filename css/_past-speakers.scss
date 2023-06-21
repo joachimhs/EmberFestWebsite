@@ -2,9 +2,8 @@
   font-family: $main-font;
   color: $light-yellow;
   background-color: $dark-blue;
-  background-image: url("/images/backgrounds/background_3.svg");
-  background-size: 400% auto;
-  background-position: top -200px left -400px;
+  background-image: url("/images/backgrounds/pattern_2.svg");
+  background-repeat: repeat;
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -16,9 +15,7 @@
   z-index: 2;
 
   @include lg {
-    background-size: 100% auto;
     border-radius: 80px;
-    background-position: center top -250px;
     padding-top: 100px;
     padding-bottom: 100px;
   }
