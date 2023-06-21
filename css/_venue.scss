@@ -1,0 +1,109 @@
+.venue {
+  font-family: $main-font;
+  background-image: url("/images/backgrounds/curly-brace.svg");
+  background-color: $light-yellow;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: repeat-x;
+  background-attachment: local;
+  margin-top: -50px;
+  padding: 150px 0;
+
+  @include lg {
+    margin-top: -100px;
+    padding: 200px 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: $dark-blue;
+    letter-spacing: 0;
+    line-height: 2rem;
+    display: block;
+    font-family: $secondary-font;
+    margin: 0 0 40px 0;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    img {
+      margin-bottom: 40px;
+    }
+
+    @include lg {
+      padding: 0 85px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 85px;
+      width: calc(100% - 85px);
+
+      img {
+        margin-bottom: 0;
+      }
+    }
+
+    .text-and-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 40px;
+      }
+
+      @include lg {
+        margin-bottom: 0;
+      }
+
+      p {
+        flex: none;
+        margin: 0 0 60px 0;
+        letter-spacing: 0;
+        color: $dark-blue;
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+        font-family: $main-font;
+      
+        @include mobile {
+          font-size: 1.25rem;
+          line-height: 1.625rem;
+        }
+      }
+
+      .button {
+        flex: none;
+        font-size: 2.5rem;
+        border-radius: 59px;
+        line-height: 2.5rem;
+        color: $dark-blue;
+        padding: 31.5px 50px 16.5px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid $dark-blue;
+        min-width: calc(min(290px, 90vw));
+
+        @include small-desktop {
+          font-size: 2rem;
+          line-height: 2rem;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 32px;
+          padding: 16px 4px 4px;
+        }
+      }
+    }
+  }
+}
