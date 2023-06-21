@@ -70,10 +70,14 @@
         font-size: 1.625rem;
         line-height: 2.125rem;
         font-family: $main-font;
-      
+
         @include mobile {
           font-size: 1.25rem;
           line-height: 1.625rem;
+        }
+
+        @include lg {
+          max-width: 540px;
         }
       }
 
