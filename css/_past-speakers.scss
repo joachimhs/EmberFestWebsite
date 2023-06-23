@@ -4,6 +4,8 @@
   background-color: $dark-blue;
   background-image: url("/images/backgrounds/pattern_2.svg");
   background-repeat: repeat;
+  background-size: 200px;
+  background-position: center top -100px;
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -15,6 +17,7 @@
   z-index: 2;
 
   @include lg {
+    background-size: 400px;
     border-radius: 80px;
     padding-top: 100px;
     padding-bottom: 100px;

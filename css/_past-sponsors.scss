@@ -4,7 +4,7 @@
   background-color: $grey-light;
   background-repeat: repeat;
   background-size: 200px;
-  background-position: left -30px top;
+  background-position: center top -100px;
   padding-top: 100px;
   padding-bottom: 60px;
   margin-top: -50px;
@@ -14,7 +14,6 @@
   z-index: 2;
   @include lg {
     margin-top: -100px;
-    background-position: left -40px top;
     background-size: 400px;
     padding-top: 250px;
     padding-bottom: 150px;
