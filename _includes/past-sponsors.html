@@ -1,44 +1,36 @@
-<section class="past-sponsors">
+<section class="sponsors">
 	<h3>Past Sponsors</h3>
-	<ul class="past-sponsors-list">
-		{% for sponsor in site.data.year2022.sponsors.premier_partners %}
-		<li>
-			<a href="{{ sponsor.link }}">
-				<img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
-			</a>
-		</li>
-		{% endfor %}
-		{% for sponsor in site.data.year2022.sponsors.dinner %}
-		<li>
-			<a href="{{ sponsor.link }}">
-				<img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
-			</a>
-		</li>
-		{% endfor %}
-		{% for sponsor in site.data.year2022.sponsors.partners %}
-		<li>
-			<a href="{{ sponsor.link }}">
-				<img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
-			</a>
-		</li>
-		{% endfor %}
-		{% for sponsor in site.data.year2022.sponsors.supporters %}
-		<li>
-			<a href="{{ sponsor.link }}">
-				<img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
-			</a>
-		</li>
-		{% endfor %}
-	</ul>
-	<h3>Organizers</h3>
-	<ul class="organizers">
-		{% for organizer in site.data.organizers %}
-		<li class="organizer">
-			<img class="avatar" src="/images/organizers/{{ organizer.logo }}" />
-			<a class="name" href="{{ organizer.link }}">
-				<p>{{ organizer.name }}</p>
-			</a>
-		</li>
-		{% endfor %}
-	</ul>
+  <div class="sponsor-section-wrapper">
+    <ul class="sponsors-list">
+      {% for sponsor in site.data.year2022.sponsors.premier_partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.dinner %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.supporters %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+	{% include organizers.html %}
 </section>

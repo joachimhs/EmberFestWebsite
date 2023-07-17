@@ -1,4 +1,4 @@
-.past-sponsors {
+.sponsors {
   font-family: $main-font;
   background-image: url("/images/backgrounds/pattern_1.svg");
   background-color: $grey-light;
@@ -41,24 +41,33 @@
     margin-right: auto;
   }
 
-  .past-sponsors-list {
+  h4 {
+    font-family: $main-font;
+    font-size: 26px;
+    color: $dark-blue;
+    letter-spacing: 0;
+    line-height: 34px;
+  }
+
+  .sponsors-list {
     background: $translucent;
     @include blurFilter(var(--blur-intensity));
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0 18px;
+    margin-bottom: 18px;
     justify-content: space-evenly;
     padding: 25px;
     column-gap: 25px;
     row-gap: 40px;
+    border-radius: 12px;
 
     @include sm {
       gap: 40px;
     }
 
     @include lg {
-      padding: 65px;
+      padding: 50px;
       gap: 80px;
     }
     margin-bottom: 60px;
@@ -69,14 +78,30 @@
       justify-content: center;
     }
 
-    img {
-      max-height: 32px;
-      min-height: 20px;
-      max-width: 140px;
-      @include lg {
+    &.premier-partners,
+    &.dinner-sponsors {
+      img {
         max-height: 50px;
-        min-height: 40px;
-        max-width: 235px;
+        min-height: 30px;
+        max-width: 209px;
+        @include lg {
+          max-height: 64px;
+          min-height: 40px;
+          max-width: 323px;
+        }
+      }
+    }
+    &.partners,
+    &.supporters {
+      img {
+        max-height: 32px;
+        min-height: 20px;
+        max-width: 140px;
+        @include lg {
+          max-height: 50px;
+          min-height: 30px;
+          max-width: 235px;
+        }
       }
     }
   }
@@ -140,9 +165,9 @@
     }
   }
 
-  .past-sponsors-list,
+  // .sponsors-list,
+  .sponsor-section-wrapper,
   .organizers {
-    border-radius: 12px;
     max-width: 1200px;
     width: 95%;
     @include lg {
