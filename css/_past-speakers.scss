@@ -1,4 +1,4 @@
-.past-speakers {
+.past-speakers, .speakers {
   font-family: $main-font;
   color: $light-yellow;
   background-color: $dark-blue;
@@ -41,7 +41,7 @@
   @include lg {
   }
 
-  .past-speakers-list {
+  .past-speakers-list, .speakers-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
