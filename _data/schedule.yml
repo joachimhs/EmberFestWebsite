@@ -1,0 +1,251 @@
+- label: "Day 1"
+  date: "Sep 21 – Thursday"
+  slots:
+    - time: "09:00 - 10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00 - 10:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "10:45 - 11:15"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "11:30 - 12:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "12:00 - 13:30"
+      label: "Lunch"
+    - time: "13:30 - 14:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "14:15 - 14:45"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "15:00 - 15:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "15:30 - 16:00"
+      label: "Snack break"
+    - time: "16:00 - 16:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "16:45 - 17:15"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "17:30 - 18:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+- label: "Day 2"
+  date: "Sep 22 – Friday"
+  slots:
+    - time: "09:00 - 10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00 - 10:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "10:45 - 11:15"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "11:30 - 12:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "12:00 - 13:30"
+      label: "Lunch"
+    - time: "13:30 - 14:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "14:15 - 14:45"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "15:00 - 15:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "15:30 - 16:00"
+      label: "Snack break"
+    - time: "16:00 - 16:30"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "16:45 - 17:15"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation library. His open source code is running on mainstream gaming consoles, major social media sites, and hordes of enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a diverse group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.</p>
+            <p>Ed resides in Somerville, Massachusetts with his wife and two sons.</p>
+    - time: "17:30 - 18:00"
+      label: "Title"
+      description: >
+        <p>Performance culture is a unique culture that is not often seen among companies. Only the ones that care enough and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even if wanted to embrace performance culture, wasn't able to actually iterate on the results.</p>
+        <p>In my talk, I'll go through the goals we've set and how we accomplished some great results by using Embroider and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for you. I'll show what are the tools we use to make sure we keep the quality high.</p>
+      speakers:
+        - name: "Speaker Name"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+    - time: "18:00 - 22:00"
+      label: "Closing Party"

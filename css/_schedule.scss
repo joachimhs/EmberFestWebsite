@@ -410,3 +410,219 @@
 .button.full-schedule:hover {
   color: #ea473b;
 }
+
+.full-schedule-day {
+  .content.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 100px;
+
+    @include md {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h3 {
+      text-align: left;
+      margin: 0;
+    
+      .date {
+        color: #EA473B;
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    
+    .link-to-other-day {
+      flex: none;
+      border-radius: 59px;
+      color: $dark-blue;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid $dark-blue;
+      font-size: 32px;
+      line-height: 40px;
+      padding: 11px 50px 0px 50px;
+    
+      @include lg {
+        font-size: 40px;
+        line-height: 59px;
+      }
+    
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .timezones-note {
+    color: #08175E;
+    margin: 0;
+  }
+
+  table {
+    width: 100%;
+    border-top: 2px solid #08175E;
+
+    a {
+      color: #00ffc4;
+      text-decoration: underline;
+    }
+  
+    tr {
+      padding: 20px 0;
+      letter-spacing: 0;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+      border-bottom: 2px solid #08175E;
+  
+      @include md {
+        padding: 40px 0 28px;
+        gap: 40px;
+        flex-direction: row;
+      }
+      
+      td {
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        
+        @include md {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+      
+      .time {
+        text-align: center;
+        white-space: nowrap;
+        font-size: 20px;
+        line-height: 26px;
+        
+        @include md {
+          font-size: 26px;
+          line-height: 34px;
+        }
+      }
+  
+      h4 {
+        color: #ea473b;
+        font-size: 32px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+  
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+      
+      h5 {
+        color: #ea473b;
+        text-align: left;
+        font-size: 32px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+        
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+      
+      ul {
+        margin-left: 30px;
+        li {
+          &::marker,
+          & > p:first-child {
+            color: var(--neon-green);
+          }
+        }
+      }
+      
+      p + p {
+        margin-top: 24px;
+        @include md {
+          margin-top: 28px;
+        }
+      }
+      
+      .speaker {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include md {
+          gap: 50px;
+        }
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+      
+        .photo {
+          border-radius: 50%;
+          margin: 15px;
+          height: 200px;
+          width: 200px;
+          @include small-mobile {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+          }
+        }
+
+        @include md {
+          p {
+            margin-left: 250px;
+          }
+        }
+  
+        .speaker-info {
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          @include md {
+            margin-bottom: -50px;
+          }
+  
+          .speaker-details {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+          }
+  
+          .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          
+            a {
+              border-radius: 50%;
+              width: 42px;
+              height: 42px;
+
+              img {
+                height: 30px;
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
