@@ -16,8 +16,8 @@
                 <td class="title">
                   {{slot.label}}
                   {% if slot.speakers %}
-                    {% for speaker in slot.speakers %}
-                      <a href="/{{speaker.slug}}" class="speaker">{{speaker.name}}</a>
+                    – {% for speaker in slot.speakers %}
+                      <span class="speaker">{{speaker.name}}</span>
                     {% endfor %}
                   {% endif %}
                 </td>
@@ -27,7 +27,7 @@
         </div>
         <a
           class="button full-schedule"
-          href="/schedule/day/1"
+          href="/schedule/day/{{forloop.index + 1}}"
           alt="Full Schedule"
           >Full Schedule</a
         >
