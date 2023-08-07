@@ -57,7 +57,7 @@
     align-items: center;
 
     @include lg {
-      max-width: 600px;
+      max-width: 450px;
     }
 
     .content {
@@ -567,7 +567,11 @@
         align-items: flex-start;
         justify-content: flex-start;
         width: 100%;
-      
+
+        @include md {
+          min-height: 200px;
+        }
+
         .photo {
           border-radius: 50%;
           margin: 15px;
