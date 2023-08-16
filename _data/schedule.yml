@@ -166,5 +166,14 @@
       description: >
         <p>We'll be talking with a group of panelists about why their teams chose Ember and why they continue to build on it today. We'll also talk about what use cases and non-use cases for Ember are. We'll be openly talking about the concerns the ecosystem currently has about Ember's future and hear about the factors that companies with significant investments in Ember consider when making decisions about their future investment in the framework.</p>
         <p>The panel will be moderated by Marco Otte-Witte.</p>
+      speakers:
+        - name: "Jamie White"
+          image: "/images/speakers/jamie.jpg"
+          url: "https://www.linkedin.com/in/jgwhite/"
+        - name: "Pat O'Callaghan"
+          image: "/images/speakers/pat.jpeg"
+          twitter: "patocallaghan"
+          bio: >
+            <p>Pat is a Staff Engineer on Intercom’s Frontend Technology team. His team’s mission is to supercharge product teams at Intercom by providing world-class tools, education, and guidance, enabling them to deliver value and accelerating them through the UI lifecycle.</p>
     - time: "18:00 - 22:00"
       label: "Closing Party"
