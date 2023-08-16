@@ -162,8 +162,9 @@
           twitter: "nullvoxpopuli"
           image: "/images/speakers/preston.png"
     - time: "16:45 - 17:15"
-      label: "Panel: TBA"
+      label: "Panel: Ember – Why and Where?"
       description: >
-        <p>TBA</p>
+        <p>We'll be talking with a group of panelists about why their teams chose Ember and why they continue to build on it today. We'll also talk about what use cases and non-use cases for Ember are. We'll be openly talking about the concerns the ecosystem currently has about Ember's future and hear about the factors that companies with significant investments in Ember consider when making decisions about their future investment in the framework.</p>
+        <p>The panel will be moderated by Marco Otte-Witte.</p>
     - time: "18:00 - 22:00"
       label: "Closing Party"
