@@ -170,6 +170,8 @@
         - name: "Jamie White"
           image: "/images/speakers/jamie.jpg"
           url: "https://www.linkedin.com/in/jgwhite/"
+          bio: >
+            <p>Jamie is an engineer at HashiCorp and a long-time Ember aficionado. He ran Ember meetups and conferences in London for about four years, has spoken twice at EmberConf, and was a relatively early contributor to Ember CLI. These days he’s based near Barcelona and spends his time with his family, learning Catalan, and learning to play the clarinet.</p>
         - name: "Pat O'Callaghan"
           image: "/images/speakers/pat.jpeg"
           twitter: "patocallaghan"
