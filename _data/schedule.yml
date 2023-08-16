@@ -154,6 +154,10 @@
     - time: "15:30 - 16:00"
       label: "Snack break"
     - time: "16:00 - 16:30"
+      label: "Lighning Talks"
+      description: >
+        <p>Like every year, participants (on-site as well as remote) will have the opportunity to give lightning talks.</p>
+    - time: "16:45 - 17:15"
       label: "TBA"
       description: >
         <p>TBA</p>
@@ -161,7 +165,7 @@
         - name: "Preston Sego"
           twitter: "nullvoxpopuli"
           image: "/images/speakers/preston.png"
-    - time: "16:45 - 17:15"
+    - time: "17:30 - 18:00"
       label: "Panel: Ember – Why and Where?"
       description: >
         <p>We'll be talking with a group of panelists about why their teams chose Ember and why they continue to build on it today. We'll also talk about what use cases and non-use cases for Ember are. We'll be openly talking about the concerns the ecosystem currently has about Ember's future and hear about the factors that companies with significant investments in Ember consider when making decisions about their future investment in the framework.</p>
