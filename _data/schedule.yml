@@ -1,0 +1,185 @@
+- label: "Day 1"
+  date: "Sep 21 – Thursday"
+  slots:
+    - time: "09:00 - 10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00 - 10:30"
+      label: "TBA"
+      description: >
+        <p>TBA</p>
+      speakers:
+        - name: "Ed Faulkner"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+    - time: "10:45 - 11:15"
+      label: "Advanced patterns for v2 addons"
+      description: >
+        <p>After a brief introduction to what v2 addons are, how they are different from v1 addons, and how to create one, this talk will focus on the more advanced use cases. Especially those that require unlearning what v1 addons do, and which require a totally different approach instead:</p>
+        <ul><li>How to ship components with their own CSS</li><li>How to provide static assets to the consuming app, either by the classic way of „pushing“ into /public, or by „pulling“ through an import</li><li>Ways to make your addon configurable</li><li>How to provide built-time integrations without broccoli, but by providing your own webpack loaders. And how to make those configurable also</li><li>How to make the build-time integrations work universally with either webpack or Vite</li></ul>
+      speakers:
+        - name: "Simon Ihmig"
+          twitter: "simonihmig"
+          image: "/images/speakers/simon.jpg"
+          bio: >
+            <p>Simon is a long time Ember user and active community member, created many Ember apps and addons at kaliber5, the company he co-founded, and is now applying his experience at Crowdstrike. Based near Hamburg, Germany, he enjoys spending time with his family, building Lego with his son, or tinkering with smart home stuff.</p>
+    - time: "11:30 - 12:00"
+      label: "Create a modern ember form manager addon"
+      description: >
+        <p>My talk will be about creating a form management addon, how/why I’ve made it, what are the features and how it works.</p><h5>Why reinventing the wheel?</h5><p>The current ways I know to handle form data are by using the model itself, maybe with the help of ember-data plugins, or with ember-changeset. In our company, we use the combo ember-changeset / ember-changeset-validations. This is a great tool for most cases, although when the data becomes a little bit more complex, usually with nested objects, it starts to be troublesome, mostly because of reference and data format issues.</p><p>For the case of the model, that means you would have to create one every time you have to deal with form management. I don’t think this is the best approach for some cases when you don’t specifically need a model and all its APIs to deal with your data (for instance, when you use the command pattern).</p><h5>So what should we do?</h5><p>When I look at the Ember ecosystem, I really like the approach taken by cibernox (maintainer of ember-power-select / ember-calendar) and the logic he used with its components. We have to say, it works really well!</p><p>I think this would be a nice way to handle form values - starting with a styleless component (that only has a yield - we can add some default form and inputs, of course), with an API that handles all the boilerplate for you, customizable enough to deal with various cases without too much hassle, and that is mainly dealt with in the template. Although, all the data and methods will be reachable in the component class with a service, where you can access the form API anytime you want.</p><p>For form validation, I got inspired by react-hook-form (and some of their ways of working, usually). You can provide whatever function of validation as long as it gives a specified format. We can also provide resolvers that use existing JavaScript libraries, so you only have to give a schema-like object as a parameter to the resolver, and voila! Something that could be worth trying if there is enough time, would also be to add validation decorators to ember-data attributes, so every time you give a model to the Form, the validations are already defined.</p><p>For form management, we’re not using the modern tools we have at our disposal. And it is a shame! This would be the perfect opportunity to create a nice developer experience, where handling forms should be simple and clear. Modifiers, tracked built-ins, glint, can be useful. And being as modern as we are, the addon will be in V2 format (and for now, only a few use it) and written in TypeScript.</p><h5>To conclude</h5><p>There is a lot to talk about how to handle form data, and how we can implement it with the new tools Ember got for us! I would be very glad to take you on this journey.</p>
+      speakers:
+        - name: "Shirin"
+          image: "/images/speakers/shirin.jpg"
+          twitter: "BoomiShirin"
+          bio: >
+            <p>Shirin here, I got into the front-end bath for 3 years or so, developing with Ember for 2.5 years! I do things mostly because I’m curious/have a good time/can improve, which happens a lot with the Ember community 😃</p>
+    - time: "12:00 - 13:30"
+      label: "Lunch"
+    - time: "13:30 - 14:00"
+      label: "From El Jardín to Ember: The Aittendee Experience"
+      description: >
+        <p>Ember meets art and AI in ‘From El Jardín to Ember: The Aittendee Experience’.</p><p>Our presentation starts with a deep-dive into the renowned “El Jardín de las Delicias” from the Prado Museum in Madrid. This intricate masterpiece serves as our live test subject, aiding in showcasing ‘Aittendee’, an Ember app that’s listening right along with you.</p><p>But ‘Aittendee’ is more than just a passive listener. Its AI-powered functionalities include real-time transcription, summarizing, extracting key definitions, and generating compelling pull quotes. The app interprets and visually illustrates central concepts of the presentation. It keeps the talk on track by providing feedback on pace and sentiment, and it even creates tailored questions from virtual audience members.</p><p>But this isn’t magic—it’s Ember. The second segment of our talk will pull back the curtain on ‘Aittendee’s’ inner workings. We delve into Ember’s role, the app’s features and architecture, and the AI APIs that allow such real-time, high-level processing. From detailed code snippets to architectural strategies, we’ll walk through the technical elements that enable this seamless, immersive experience.</p><p>Join us on this journey of revelation and innovation, an intersection of art and technology. Whether you’re drawn to the allure of “El Jardín de las Delicias” or just want the technical how-to, you’ll leave with an appreciation for both.</p>
+      speakers:
+        - name: "Sean Devine"
+          image: "/images/speakers/sean.jpg"
+          twitter: "barelyknown"
+          url: "https://www.x-b-e.com"
+    - time: "14:15 - 14:45"
+      label: "Securing technology investments and open source funding"
+      description: >
+        <p>Open source projects need funding and companies need to invest in the technology they build on – not because of morals but because of business interests to secure investments made by building on the technology. In this talk, I'll cover why you'll want to invest, the risks if failing to invest, and the ways that companies can invest.</p>
+      speakers:
+        - name: "Marco Otte-Witte"
+          image: "/images/speakers/marcoow.jpg"
+          twitter: "marcoow"
+          url: "https://mainmatter.com"
+          bio: >
+            <p>Marco has been working in web engineering for about 15 years and has used all kinds of technologies in projects of all kinds of sizes. His company Mainmatter offers custom development, team augmentation, and mentoring. He has worked with Ember for many years and is the original author of ember-simple-auth.</p>
+    - time: "15:00 - 15:30"
+      label: "Living with flaky tests"
+      description: >
+        <p>When given the same set of inputs, we expect our code to produce the same outputs each time. To use the technical term: we expect our code to be deterministic. When our test suite starts to show signs of flakiness, it usually means that a source of non-determinism has creeped into our code. Perhaps our code is influenced by some global state, which we hadn’t previously considered as ‘an input’. Or perhaps there’s a timing issue which introduces a source of randomness to the outcome of a test.</p><p>We’ll study examples that demonstrate how a test can pass in some circumstances and fail in others. The examples will be very much within the Ember ecosystem, using Qunit and testem, so it will be easily relatable for the EmberFest audience. Having learned to spot the problems that can cause a flaky test, we’ll develop some strategies to defend against allowing these issues to make their way into production.</p>
+      speakers:
+        - name: "Drew Neil"
+          image: "/images/speakers/drew.jpg"
+          twitter: "nelstrom"
+    - time: "15:30 - 16:00"
+      label: "Snack break"
+    - time: "16:00 - 16:30"
+      label: "Perfecting CI pipeline for Ember projects. Faster and with more insights."
+      description: >
+        <p>I plan to organize my talk around an existing, big Ember project and show gradually how we can improve the CI pipeline. I will start with an unoptimized pipeline and step by step get to a pretty cool setup. I think the listeners will be able to find their situation on one of the slides. I guess that some people will start learning new things from the beginning whereas some (more advanced folks) will find useful information in the next slides. I’m sure everyone will find something exciting that they can start doing in their companies when they are back from the conference.</p><p>Most of the talk will be organized around speed - how to make things faster - build faster, test faster, and deliver faster. But I also plan to show how to get more insights from their pipeline. Mostly from tests. CI runs frequently and it’s a missed opportunity to not learn something from these runs.</p>
+      speakers:
+        - name: "Tomek Nieżurawski"
+          image: "/images/speakers/tomek.jpg"
+          twitter: "tomekdev_"
+          url: "https://tomekdev.com"
+          bio: >
+            <p>I connect humans and machines. I write about interfaces, digital products, UX and… indie hacking 💥 Staff Engineer at Phorest. A bit nerdy 🤓 More: https://tomekdev.com/about-me</p>
+    - time: "16:45 - 17:15"
+      label: "…loading, please wait"
+      description: >
+        <p>Data is the Framework, not an afterthought.</p>
+      speakers:
+        - name: "Chris Thoburn"
+          image: "/images/speakers/chris.jpg"
+          twitter: "not_runspired"
+- label: "Day 2"
+  date: "Sep 22 – Friday"
+  slots:
+    - time: "09:00 - 10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00 - 10:30"
+      label: "The Future Soon"
+      description: >
+        <p>In this talk I will go over the new component authoring format, template tag or <code>.gjs</code> and <code>.gts</code>. The talk is intended for a more intermediate audience as we will be focusing on more complex component patterns, in conjunction with usage of tracked built-ins and resources. We will cover topics such as: - Introduction to template tag components, including syntax and strict mode. - Examples of template-only components, and components with local variables and fuctions (class-less components) - Examples of importing framework-provided and addon-provided template helpers and modifiers - Component composition patterns - Local components - Dynamic components - Using tracked built-in classes in components - Patterns for <code>Array</code> and <code>Map</code> - Using Resources - Examples with <code>cell</code>, <code>use</code> - Working with data fetching - What and how you can use today in your applications and addons</p>
+      speakers:
+        - name: "Ricardo Mendes"
+          twitter: "locks"
+          image: "/images/speakers/locks.jpeg"
+          bio: >
+            <p>locks is a founding member of the Ember Learning core team and a frequent open source contributor. Their latest interests are playing Netrunner and Padel.</p>
+    - time: "10:45 - 11:15"
+      label: "The Ember Guides in French 🇫🇷"
+      description: >
+        <p>Translating the Ember Guides to French? English is accepted as the common language developers use to share their work, so what’s the point? Is a translation really worth it? I’ll tell you a bit about this in this talk. To sum it up: there’s a huge difference between being able to set a few variable names in English in a codebase and understanding advanced topics covered by the documentation. I consider language as part of the accessibility, and I strongly believe the Ember Guides deserve to be as accessible as possible because they’re not only about learning Ember, they’re about getting what you’re doing to become a better developer.</p><p>In the main part of the talk, we will learn how the Ember Guides are built and what are the challenges to customize a fork to create this kind of translated website. We will explore three technical aspects: a bit of Ember magic to customize the UI, a series of amazing spell-checking tools maintained by unifiedjs collective, and a bunch of git commands to follow the official Ember Guides updates. Along the way, I’ll mention an addon with the barbaric name of “guidemaker-ember-locale-template”, which aims at being flexible enough to help with any translation project for the Ember Guides. So who knows, maybe this talk could be inspiring?</p>
+      speakers:
+        - name: "Marine Dunstetter"
+          image: "/images/speakers/marine.jpg"
+          twitter: "academierenards"
+          url: "https://github.com/BlueCutOfficial"
+          bio: >
+            <p>My name is Marine Dunstetter. Here are 3 things about me that might explain the existence of this talk: I am a frontend engineer working mainly with Ember, I am French, and I love writing. I write Fantasy novels, which has nothing to do with dev ; but I am also interested in writing good docs and I am not scared about translation work, which has a lot to do with dev.</p>
+    - time: "11:30 - 12:00"
+      label: "EmberData 5.x: The New Era of Backend Integration"
+      description: >
+        <p>Join us on a thrilling dive into the world of EmberData like you’ve never seen it before. We’re peeling back the layers on the latest, game-changing updates and the super-powered APIs that are making developers’ lives easier. Ever been puzzled by how to integrate your backend with EmberData? We’re here to light the way, using the PocketBase as backend to show you exactly how it’s done. Through a live demo and real, hands-on code, we’ll walk you through the steps to supercharge your own projects. This talk is perfect for developers at any level who are ready to level up their EmberData game. Grab this opportunity to stay ahead of the curve and master the new release of EmberData. See you there!</p>
+      speakers:
+        - name: "Kirill Shaplyko"
+          image: "/images/speakers/kirill.jpg"
+          twitter: "KirillShaplyko"
+          bio: >
+            <p>Consultant at Galar Systems, S.L. I am doing professional web development since 2013: first doing Rails and later (2015) Ember. Started with few apps at Ember 1.8. In my free time I am working on app to help new parents track kids activities. Huge mechanical keyboards enthusiast</p>
+    - time: "12:00 - 13:30"
+      label: "Lunch"
+    - time: "13:30 - 14:00"
+      label: "Road to Embroider. Moving mountains and getting everyone onboard."
+      description: >
+        <p>As the Ember.js framework continues to evolve and thrive, it presents developers and tech leaders with exciting opportunities to create monumental changes in their projects. However, driving these changes while gaining crucial buy-in from teams and stakeholders can be a daunting challenge. This conference talk aims to equip attendees with the knowledge and strategies needed to navigate this path successfully.</p><p>In this engaging session, we will delve into the world of Ember.js and explore the power of the Embroider build system. Through real-world case studies and practical insights, attendees will discover how to elevate their Ember.js projects and foster a collaborative environment that embraces transformative change. We will explore effective communication techniques to convey the vision and benefits of these changes, leading to greater support from all stakeholders.</p><p>Whether you are an experienced Ember.js developer or just beginning your journey, this talk offers valuable takeaways for all skill levels. Attendees will gain a deeper understanding of Ember.js Embroider, unlocking its potential to revolutionize their development process and drive lasting impact.</p><p>Join us for this enlightening session as we unravel the secrets of Ember.js Embroider and learn how to weave innovation and buy-in into every aspect of our Ember.js projects. Let’s embark on this adventure together, empowering attendees to lead their teams toward a brighter and more successful future with Ember.js!</p>
+      speakers:
+        - name: "Alexey Kulakov"
+          image: "/images/speakers/alexey.jpg"
+          twitter: "akulakov"
+          bio: >
+            <p>With over 15 years of experience as a frontend developer proficient in various frameworks, I am deeply passionate about tackling complex problems that span frontend, backend, and DevOps, all with the ultimate goal of enhancing the developer experience. Continual growth and staying up-to-date with the latest technology are at the core of my approach. I believe in fostering collaboration within the development community and sharing insights to empower others.</p>
+    - time: "14:15 - 14:45"
+      label: "Scaling Frontend Excellence: Supercharging Productivity with Dedicated Infrastructure Teams"
+      description: >
+        <p>Having individuals consistently work on Frontend Infrastructure can supercharge your organization by creating a separation of concerns between infra and product, making your product engineers more productive and helping your organization keep up to date with modern advancements in technology.</p>   <p>When codebases are small it’s easier for product engineers to make updates improving frontend infrastructure alongside their regular product work. Unfortunately, when codebases and teams scale, this becomes harder to do well. Large codebases become harder to maintain over time, resulting in longer timeframes to make sweeping improvements or adopt new standards. This makes it untenable to rely solely on product engineers to make sporadic improvements due to conflicting priorities with their team.</p><p>But how should this team operate? How should it decide what to work on? How should it measure success? I’ll be discussing our journey to adopt such a team. We’ll cover how we think about our roadmap, how we prioritise work and how we measure and define success.</p>
+      speakers:
+        - name: "Pat O'Callaghan"
+          image: "/images/speakers/pat.jpeg"
+          twitter: "patocallaghan"
+          bio: >
+            <p>Pat is a Staff Engineer on Intercom’s Frontend Technology team. His team’s mission is to supercharge product teams at Intercom by providing world-class tools, education, and guidance, enabling them to deliver value and accelerating them through the UI lifecycle.</p>
+    - time: "15:00 - 15:30"
+      label: "TBA"
+      description: >
+        <p>TBA</p>
+      speakers:
+        - name: "Melanie Sumner"
+          image: "/images/speakers/melanie-sumner.png"
+          twitter: "a11ymel"
+          url: "https://www.linkedin.com/in/melaniesumner"
+    - time: "15:30 - 16:00"
+      label: "Snack break"
+    - time: "16:00 - 16:30"
+      label: "Lighning Talks"
+      description: >
+        <p>Like every year, participants (on-site as well as remote) will have the opportunity to give lightning talks.</p>
+    - time: "16:45 - 17:15"
+      label: "TBA"
+      description: >
+        <p>TBA</p>
+      speakers:
+        - name: "Preston Sego"
+          twitter: "nullvoxpopuli"
+          image: "/images/speakers/preston.png"
+    - time: "17:30 - 18:00"
+      label: "Panel: Ember – Why and Where?"
+      description: >
+        <p>We'll be talking with a group of panelists about why their teams chose Ember and why they continue to build on it today. We'll also talk about what use cases and non-use cases for Ember are. We'll be openly talking about the concerns the ecosystem currently has about Ember's future and hear about the factors that companies with significant investments in Ember consider when making decisions about their future investment in the framework.</p>
+        <p>The panel will be moderated by Marco Otte-Witte.</p>
+      speakers:
+        - name: "Jamie White"
+          image: "/images/speakers/jamie.jpg"
+          url: "https://www.linkedin.com/in/jgwhite/"
+          bio: >
+            <p>Jamie is an engineer at HashiCorp and a long-time Ember aficionado. He ran Ember meetups and conferences in London for about four years, has spoken twice at EmberConf, and was a relatively early contributor to Ember CLI. These days he’s based near Barcelona and spends his time with his family, learning Catalan, and learning to play the clarinet.</p>
+        - name: "Pat O'Callaghan"
+          image: "/images/speakers/pat.jpeg"
+          twitter: "patocallaghan"
+          bio: >
+            <p>Pat is a Staff Engineer on Intercom’s Frontend Technology team. His team’s mission is to supercharge product teams at Intercom by providing world-class tools, education, and guidance, enabling them to deliver value and accelerating them through the UI lifecycle.</p>
+    - time: "18:00 - 22:00"
+      label: "Closing Party"
