@@ -16,9 +16,8 @@
                 <td class="title">
                   {{slot.label}}
                   {% if slot.speakers %}
-                    – {% for speaker in slot.speakers %}
-                      <span class="speaker">{{speaker.name}}</span>
-                    {% endfor %}
+                    –
+                    {% for speaker in slot.speakers %}<span class="speaker">{% if forloop.index > 1 %}, {% endif %}{{speaker.name}}</span>{% endfor %}
                   {% endif %}
                 </td>
               </tr>
