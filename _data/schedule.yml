@@ -116,7 +116,7 @@
         <p>Join us on a thrilling dive into the world of EmberData like you’ve never seen it before. We’re peeling back the layers on the latest, game-changing updates and the super-powered APIs that are making developers’ lives easier. Ever been puzzled by how to integrate your backend with EmberData? We’re here to light the way, using the PocketBase as backend to show you exactly how it’s done. Through a live demo and real, hands-on code, we’ll walk you through the steps to supercharge your own projects. This talk is perfect for developers at any level who are ready to level up their EmberData game. Grab this opportunity to stay ahead of the curve and master the new release of EmberData. See you there!</p>
       speakers:
         - name: "Kirill Shaplyko"
-          image: "/images/speakers/kirill.jpeg"
+          image: "/images/speakers/kirill.jpg"
           twitter: "KirillShaplyko"
           bio: >
             <p>Consultant at Galar Systems, S.L. I am doing professional web development since 2013: first doing Rails and later (2015) Ember. Started with few apps at Ember 1.8. In my free time I am working on app to help new parents track kids activities. Huge mechanical keyboards enthusiast</p>
