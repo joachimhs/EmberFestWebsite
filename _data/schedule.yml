@@ -28,7 +28,7 @@
       description: >
         <p>Together we will look at what it takes to create a modern Ember v2 addon using ember-modifiers, tracked-built-ins, glint single-file components, and TypeScript.</p><p>As everyone is familiar with forms on the web and has built interactions for them, we’ll be creating a real world Ember form manager! In the process, we will walk through the challenges I have encountered while designing, building, and ultimately publishing an addon of my own.</p><p>In the end of the talk, you will be equipped to build your own addons and know the various pitfalls to watch for.</p>
       speakers:
-        - name: "Shirin"
+        - name: "Shirin Boomi"
           image: "/images/speakers/shirin.jpg"
           twitter: "BoomiShirin"
           bio: >
