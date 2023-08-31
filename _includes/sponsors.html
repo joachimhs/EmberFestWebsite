@@ -1,0 +1,60 @@
+<section class="sponsors">
+	<h3>Sponsors</h3>
+  {% if site.data.sponsors.premier_partners %}
+  <div class="sponsor-section-wrapper">
+    <h4>Premier Partners</h4>
+    <ul class="sponsors-list premier-partner">
+      {% for sponsor in site.data.sponsors.premier_partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if site.data.sponsors.dinner %}
+  <div class="sponsor-section-wrapper">
+    <h4>Dinner Sponsor</h4>
+    <ul class="sponsors-list dinner-sponsors">
+      {% for sponsor in site.data.sponsors.dinner %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if site.data.sponsors.partners %}
+  <div class="sponsor-section-wrapper">
+    <h4>Partners</h4>
+    <ul class="sponsors-list partners">
+      {% for sponsor in site.data.sponsors.partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if site.data.sponsors.supporters %}
+  <div class="sponsor-section-wrapper">
+    <h4>Supporters</h4>
+    <ul class="sponsors-list supporters">
+      {% for sponsor in site.data.sponsors.supporters %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+	{% include organizers.html %}
+</section>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="570px" height="570px" viewBox="0 0 570 570" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FB71DF1A-091E-4773-B811-0CD51D204333@1x</title>
+    <defs>
+        <linearGradient x1="95.1223816%" y1="15.9618968%" x2="7.29066454%" y2="85.3111662%" id="linearGradient-1">
+            <stop stop-color="#FEB116" stop-opacity="0.417735707" offset="0%"></stop>
+            <stop stop-color="#FCB169" offset="54.27%"></stop>
+            <stop stop-color="#FEE334" offset="100%"></stop>
+            <stop stop-color="#FEE334" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="95.1223816%" y1="15.9618968%" x2="7.29066454%" y2="85.3111662%" id="linearGradient-2">
+            <stop stop-color="#FEB116" stop-opacity="0.271420139" offset="0%"></stop>
+            <stop stop-color="#FCB169" offset="54.27%"></stop>
+            <stop stop-color="#FEE334" offset="100%"></stop>
+            <stop stop-color="#FEE334" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="95.1223816%" y1="15.9618968%" x2="7.29066454%" y2="85.3111662%" id="linearGradient-3">
+            <stop stop-color="#FEB116" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#E25641" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="13.7456516%" id="linearGradient-4">
+            <stop stop-color="#E25641" offset="0%"></stop>
+            <stop stop-color="#FCB169" offset="54.27%"></stop>
+            <stop stop-color="#FEE334" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="80.4335102%" y1="89.4547024%" x2="20.3528822%" y2="9.54622178%" id="linearGradient-5">
+            <stop stop-color="#FEE334" offset="0%"></stop>
+            <stop stop-color="#FCB169" offset="45.73%"></stop>
+            <stop stop-color="#FEB116" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2021-decorative-element">
+            <circle id="Oval" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.1" cx="284.9" cy="284.9" r="284.9"></circle>
+            <circle id="Oval" fill="url(#linearGradient-2)" fill-rule="nonzero" opacity="0.2" cx="284.9" cy="284.9" r="239.8"></circle>
+            <circle id="Oval" fill="url(#linearGradient-3)" fill-rule="nonzero" opacity="0.65" cx="284.9" cy="284.9" r="133.1"></circle>
+            <circle id="Oval" fill="url(#linearGradient-4)" fill-rule="nonzero" cx="195.4" cy="195.4" r="40.5"></circle>
+            <path d="M264.9,195.4 C264.9,233.8 233.8,264.9 195.4,264.9 C157,264.9 125.9,233.8 125.9,195.4 C125.9,157 157,125.9 195.4,125.9" id="Path" stroke="url(#linearGradient-5)"></path>
+        </g>
+    </g>
+</svg>

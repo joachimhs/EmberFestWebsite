@@ -1,0 +1,85 @@
+// Inspired by Tailwind
+// https://tailwindcss.com/docs/screens
+
+@mixin ssm {
+  @media only screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (min-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 898px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 897px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsiveTitle(
+  $min-font-size,
+  $max-font-size,
+  $min-screen-width: 12.5vw
+) {
+  $title-font-size-resposive: calc(
+    max(#{$min-font-size}, min(#{$min-screen-width}, #{$max-font-size}))
+  );
+  font-size: $title-font-size-resposive;
+  line-height: $title-font-size-resposive;
+}
+
+@mixin blurFilter($blur) {
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+}

@@ -1,0 +1,169 @@
+.stay-up-to-date-and-footer {
+  background-size: 117%;
+  background-position: center;
+  background-image: url(../images/backgrounds/background_4.svg);
+  background-color: $white;
+  padding-top: 100px;
+  margin-top: -100px;
+
+  @include mobile {
+    background-size: 290%;
+    background-position: left -168px top -42px;
+  }
+
+  .stay-up-to-date {
+    margin: auto;
+    display: grid;
+    column-gap: 140px;
+    padding: 150px 0;
+    grid-template-columns: repeat(2, minmax(auto, 400px));
+    justify-content: center;
+
+    @include small-desktop {
+      padding: 60px 18px 100px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title,
+    form {
+      max-width: 470px;
+    }
+
+    .title {
+      font-size: 5rem;
+      grid-column: 1;
+      grid-row: 1/2;
+      color: $dark-blue;
+      line-height: 5rem;
+      text-align: center;
+      justify-self: center;
+      font-family: $secondary-font;
+
+      @include mobile {
+        @include responsiveTitle(80%, 3.44rem, 14.5vw);
+      }
+
+      .emberfest-logo {
+        color: #ea473b;
+      }
+    }
+
+    form {
+      display: flex;
+      grid-row: 1/2;
+      grid-column: 2;
+      flex-direction: column;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      label,
+      input {
+        letter-spacing: 0;
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+      }
+
+      label {
+        margin-bottom: 10px;
+        color: $dark-blue;
+        font-family: $main-font;
+      }
+
+      input {
+        border-style: none;
+        padding: 10px 20px 7px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        color: $light-yellow;
+        background: $dark-blue;
+        font-family: $main-font-thin;
+        box-shadow: 0 25px 35px 0 $shadow-color;
+      }
+
+      input:autofill,
+      input:autofill:hover,
+      input:autofill:focus,
+      input:autofill:active,
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $light-yellow;
+        background-color: $dark-blue;
+      }
+    }
+
+    .social-media {
+      gap: calc(min(30px, 8vw));
+      display: flex;
+      grid-column: 1;
+      padding-top: 48px;
+      justify-content: center;
+
+      @include mobile {
+        padding-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .social-media-button {
+      width: 58px;
+      height: 58px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      background: $dark-blue;
+      justify-content: center;
+      border: 2px solid $dark-blue;
+      box-shadow: 0 25px 35px 0$shadow-color;
+    }
+
+    .social-media-button:hover {
+      border: 2px solid #fdffd6;
+    }
+
+    .social-media-button img {
+      height: fit-content;
+    }
+
+    .button {
+      cursor: pointer;
+      margin-top: 40px;
+      font-size: 2.5rem;
+      letter-spacing: 0;
+      width: fit-content;
+      border-radius: 59px;
+      line-height: 2.5rem;
+      color: $light-yellow;
+      background: $dark-blue;
+      padding: 22.5px 50px 7.5px;
+      text-transform: uppercase;
+      font-family: $main-font-bold;
+      border: 2px solid $dark-blue;
+      background-color: rgba(8, 23, 94, 1);
+      box-shadow: 0 25px 35px 0 $shadow-color;
+
+      @include mobile {
+        width: calc(min(242px, 95vw));
+        word-break: break-word;
+        font-size: 2rem;
+        line-height: 2rem;
+        align-self: center;
+        padding: 16px 10px 4px;
+      }
+    }
+
+    .button:hover {
+      border: 2px solid #fdffd6;
+    }
+  }
+}

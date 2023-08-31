@@ -1,0 +1,67 @@
+<section class="schedule" id="schedule">
+  <div class="content">
+    <h3 class="divider">Schedule</h3>
+    <div class="timetable">
+      <h5>• Day 1 •</h5>
+      <h6>Sep 22 (Thursday)</h6>
+      <h6>(Times are local, CEST)</h6>
+      <table class="table schedule-table">
+        <thead>
+          <tr>
+            <th class="time">Time</th>
+            <th class="talk">Talk</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for info in site.data.year2022.schedule.day1 %}
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+                <td>{{ info.text }}</td>
+              {% else %}
+                <td>
+                  <a href="/2022/schedule/#{{ info.id }}">{{ info.talk }}</a>
+                  <span class="speaker">{{
+   info.speaker }}</span>
+                </td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h5 class="day2">• Day 2 •</h5>
+      <h6>Sep 23 (Friday)</h6>
+      <h6>(Times are local, CEST)</h6>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="time">Time</th>
+            <th class="talk">Talk</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for info in site.data.year2022.schedule.day2 %}
+            <tr>
+              <td class="schedule-table--timeslot">{{ info.time }}</td>
+              {% if info.isBreakTime %}
+                <td>{{ info.text }}</td>
+              {% else %}
+                <td>
+                  <a href="/2022/schedule/#{{ info.id }}">{{ info.talk }}</a>
+                  <span class="speaker">{{
+   info.speaker }}</span>
+                </td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="full-schedule">
+        <a href="/2022/schedule">
+          See full schedule
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

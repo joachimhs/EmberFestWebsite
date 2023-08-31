@@ -1,0 +1,183 @@
+- time: 09:00 - 10:00
+  isBreakTime: true
+  text: Doors open & Breakfast
+
+- time: 10:00 - 10:30
+  speaker: Ed Faulkner
+  talk: Routing in Polaris
+  id: edward-faulkner
+  image_extension: "jpeg"
+  description:
+  bio: <p>
+    Edward Faulkner is a member of the Ember Core Team and the creator of Ember’s official animation
+    library.
+    His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+    of
+    enterprise applications. His consultancy, Polynomial LLC, leads ambitious software projects for a
+    diverse
+    group of businesses and nonprofits. He was a research associate of the MIT Media Lab’s Social
+    Computing
+    group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale
+    security
+    infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+    <br> <br> Ed resides in Somerville, Massachusetts with his wife and two sons.
+    </p>
+
+- time: 10:45 - 11:15
+  speaker: Tomek Nieżurawski
+  talk: Performance culture. New opportunities with Embroider
+  id: tomek-niezurawski
+  image_extension: jpeg
+  description: <p>
+    Performance culture is a unique culture that is not often seen among companies. Only the ones that
+    care
+    enough
+    and invest time in it can see the benefits. Up until Embroider was released, the Ember community, even
+    if
+    wanted to embrace performance culture, wasn't able to actually iterate on the results.
+    </p>
+    <p>
+    In my talk, I'll go through the goals we've set and how we accomplished some great results by using
+    Embroider
+    and Webpack. Our journey is not finished but I already have a bunch of tricks and prescriptions for
+    you.
+    I'll
+    show what are the tools we use to make sure we keep the quality high.
+    </p>
+  bio: <p>
+    Tomek Nieżurawski, front-end dev by day, full-stack by night. Staff Engineer at Phorest. I love the
+    Web
+    and
+    creating user-centric interfaces. In my spare time, I work on an app for dog owners.
+    </p>
+
+- time: 11:30 - 12:00
+  speaker: Floris List
+  talk: "Test as if you're in someone else's shoes"
+  id: floris-list
+  image_extension: jpeg
+  description: <p>
+    Having Ember historically so closely modelled to Ruby on Rails, it is easy to also apply the same approach
+    in
+    writing tests for both. What has been shown in the last 10 or so years is that backends are fundamentally
+    different from frontends. This fundamental difference also requires a fundamentally different approach to
+    thinking about and writing tests. This shift in thinking can be difficult or underestimated by developers
+    who
+    come from a Rails/backend background, which is the case for plenty of Ember developers. The result is a vast
+    and
+    diverse pool of tests written using different patterns.
+    </p>
+    <p>
+    At Intercom we have done testing with and without thinking about the user first. Inevitably a code base
+    being
+    worked on by many engineers brings many different patterns together. This results in a highly diverse test
+    suite
+    that a lot can be learned from. Taking stock of whatever is present and seeing how we can improve upon what
+    exists following a set of guiding principles makes Intercom an org with ever improving code quality. This
+    talk
+    will bring some real world examples of patterns (good and bad) that live within the Intercom codebase today.
+    We
+    will (potentially) go over some refactoring of these real world examples to solidify the learnings and
+    principles outlined in the talk. With anecdotal evidence it becomes easier to see the power and value of
+    user
+    centric testing.
+    </p>
+  bio: <p>
+    Currently a Product Engineer at Intercom, naturally very curious with a drive to understand how
+    great
+    products
+    are made from the ground up. On a continuous journey to thoroughly grasp the full stack of product
+    development, from frontend to DevOps to shipping at scale to a hint of design. Beyond technical
+    stuff he
+    loves
+    traveling across the globe and learning the different cuisines of countries he travels to (oh and
+    coffee
+    is
+    great).
+    </p>
+
+- time: 12:00 - 13:00
+  isBreakTime: true
+  text: Lunch
+
+- time: 13:00 - 13:30
+  speaker: Gonçalo Morais
+  talk: Move Fast and (Don't) Break Things by Gonçalo Morais
+  id: goncalo-morais
+  image_extension: "jpeg"
+  description: "<p>
+    Feature flags are a common way to deploy ongoing work into production and keep it under radar until it is ready to be put in front of our users. The thing is: there is more thought that should be put into this practice, it’s not just about flipping a switch to turn a feature on. Developer experience can be greatly affected if a team doesn’t come up with processes around how to manage feature flags in an agile process.
+    </p>
+
+    <p>
+    Cleaning up feature flags gets forgotten and complexity accumulates. And how about tests, how do you make sure all paths get properly covered? I will cover the good, the bad, and the ugly aspect of feature flags, how we can put them into place effectively and, as a bonus, the extra benefits we get from this.
+    </p>"
+  bio: "<p>
+    Gonçalo is a Portuguese computer engineer turned front-end developer, currently living in Lyon (France) and working at CrowdStrike. Recurse Center alumnus, codebar London co-organiser, amateur ultrarunner & climber, jack of all trades. Grows a beard most of the time.
+    </p>"
+
+- time: 13:45 - 14:15
+  speaker: Aymeric Augustin
+  talk: "A framework for ambitious companies"
+  id: aymeric-augustin
+  image_extension: jpg
+  description: <p>
+    When we started building Qonto, we knew that the default path of piling up features would lead to a
+    codebase
+    where it's hard to implement changes and easy to create bugs. That's why we adopted Ember.js. The
+    framework
+    provided us with stable foundations and consistent practices, making it technically easy for our team
+    of 50
+    engineers to build new features or make improvements in any domain of our apps.
+    </p>
+    <p>
+    Similarly, we know that the default path of growing a company by specializing teams leads to Big
+    Company
+    Disease. Attempts to create economies of scale cut the connection with customers. Focus shifts to
+    defining
+    scopes, setting up procedures, and standardizing work. Agile withers to solidified processes and
+    tools, with
+    little care given to individuals and interactions. Team mood suffers.
+    </p>
+    <p>
+    What if we had a framework?
+    </p>
+  bio: <p>
+    I'm CTO at Qonto, the leading European business finance solution. I was a Django core developer for
+    a
+    decade,
+    contributing to most components of the framework and also to the governance of the project. These
+    days I'm
+    focusing my open-source efforts on the websockets Python package. I spend most of my life keeping
+    things
+    as
+    simple as they can be and making it easy for engineers to build good code.
+    </p>
+
+- time: 14:30 - 15:00
+  speaker: Chris Manson
+  talk: Bottled Ember - Batteries Included Web Framework, tiny tiny living space
+  id: chris-manson
+  image_extension: jpg
+  description: <p>All Ember addons come with the concept of a “dummy app”. This has been super useful to test our addons and has even been part of the reason why we have been able to support so many different versions of Ember from a single addon using ember-try scenarios. This talk gives a bit of detail on how things work with “classic” V1 addons and dummy apps and talks a little bit about why this can’t work for new Embroider V2 addons.</p><p>I will then go into a detail on a particular setup that could bring the simplicity and magic of dummy apps to the standards focused Embroider world. This should make it super easy for developers to tests their apps in all the versions of Ember that they want to.</p>
+  bio: <p>Developer at @Mainmatter, creator of Empress and member of the Ember Core Learning Team.</p>
+
+- time: 15:00 - 15:30
+  isBreakTime: true
+  text: Snack break
+
+- time: 15:30 - 16:00
+  talk: "Lightning talks"
+  id: lightning-talks
+  image_extension: jpg
+  description:
+
+- time: 16:15 - 16:45
+  speaker: <ul><li>Chris Manson</li><li>Ed Faulkner</li><li>Chris Krycho</li><li>Melanie Sumner</li></ul>
+  talk: "Panel: The Future of Ember"
+  id: panel-future-of-ember
+  description:
+
+- time: 20:00 - Midnight
+  isBreakTime: true
+  text: Dinner
