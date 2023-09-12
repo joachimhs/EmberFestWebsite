@@ -183,6 +183,7 @@
             <p>Pat is a Staff Engineer on Intercom’s Frontend Technology team. His team’s mission is to supercharge product teams at Intercom by providing world-class tools, education, and guidance, enabling them to deliver value and accelerating them through the UI lifecycle.</p>
         - name: "Jesse White"
           image: "/images/speakers/jesse.jpg"
+          url: "https://www.linkedin.com/in/jessearwhite/"
           bio: >
             <p>Jesse is the Engineering Manager for Heroku’s Front-End Engineering Teams. Heroku has been using Ember since 2014 and is actively expanding its Ember codebase. Jesse is based in southern Colorado where he enjoys the outdoors, especially skiing, and spends way too much time making a single cup of coffee.</p>
     - time: "18:00 - 22:00"
