@@ -4,9 +4,7 @@
     - time: "09:00 - 10:00"
       label: "Doors open & Breakfast"
     - time: "10:00 - 10:30"
-      label: "TBA"
-      description: >
-        <p>TBA</p>
+      label: "Ember's Technical Foundations – And How They Are Changing"
       speakers:
         - name: "Ed Faulkner"
           image: "/images/speakers/ed-faulkner.png"
