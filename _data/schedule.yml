@@ -123,9 +123,9 @@
     - time: "12:00 - 13:30"
       label: "Lunch"
     - time: "13:30 - 14:00"
-      label: "TBA"
+      label: " Resources Squared"
       description: >
-        <p>TBA</p>
+        <p>Resources on Resources: The missing primitive</p>
       speakers:
         - name: "Preston Sego"
           twitter: "nullvoxpopuli"
@@ -152,7 +152,7 @@
     - time: "15:30 - 16:00"
       label: "Snack break"
     - time: "16:00 - 16:30"
-      label: "Lighning Talks"
+      label: "Lightning Talks"
       description: >
         <p>Like every year, participants (on-site as well as remote) will have the opportunity to give lightning talks.</p>
     - time: "16:45 - 17:15"
