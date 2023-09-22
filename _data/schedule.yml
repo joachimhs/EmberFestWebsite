@@ -141,14 +141,14 @@
           bio: >
             <p>Pat is a Staff Engineer on Intercom’s Frontend Technology team. His team’s mission is to supercharge product teams at Intercom by providing world-class tools, education, and guidance, enabling them to deliver value and accelerating them through the UI lifecycle.</p>
     - time: "15:00 - 15:30"
-      label: "Accessibility: What’s AI got to do with it?"
+      label: "Q&A with Ed Faulkner"
       description: >
-        <p>TBA</p>
+        <p>Ed Faulkner, member of Ember.js Steering Committee will answer attendees' questions in a Q&A session.</p>
       speakers:
-        - name: "Melanie Sumner"
-          image: "/images/speakers/melanie-sumner.png"
-          twitter: "a11ymel"
-          url: "https://www.linkedin.com/in/melaniesumner"
+        - name: "Ed Faulkner"
+          image: "/images/speakers/ed-faulkner.png"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
     - time: "15:30 - 16:00"
       label: "Snack break"
     - time: "16:00 - 16:30"
