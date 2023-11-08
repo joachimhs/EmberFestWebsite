@@ -8,7 +8,12 @@
   twitter: "https://twitter.com/a11ymel"
   web: "https://www.linkedin.com/in/melaniesumner"
 
-- name: "Yehuda Katz"
-  avatar: "yehuda-katz.png"
-  twitter: "https://twitter.com/wycats"
-  web: "https://www.linkedin.com/in/yehudakatz/"
+- name: "Preston Sego"
+  avatar: "preston.png"
+  twitter: "https://twitter.com/nullvoxpopuli"
+  web: "https://www.linkedin.com/in/lprestonsegoiii/"
+
+- name: "Chris Thoburn"
+  avatar: "chris.png"
+  twitter: "https://twitter.com/not_runspired"
+  web: "https://www.linkedin.com/in/runspired/"
