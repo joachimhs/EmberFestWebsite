@@ -34,22 +34,22 @@ title: EmberFest – Schedule day 2
                     {%if speaker.image %}
                       <img
                         class="photo"
-                        src="2023/{{ speaker.image }}"
+                        src="/2023/{{ speaker.image }}"
                         alt="Photo of {{ speaker.name }}">
                     {% else %}
                       <img
                         class="photo"
-                        src="2023/images/speakers/placeholder.png">
+                        src="/2023/images/speakers/placeholder.png">
                     {% endif %}
                     <div class="speaker-details">
                       <h5>{{speaker.name}}</h5>
                       {%if speaker.twitter or speaker.url %}
                         <div class="links">
                           {%if speaker.twitter %}
-                            <a href="https://twitter.com/{{speaker.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="2023/images/icons/twitter-blue.svg"></a>
+                            <a href="https://twitter.com/{{speaker.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/2023/images/icons/twitter-blue.svg"></a>
                           {% endif %}
                           {%if speaker.url %}
-                            <a href="{{speaker.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="2023/images/icons/url.svg"></a>
+                            <a href="{{speaker.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/2023/images/icons/url.svg"></a>
                           {% endif %}
                         </div>
                       {% endif %}
