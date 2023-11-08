@@ -1,0 +1,23 @@
+<div class="sidepages__header">
+  <a alt="get back to home page" href="/">
+    <picture>
+      <source media="(max-width: 1100px)" srcset="/images/logo_horizontal.svg" />
+      <source media="(min-width: 1101px)" srcset="/images/logo_vertical.svg" />
+      <img
+        class="logo"
+        src="/images/logo_horizontal.svg"
+        alt="emberfest logo" />
+    </picture>
+  </a>
+
+  <img
+    class="header__image"
+    src="/images/bull.svg"
+    alt="bull wearing red sunglasses" />
+
+  <div class="date_and_location">
+    <h2 class="date">{{ site.data.event.date }}</h2>
+    <h2 class="location">
+      {{ site.data.event.location }}</h2>
+  </div>
+</div>

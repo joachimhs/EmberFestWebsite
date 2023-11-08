@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EmberFest - the European Community Ember Conference" />
+    <meta name="keywords" content="" />
+    <meta name="language" content="en" />
+    <meta name="content-language" content="en" />
+    <meta name="publisher" content="EmberFest" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/2023/{{ page.css | default: 'app' }}.css" />
+    <script>
+      if(!window.tito) {
+        var script = document.createElement('script');
+        script.src = `https://js.tito.io/v2${['localhost', '127.0.0.1'].includes(window.location.hostname)? '/with/development_mode' : ''}`;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    </script>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>

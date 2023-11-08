@@ -1,0 +1,116 @@
+@import "variables";
+
+.hero {
+  font-family: $main-font-bold;
+  min-height: 667px;
+
+  background-image: url("/images/backgrounds/background_yellow_dots.svg");
+  background-position: center -60px;
+  background-size: auto 106%;
+  background-color: $grey-light;
+
+  @include lg {
+    height: 100vh;
+    background-size: auto 114%;
+    min-height: 982px;
+    max-height: 2000px;
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    margin: 0 18px;
+    justify-content: space-between;
+
+    @include lg {
+      position: relative;
+      margin: inherit;
+      gap: 68px;
+      padding-top: 60px;
+      justify-content: center;
+
+      .logo-title {
+        height: 100%;
+        width: auto;
+        min-height: 720px;
+      }
+    }
+
+    .date-and-location {
+      color: $dark-blue;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 auto;
+
+      font-size: 32px;
+      line-height: 32px;
+
+      @include lg {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .button.book-tickets {
+    border: 2px solid $dark-blue;
+    &:hover {
+      a {
+        color: $light-yellow;
+      }
+      border-color: $light-yellow;
+    }
+
+    &:active {
+      border-color: $dark-blue;
+    }
+
+    button {
+      background-color: initial;
+      border: initial;
+      cursor: pointer;
+    }
+
+    &,
+    span {
+      font-family: $main-font;
+      color: $light-yellow;
+      letter-spacing: 0;
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      @include lg {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $dark-blue;
+    box-shadow: 0 25px 35px 0 $shadow-color;
+
+    width: calc(min(300px, 95vw));
+    padding-top: 12px;
+    border-radius: 32px;
+
+    @include lg {
+      justify-content: center;
+
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+
+      width: 171px;
+      height: 171px;
+
+      border-radius: 50%;
+    }
+  }
+}

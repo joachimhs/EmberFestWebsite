@@ -1,0 +1,36 @@
+<section class="sponsors">
+	<h3>Past Sponsors</h3>
+  <div class="sponsor-section-wrapper">
+    <ul class="sponsors-list">
+      {% for sponsor in site.data.year2022.sponsors.premier_partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.dinner %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.partners %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+      {% for sponsor in site.data.year2022.sponsors.supporters %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2022/images/sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+	{% include organizers.html %}
+</section>

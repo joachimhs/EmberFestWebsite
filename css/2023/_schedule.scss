@@ -1,0 +1,631 @@
+.timezones-note {
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fdffd6;
+  
+  @include md {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+
+.schedule {
+  background-color: #ea473b;
+  margin-top: -50px;
+  padding: 150px 0;
+  
+  @include lg {
+    margin-top: -100px;
+    padding: 200px 0;
+  }
+
+  h3 {
+    font-family: $secondary-font;
+    @include responsiveTitle(80%, 55px, 15.5vw);
+    margin-bottom: 30px;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fdffd6;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+
+    @include lg {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      background-image: url(/images/line.svg);
+      background-position: center 20px;
+      background-size: auto calc(100% - 180px);
+    }
+  }
+
+  .day {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    @include lg {
+      max-width: 450px;
+    }
+
+    .content {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: var(--transparent-white);
+      border-radius: 10px;
+      padding: 20px 18px;
+      margin-bottom: 60px;
+
+      h3 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        text-align: center;
+        font-size: 32px;
+        margin: auto;
+        line-height: 32px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #fdffd6;
+        background-color: #08175e;
+        width: 85%;
+        padding: 25px 0 10px;
+        vertical-align: middle;
+
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+
+      h5 {
+        color: #fdffd6;
+        text-align: center;
+        font-size: 32px;
+        margin: auto;
+        line-height: 32px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #fdffd6;
+      
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+
+      table {
+        td {
+          font-size: 18px;
+          line-height: 24px;
+          padding-bottom: 25px;
+          
+          @include md {
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
+
+        .time {
+          text-align: center;
+          white-space: nowrap;
+          padding-right: 28px;
+          width: 10%;
+          font-size: 16px;
+          line-height: 18px;
+          color: #fdffd6;
+
+          @include md {
+            font-size: 20px;
+            line-height: 34px;
+          }
+        }
+
+        .title {
+          color: #08175e;
+          font-size: 20px;
+          line-height: 26px;
+          
+          @include md {
+            font-size: 26px;
+            line-height: 34px;
+          }
+
+          .speaker {
+            color: #fdffd6;
+            font-size: 16px;
+            line-height: 26px;
+            
+            @include md {
+              font-size: 20px;
+              line-height: 34px;
+            }
+          }
+        }
+      }
+    }
+
+    .full-schedule-link {
+      margin-bottom: 60px;
+
+      @include lg {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@import "./mixins.scss";
+
+.generic-block.full-schedule {
+  .link-to-other-day {
+    display: inline-block;
+    text-wrap: nowrap;
+  }
+
+  .title {
+    h4 {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .title > div {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .day {
+    margin-bottom: 20px;
+  }
+
+  .date {
+    color: #ffffff;
+    margin-bottom: 60px;
+  }
+
+  .book-your-ticket.button {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    justify-self: center;
+    @include lg {
+      grid-column: 2;
+    }
+    background-color: initial;
+  }
+
+  .schedule-main-header {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto;
+    align-items: center;
+    row-gap: 30px;
+    max-width: 85%;
+
+    .link {
+      grid-column: 1;
+      grid-row: 1;
+      @include lg {
+        grid-row: 1 / 3;
+      }
+    }
+
+    div {
+      grid-column: 2 / 4;
+
+      h2 {
+        text-align: left;
+      }
+    }
+  }
+
+  table {
+    a {
+      color: #00ffc4;
+      text-decoration: underline;
+    }
+
+    tr {
+      padding: 20px;
+      margin-bottom: 30px;
+      background: var(--transparent-white);
+      border-radius: 10px;
+      letter-spacing: 0;
+      letter-spacing: 0;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+
+      @include md {
+        padding: 40px;
+        gap: 40px;
+        flex-direction: row;
+      }
+      
+      td {
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        
+        @include md {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+      
+      .time {
+        text-align: center;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 24px;
+        
+        @include md {
+          font-size: 18px;
+          line-height: 35px;
+        }
+      }
+
+      h4 {
+        color: var(--white);
+
+        @include md {
+          line-height: 45px;
+        }
+      }
+      
+      h5 {
+        margin: 0;
+        text-align: left;
+        font-size: 32px;
+      }
+      
+      ul {
+        margin-left: 30px;
+        li {
+          &::marker,
+          & > p:first-child {
+            color: var(--neon-green);
+          }
+        }
+      }
+      
+      p + p {
+        margin-top: 24px;
+        @include md {
+          margin-top: 28px;
+        }
+      }
+      
+      .speaker {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        @include md {
+          gap: 50px;
+        }
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+      
+        .photo,
+        .photo-container {
+          border-radius: 50%;
+        }
+      
+        .photo-container {
+          border: 3.2px solid var(--pink);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        .photo {
+          border: 2px solid var(--white);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          margin: 15px;
+          max-height: 192px;
+          @include small-mobile {
+            margin: 10px;
+            max-height: 150px;
+          }
+        }
+
+        .speaker-info {
+          flex-direction: column;
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+
+          .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          
+            a {
+              background-color: var(--transparent-gray);
+              border-radius: 50%;
+              width: 21px;
+              height: 21px;
+              padding: 10.5px;
+              img {
+                height: 21px;
+                width: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.button.full-schedule {
+  min-width: calc(min(290px, 90vw));
+  background: $light-yellow;
+  box-shadow: 0 0 35px 0 rgba(253, 255, 214, 0.6);
+  border-radius: 59px;
+  font-family: $main-font;
+  font-size: 32px;
+  line-height: 40px;
+  padding: 16px 4px 0px 4px;
+  @include lg {
+    font-size: 40px;
+    line-height: 60px;
+    padding: 13px 50px 1px 50px;
+  }
+  color: $dark-blue;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button.full-schedule:hover {
+  color: #ea473b;
+}
+
+.full-schedule-day {
+  .content.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 100px;
+
+    @include md {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h3 {
+      text-align: left;
+      margin: 0;
+    
+      .date {
+        color: #EA473B;
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    
+    .link-to-other-day {
+      flex: none;
+      border-radius: 59px;
+      color: $dark-blue;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid $dark-blue;
+      font-size: 32px;
+      line-height: 40px;
+      padding: 11px 50px 0px 50px;
+    
+      @include lg {
+        font-size: 40px;
+        line-height: 59px;
+      }
+    
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .timezones-note {
+    color: #08175E;
+    margin: 0;
+  }
+
+  table {
+    width: 100%;
+    border-top: 2px solid #08175E;
+
+    a {
+      color: #00ffc4;
+      text-decoration: underline;
+    }
+  
+    tr {
+      padding: 20px 0;
+      letter-spacing: 0;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+      border-bottom: 2px solid #08175E;
+  
+      @include md {
+        padding: 40px 0 28px;
+        gap: 40px;
+        flex-direction: row;
+      }
+      
+      td {
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        
+        @include md {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+      
+      .time {
+        text-align: center;
+        white-space: nowrap;
+        font-size: 20px;
+        line-height: 26px;
+        
+        @include md {
+          font-size: 26px;
+          line-height: 34px;
+        }
+      }
+  
+      h4 {
+        color: #ea473b;
+        font-size: 32px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+  
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+      
+      h5 {
+        color: #ea473b;
+        text-align: left;
+        font-size: 32px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+        
+        @include md {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+      
+      ul {
+        margin-left: 30px;
+        li {
+          &::marker,
+          & > p:first-child {
+            color: var(--neon-green);
+          }
+        }
+      }
+      
+      p + p {
+        margin-top: 24px;
+        @include md {
+          margin-top: 28px;
+        }
+      }
+      
+      .speaker {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include md {
+          gap: 50px;
+        }
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+
+        @include md {
+          min-height: 200px;
+        }
+
+        .photo {
+          border-radius: 50%;
+          margin: 15px;
+          height: 200px;
+          width: 200px;
+          @include small-mobile {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+          }
+        }
+
+        @include md {
+          p {
+            margin-left: 250px;
+          }
+        }
+  
+        .speaker-info {
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          @include md {
+            margin-bottom: -50px;
+          }
+  
+          .speaker-details {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+          }
+  
+          .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          
+            a {
+              border-radius: 50%;
+              width: 42px;
+              height: 42px;
+
+              img {
+                height: 30px;
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

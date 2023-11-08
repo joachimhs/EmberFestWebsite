@@ -1,0 +1,27 @@
+---
+---
+
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "hero";
+@import "about-and-video";
+@import "speakers";
+@import "sponsors";
+@import "schedule";
+@import "venue";
+@import "stay-up-to-date";
+@import "footer";
+
+html {
+  font-family: $main-font;
+}
+
+body {
+  background-color: $white;
+}
+
+a:hover {
+  color: $orange;
+}

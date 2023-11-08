@@ -1,0 +1,36 @@
+<section class="schedule" id="schedule">
+  <h3>Schedule</h3>
+  <div class="data">
+    {% for day in site.data.schedule %}
+      <div class="day">
+        <div class="content">
+          <h4>{{day.label}}</h4>
+          <h5>{{day.date}}</h5>
+          <p class="timezones-note">Times are local, CEST</p>
+          <table>
+            {% for slot in day.slots %}
+              <tr>
+                <td class="time">
+                  {{slot.time}}
+                </td>
+                <td class="title">
+                  {{slot.label}}
+                  {% if slot.speakers %}
+                    –
+                    {% for speaker in slot.speakers %}<span class="speaker">{% if forloop.index > 1 %}, {% endif %}{{speaker.name}}</span>{% endfor %}
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <a
+          class="button full-schedule"
+          href="/2023/schedule/day/{{forloop.index + 1}}"
+          alt="Full Schedule"
+          >Full Schedule</a
+        >
+      </div>
+    {% endfor %}
+  </div>
+</section>
