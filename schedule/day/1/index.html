@@ -1,0 +1,72 @@
+---
+layout: default
+css: sidepages
+title: EmberFest – Schedule day 1
+---
+
+{% include sidepages_header.html %}
+
+{% assign day = site.data.schedule[0] %}
+
+<main>
+  <section class="full-schedule-day">
+    <div class="title content">
+      <h3 class="day">Schedule<br>{{ day.label }} <span class="date">{{ day.date }}</span></h3>
+      <a class="link-to-other-day button" href="/schedule/day/2">Day 2</a>
+    </div>
+    <div class="content">
+      <p class="timezones-note">Times are local, CEST</p>
+      <table>
+        {% for slot in day.slots %}
+        <tr>
+          <td class="time">
+            {{slot.time}}
+          </td>
+          <td class="title">
+            <h4>{{slot.label | safe}}</h4>
+            {%if slot.description %}
+              {{slot.description | safe}}
+            {% endif %}
+            {% if slot.speakers %}
+              {% for speaker in slot.speakers %}
+                <div class="speaker">
+                  <div class="speaker-info">
+                    {%if speaker.image %}
+                      <img
+                        class="photo"
+                        src="{{ speaker.image }}"
+                        alt="Photo of {{ speaker.name }}">
+                    {% else %}
+                      <img
+                        class="photo"
+                        src="/images/speakers/placeholder.png">
+                    {% endif %}
+                    <div class="speaker-details">
+                      <h5>{{speaker.name}}</h5>
+                      {%if speaker.twitter or speaker.url %}
+                        <div class="links">
+                          {%if speaker.twitter %}
+                            <a href="https://twitter.com/{{speaker.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-blue.svg"></a>
+                          {% endif %}
+                          {%if speaker.url %}
+                            <a href="{{speaker.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/url.svg"></a>
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                  {%if speaker %}
+                    {{speaker.bio | safe}}
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}

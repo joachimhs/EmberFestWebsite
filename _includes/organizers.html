@@ -1,0 +1,15 @@
+{% if site.data.organizers %}
+  <div class="organizers container mb-16 mw-xl">
+    <h3 class="mb-9">Organizers</h3>
+    <ul class="organizers">
+      {% for organizer in site.data.organizers %}
+        <li class="organizer">
+          <img class="avatar" src="/images/organizers/{{ organizer.logo }}"/>
+          <a class="name" href="{{ organizer.link }}">
+            <h5>{{ organizer.name }}</h5>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
