@@ -1,0 +1,282 @@
+- label: "Day 1"
+  date: "Sep 12, Thursday"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00&mdash;10:30"
+      label: "Opening Keynote"
+      description: >
+        <p></p>
+      speakers:
+        - name: "Yehuda Katz"
+          image: "/images/speakers/yehuda-katz.jpeg"
+          twitter: "wycats"
+          url: "https://www.linkedin.com/in/yehudakatz/"
+          bio: >
+            <p>Yehuda is a member of the Ember.js, Ruby on Rails and jQuery Core Teams; his 9-to-5 home is at the startup he founded, Tilde Inc, where he works on Skylight, the smart profiler for Rails. Yehuda spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—and traveling the world doing open source evangelism work.</p>
+    - time: "10:45&mdash;11:15"
+      label: "Ember and Vite - How it works and what it unlocks"
+      description: >
+        <p>This year has been an exciting year for Ember, and the Embroider team has given us the ability to build an Ember app with Vite. That not only makes our build and rebuild times much faster than they were with ember-cli, but we can now integrate with other Vite plugins that don’t need to understand broccoli or the internals of Ember. This is a very new opportunity for the Ember community, and it is worth exploring the possibilities together.</p>
+      speakers:
+        - name: "Chris Manson"
+          image: "/images/speakers/chris-manson.jpg"
+          twitter: "real_ate"
+          url: "https://www.linkedin.com/in/realate/"
+          bio: <p>Chris is a developer at at Mainmatter, the creator of Empress and member of the Ember Core Learning Team.</p>
+    - time: "11:30&mdash;12:00"
+      label: "You don’t need another library for that: How we’ve built a Visual Workflow Builder"
+      description: >
+        <p>This talk showcases the development learnings and struggles of a Visual Workflow Builder, presenting an argument in favor of in-house solutions instead of depending on third party libraries.</p>
+      speakers:
+        - name: "Leo Euclides"
+          image: "/images/speakers/leo-euclides.jpeg"
+          twitter: "leoeuclids"
+          url: "https://www.linkedin.com/in/leoeuclidss/"
+          bio: >
+            <p>Leo is a senior software engineer, based in Brazil, with experience in both frontend and backend development, currently working with Ember.js at Userlist Inc.</p>
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+    - time: "13:30&mdash;14:00"
+      label: "What’s going on with Reactivity?"
+      description: >
+        <p>The talk dives into the current state of reactivity, reactive libraries, why things are happening, and why it kind of feels like things are in a smidge of disarray.</p>
+      speakers:
+        - name: "Preston Sego (aka. nullvoxpopuli)"
+          image: "/images/speakers/l-preston-sego-iii.png"
+          twitter: "nullvoxpopuli"
+          url: "https://www.linkedin.com/in/lprestonsegoiii/"
+          bio: >
+            <p>Preston is a software artificer at Auditboard, looking to bring folks to the future of Ember.js and frontend dev</p>
+    - time: "14:15&mdash;14:45"
+      label: "Composing components with (and without) context"
+      description: >
+        <p>With context provider and injection APIs coming to Ember, developers will have a new tool available for building components. This talk will explore what unique problems context solves, how it complements existing patterns, and what to watch out for to keep your code composable and maintainable.</p>
+      speakers:
+        - name: "Kevin Kucharczyk"
+          image: "/images/speakers/kevin-kucharczyk.jpeg"
+          url: "https://www.linkedin.com/in/kevinkucharczyk/"
+          bio: >
+            <p>Kevin is a Front End Tech Lead at Customer.io, working remotely from Melbourne, Australia. Passionate about building delightful user experiences and ready to solve any challenge, no matter how simple or complex.</p
+    - time: "15:00&mdash;15:30"
+      label: "Scalable Frontend Architecture That Meets Your Business"
+      description: >
+        <p>Ember’s onboarding equips developers with framework knowledge about routes, components and services, required to build applications. Beyond that, Ember leaves a void on how you architect your products to meet your business and how to scale it up, when the need arises. This talk fills that gap.</p>
+      speakers:
+        - name: "Thomas Gossmann"
+          image: "/images/speakers/thomas-gossmann.jpeg"
+          twitter: "unistyler"
+          url: "https://gos.si/"
+          bio: >
+            <p>Unicyclist. Artist. Developer.</p
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+    - time: "16:00&mdash;16:30"
+      label: "What is Ember’s pitch? – Open Discussion with Marco Otte-Witte"
+      description: >
+        <p>
+          What makes Ember.js the right choice for certain types of projects, teams, or environments? And in which cases might other frameworks be a better fit? Clearly defining the types of teams and projects that are best suited for Ember, while acknowledging where other solutions may excel, helps the community more effectively advocate for its adoption.
+        </p>
+        <p>
+          Marco will start with a (potentially controversial) statement to open the conversation for the other on-stage panelists as well as the on-site audience in Dublin.
+        </p>
+      speakers:
+        - name: "Marco Otte-Witte and others"
+          image: "/images/speakers/marco-otte-witte.jpeg"
+          twitter: "marcoow"
+          url: "https://mainmatter.com"
+          bio: >
+            <p>Marco has been working in web engineering for about 15 years and has used all kinds of technologies in projects of all kinds of sizes. His company Mainmatter offers custom development, team augmentation, and mentoring. He has worked with Ember for many years and is the original author of ember-simple-auth.</p>
+    - time: "16:45&mdash;17:15"
+      label: "Accelerate Your Growth: From Novice to Thriving"
+      description: >
+        <p>Professional growth is challenging and personal. In this talk, Mo shares her journey from writing my first line of code to becoming an Engineering Manager in under 5 years. She’ll offer insights on finding mentors, making yourself indispensable, and leveraging your strengths to help you achieve goals.</p>
+      speakers:
+        - name: "Mo Fiebiger"
+          image: "/images/speakers/mo-fiebiger.jpeg"
+          twitter: "fizzbuzzpodcast"
+          url: "https://linktr.ee/fizzbuzzpodcast"
+          bio: >
+            <p>
+              Mo spends her free time diving into fantasy novels, crocheting, and hitting up the CrossFit gym. By day, she’s rocking it as an Engineering Manager at Phorest Salon Software, but she’s always up for coding whenever she can sneak it in. Mo’s all about boosting diversity in tech and helping folks level up their tech skills as a Co-host on the Fizz Buzz Podcast!
+            </p>
+    - time: "17:30&mdash;18:00"
+      label: "The Architecture of WarpDrive | Beyond Universal"
+      description: >
+        <p>This talk will dive into the first-principles the project uses to compose something powerful out of something simple, the way the various key-interfaces work together, and a few of the advanced features this architecture unlocked.</p>
+      speakers:
+        - name: "Chris Thoburn (aka. runspired)"
+          image: "/images/speakers/chris-thoburn.jpg"
+          twitter: "still_runspired"
+          url: "https://runspired.com"
+          bio: >
+            <p>Chris is a Senior Staff Software Engineer at AuditBoard and long-term EmberData/WarpDrive team member. He’s also a mountain/ultra/trail runner.</p>
+- label: "Day 2"
+  date: "Sep 13, Friday"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+    - time: "10:00&mdash;10:30"
+      label: "But Why? A look at common patterns found on the web, how they are harmful for accessibility, and what to do instead."
+      description: >
+        <p>
+          Components are one of Melanie’s favorite aspects of building Ember applications. 
+          A well-documented and structured design system can empower teams to create accessible applications more efficiently.
+        </p>
+        <p>
+          However, components alone are not enough to ensure accessibility.
+          In this talk, Melanie will unpack several common UI patterns frequently missing critical elements for digital accessibility.
+        </p>
+        <p>
+          She’ll also provide actionable insights and practical steps that developers, designers, and accessibility advocates can implement to elevate the accessibility of web products. 
+          Attendees will leave equipped to critically analyze their own applications and take immediate steps to improve inclusivity.
+        </p>
+      speakers:
+        - name: "Melanie Sumner"
+          image: "/images/speakers/melanie-sumner.jpg"
+          twitter: "a11ymel"
+          url: "https://www.linkedin.com/in/melaniesumner"
+          bio: >
+            <p>
+              Melanie Sumner began building things for the web in 1997, and after all these years, it’s still her favorite thing to do. As the Product Accessibility Lead at HashiCorp, she develops accessibility strategies and offers guidance to the design system and product teams, working collaboratively to deliver inclusive, standards-compliant products.
+            </p>
+            <p>
+              In addition to her role at HashiCorp, Melanie is an invited expert for the W3C’s ARIA working group and co-editor of the Accessible Name and Description Computation specification, playing an active part in advancing web accessibility standards.
+            </p>
+            <p>
+              When she needs a break, Melanie enjoys brainstorming new collective nouns for the web (collective-nouns.dev) or unwinding with a game of Stardew Valley.
+            </p>
+    - time: "10:45&mdash;11:15"
+      label: "From Monolith to Monorepo: The life story of a large legacy Ember app"
+      description: >
+        <p>
+          The talk tells the story of a legacy monolith Ember app from its birth 7 years ago to its future final resting place. Like a trip down memory lane, I will discuss the current implications of past technical decisions, efforts made to modernise the app, the challenges of maintenance and the future story of the monolith.
+        </p>
+        <p>
+          This story will be contrasted by describing a sibling Ember app at the same company, which is modern, easily maintainable and considered best-of-class.
+        </p>
+      speakers:
+        - name: "David McNamara"
+          image: "/images/speakers/davic-mcnamara.jpeg"
+          url: "https://www.linkedin.com/in/dmcnamara-eng"
+          bio: >
+            <p>
+              David is a Dublin-native who has been hacking Ember since 2014 and is currently employed at Phorest in the role of Front-end Staff Engineer.
+            </p>
+            <p>
+              Now living in the West of Ireland, David enjoys the great outdoors and finds peace by the ocean and in the mountains. He is married to his cat, Fuzzybum.
+            </p>
+    - time: "11:30&mdash;12:00"
+      label: "From React JS to Ember: A Newbie’s Comparative Journey"
+      description: >
+        <p>
+          This talk will draw from Toyib’s six years of React experience and his recent months with Ember.js to provide a rich, comparative analysis.
+          It explores how Ember’s “convention over configuration” philosophy, built-in tools, and performance optimisations contrast with React’s flexible, component-based architecture, and
+          discusses the strengths and challenges of each framework, offering practical advice on leveraging Ember’s features for efficient and scalable development.
+        </p>
+      speakers:
+        - name: "Toyib Olamide Ahmed"
+          bio: >
+            <p>
+              As a Senior Frontend Engineer based in Dublin, Toyib leverages over six years of experience in JavaScript and React.js to build sophisticated, user-centric web applications. 
+              His background in cybersecurity engineering gives him a unique perspective on integrating security best practices into development.
+              Through teaching and community engagement, he strives to help others navigate the tech industry and harness the power of frameworks like React and Ember.
+            </p>
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+    - time: "13:30&mdash;14:00"
+      label: "Memory leak found, now what?"
+      description: >
+        <p>
+          Memory leaks happen, and usually nobody cares about them until they get so worse as to cause a slow down or crash of the app.
+          Bartłomiej was “lucky” enough to get to work on one which caused app tests to fail and another one which was discovered by a customer.
+          In this talk, he shares his findings which go beyond the trivial examples many tutorials use in the hopes of helping others find their memory leak and fix it.
+        </p>
+      speakers:
+        - name: "Bartłomiej Dudzik"
+          image: "/images/speakers/bart-dudzik.jpeg"
+          url: "https://www.linkedin.com/in/bartlomiej-dudzik/"
+          bio: >
+            <p>Bartłomiej is a passionate programmer who loves to code, learn new things, and see progress on projects he is working on. He’s interested in frontend, backend and devops.</p
+    - time: "14:15&mdash;14:45"
+      label: "Ready vs. Done: Striking the Balance Between Good and Perfect"
+      description: >
+        <p>
+          This talk explores the debate between “ready” and “done,” highlighting their philosophies and practical impacts. “Ready” means the product meets specifications and is fit for user interaction, while “done” implies a state of perceived perfection with no further improvements needed.
+        </p>
+      speakers:
+        - name: "Kenigbolo Meya Stephen"
+          image: "/images/speakers/stephen-kenigbolo.jpeg"
+          twitter: "expensivestevie"
+          url: "https://www.linkedin.com/in/kenigbolo/"
+          bio: >
+            <p>
+              Stephen is a Senior Engineering Manager at Phorest. With a background in full-stack software development, he has worked on different types of projects and initiatives. Stephen also loves mentorship, helping to nurture the next generation of tech talent, and he strongly advocates for giving underrepresented folks opportunities. 
+            </p>
+            <p>
+              In his free time, he’s either missing flights in Brazil, traveling through South America, or dealing with the harsh Finnish winters because his daughter loves to build her snowman after school during winter.
+            </p>
+    - time: "15:00&mdash;15:30"
+      label: "Moving Mountains"
+      description: >
+        <p>
+          Imagine an old, mountain-sized project with many v1 addons. How do we convert these addons to v2 so that we can introduce Embroider?
+        </p>
+        <p style="font-style: italic">
+          Move the mountain.
+        </p>
+        <p>
+          Find out how creating another repo helps you solve a few tech debts at once.
+        </p>
+      speakers:
+        - name: "Isaac Lee"
+          image: "/images/speakers/isaac-lee.jpeg"
+          url: "https://crunchingnumbers.live/"
+          bio: >
+            <p>
+              A chance encounter with Ember in ’17 has led Isaac to unexpected places thanks to the Ember community. He feels fortunate to get to give back as a Tech Lead at CLARK and the author of a few addons and codemods.
+            </p>
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+    - time: "16:00&mdash;16:30"
+      label: "Lightning Talks"
+      description: >
+        <p>
+          The Lightning Talks block is your chance to tell the audience about something you want to share, in 5-minutes or less. You’ll be able to sign up for it at the event.
+        </p>
+    - time: "16:45&mdash;17:15"
+      label: "The Art of Data Fetching"
+      description: >
+        <p>
+          Data fetching is absolutely crucial for all modern apps. Yet, it’s often an overlooked topic. You just get the data and render it, right? Nah.
+        </p>
+        <p>
+          This talk will show you the common pitfalls, strategies, and patterns ready to apply to improve your app drastically when it comes to reliability, performance, and responsiveness.
+        </p>
+      speakers:
+        - name: "Tomek Niezurawski"
+          image: "/images/speakers/tomek-niezurawski.jpg"
+          twitter: "tomekdev_"
+          url: "https://tomekdev.com/"
+          bio: >
+            <p>
+              Tomek is a Principal Engineer at Phorest by day and a hacker by night 🤓 He spends most of his days on perfecting interfaces but he’s also very interested in how automation and processes can help teams to be very performant. He occasionally blogs and non-occasionally develops side-projects.
+            </p>
+    - time: "17:30&mdash;18:00"
+      label: "Closing Keynote"
+      speakers:
+        - name: "Edward Faulkner"
+          image: "/images/speakers/edward-faulkner.jpeg"
+          twitter: "eaf4"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>
+              Edward Faulkner is a member of the Ember Core Team, and the lead developer behind Embroider. His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+              of enterprise applications. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security
+              infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+            </p>
+            <p>
+              Ed resides in Somerville, Massachusetts with his wife and two sons.
+            </p>
+    - time: "18:30&mdash;23:00"
+      label: "Closing Party at the venue &#x1F389;"

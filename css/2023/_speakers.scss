@@ -1,0 +1,155 @@
+.past-speakers, .speakers {
+  font-family: $main-font;
+  color: $light-yellow;
+  background-color: $dark-blue;
+  background-image: url("/images/backgrounds/pattern_2.svg");
+  background-repeat: repeat;
+  background-size: 200px;
+  background-position: center top -100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 50px 0 $dark-shadow-color;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+
+  @include lg {
+    background-size: 400px;
+    border-radius: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  h3 {
+    font-family: $secondary-font;
+    @include responsiveTitle(80%, 55px, 15.5vw);
+    margin-bottom: 30px;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include lg {
+  }
+
+  .past-speakers-list, .speakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 23px;
+    gap: 30px;
+    justify-content: center;
+
+    @include lg {
+      padding: 25px;
+      padding: 65px;
+      gap: 80px;
+    }
+
+    .speaker {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include lg {
+        gap: 30px;
+        flex-direction: column;
+      }
+
+      .avatar {
+        --max-height-avatar: calc(min(140px, 80vw));
+        height: var(--max-height-avatar);
+        width: var(--max-height-avatar);
+        @include lg {
+          height: 194px;
+          width: 194px;
+        }
+      }
+
+      .speaker-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: calc(max(164px, 20vw));
+        @include lg {
+          width: initial;
+          align-items: center;
+        }
+        p {
+          @include responsiveTitle(80%, 32px);
+          text-align: center;
+          @include ssm {
+            text-align: left;
+          }
+
+          @include lg {
+            font-size: 40px;
+            line-height: 40px;
+          }
+          letter-spacing: 0;
+        }
+        .speaker-links {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          @include ssm {
+            justify-content: left;
+          }
+          .icon-link {
+            background: $light-yellow;
+            border: 1px solid $light-yellow;
+            border-radius: 50%;
+            height: 42px;
+            width: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .icon-link svg {
+          color: $dark-blue;
+        }
+
+        .icon-link:hover svg {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .button {
+    min-width: calc(min(290px, 90vw));
+    background: $light-yellow;
+    box-shadow: 0 0 35px 0 rgba(253, 255, 214, 0.6);
+    border-radius: 59px;
+    font-family: $main-font;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 16px 4px 0px 4px;
+    @include lg {
+      font-size: 40px;
+      line-height: 60px;
+      padding: 13px 50px 1px 50px;
+    }
+    color: $dark-blue;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .button:hover {
+    color: #ea473b;
+  }
+}

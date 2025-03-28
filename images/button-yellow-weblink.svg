@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="43px" viewBox="0 0 42 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 11</title>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DT---Home-" transform="translate(-455.000000, -3107.000000)">
+            <g id="Group-15" transform="translate(355.000000, 2624.000000)">
+                <g id="Group-11" transform="translate(100.000000, 483.500000)">
+                    <circle id="Oval" stroke="#FDFFD6" fill="#FDFFD6" transform="translate(21.000000, 21.000000) rotate(-360.000000) translate(-21.000000, -21.000000) " cx="21" cy="21" r="20.5"></circle>
+                    <g id="Group-5" transform="translate(21.500000, 21.000000) rotate(-315.000000) translate(-21.500000, -21.000000) translate(17.000000, 8.000000)" stroke="#08175E" stroke-linecap="round" stroke-width="2">
+                        <path d="M0.000248611916,7.63755391 L0.000248611916,4.66081341 C0.000248611916,2.0870659 2.0152482,-1.64082033e-13 4.50012431,-1.64082033e-13 L4.50012431,-1.64082033e-13 C6.98500041,-1.64082033e-13 9,2.0870659 9,4.66081341 L9,10.6142944 C9,13.1880419 6.98500041,15.2751078 4.50012431,15.2751078 L4.42678379,15.2751078" id="Stroke-1"></path>
+                        <path d="M8.99975139,18.3624461 L8.99975139,21.3391866 C8.99975139,23.9129341 6.9847518,26 4.49987569,26 L4.49987569,26 C2.01499959,26 -1.98262236e-13,23.9129341 -1.98262236e-13,21.3391866 L-1.98262236e-13,15.3857056 C-1.98262236e-13,12.8119581 2.01499959,10.7248922 4.49987569,10.7248922 L4.57321621,10.7248922" id="Stroke-3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

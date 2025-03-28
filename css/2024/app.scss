@@ -1,0 +1,125 @@
+---
+---
+
+@import "2024/reset";
+@import "2024/variables";
+@import "2024/fonts";
+@import "2024/mixins";
+@import "2024/hero";
+@import "2024/about";
+@import "2024/speakers";
+@import "2024/sponsors";
+@import "2024/schedule";
+@import "2024/venue";
+@import "2024/stay-up-to-date";
+@import "2024/footer";
+@import "2024/buttons";
+@import "2024/header";
+@import "2024/organizers";
+@import "2024/sidepages";
+
+html {
+  background-color: #6e9075;
+}
+
+body {
+  background-color: $beige;
+}
+
+a:hover {
+  color: $orange;
+  text-decoration: underline;
+  text-decoration-color: $orange;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0 5%;
+  }
+}
+
+.mw-lg {
+  max-width: 48rem;
+}
+
+
+.mw-xl {
+  max-width: 72rem;
+}
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 4,
+  9: $spacer * 5,
+  10: $spacer * 10,
+  16: $spacer * 16,
+);
+
+@each $name, $glyph in $spacers {
+  .m-#{$name} {
+    margin: $glyph;
+  }
+  .mt-#{$name} {
+    margin-top: $glyph;
+  }
+  .mb-#{$name} {
+    margin-bottom: $glyph;
+  }
+  .mx-#{$name} {
+    margin-right: $glyph;
+    margin-left: $glyph;
+  }
+  .my-#{$name} {
+    margin-bottom: $glyph;
+    margin-top: $glyph;
+  }
+  .me-#{$name} {
+    margin-right: $glyph;
+  }
+  .ms-#{$name} {
+    margin-left: $glyph;
+  }
+  .p-#{$name} {
+    padding: $glyph;
+  }
+  .pt-#{$name} {
+    padding-top: $glyph;
+  }
+  .pb-#{$name} {
+    padding-bottom: $glyph;
+  }
+  .px-#{$name} {
+    padding-right: $glyph;
+    padding-left: $glyph;
+  }
+  .py-#{$name} {
+    padding-bottom: $glyph;
+    padding-top: $glyph;
+  }
+  .ps-#{$name} {
+    padding-left: $glyph;
+  }
+  .pe-#{$name} {
+    padding-right: $glyph;
+  }
+  .gap-#{$name} {
+    gap: $glyph;
+  }
+}
+
+.mobile-75 {
+  @include mobile {
+    transform: scale(0.75);
+  }
+}
