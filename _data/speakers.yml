@@ -1,0 +1,17 @@
+- name: "Edward Faulkner"
+  avatar: "edward-faulkner.jpeg"
+  twitter: "https://twitter.com/eaf4"
+  web: "https://www.linkedin.com/in/edwardfaulkner/"
+
+- name: "Melanie Sumner"
+  avatar: "melanie-sumner.jpg"
+  twitter: "https://twitter.com/a11ymel"
+  web: "https://www.linkedin.com/in/melaniesumner"
+
+- name: "Chris Thoburn"
+  avatar: "chris-thoburn.jpg"
+  twitter: "https://twitter.com/not_runspired"
+  web: "https://www.linkedin.com/in/runspired/"
+
+
+

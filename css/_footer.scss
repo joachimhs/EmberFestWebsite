@@ -1,0 +1,59 @@
+.footer-divider {
+  background-image: url(/images/backgrounds/footer-bkg.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 2.5rem;
+  background-color: $blue-100;
+}
+
+footer {
+  padding: 3.5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  color: $beige;
+  background-color: $blue-500;
+
+  .footer-glasses {
+    width: clamp(4rem, 20vw, 6rem);
+  }
+
+  a.link-text,
+  p {
+    color: $beige;
+    font-family: "pill-gothic-900mg", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-decoration: none;
+  }
+
+  a.link-text:hover,
+  a.link-text:active {
+    text-decoration: underline;
+  }
+}
+
+.footer-wrapper,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+.footer-links {
+  gap: 2rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}

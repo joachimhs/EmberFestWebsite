@@ -1,0 +1,14 @@
+<section id="sponsors" class="sponsors container mb-16">
+	<h3 class="mb-9">Past Sponsors</h3>
+  <div class="sponsor-section-wrapper">
+    <ul class="sponsors-list">
+      {% for sponsor in site.data.past-sponsors %}
+      <li>
+        <a href="{{ sponsor.link }}">
+          <img src="/2023/images/past-sponsors/{{sponsor.logo}}.svg" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

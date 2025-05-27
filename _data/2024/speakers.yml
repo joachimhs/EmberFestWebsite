@@ -1,0 +1,24 @@
+- name: "Chris Thoburn"
+  avatar: "chris-thoburn.jpg"
+  twitter: "https://twitter.com/not_runspired"
+  web: "https://www.linkedin.com/in/runspired/"
+
+- name: "Melanie Sumner"
+  avatar: "melanie-sumner.jpg"
+  twitter: "https://twitter.com/a11ymel"
+  web: "https://www.linkedin.com/in/melaniesumner"
+
+- name: "Preston Sego"
+  avatar: "l-preston-sego-iii.png"
+  twitter: "https://twitter.com/nullvoxpopuli"
+  web: "https://www.linkedin.com/in/lprestonsegoiii/"
+
+- name: "Yehuda Katz"
+  avatar: "yehuda-katz.jpeg"
+  twitter: "https://twitter.com/wycats"
+  web: "https://www.linkedin.com/in/yehudakatz/"
+
+- name: "Edward Faulkner"
+  avatar: "edward-faulkner.jpeg"
+  twitter: "https://twitter.com/eaf4"
+  web: "https://www.linkedin.com/in/edwardfaulkner/"
