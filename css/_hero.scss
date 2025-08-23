@@ -1,0 +1,56 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-layout {
+  display: grid;
+  gap: 4rem;
+  @include xl {
+    grid-template-columns: auto min(700px, 50%);
+  }
+  
+  img {
+    max-width: min(70vw, 700px);
+    margin: auto;
+  }
+}
+
+.date {
+  text-align: center;
+}
+
+.hero {
+  margin-bottom: 10rem;
+  @media (max-width: 700px) {
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .dark-blue {
+    color: #195BCE;
+  }
+}
+
+.hero.container {
+  max-width: 60rem;
+
+  @include xl {
+    max-width: 70rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include small-desktop {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+

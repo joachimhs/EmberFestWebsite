@@ -1,0 +1,74 @@
+.venue {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+
+  background-color: white;
+  padding: 6rem;
+  @include tablet {
+    padding: 6rem 2rem;
+  }
+  border-radius: 2rem;
+  background-image: url('/images/backgrounds/venue-border.svg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-wrap: balance;
+  &.container {
+    margin-bottom: -15rem;
+    max-width: 60rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+
+    @include xl {
+      max-width: 72rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include small-desktop {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+    .image-wrapper {
+      @include xl {
+        padding-right: 2rem;
+      }
+    }
+
+    .btn-secondary {
+      margin: 2rem auto; 
+      @include xl {
+        margin: 1rem 0; 
+      }
+  }
+
+  filter: $shadow;
+  .content {
+    align-items: start;
+  }
+}
+
+.venue-img {
+  height: 25rem;
+  object-fit: cover;
+  @include xl {
+    height: 35rem;
+  }
+  max-width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  border-radius: 1rem;
+}
+
+.venue-title {
+  margin: 0 auto; 
+
+  @include xl {
+    margin: inherit;
+  }
+}

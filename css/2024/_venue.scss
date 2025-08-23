@@ -1,0 +1,26 @@
+.venue {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.content {
+    text-align: center;
+}
+
+.venue-img {
+  width: 30rem;
+  height: 30rem;
+  max-width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  clip-path: circle();
+}

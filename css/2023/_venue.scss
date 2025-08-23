@@ -1,0 +1,115 @@
+.venue {
+  font-family: $main-font;
+  background-image: url("/images/backgrounds/curly-brace.svg");
+  background-color: $light-yellow;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: repeat-x;
+  background-attachment: local;
+  padding: 50px 0;
+
+  @include lg {
+    padding: 100px 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: $dark-blue;
+    letter-spacing: 0;
+    line-height: 2rem;
+    display: block;
+    font-family: $secondary-font;
+    margin: 0 0 40px 0;
+    @include lg {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    img {
+      margin-bottom: 40px;
+      max-width: min(90vw, 360px);
+    }
+
+    @include lg {
+      padding: 0 85px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      gap: 85px;
+      max-width: min(85vw, 1320px);
+      margin: 0 auto;
+
+      img {
+        margin: 0 20px;
+        max-width: 540px;
+        max-height: auto;
+      }
+    }
+
+    .text-and-link {
+      display: flex;
+      align-items: start;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      p {
+        flex: none;
+        margin: 0 0 60px 0;
+        letter-spacing: 0;
+        color: $dark-blue;
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+        font-family: $main-font;
+
+        @include mobile {
+          font-size: 1.25rem;
+          line-height: 1.625rem;
+        }
+
+        @include lg {
+          max-width: 540px;
+        }
+      }
+
+      .button {
+        flex: none;
+        border-radius: 59px;
+        color: $dark-blue;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid $dark-blue;
+        min-width: calc(min(290px, 90vw));
+        font-size: 32px;
+        line-height: 40px;
+        padding: 16px 4px 0px 4px;
+
+        @include lg {
+          font-size: 40px;
+          line-height: 59px;
+          padding: 11px 50px 0px 50px;
+        }
+
+        @include small-desktop {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

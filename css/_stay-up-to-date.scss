@@ -1,0 +1,68 @@
+.stay-up-to-date-divider {
+  background-image: url(/images/backgrounds/speakers-top-bkg.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 2.5rem;
+  margin-bottom: 11rem;
+}
+
+.stay-up-to-date-section {
+  h4 {
+    text-wrap: balance;
+    color: $blue-300;
+  }
+  
+
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  background: $blue-050;
+  text-align: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .btn-primary {
+      margin-top: 2rem;
+      color: #FFF;
+    }
+  }
+
+  .input-wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      border: none;
+      border-radius: 3rem;
+      background: #fff;
+      filter: $shadow;
+      color: $blue-600;
+      font-weight: 400;
+      line-height: 38.4px;
+      outline: none;
+      transition: box-shadow 0.2s;
+
+      &::placeholder {
+        color: $blue-300;
+        font-weight:400;
+      }
+
+      &:focus {
+        filter: $shadow $shadow $shadow;
+      }
+    }
+
+    label {
+      display: none;
+    }
+  }
+}
+

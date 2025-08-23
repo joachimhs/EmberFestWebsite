@@ -1,0 +1,14 @@
+.organizers {
+  & a:hover span,
+  & .speaker-name:hover {
+      color: $orange;
+  }
+
+  & .speaker-avatar {
+    margin: 0 auto 2rem auto;
+
+    @include mobile {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

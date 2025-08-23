@@ -1,0 +1,39 @@
+
+<section class="schedule" id="schedule">
+    <img class="mb-5 mobile-75" src="/images/large.svg" alt="" />
+    <h3>Schedule</h3>
+    <div class="data">
+      {% for day in site.data.2024.schedule %}
+        <div class="day">
+          <div class="content">
+            <h4>{{day.label}}</h4>
+            <h4>{{day.date}}</h4>
+            <p class="timezones-note">Times are local, Dublin (IST) time</p>
+            <table>
+              {% for slot in day.slots %}
+                <tr>
+                  <td class="time">
+                    {{slot.time}}
+                  </td>
+                  <td class="title">
+                    {{slot.label}}
+                    {% if slot.speakers and slot.hideSpeakers != true %}
+                      –
+                      {% for speaker in slot.speakers %}<span class="speaker">{% if forloop.index > 1 %}, {% endif %}{{speaker.name}}</span>{% endfor %}
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+         <a
+            class="btn-primary full-schedule"
+            href="schedule/day/{{forloop.index + 1}}"
+            alt="Full Schedule"
+            >Full Schedule</a
+          >
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  
