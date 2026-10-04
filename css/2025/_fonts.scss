@@ -1,0 +1,114 @@
+@import "mixins";
+
+body {
+  font-family: "pill-gothic-900mg", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: $blue-400;
+}
+
+::selection {
+  background: $orange;
+  color: $beige;
+}
+
+h1, h2, h3, h4 {
+line-height: 1.3;
+font-family: postino-std, serif;
+font-weight: 400;
+font-style: normal;
+}
+
+// h1 is only used in the logo, hence the different scaling at lower viewpoints than the rest of the header titles
+h1 {
+  font-size: 7rem;
+  line-height:1;
+
+  @include small-desktop {
+    font-size: 6rem;
+  }
+
+  @include mobile {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 5rem;
+
+  @include mobile {
+    font-size: 4rem;
+  }
+
+  .emberfest {
+    font-size: 7.5rem;
+    line-height: 0;
+
+    @include small-desktop {
+      font-size: 6rem;
+    }
+
+    @include tablet {
+      font-size: 4rem;
+    }
+
+    @include mobile {
+      font-size: 3rem;
+    }
+  }
+}
+
+h3 {
+  font-size: 4rem;
+
+  @include mobile {
+    font-size: 3.33rem;
+    line-height: 3.33rem;
+  }
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.3;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
+}
+
+h5 {
+  font-size: 2.5rem;
+  font-weight: 500;
+
+  @include small-desktop {
+    font-size: 2rem;
+  }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+p, td {
+  color: $blue-600;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
+}
+
+label, input[type="text"], input[type="email"], input[type="text"]::placeholder, input[type="email"]::placeholder  {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
+
+

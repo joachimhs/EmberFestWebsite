@@ -1,0 +1,29 @@
+.sidepages-header {
+    h5 {
+        font-family: postino-std, serif;
+        font-weight: 400;
+        font-style: normal;
+        color: $blue-400;
+    }
+
+    .navigation {
+        @include tablet {
+            .navigation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                column-gap: 1rem;
+              }
+        }
+      }
+}
+
+.sidepage +.footer-divider {
+    background-color: $scotch-grey; 
+  }
+  
+.sidepage {
+     h4 {
+        color: revert;
+    }
+}

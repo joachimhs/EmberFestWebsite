@@ -1,0 +1,205 @@
+- label: "Day 1"
+  weekday: "Thursday"
+  date: "September 17"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+
+    - time: "10:00&mdash;10:30"
+      label: "Opening Keynote"
+      speakers:
+        - name: "Edward Faulkner"
+          image: "/images/speakers/edward-faulkner.jpeg"
+          bluesky: "https://bsky.app/profile/eaf4.com"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>
+              Edward Faulkner is a member of the Ember Core Team, and the lead developer behind Embroider. His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+              of enterprise applications. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security
+              infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+            </p>
+            <p>
+              Ed resides in Somerville, Massachusetts with his wife and two sons.
+            </p>
+
+    - time: "10:45&mdash;11:15"
+      label: "Modernizing the Ember Router: How to swap the steering wheel while driving"
+      description: >
+        <p>When Ember introduced its router over a decade ago, it was one of the best in the JavaScript ecosystem. Today, it's showing its age. Limitations, quirks, and patterns that no longer match how we want to build apps. But you can't just rip out the router of a framework that powers thousands of production applications. This talk introduces the Route Manager: a new abstraction layer that lets us modernize Ember's routing concepts.</p>
+      speakers:
+        - name: "Nick Schot"
+          image: "/images/speakers/nick-schot.webp"
+          twitter: "nickschot"
+          url: "https://nickschot.nl/"
+          bio: >
+            <p>Long time Ember.js developer from The Netherlands. Working at Mainmatter. Always interested in anything involving a lot of tinkering including but not limited to: animations, model railways, micro controllers & coffee.</p>
+
+    - time: "11:30&mdash;12:00"
+      label: "Hamster in Harness"
+      description: >
+        <p>As agentic engineering accelerates code generation, validation needs to keep up. The solution isn't new — it's the engineering culture, tooling, and infrastructure we've pushed for years, now called Harness Engineering. This talk explores what a good Ember harness looks like in practice.</p>
+      speakers:
+        - name: "Marco Otte-Witte"
+          image: "/images/speakers/marco-otte-witte.jpeg"
+          twitter: "marcoow"
+          url: "https://www.linkedin.com/in/marco-otte-witte"
+          bio: >
+            <p>Marco has been working in web engineering for about 15 years and has used all kinds of technologies in projects of all kinds of sizes. His company Mainmatter offers custom development, team augmentation, and mentoring. He has worked with Ember for many years and is the original author of ember-simple-auth.</p>
+
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+
+    - time: "13:30&mdash;14:00"
+      label: "4,207 Days of Uptime: Evolving an Ember App Without a Rewrite"
+      description: >
+        <p>What does it take to keep an Ember app alive and evolving for over a decade?</p>
+        <p>This talk follows a real-world project that started on Ember 1.11 and is still running today on Ember 6.9, spanning 4,207 days of continuous development without a full rewrite.</p>
+        <p>Rather than presenting an idealized migration path, this talk focuses on the messy reality: incremental upgrades, dead ends, partial migrations, and legacy code that continues to coexist with modern patterns. It also looks at how teams make decisions when multiple paradigms live side by side in the same codebase.</p>
+        <p>If you’re maintaining a long-lived Ember app, or wondering whether you should rewrite yours, this talk offers a pragmatic perspective on how to evolve a codebase across multiple generations of framework ideas without starting from scratch.</p>
+      speakers:
+        - name: "Michal Bryxi"
+          image: "/images/speakers/michal-bryxi.jpeg"
+          mastodon: "https://mastodon.world/@MichalBryxi"
+
+    - time: "14:15&mdash;14:45"
+      label: "Both Sides of the Table: What Tech Interviews Should Actually Look Like"
+      description: >
+        <p>Tech interviews are often treated like exams: a candidate sweats through a 30-minute coding challenge while someone watches silently, takes notes, and decides their fate. But interviews aren’t exams — they’re conversations. And the way a company runs its interview process tells you just as much about them as it tells them about you.</p>
+        <p>In this talk, I’ll share what I’ve learned from being on both sides of the table: from designing a hiring process as a solo frontend developer looking for my first peer, to interviewing senior candidates today. We’ll talk about why “I don’t know” is one of the most powerful answers a candidate can give, why how you say something often matters more than what you say, why a rejection is rarely a verdict on your worth as an engineer, and why interviewers carry the responsibility of making the room feel safe.</p>
+        <p>Whether you’re preparing for your next interview, running them at your company, or just tired of the broken patterns the industry keeps repeating, you’ll leave with a clearer idea of what a good interview looks like — and the red flags that should send you running.</p>
+      speakers:
+        - name: "Luis Lorente"
+          image: "/images/speakers/luis-lorente.jpeg"
+          url: "https://www.linkedin.com/in/luislorenteruiz/"
+
+    - time: "15:00&mdash;15:30"
+      label: "How complicated could a table be? A deep dive on the Helios AdvancedTable component"
+      description: >
+        <p>Tables, data grids, headless tables, kitchen tables… Just how many tables are there? Why is it so hard to style tables with CSS? Should you try to recreate Excel in a component? How many features can a table have and still be accessible? Tables are a foundation on the web. In technical, data-dense products like HashiCorp’s, they are mission-critical UIs. On the Helios Design Systems Team, we saw a growing demand for advanced functionality in our Table component. This kicked off a deeper exploration into what a table really is, ultimately leading to the creation of our new Advanced Table. The Advanced Table supports powerful features like resizable columns, keyboard navigation, and expandable rows—designed to be accessible from the beginning. In this talk, I’ll share how we approached the Advanced Table, what we learned, and how it is helping users get more value from their data.</p>
+      speakers:
+        - name: "Lee White"
+          image: "/images/speakers/lee-white.jpg"
+          bio: >
+            <p>Lee is a Senior UX Engineer at HashiCorp/IBM, where she helps build the Helios Design System. She is passionate about scaling accessibility through design systems.</p>
+
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+
+    - time: "16:00&mdash;16:30"
+      label: "Agent-assisted Coding with Ember at Enterprise Scale"
+      description: >
+        <p>As agent-assisted coding gained momentum at Addepar, we were faced with a challenge: how do we get agents to build with modern Ember standards when our codebase contains so many outdated patterns? While Ember’s commitment to backwards compatibility and clear upgrade paths is a gift to humans, it also can be extremely confusing for autonomous agents. I’ll share the real-world steps we’ve taken to infuse guardrails into our 14 year old, 1.5 million line Ember codebase to make coding agents more productive, keep code quality high, and accelerate the modernization of our Ember enterprise monolith. Might we improve the codebase for human engineers in the process?</p>
+      speakers:
+        - name: "Kevin Pfefferle"
+          image: "/images/speakers/kevin-pfefferle.jpg"
+          url: "https://www.linkedin.com/in/kevinpfefferle/"
+
+    - time: "16:45&mdash;17:15"
+      label: "Workshopping Ember with Storybook"
+      speakers:
+        - name: "Thomas Gossmann"
+          image: "/images/speakers/thomas-gossmann.jpeg"
+          url: "https://gos.si/"
+          twitter: "unistyler"
+          bio: >
+            <p>Unicyclist. Artist. Developer.</p>
+
+- label: "Day 2"
+  weekday: "Friday"
+  date: "September 18"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+
+    - time: "10:00&mdash;10:30"
+      label: "Resisting When Resistance Is Futile"
+      speakers:
+        - name: "Chris Thoburn (aka. runspired)"
+          image: "/images/speakers/chris-thoburn.jpg"
+          bluesky: "https://bsky.app/profile/runspired.com"
+          url: "https://runspired.com"
+          bio: >
+            <p>Chris is a Senior Staff Software Engineer at AuditBoard and long-term EmberData/WarpDrive team member. He's also a mountain/ultra/trail runner.</p>
+
+    - time: "10:45&mdash;11:15"
+      label: "Guardrails by Design: Frontend Reliability in an Agentic World"
+      description: >
+        <p>With tools like Claude Code and Copilot now writing significant chunks of our Ember components and templates, how do we make sure we aren't just shipping bugs faster?</p>
+        <p>In this talk, I’ll share how we can keep our Ember apps stable when we’re leaning on AI to help us code. We’ll look at practical ways to wrap our agent-assisted workflows in solid "guardrails" — specifically focusing on how to level up our automated testing. We’ll walk through:</p>
+        <p>
+          • Coverage that counts: Moving beyond raw lines of code to testing actual component behaviour.<br />
+          • Visual Regression: Automating the "eye test" to catch UI shifts before they reach the browser.<br />
+          • Custom Linting: Using custom ESLint rules to bake our team’s Ember conventions directly into the AI’s workflow.<br />
+        </p>
+        <p>If you’re worried about AI making a mess of your codebase, come by to swap stories and pick up some patterns for keeping our Ember apps as reliable as ever.</p>
+      speakers:
+        - name: "David McNamara"
+          image: "/images/speakers/davic-mcnamara.jpeg"
+          url: "https://www.linkedin.com/in/dmcnamara-eng"
+
+    - time: "11:30&mdash;12:00"
+      label: "Background Scripts and Foreground Hamsters"
+      description: >
+        <p>In this talk, I'll tell you more about my experience as an Ember developer who wanted to create a browser extension.</p>
+        <p>We'll take a look at how I used broccoli 🥦 to build my extension for Chrome and how I switched to vite with plugins to target all the browsers...</p>
+      speakers:
+        - name: "Karel Bousson"
+          image: "/images/speakers/karel-bousson.jpeg"
+          url: "https://www.linkedin.com/in/karelbousson"
+
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+
+    - time: "13:30&mdash;14:00"
+      label: "Peering Into the Void: the Joys and Perils of Dependency Resolution"
+      description: >
+        <p>Dependency resolution in node projects is a complex beast at the best of times. Peer dependencies, competing module standards, bundlers and transpilers can seriously muddy the waters. Things can get especially hairy during addon development, where you'd like your app to resolve your local version.</p>
+        <p>In this talk we'll try to build an intuition for what is going on underneath, so that we can understand why things go wrong.</p>
+      speakers:
+        - name: "Arne Bertrand"
+          image: "/images/speakers/arne-bertrand.png"
+          github: "https://github.com/abeforgit"
+          url: "https://redpencil.io/"
+          bio: >
+            <p>After a brief stint in corporate finance, I was lucky to discover my true passion and able to make a full career switch to software development. I especially love building complex GUI software, as it provides a challenge right in the middle of UX design, performance-critical algorithms, and software architecture.</p>
+
+    - time: "14:15&mdash;14:45"
+      label: "What's going on?"
+      description: >
+        <p>An overview of everything I've noticed and am excited about from over the last year</p>
+      speakers:
+        - name: "Preston Sego (aka. nullvoxpopuli)"
+          image: "/images/speakers/l-preston-sego-iii.png"
+          twitter: "nullvoxpopuli"
+          url: "https://nullvoxpopuli.com/"
+          bio: >
+            <p>Preston is a software artificer at Auditboard, looking to bring folks to the future of Ember.js and frontend dev</p>
+
+    - time: "15:00&mdash;15:30"
+      label: "We’re in the Vite future… now what?"
+      speakers:
+        - name: "Chris Manson"
+          image: "/images/speakers/chris-manson.jpg"
+          url: "https://bsky.app/profile/chris.manson.ie"
+          bio: >
+            <p>Senior Developer @mainmatter.com. @emberjs.com Core Learning and Tooling Team member. Created Empress http://github.com/empress. Created Lint to the Future https://github.com/mansona/lint-to-the-future. Big fan of Open Source!</p>
+
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+
+    - time: "16:00&mdash;16:30"
+      label: "Lightning Talks"
+      description: >
+
+    - time: "16:45&mdash;17:15"
+      label: "Closing Keynote: Future of front-end"
+      description: >
+        <p>LLMs, agents and AI changed the way we develop code and products. It seems that the future is now. How fast-paced teams work these days and what the future may hold.</p>
+        <p>I'll prove that saying that Ember is not ready for LLMs is a false claim.</p>
+      speakers:
+        - name: "Tomek Nieżurawski"
+          image: "/images/speakers/tomek-niezurawski.jpg"
+          url: "https://tomekdev.com/"
+
+    - time: "17:30&mdash;23:00"
+      label: "Party at the venue &#x1F389;"

@@ -1,0 +1,57 @@
+<section class="speakers-section">
+  <div class="speakers-divider-top"></div>
+  <div class="past-speakers mb-9">
+    <h4 class="mb-9">Speakers</h4>
+    <ul class="speakers-list container">
+      {% for speaker in site.data.2025.speakers %}
+      {%- assign mod = forloop.index0 | modulo: 2 -%}
+      {% if mod == 0 %}
+      {% assign color = 'blue' %}
+      {% else %}
+      {% assign color = 'orange' %}
+      {% endif %}
+      <li class="speaker-card speaker-card--{{ color }}">
+        <div class="speaker-avatar">
+          <img src="/2025/images/speakers/{{ speaker.avatar }}" alt="{{ speaker.name }}" />
+        </div>
+        <div class="speaker-name">{{ speaker.name }}</div>
+        <div class="speaker-links">
+          {% if speaker.twitter %}
+          <a href="{{ speaker.twitter }}" class="speaker-link" aria-label="X">
+            <img src="/2025/images/icons/twitter.svg" alt="X" />
+          </a>
+          {% endif %}
+          {% if speaker.web %}
+          <a href="{{ speaker.web }}" class="speaker-link" aria-label="Website">
+            <img src="/2025/images/icons/link.svg" alt="Website" />
+          </a>
+          {% endif %}
+          {% if speaker.bluesky %}
+          <a href="{{ speaker.bluesky }}" class="speaker-link" aria-label="Bluesky">
+            <img src="/2025/images/icons/bluesky.svg" alt="Bluesky" />
+          </a>
+          {% endif %}
+          {% if speaker.mastodon %}
+          <a href="{{ speaker.mastodon }}" class="speaker-link" aria-label="Mastodon">
+            <img src="/2025/images/icons/mastodon.svg" alt="Mastodon" />
+          </a>
+          {% endif %}
+          {% if speaker.github %}
+          <a href="{{ speaker.github }}" class="speaker-link" aria-label="Github">
+            <img src="/2025/images/icons/github.svg" alt="Github" />
+          </a>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% include organizers.html %}
+  <!-- 
+    <a class="button btn-primary mt-8" href="https://www.papercall.io/emberfest-2024" alt="Submit a Talk">
+      Submit a Talk
+    </a>
+  -->
+  <div class="speakers-divider-bottom"></div>
+</section>

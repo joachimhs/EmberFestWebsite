@@ -1,0 +1,163 @@
+.btn-shadow {
+  filter: $shadow;
+  @include lg {
+    padding:2rem;
+  }
+}
+
+.btn-primary {
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  transform: rotate(2deg);
+  min-height:15.625rem;
+  --r: 20px; /* control the radius */
+  padding: var(--r);
+  background: $white;
+  mask: 
+    radial-gradient(50% 50%,#0000 66%, $black 67%) round 
+     var(--r) var(--r)/calc(2*var(--r)) calc(2*var(--r)), 
+    conic-gradient($black 0 0) content-box;
+
+  &:hover,
+  &:active {
+    transform: translateY(-5px) rotate(0deg);
+    transform: rotate(-2deg);
+  }
+
+  @include small-desktop {
+    min-height:auto;
+  }
+
+  button,
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    height:16rem;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    font-family: postino-std;
+    border: .5rem solid white;
+    background-color: $orange;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.3;
+    aspect-ratio: 1.5;
+  
+    @include small-desktop {
+      font-size: 2rem;
+      height:10rem;
+    }
+  
+    @include mobile {
+      font-size: 1.5rem;
+      height:8rem;
+    }
+
+    &:before {
+      content: " ";
+      position: absolute;
+      z-index: 2;
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      border: 5px solid white;
+    }
+
+
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+  }
+
+  &.blue {
+    button,
+    a {
+      background-color: $blue-300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover, 
+      &:active {
+        color: $blue-300;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.link-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.link-logo a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-icon {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0.5rem;
+  scale: 1;
+  transition: .1s ease-out;
+
+  &:hover,  &:active {
+    scale:1.1;
+    transition: .1
+  }
+
+  img {
+    position: relative;
+    z-index: 5;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $blue-400;
+    clip-path: circle();
+    z-index: 0;
+  }
+
+  &:hover::after {
+    background-color: $orange;
+  }
+}
+
+.btn-secondary {
+  margin-top:1rem;
+  font-size: 1.5rem;
+  background-color: $orange;
+  border-radius: 3rem;
+  color: $white;
+  padding: .75rem 1.5rem;
+  transition: .1s ease-out;
+  font-weight: 700; 
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
+
+  &:hover, 
+  &:active {
+    color: $white;
+    background-color: $brown;
+    scale: 1.1; 
+    transition: .1s ease-out;
+    text-decoration: none;
+  }
+}

@@ -1,2 +1,0 @@
-We are looking for the best and most worthwhile Ember.js related talks. Your topic can be about anything, as long as it relates to Ember.js development somehow.
-Talks are either 20 or 35 minutes long. Please note in your abstract how long you estimate your talk to be. Speakers with accepted abstracts get free admission to the mini-conference day (day 3) and will get invited to the Speakers Dinner.

@@ -1,0 +1,95 @@
+---
+layout: 2025/default
+title: EmberFest – Schedule day 2
+---
+
+{% include 2025/sidepages_header.html %}
+
+{% assign day = site.data.2025.schedule[1] %}
+
+<main class="container mb-16 mt-9 sidepage">
+  <section class="full-schedule-day">
+    <div class="title content">
+      <div class="day-date">
+        <h3 class="day mb-6">Schedule: {{ day.label }}</h3>
+        <h5>{{ day.weekday }}, {{ day.date }}</h5>
+      </div>
+      <a
+            class="link-text"
+            href="../1"
+            alt="Day 1"
+            >Day&nbsp;1</a
+          >
+    </div>
+    <p class="timezones-note">Times are local, CEST</p>
+    <div class="content">
+      <table>
+        {% for slot in day.slots %}
+        <tr>
+          <td class="time">
+            {{slot.time}}
+          </td>
+          <td class="title">
+            {{slot.label | safe}}
+              {%if slot.description %}
+                {{slot.description | safe}}
+              {% endif %}
+            {% if slot.speakers %}
+              {% for speaker in slot.speakers %}
+                <div class="speaker">
+                  <div class="speaker-info">
+                    {%if speaker.image %}
+                    <div class="speaker-avatar">
+                      <div class="photo" style="background-image:url(/2025/{{ speaker.image }})"></div>
+                    {% else %}
+                      <img
+                        class="photo"
+                        src="/2025/images/logo_vertical.svg">
+                    {% endif %}
+                  </div>
+                    <div class="speaker-details">
+                      <div class="speaker-name">{{speaker.name}}</div>
+                        <div class="speaker-links">
+                          {% if speaker.twitter %}
+                          <a href="https://www.x.com/{{ speaker.twitter }}" class="speaker-link" target="_blank" aria-label="X">
+                            <img src="/2025/images/icons/twitter.svg" alt="X" />
+                          </a>
+                          {% endif %}
+                          {% if speaker.url %}
+                          <a href="{{ speaker.url }}" class="speaker-link" target="_blank" aria-label="Website">
+                            <img src="/2025/images/icons/link.svg" alt="Website" />
+                          </a>
+                          {% endif %}
+                          {% if speaker.bluesky %}
+                          <a href="{{ speaker.bluesky }}" class="speaker-link" target="_blank" aria-label="Bluesky">
+                            <img src="/2025/images/icons/bluesky.svg" alt="Bluesky" />
+                          </a>
+                          {% endif %}
+                          {% if speaker.mastodon %}
+                          <a href="{{ speaker.mastodon }}" class="speaker-link" target="_blank" aria-label="Mastodon">
+                            <img src="/2025/images/icons/mastodon.svg" alt="Mastodon" />
+                          </a>
+                          {% endif %}
+                          {% if speaker.github %}
+                          <a href="{{ speaker.github }}" class="speaker-link" target="_blank" aria-label="Github">
+                            <img src="/2025/images/icons/github.svg" alt="Github" />
+                          </a>
+                          {% endif %}
+                        </div>
+                    </div>
+                  </div>
+                  {%if speaker %}
+                    {{speaker.bio | safe}}
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </section>
+</main>
+
+{% include 2025/footer.html %}

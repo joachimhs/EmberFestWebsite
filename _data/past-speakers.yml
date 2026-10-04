@@ -1,0 +1,84 @@
+- name: "Edward Faulkner"
+  avatar: "edward-faulkner.jpeg"
+  web: "https://www.linkedin.com/in/edwardfaulkner/"
+  bluesky: "https://bsky.app/profile/eaf4.com"
+
+- name: "Melanie Sumner"
+  avatar: "melanie-sumner.jpg"
+  web: "https://www.linkedin.com/in/melaniesumner"
+  bluesky: "https://bsky.app/profile/a11ymel.bsky.social"
+
+- name: "Chris Thoburn"
+  avatar: "chris-thoburn.jpg"
+  bluesky: "https://bsky.app/profile/runspired.com"
+  github: "https://github.com/runspired"
+  web: "https://www.linkedin.com/in/runspired/"
+
+- name: "Krystan HuffMenne"
+  avatar: "krystan-huffmene.jpg"
+  web: "https://www.linkedin.com/in/krystanhm//"
+
+- name: "Preston Sego"
+  avatar: "preston-sego.jpg"
+  twitter: "https://x.com/nullvoxpopuli"
+  bluesky: "https://bsky.app/profile/nullvoxpopuli.com"
+  web: "https://nullvoxpopuli.com/"
+
+- name: "Chris Manson"
+  avatar: "chris-manson.jpg"
+  bluesky: "https://bsky.app/profile/chris.manson.ie"
+  github: "https://github.com/mansona"
+
+- name: "Marine Dunstetter"
+  avatar: "marine-dunstetter.jpg"
+  mastodon: "https://mastodon.social/@BlueCut"
+  github: "https://github.com/BlueCutOfficial"
+
+- name: "Yehuda Katz"
+  avatar: "yehuda-katz.jpeg"
+  bluesky: "https://bsky.app/profile/wycats.bsky.social"
+  web: "https://www.linkedin.com/in/yehudakatz/"
+
+- name: "Nick Schot"
+  avatar: "nick-schot.webp"
+  github: "https://github.com/nickschot"
+  web: "https://nickschot.nl/"
+
+- name: "Zoë Bijl"
+  avatar: "zoe-bijl.jpg"
+  github: "https://github.com/ZoeBijl"
+  web: "https://moiety.me/"
+
+- name: "Jenny Judova"
+  avatar: "jenny-judova.jpg"
+  web: "https://www.linkedin.com/in/jennyjudova/"
+
+- name: "Godfrey Chan"
+  avatar: "godfrey-chan.jpg"
+  github: "https://github.com/chancancode"
+
+- name: "Jessica Jordan"
+  avatar: "jessica-jordan.jpg"
+  github: "https://jayjayjpg.github.io/"
+
+- name: "Chantal Broeren"
+  avatar: "chantal-broeren.jpg"
+  web: "https://chantalbroeren.nl/"
+
+- name: "Tom Dale"
+  avatar: "tom-dale.jpeg"
+  web: "https://www.linkedin.com/in/tommothereffindale/"
+
+- name: "Chad Carbert"
+  avatar: "chad-carbert.png"
+
+- name: "Chad Hietala"
+  avatar: "chad-hietala.jpg"
+  github: "https://github.com/chadhietala"
+
+- name: "Simon Ihmig"
+  avatar: "simon-ihmig.jpeg"
+  github: "https://github.com/simonihmig"
+  
+
+

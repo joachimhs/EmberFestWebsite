@@ -1,0 +1,148 @@
+---
+---
+
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "hero";
+@import "about";
+@import "speakers";
+@import "organizers";
+@import "sponsors";
+@import "schedule";
+@import "venue";
+@import "stay-up-to-date";
+@import "footer";
+@import "buttons";
+@import "header";
+@import "sidepages";
+@import "layouts";
+
+html {
+  background-color: $white;
+}
+
+body {
+  background-color: $blue-200;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+a:hover {
+  color: $orange;
+  text-decoration: underline;
+  text-decoration-color: $orange;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0 5%;
+  }
+}
+
+.mw-lg {
+  max-width: 48rem;
+}
+
+
+.mw-xl {
+  max-width: 72rem;
+}
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 4,
+  9: $spacer * 5,
+  10: $spacer * 10,
+  16: $spacer * 16,
+);
+
+@each $name, $glyph in $spacers {
+  .m-#{$name} {
+    margin: $glyph;
+  }
+  .mt-#{$name} {
+    margin-top: $glyph;
+
+    @include small-desktop {
+      margin-top: calc( $glyph/1.5);
+    }
+
+    @include mobile {
+      margin-top: calc( $glyph/2);
+    }
+  }
+  .mb-#{$name} {
+    margin-bottom: $glyph;
+
+    @include small-desktop {
+      margin-bottom: calc( $glyph/1.5);
+    }
+
+    @include mobile {
+      margin-bottom: calc( $glyph/2);
+    }
+  }
+  .mx-#{$name} {
+    margin-right: $glyph;
+    margin-left: $glyph;
+  }
+  .my-#{$name} {
+    margin-bottom: $glyph;
+    margin-top: $glyph;
+  }
+  .me-#{$name} {
+    margin-right: $glyph;
+  }
+  .ms-#{$name} {
+    margin-left: $glyph;
+  }
+  .p-#{$name} {
+    padding: $glyph;
+  }
+  .pt-#{$name} {
+    padding-top: $glyph;
+  }
+  .pb-#{$name} {
+    padding-bottom: $glyph;
+  }
+  .px-#{$name} {
+    padding-right: $glyph;
+    padding-left: $glyph;
+  }
+  .py-#{$name} {
+    padding-bottom: $glyph;
+    padding-top: $glyph;
+  }
+  .ps-#{$name} {
+    padding-left: $glyph;
+  }
+  .pe-#{$name} {
+    padding-right: $glyph;
+  }
+  .gap-#{$name} {
+    gap: $glyph;
+  }
+}
+
+.mobile-75 {
+  @include mobile {
+    transform: scale(0.75);
+  }
+}
+

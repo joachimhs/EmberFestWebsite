@@ -1,0 +1,150 @@
+.speakers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speakers-divider-top {
+  background-image: url(/2025/images/backgrounds/speakers-top-bkg.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 2.5rem;
+}
+
+.speakers-divider-bottom {
+  background-image: url(/2025/images/backgrounds/speakers-bottom-bkg.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 2.5rem;
+}
+
+.speakers-section {
+  background: $blue-050;
+  text-align: center;
+  margin-top: 5rem;
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+
+.speakers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.125rem;
+  row-gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &.container {
+    max-width: 60rem;
+  }
+}
+
+.speaker-link { 
+  scale:1;
+  transition: .1s ease-out;
+  
+  &:hover,
+  &:active {
+    scale:1.1;
+    transition: .1s ease-out;
+  }
+}
+
+.speaker-card {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16.375rem;
+  margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    margin-bottom: 0;
+  }
+  &--blue {
+    .speaker-link{
+      background: $blue-300;
+
+      &:hover,
+      &:active {
+        background: $blue-400;
+      }
+    }
+  }
+  &--orange {
+    .speaker-link{
+      background: $orange;
+    
+    &:hover,
+    &:active {
+      background: $brown;
+    }
+    }
+  }
+}
+
+.speaker-avatar {
+  width: 12.625rem;
+  border-radius: 50%;
+  border: 1rem solid #fff;
+  overflow: clip;
+  margin-bottom: 2rem;
+
+  @include mobile {
+    margin-bottom: 1.5rem;
+  }
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.speaker-name {
+  font-family: "pill-gothic-900mg", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  @media (max-width: 600px) {
+    margin-bottom: 0.5rem;
+  }
+  color: $blue-600;
+}
+
+.speaker-links {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.speaker-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .past-speakers-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem 0;
+  }
+}

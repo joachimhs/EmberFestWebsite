@@ -1,0 +1,266 @@
+- label: "Day 1"
+  weekday: "Thursday"
+  date: "September 18"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+
+    - time: "10:00&mdash;10:30"
+      label: "Opening Keynote: Ember and AI"
+      description: >
+        <p>
+          The AI era is shaking things up. In this talk, Yehuda will explain why Ember's philosophy of shared solutions and empowerment is a perfect fit for the AI era. He'll cover Polaris, of course, but with a focus on how to think about gaps in the Ember experience from the perspective of AI assistance.
+        </p>
+        <p>
+          He will also talk about his own AI workflows (Spoiler Alert: Claude Code), demonstrating that collaboration is not just the right way to work together as a community: it's the right way to think about working with AIs as well.
+        </p>
+        <p>
+          Prepare for another round of Heterodox Opinions: Frontend AI Edition.
+        </p>
+      speakers:
+        - name: "Yehuda Katz"
+          image: "/images/speakers/yehuda-katz.jpeg"
+          twitter: "wycats"
+          bluesky: https://bsky.app/profile/wycats.bsky.social
+          url: "https://www.linkedin.com/in/yehudakatz/"
+          bio: >
+            <p>Yehuda is a member of the Ember.js, Ruby on Rails and jQuery Core Teams; his 9-to-5 home is at the startup he founded, Tilde Inc, where he works on Skylight, the smart profiler for Rails. Yehuda spends most of his time hacking on open source—his main projects, along with others, like Thor, Handlebars and Janus—and traveling the world doing open source evangelism work.</p>
+
+    - time: "10:45&mdash;11:15"
+      label: "Multi-framework mashup - making other frameworks work in Ember"
+      description: >
+        <p>Trying to integrate multiple frameworks can be a daunting prospect. There are a number of technologies that people have used in the past such as web-components, micro-frontends, etc. but we’re not living in the past. The future of this integration could be all frameworks living together in harmony with the Signals proposal to TC39, but we’re not living in the future yet. This talk will be diving into what is possible today when wanting to integrate frameworks, giving some examples, and showing how the various frameworks might interplay.</p>
+      speakers:
+        - name: "Nick Schot"
+          image: "/images/speakers/nick-schot.webp"
+          twitter: "nickschot"
+          url: "https://nickschot.nl/"
+          bio: >
+            <p>Long time Ember.js developer from The Netherlands. Working at Mainmatter. Always interested in anything involving a lot of tinkering including but not limited to: animations, model railways, micro controllers & coffee.</p>
+
+    - time: "11:30&mdash;12:00"
+      label: "WarpDrive | The Making of a Polaris Application"
+      description: >
+        <p>When WarpDrive (Universal EmberData) was announced, we didn't just establish a new data paradigm—we commissioned a starship capable of boldly going where no framework has gone before. Our five-year mission: to work equally well with or without any framework, with or without a DOM, in any JS runtime, with standard build tools, and even with any version of Ember.</p>
+        <p>Join us as we explore what it truly means to build a Polaris Application — one that can navigate by the North Star of stability while maintaining the agility to explore strange new APIs, seek out new build tools and development paradigms, and boldly ship where no developer has shipped before.</p>
+      speakers:
+        - name: "Chris Thoburn (aka. runspired)"
+          image: "/images/speakers/chris-thoburn.jpg"
+          bluesky: "https://bsky.app/profile/runspired.com"
+          url: "https://runspired.com"
+          bio: >
+            <p>Chris is a Senior Staff Software Engineer at AuditBoard and long-term EmberData/WarpDrive team member. He's also a mountain/ultra/trail runner.</p>
+
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+
+    - time: "13:30&mdash;14:00"
+      label: "The Frontend City"
+      description: >
+        <p>Leading a team of engineers and maintaining a live-product means staying highly alert, high-pressure situations, making plenty decisions and while also guiding and supporting peers. There is rewarding tasks but also annoying ones. Let's turn some of the annoying into rewarding ones.</p>
+        <p>1) The journey no developer likes or wants: Pitching a technical initiative to upper management. It's a journey of being misunderstood, seeing technical improvements and benefits for your team being denied, while drowning in politics.</p>
+        <p>2) Maintaining your application, ensuring all aspects of operating a production app are addressed and handled can be overwhelming.</p>
+        <p>This talk aims to bring piece to these aspects. Following the idea to treat your app as a city and address the needs to keep it operable, maintainable and evolving. Being able to quickly communicate your ideas to upper management as well as fellow engineers speeds up your own workflow providing a framework for making good, better and quicker decisions.</p>
+      speakers:
+        - name: "Thomas Gossmann"
+          image: "/images/speakers/thomas-gossmann.jpeg"
+          url: "https://gos.si/"
+          twitter: "unistyler"
+          bio: >
+            <p>Unicyclist. Artist. Developer.</p>
+
+    - time: "14:15&mdash;14:45"
+      label: "Agent Tomster: Ember, GenAI & the Future of Frontend Engineering"
+      description: >
+        <p>Large Language Models (LLMs) are changing how we think about engineering—but integrating them meaningfully into a real Ember workflow requires more than just calling an API.</p>
+        <p>In this talk, we'll start with a high-level explanation of how LLMs work, including tokens, attention, and context windows. Then, I'll show how I've built a practical, low-friction GenAI assistant—Agent Tomster—that writes Ember code, documentation, and even tests by using tools like Claude, Cline, RooCode, and internal memory banks that scrape and organize my app's existing codebase and docs.</p>
+      speakers:
+        - name: "Alon Bukai"
+          image: "/images/speakers/alon-bukai.jpg"
+          twitter: "alonski"
+          url: "https://alonbukai.com/"
+          bio: >
+            <p>Alon Bukai is a 34-year-old Staff UI Engineering Architect at CrowdStrike based in Israel. With around a decade of experience building Ember applications, Alon has been deeply involved in the Ember community as a former Ember Addon Developer and former Ember Weekly Editor. Balancing a career in cutting-edge UI engineering with a vibrant home life, Alon is married with a daughter and a dog, continually striving to innovate while nurturing his personal passions.</p>
+
+    - time: "15:00&mdash;15:30"
+      label: "Getting Tech Work the Attention It Deserves (No More Excuses!)"
+      description: >
+        <p>Every developer has a list of reasons why important tech work never gets done—too many meetings, no focus time, feature work always taking priority. But here's the truth: if you want to drive meaningful change, you have to stop waiting for permission and start making it happen. Think about that Ember upgrade or refactor that keeps getting pushed to the bottom of the backlog…</p>
+        <p>In this talk, we'll cut through the excuses and explore how to build a rock-solid case for your tech initiatives by shifting the focus from developer pain points to real business and customer impact. From managing your time effectively, leveraging your colleagues and community and other tactics to get things moving.</p>
+        <p>Most importantly, I'll share some practical strategies to engage your manager—not with complaints, but with conviction—and the confidence to push forward, even when the system isn't designed to make it easy.</p>
+      speakers:
+        - name: "Aoife Hannigan"
+          image: "/images/speakers/aoife-hannigan.webp"
+          url: "https://www.linkedin.com/in/aoife-hannigan-46837280/"
+          bio: >
+            <p>I'm Aoife! I'm the Director of Engineering at Phorest, I feel like an imposter now at EmberFest since I'm no longer hands-on, but I promise I was, and always will be at heart, an Ember dev! I'm from Dublin, Ireland. Lover of food, travel and good craic.</p>
+
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+
+    - time: "16:00&mdash;16:30"
+      label: "Unlocking Ember's future with the Ember Initiative"
+      description: >
+        <p>Over the past two years, Ember has transformed into a modern future-proof framework using the latest tools in the ecosystem. Lightning-fast rebuilds, intuitive single-file components, and native TypeScript support... We'll present you what technologies modern Ember relies on and how to adopt them as soon as possible.</p>
+        <p>Then we'll pull back the curtain on the Ember Initiative: the new funding model behind Ember's rapid evolution. We'll tell you everything about the Initiative, what kind of hard problems it solves for the community, and how to join it!</p>
+      speakers:
+        - name: "Chris Manson"
+          image: "/images/speakers/chris-manson.jpg"
+          url: "https://bsky.app/profile/chris.manson.ie"
+          bio: >
+            <p>Senior Developer @mainmatter.com. @emberjs.com Core Learning and Tooling Team member. Created Empress http://github.com/empress. Created Lint to the Future https://github.com/mansona/lint-to-the-future. Big fan of Open Source!</p>
+        - name: "Marine Dunstetter"
+          image: "/images/speakers/marine-dunstetter.jpg"
+          url: "https://linkedin.com/in/mdunstetter"
+          bio: >
+            <p>Senior Developer @mainmatter.com. Frontend developer most of the time, but also illustrator, indie writer (L'Académie des Renards), and pragmatic dreamer with cats and a biodiversity-friendly garden.</p>
+
+    - time: "16:45&mdash;18:00"
+      label: "WarpDrive Workshop"
+      description: >
+        <p>TBA</p>
+      speakers:
+        - name: "Chris Thoburn (aka. runspired)"
+          image: "/images/speakers/chris-thoburn.jpg"
+          bluesky: "https://bsky.app/profile/runspired.com"
+          url: "https://runspired.com"
+          bio: >
+            <p>Chris is a Senior Staff Software Engineer at AuditBoard and long-term EmberData/WarpDrive team member. He’s also a mountain/ultra/trail runner.</p>
+
+- label: "Day 2"
+  weekday: "Friday"
+  date: "September 19"
+  slots:
+    - time: "09:00&mdash;10:00"
+      label: "Doors open & Breakfast"
+
+    - time: "10:00&mdash;10:30"
+      label: "Layers of Accessibility for Scale & Profit"
+      description: >
+        <p>Perhaps you’ve heard the assertion that design systems can’t claim to be accessible. While that might be technically accurate for various reasons, in this talk we’ll examine ways product accessibility can be implemented at scale through different “layers” of accessibility support.</p>
+        <p>Then we’ll explore some ways that you can help your teams align for better design, accessibility, and reliability. No matter where you or your company is in your accessibility journey, focus can remain on progress, not perfection.</p>
+      speakers:
+        - name: "Melanie Sumner"
+          image: "/images/speakers/melanie-sumner.jpg"
+          bluesky: "https://bsky.app/profile/a11ymel.bsky.social"
+          url: "https://www.linkedin.com/in/melaniesumner"
+          bio: >
+            <p>Melanie Sumner began building things for the web in 1997, and after all these years, it’s still her favorite thing to do. As the Product Accessibility Lead at HashiCorp, she develops accessibility strategies and offers guidance to the design system and product teams, working collaboratively to deliver inclusive, standards-compliant products.</p>
+            <p>In addition to her role at HashiCorp, Melanie is an invited expert for the W3C’s ARIA working group and co-editor of the Accessible Name and Description Computation specification, playing an active part in advancing web accessibility standards.</p>
+            <p>When she needs a break, Melanie enjoys brainstorming new collective nouns for the web (collective-nouns.dev) or unwinding with a game of Stardew Valley.</p>
+
+    - time: "10:45&mdash;11:15"
+      label: "WarpDrive: Set Data to Stun"
+      description: >
+        <p>Discover WarpDrive, the next-generation data framework that brings universal compatibility and performance to ambitious web applications.</p>
+        <p>This talk explores WarpDrive's schema-driven architecture through building a real application, demonstrating how to boldly go where your data has never gone before with a truly framework-agnostic layer. Learn how WarpDrive's TypeScript-first approach delivers enterprise-grade features while eliminating traditional data management complexity.</p>
+      speakers:
+        - name: "Krystan HuffMenne"
+          image: "/images/speakers/krystan-huffmene.jpg"
+          url: "https://www.linkedin.com/in/krystanhm/"
+          bio: >
+            <p>
+              Krystan is a Staff Engineer at AuditBoard and member of the EmberData/WarpDrive & Tooling Teams. She's been building Ember applications since v2 and is a mother of two living in Portland, Oregon.
+            </p>
+
+    - time: "11:30&mdash;12:00"
+      label: "Lies, Damned Lies, and Virtual Modules"
+      description: >
+        <p>Virtual modules are a key feature of modern build systems and it’s one of those technologies that you don’t know you need to know about until you really need to know about it! This talk gives you a good introduction on what Virtual modules are, how to use them, and when you might want to use them. We will also go through a few examples of virtual modules in the wild, and since this an Ember conference we’ll take a look at some of the virtual modules hiding in the @embroider/vite codebase.</p>
+      speakers:
+        - name: "Gabor Babicz"
+          image: "/images/speakers/gabor-babicz.jpg"
+          url: "https://babicz.social/@gabor"
+          bio: >
+            <p>🧑‍🧑‍🧒‍🧒🤺💻🐹🧀🥃🇪🇺</p>
+
+    - time: "12:00&mdash;13:30"
+      label: "Lunch"
+
+    - time: "13:30&mdash;14:00"
+      label: "Everywhere – there are no limits"
+      description: >
+        <p>With enough willpower, you can use ember wherever you can imagine. Here will be what you need to know (and some examples) for moving beyond web apps.</p>
+      speakers:
+        - name: "Preston Sego (aka. nullvoxpopuli)"
+          image: "/images/speakers/l-preston-sego-iii.png"
+          twitter: "nullvoxpopuli"
+          url: "https://www.linkedin.com/in/lprestonsegoiii/"
+          bio: >
+            <p>Preston is a software artificer at Auditboard, looking to bring folks to the future of Ember.js and frontend dev</p>
+
+    - time: "14:15&mdash;14:45"
+      label: "So you want to change Ember?"
+      description: >
+        <p>It’s time to get into action mode. In this interactive talk, you’ll get to know your neighbours, the RFC process, and feel empowered to start contributing to the exciting changes coming to Ember.</p>
+        <p>The talk has three parts: 1. First, we’ll boost our knowledge of the RFC process — its phases, how it works, and where the best opportunities to jump in are. 2. Then: launch time! 🎉 I’ll introduce the new and improved RFCs app, which gives a clear overview of what’s happening, who’s involved, and how things are progressing. 3. Finally, you’ll pick an RFC to explore or maybe even contribute to — putting the app (and your new knowledge) to the test.</p>
+        <p>The improved RFCs app makes it easier to see what’s going on, who to talk to, and where help is needed — so grab your product manager hat and see if you can help get those lead times down.</p>
+      speakers:
+        - name: "Anne-Greeth Schot-van Herwijnen"
+          image: "/images/speakers/anne-greeth-shot-van-herwijnen.jpg"
+          url: "https://www.linkedin.com/in/anne-greeth-schot-van-herwijnen-97397292/"
+          bio: >
+            <p>Hi! I’m Anne-Greeth Schot-van Herwijnen — DEI lead, team coach, creative enthusiast, and long-time EmberJS community member. With a background in Psychology and Human Media Interaction, I made the jump to software development through a traineeship, and eventhough I’ve shifted away from coding in my work life I’m intregued by tech and human collaboration.</p>
+            <p>I’m part of the Ember Learning Team and have been a proud EmberConf volunteer for several years. While I don’t use Ember in my day job, I love the community, and I’m passionate about making it easier (and more fun!) for others to contribute. My sessions are interactive, approachable, and focused on helping people feel confident stepping into open source.</p>
+
+    - time: "15:00&mdash;15:30"
+      label: "A Practical Intro to ReactiveResources & Schema‑Driven Data Handling"
+      description: >
+        <p>WarpDrive is revolutionizing how we work with data in Ember apps by simplifying and making things more predictable.</p>
+        <p>Rather than models with a lot of magic, you specify ResourceSchemas with simple JSON. The store returns you ReactiveResources, which is reactive, type-safe objects that adhere to your schema in every way. No surprise behavior, no confusing classes.</p>
+        <p>Here’s what I’ll demonstrate in this talk:</p>
+        <p>
+          • What ReactiveResources are and how they differ from models<br />
+          • How to define and register a ResourceSchema<br />
+          • How to use derived fields and transforms correctly<br />
+          • How ResourceType and ResourceKey collaborate<br />
+          • How to begin leveraging this in your app without rewriting it<br />
+        </p>
+        <p>If you’ve heard of WarpDrive but haven’t used it yet, or you’re interested in the new data layer for Polaris apps, this presentation will give you a solid head start.</p>
+      speakers:
+        - name: "Mehul Kiran Chaudhari"
+          image: "/images/speakers/mehul-kiran-chaudhari.jpg"
+          url: "https://mehulkc.me/"
+          twitter: "mehulkchaudhari"
+          bio: >
+            <p>I'm a SE with an affinity for developing robust webapps. I love to read books and listen to music when I'm not coding.</p>
+
+    - time: "15:30&mdash;16:00"
+      label: "Snack break"
+
+    - time: "16:00&mdash;16:30"
+      label: "Lightning Talks"
+      description: >
+
+    - time: "16:45&mdash;17:15"
+      label: "ember(): adventures with Ember in an imperative world"
+      description: >
+        <p>Coding in Ember is a serene experience thanks to it’s best-in-class reactivity and batteries-included mindset. But outside of this serene bubble Ember provides for us, javascript is still “just” an imperative language. This schism can make integrating with “plain” js libraries often a bit unnatural.</p>
+        <p>But making imperative code “do like Ember do” is the easy part. What if we needed to make Ember behave imperatively? In this talk we will see why you might need to do that, and how to do it. We will explore these fringe usecases in the context of a real, production-used project, and discover that they may be slightly less niche than you’d think. In the process, we’ll learn about Glimmer and its place in Ember, we’ll revisit classic Ember components, look at we’ll learn to bend Ember’s build tooling to our will, and we’ll see how to boil down an entire ember app into a simple function call, ready to be shipped as an unassuming npm package. We’ll also briefly explore the exciting work that’s been done recently in this space.</p>
+        <p>Even if you never need any of these tricks, you’ll walk away with a deeper understanding of how Ember connects with the “outside” world of the wider javascript ecosystem.</p>
+      speakers:
+        - name: "Arne Bertrand"
+          image: "/images/speakers/arne-bertrand.png"
+          url: "https://redpencil.io/"
+          bio: >
+            <p>After a brief stint in corporate finance, I was lucky to discover my true passion and able to make a full career switch to software development. I especially love building complex GUI software, as it provides a challenge right in the middle of UX design, performance-critical algorithms, and software architecture.</p>
+
+    - time: "17:30&mdash;18:00"
+      label: "Closing Keynote"
+      speakers:
+        - name: "Edward Faulkner"
+          image: "/images/speakers/edward-faulkner.jpeg"
+          bluesky: "https://bsky.app/profile/eaf4.com"
+          url: "https://www.linkedin.com/in/edwardfaulkner/"
+          bio: >
+            <p>
+              Edward Faulkner is a member of the Ember Core Team, and the lead developer behind Embroider. His open source code is running on mainstream gaming consoles, major social media sites, and hordes
+              of enterprise applications. He was a research associate of the MIT Media Lab’s Social Computing group, and was a lead engineer at Akamai Technologies, where he built critical, internet-scale security
+              infrastructure. He earned an MEng and BS in Electrical Engineering and Computer Science at MIT.
+            </p>
+            <p>
+              Ed resides in Somerville, Massachusetts with his wife and two sons.
+            </p>
+
+    - time: "18:30&mdash;23:00"
+      label: "Party at the venue &#x1F389;"

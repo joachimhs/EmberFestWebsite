@@ -1,0 +1,43 @@
+.past-speakers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.past-speakers-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 7.5rem;
+  justify-content: center;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.avatar {
+  width: 15rem;
+  height: 15rem;
+  flex-shrink: 0;
+  clip-path: circle();
+}
+
+.speaker-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.speaker-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}

@@ -1,0 +1,17 @@
+{% if site.data.2025.organizers %}
+<div class="organizers">
+  <h4 class="mb-9">Organizers</h4>
+  <ul class="speakers-list container">
+    {% for organizer in site.data.2025.organizers %}
+    <li class="speaker-card">
+      <a href="{{ organizer.link }}" target="_blank">
+        <img class="speaker-avatar" src="/2025/images/organizers/{{ organizer.logo }}" />
+        <span class="speaker-name">
+          {{ organizer.name }}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

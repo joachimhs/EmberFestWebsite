@@ -1,0 +1,19 @@
+.organizers {
+  & .container {
+    max-width:60rem;
+    margin: auto;
+  }
+
+  & a:hover span,
+  & .speaker-name:hover {
+      color: $blue-600;
+  }
+
+  & .speaker-avatar {
+    margin: 0 auto 2rem auto;
+
+    @include mobile {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.venue-divider-top {
+  background-image: url(/images/backgrounds/sponsors-bottom-bkg.svg);
+  background-size: cover;
+  height: 2.5rem;
+}
+
+.venue {
+  background: $olive;
+  color: $blue-500;
+  padding: 6rem 0;
+  position: relative;
+  text-wrap: balance;
+
+  .venue-content {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    max-width: 60rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+
+    @include xl {
+      max-width: 72rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+    .image-wrapper {
+      @include xl {
+        padding-right: 2rem;
+      }
+    }
+
+    .btn-secondary {
+      margin: 2rem auto; 
+      @include xl {
+        margin: 1rem 0; 
+      }
+  }
+
+  .content {
+    align-items: start;
+  }
+}
+
+.venue-img {
+  height: 25rem;
+  object-fit: cover;
+  @include xl {
+    height: 35rem;
+  }
+  max-width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  border-radius: 1rem;
+}
+
+.venue-title {
+  margin: 0 auto; 
+
+  @include xl {
+    margin: inherit;
+  }
+}
+
+.venue-details{
+  min-width: -webkit-fill-available;
+}

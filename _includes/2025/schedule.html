@@ -1,0 +1,39 @@
+
+<section class="schedule" id="schedule">
+    <img class="mt-8 mobile-75 desktop-25" src="/2025/images/stamp.svg" alt="" />
+    <h3 class="mt-6 mb-4">Schedule</h3>
+    <div class="data">
+      {% for day in site.data.2025.schedule %}
+        <div class="day">
+          <div class="content">
+            <h4>{{day.label}}</h4>
+            <p class="day-info">{{day.weekday}}, {{day.date}}</p>
+            <p class="timezones-note">Times are local to Brussels (CEST)</p>
+            <table>
+              {% for slot in day.slots %}
+                <tr>
+                  <td class="time">
+                    {{slot.time}}
+                  </td>
+                  <td class="title">
+                    {{slot.label}}
+                    {% if slot.speakers and slot.hideSpeakers != true %}
+                      {% for speaker in slot.speakers %}<span class="speaker"> – {% if forloop.index > 1 %}, {% endif %}{{speaker.name}}</span>{% endfor %}
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="btn-primary">
+            <a
+            href="schedule/day/{{forloop.index + 1}}"
+            alt="Full Schedule"
+            >Full Schedule</a
+            >
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  

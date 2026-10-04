@@ -1,0 +1,40 @@
+@import "variables";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &.container {
+    margin-bottom: 10rem;
+    @media (max-width: 700px) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.about-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include mobile {
+    gap: 1rem;
+  }
+
+  button,
+  a {
+    width: 21rem;
+  }
+
+  .btn-primary {
+    @include mobile {
+     scale:0.8;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
